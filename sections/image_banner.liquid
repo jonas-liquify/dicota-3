@@ -4,7 +4,7 @@
 <img src="{{ 'hero-apparel-2.svg' | asset_url }}" loading="lazy" alt="" class="image-banner_bg-image">
 {% endif %}</picture>{% if section.settings.overlay_strength > 0 %}    <div li-if="section.settings.overlay_strength > 0" class="image-banner_overlay">
         </div>
-{% endif %}<div class="image-banner_container" style="justify-content: {{ section.settings.content_vertical }}; align-items: {{ section.settings.content_horizontal }};"><div class="image-banner_content"><div class="image-banner_headline"><p class="image-banner_headline-line">
+{% endif %}<div class="image-banner_container{% if section.settings.full_bleed %} is-full-bleed{% endif %}" style="--banner-min-height: {{ section.settings.min_height }}vh; color: {{ section.settings.text_color }}; text-align: {{ section.settings.text_align }}; justify-content: {{ section.settings.content_vertical }}; align-items: {{ section.settings.content_horizontal }};"><div class="image-banner_content"><div class="image-banner_headline"><p class="image-banner_headline-line">
 {{ section.settings.text_headline_zeile_1 }}
 </p><p class="image-banner_headline-line">
 {{ section.settings.text_headline_zeile_2 }}

@@ -1,4 +1,4 @@
-<div class="loved-by_grid"><div class="loved-by_headline-tile"><picture class="loved-by_headline-picture">{% if section.settings.image_header_bild %}
+<div class="loved-by_grid" style="padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px; background-color: {{ section.settings.bg_color }};"><div class="loved-by_headline-tile"><picture class="loved-by_headline-picture">{% if section.settings.image_header_bild %}
 {{ section.settings.image_header_bild | image_url: width: 800 | image_tag: loading: 'lazy', class: 'loved-by_headline-image' }}
 {% else %}
 <img src="{{ 'hero-apparel-3.svg' | asset_url }}" loading="lazy" alt="" class="loved-by_headline-image">
