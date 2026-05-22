@@ -1,0 +1,30 @@
+<div class="padding-global padding-section-large"><div class="container-large"><div class="login_tabs"><div class="login_form w-form"><h1 class="heading-style-h2 text-align-center">
+{{ section.settings.text_activate_account }}
+</h1>{% form 'activate_customer_password', class: 'form_form' %}
+{% if form.errors %}    <div li-if="form.errors" class="form_error-message">
+    <div li-object="form.errors | default_errors" class="text-size-regular text-color-red text-align-center">{{ form.errors | default_errors }}</div>    </div>
+{% endif %}<div class="form_field-wrapper"><label for="field-3" class="form_hidden-label">Password</label><input class="form_input w-input" maxlength="256" name="customer[password]" data-name="Field 3" placeholder="Password" type="password" id="field-3" required=""></div><div class="form_field-wrapper"><label for="field-3" class="form_hidden-label">Repeat Password</label><input class="form_input w-input" maxlength="256" name="customer[password_confirmation]" data-name="Field 3" placeholder="Repeat Password" type="password" id="field-3" required=""></div><div class="button-group"><input type="submit" data-wait="" class="button max-width-full w-button" value="Activate"><input type="submit" data-wait="" class="button is-outline max-width-full w-button" value="Refuse" name="decline"></div>{% endform %}<div class="w-form-done"><div>Thank you! Your submission has been received!</div></div><div class="w-form-fail"><div>Oops! Something went wrong while submitting the form.</div></div></div></div></div></div> {% schema %} {
+    "tag": "section",
+    "name": "Activate-Account",
+    "class": "section_newsletter",
+    "settings": [
+        {
+            "id": "text_activate_account",
+            "type": "text",
+            "label": "Activate Account",
+            "default": "Activate Account"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Activate-Account",
+            "category": "Liquify",
+            "blocks": []
+        }
+    ],
+    "enabled_on": {
+        "templates": [
+            "customers\/activate_account"
+        ]
+    }
+} {% endschema %}

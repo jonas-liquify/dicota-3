@@ -1,0 +1,56 @@
+<div li-cf-theme-blocks="" class="two-column-banner_grid">
+{% content_for 'blocks' %}
+</div> {% schema %} {
+    "tag": "section",
+    "name": "Two Column Banner",
+    "class": "section_two-column-banner",
+    "blocks": [
+        {
+            "type": "banner"
+        },
+        {
+            "type": "@app"
+        }
+    ],
+    "settings": [
+        {
+            "type": "header",
+            "content": "Layout"
+        },
+        {
+            "type": "range",
+            "id": "min_height",
+            "min": 40,
+            "max": 90,
+            "step": 5,
+            "unit": "vh",
+            "label": "Mindesth\u00f6he je Spalte",
+            "default": 70
+        },
+        {
+            "type": "header",
+            "content": "Overlay"
+        },
+        {
+            "type": "range",
+            "id": "overlay_strength",
+            "min": 0,
+            "max": 60,
+            "step": 5,
+            "unit": "%",
+            "label": "Dunkles Overlay",
+            "default": 25
+        }
+    ],
+    "presets": [
+        {
+            "name": "Two Column Banner",
+            "category": "Liquify",
+            "blocks": [
+                {
+                    "type": "banner"
+                }
+            ]
+        }
+    ]
+} {% endschema %}

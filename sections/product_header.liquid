@@ -1,0 +1,105 @@
+<div class="padding-global padding-section-small"><div class="container-large"><div class="product-header_component"><script src="{{ 'li_custom.js' | asset_url }}" type="text/javascript"></script>
+<div li-element="product-variant-container" class="w-layout-grid product-header_layout" x-data="handleVariant({{ product | json | escape }}, {{ product.options_by_name | json | escape }}, {{ product.selected_or_first_available_variant | json | escape }})" x-init="$nextTick(() => { activateVariants() })" @setbundleitem.window="updateBundleItem($event.detail.product, $event.detail.quantity)"><div id="w-node-aaec4065-ff42-9417-cd74-abddd54400f1-d54400ec" class="swiper-container is-product-gallery"><div class="swiper is-product-gallery"><div id="my-gallery" li-for:inside="media in product.media" class="swiper-wrapper is-product-gallery">
+        {% for media in product.media %}                            {% if media.media_type == 'image' %}    <div li-if="media.media_type == 'image'" class="swiper-slide is-product-gallery">
+    <div class="product-header_gallery-lightbox"><img li-object:src="media | image_url: width: 1000" li-object:alt="media.alt" alt="{{ media.alt }}" src="{{ media | image_url: width: 1000 }}" loading="lazy" class="product-header_gallery-image"></div>    </div>
+{% endif %}
+                            {% if media.media_type == 'video' %}    <div li-if="media.media_type == 'video'" class="swiper-slide is-product-gallery">
+    <div class="product-header_gallery-lightbox"><div li-object="media | video_tag: controls: true" class="product-header_gallery-image">{{ media | video_tag: controls: true }}</div></div>    </div>
+{% endif %}
+                    {% endfor %}    </div></div><div class="product-header_slider-wrapper"><div class="swiper_button-wrapper is-product-slider pointer-events-off z-index-1 hide-mobile-landscape"><a aria-label="Previous Slide" href="#" class="swiper_button swiper-prev pointer-events-on w-inline-block"><div class="swiper_button-icon is-reversed w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 29.541 22.323"><g id="Group_44" data-name="Group 44" transform="translate(0 1.014)"><path id="Path_1" data-name="Path 1" d="M115.445,20.633l9.311-10.148L115.445.338" transform="translate(-97.25 -0.338)" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="3"></path><line id="Line_1" data-name="Line 1" x1="27.506" transform="translate(0 10.148)" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="3"></line></g></svg></div></a><a aria-label="Next Slide" href="#" class="swiper_button swiper-next pointer-events-on w-inline-block"><div class="swiper_button-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 29.541 22.323"><g id="Group_44" data-name="Group 44" transform="translate(0 1.014)"><path id="Path_1" data-name="Path 1" d="M115.445,20.633l9.311-10.148L115.445.338" transform="translate(-97.25 -0.338)" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="3"></path><line id="Line_1" data-name="Line 1" x1="27.506" transform="translate(0 10.148)" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="3"></line></g></svg></div></a></div><div class="swiper is-product-thumbnail"><div li-for:inside="media in product.media" class="swiper-wrapper is-product-thumbnail">
+        {% for media in product.media %}                            {% if media.media_type == 'image' %}    <div li-if="media.media_type == 'image'" class="swiper-slide is-product-thumbnail">
+    <img li-object:src="media | image_url: width: 200" li-object:alt="media.alt" alt="{{ media.alt }}" src="{{ media | image_url: width: 200 }}" loading="lazy" class="product-header_thumbnail-image">    </div>
+{% endif %}
+                            {% if media.media_type == 'video' %}    <div li-if="media.media_type == 'video'" class="swiper-slide is-product-thumbnail">
+    <img li-object:src="media | image_url: width: 200" li-object:alt="media.alt" alt="{{ media.alt }}" src="{{ media | image_url: width: 200 }}" loading="lazy" class="product-header_thumbnail-image"><div aria-hidden="true" class="product-header_play-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ic" width="100%" height="100%" preserveaspectratio="xMidYMid meet" viewbox="0 0 24 24"><path fill="currentColor" d="M8 5v14l11-7z"></path></svg></div>    </div>
+{% endif %}
+                    {% endfor %}    </div></div></div><div class="swiper-slide is-product-thumbnail is-active hide"></div></div><div li-content-for-theme-blocks="" id="w-node-aaec4065-ff42-9417-cd74-abddd5440108-d54400ec" class="product-header_product-details">
+{% content_for 'blocks' %}
+</div></div></div></div></div><div class="hide w-embed w-script"><script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script><script>
+              document.addEventListener("DOMContentLoaded", () => {
+                $(".swiper-container").each(function(index) {
+                  const thumbsSwiper = new Swiper($(this).find(".swiper.is-product-thumbnail")[0], {
+                    slidesPerView: "auto",
+                    rewind: false,
+                    loopedSlides: 8,
+                    slideToClickedSlide: true,
+                    spaceBetween: "4%",
+                  });
+                  const swiper = new Swiper($(this).find(".swiper.is-product-gallery")[0], {
+                    mousewheel: {
+                      forceToAxis: true
+                    },
+                    thumbs: {
+                      swiper: thumbsSwiper,
+                      slideThumbActiveClass: "is-active",
+                    },
+                    keyboard: {
+                      enabled: true,
+                      onlyInViewport: true
+                    },
+                    navigation: {
+                      nextEl: $(this).find(".swiper-next")[0],
+                      prevEl: $(this).find(".swiper-prev")[0],
+                    }
+                  });
+                });
+              });
+            </script></div> {% schema %} {
+    "tag": "section",
+    "name": "Product Header",
+    "class": "section_product-header",
+    "blocks": [
+        {
+            "type": "vendor"
+        },
+        {
+            "type": "product-name"
+        },
+        {
+            "type": "product-price"
+        },
+        {
+            "type": "availability"
+        },
+        {
+            "type": "add-to-cart"
+        },
+        {
+            "type": "description"
+        },
+        {
+            "type": "@app"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Product Header",
+            "category": "Liquify",
+            "blocks": [
+                {
+                    "type": "vendor"
+                },
+                {
+                    "type": "product-name"
+                },
+                {
+                    "type": "product-price"
+                },
+                {
+                    "type": "availability"
+                },
+                {
+                    "type": "add-to-cart"
+                },
+                {
+                    "type": "description"
+                }
+            ]
+        }
+    ],
+    "enabled_on": {
+        "templates": [
+            "product"
+        ]
+    }
+} {% endschema %}

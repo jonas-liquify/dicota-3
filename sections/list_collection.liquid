@@ -1,0 +1,39 @@
+{% paginate collections by 50 %}
+    <div li-paginate:by="50" li-paginate="collections" class="padding-global padding-section-small" by="50"><div class="container-large"><div class="collections_list-wrapper w-dyn-list"><div role="list" class="collections_grid w-dyn-items">{% for collection in collections %}    <div li-for="collection in collections" role="listitem" class="collections_list-item w-dyn-item">
+                                    <a li-object:href="collection.url" href="{{ collection.url }}" class="collections_item w-inline-block"><img alt="" loading="lazy" li-object:src="collection.featured_image | image_url: width: 450" src="{{ collection.featured_image | image_url: width: 450 }}" class="collections_bg-image"><div class="collections_overlay"></div><div class="collections_title"><h2 li-object="collection.title" class="heading-style-h3 text-color-white">{{ collection.title }}</h2></div></a>
+                        </div>
+{% endfor %}</div><div class="hide w-dyn-empty"><div>No items found.</div></div></div>{% if paginate.pages > 1 %}    <nav li-if="paginate.pages > 1" class="pagination_component">
+    <ul role="list" class="pagination_list w-list-unstyled">{% if paginate.previous %}    <li li-if="paginate.previous" class="pagination_item">
+    <a li-object:href="paginate.previous.url" href="{{ paginate.previous.url }}" class="button is-secondary is-icon w-inline-block"><div class="pagination_arrow w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 13 8" fill="none" preserveaspectratio="xMidYMid meet" aria-hidden="true" role="img"><path d="M1.67318 0.589844L6.26318 5.16984L10.8532 0.589844L12.2632 1.99984L6.26318 7.99984L0.263184 1.99984L1.67318 0.589844Z" fill="currentColor"></path></svg></div><div>Back</div></a>    </li>
+{% endif %}{% if paginate.previous == false %}    <li li-if="paginate.previous == false" class="pagination_item">
+    <a li-object:href="paginate.previous.url" href="{{ paginate.previous.url }}" class="button is-secondary is-icon text-style-muted pointer-events-off w-inline-block"><div class="pagination_arrow w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 13 8" fill="none" preserveaspectratio="xMidYMid meet" aria-hidden="true" role="img"><path d="M1.67318 0.589844L6.26318 5.16984L10.8532 0.589844L12.2632 1.99984L6.26318 7.99984L0.263184 1.99984L1.67318 0.589844Z" fill="currentColor"></path></svg></div><div>Back</div></a>    </li>
+{% endif %}{% for part in paginate.parts %}    <li li-for="part in paginate.parts" class="pagination_item">
+                                    {% if part.is_link %}    <div li-if="part.is_link">
+    <a li-object:href="part.url" href="{{ part.url }}" class="pagination_count w-inline-block"><div li-object="part.title" class="text-style-link">{{ part.title }}</div></a>    </div>
+{% endif %}
+                            {% if part.is_link == false %}    <div li-if="part.is_link == false">
+    <div li-object="part.title" class="{% if part.title == paginate.current_page %}text-weight-semibold{% endif %}">{{ part.title }}</div>    </div>
+{% endif %}
+                        </li>
+{% endfor %}{% if paginate.next == false %}    <li li-if="paginate.next == false" class="pagination_item">
+    <a li-object:href="paginate.next.url" href="{{ paginate.next.url }}" class="button is-secondary is-icon text-style-muted pointer-events-off w-inline-block"><div>Next</div><div class="pagination_arrow is-right w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 13 8" fill="none" preserveaspectratio="xMidYMid meet" aria-hidden="true" role="img"><path d="M1.67318 0.589844L6.26318 5.16984L10.8532 0.589844L12.2632 1.99984L6.26318 7.99984L0.263184 1.99984L1.67318 0.589844Z" fill="currentColor"></path></svg></div></a>    </li>
+{% endif %}{% if paginate.next %}    <li li-if="paginate.next" class="pagination_item">
+    <a li-object:href="paginate.next.url" href="{{ paginate.next.url }}" class="button is-secondary is-icon w-inline-block"><div>Next</div><div class="pagination_arrow is-right w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 13 8" fill="none" preserveaspectratio="xMidYMid meet" aria-hidden="true" role="img"><path d="M1.67318 0.589844L6.26318 5.16984L10.8532 0.589844L12.2632 1.99984L6.26318 7.99984L0.263184 1.99984L1.67318 0.589844Z" fill="currentColor"></path></svg></div></a>    </li>
+{% endif %}</ul>    </nav>
+{% endif %}</div></div>{% endpaginate %} {% schema %} {
+    "tag": "section",
+    "name": "List-Collection",
+    "class": "section_collections",
+    "presets": [
+        {
+            "name": "List-Collection",
+            "category": "Liquify",
+            "blocks": []
+        }
+    ],
+    "enabled_on": {
+        "templates": [
+            "list-collections"
+        ]
+    }
+} {% endschema %}
