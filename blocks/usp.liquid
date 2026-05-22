@@ -1,12 +1,12 @@
-<div li-block="USP" class="announcement-bar_item" {{ block.shopify_attributes }}>
-                    {% if block.settings.image_icon %}
-{{ block.settings.image_icon | image_url: width: 40 | image_tag: loading: 'lazy', class: 'announcement-bar_icon' }}
+<div li-block="USP" class="usp-row_item" {{ block.shopify_attributes }}>
+                    <div class="usp-row_icon-wrap">{% if block.settings.image_icon %}
+{{ block.settings.image_icon | image_url: width: 80 | image_tag: loading: 'lazy', class: 'usp-row_icon' }}
 {% else %}
-<img src="{{ 'payment.svg' | asset_url }}" loading="lazy" alt="" class="announcement-bar_icon">
-{% endif %}
-                    <div class="text-size-tiny announcement-bar_text">
-{{ block.settings.text_text }}
-</div>
+<img src="{{ 'payment.svg' | asset_url }}" loading="lazy" alt="" class="usp-row_icon">
+{% endif %}</div>
+                    <div class="usp-row_text"><p class="usp-row_title">
+{{ block.settings.text_uberschrift }}
+</p><p class="usp-row_description"> {{ block.settings.textarea_beschreibung }} </p></div>
                 </div> {% schema %} {
     "name": "USP",
     "settings": [
@@ -16,10 +16,16 @@
             "label": "Icon"
         },
         {
-            "id": "text_text",
+            "id": "text_uberschrift",
             "type": "text",
-            "label": "Text",
-            "default": "Gratis Versand ab 100 EUR"
+            "label": "\u00dcberschrift",
+            "default": "Free Shipping ab 80 EUR"
+        },
+        {
+            "id": "textarea_beschreibung",
+            "type": "textarea",
+            "label": "Beschreibung",
+            "default": "Free standard shipping available in the European Union"
         }
     ],
     "presets": [

@@ -1,0 +1,29 @@
+{
+    "sections": {
+        "search": {
+            "type": "search"
+        },
+        "footer_newsletter": {
+            "type": "footer_newsletter"
+        },
+        "footer_bottom": {
+            "type": "footer_bottom",
+            "blocks": {
+                "social": {
+                    "type": "social",
+                    "name": "Social"
+                }
+            },
+            "block_order": [
+                "social"
+            ]
+        }
+    },
+    "layout": "theme",
+    "wrapper": "main.main-wrapper",
+    "order": [
+        "search",
+        "footer_newsletter",
+        "footer_bottom"
+    ]
+}
