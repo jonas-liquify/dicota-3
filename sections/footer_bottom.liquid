@@ -7,9 +7,9 @@
 {% content_for 'blocks' %}
 </ul></div><div class="footer-bottom_legal-row"><p class="footer-bottom_copyright">
 {{ section.settings.text_copyright }}
-</p><nav class="footer-bottom_legal-links">{% for link.title %}    <a li-for="link in linklists[section.settings.legal_menu].links" li-object="link.title" li-object:href="link.url" href="#" class="footer-bottom_legal-link">
-                                    Impressum
-                        </a>
+</p><nav class="footer-bottom_legal-links">{% for link in linklists[section.settings.legal_menu].links %}    <div li-for="link in linklists[section.settings.legal_menu].links" class="footer-bottom_legal-item">
+                                    <a li-object="link.title" li-object:href="link.url" href="{{ link.url }}" class="footer-bottom_legal-link">{{ link.title }}</a>
+                        </div>
 {% endfor %}</nav>{% render 'localization_picker' %}</div> {% schema %} {
     "tag": "section",
     "name": "Footer Bottom",

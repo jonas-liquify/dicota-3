@@ -5632,7 +5632,6 @@ figcaption {
 .section_hero {
   position: relative;
   width: 100%;
-  min-height: var(--hero-min-height, 90vh);
   margin-top: -8.5rem; /* navbar overlays hero (40px announcement + 84px navbar = ~7.75rem) */
   color: var(--base-color-neutral--white);
   overflow: hidden;
@@ -5642,7 +5641,10 @@ figcaption {
   position: relative;
   width: 100%;
   height: 100%;
-  min-height: inherit;
+  /* The min-height CSS variable is defined here via the inline-style on the
+     wrapper (li-attribute:style="--hero-min-height: …vh"). Fallback matches
+     the JSON default so the Builder shows the Figma-look. */
+  min-height: var(--hero-min-height, 90vh);
 }
 
 .hero_swiper .swiper-wrapper,
@@ -5859,9 +5861,11 @@ figcaption {
    ============================================================= */
 .section_section-headline {
   width: 100%;
-  /* Builder defaults — mirror JSON setting defaults so the Liquiflow Builder
-     shows the Figma look without Liquid being applied. Inline-style Liquid
-     overrides these in production. */
+}
+
+/* Builder defaults live on the inner wrapper so the inline-style Liquid (also
+   placed on the wrapper) can override them in production without doubling. */
+.section_section-headline > .padding-global {
   padding-top: 80px;
   padding-bottom: 40px;
   background-color: #ffffff;
@@ -5915,7 +5919,9 @@ figcaption {
    ============================================================= */
 .section_featured-products {
   width: 100%;
-  /* Builder defaults — mirror JSON setting defaults */
+}
+
+.section_featured-products > .padding-global {
   padding-top: 40px;
   padding-bottom: 80px;
   background-color: #ffffff;
@@ -6235,7 +6241,9 @@ figcaption {
    ============================================================= */
 .section_usp-row {
   width: 100%;
-  /* Builder defaults — mirror JSON setting defaults */
+}
+
+.section_usp-row > .padding-global {
   padding-top: 60px;
   padding-bottom: 120px;
   background-color: #ffffff;
@@ -6323,9 +6331,7 @@ figcaption {
 .section_image-banner {
   position: relative;
   width: 100%;
-  min-height: var(--banner-min-height, 45vh);
   color: var(--base-color-neutral--white);
-  text-align: left; /* Builder default — mirrors JSON default "left" */
   overflow: hidden;
   isolation: isolate;
 }
@@ -6435,7 +6441,9 @@ figcaption {
    ============================================================= */
 .section_shop-by-category {
   width: 100%;
-  /* Builder defaults — mirror JSON setting defaults */
+}
+
+.section_shop-by-category > .padding-global {
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: #ffffff;
@@ -6732,7 +6740,9 @@ figcaption {
    ============================================================= */
 .section_accessories {
   width: 100%;
-  /* Builder defaults — mirror JSON setting defaults */
+}
+
+.section_accessories > .padding-global {
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: #ffffff;
@@ -6890,6 +6900,10 @@ figcaption {
    DICOTA — Image + Link List ("Mobile Working")
    ============================================================= */
 .section_image-link-list {
+  width: 100%;
+}
+
+.image-link-list_inner {
   display: grid;
   grid-template-columns: 1fr 1fr;
   width: 100%;
@@ -6899,11 +6913,11 @@ figcaption {
   color: #ffffff;
 }
 
-.section_image-link-list.is-image-right {
+.image-link-list_inner.is-image-right {
   grid-template-areas: "text image";
 }
-.section_image-link-list.is-image-right .image-link-list_image-side { grid-area: image; }
-.section_image-link-list.is-image-right .image-link-list_text-side  { grid-area: text;  }
+.image-link-list_inner.is-image-right .image-link-list_image-side { grid-area: image; }
+.image-link-list_inner.is-image-right .image-link-list_text-side  { grid-area: text;  }
 
 .image-link-list_image-side {
   position: relative;
@@ -7015,11 +7029,11 @@ figcaption {
 }
 
 @media screen and (max-width: 991px) {
-  .section_image-link-list {
+  .image-link-list_inner {
     grid-template-columns: 1fr;
     min-height: auto;
   }
-  .section_image-link-list.is-image-right {
+  .image-link-list_inner.is-image-right {
     grid-template-areas: none;
   }
   .image-link-list_image-side {
@@ -7042,7 +7056,9 @@ figcaption {
    ============================================================= */
 .section_loved-by {
   width: 100%;
-  /* Builder defaults — mirror JSON setting defaults */
+}
+
+.section_loved-by > .loved-by_grid {
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: #ffffff;
@@ -7359,7 +7375,6 @@ figcaption {
   align-items: center;
   justify-content: center;
   width: 100%;
-  min-height: var(--banner-min-height, 70vh);
   color: var(--base-color-neutral--white);
   overflow: hidden;
   isolation: isolate;
@@ -7411,6 +7426,8 @@ figcaption {
   align-items: center;
   gap: 1rem;
   width: 100%;
+  min-height: var(--banner-min-height, 70vh);
+  justify-content: center;
   max-width: 45.625rem; /* 730px */
   padding: 2.5rem;
   text-align: center;
@@ -7509,7 +7526,9 @@ figcaption {
    ============================================================= */
 .section_testimonials {
   width: 100%;
-  /* Builder defaults — mirror JSON setting defaults */
+}
+
+.section_testimonials > .padding-global {
   padding-top: 60px;
   padding-bottom: 60px;
 }

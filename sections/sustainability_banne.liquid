@@ -8,7 +8,7 @@
 {% else %}
 <img src="{{ 'Social-Icon.svg' | asset_url }}" loading="lazy" alt="" class="sustainability_badge-image">
 {% endif %}    </div>
-{% endif %}<div class="sustainability_content">{% assign counter_chars = section.settings.counter | split: '' %}<div class="sustainability_counter"><div li-for:inside="char in counter_chars">
+{% endif %}<div class="sustainability_content" style="--banner-min-height: {{ section.settings.min_height }}vh;">{% assign counter_chars = section.settings.counter | split: '' %}<div class="sustainability_counter"><div li-for:inside="char in counter_chars">
         {% for char in counter_chars %}                            {% if char %}    <span li-if="char == '.'" class="sustainability_counter-dot" li-object="char">
     .    </span>
 {% endif %}
