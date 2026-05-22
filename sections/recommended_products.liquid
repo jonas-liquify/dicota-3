@@ -1,0 +1,48 @@
+<div data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit=4&intent=related" class="padding-global padding-section-medium product-recommendations"><div class="container-large"><div class="headline-wrapper"><h2 class="heading-style-h2">
+{{ section.settings.text_heading }}
+</h2></div><div class="product_list-wrapper"><ul role="list" class="product_list w-list-unstyled">{% for product in recommendations.products %}    <li li-for="product in recommendations.products" class="product_list-item">
+                                    {% render 'product_item', product: product %}
+                        </li>
+{% endfor %}</ul></div></div></div><div class="hide w-embed w-script"><script>
+              document.addEventListener('DOMContentLoaded', function() {
+                const productRecommendationsSection = document.querySelector('.product-recommendations');
+                const url = productRecommendationsSection.dataset.url;
+                fetch(url)
+                  .then(response => response.text())
+                  .then(text => {
+                    const html = document.createElement('div');
+                    html.innerHTML = text;
+                    const recommendations = html.querySelector('.product-recommendations');
+                    if (recommendations && recommendations.innerHTML.trim().length) {
+                      productRecommendationsSection.innerHTML = recommendations.innerHTML;
+                    }
+                  })
+                  .catch(e => {
+                    console.error(e);
+                  });
+              });
+            </script></div> {% schema %} {
+    "tag": "section",
+    "name": "Recommended Products",
+    "class": "section_product-recommended",
+    "settings": [
+        {
+            "id": "text_heading",
+            "type": "text",
+            "label": "Heading",
+            "default": "Recommended"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Recommended Products",
+            "category": "Liquify",
+            "blocks": []
+        }
+    ],
+    "enabled_on": {
+        "templates": [
+            "product"
+        ]
+    }
+} {% endschema %}

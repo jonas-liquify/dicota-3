@@ -1,0 +1,16 @@
+{
+    "sections": {
+        "list_collection_hero": {
+            "type": "list_collection_hero"
+        },
+        "list_collection": {
+            "type": "list_collection"
+        }
+    },
+    "layout": "theme",
+    "wrapper": "main.main-wrapper",
+    "order": [
+        "list_collection_hero",
+        "list_collection"
+    ]
+}

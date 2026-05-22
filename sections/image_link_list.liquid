@@ -1,0 +1,92 @@
+<div class="image-link-list_image-side"><picture class="image-link-list_picture">{% if section.settings.image_bild %}
+{{ section.settings.image_bild | image_url: width: 1400 | image_tag: loading: 'lazy', class: 'image-link-list_image' }}
+{% else %}
+<img src="{{ 'hero-apparel-3.svg' | asset_url }}" loading="lazy" alt="" class="image-link-list_image">
+{% endif %}</picture></div><div class="image-link-list_text-side"><div class="image-link-list_content"><p class="image-link-list_subtitle">
+{{ section.settings.text_subtitle }}
+</p><ul li-cf-theme-blocks="" class="image-link-list_links">
+{% content_for 'blocks' %}
+</ul><div class="image-link-list_actions"><a href="{{ section.settings.url_button_link }}" class="button image-link-list_button w-button"> <span>{{ section.settings.text_button_text }}</span> </a></div></div></div> {% schema %} {
+    "tag": "section",
+    "name": "Image + Link List",
+    "class": "section_image-link-list",
+    "blocks": [
+        {
+            "type": "link"
+        },
+        {
+            "type": "@app"
+        }
+    ],
+    "settings": [
+        {
+            "id": "image_bild",
+            "type": "image_picker",
+            "label": "Bild"
+        },
+        {
+            "id": "text_subtitle",
+            "type": "text",
+            "label": "Subtitle",
+            "default": "Wonach suchst du?"
+        },
+        {
+            "id": "url_button_link",
+            "type": "url",
+            "label": "Button Link"
+        },
+        {
+            "id": "text_button_text",
+            "type": "text",
+            "label": "Button Text",
+            "default": "Zum Product-Finder"
+        },
+        {
+            "type": "header",
+            "content": "Layout"
+        },
+        {
+            "type": "select",
+            "id": "image_position",
+            "label": "Bild-Position",
+            "options": [
+                {
+                    "value": "left",
+                    "label": "Links"
+                },
+                {
+                    "value": "right",
+                    "label": "Rechts"
+                }
+            ],
+            "default": "left"
+        },
+        {
+            "type": "header",
+            "content": "Farben"
+        },
+        {
+            "type": "color",
+            "id": "bg_color",
+            "label": "Hintergrundfarbe",
+            "default": "#0f0f0f"
+        },
+        {
+            "type": "color",
+            "id": "text_color",
+            "label": "Textfarbe",
+            "default": "#ffffff"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Image + Link List",
+            "category": "Liquify",
+            "blocks": [
+                {
+                    "type": "link"
+                }
+            ]
+        }
+    ]
+} {% endschema %}

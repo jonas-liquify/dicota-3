@@ -1,0 +1,124 @@
+<div class="padding-global padding-section-small"><div class="container-large"><div class="cart_grid-wrapper"><div class="cart_table outline-solid-1"><div class="cart_grid is-header is-order"><div id="w-node-a6506aa7-2131-c33e-ed5e-bebd7fad867a-7fad8674" class="text-size-regular">
+{{ section.settings.text_name }}
+</div><div id="w-node-a6506aa7-2131-c33e-ed5e-bebd7fad867c-7fad8674" class="text-size-regular">
+{{ section.settings.text_quantity }}
+</div><div id="w-node-a6506aa7-2131-c33e-ed5e-bebd7fad867e-7fad8674" class="text-size-regular hide-mobile-portrait">
+{{ section.settings.text_price }}
+</div><div id="w-node-a6506aa7-2131-c33e-ed5e-bebd7fad8680-7fad8674" class="text-size-regular">
+{{ section.settings.text_sum }}
+</div></div>{% for item in order.line_items %}    <div li-for="item in order.line_items" class="cart_grid is-order">
+                                    <div li-object="item.product.title" id="w-node-a6506aa7-2131-c33e-ed5e-bebd7fad8683-7fad8674" class="text-size-regular">{{ item.product.title }}</div>
+                            <div li-object="item.quantity" id="w-node-a6506aa7-2131-c33e-ed5e-bebd7fad8685-7fad8674" class="text-size-regular">{{ item.quantity }}</div>
+                            <div li-object="item.unit_price" id="w-node-a6506aa7-2131-c33e-ed5e-bebd7fad8687-7fad8674" class="text-size-regular hide-mobile-portrait">{{ item.unit_price }}</div>
+                            <div li-object="item.final_line_price | money" id="w-node-a6506aa7-2131-c33e-ed5e-bebd7fad8689-7fad8674" class="text-size-regular">{{ item.final_line_price | money }}</div>
+                        </div>
+{% endfor %}<div><div class="order_line"><div class="text-size-regular">
+{{ section.settings.text_subtotal }}
+</div><div li-object="order.subtotal_price | money">{{ order.subtotal_price | money }}</div></div>{% for line_item in order.line_items %}    <div li-for="line_item in order.line_items">
+                                    {% for discount in line_item.discount_allocations %}    <div li-for="discount in line_item.discount_allocations" class="order_line">
+                                    <div li-object="discount.discount_application.title" class="text-size-regular">{{ discount.discount_application.title }}</div>
+                            <div li-object="discount.amount | money">{{ discount.amount | money }}</div>
+                        </div>
+{% endfor %}
+                        </div>
+{% endfor %}{% for shipping_line in order.shipping_lines %}    <div li-for="shipping_line in order.shipping_lines" class="order_line">
+                                    <div li-object="shipping_line.title" class="text-size-regular">{{ shipping_line.title }}</div>
+                            <div li-object="shipping_line.price | money" class="text-size-regular">{{ shipping_line.price | money }}</div>
+                        </div>
+{% endfor %}{% for tax_line in order.tax_lines %}    <div li-for="tax_line in order.tax_lines" class="order_line">
+                                    <div class="display-inlineflex"><div li-object="tax_line.title" class="text-size-regular">{{ tax_line.title }}</div><div class="text-size-regular">(<span li:object="tax_line.rate | times: 100">19</span>)</div></div>
+                            <div li-object="tax_line.price | money" class="text-size-regular">{{ tax_line.price | money }}</div>
+                        </div>
+{% endfor %}<div class="order_line"><div>
+{{ section.settings.text_sum }}
+</div><div li-object="order.total_price | money">{{ order.total_price | money }}</div></div></div></div><div id="w-node-a6506aa7-2131-c33e-ed5e-bebd7fad86ac-7fad8674" class="cart_table outline-solid-1"><div class="cart_grid is-header"><div id="w-node-a6506aa7-2131-c33e-ed5e-bebd7fad86ae-7fad8674" class="cart_table-header"><div class="text-size-regular">
+{{ section.settings.text_customer_information }}
+</div></div></div><div class="addresses_account-wrapper content-grid"><div><div li-object="order.name" class="text-size-regular">{{ order.name }}</div><div li-object="order.created_at | date: '%e.%m.%Y'" class="text-size-regular">{{ order.created_at | date: '%e.%m.%Y' }}</div>{% if order.cancelled == true %}    <div li-if="order.cancelled == true" class="order_wrapper">
+    <div class="text-size-regular">
+{{ section.settings.text_canceld_at }}
+</div><div li-object="order.cancelled_at | date: '%e.%m.%Y'" class="text-size-regular">{{ order.cancelled_at | date: '%e.%m.%Y' }}</div>    </div>
+{% endif %}<div liquid:if="order.cancelled == true" class="order_wrapper"><div class="text-size-regular">
+{{ section.settings.text_reason }}
+</div><div li-object="order.cancel_reason_label" class="text-size-regular">{{ order.cancel_reason_label }}</div></div></div><div><div class="text-size-regular">
+{{ section.settings.text_billing_address }}
+</div><div li-object="order.billing_address | format_address" class="text-size-regular">{{ order.billing_address | format_address }}</div></div><div><div class="text-size-regular">
+{{ section.settings.text_shipping_address }}
+</div><div li-object="order.shipping_address | format_address" class="text-size-regular">{{ order.shipping_address | format_address }}</div></div></div></div></div></div></div> {% schema %} {
+    "tag": "section",
+    "name": "Order",
+    "class": "section_account",
+    "settings": [
+        {
+            "id": "text_name",
+            "type": "text",
+            "label": "Name",
+            "default": "Name"
+        },
+        {
+            "id": "text_quantity",
+            "type": "text",
+            "label": "Quantity",
+            "default": "Quantity"
+        },
+        {
+            "id": "text_price",
+            "type": "text",
+            "label": "Price",
+            "default": "Price"
+        },
+        {
+            "id": "text_sum",
+            "type": "text",
+            "label": "Sum",
+            "default": "Sum"
+        },
+        {
+            "id": "text_subtotal",
+            "type": "text",
+            "label": "Subtotal",
+            "default": "Subtotal"
+        },
+        {
+            "id": "text_customer_information",
+            "type": "text",
+            "label": "Customer Information",
+            "default": "Customer Information"
+        },
+        {
+            "id": "text_canceld_at",
+            "type": "text",
+            "label": "Canceld at",
+            "default": "Canceled at: "
+        },
+        {
+            "id": "text_reason",
+            "type": "text",
+            "label": "Reason",
+            "default": "Reason: "
+        },
+        {
+            "id": "text_billing_address",
+            "type": "text",
+            "label": "Billing Address",
+            "default": "Billing Address:"
+        },
+        {
+            "id": "text_shipping_address",
+            "type": "text",
+            "label": "Shipping Address",
+            "default": "Shipping Address:"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Order",
+            "category": "Liquify",
+            "blocks": []
+        }
+    ],
+    "enabled_on": {
+        "templates": [
+            "customers\/order"
+        ]
+    }
+} {% endschema %}

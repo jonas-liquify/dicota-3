@@ -1,0 +1,101 @@
+<picture class="sustainability_bg-picture">{% if section.settings.image_hintergrundbild %}
+{{ section.settings.image_hintergrundbild | image_url: width: 2400 | image_tag: loading: 'lazy', class: 'sustainability_bg-image' }}
+{% else %}
+<img src="{{ 'hero-apparel-2.svg' | asset_url }}" loading="lazy" alt="" class="sustainability_bg-image">
+{% endif %}</picture><div class="sustainability_overlay" style="background-color: rgba(0,0,0,{{ section.settings.overlay_strength | divided_by: 100.0 }});"></div>{% if section.settings.badge != blank %}    <div li-if="section.settings.badge != blank" class="sustainability_badge">
+    {% if section.settings.image_badge_top_right %}
+{{ section.settings.image_badge_top_right | image_url: width: 1000 | image_tag: loading: 'lazy', class: 'sustainability_badge-image' }}
+{% else %}
+<img src="{{ 'Social-Icon.svg' | asset_url }}" loading="lazy" alt="" class="sustainability_badge-image">
+{% endif %}    </div>
+{% endif %}<div class="sustainability_content">{% assign counter_chars = section.settings.counter | split: '' %}<div class="sustainability_counter"><div li-for:inside="char in counter_chars">
+        {% for char in counter_chars %}                            {% if char %}    <span li-if="char == '.'" class="sustainability_counter-dot" li-object="char">
+    .    </span>
+{% endif %}
+                            {% unless char %}    <span li-unless="char == '.'" class="sustainability_counter-digit" li-object="char">
+    0    </span>
+{% endunless %}
+                    {% endfor %}    </div></div><h2 class="sustainability_title">
+{{ section.settings.text_uberschrift }}
+</h2><p class="sustainability_subtext"> {{ section.settings.textarea_beschreibung }} </p><div class="sustainability_actions"><a href="{{ section.settings.url_button_link }}" class="button sustainability_button w-button"> <span>{{ section.settings.text_button_text }}</span> </a></div></div> {% schema %} {
+    "tag": "section",
+    "name": "Sustainability Banne",
+    "class": "section_sustainability",
+    "settings": [
+        {
+            "id": "image_hintergrundbild",
+            "type": "image_picker",
+            "label": "Hintergrundbild"
+        },
+        {
+            "id": "image_badge_top_right",
+            "type": "image_picker",
+            "label": "Badge (top right)"
+        },
+        {
+            "id": "text_uberschrift",
+            "type": "text",
+            "label": "\u00dcberschrift",
+            "default": "Verarbeitete Flaschen"
+        },
+        {
+            "id": "textarea_beschreibung",
+            "type": "textarea",
+            "label": "Beschreibung",
+            "default": "Seit 1992 wurden mehr als 12 Millionen PET-Flaschen verarbeitet, um Abfall zu minimieren und Nachhaltigkeit zu f\u00f6rdern"
+        },
+        {
+            "id": "url_button_link",
+            "type": "url",
+            "label": "Button Link"
+        },
+        {
+            "id": "text_button_text",
+            "type": "text",
+            "label": "Button Text",
+            "default": "Mehr zur Nachhaltigkeit"
+        },
+        {
+            "type": "header",
+            "content": "Inhalt"
+        },
+        {
+            "type": "text",
+            "id": "counter",
+            "label": "Z\u00e4hler-Wert",
+            "info": "Punkte als Trenner verwenden, z. B. 12.483.129 \u2014 jede Ziffer wird zur eigenen Kachel",
+            "default": "12.483.129"
+        },
+        {
+            "type": "header",
+            "content": "Layout"
+        },
+        {
+            "type": "range",
+            "id": "min_height",
+            "min": 40,
+            "max": 100,
+            "step": 5,
+            "unit": "vh",
+            "label": "Mindesth\u00f6he",
+            "default": 70
+        },
+        {
+            "type": "range",
+            "id": "overlay_strength",
+            "min": 0,
+            "max": 80,
+            "step": 5,
+            "unit": "%",
+            "label": "Dunkles Overlay",
+            "default": 30
+        }
+    ],
+    "presets": [
+        {
+            "name": "Sustainability Banne",
+            "category": "Liquify",
+            "blocks": []
+        }
+    ]
+} {% endschema %}

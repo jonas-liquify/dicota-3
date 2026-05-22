@@ -1,0 +1,38 @@
+<div class="padding-global padding-section-medium"><div class="container-small"><div class="text-align-center"><div class="max-width-xlarge align-center"><div class="margin-bottom margin-small"><h1 class="heading-style-h1">
+{{ section.settings.text_heading }}
+</h1></div><p class="text-size-medium">
+{{ section.settings.text_paragraph }}
+</p><div class="margin-top margin-medium"><div class="button-group is-center"><a li-object:href="routes.root_url" href="{{ routes.root_url }}" class="button w-button"><span>
+{{ section.settings.text_button_text }}
+</span></a></div></div></div></div></div></div> {% schema %} {
+    "tag": "header",
+    "name": "Text-CTA",
+    "class": "section_header",
+    "settings": [
+        {
+            "id": "text_heading",
+            "type": "text",
+            "label": "Heading",
+            "default": "Thanks for your Submission"
+        },
+        {
+            "id": "text_paragraph",
+            "type": "text",
+            "label": "Paragraph",
+            "default": "We will contact you soon."
+        },
+        {
+            "id": "text_button_text",
+            "type": "text",
+            "label": "Button Text",
+            "default": "Back to Home"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Text-CTA",
+            "category": "Liquify",
+            "blocks": []
+        }
+    ]
+} {% endschema %}
