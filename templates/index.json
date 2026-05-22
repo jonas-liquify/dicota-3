@@ -1,0 +1,163 @@
+{
+    "sections": {
+        "announcement_bar": {
+            "type": "announcement_bar",
+            "blocks": {
+                "usp": {
+                    "type": "usp",
+                    "name": "USP"
+                },
+                "account-bar": {
+                    "name": "Account Bar",
+                    "type": "account-bar",
+                    "static": true
+                }
+            },
+            "block_order": [
+                "usp"
+            ]
+        },
+        "hero_slider": {
+            "type": "hero_slider",
+            "blocks": {
+                "slide": {
+                    "type": "slide",
+                    "name": "Slide"
+                }
+            },
+            "block_order": [
+                "slide"
+            ]
+        },
+        "section_headline": {
+            "type": "section_headline"
+        },
+        "featured_products": {
+            "type": "featured_products"
+        },
+        "usp_icon_row": {
+            "type": "usp_icon_row",
+            "blocks": {
+                "usp": {
+                    "type": "usp",
+                    "name": "USP"
+                }
+            },
+            "block_order": [
+                "usp"
+            ]
+        },
+        "image_banner": {
+            "type": "image_banner"
+        },
+        "shop_by_category": {
+            "type": "shop_by_category",
+            "blocks": {
+                "kategorie": {
+                    "type": "kategorie",
+                    "name": "Kategorie"
+                }
+            },
+            "block_order": [
+                "kategorie"
+            ]
+        },
+        "two_column_banner": {
+            "type": "two_column_banner",
+            "blocks": {
+                "banner": {
+                    "type": "banner",
+                    "name": "Banner"
+                }
+            },
+            "block_order": [
+                "banner"
+            ]
+        },
+        "accessories_slider": {
+            "type": "accessories_slider",
+            "blocks": {
+                "kategorie": {
+                    "type": "kategorie",
+                    "name": "Kategorie"
+                }
+            },
+            "block_order": [
+                "kategorie"
+            ]
+        },
+        "image_link_list": {
+            "type": "image_link_list",
+            "blocks": {
+                "link": {
+                    "type": "link",
+                    "name": "Link"
+                }
+            },
+            "block_order": [
+                "link"
+            ]
+        },
+        "loved_by_customers": {
+            "type": "loved_by_customers",
+            "blocks": {
+                "foto": {
+                    "type": "foto",
+                    "name": "Foto"
+                }
+            },
+            "block_order": [
+                "foto"
+            ]
+        },
+        "sustainability_banne": {
+            "type": "sustainability_banne"
+        },
+        "testimonials": {
+            "type": "testimonials",
+            "blocks": {
+                "testimonial": {
+                    "type": "testimonial",
+                    "name": "Testimonial"
+                }
+            },
+            "block_order": [
+                "testimonial"
+            ]
+        },
+        "footer_newsletter": {
+            "type": "footer_newsletter"
+        },
+        "footer_bottom": {
+            "type": "footer_bottom",
+            "blocks": {
+                "social": {
+                    "type": "social",
+                    "name": "Social"
+                }
+            },
+            "block_order": [
+                "social"
+            ]
+        }
+    },
+    "layout": "theme",
+    "wrapper": "main.main-wrapper",
+    "order": [
+        "announcement_bar",
+        "hero_slider",
+        "section_headline",
+        "featured_products",
+        "usp_icon_row",
+        "image_banner",
+        "shop_by_category",
+        "two_column_banner",
+        "accessories_slider",
+        "image_link_list",
+        "loved_by_customers",
+        "sustainability_banne",
+        "testimonials",
+        "footer_newsletter",
+        "footer_bottom"
+    ]
+}
