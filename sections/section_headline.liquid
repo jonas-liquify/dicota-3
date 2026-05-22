@@ -1,0 +1,100 @@
+<div class="padding-global"><div class="container-large"><div class="section-headline_inner"><div class="section-headline_titles"><p class="section-headline_pretitle">
+{{ section.settings.text_vortitel }}
+</p><h2 class="section-headline_title">
+{{ section.settings.text_uberschrift }}
+</h2></div><p class="section-headline_subtext"> {{ section.settings.textarea_beschreibung }} </p></div></div></div> {% schema %} {
+    "tag": "section",
+    "name": "Section Headline",
+    "class": "section_section-headline",
+    "settings": [
+        {
+            "id": "text_vortitel",
+            "type": "text",
+            "label": "Vortitel",
+            "default": "[DI:CO:TA]"
+        },
+        {
+            "id": "text_uberschrift",
+            "type": "text",
+            "label": "\u00dcberschrift",
+            "default": "Die Computer Tasche"
+        },
+        {
+            "id": "textarea_beschreibung",
+            "type": "textarea",
+            "label": "Beschreibung",
+            "default": "Taschen gibt es wie Sand am Meer. Taschen mit Laptopfach ebenso. Aber wirkliche Computer Taschen, die gibt es nur bei Dicota."
+        },
+        {
+            "type": "header",
+            "content": "Abst\u00e4nde"
+        },
+        {
+            "type": "range",
+            "id": "padding_top",
+            "min": 0,
+            "max": 160,
+            "step": 4,
+            "unit": "px",
+            "label": "Abstand oben",
+            "default": 80
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom",
+            "min": 0,
+            "max": 160,
+            "step": 4,
+            "unit": "px",
+            "label": "Abstand unten",
+            "default": 40
+        },
+        {
+            "type": "header",
+            "content": "Layout"
+        },
+        {
+            "type": "select",
+            "id": "text_align",
+            "label": "Textausrichtung",
+            "options": [
+                {
+                    "value": "left",
+                    "label": "Links"
+                },
+                {
+                    "value": "center",
+                    "label": "Zentriert"
+                },
+                {
+                    "value": "right",
+                    "label": "Rechts"
+                }
+            ],
+            "default": "center"
+        },
+        {
+            "type": "header",
+            "content": "Farben"
+        },
+        {
+            "type": "color",
+            "id": "bg_color",
+            "label": "Hintergrundfarbe",
+            "default": "#ffffff"
+        },
+        {
+            "type": "color",
+            "id": "text_color",
+            "label": "Textfarbe",
+            "default": "#0f0f0f"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Section Headline",
+            "category": "Liquify",
+            "blocks": []
+        }
+    ]
+} {% endschema %}

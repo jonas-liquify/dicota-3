@@ -1,0 +1,12 @@
+{
+    "sections": {
+        "search": {
+            "type": "search"
+        }
+    },
+    "layout": "theme",
+    "wrapper": "main.main-wrapper",
+    "order": [
+        "search"
+    ]
+}

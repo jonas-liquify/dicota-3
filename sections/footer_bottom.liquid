@@ -1,0 +1,59 @@
+<div class="footer-bottom_row">{% if shop.enabled_payment_types.size > 0 %}    <ul li-if="shop.enabled_payment_types.size > 0" role="list" class="footer-bottom_payments">
+    {% for type in shop.enabled_payment_types %}    <li li-for="type in shop.enabled_payment_types" class="footer-bottom_payment-item">
+                                    <div li-object="type | payment_type_svg_tag: class: 'footer-bottom_payment-svg'" class="footer-bottom_payment-svg-wrap">{{ type | payment_type_svg_tag: class: 'footer-bottom_payment-svg' }}</div>
+                        </li>
+{% endfor %}    </ul>
+{% endif %}<ul li-cf-theme-blocks="" role="list" class="footer-bottom_socials">
+{% content_for 'blocks' %}
+</ul></div><div class="footer-bottom_legal-row"><p class="footer-bottom_copyright">
+{{ section.settings.text_copyright }}
+</p><nav class="footer-bottom_legal-links">{% for link.title %}    <a li-for="link in linklists[section.settings.legal_menu].links" li-object="link.title" li-object:href="link.url" href="#" class="footer-bottom_legal-link">
+                                    Impressum
+                        </a>
+{% endfor %}</nav>{% render 'localization_picker' %}</div> {% schema %} {
+    "tag": "section",
+    "name": "Footer Bottom",
+    "class": "section_footer-bottom",
+    "blocks": [
+        {
+            "type": "social"
+        },
+        {
+            "type": "@app"
+        }
+    ],
+    "settings": [
+        {
+            "id": "text_copyright",
+            "type": "text",
+            "label": "Copyright",
+            "default": "\u00a92026 DCT Group AG"
+        },
+        {
+            "type": "header",
+            "content": "Legal-Men\u00fc"
+        },
+        {
+            "type": "link_list",
+            "id": "legal_menu",
+            "label": "Legal Linkliste",
+            "default": "footer"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Footer Bottom",
+            "category": "Liquify",
+            "blocks": [
+                {
+                    "type": "social"
+                }
+            ]
+        }
+    ],
+    "enabled_on": {
+        "groups": [
+            "*"
+        ]
+    }
+} {% endschema %}

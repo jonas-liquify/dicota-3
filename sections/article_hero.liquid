@@ -1,0 +1,17 @@
+<div class="header_background-image-wrapper"><div class="header_overlay-layer"></div><img src="{{ article.image | image_url: width: 1000 }}" loading="eager" li-object:src="article.image | image_url: width: 1000" li-object:alt="article.image.alt" alt="{{ article.image.alt }}" class="header_background-image"></div><div class="padding-global padding-section-large"><div class="container-large"><h1 li-object="article.title" class="heading-style-h1 text-color-white">{{ article.title }}</h1></div></div> {% schema %} {
+    "tag": "header",
+    "name": "Article Hero",
+    "class": "section_content-header",
+    "presets": [
+        {
+            "name": "Article Hero",
+            "category": "Liquify",
+            "blocks": []
+        }
+    ],
+    "enabled_on": {
+        "templates": [
+            "article"
+        ]
+    }
+} {% endschema %}

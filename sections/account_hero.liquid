@@ -1,0 +1,29 @@
+<div class="padding-global padding-section-small"><div class="container-large"><h2 class="heading-style-h2">Hi, <span li-object="customer.first_name">{{ customer.first_name }}</span>.<br><span>
+{{ section.settings.text_welcome_back }}
+</span></h2><div class="account-tabs_wrapper"><a href="{{ routes.account_url }}" li-object:href="routes.account_url" id="w-node-_17cf99d8-cca9-6029-5ca2-fd70c04fc7d9-c04fc7ce" class="account-tabs_link">Account</a><a href="{{ routes.account_addresses_url }}" li-object:href="routes.account_addresses_url" id="w-node-_17cf99d8-cca9-6029-5ca2-fd70c04fc7dd-c04fc7ce" class="account-tabs_link">Addresses</a><a id="w-node-_17cf99d8-cca9-6029-5ca2-fd70c04fc7df-c04fc7ce" href="/apps/iwish" class="account-tabs_link hide">Merkliste</a></div></div></div> {% schema %} {
+    "tag": "section",
+    "name": "Account-Hero",
+    "class": "section_account-nav",
+    "settings": [
+        {
+            "id": "text_welcome_back",
+            "type": "text",
+            "label": "Welcome Back",
+            "default": "Welcome Back"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Account-Hero",
+            "category": "Liquify",
+            "blocks": []
+        }
+    ],
+    "enabled_on": {
+        "templates": [
+            "customers\/order",
+            "customers\/addresses",
+            "customers\/account"
+        ]
+    }
+} {% endschema %}

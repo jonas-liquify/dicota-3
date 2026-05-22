@@ -1,0 +1,158 @@
+<picture class="image-banner_bg-picture">{% if section.settings.image_hintergrundbild %}
+{{ section.settings.image_hintergrundbild | image_url: width: 2400 | image_tag: loading: 'lazy', class: 'image-banner_bg-image' }}
+{% else %}
+<img src="{{ 'hero-apparel-2.svg' | asset_url }}" loading="lazy" alt="" class="image-banner_bg-image">
+{% endif %}</picture>{% if section.settings.overlay_strength > 0 %}    <div li-if="section.settings.overlay_strength > 0" class="image-banner_overlay">
+        </div>
+{% endif %}<div class="image-banner_container" style="justify-content: {{ section.settings.content_vertical }}; align-items: {{ section.settings.content_horizontal }};"><div class="image-banner_content"><div class="image-banner_headline"><p class="image-banner_headline-line">
+{{ section.settings.text_headline_zeile_1 }}
+</p><p class="image-banner_headline-line">
+{{ section.settings.text_headline_zeile_2 }}
+</p></div><p class="image-banner_subtext"> {{ section.settings.textarea_subtext }} </p><div class="image-banner_actions"><a href="{{ section.settings.url_button_link }}" class="button image-banner_button w-button"> <span>{{ section.settings.text_button_text }}</span> </a></div></div></div> {% schema %} {
+    "tag": "section",
+    "name": "Image Banner",
+    "class": "section_image-banner",
+    "settings": [
+        {
+            "id": "image_hintergrundbild",
+            "type": "image_picker",
+            "label": "Hintergrundbild"
+        },
+        {
+            "id": "text_headline_zeile_1",
+            "type": "text",
+            "label": "Headline Zeile 1",
+            "default": "Weigh Darker\u2122"
+        },
+        {
+            "id": "text_headline_zeile_2",
+            "type": "text",
+            "label": "Headline Zeile 2",
+            "default": "Moon Bag Ruffle"
+        },
+        {
+            "id": "textarea_subtext",
+            "type": "textarea",
+            "label": "Subtext",
+            "default": "Raffiniertes Design. Recycelte Materialien."
+        },
+        {
+            "id": "url_button_link",
+            "type": "url",
+            "label": "Button Link"
+        },
+        {
+            "id": "text_button_text",
+            "type": "text",
+            "label": "Button Text",
+            "default": "Jetzt shoppen"
+        },
+        {
+            "type": "header",
+            "content": "Layout"
+        },
+        {
+            "type": "range",
+            "id": "min_height",
+            "min": 30,
+            "max": 90,
+            "step": 5,
+            "unit": "vh",
+            "label": "Mindesth\u00f6he",
+            "default": 45
+        },
+        {
+            "type": "checkbox",
+            "id": "full_bleed",
+            "label": "Volle Breite (ohne seitliche Container-Begrenzung)",
+            "default": true
+        },
+        {
+            "type": "select",
+            "id": "content_horizontal",
+            "label": "Inhalt horizontal",
+            "options": [
+                {
+                    "value": "flex-start",
+                    "label": "Links"
+                },
+                {
+                    "value": "center",
+                    "label": "Zentriert"
+                },
+                {
+                    "value": "flex-end",
+                    "label": "Rechts"
+                }
+            ],
+            "default": "flex-start"
+        },
+        {
+            "type": "select",
+            "id": "content_vertical",
+            "label": "Inhalt vertikal",
+            "options": [
+                {
+                    "value": "flex-start",
+                    "label": "Oben"
+                },
+                {
+                    "value": "center",
+                    "label": "Mittig"
+                },
+                {
+                    "value": "flex-end",
+                    "label": "Unten"
+                }
+            ],
+            "default": "center"
+        },
+        {
+            "type": "select",
+            "id": "text_align",
+            "label": "Textausrichtung",
+            "options": [
+                {
+                    "value": "left",
+                    "label": "Links"
+                },
+                {
+                    "value": "center",
+                    "label": "Zentriert"
+                },
+                {
+                    "value": "right",
+                    "label": "Rechts"
+                }
+            ],
+            "default": "left"
+        },
+        {
+            "type": "header",
+            "content": "Farben & Overlay"
+        },
+        {
+            "type": "color",
+            "id": "text_color",
+            "label": "Textfarbe",
+            "default": "#ffffff"
+        },
+        {
+            "type": "range",
+            "id": "overlay_strength",
+            "min": 0,
+            "max": 80,
+            "step": 5,
+            "unit": "%",
+            "label": "Dunkles Overlay",
+            "default": 0
+        }
+    ],
+    "presets": [
+        {
+            "name": "Image Banner",
+            "category": "Liquify",
+            "blocks": []
+        }
+    ]
+} {% endschema %}

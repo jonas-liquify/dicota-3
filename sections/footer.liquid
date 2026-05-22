@@ -1,0 +1,174 @@
+<div class="padding-global padding-section-small"><div class="container-large"><div class="footer_main-wrapper"><div class="footer_link-grid">{% for link in linklists[section.settings.footer_menu].links %}    <div li-for="link in linklists[section.settings.footer_menu].links" class="footer_link-column">
+                                    <div li-object="link.title" class="text-weight-semibold">{{ link.title }}</div>
+                            <div li-for:inside="child_link in link.links" class="footer_link-list">
+        {% for child_link in link.links %}                            <a li-object:href="child_link.url" li-object="child_link.title" href="{{ child_link.url }}" class="footer_link">{{ child_link.title }}</a>
+                    {% endfor %}    </div>
+                        </div>
+{% endfor %}</div><div id="w-node-_5eccf730-c887-5204-0e0c-693f99a7329a-99a7328f" class="footer_newsletter"><h2 class="heading-style-h2">
+{{ section.settings.text_heading }}
+</h2><div class="footer_form-block w-form">{% form 'customer', return_to: '/', class: 'footer_form' %}
+<div class="form_field-wrapper"><label for="Email" class="form_hidden-label">Your E-Mail-Address</label><input class="form_input w-input" maxlength="256" name="contact[email]" data-name="Email" placeholder="{{ section.settings.placeholder_text }}" type="email" id="Email" required=""></div><div li-object="form.errors | default_errors" class="text-size-tiny text-color-red">{{ form.errors | default_errors }}</div><div id="w-node-_5eccf730-c887-5204-0e0c-693f99a732a5-99a7328f" class="hide w-embed"><input type="hidden" name="contact[accepts_marketing]" value="false"></div><label id="w-node-_5eccf730-c887-5204-0e0c-693f99a732a6-99a7328f" class="w-checkbox form_checkbox" name="contact[accepts_marketing]"><input type="checkbox" name="Accepts-Marketing-2" id="Accepts-Marketing-2" data-name="Accepts Marketing 2" class="w-checkbox-input form_checkbox-icon"><span class="form_checkbox-label text-size-tiny w-form-label" for="Accepts-Marketing-2">
+{{ section.settings.text_checkbox }}
+</span></label><input type="submit" data-wait="" id="w-node-_5eccf730-c887-5204-0e0c-693f99a732ae-99a7328f" class="button w-button" value="Subscribe to Newsletter">{% endform %}<div class="hide w-form-done"><div>Thank you! Your submission has been received!</div></div><div class="hide w-form-fail"><div>Oops! Something went wrong while submitting the form.</div></div></div></div></div></div></div><div class="footer_divider"></div><div class="padding-global padding-section-small"><div class="container-large"><div class="footer_icon-grid"><div class="footer_icon-block"><div class="text-size-regular">
+{{ section.settings.text_delivery }}
+</div><div class="footer_icon-row">{% for block in section.blocks %}
+    {% if block.type == "shipping" %}
+                    <div li-block="Shipping" class="footer_icon-item">
+                                    {% if block.settings.image_icon %}
+{{ block.settings.image_icon | image_url: width: 1000 | image_tag: loading: 'lazy', class: 'footer_shipping-icon' }}
+{% else %}
+<img src="{{ 'payment.svg' | asset_url }}" loading="lazy" alt="" class="footer_shipping-icon">
+{% endif %}
+                            </div>
+            {% endif %}
+{% endfor %}</div></div>{% if enabled_payment_types.length > 0 %}    <div li-if="enabled_payment_types.length > 0" id="w-node-_5eccf730-c887-5204-0e0c-693f99a732bf-99a7328f" class="footer_icon-block">
+    <div class="text-size-regular">
+{{ section.settings.text_payment_method }}
+</div><ul role="list" class="footer_payment-list w-list-unstyled">{% for type in shop.enabled_payment_types %}    <li li-for="type in shop.enabled_payment_types" class="footer_payment-item">
+                                    <div li-object="type | payment_type_svg_tag: class: 'footer_payment-img icon--full-color'" class="footer_payment-svg">{{ type | payment_type_svg_tag: class: 'footer_payment-img icon--full-color' }}</div>
+                        </li>
+{% endfor %}</ul>    </div>
+{% endif %}<div class="footer_icon-block"><div class="text-size-regular">
+{{ section.settings.text_social_media }}
+</div><div class="footer_icon-row">{% for block in section.blocks %}
+    {% if block.type == "social-media" %}
+                    <div li-block="Social-Media" class="footer_icon-item">
+                                    <a href="{{ block.settings.url_link }}" target="_blank" class="footer_social-link w-inline-block"> {% if block.settings.image_icon %} {{ block.settings.image_icon | image_url: width: 1000 | image_tag: loading: 'lazy', class: 'footer_social-icon' }} {% else %} <img src="{{ 'Social-Icon.svg' | asset_url }}" loading="lazy" alt="" class="footer_social-icon"> {% endif %} </a>
+                            </div>
+            {% endif %}
+{% endfor %}</div></div></div></div></div><div class="footer_divider"></div><div class="padding-global padding-section-small"><div class="container-large"><div class="footer_sub-footer"><a href="{{ routes.root_url }}" li-object:href="routes.root_url" class="footer_logo-link w-inline-block">{% if section.settings.image_logo %}
+{{ section.settings.image_logo | image_url: width: 1000 | image_tag: loading: 'lazy', class: 'footer_logo' }}
+{% else %}
+<img src="{{ 'liquify-logo-white.svg' | asset_url }}" loading="lazy" alt="" class="footer_logo">
+{% endif %}</a><div li-for:inside="link in linklists['footer'].links" id="w-node-_5eccf730-c887-5204-0e0c-693f99a732d3-99a7328f" class="footer_legal-links">
+        {% for link in linklists['footer'].links %}                            <a li-object="link.title" li-object:href="link.url" href="{{ link.url }}" class="footer_legal-link">{{ link.title }}</a>
+                    {% endfor %}    </div>{% if localization.available_languages.size > 1 %}    <localization-form li-if="localization.available_languages.size > 1" class="li-lang_wrapper">
+    {% form 'localization', class: 'li-lang_form' %}
+<div data-hover="true" data-delay="500" class="li-lang_dropdown w-dropdown"><div lang="{{ localization.language.iso_code }}" class="li-lang_dd-toggle w-dropdown-toggle"><div li-object="localization.language.endonym_name | capitalize">{{ localization.language.endonym_name | capitalize }}</div><div class="li-lang_dd-toggle-icon w-embed"><svg width=" 100%" height=" 100%" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M2.55806 6.29544C2.46043 6.19781 2.46043 6.03952 2.55806 5.94189L3.44195 5.058C3.53958 4.96037 3.69787 4.96037 3.7955 5.058L8.00001 9.26251L12.2045 5.058C12.3021 4.96037 12.4604 4.96037 12.5581 5.058L13.4419 5.94189C13.5396 6.03952 13.5396 6.19781 13.4419 6.29544L8.17678 11.5606C8.07915 11.6582 7.92086 11.6582 7.82323 11.5606L2.55806 6.29544Z" fill="currentColor"></path></svg></div></div><nav li-for:inside="language in localization.available_languages" class="li-lang_dd-list w-dropdown-list">
+        {% for language in localization.available_languages %}                            {% unless localization.language.iso_code == language.iso_code %}    <div li-unless="localization.language.iso_code == language.iso_code" class="li-lang_dd-list-item">
+    <a href="#" li-object="language.endonym_name | capitalize" lang="{{ language.iso_code }}" hreflang="{{ language.iso_code }}" data-value="{{ language.iso_code }}" class="li-lang_dd-link w-dropdown-link">{{ language.endonym_name | capitalize }}</a>    </div>
+{% endunless %}
+                    {% endfor %}    </nav></div><input type="hidden" name="language_code" class="li-lang_hidden-input" value="{{ localization.language.iso_code }}">{% endform %}<div class="li-lang_script w-embed w-script"><script>
+                      class LocalizationForm extends HTMLElement {
+                        constructor() {
+                          super();
+                          this.input = this.querySelector('input[name="language_code"], input[name="country_code"]');
+                          this.querySelectorAll('a').forEach(item =>
+                            item.addEventListener('click', this.onItemClick.bind(this))
+                          );
+                        }
+                        onItemClick(event) {
+                          event.preventDefault();
+                          const form = this.querySelector('form');
+                          this.input.value = event.currentTarget.dataset.value;
+                          if (form) form.submit();
+                        }
+                      }
+                      customElements.define('localization-form', LocalizationForm);
+                    </script></div>    </localization-form>
+{% endif %}</div></div></div> {% schema %} {
+    "tag": "footer",
+    "name": "Footer",
+    "class": "section_footer",
+    "blocks": [
+        {
+            "name": "Shipping",
+            "type": "shipping",
+            "settings": [
+                {
+                    "id": "image_icon",
+                    "type": "image_picker",
+                    "label": "Icon"
+                }
+            ]
+        },
+        {
+            "name": "Social-Media",
+            "type": "social-media",
+            "settings": [
+                {
+                    "id": "url_link",
+                    "type": "url",
+                    "label": "Link"
+                },
+                {
+                    "id": "image_icon",
+                    "type": "image_picker",
+                    "label": "Icon"
+                }
+            ]
+        }
+    ],
+    "settings": [
+        {
+            "id": "text_heading",
+            "type": "text",
+            "label": "Heading",
+            "default": "Signup for Newsletter"
+        },
+        {
+            "id": "text_checkbox",
+            "type": "text",
+            "label": "Checkbox",
+            "default": "By subscribing you agree to with our <a href=\"#\"><span>Privacy Policy<\/span><\/a> and provide consent to receive updates from our company."
+        },
+        {
+            "id": "text_delivery",
+            "type": "text",
+            "label": "Delivery",
+            "default": "Delivery"
+        },
+        {
+            "id": "text_payment_method",
+            "type": "text",
+            "label": "Payment Method",
+            "default": "Payment Method"
+        },
+        {
+            "id": "text_social_media",
+            "type": "text",
+            "label": "Social Media",
+            "default": "Social Media"
+        },
+        {
+            "id": "image_logo",
+            "type": "image_picker",
+            "label": "Logo"
+        },
+        {
+            "type": "text",
+            "id": "placeholder_text",
+            "label": "Placeholder Text",
+            "default": "Email address"
+        },
+        {
+            "type": "header",
+            "content": "Navigation"
+        },
+        {
+            "type": "link_list",
+            "id": "footer_menu",
+            "label": "Footer Menu",
+            "default": "footer"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Footer",
+            "category": "Liquify",
+            "blocks": [
+                {
+                    "type": "shipping"
+                },
+                {
+                    "type": "social-media"
+                }
+            ]
+        }
+    ],
+    "enabled_on": {
+        "groups": [
+            "*"
+        ]
+    }
+} {% endschema %}

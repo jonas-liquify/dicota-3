@@ -1,0 +1,22 @@
+<div li-block="Availability" {{ block.shopify_attributes }}>
+                    <div class="product-header_shipping-wrapper"><template x-if="product.selected_or_first_available_variant.available == true">
+            <div li-js-if="product.selected_or_first_available_variant.available == true" class="product-header_shipping">
+        <div class="product-header_shipping-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 23 22" fill="none" preserveaspectratio="xMidYMid meet" aria-hidden="true" role="img"><mask id="mask0_1611_6356" style="mask-type:alpha" maskunits="userSpaceOnUse" x="0" y="0" width="23" height="22"><rect x="0.223633" width="22" height="22" fill="#D9D9D9"></rect></mask><g mask="url(#mask0_1611_6356)"><path d="M13.9736 18.3334C11.9264 18.3334 10.1923 17.623 8.77151 16.2022C7.35068 14.7813 6.64026 13.0473 6.64026 11.0001C6.64026 8.96814 7.35068 7.23793 8.77151 5.80946C10.1923 4.38098 11.9264 3.66675 13.9736 3.66675C16.0055 3.66675 17.7357 4.38098 19.1642 5.80946C20.5927 7.23793 21.3069 8.96814 21.3069 11.0001C21.3069 13.0473 20.5927 14.7813 19.1642 16.2022C17.7357 17.623 16.0055 18.3334 13.9736 18.3334ZM13.9736 16.5001C15.5014 16.5001 16.8 15.9654 17.8694 14.8959C18.9389 13.8265 19.4736 12.5279 19.4736 11.0001C19.4736 9.4723 18.9389 8.17369 17.8694 7.10425C16.8 6.0348 15.5014 5.50008 13.9736 5.50008C12.4458 5.50008 11.1472 6.0348 10.0778 7.10425C9.00831 8.17369 8.47359 9.4723 8.47359 11.0001C8.47359 12.5279 9.00831 13.8265 10.0778 14.8959C11.1472 15.9654 12.4458 16.5001 13.9736 16.5001ZM16.059 14.4147L17.3653 13.1084L14.8903 10.6334V7.33341H13.0569V11.3897L16.059 14.4147ZM2.05693 8.25008V6.41675H5.72359V8.25008H2.05693ZM1.14026 11.9167V10.0834H5.72359V11.9167H1.14026ZM2.05693 15.5834V13.7501H5.72359V15.5834H2.05693Z" fill="#323232"></path></g></svg></div><div>Delivery: <span>1–3 Days</span></div>        </div>
+    </template><div class="product-header_shipping"><div class="product-header_shipping-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 23 22" fill="none" preserveaspectratio="xMidYMid meet" aria-hidden="true" role="img"><mask id="mask0_1612_6254" style="mask-type:alpha" maskunits="userSpaceOnUse" x="0" y="0" width="23" height="22"><rect x="0.223633" width="22" height="22" fill="#D9D9D9"></rect></mask><g mask="url(#mask0_1612_6254)"><path d="M11.223 10.9999C11.7271 10.9999 12.1587 10.8204 12.5178 10.4614C12.8768 10.1023 13.0563 9.67075 13.0563 9.16659C13.0563 8.66242 12.8768 8.23082 12.5178 7.87179C12.1587 7.51277 11.7271 7.33325 11.223 7.33325C10.7188 7.33325 10.2872 7.51277 9.92819 7.87179C9.56916 8.23082 9.38965 8.66242 9.38965 9.16659C9.38965 9.67075 9.56916 10.1023 9.92819 10.4614C10.2872 10.8204 10.7188 10.9999 11.223 10.9999ZM11.223 17.7374C13.0869 16.0263 14.4695 14.4718 15.3709 13.0739C16.2723 11.676 16.723 10.4346 16.723 9.34992C16.723 7.68464 16.1921 6.3211 15.1303 5.25929C14.0685 4.19749 12.766 3.66659 11.223 3.66659C9.67993 3.66659 8.3775 4.19749 7.31569 5.25929C6.25388 6.3211 5.72298 7.68464 5.72298 9.34992C5.72298 10.4346 6.17368 11.676 7.07507 13.0739C7.97645 14.4718 9.35909 16.0263 11.223 17.7374ZM11.223 20.1666C8.76326 18.0735 6.92611 16.1294 5.71152 14.3343C4.49694 12.5392 3.88965 10.8777 3.88965 9.34992C3.88965 7.05825 4.6268 5.23256 6.10111 3.87284C7.57541 2.51311 9.2827 1.83325 11.223 1.83325C13.1633 1.83325 14.8706 2.51311 16.3449 3.87284C17.8192 5.23256 18.5563 7.05825 18.5563 9.34992C18.5563 10.8777 17.949 12.5392 16.7344 14.3343C15.5199 16.1294 13.6827 18.0735 11.223 20.1666Z" fill="#323232"></path></g></svg></div><div>Availability: <template x-if="product.selected_or_first_available_variant.available == true">
+            <span li-js-if="product.selected_or_first_available_variant.available == true" class="text-color-green">
+        available        </span>
+    </template><template x-if="product.selected_or_first_available_variant.available == false">
+            <span li-js-if="product.selected_or_first_available_variant.available == false" class="text-color-red">
+        not available        </span>
+    </template></div></div></div>
+                </div> {% schema %} {
+    "name": "Availability",
+    "settings": [],
+    "presets": [
+        {
+            "name": "Availability",
+            "blocks": []
+        }
+    ],
+    "tag": null
+} {% endschema %}

@@ -1,0 +1,24 @@
+<li li-block="Social" class="footer-bottom_social-item" {{ block.shopify_attributes }}>
+                    <a href="{{ block.settings.url_link }}" target="_blank" rel="noopener" class="footer-bottom_social-link w-inline-block"> {% if block.settings.image_icon %} {{ block.settings.image_icon | image_url: width: 40 | image_tag: loading: 'lazy', class: 'footer-bottom_social-icon' }} {% else %} <img src="{{ 'Social-Icon.svg' | asset_url }}" loading="lazy" alt="" class="footer-bottom_social-icon"> {% endif %} </a>
+                </li> {% schema %} {
+    "name": "Social",
+    "settings": [
+        {
+            "id": "url_link",
+            "type": "url",
+            "label": "Link"
+        },
+        {
+            "id": "image_icon",
+            "type": "image_picker",
+            "label": "Icon"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Social",
+            "blocks": []
+        }
+    ],
+    "tag": null
+} {% endschema %}

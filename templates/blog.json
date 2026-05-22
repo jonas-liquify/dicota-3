@@ -1,0 +1,16 @@
+{
+    "sections": {
+        "blog_hero": {
+            "type": "blog_hero"
+        },
+        "blog_articles": {
+            "type": "blog_articles"
+        }
+    },
+    "layout": "theme",
+    "wrapper": "main.main-wrapper",
+    "order": [
+        "blog_hero",
+        "blog_articles"
+    ]
+}

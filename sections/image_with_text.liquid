@@ -1,0 +1,48 @@
+<div class="header_background-image-wrapper"><div class="header_overlay-layer"></div>{% if section.settings.image_image %}
+{{ section.settings.image_image | image_url: width: 1000 | image_tag: loading: 'eager', class: 'header_background-image' }}
+{% else %}
+ {{ 'detailed-apparel-1' | placeholder_svg_tag: 'header_background-image' }} 
+{% endif %}</div><div class="padding-global"><div class="container-large"><div class="header_card text-color-white"><div class="max-width-large"><h1 class="heading-style-h2">
+{{ section.settings.text_heading }}
+</h1><div class="spacer-small"></div><div class="text-size-medium"> {{ section.settings.richtext_paragraph }} </div></div><div class="spacer-medium"></div><div class="button-group"><a href="{{ section.settings.url_button_link }}" class="button w-button"> {{ section.settings.text_button_text }} </a></div></div></div></div> {% schema %} {
+    "tag": "header",
+    "name": "Image with Text",
+    "class": "section_header-home",
+    "settings": [
+        {
+            "id": "image_image",
+            "type": "image_picker",
+            "label": "Image"
+        },
+        {
+            "id": "text_heading",
+            "type": "text",
+            "label": "Heading",
+            "default": "Short heading here"
+        },
+        {
+            "id": "richtext_paragraph",
+            "type": "richtext",
+            "label": "Paragraph",
+            "default": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.<\/p>"
+        },
+        {
+            "id": "url_button_link",
+            "type": "url",
+            "label": "Button-Link"
+        },
+        {
+            "id": "text_button_text",
+            "type": "text",
+            "label": "Button-Text",
+            "default": "More Information"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Image with Text",
+            "category": "Content",
+            "blocks": []
+        }
+    ]
+} {% endschema %}
