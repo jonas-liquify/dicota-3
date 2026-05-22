@@ -1,0 +1,12 @@
+{
+    "sections": {
+        "404": {
+            "type": "404"
+        }
+    },
+    "layout": "theme",
+    "wrapper": "main.main-wrapper",
+    "order": [
+        "404"
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "sections": {
+        "collection_hero": {
+            "type": "collection_hero"
+        },
+        "collection_products": {
+            "type": "collection_products"
+        }
+    },
+    "layout": "theme",
+    "wrapper": "main.main-wrapper",
+    "order": [
+        "collection_hero",
+        "collection_products"
+    ]
+}
