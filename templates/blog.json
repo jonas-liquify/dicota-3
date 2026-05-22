@@ -1,0 +1,51 @@
+{
+    "sections": {
+        "announcement_bar": {
+            "type": "announcement_bar",
+            "blocks": {
+                "usp": {
+                    "type": "usp",
+                    "name": "USP"
+                },
+                "account-bar": {
+                    "name": "Account Bar",
+                    "type": "account-bar",
+                    "static": true
+                }
+            },
+            "block_order": [
+                "usp"
+            ]
+        },
+        "blog_hero": {
+            "type": "blog_hero"
+        },
+        "blog_articles": {
+            "type": "blog_articles"
+        },
+        "footer_newsletter": {
+            "type": "footer_newsletter"
+        },
+        "footer_bottom": {
+            "type": "footer_bottom",
+            "blocks": {
+                "social": {
+                    "type": "social",
+                    "name": "Social"
+                }
+            },
+            "block_order": [
+                "social"
+            ]
+        }
+    },
+    "layout": "theme",
+    "wrapper": "main.main-wrapper",
+    "order": [
+        "announcement_bar",
+        "blog_hero",
+        "blog_articles",
+        "footer_newsletter",
+        "footer_bottom"
+    ]
+}

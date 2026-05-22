@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "Skill(anthropic-skills:liquiflow-builder)",
+      "Skill(anthropic-skills:liquiflow-builder:*)",
+      "mcp__Figma__get_design_context",
+      "mcp__Figma__get_screenshot",
+      "Bash(python3 /tmp/swap_header.py)",
+      "Bash(python3 /tmp/swap_hero.py)",
+      "Bash(python3 /tmp/swap_new_releases.py)",
+      "Bash(python3 /tmp/insert_usp.py)",
+      "Bash(python3 /tmp/cleanup_custom_headers.py)",
+      "Bash(python3 /tmp/insert_image_banner.py)",
+      "Bash(python3 /tmp/swap_shop_by_category.py)",
+      "Bash(python3 /tmp/insert_accessories_block.py)",
+      "Bash(python3 /tmp/extract_product_card_snippet.py)",
+      "Bash(python3 /tmp/insert_mobile_working.py)",
+      "Bash(python3 /tmp/insert_loved_by.py)",
+      "Bash(python3 /tmp/insert_sustainability.py)",
+      "Bash(python3 /tmp/insert_testimonials.py)",
+      "Bash(python3 /tmp/swap_footer.py)",
+      "Bash(awk 'NR>=776 && NR<=782' \"/Users/jonas/Desktop/Liquiflow Projects/Dicota 3.0/css/liquify-2-0.webflow.css\")",
+      "Bash(awk 'NR>=1574 && NR<=1583' \"/Users/jonas/Desktop/Liquiflow Projects/Dicota 3.0/css/liquify-2-0.webflow.css\")",
+      "Bash(python3 -c ' *)"
+    ]
+  }
+}
