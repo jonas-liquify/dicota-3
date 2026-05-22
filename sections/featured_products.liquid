@@ -1,49 +1,93 @@
-<div class="padding-global padding-section-medium"><div class="container-large"><div class="product_component"><div id="w-node-f727b04f-0fb7-b1ec-5db9-c7264e4cbfb1-4e4cbfad" class="product_heading-wrapper"><div class="product_heading"><div class="max-width-large"><h2 class="heading-style-h2">
-{{ section.settings.text_heading }}
-</h2></div></div><div class="product_button-row hide-mobile-landscape"><a href="{{ section.settings.url_button_link }}" class="button w-button"> {{ section.settings.text_button_text }} </a></div></div><div class="product_list-wrapper w-dyn-list"><div role="list" class="product_list w-dyn-items">{% for product in section.settings.collection_collection.products limit: section.settings.collection_collection_limit %}
-<div role="listitem" class="product_list-item w-dyn-item">
-    {% render 'product_item', product: product %}
+<div class="padding-global" style="padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px; background-color: {{ section.settings.bg_color }}; color: {{ section.settings.text_color }};"><div class="container-large"><div class="featured-products_heading"><h3 class="featured-products_title">
+{{ section.settings.text_uberschrift }}
+</h3><a href="{{ section.settings.url_button_link }}" class="button is-outline featured-products_button w-button"> <span>{{ section.settings.text_button_text }}</span> </a></div><div class="featured-products_slider-wrapper"><div class="featured-products_swiper swiper"><div role="list" class="swiper-wrapper featured-products_list">{% for product in section.settings.collection_kollektion.products limit: section.settings.collection_kollektion_limit %}
+<div role="listitem" class="swiper-slide featured-products_item">
+    {% render 'product_card', product: product %}
 </div>
-{% endfor %}</div><div class="hide w-dyn-empty"><div>No items found.</div></div></div></div></div></div> {% schema %} {
+{% endfor %}</div><div class="featured-products_scrollbar swiper-scrollbar"></div></div><button type="button" class="featured-products_arrow swiper-button-next" aria-label="Weiter"><div class="icon-embed-xsmall w-embed">{% render 'icon_chevron_right' %}</div></button><button type="button" class="featured-products_arrow is-prev swiper-button-prev" aria-label="Zurück"><div class="icon-embed-xsmall w-embed">{% render 'icon_chevron_left' %}</div></button></div></div></div> {% schema %} {
     "tag": "section",
-    "name": "Featured products",
-    "class": "section_product",
+    "name": "Featured Products",
+    "class": "section_featured-products",
     "settings": [
         {
-            "id": "text_heading",
+            "id": "text_uberschrift",
             "type": "text",
-            "label": "Heading",
-            "default": "Short heading here"
+            "label": "\u00dcberschrift",
+            "default": "New Releases"
         },
         {
             "id": "url_button_link",
             "type": "url",
-            "label": "Button-Link"
+            "label": "Button Link"
         },
         {
             "id": "text_button_text",
             "type": "text",
-            "label": "Button-Text",
-            "default": "All products"
+            "label": "Button Text",
+            "default": "Alle New Releases"
         },
         {
-            "id": "collection_collection",
+            "id": "collection_kollektion",
             "type": "collection",
-            "label": "Collection"
+            "label": "Kollektion"
         },
         {
             "type": "range",
-            "id": "collection_collection_limit",
+            "id": "collection_kollektion_limit",
             "min": 1,
             "max": 99,
             "step": 1,
-            "label": "Limit: Collection",
+            "label": "Limit: Kollektion",
             "default": 6
+        },
+        {
+            "type": "paragraph",
+            "content": "Tipp: \u00dcber das Kollektions-Setting im Slider-Block oben w\u00e4hlst du, welche Produkte angezeigt werden."
+        },
+        {
+            "type": "header",
+            "content": "Abst\u00e4nde"
+        },
+        {
+            "type": "range",
+            "id": "padding_top",
+            "min": 0,
+            "max": 160,
+            "step": 4,
+            "unit": "px",
+            "label": "Abstand oben",
+            "default": 40
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom",
+            "min": 0,
+            "max": 160,
+            "step": 4,
+            "unit": "px",
+            "label": "Abstand unten",
+            "default": 80
+        },
+        {
+            "type": "header",
+            "content": "Farben"
+        },
+        {
+            "type": "color",
+            "id": "bg_color",
+            "label": "Hintergrundfarbe",
+            "default": "#ffffff"
+        },
+        {
+            "type": "color",
+            "id": "text_color",
+            "label": "Textfarbe",
+            "default": "#0f0f0f"
         }
     ],
     "presets": [
         {
-            "name": "Featured products",
+            "name": "Featured Products",
             "category": "Liquify",
             "blocks": []
         }
