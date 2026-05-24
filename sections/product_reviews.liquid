@@ -1,0 +1,141 @@
+<div class="padding-global" style="padding-top:{{ section.settings.padding_top }}px;padding-bottom:{{ section.settings.padding_bottom }}px;background-color:{{ section.settings.bg_color }};color:{{ section.settings.text_color }};"><div class="container-large"><div class="product-reviews_layout"><div class="product-reviews_summary"><div class="product-reviews_rating-block"><div class="product-reviews_stars"><svg width="16" height="16" viewbox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg><svg width="16" height="16" viewbox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg><svg width="16" height="16" viewbox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg><svg width="16" height="16" viewbox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg><svg width="16" height="16" viewbox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg></div><p class="product-reviews_score">
+{{ section.settings.text_score }}
+</p><p class="product-reviews_count">
+{{ section.settings.text_anzahl }}
+</p></div><div class="product-reviews_breakdown"><p class="product-reviews_breakdown-title">
+{{ section.settings.text_breakdown_titel }}
+</p><div class="product-reviews_bars"><div class="product-reviews_bar-row"><span class="product-reviews_bar-label">5</span><div class="product-reviews_bar-track"><div class="product-reviews_bar-fill" style="width: {{ section.settings.stars_5_pct }}%"></div></div></div><div class="product-reviews_bar-row"><span class="product-reviews_bar-label">4</span><div class="product-reviews_bar-track"><div class="product-reviews_bar-fill" style="width: {{ section.settings.stars_4_pct }}%"></div></div></div><div class="product-reviews_bar-row"><span class="product-reviews_bar-label">3</span><div class="product-reviews_bar-track"><div class="product-reviews_bar-fill" style="width: {{ section.settings.stars_3_pct }}%"></div></div></div><div class="product-reviews_bar-row"><span class="product-reviews_bar-label">2</span><div class="product-reviews_bar-track"><div class="product-reviews_bar-fill" style="width: {{ section.settings.stars_2_pct }}%"></div></div></div><div class="product-reviews_bar-row"><span class="product-reviews_bar-label">1</span><div class="product-reviews_bar-track"><div class="product-reviews_bar-fill" style="width: {{ section.settings.stars_1_pct }}%"></div></div></div></div></div><a href="{{ section.settings.url_rezension_schreiben_link }}" class="button product-reviews_write-btn"> Rezension schreiben </a></div><div class="product-reviews_list"><div li-cf-theme-blocks="" class="product-reviews_items">
+{% content_for 'blocks' %}
+</div><a href="{{ section.settings.url_mehr_bewertungen_link }}" class="button is-secondary product-reviews_more-btn"> Weitere Bewertungen laden </a></div></div></div></div> {% schema %} {
+    "tag": "section",
+    "name": "Product Reviews",
+    "class": "section_product-reviews",
+    "blocks": [
+        {
+            "type": "rezension"
+        },
+        {
+            "type": "@app"
+        }
+    ],
+    "settings": [
+        {
+            "id": "text_score",
+            "type": "text",
+            "label": "Score",
+            "default": "4,9\/5,0 Bewertung"
+        },
+        {
+            "id": "text_anzahl",
+            "type": "text",
+            "label": "Anzahl",
+            "default": "Basierend auf 11 Bewertungen"
+        },
+        {
+            "id": "text_breakdown_titel",
+            "type": "text",
+            "label": "Breakdown Titel",
+            "default": "Bewertungs\u00fcberblick"
+        },
+        {
+            "id": "url_rezension_schreiben_link",
+            "type": "url",
+            "label": "Rezension schreiben Link"
+        },
+        {
+            "id": "url_mehr_bewertungen_link",
+            "type": "url",
+            "label": "Mehr Bewertungen Link"
+        },
+        {
+            "type": "header",
+            "content": "Bewertungs\u00fcbersicht"
+        },
+        {
+            "type": "text",
+            "id": "stars_5_pct",
+            "label": "5-Sterne Prozent 0-100",
+            "default": "80"
+        },
+        {
+            "type": "text",
+            "id": "stars_4_pct",
+            "label": "4-Sterne Prozent 0-100",
+            "default": "20"
+        },
+        {
+            "type": "text",
+            "id": "stars_3_pct",
+            "label": "3-Sterne Prozent 0-100",
+            "default": "0"
+        },
+        {
+            "type": "text",
+            "id": "stars_2_pct",
+            "label": "2-Sterne Prozent 0-100",
+            "default": "0"
+        },
+        {
+            "type": "text",
+            "id": "stars_1_pct",
+            "label": "1-Sterne Prozent 0-100",
+            "default": "0"
+        },
+        {
+            "type": "header",
+            "content": "Abst\u00e4nde"
+        },
+        {
+            "type": "range",
+            "id": "padding_top",
+            "min": 0,
+            "max": 120,
+            "step": 4,
+            "unit": "px",
+            "label": "Abstand oben",
+            "default": 80
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom",
+            "min": 0,
+            "max": 120,
+            "step": 4,
+            "unit": "px",
+            "label": "Abstand unten",
+            "default": 80
+        },
+        {
+            "type": "header",
+            "content": "Farben"
+        },
+        {
+            "type": "color",
+            "id": "bg_color",
+            "label": "Hintergrundfarbe",
+            "default": "#ffffff"
+        },
+        {
+            "type": "color",
+            "id": "text_color",
+            "label": "Textfarbe",
+            "default": "#000000"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Product Reviews",
+            "category": "Liquify",
+            "blocks": [
+                {
+                    "type": "rezension"
+                }
+            ]
+        }
+    ],
+    "enabled_on": {
+        "templates": [
+            "product"
+        ]
+    }
+} {% endschema %}

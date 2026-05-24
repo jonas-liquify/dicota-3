@@ -1,0 +1,32 @@
+<div li-block="Tab Inhalt" class="ph_tab-panel" {{ block.shopify_attributes }}>
+                    {% if block.settings.use_product_desc %}    <div li-if="block.settings.use_product_desc">
+    <div li-object="product.description" class="text-rich-text w-richtext">{{ product.description }}</div>    </div>
+{% endif %}
+                    {% unless block.settings.use_product_desc %}    <div li-unless="block.settings.use_product_desc">
+    <div class="text-rich-text w-richtext"> {{ block.settings.richtext_inhalt }} </div>    </div>
+{% endunless %}
+                    
+                </div> {% schema %} {
+    "name": "Tab Inhalt",
+    "settings": [
+        {
+            "id": "richtext_inhalt",
+            "type": "richtext",
+            "label": "Inhalt",
+            "default": "<p>Inhalt eingeben...<\/p>"
+        },
+        {
+            "type": "checkbox",
+            "id": "use_product_desc",
+            "label": "Produkt-Beschreibung verwenden",
+            "default": false
+        }
+    ],
+    "presets": [
+        {
+            "name": "Tab Inhalt",
+            "blocks": []
+        }
+    ],
+    "tag": null
+} {% endschema %}

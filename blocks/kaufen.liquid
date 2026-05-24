@@ -1,0 +1,52 @@
+<div li-block="Kaufen" {{ block.shopify_attributes }}>
+                    <div class="product-header_form-block w-form">{% form 'product', product, class: 'ph_form' %}
+{% if product.has_only_default_variant != true %}    <div li-if="product.has_only_default_variant != true" class="ph_options">
+    <template x-for="(option, optionKey) in product.options" :key="optionKey">
+    <div li-element="product-options-loop" class="ph_option" data-ProductVariantsLoop="true"><div li-element="product-options-name" class="ph_option-label" x-text="option">GRÖSSE</div><div class="ph_radio-list"><template x-for="(variantName, variantKey) in options_by_name[option].option.values" :key="variantName">
+    <label li-element="product-option-loop" class="ph_radio w-radio"><div class="w-form-formradioinput w-form-formradioinput--inputType-custom ph_radio-btn w-radio-input"></div><input type="radio" li-element="product-option-input" style="opacity:0;position:absolute;z-index:-1" x-on:click="setVariant" :name="option" :data-name="option" :value="variantName" :id="variantName.toString().normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim().replace(/\s+/g, '-').replace(/[^\w-]+/g, '').replace(/--+/g, '-')" :checked="selected_or_first_available_variant?.options.includes(variantName)" data-selectorType="radio" :class="firstOptionHasAvailableChildren[variantName] ? '' : 'data-disabled'"><span li-element="product-option-name" class="ph_radio-label w-form-label" x-text="variantName" :for="variantName">14-16 Zoll</span></label></template></div></div></template>    </div>
+{% endif %}<div class="ph_delivery"><span class="ph_delivery-dot"></span><span>
+{{ block.settings.text_liefertext }}
+</span></div><template x-if="selected_or_first_available_variant.available">
+            <div li-js-if="selected_or_first_available_variant.available" class="ph_atc-wrap">
+        <a li-element="add-to-cart" href="#" class="ph_atc-btn w-button" @click="addToCart($event, true)" :disabled="!addToCartButton">In den Warenkorb</a>        </div>
+    </template><template x-if="!selected_or_first_available_variant.available">
+            <div li-js-if="!selected_or_first_available_variant.available" class="ph_atc-wrap">
+        <a href="#" class="ph_atc-btn is-disabled w-button pointer-events-off">Nicht verfügbar</a>        </div>
+    </template>{% endform %}<div class="hide w-form-done"><div>Erfolgreich hinzugefügt!</div></div><div class="hide w-form-fail"><div>Fehler beim Hinzufügen.</div></div></div>
+                    {% content_for "block", type: "trust-icons", id: "trust-icons" %}
+                </div> {% schema %} {
+    "name": "Kaufen",
+    "settings": [
+        {
+            "id": "text_liefertext",
+            "type": "text",
+            "label": "Liefertext",
+            "default": "Bis 16 Uhr bestellen, zwischen <strong>26. &amp; 27. M\u00e4rz<\/strong> bei dir"
+        },
+        {
+            "id": "text_trust_1",
+            "type": "text",
+            "label": "Trust 1",
+            "default": "Kostenloser Versand ab \u20ac59,00"
+        },
+        {
+            "id": "text_trust_2",
+            "type": "text",
+            "label": "Trust 2",
+            "default": "Kauf auf Rechnung mit Klarna"
+        },
+        {
+            "id": "text_trust_3",
+            "type": "text",
+            "label": "Trust 3",
+            "default": "30 Tage Geld-zur\u00fcck-Garantie"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Kaufen",
+            "blocks": []
+        }
+    ],
+    "tag": null
+} {% endschema %}

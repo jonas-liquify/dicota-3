@@ -1,0 +1,47 @@
+<div li-block="Rezension" class="product-reviews_item" {{ block.shopify_attributes }}>
+                    <div class="product-reviews_item-stars"><svg width="16" height="16" viewbox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg><svg width="16" height="16" viewbox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg><svg width="16" height="16" viewbox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg><svg width="16" height="16" viewbox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg><svg width="16" height="16" viewbox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg></div>
+                    <h3 class="product-reviews_item-hl">
+{{ block.settings.text_headline }}
+</h3>
+                    <p class="product-reviews_item-text"> {{ block.settings.textarea_text }} </p>
+                    <div class="product-reviews_item-footer"><span class="product-reviews_item-author">
+{{ block.settings.text_autor }}
+</span><span class="product-reviews_item-date">
+{{ block.settings.text_datum }}
+</span></div>
+                </div> {% schema %} {
+    "name": "Rezension",
+    "settings": [
+        {
+            "id": "text_headline",
+            "type": "text",
+            "label": "Headline",
+            "default": "Absolut empfehlenswert!"
+        },
+        {
+            "id": "textarea_text",
+            "type": "textarea",
+            "label": "Text",
+            "default": "Ich liebe das Produkt das ich gekauft habe. Auch der Kundenservice war sehr gut."
+        },
+        {
+            "id": "text_autor",
+            "type": "text",
+            "label": "Autor",
+            "default": "Louisa Maierhover"
+        },
+        {
+            "id": "text_datum",
+            "type": "text",
+            "label": "Datum",
+            "default": "vor 5 Stunden"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Rezension",
+            "blocks": []
+        }
+    ],
+    "tag": null
+} {% endschema %}

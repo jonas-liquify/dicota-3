@@ -1,0 +1,33 @@
+{
+    "sections": {
+        "list_collection_hero": {
+            "type": "list_collection_hero"
+        },
+        "list_collection": {
+            "type": "list_collection"
+        },
+        "footer_newsletter": {
+            "type": "footer_newsletter"
+        },
+        "footer_bottom": {
+            "type": "footer_bottom",
+            "blocks": {
+                "social": {
+                    "type": "social",
+                    "name": "Social"
+                }
+            },
+            "block_order": [
+                "social"
+            ]
+        }
+    },
+    "layout": "theme",
+    "wrapper": "main.main-wrapper",
+    "order": [
+        "list_collection_hero",
+        "list_collection",
+        "footer_newsletter",
+        "footer_bottom"
+    ]
+}

@@ -1,0 +1,27 @@
+<div li-block="We Care" {{ block.shopify_attributes }}>
+                    <div class="ph_we-care"><div class="swiper is-we-care"><div li-cf-theme-blocks="" class="swiper-wrapper">
+{% content_for 'blocks' %}
+</div><div class="swiper-pagination ph_we-care-dots"></div></div></div>
+                </div> {% schema %} {
+    "name": "We Care",
+    "blocks": [
+        {
+            "type": "we-care-item"
+        },
+        {
+            "type": "@app"
+        }
+    ],
+    "settings": [],
+    "presets": [
+        {
+            "name": "We Care",
+            "blocks": [
+                {
+                    "type": "we-care-item"
+                }
+            ]
+        }
+    ],
+    "tag": null
+} {% endschema %}

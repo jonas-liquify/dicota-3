@@ -1,0 +1,53 @@
+<div li-block="Produkt-Karte" class="swiper-slide is-add-to-kit product-add-to-kit_card" {{ block.shopify_attributes }}>
+                    <div class="product-add-to-kit_img-wrap">{% if block.settings.image_produktbild %}
+{{ block.settings.image_produktbild | image_url: width: 400 | image_tag: loading: 'lazy', class: 'product-add-to-kit_img' }}
+{% else %}
+<img src="{{ 'placeholder.svg' | asset_url }}" loading="lazy" alt="" class="product-add-to-kit_img">
+{% endif %}</div>
+                    <div class="product-add-to-kit_info"><p class="product-add-to-kit_cat">
+{{ block.settings.text_kategorie }}
+</p><h3 class="product-add-to-kit_name">
+{{ block.settings.text_produktname }}
+</h3><p class="product-add-to-kit_price">
+{{ block.settings.text_preis }}
+</p><a href="{{ block.settings.url_produkt_link }}" class="product-add-to-kit_btn"> Zum Warenkorb hinzufügen </a></div>
+                </div> {% schema %} {
+    "name": "Produkt-Karte",
+    "settings": [
+        {
+            "id": "image_produktbild",
+            "type": "image_picker",
+            "label": "Produktbild"
+        },
+        {
+            "id": "text_kategorie",
+            "type": "text",
+            "label": "Kategorie",
+            "default": "FILTER"
+        },
+        {
+            "id": "text_produktname",
+            "type": "text",
+            "label": "Produktname",
+            "default": "Anti-Glare Filter"
+        },
+        {
+            "id": "text_preis",
+            "type": "text",
+            "label": "Preis",
+            "default": "54,90 EUR"
+        },
+        {
+            "id": "url_produkt_link",
+            "type": "url",
+            "label": "Produkt-Link"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Produkt-Karte",
+            "blocks": []
+        }
+    ],
+    "tag": null
+} {% endschema %}

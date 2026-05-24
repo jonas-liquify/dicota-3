@@ -1,0 +1,63 @@
+<div class="padding-global" style="padding-top:{{ section.settings.padding_top }}px;padding-bottom:{{ section.settings.padding_bottom }}px;background-color:{{ section.settings.bg_color }};color:{{ section.settings.text_color }};"><div class="container-large"><nav class="product-breadcrumb_nav" aria-label="Breadcrumb"><a href="{{ routes.root_url }}" li-object:href="routes.root_url" class="product-breadcrumb_link">Home</a><span class="product-breadcrumb_sep">›</span>{% if collection %}    <span li-if="collection">
+    <a li-object="collection.title" li-object:href="collection.url" href="{{ collection.url }}" class="product-breadcrumb_link">{{ collection.title }}</a><span class="product-breadcrumb_sep">›</span>    </span>
+{% endif %}{% unless collection %}    <span li-unless="collection">
+    <a li-object="product.type" href="#" class="product-breadcrumb_link">{{ product.type }}</a><span class="product-breadcrumb_sep">›</span>    </span>
+{% endunless %}<span li-object="product.title" class="product-breadcrumb_current">{{ product.title }}</span></nav></div></div> {% schema %} {
+    "tag": "section",
+    "name": "Product Breadcrumb",
+    "class": "section_product-breadcrumb",
+    "settings": [
+        {
+            "type": "header",
+            "content": "Abst\u00e4nde"
+        },
+        {
+            "type": "range",
+            "id": "padding_top",
+            "min": 0,
+            "max": 40,
+            "step": 2,
+            "unit": "px",
+            "label": "Abstand oben",
+            "default": 8
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom",
+            "min": 0,
+            "max": 40,
+            "step": 2,
+            "unit": "px",
+            "label": "Abstand unten",
+            "default": 8
+        },
+        {
+            "type": "header",
+            "content": "Farben"
+        },
+        {
+            "type": "color",
+            "id": "bg_color",
+            "label": "Hintergrundfarbe",
+            "default": "#f5f5f5"
+        },
+        {
+            "type": "color",
+            "id": "text_color",
+            "label": "Textfarbe",
+            "default": "#666666"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Product Breadcrumb",
+            "category": "Liquify",
+            "blocks": []
+        }
+    ],
+    "enabled_on": {
+        "templates": [
+            "product"
+        ]
+    }
+} {% endschema %}
