@@ -1,128 +1,313 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
-    "sections": {
-        "hero_slider": {
-            "type": "hero_slider",
-            "blocks": {
-                "slide": {
-                    "type": "slide",
-                    "name": "Slide"
-                }
-            },
-            "block_order": [
-                "slide"
-            ]
-        },
-        "section_headline": {
-            "type": "section_headline"
-        },
-        "featured_products": {
-            "type": "featured_products"
-        },
-        "usp_icon_row": {
-            "type": "usp_icon_row",
-            "blocks": {
-                "usp": {
-                    "type": "usp",
-                    "name": "USP"
-                }
-            },
-            "block_order": [
-                "usp"
-            ]
-        },
-        "image_banner": {
-            "type": "image_banner"
-        },
-        "shop_by_category": {
-            "type": "shop_by_category",
-            "blocks": {
-                "kategorie": {
-                    "type": "kategorie",
-                    "name": "Kategorie"
-                }
-            },
-            "block_order": [
-                "kategorie"
-            ]
-        },
-        "two_column_banner": {
-            "type": "two_column_banner",
-            "blocks": {
-                "banner": {
-                    "type": "banner",
-                    "name": "Banner"
-                }
-            },
-            "block_order": [
-                "banner"
-            ]
-        },
-        "accessories_slider": {
-            "type": "accessories_slider",
-            "blocks": {
-                "kategorie": {
-                    "type": "kategorie",
-                    "name": "Kategorie"
-                }
-            },
-            "block_order": [
-                "kategorie"
-            ]
-        },
-        "image_link_list": {
-            "type": "image_link_list",
-            "blocks": {
-                "link": {
-                    "type": "link",
-                    "name": "Link"
-                }
-            },
-            "block_order": [
-                "link"
-            ]
-        },
-        "loved_by_customers": {
-            "type": "loved_by_customers",
-            "blocks": {
-                "foto": {
-                    "type": "foto",
-                    "name": "Foto"
-                }
-            },
-            "block_order": [
-                "foto"
-            ]
-        },
-        "sustainability_banne": {
-            "type": "sustainability_banne"
-        },
-        "testimonials": {
-            "type": "testimonials",
-            "blocks": {
-                "testimonial": {
-                    "type": "testimonial",
-                    "name": "Testimonial"
-                }
-            },
-            "block_order": [
-                "testimonial"
-            ]
+  "sections": {
+    "hero_slider": {
+      "type": "hero_slider",
+      "blocks": {
+        "slide": {
+          "type": "slide",
+          "name": "Slide",
+          "settings": {
+            "text_headline_zeile_1": "Weigh Darker™",
+            "text_headline_zeile_2": "Moon Bag Ruffle",
+            "text_subtext": "Raffiniertes Design. Recycelte moderne Materialien.",
+            "url_button_link": "",
+            "text_button_text": "Jetzt shoppen test"
+          },
+          "blocks": {}
         }
+      },
+      "block_order": [
+        "slide"
+      ],
+      "settings": {
+        "autoplay": true,
+        "autoplay_delay": 6000,
+        "min_height": 90,
+        "text_color": "#ffffff"
+      }
     },
-    "layout": "theme",
-    "wrapper": "main.main-wrapper",
-    "order": [
-        "hero_slider",
-        "section_headline",
-        "featured_products",
-        "usp_icon_row",
-        "image_banner",
-        "shop_by_category",
-        "two_column_banner",
-        "accessories_slider",
-        "image_link_list",
-        "loved_by_customers",
-        "sustainability_banne",
-        "testimonials"
-    ]
+    "section_headline": {
+      "type": "section_headline",
+      "settings": {
+        "text_vortitel": "[DI:CO:TA]",
+        "text_uberschrift": "Die Computer Tasche",
+        "textarea_beschreibung": "Taschen gibt es wie Sand am Meer. Taschen mit Laptopfach ebenso. Aber wirkliche Computer Taschen, die gibt es nur bei Dicota.",
+        "padding_top": 80,
+        "padding_bottom": 40,
+        "text_align": "center",
+        "bg_color": "#ffffff",
+        "text_color": "#0f0f0f"
+      }
+    },
+    "featured_products": {
+      "type": "featured_products",
+      "settings": {
+        "text_uberschrift": "New Releases",
+        "url_button_link": "",
+        "text_button_text": "Alle New Releases",
+        "collection_kollektion": "frontpage",
+        "collection_kollektion_limit": 6,
+        "padding_top": 40,
+        "padding_bottom": 80,
+        "bg_color": "#ffffff",
+        "text_color": "#0f0f0f"
+      }
+    },
+    "usp_icon_row": {
+      "type": "usp_icon_row",
+      "blocks": {
+        "usp": {
+          "type": "usp",
+          "name": "USP",
+          "settings": {
+            "text_uberschrift": "Free Shipping ab 80 EUR",
+            "textarea_beschreibung": "Free standard shipping available in the European Union"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "usp"
+      ],
+      "settings": {
+        "padding_top": 60,
+        "padding_bottom": 120,
+        "bg_color": "#ffffff",
+        "text_color": "#0f0f0f"
+      }
+    },
+    "image_banner": {
+      "type": "image_banner",
+      "settings": {
+        "text_headline_zeile_1": "Weigh Darker™",
+        "text_headline_zeile_2": "Moon Bag Ruffle",
+        "textarea_subtext": "Raffiniertes Design. Recycelte Materialien.",
+        "url_button_link": "",
+        "text_button_text": "Jetzt shoppen",
+        "min_height": 55,
+        "full_bleed": true,
+        "content_horizontal": "flex-start",
+        "content_vertical": "center",
+        "text_align": "left",
+        "text_color": "#ffffff",
+        "overlay_strength": 50
+      }
+    },
+    "shop_by_category": {
+      "type": "shop_by_category",
+      "blocks": {
+        "kategorie": {
+          "type": "kategorie",
+          "name": "Kategorie",
+          "settings": {
+            "url_link": "",
+            "text_titel": "Backpacks"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "kategorie"
+      ],
+      "settings": {
+        "text_uberschrift": "Shop by Category",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "bg_color": "#ffffff",
+        "text_color": "#0f0f0f"
+      }
+    },
+    "two_column_banner": {
+      "type": "two_column_banner",
+      "blocks": {
+        "banner_Vj4aXk": {
+          "type": "banner",
+          "name": "Banner",
+          "settings": {
+            "text_uberschrift": "Tell A Friend & Get 15% Off",
+            "textarea_subtext": "Give your friends 15% off their first order, and get a 15% off for each successful referral",
+            "url_button_link": "",
+            "text_button_text": "Freund einladen"
+          },
+          "blocks": {}
+        },
+        "banner": {
+          "type": "banner",
+          "name": "Banner",
+          "settings": {
+            "text_uberschrift": "Tell A Friend & Get 15% Off",
+            "textarea_subtext": "Give your friends 15% off their first order, and get a 15% off for each successful referral",
+            "url_button_link": "",
+            "text_button_text": "Freund einladen"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "banner_Vj4aXk",
+        "banner"
+      ],
+      "settings": {
+        "min_height": 70,
+        "overlay_strength": 25
+      }
+    },
+    "accessories_slider": {
+      "type": "accessories_slider",
+      "blocks": {
+        "kategorie": {
+          "type": "kategorie",
+          "name": "Kategorie",
+          "settings": {
+            "url_link": "",
+            "text_titel": "Backpacks"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "kategorie"
+      ],
+      "settings": {
+        "text_uberschrift": "Zubehör &amp; Accessories",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "bg_color": "#ffffff",
+        "text_color": "#0f0f0f"
+      }
+    },
+    "image_link_list": {
+      "type": "image_link_list",
+      "blocks": {
+        "link": {
+          "type": "link",
+          "name": "Link",
+          "settings": {
+            "url_link_ziel": "",
+            "text_label": "Mobile Working"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "link"
+      ],
+      "settings": {
+        "text_subtitle": "Wonach suchst du?",
+        "url_button_link": "",
+        "text_button_text": "Zum Product-Finder",
+        "image_position": "left",
+        "bg_color": "#0f0f0f",
+        "text_color": "#ffffff"
+      }
+    },
+    "loved_by_customers": {
+      "type": "loved_by_customers",
+      "blocks": {
+        "foto": {
+          "type": "foto",
+          "name": "Foto",
+          "settings": {
+            "tagged_product": ""
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "foto"
+      ],
+      "settings": {
+        "text_uberschrift": "Loved by 350.000 Customers DACH",
+        "text_bewertungstext": "4,9/5.0 Sterne bei 80.000+ Bewertungen",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "bg_color": "#ffffff"
+      }
+    },
+    "sustainability_banne": {
+      "type": "sustainability_banne",
+      "settings": {
+        "text_uberschrift": "Verarbeitete Flaschen",
+        "textarea_beschreibung": "Seit 1992 wurden mehr als 12 Millionen PET-Flaschen verarbeitet, um Abfall zu minimieren und Nachhaltigkeit zu fördern",
+        "url_button_link": "",
+        "text_button_text": "Mehr zur Nachhaltigkeit",
+        "counter": "12.483.129",
+        "min_height": 70,
+        "overlay_strength": 30
+      }
+    },
+    "testimonials": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial_FDpL7f": {
+          "type": "testimonial",
+          "name": "Testimonial",
+          "settings": {
+            "text_kurz_headline": "I absolutely love the produc...",
+            "textarea_bewertungs_text": "I absolutely love the product that I bought. Also I had a very good experience.",
+            "url_read_more_link": "",
+            "text_read_more_label": "Read more",
+            "text_name": "Louisa Maierhover",
+            "text_zeitpunkt": "vor 5 Stunden",
+            "rating": 5,
+            "verified": true
+          },
+          "blocks": {}
+        },
+        "testimonial": {
+          "type": "testimonial",
+          "name": "Testimonial",
+          "settings": {
+            "text_kurz_headline": "I absolutely love the produc...",
+            "textarea_bewertungs_text": "I absolutely love the product that I bought. Also I had a very good experience.",
+            "url_read_more_link": "",
+            "text_read_more_label": "Read more",
+            "text_name": "Louisa Maierhover",
+            "text_zeitpunkt": "vor 5 Stunden",
+            "rating": 5,
+            "verified": true
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "testimonial_FDpL7f",
+        "testimonial"
+      ],
+      "settings": {
+        "text_uberschrift": "Was unsere Kund:innen sagen",
+        "text_bewertung_zahl": "4,83",
+        "text_bewertung_label": "Hervorragend",
+        "text_anzahl_bewertungen": "17 982 Bewertungen",
+        "show_rating": true,
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    }
+  },
+  "layout": "theme",
+  "wrapper": "main.main-wrapper",
+  "order": [
+    "hero_slider",
+    "section_headline",
+    "featured_products",
+    "usp_icon_row",
+    "image_banner",
+    "shop_by_category",
+    "two_column_banner",
+    "accessories_slider",
+    "image_link_list",
+    "loved_by_customers",
+    "sustainability_banne",
+    "testimonials"
+  ]
 }

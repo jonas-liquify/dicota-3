@@ -1,1 +1,56 @@
-{"type":"footer","name":"Footer Group","sections":{"footer":{"type":"footer","settings":{}}},"order":["footer"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "footer",
+  "name": "Footer Group",
+  "sections": {
+    "footer_bottom_KAUrCE": {
+      "type": "footer_bottom",
+      "blocks": {
+        "social_9NNBJm": {
+          "type": "social",
+          "settings": {
+            "url_link": ""
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "social_9NNBJm"
+      ],
+      "name": "Footer Bottom",
+      "settings": {
+        "text_copyright": "©2026 DCT Group AG",
+        "legal_menu": "footer"
+      }
+    },
+    "footer_newsletter_ULQtmR": {
+      "type": "footer_newsletter",
+      "name": "Footer Newsletter",
+      "settings": {
+        "url_promo_1_link": "",
+        "text_promo_1_text": "Tell a friend + get 10%",
+        "url_promo_2_link": "",
+        "text_promo_2_text": "Earn 10 EUR Store Credit",
+        "text_headline": "Sichere dir gratis Produkte & exklusive Prämien",
+        "textarea_subtext": "Sammle Dicota-Punkte und löse sie für exklusive Prämien ein",
+        "url_button_link": "",
+        "text_button_text": "Jetzt anmelden",
+        "show_form": false,
+        "placeholder_text": "Deine E-Mail-Adresse",
+        "footer_menu": "footer"
+      }
+    }
+  },
+  "order": [
+    "footer_newsletter_ULQtmR",
+    "footer_bottom_KAUrCE"
+  ]
+}
