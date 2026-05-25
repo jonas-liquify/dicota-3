@@ -107,21 +107,6 @@
             "block_order": [
                 "testimonial"
             ]
-        },
-        "footer_newsletter": {
-            "type": "footer_newsletter"
-        },
-        "footer_bottom": {
-            "type": "footer_bottom",
-            "blocks": {
-                "social": {
-                    "type": "social",
-                    "name": "Social"
-                }
-            },
-            "block_order": [
-                "social"
-            ]
         }
     },
     "layout": "theme",
@@ -138,8 +123,6 @@
         "image_link_list",
         "loved_by_customers",
         "sustainability_banne",
-        "testimonials",
-        "footer_newsletter",
-        "footer_bottom"
+        "testimonials"
     ]
 }
