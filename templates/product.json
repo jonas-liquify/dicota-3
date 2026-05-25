@@ -160,21 +160,6 @@
             "block_order": [
                 "faq"
             ]
-        },
-        "footer_newsletter": {
-            "type": "footer_newsletter"
-        },
-        "footer_bottom": {
-            "type": "footer_bottom",
-            "blocks": {
-                "social": {
-                    "type": "social",
-                    "name": "Social"
-                }
-            },
-            "block_order": [
-                "social"
-            ]
         }
     },
     "layout": "theme",
@@ -191,8 +176,6 @@
         "add_to_your_kit",
         "recommended_products",
         "product_reviews",
-        "product_faq",
-        "footer_newsletter",
-        "footer_bottom"
+        "product_faq"
     ]
 }
