@@ -1,0 +1,32 @@
+<div li-block="Produkt-Kopf" {{ block.shopify_attributes }}>
+                    <h1 li-object:text="product.title" class="ph_title">
+{{ product.title }}
+</h1>
+                    <p class="ph_subtitle">
+{{ block.settings.text_unterzeile }}
+</p>
+                    <div class="ph_highlights text-rich-text w-richtext"> {{ block.settings.richtext_highlights }} </div>
+                </div> {% schema %} {
+    "name": "Produkt-Kopf",
+    "settings": [
+        {
+            "id": "text_unterzeile",
+            "type": "text",
+            "label": "Unterzeile",
+            "default": "Wenn Funktion, Design und Schutz zusammenkommen, der ideale Begleiter f\u00fcr Ihr Unternehmen"
+        },
+        {
+            "id": "richtext_highlights",
+            "type": "richtext",
+            "label": "Highlights",
+            "default": "<p>Schlichtes, modernes DesignBeste Organisation on the wayTop Protection f\u00fcr dein Deviceund auch noch g\u00fcnstig<\/p>"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Produkt-Kopf",
+            "blocks": []
+        }
+    ],
+    "tag": null
+} {% endschema %}

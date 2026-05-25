@@ -1,0 +1,45 @@
+<div li-block="Upsell Produkt" class="swiper-slide ph_upsell-card" {{ block.shopify_attributes }}>
+                    {% if block.settings.image_produktbild %}
+{{ block.settings.image_produktbild | image_url: width: 140 | image_tag: loading: 'lazy', class: 'ph_upsell-img' }}
+{% else %}
+<img src="{{ 'placeholder.svg' | asset_url }}" loading="lazy" alt="" class="ph_upsell-img">
+{% endif %}
+                    <div class="ph_upsell-info"><span class="ph_upsell-name">
+{{ block.settings.text_produktname }}
+</span><span class="ph_upsell-price">
+{{ block.settings.text_preis }}
+</span><a href="{{ block.settings.url_kaufen_link }}" class="ph_upsell-btn"> Hinzufügen </a></div>
+                </div> {% schema %} {
+    "name": "Upsell Produkt",
+    "settings": [
+        {
+            "id": "image_produktbild",
+            "type": "image_picker",
+            "label": "Produktbild"
+        },
+        {
+            "id": "text_produktname",
+            "type": "text",
+            "label": "Produktname",
+            "default": "Blickschutzfilter 4-Way"
+        },
+        {
+            "id": "text_preis",
+            "type": "text",
+            "label": "Preis",
+            "default": "54,90 EUR"
+        },
+        {
+            "id": "url_kaufen_link",
+            "type": "url",
+            "label": "Kaufen Link"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Upsell Produkt",
+            "blocks": []
+        }
+    ],
+    "tag": null
+} {% endschema %}

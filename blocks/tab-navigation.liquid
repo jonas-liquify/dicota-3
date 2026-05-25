@@ -1,0 +1,44 @@
+<div li-static-block="Tab Navigation"><div class="ph_tabs-nav"><button data-tab="0" class="ph_tab">
+{{ block.settings.text_tab_1 }}
+</button><button data-tab="1" class="ph_tab">
+{{ block.settings.text_tab_2 }}
+</button><button data-tab="2" class="ph_tab is-active">
+{{ block.settings.text_tab_3 }}
+</button><button data-tab="3" class="ph_tab">
+{{ block.settings.text_tab_4 }}
+</button></div></div> {% schema %} {
+    "name": "Tab Navigation",
+    "settings": [
+        {
+            "id": "text_tab_1",
+            "type": "text",
+            "label": "Tab 1",
+            "default": "Spezifikationen"
+        },
+        {
+            "id": "text_tab_2",
+            "type": "text",
+            "label": "Tab 2",
+            "default": "Ausstattungen"
+        },
+        {
+            "id": "text_tab_3",
+            "type": "text",
+            "label": "Tab 3",
+            "default": "Beschreibung"
+        },
+        {
+            "id": "text_tab_4",
+            "type": "text",
+            "label": "Tab 4",
+            "default": "Downloads"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Tab Navigation",
+            "blocks": []
+        }
+    ],
+    "tag": null
+} {% endschema %}

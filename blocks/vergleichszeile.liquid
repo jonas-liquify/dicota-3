@@ -1,0 +1,40 @@
+<div li-block="Vergleichszeile" class="product-comparison_trow" {{ block.shopify_attributes }}>
+                    <div class="product-comparison_tcell is-label"><span class="product-comparison_cell-label">
+{{ block.settings.text_merkmal }}
+</span></div>
+                    <div class="product-comparison_tcell is-dicota"><span class="product-comparison_cell-val is-featured">
+{{ block.settings.text_dicota_wert }}
+</span></div>
+                    <div class="product-comparison_tcell is-other"><span class="product-comparison_cell-val">
+{{ block.settings.text_andere_wert }}
+</span></div>
+                </div> {% schema %} {
+    "name": "Vergleichszeile",
+    "settings": [
+        {
+            "id": "text_merkmal",
+            "type": "text",
+            "label": "Merkmal",
+            "default": "Kernkompetenz"
+        },
+        {
+            "id": "text_dicota_wert",
+            "type": "text",
+            "label": "DICOTA Wert",
+            "default": "Fokus auf Computertaschen"
+        },
+        {
+            "id": "text_andere_wert",
+            "type": "text",
+            "label": "Andere Wert",
+            "default": "Keine Kernkompetenz, querbeet"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Vergleichszeile",
+            "blocks": []
+        }
+    ],
+    "tag": null
+} {% endschema %}

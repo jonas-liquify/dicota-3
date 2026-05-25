@@ -1,0 +1,43 @@
+<div li-block="We Care Item" class="swiper-slide ph_we-care-slide" {{ block.shopify_attributes }}>
+                    {% if block.settings.image_badge %}
+{{ block.settings.image_badge | image_url: width: 64 | image_tag: loading: 'lazy', class: 'ph_we-care-badge' }}
+{% else %}
+<img src="{{ 'placeholder.svg' | asset_url }}" loading="lazy" alt="" class="ph_we-care-badge">
+{% endif %}
+                    <div class="ph_we-care-text"><p class="ph_we-care-hl">
+{{ block.settings.text_headline }}
+</p><a href="{{ block.settings.url_link }}" class="ph_we-care-link"> <span>{{ block.settings.text_linktext }}</span> </a></div>
+                </div> {% schema %} {
+    "name": "We Care Item",
+    "settings": [
+        {
+            "id": "image_badge",
+            "type": "image_picker",
+            "label": "Badge"
+        },
+        {
+            "id": "text_headline",
+            "type": "text",
+            "label": "Headline",
+            "default": "30 Jahre deutsche Qualit\u00e4t &amp; Zuverl\u00e4ssigkeit"
+        },
+        {
+            "id": "url_link",
+            "type": "url",
+            "label": "Link"
+        },
+        {
+            "id": "text_linktext",
+            "type": "text",
+            "label": "Linktext",
+            "default": "Unsere Prinzipien ansehen"
+        }
+    ],
+    "presets": [
+        {
+            "name": "We Care Item",
+            "blocks": []
+        }
+    ],
+    "tag": null
+} {% endschema %}

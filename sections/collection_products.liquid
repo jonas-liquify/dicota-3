@@ -1,37 +1,38 @@
-<div class="padding-global padding-section-medium"><div class="container-large">{% paginate collection.products by 50 %}
-    <div li-paginate:by="50" li-paginate="collection.products" class="filter_layout" by="50"><div id="w-node-_678e0483-bbe4-e79a-1722-b169c587feae-c587feae" class="filter_filters-wrapper"><form action="{{ routes.search_url }}" method="get" role="search" class="filter_form_component"><div id="w-node-_265c4342-3d21-e8bf-dfee-efec035c3507-c587feae" class="filter_form"><div class="filter_form-header"><div class="filter_heading">
-{{ section.settings.text_filter }}
-</div><a li-object:href="collection.url" href="{{ collection.url }}" class="button is-link hide-tablet w-inline-block"><div>
-{{ section.settings.text_clear_all }}
-</div></a></div><div class="filter_results-wrapper"><div class="filter_results-text"><span li-object="collection.all_products_count | append: ' '">{{ collection.all_products_count | append: ' ' }}</span><span>
-{{ section.settings.text_products_shown }}
-</span></div></div><div class="filter_form-field-wrapper"><input name="type" type="hidden" class="form_input" value="product"><label for="filter-search" class="form_hidden-label">Search for Products</label><input name="q" placeholder="Search" type="search" id="filter-search" class="form_input" value="{{ search.terms | escape }}"></div><div class="filter_scroll-wrapper"><div class="filter_filter-group-list">{% for filter in collection.filters %}    <div li-for="filter in collection.filters" class="filter_filter-group">
-                                    {% if filter.values.size > 1 %}    <div li-if="filter.values.size > 1">
-    <div class="filter_filter-group-heading"><div li-object="filter.label" class="text-size-medium text-weight-semibold">{{ filter.label }}</div></div><div class="filter_list">{% for filter_value in filter.values %}    <div li-for="filter_value in filter.values" class="filter_item">
-                                    <a href="{% if filter_value.active %}{{ filter_value.url_to_remove }}{% else %}{{ filter_value.url_to_add }}{% endif %}" class="{% if filter_value.count == 0 and filter_value.active == false %}filter_form_checkbox is-disabled{% else %}filter_form_checkbox{% endif %}"><div class="{% if filter_value.active %}filter_form_checkbox-icon is-checked{% else %}filter_form_checkbox-icon{% endif %}"></div><div class="filter_form_checkbox-label"><span li-object="filter_value.label | append: ' '">{{ filter_value.label | append: ' ' }}</span> (<span li-object="filter_value.count">{{ filter_value.count }}</span>)</div></a>
+<div class="coll_filter-bar-outer"><div class="padding-global"><div class="container-large"><div class="coll_filter-bar"><div class="coll_filter-pills">{% for filter in collection.filters %}    <div li-for="filter in collection.filters" class="coll_filter-pill-group" x-data="{ open: false }">
+                                    <button type="button" class="coll_filter-pill"><span li-object="filter.label" class="coll_filter-pill-label">{{ filter.label }}</span><div class="icon-embed-xsmall w-embed"><svg width="100%" height="100%" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2.55806 6.29544C2.46043 6.19781 2.46043 6.03952 2.55806 5.94189L3.44195 5.058C3.53958 4.96037 3.69787 4.96037 3.7955 5.058L8.00001 9.26251L12.2045 5.058C12.3021 4.96037 12.4604 4.96037 12.5581 5.058L13.4419 5.94189C13.5396 6.03952 13.5396 6.19781 13.4419 6.29544L8.17678 11.5606C8.07915 11.6582 7.92086 11.6582 7.82323 11.5606L2.55806 6.29544Z" fill="currentColor"></path></svg></div></button>
+                            <div class="coll_filter-dropdown" x-show="open" false="">{% for filter_value in filter.values %}    <div li-for="filter_value in filter.values" class="coll_filter-option">
+                                    <a href="{% if filter_value.active %}{{ filter_value.url_to_remove }}{% else %}{{ filter_value.url_to_add }}{% endif %}" class="{% if filter_value.active %}coll_filter-checkbox is-active{% else %}coll_filter-checkbox{% endif %}"><div class="coll_filter-checkbox-box"></div><span li-object="filter_value.label" class="coll_filter-checkbox-label">{{ filter_value.label }}</span><span class="coll_filter-count">(<span li-object="filter_value.count">{{ filter_value.count }}</span>)</span></a>
                         </div>
-{% endfor %}</div>    </div>
-{% endif %}
+{% endfor %}</div>
                         </div>
-{% endfor %}</div></div></div></form><a data-w-id="678e0483-bbe4-e79a-1722-b169c587fede" href="#" class="filter_tablet-modal-close-button w-inline-block"><img src="https://uploads-ssl.webflow.com/624380709031623bfe4aee60/624380709031623afe4aee7e_icon_close-modal.svg" alt="" class="icon-1x1-small"></a></div><a data-w-id="f6c1ed66-8f2c-cc0d-fa87-63d3fbb7d53f" href="#" class="filter_tablet-filters-button w-inline-block"><img alt="" loading="lazy" src="https://uploads-ssl.webflow.com/624380709031623bfe4aee60/62942b9f00484cf074e6f851_icon-filters.svg" class="button-icon-left"><div>Filters</div></a><div id="w-node-f6c1ed66-8f2c-cc0d-fa87-63d3fbb7d543-fbb7d53a" class="filter_feed"><div class="filter_feed-header"><div class="filter_tags-wrapper">{% for filters in collection.filters %}    <div li-for="filters in collection.filters" class="filter_tags-inner-wrapper">
-                                    {% for filter_value in filters.active_values %}    <div li-for="filter_value in filters.active_values" class="filter_tag">
-                                    <div li-object="filter_value.label">{{ filter_value.label }}</div>
-                            <a aria-label="Remove Filter" li-object:href="filter_value.url_to_remove" href="{{ filter_value.url_to_remove }}" class="filter_close w-inline-block"><div class="filter_close-icon w-embed"><svg width="100%" height="100%" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.1266 16.773L16.7729 17.1266C16.5777 17.3218 16.2611 17.3218 16.0658 17.1266L12 13.0607L7.9341 17.1265C7.73888 17.3218 7.42229 17.3218 7.22702 17.1265L6.87347 16.773C6.6782 16.5777 6.6782 16.2612 6.87347 16.0659L10.9394 12L6.87347 7.93413C6.6782 7.73891 6.6782 7.42232 6.87347 7.22705L7.22702 6.8735C7.42228 6.67824 7.73888 6.67824 7.9341 6.8735L12 10.9394L16.0658 6.8735C16.2611 6.67824 16.5777 6.67824 16.7729 6.8735L17.1266 7.22705C17.3218 7.42231 17.3218 7.73891 17.1266 7.93413L13.0607 12L17.1266 16.0659C17.3218 16.2612 17.3218 16.5777 17.1266 16.773Z" fill="currentColor"></path></svg></div></a>
-                        </div>
-{% endfor %}
-                        </div>
-{% endfor %}</div><select id="sort-by" li-for:inside="option in collection.sort_options" class="sort_select filter_checkbox">
+{% endfor %}</div><div class="coll_sort-wrap"><span class="coll_sort-label">Sort by</span><div class="coll_sort-inner"><select id="sort-by-coll" li-for:inside="option in collection.sort_options" class="coll_sort-select">
         {% for option in collection.sort_options %}                            <option value="{{ option.value }}" {% if option.value == collection.sort_by %}selected{% elsif option.value == collection.default_sort_by %}selected{% endif %}>{{ option.name }}</option>
-                    {% endfor %}    </select></div><div class="filter_product-list-wrapper w-dyn-list"><div role="list" class="filter_product-list w-dyn-items">{% for product in collection.products %}    <div li-for="product in collection.products" role="listitem" class="filter_product-list-item w-dyn-item">
-                                    {% render 'product_item', product: product %}
-                        </div>
-{% endfor %}</div>{% if collection.products == blank %}    <div li-if="collection.products == blank" class="filter_empty w-dyn-empty">
-    <div class="heading-style-h6">No results found.</div><div class="spacer-xxsmall"></div><div>There are no results with this criteria. Try changing your search.</div>    </div>
-{% endif %}</div>{% if paginate.pages > 1 %}    <nav li-if="paginate.pages > 1" class="pagination_component">
+                    {% endfor %}    </select><div class="icon-embed-xsmall w-embed"><svg width="100%" height="100%" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2.55806 6.29544C2.46043 6.19781 2.46043 6.03952 2.55806 5.94189L3.44195 5.058C3.53958 4.96037 3.69787 4.96037 3.7955 5.058L8.00001 9.26251L12.2045 5.058C12.3021 4.96037 12.4604 4.96037 12.5581 5.058L13.4419 5.94189C13.5396 6.03952 13.5396 6.19781 13.4419 6.29544L8.17678 11.5606C8.07915 11.6582 7.92086 11.6582 7.82323 11.5606L2.55806 6.29544Z" fill="currentColor"></path></svg></div></div></div></div></div></div></div><div class="padding-global"><div class="container-large">{% paginate collection.products by 24 %}
+    <div li-paginate="collection.products" li-paginate:by="24" by="24"><div class="coll_grid" li-for:inside="product in collection.products">
+        {% for product in collection.products %}                            <div class="coll_grid-item">{% render 'product_card', product: product %}</div>
+                            {% if forloop.index == section.settings.promo1_position %}    <div li-if="forloop.index == section.settings.promo1_position" class="coll_grid-item coll_promo-card">
+    <div class="coll_promo-card_inner"><div class="coll_promo-card_content"><h3 class="coll_promo-card_title">
+{{ section.settings.text_promo_1_headline }}
+</h3><p class="coll_promo-card_desc"> {{ section.settings.textarea_promo_1_text }} </p><a href="{{ section.settings.url_promo_1_link }}" class="coll_promo-card_cta w-button"> <span>{{ section.settings.text_promo_1_button }}</span> </a></div><div class="coll_promo-card_media">{% if section.settings.image_promo_1_bild %}
+{{ section.settings.image_promo_1_bild | image_url: width: 500 | image_tag: loading: 'lazy', class: 'coll_promo-card_image' }}
+{% else %}
+<img src="{{ 'placeholder.svg' | asset_url }}" loading="lazy" alt="" class="coll_promo-card_image">
+{% endif %}</div></div>    </div>
+{% endif %}
+                            {% if forloop.index == section.settings.promo2_position %}    <div li-if="forloop.index == section.settings.promo2_position" class="coll_grid-item coll_promo-card">
+    <div class="coll_promo-card_inner"><div class="coll_promo-card_content"><h3 class="coll_promo-card_title">
+{{ section.settings.text_promo_2_headline }}
+</h3><p class="coll_promo-card_desc"> {{ section.settings.textarea_promo_2_text }} </p><a href="{{ section.settings.url_promo_2_link }}" class="coll_promo-card_cta w-button"> <span>{{ section.settings.text_promo_2_button }}</span> </a></div><div class="coll_promo-card_media">{% if section.settings.image_promo_2_bild %}
+{{ section.settings.image_promo_2_bild | image_url: width: 500 | image_tag: loading: 'lazy', class: 'coll_promo-card_image' }}
+{% else %}
+<img src="{{ 'placeholder.svg' | asset_url }}" loading="lazy" alt="" class="coll_promo-card_image">
+{% endif %}</div></div>    </div>
+{% endif %}
+                    {% endfor %}    </div>{% if collection.products == blank %}    <div li-if="collection.products == blank" class="coll_empty">
+    <div class="heading-style-h5">Keine Produkte gefunden.</div><p>Es gibt keine Produkte mit diesen Filterkriterien.</p>    </div>
+{% endif %}{% if paginate.pages > 1 %}    <nav li-if="paginate.pages > 1" class="pagination_component">
     <ul role="list" class="pagination_list w-list-unstyled">{% if paginate.previous %}    <li li-if="paginate.previous" class="pagination_item">
-    <a li-object:href="paginate.previous.url" href="{{ paginate.previous.url }}" class="button is-secondary is-icon w-inline-block"><div class="pagination_arrow w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 13 8" fill="none" preserveaspectratio="xMidYMid meet" aria-hidden="true" role="img"><path d="M1.67318 0.589844L6.26318 5.16984L10.8532 0.589844L12.2632 1.99984L6.26318 7.99984L0.263184 1.99984L1.67318 0.589844Z" fill="currentColor"></path></svg></div><div>Back</div></a>    </li>
-{% endif %}{% if paginate.previous == false %}    <li li-if="paginate.previous == false" class="pagination_item">
-    <a li-object:href="paginate.previous.url" href="{{ paginate.previous.url }}" class="button is-secondary is-icon text-style-muted pointer-events-off w-inline-block"><div class="pagination_arrow w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 13 8" fill="none" preserveaspectratio="xMidYMid meet" aria-hidden="true" role="img"><path d="M1.67318 0.589844L6.26318 5.16984L10.8532 0.589844L12.2632 1.99984L6.26318 7.99984L0.263184 1.99984L1.67318 0.589844Z" fill="currentColor"></path></svg></div><div>Back</div></a>    </li>
+    <a li-object:href="paginate.previous.url" href="{{ paginate.previous.url }}" class="button is-secondary is-icon w-inline-block"><div>Zurück</div></a>    </li>
 {% endif %}{% for part in paginate.parts %}    <li li-for="part in paginate.parts" class="pagination_item">
                                     {% if part.is_link %}    <div li-if="part.is_link">
     <a li-object:href="part.url" href="{{ part.url }}" class="pagination_count w-inline-block"><div li-object="part.title" class="text-style-link">{{ part.title }}</div></a>    </div>
@@ -40,54 +41,121 @@
     <div li-object="part.title" class="{% if part.title == paginate.current_page %}text-weight-semibold{% endif %}">{{ part.title }}</div>    </div>
 {% endif %}
                         </li>
-{% endfor %}{% if paginate.next == false %}    <li li-if="paginate.next == false" class="pagination_item">
-    <a li-object:href="paginate.next.url" href="{{ paginate.next.url }}" class="button is-secondary is-icon text-style-muted pointer-events-off w-inline-block"><div>Next</div><div class="pagination_arrow is-right w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 13 8" fill="none" preserveaspectratio="xMidYMid meet" aria-hidden="true" role="img"><path d="M1.67318 0.589844L6.26318 5.16984L10.8532 0.589844L12.2632 1.99984L6.26318 7.99984L0.263184 1.99984L1.67318 0.589844Z" fill="currentColor"></path></svg></div></a>    </li>
-{% endif %}{% if paginate.next %}    <li li-if="paginate.next" class="pagination_item">
-    <a li-object:href="paginate.next.url" href="{{ paginate.next.url }}" class="button is-secondary is-icon w-inline-block"><div>Next</div><div class="pagination_arrow is-right w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 13 8" fill="none" preserveaspectratio="xMidYMid meet" aria-hidden="true" role="img"><path d="M1.67318 0.589844L6.26318 5.16984L10.8532 0.589844L12.2632 1.99984L6.26318 7.99984L0.263184 1.99984L1.67318 0.589844Z" fill="currentColor"></path></svg></div></a>    </li>
+{% endfor %}{% if paginate.next %}    <li li-if="paginate.next" class="pagination_item">
+    <a li-object:href="paginate.next.url" href="{{ paginate.next.url }}" class="button is-secondary is-icon w-inline-block"><div>Weiter</div></a>    </li>
 {% endif %}</ul>    </nav>
-{% endif %}</div></div>{% endpaginate %}</div></div><div class="hide w-embed w-script"><script>
-              //sortierung
-              Shopify.queryParams = {};
-              // Preserve existing query parameters
-              if (location.search.length) {
-                var params = location.search.substr(1).split("&");
-                for (var i = 0; i < params.length; i++) {
-                  var keyValue = params[i].split("=");
-                  if (keyValue.length) {
-                    Shopify.queryParams[decodeURIComponent(keyValue[0])] =
-                      decodeURIComponent(keyValue[1]);
-                  }
-                }
-              }
-              // Update sort_by query parameter on select change
-              function onSortChange(e) {
-                var params = new URLSearchParams(location.search);
-                params.set("sort_by", e.target.value);
-                location.search = params.toString();
-              }
-              document.querySelector("#sort-by").addEventListener("change", onSortChange);
-            </script></div> {% schema %} {
+{% endif %}</div>{% endpaginate %}</div></div><div class="hide w-embed w-script"><script>document.querySelector("#sort-by-coll")&&document.querySelector("#sort-by-coll").addEventListener("change",function(e){var p=new URLSearchParams(location.search);p.set("sort_by",e.target.value);location.search=p.toString();});</script></div> {% schema %} {
     "tag": "section",
     "name": "Collection Products",
-    "class": "section_filter",
+    "class": "section_collection-products",
     "settings": [
         {
-            "id": "text_filter",
+            "id": "text_promo_1_headline",
             "type": "text",
-            "label": "Filter",
-            "default": "Filters"
+            "label": "Promo 1 Headline",
+            "default": "WEIGH DARKER\u2122 MOON BAG RUFFLE"
         },
         {
-            "id": "text_clear_all",
-            "type": "text",
-            "label": "Clear all",
-            "default": "Clear all"
+            "id": "textarea_promo_1_text",
+            "type": "textarea",
+            "label": "Promo 1 Text",
+            "default": "Raffiniertes Design. Recycelte Materialien."
         },
         {
-            "id": "text_products_shown",
+            "id": "url_promo_1_link",
+            "type": "url",
+            "label": "Promo 1 Link"
+        },
+        {
+            "id": "text_promo_1_button",
             "type": "text",
-            "label": "Products shown",
-            "default": "Products shown"
+            "label": "Promo 1 Button",
+            "default": "JETZT SHOPPEN"
+        },
+        {
+            "id": "image_promo_1_bild",
+            "type": "image_picker",
+            "label": "Promo 1 Bild"
+        },
+        {
+            "id": "text_promo_2_headline",
+            "type": "text",
+            "label": "Promo 2 Headline",
+            "default": "WEIGH DARKER\u2122 MOON BAG RUFFLE"
+        },
+        {
+            "id": "textarea_promo_2_text",
+            "type": "textarea",
+            "label": "Promo 2 Text",
+            "default": "Raffiniertes Design. Recycelte Materialien."
+        },
+        {
+            "id": "url_promo_2_link",
+            "type": "url",
+            "label": "Promo 2 Link"
+        },
+        {
+            "id": "text_promo_2_button",
+            "type": "text",
+            "label": "Promo 2 Button",
+            "default": "JETZT SHOPPEN"
+        },
+        {
+            "id": "image_promo_2_bild",
+            "type": "image_picker",
+            "label": "Promo 2 Bild"
+        },
+        {
+            "type": "header",
+            "content": "Promo-Karten"
+        },
+        {
+            "type": "number",
+            "id": "promo1_position",
+            "label": "Promo 1 nach Produkt Nr.",
+            "default": 10
+        },
+        {
+            "type": "color",
+            "id": "promo1_bg",
+            "label": "Promo 1 Hintergrundfarbe",
+            "default": "#162040"
+        },
+        {
+            "type": "number",
+            "id": "promo2_position",
+            "label": "Promo 2 nach Produkt Nr.",
+            "default": 22
+        },
+        {
+            "type": "color",
+            "id": "promo2_bg",
+            "label": "Promo 2 Hintergrundfarbe",
+            "default": "#162040"
+        },
+        {
+            "type": "header",
+            "content": "Abst\u00e4nde"
+        },
+        {
+            "type": "range",
+            "id": "padding_top",
+            "min": 0,
+            "max": 80,
+            "step": 4,
+            "unit": "px",
+            "label": "Abstand oben",
+            "default": 0
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom",
+            "min": 0,
+            "max": 120,
+            "step": 4,
+            "unit": "px",
+            "label": "Abstand unten",
+            "default": 80
         }
     ],
     "presets": [

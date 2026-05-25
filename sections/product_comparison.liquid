@@ -1,0 +1,128 @@
+<div class="padding-global" style="padding-top:{{ section.settings.padding_top }}px;padding-bottom:{{ section.settings.padding_bottom }}px;background-color:{{ section.settings.bg_color }};color:{{ section.settings.text_color }};"><div class="container-large"><div class="product-comparison_layout"><div class="product-comparison_brand"><div class="product-comparison_brand-copy"><h2 class="product-comparison_brand-headline"><span class="product-comparison_hl-line">
+{{ section.settings.text_headline_zeile_1 }}
+</span><span class="product-comparison_hl-line is-accent">
+{{ section.settings.text_headline_zeile_2 }}
+</span></h2><p class="product-comparison_brand-desc"> {{ section.settings.textarea_beschreibung }} </p></div><div class="product-comparison_founders">{% if section.settings.image_grunder_bild %}
+{{ section.settings.image_grunder_bild | image_url: width: 280 | image_tag: loading: 'lazy', class: 'product-comparison_founders-img' }}
+{% else %}
+<img src="{{ 'placeholder.svg' | asset_url }}" loading="lazy" alt="" class="product-comparison_founders-img">
+{% endif %}<div><p class="product-comparison_founders-names">
+{{ section.settings.text_grunder_namen }}
+</p><p class="product-comparison_founders-title">
+{{ section.settings.text_grunder_titel }}
+</p></div></div></div><div class="product-comparison_table-outer"><div class="product-comparison_table"><div class="product-comparison_thead"><div class="product-comparison_tcell is-label"></div><div class="product-comparison_tcell is-dicota"><img src="{{ 'dicota-logo.svg' | asset_url }}" loading="lazy" alt="DICOTA" class="product-comparison_logo"></div><div class="product-comparison_tcell is-other"><span class="product-comparison_other-label">
+{{ section.settings.text_andere_label }}
+</span></div></div><div li-cf-theme-blocks="" class="product-comparison_tbody">
+{% content_for 'blocks' %}
+</div></div></div></div></div></div> {% schema %} {
+    "tag": "section",
+    "name": "Product Comparison",
+    "class": "section_product-comparison",
+    "blocks": [
+        {
+            "type": "vergleichszeile"
+        },
+        {
+            "type": "@app"
+        }
+    ],
+    "settings": [
+        {
+            "id": "text_headline_zeile_1",
+            "type": "text",
+            "label": "Headline Zeile 1",
+            "default": "BECOME"
+        },
+        {
+            "id": "text_headline_zeile_2",
+            "type": "text",
+            "label": "Headline Zeile 2",
+            "default": "WHATEVER MAKES YOU BRILLIANT"
+        },
+        {
+            "id": "textarea_beschreibung",
+            "type": "textarea",
+            "label": "Beschreibung",
+            "default": "Als German Design Award Winner stehen wir absolut hinter unserem Produkt. Und 100.000 Kunden auch."
+        },
+        {
+            "id": "image_grunder_bild",
+            "type": "image_picker",
+            "label": "Gr\u00fcnder Bild"
+        },
+        {
+            "id": "text_grunder_namen",
+            "type": "text",
+            "label": "Gr\u00fcnder Namen",
+            "default": "Stephan Meyer, Michael M\u00fchlenbruch, Ruedi Nauer"
+        },
+        {
+            "id": "text_grunder_titel",
+            "type": "text",
+            "label": "Gr\u00fcnder Titel",
+            "default": "Management"
+        },
+        {
+            "id": "text_andere_label",
+            "type": "text",
+            "label": "Andere Label",
+            "default": "Andere"
+        },
+        {
+            "type": "header",
+            "content": "Abst\u00e4nde"
+        },
+        {
+            "type": "range",
+            "id": "padding_top",
+            "min": 0,
+            "max": 120,
+            "step": 4,
+            "unit": "px",
+            "label": "Abstand oben",
+            "default": 80
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom",
+            "min": 0,
+            "max": 120,
+            "step": 4,
+            "unit": "px",
+            "label": "Abstand unten",
+            "default": 80
+        },
+        {
+            "type": "header",
+            "content": "Farben"
+        },
+        {
+            "type": "color",
+            "id": "bg_color",
+            "label": "Hintergrundfarbe",
+            "default": "#0f0f0f"
+        },
+        {
+            "type": "color",
+            "id": "text_color",
+            "label": "Textfarbe",
+            "default": "#ffffff"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Product Comparison",
+            "category": "Liquify",
+            "blocks": [
+                {
+                    "type": "vergleichszeile"
+                }
+            ]
+        }
+    ],
+    "enabled_on": {
+        "templates": [
+            "product"
+        ]
+    }
+} {% endschema %}
