@@ -1,0 +1,33 @@
+<div li-block="Galerie-Spalte" class="product-loved-by_col" {{ block.shopify_attributes }}>
+                    {% if block.settings.image_bild_oben %}
+{{ block.settings.image_bild_oben | image_url: width: 500 | image_tag: loading: 'lazy', class: 'product-loved-by_img' }}
+{% else %}
+<img src="{{ 'placeholder.svg' | asset_url }}" loading="lazy" alt="" class="product-loved-by_img">
+{% endif %}
+                    {% if block.settings.image_bild_unten %}
+{{ block.settings.image_bild_unten | image_url: width: 500 | image_tag: loading: 'lazy', class: 'product-loved-by_img' }}
+{% else %}
+<img src="{{ 'placeholder.svg' | asset_url }}" loading="lazy" alt="" class="product-loved-by_img">
+{% endif %}
+                </div> {% schema %} {
+    "name": "Galerie-Spalte",
+    "settings": [
+        {
+            "id": "image_bild_oben",
+            "type": "image_picker",
+            "label": "Bild oben"
+        },
+        {
+            "id": "image_bild_unten",
+            "type": "image_picker",
+            "label": "Bild unten"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Galerie-Spalte",
+            "blocks": []
+        }
+    ],
+    "tag": null
+} {% endschema %}

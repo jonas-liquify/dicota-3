@@ -1,0 +1,54 @@
+<div li-block="Beschreibungs-Tabs" {{ block.shopify_attributes }}>
+                    {% content_for "block", type: "tab-navigation", id: "tab-navigation" %}
+                    <div li-cf-theme-blocks="" class="ph_tab-panels">
+{% content_for 'blocks' %}
+</div>
+                    <a href="#" class="ph_see-more">Mehr anzeigen</a>
+                </div> {% schema %} {
+    "name": "Beschreibungs-Tabs",
+    "blocks": [
+        {
+            "type": "tab-inhalt"
+        },
+        {
+            "type": "@app"
+        }
+    ],
+    "settings": [
+        {
+            "id": "text_tab_1",
+            "type": "text",
+            "label": "Tab 1",
+            "default": "Spezifikationen"
+        },
+        {
+            "id": "text_tab_2",
+            "type": "text",
+            "label": "Tab 2",
+            "default": "Ausstattungen"
+        },
+        {
+            "id": "text_tab_3",
+            "type": "text",
+            "label": "Tab 3",
+            "default": "Beschreibung"
+        },
+        {
+            "id": "text_tab_4",
+            "type": "text",
+            "label": "Tab 4",
+            "default": "Downloads"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Beschreibungs-Tabs",
+            "blocks": [
+                {
+                    "type": "tab-inhalt"
+                }
+            ]
+        }
+    ],
+    "tag": null
+} {% endschema %}

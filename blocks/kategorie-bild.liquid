@@ -1,0 +1,38 @@
+<div li-block="Kategorie-Bild" class="collection-intro_tile" {{ block.shopify_attributes }}>
+                    <div class="collection-intro_tile-media">{% if block.settings.image_bild %}
+{{ block.settings.image_bild | image_url: width: 500 | image_tag: loading: 'lazy', class: 'collection-intro_tile-image' }}
+{% else %}
+<img src="{{ 'placeholder.svg' | asset_url }}" loading="lazy" alt="" class="collection-intro_tile-image">
+{% endif %}</div>
+                    <div class="collection-intro_tile-caption"><p class="collection-intro_tile-title">
+{{ block.settings.text_titel }}
+</p><p class="collection-intro_tile-text"> {{ block.settings.textarea_text }} </p></div>
+                </div> {% schema %} {
+    "name": "Kategorie-Bild",
+    "settings": [
+        {
+            "id": "image_bild",
+            "type": "image_picker",
+            "label": "Bild"
+        },
+        {
+            "id": "text_titel",
+            "type": "text",
+            "label": "Titel",
+            "default": "ENTRY LEVEL OR PROJECT TENDER"
+        },
+        {
+            "id": "textarea_text",
+            "type": "textarea",
+            "label": "Text",
+            "default": "Lorem ipsum dolor sit amet, consectetur delle scu adipiscing elit. Suspendisse varius enim in eros elementum tristique."
+        }
+    ],
+    "presets": [
+        {
+            "name": "Kategorie-Bild",
+            "blocks": []
+        }
+    ],
+    "tag": null
+} {% endschema %}

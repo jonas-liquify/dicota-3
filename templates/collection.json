@@ -1,0 +1,59 @@
+{
+    "sections": {
+        "product_breadcrumb": {
+            "type": "product_breadcrumb"
+        },
+        "collection_intro": {
+            "type": "collection_intro",
+            "blocks": {
+                "kategorie-bild": {
+                    "type": "kategorie-bild",
+                    "name": "Kategorie-Bild"
+                }
+            },
+            "block_order": [
+                "kategorie-bild"
+            ]
+        },
+        "collection_products": {
+            "type": "collection_products"
+        },
+        "testimonials": {
+            "type": "testimonials",
+            "blocks": {
+                "testimonial": {
+                    "type": "testimonial",
+                    "name": "Testimonial"
+                }
+            },
+            "block_order": [
+                "testimonial"
+            ]
+        },
+        "footer_newsletter": {
+            "type": "footer_newsletter"
+        },
+        "footer_bottom": {
+            "type": "footer_bottom",
+            "blocks": {
+                "social": {
+                    "type": "social",
+                    "name": "Social"
+                }
+            },
+            "block_order": [
+                "social"
+            ]
+        }
+    },
+    "layout": "theme",
+    "wrapper": "main.main-wrapper",
+    "order": [
+        "product_breadcrumb",
+        "collection_intro",
+        "collection_products",
+        "testimonials",
+        "footer_newsletter",
+        "footer_bottom"
+    ]
+}

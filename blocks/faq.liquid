@@ -1,0 +1,29 @@
+<div li-block="FAQ" class="product-faq_item" x-data="{open:false}" {{ block.shopify_attributes }}>
+                    <button class="product-faq_question" x-on:click="open=!open" :aria-expanded="open"><span class="product-faq_question-text">
+{{ block.settings.text_frage }}
+</span><span class="product-faq_icon" :class="{'is-open':open}">{% render 'icon_chevron_down' %}</span></button>
+                    <div class="product-faq_answer" x-show="open" x-collapse=""><p class="product-faq_answer-text"> {{ block.settings.textarea_antwort }} </p></div>
+                </div> {% schema %} {
+    "name": "FAQ",
+    "settings": [
+        {
+            "id": "text_frage",
+            "type": "text",
+            "label": "Frage",
+            "default": "Ist das Produkt mit meinem Ger\u00e4t kompatibel?"
+        },
+        {
+            "id": "textarea_antwort",
+            "type": "textarea",
+            "label": "Antwort",
+            "default": "Ja, das Produkt ist in zwei Gr\u00f6\u00dfen erh\u00e4ltlich und passt zu allen g\u00e4ngigen Modellen."
+        }
+    ],
+    "presets": [
+        {
+            "name": "FAQ",
+            "blocks": []
+        }
+    ],
+    "tag": null
+} {% endschema %}

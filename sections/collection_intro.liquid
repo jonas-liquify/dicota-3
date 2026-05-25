@@ -1,0 +1,75 @@
+<div class="padding-global" style="padding-top:{{ section.settings.padding_top }}px;padding-bottom:{{ section.settings.padding_bottom }}px;background-color:{{ section.settings.bg_color }};color:{{ section.settings.text_color }};"><div class="container-large"><div class="collection-intro_layout"><div class="collection-intro_text-col"><h1 li-object="collection.title" class="collection-intro_title">{{ collection.title }}</h1>{% if collection.description %}    <div li-if="collection.description != blank" li-object="collection.description" class="collection-intro_desc">
+    Hier könnte auch ein einleitender Satz stehen, der die Kategorie kurz vorstellt und dem User ein paar hilfreiche Informationen zum Produktangebot von DICOTA gibt.    </div>
+{% endif %}</div><div li-cf-theme-blocks="" class="collection-intro_tiles">
+{% content_for 'blocks' %}
+</div></div></div></div> {% schema %} {
+    "tag": "section",
+    "name": "Collection Intro",
+    "class": "section_collection-intro",
+    "blocks": [
+        {
+            "type": "kategorie-bild"
+        },
+        {
+            "type": "@app"
+        }
+    ],
+    "settings": [
+        {
+            "type": "header",
+            "content": "Abst\u00e4nde"
+        },
+        {
+            "type": "range",
+            "id": "padding_top",
+            "min": 0,
+            "max": 120,
+            "step": 4,
+            "unit": "px",
+            "label": "Abstand oben",
+            "default": 40
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom",
+            "min": 0,
+            "max": 120,
+            "step": 4,
+            "unit": "px",
+            "label": "Abstand unten",
+            "default": 40
+        },
+        {
+            "type": "header",
+            "content": "Farben"
+        },
+        {
+            "type": "color",
+            "id": "bg_color",
+            "label": "Hintergrundfarbe",
+            "default": "#ffffff"
+        },
+        {
+            "type": "color",
+            "id": "text_color",
+            "label": "Textfarbe",
+            "default": "#0f0f0f"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Collection Intro",
+            "category": "Liquify",
+            "blocks": [
+                {
+                    "type": "kategorie-bild"
+                }
+            ]
+        }
+    ],
+    "enabled_on": {
+        "templates": [
+            "collection"
+        ]
+    }
+} {% endschema %}

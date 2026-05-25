@@ -1,0 +1,80 @@
+<div class="padding-global" style="background-color: {{ section.settings.bg_color }};"><div class="we-care-banner_inner"><div class="we-care-banner_bg-wrap">{% if section.settings.image_hintergrundbild %}
+{{ section.settings.image_hintergrundbild | image_url: width: 1440 | image_tag: loading: 'lazy', class: 'we-care-banner_bg-img' }}
+{% else %}
+<img src="{{ 'placeholder.svg' | asset_url }}" loading="lazy" alt="" class="we-care-banner_bg-img">
+{% endif %}<div class="we-care-banner_overlay"></div></div><div class="we-care-banner_content"><span class="we-care-banner_counter-num">
+{{ section.settings.text_zahler }}
+</span><h2 class="we-care-banner_headline">
+{{ section.settings.text_headline }}
+</h2><p class="we-care-banner_desc"> {{ section.settings.textarea_beschreibung }} </p><a href="{{ section.settings.url_cta_link }}" class="we-care-banner_cta w-button"> <span>{{ section.settings.text_cta_text }}</span> </a></div><div class="we-care-banner_badge">{% if section.settings.image_we_care_badge %}
+{{ section.settings.image_we_care_badge | image_url: width: 300 | image_tag: loading: 'lazy', class: 'we-care-banner_badge-img' }}
+{% else %}
+<img src="{{ 'placeholder.svg' | asset_url }}" loading="lazy" alt="" class="we-care-banner_badge-img">
+{% endif %}</div></div></div> {% schema %} {
+    "tag": "section",
+    "name": "We Care Banner",
+    "class": "section_we-care-banner",
+    "settings": [
+        {
+            "id": "image_hintergrundbild",
+            "type": "image_picker",
+            "label": "Hintergrundbild"
+        },
+        {
+            "id": "text_zahler",
+            "type": "text",
+            "label": "Z\u00e4hler",
+            "default": "12.483.129"
+        },
+        {
+            "id": "text_headline",
+            "type": "text",
+            "label": "Headline",
+            "default": "Verarbeitete Flaschen"
+        },
+        {
+            "id": "textarea_beschreibung",
+            "type": "textarea",
+            "label": "Beschreibung",
+            "default": "Seit 1992 wurden mehr als 12 Millionen PET-Flaschen verarbeitet, um Abfall zu minimieren und Nachhaltigkeit zu f\u00f6rdern"
+        },
+        {
+            "id": "url_cta_link",
+            "type": "url",
+            "label": "CTA Link"
+        },
+        {
+            "id": "text_cta_text",
+            "type": "text",
+            "label": "CTA Text",
+            "default": "Mehr zur Nachhaltigkeit"
+        },
+        {
+            "id": "image_we_care_badge",
+            "type": "image_picker",
+            "label": "WE CARE Badge"
+        },
+        {
+            "type": "header",
+            "content": "Einstellungen"
+        },
+        {
+            "type": "color",
+            "id": "bg_color",
+            "label": "Hintergrundfarbe",
+            "default": "#0a1628"
+        }
+    ],
+    "presets": [
+        {
+            "name": "We Care Banner",
+            "category": "Liquify",
+            "blocks": []
+        }
+    ],
+    "enabled_on": {
+        "templates": [
+            "product"
+        ]
+    }
+} {% endschema %}

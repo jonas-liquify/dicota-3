@@ -1,0 +1,81 @@
+<div class="padding-global" style="padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px; background-color: {{ section.settings.bg_color }}; color: {{ section.settings.text_color }};"><div class="container-large"><h2 class="product-loved-by_headline">
+{{ section.settings.text_uberschrift }}
+</h2><div li-cf-theme-blocks="" class="product-loved-by_grid">
+{% content_for 'blocks' %}
+</div></div></div> {% schema %} {
+    "tag": "section",
+    "name": "Product Loved-by Gal",
+    "class": "section_product-loved-by",
+    "blocks": [
+        {
+            "type": "galerie-spalte"
+        },
+        {
+            "type": "@app"
+        }
+    ],
+    "settings": [
+        {
+            "id": "text_uberschrift",
+            "type": "text",
+            "label": "\u00dcberschrift",
+            "default": "Loved by thousands of customers"
+        },
+        {
+            "type": "header",
+            "content": "Abst\u00e4nde"
+        },
+        {
+            "type": "range",
+            "id": "padding_top",
+            "min": 0,
+            "max": 120,
+            "step": 4,
+            "unit": "px",
+            "label": "Abstand oben",
+            "default": 80
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom",
+            "min": 0,
+            "max": 120,
+            "step": 4,
+            "unit": "px",
+            "label": "Abstand unten",
+            "default": 80
+        },
+        {
+            "type": "header",
+            "content": "Farben"
+        },
+        {
+            "type": "color",
+            "id": "bg_color",
+            "label": "Hintergrundfarbe",
+            "default": "#ffffff"
+        },
+        {
+            "type": "color",
+            "id": "text_color",
+            "label": "Textfarbe",
+            "default": "#000000"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Product Loved-by Gal",
+            "category": "Liquify",
+            "blocks": [
+                {
+                    "type": "galerie-spalte"
+                }
+            ]
+        }
+    ],
+    "enabled_on": {
+        "templates": [
+            "product"
+        ]
+    }
+} {% endschema %}
