@@ -2,9 +2,7 @@
 {{ section.settings.text_heading }}
 </h2><div li-cf-theme-blocks="" class="value-tabs_link-list">
 {% content_for 'blocks' %}
-</div></div><div class="value-tabs_tab-body"><div li-cf-theme-blocks="">
-{% content_for 'blocks' %}
-</div></div></div></div></div> {% schema %} {
+</div></div>{% content_for "block", type: "tab-panes", id: "tab-panes" %}</div></div></div> {% schema %} {
     "tag": "section",
     "name": "Value Tabs",
     "class": "section_value-tabs",
@@ -60,7 +58,14 @@
                     "type": "tab-link"
                 },
                 {
-                    "type": "tab-pane"
+                    "type": "tab-panes",
+                    "static": true,
+                    "id": "tab-panes",
+                    "blocks": [
+                        {
+                            "type": "tab-pane"
+                        }
+                    ]
                 }
             ]
         }

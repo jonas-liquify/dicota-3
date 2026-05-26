@@ -4,9 +4,7 @@
 {{ section.settings.text_heading }}
 </h1><div class="text-size-medium max-width-large"> {{ section.settings.textarea_subheading }} </div></div><div x-data="{tab: 1}" role="tablist" class="acc-dis_tab-component"><div li-cf-theme-blocks="" class="acc-dis_tab-menu">
 {% content_for 'blocks' %}
-</div><div class="acc-dis_tab-body"><div li-cf-theme-blocks="">
-{% content_for 'blocks' %}
-</div></div></div></div></div></div></div> {% schema %} {
+</div>{% content_for "block", type: "tab-panes", id: "tab-panes" %}</div></div></div></div></div> {% schema %} {
     "tag": "section",
     "name": "B2B \/ Sales \u2014 Dist",
     "class": "section_acc-default",
@@ -50,7 +48,14 @@
                     "type": "region"
                 },
                 {
-                    "type": "region-pane"
+                    "type": "tab-panes",
+                    "static": true,
+                    "id": "tab-panes",
+                    "blocks": [
+                        {
+                            "type": "region-pane"
+                        }
+                    ]
                 }
             ]
         }
