@@ -1,6 +1,15 @@
-<div class="announcement-bar_container"><div class="announcement-bar_left"><div li-cf-theme-blocks="" class="announcement-bar_items">
+<div class="announcement-bar_container"><div li-cf-theme-blocks="" class="announcement-bar_items">
 {% content_for 'blocks' %}
-</div></div>{% content_for "block", type: "account-bar", id: "account-bar" %}</div> {% schema %} {
+</div><div class="announcement-bar_right"><div li-cf-theme-blocks="" class="announcement-bar_links">
+{% content_for 'blocks' %}
+</div>{% if localization.available_languages.size > 1 %}    <localization-form li-if="localization.available_languages.size > 1" class="li-lang_wrapper">
+    {% form 'localization', class: 'li-lang_form' %}
+<div data-hover="true" data-delay="200" class="li-lang_dropdown w-dropdown"><div lang="{{ localization.language.iso_code }}" class="li-lang_dd-toggle announcement-bar_lang w-dropdown-toggle"><div class="announcement-bar_lang-flag"></div><div li-object="localization.language.endonym_name | upcase">{{ localization.language.endonym_name | upcase }}</div><div class="dropdown-icon w-embed">{% render 'icon_chevron_down' %}</div></div><nav li-for:inside="language in localization.available_languages" class="li-lang_dd-list w-dropdown-list">
+        {% for language in localization.available_languages %}                            {% unless localization.language.iso_code == language.iso_code %}    <div li-unless="localization.language.iso_code == language.iso_code" class="li-lang_dd-list-item">
+    <a href="#" li-object="language.endonym_name | upcase" lang="{{ language.iso_code }}" data-value="{{ language.iso_code }}" class="li-lang_dd-link w-dropdown-link">{{ language.endonym_name | upcase }}</a>    </div>
+{% endunless %}
+                    {% endfor %}    </nav></div><input type="hidden" name="language_code" class="li-lang_hidden-input" value="{{ localization.language.iso_code }}">{% endform %}    </localization-form>
+{% endif %}</div></div> {% schema %} {
     "tag": "section",
     "name": "Announcement Bar",
     "class": "section_announcement-bar",
@@ -14,71 +23,24 @@
     ],
     "settings": [
         {
-            "id": "url_uber_dicota_link",
+            "id": "url_link_url",
             "type": "url",
-            "label": "\u00dcber Dicota Link"
+            "label": "Link URL"
         },
         {
-            "id": "text_uber_dicota",
+            "id": "text_link_text",
             "type": "text",
-            "label": "\u00dcber Dicota",
+            "label": "Link Text",
             "default": "\u00dcber DICOTA"
-        },
-        {
-            "id": "url_reseller_link",
-            "type": "url",
-            "label": "Reseller Link"
-        },
-        {
-            "id": "text_reseller_label",
-            "type": "text",
-            "label": "Reseller Label",
-            "default": "D2C Reseller Shop"
-        },
-        {
-            "id": "url_kontakt_link",
-            "type": "url",
-            "label": "Kontakt Link"
-        },
-        {
-            "id": "text_kontakt_label",
-            "type": "text",
-            "label": "Kontakt Label",
-            "default": "Kontakt &amp; Hilfe"
-        },
-        {
-            "type": "header",
-            "content": "Layout & Farben"
-        },
-        {
-            "type": "header",
-            "content": "Farben"
-        },
-        {
-            "type": "color",
-            "id": "bg_color",
-            "label": "Hintergrundfarbe",
-            "default": "#0f0f0f"
-        },
-        {
-            "type": "color",
-            "id": "text_color",
-            "label": "Textfarbe",
-            "default": "#ffffff"
         }
     ],
     "presets": [
         {
             "name": "Announcement Bar",
-            "category": "Liquify",
+            "category": "Global",
             "blocks": [
                 {
                     "type": "usp"
-                },
-                {
-                    "type": "account-bar",
-                    "static": true,
-                    "id": "account-bar"
                 }
             ]
         }
