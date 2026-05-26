@@ -404,9 +404,12 @@ figcaption {
 }
 
 .heading-style-h3 {
-  font-size: 2rem;
-  font-weight: 600;
-  line-height: 1.2;
+  font-family: "Futura PT", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 500;
+  line-height: 1.1;
+  text-transform: uppercase;
+  margin: 0;
 }
 
 .text-rich-text h1, .text-rich-text h2, .text-rich-text h3, .text-rich-text h4 {
@@ -435,9 +438,12 @@ figcaption {
 }
 
 .heading-style-h1 {
-  font-size: 3.75rem;
-  font-weight: 600;
+  font-family: "Futura PT", sans-serif;
+  font-size: 3.1875rem;
+  font-weight: 500;
   line-height: 1.1;
+  text-transform: uppercase;
+  margin: 0;
 }
 
 .padding-global {
@@ -472,7 +478,8 @@ figcaption {
 }
 
 .text-size-tiny {
-  font-size: .75rem;
+  font-size: 0.75rem;
+  line-height: 1.4;
 }
 
 .text-size-tiny.text-color-grey.text-style-link {
@@ -495,6 +502,7 @@ figcaption {
 
 .text-size-regular {
   font-size: 1rem;
+  line-height: 1.5;
 }
 
 .text-align-right {
@@ -547,13 +555,17 @@ figcaption {
 }
 
 .text-size-small {
-  font-size: .875rem;
+  font-size: 0.875rem;
+  line-height: 1.4;
 }
 
 .heading-style-h4 {
+  font-family: "Futura PT", sans-serif;
   font-size: 1.5rem;
-  font-weight: 600;
-  line-height: 1.4;
+  font-weight: 500;
+  line-height: 1.1;
+  text-transform: uppercase;
+  margin: 0;
 }
 
 .heading-style-h4.text-weight-normal {
@@ -590,9 +602,11 @@ figcaption {
 }
 
 .heading-style-h6 {
+  font-family: "Futura PT", sans-serif;
   font-size: 1rem;
-  font-weight: 600;
-  line-height: 1.5;
+  font-weight: 500;
+  line-height: 1.2;
+  margin: 0;
 }
 
 .padding-section-large {
@@ -607,12 +621,16 @@ figcaption {
 
 .text-size-large {
   font-size: 1.5rem;
+  line-height: 1.3;
 }
 
 .heading-style-h2 {
-  font-size: 2.5rem;
-  font-weight: 600;
-  line-height: 1;
+  font-family: "Futura PT", sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.1;
+  text-transform: uppercase;
+  margin: 0;
 }
 
 .page-wrapper {
@@ -736,6 +754,7 @@ figcaption {
 
 .text-size-medium {
   font-size: 1.25rem;
+  line-height: 1.26;
 }
 
 .li-styleguide_section {
@@ -1122,25 +1141,11 @@ figcaption {
   display: flex;
 }
 
-.addresses_account-wrapper {
-  grid-column-gap: 1rem;
-  grid-row-gap: 1rem;
-  grid-template-rows: auto auto;
-  grid-template-columns: 1fr;
-  grid-auto-columns: 1fr;
-  padding: 1.5rem;
-  display: grid;
-}
-
 .customer-name {
   align-items: flex-start;
   margin-right: .3em;
   font-weight: 700;
   display: flex;
-}
-
-.addresses_wrapper-default {
-  font-style: normal;
 }
 
 .section_account-nav {
@@ -1168,105 +1173,6 @@ figcaption {
   color: #000;
   border-bottom: 1px solid #000;
   font-weight: 700;
-}
-
-.addresses_grid {
-  grid-column-gap: 16px;
-  grid-row-gap: 16px;
-  grid-template-rows: auto;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-auto-columns: 1fr;
-  display: grid;
-}
-
-.addresses_wrapper {
-  border: 1px solid var(--base-color-neutral--black);
-  padding: 0;
-}
-
-.addresses_wrapper.is-new {
-  cursor: pointer;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  position: relative;
-}
-
-.addresses_wrapper.is-new:hover {
-  background-color: #00000003;
-}
-
-.addresses_padding {
-  padding: 1rem;
-}
-
-.addresses_padding.is-header {
-  border-bottom: 1px solid var(--base-color-neutral--black);
-  padding-top: 1.1rem;
-  padding-bottom: 1.1rem;
-}
-
-.addresses_edit {
-  justify-content: space-between;
-  align-items: flex-end;
-  margin-top: 1rem;
-  display: flex;
-}
-
-.addresses_modal {
-  z-index: 10000;
-  background-color: #0000001a;
-  justify-content: center;
-  align-items: flex-start;
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-  transition: transform .2s, opacity .2s;
-  display: flex;
-  position: fixed;
-  inset: 0%;
-  overflow: scroll;
-}
-
-.addresses_modal-close {
-  position: absolute;
-  inset: 0%;
-}
-
-.addresses_form {
-  background-color: #fff;
-  border-radius: 1rem;
-  padding: 3rem;
-  position: relative;
-}
-
-.addresses_form-grid {
-  grid-column-gap: 16px;
-  grid-row-gap: 16px;
-  grid-template-rows: auto auto;
-  grid-template-columns: 1fr 1fr;
-  grid-auto-columns: 1fr;
-  display: grid;
-}
-
-.addresses_delete-button {
-  background-color: #0000;
-  background-image: url({{ 'trash.svg' | asset_url }});
-  background-position: 50%;
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 2rem;
-  height: 2rem;
-  display: block;
-}
-
-.addresses_plus {
-  width: 2rem;
-  height: 2rem;
-}
-
-.addresses_opener {
-  position: absolute;
-  inset: 0%;
 }
 
 .login_hinweis-kachel {
@@ -1891,7 +1797,7 @@ figcaption {
   max-width: 100%;
   height: 100%;
   margin-bottom: 0;
-  width: 100rem;
+  width: 100%;
 }
 
 .swiper-slide.is-product-gallery {
@@ -2861,8 +2767,11 @@ figcaption {
 }
 
 .heading-style-h5 {
+  font-family: "Futura PT", sans-serif;
   font-size: 1.25rem;
-  line-height: 1.5;
+  font-weight: 500;
+  line-height: 1.2;
+  margin: 0;
 }
 
 .fs-styleguide_item-header {
@@ -5433,8 +5342,6 @@ figcaption {
 }
 
 .hero_subtext {
-  font-size: 1.25rem;
-  line-height: 1.26;
   max-width: 32rem;
   margin: 0;
 }
@@ -5606,25 +5513,17 @@ figcaption {
 
 .section-headline_pretitle,
 .section-headline_title {
-  font-family: "Futura PT", sans-serif;
-  font-weight: 500;
-  font-size: 3.1875rem;
-  line-height: 1.1;
-  text-transform: uppercase;
   margin: 0;
 }
 
 .section-headline_subtext {
   max-width: 30rem;
-  font-size: 1.25rem;
-  line-height: 1.26;
   margin: 0;
 }
 
 @media screen and (max-width: 767px) {
   .section-headline_pretitle,
   .section-headline_title {
-    font-size: 2rem;
   }
   .section-headline_subtext {
     font-size: 1rem;
@@ -5654,11 +5553,6 @@ figcaption {
 }
 
 .featured-products_title {
-  font-family: "Futura PT", sans-serif;
-  font-weight: 500;
-  font-size: 2rem;
-  line-height: 1.1;
-  text-transform: uppercase;
   margin: 0;
 }
 
@@ -6111,10 +6005,6 @@ figcaption {
 }
 
 .image-banner_subtext {
-  font-family: "Futura PT", sans-serif;
-  font-weight: 500;
-  font-size: 1.25rem;
-  line-height: 1.26;
   margin: 0;
 }
 
@@ -6174,11 +6064,6 @@ figcaption {
 }
 
 .shop-by-category_title {
-  font-family: "Futura PT", sans-serif;
-  font-weight: 500;
-  font-size: 2rem;
-  line-height: 1.1;
-  text-transform: uppercase;
   margin: 0;
 }
 
@@ -6413,19 +6298,10 @@ figcaption {
 }
 
 .two-column-banner_title {
-  font-family: "Futura PT", sans-serif;
-  font-weight: 500;
-  font-size: 1.75rem;
-  line-height: 1.1;
-  text-transform: uppercase;
   margin: 0;
 }
 
 .two-column-banner_subtext {
-  font-family: "Futura PT", sans-serif;
-  font-weight: 400;
-  font-size: 1rem;
-  line-height: 1.34;
   max-width: 32rem;
   margin: 0;
 }
@@ -6474,11 +6350,6 @@ figcaption {
 }
 
 .accessories_title {
-  font-family: "Futura PT", sans-serif;
-  font-weight: 500;
-  font-size: 2rem;
-  line-height: 1.1;
-  text-transform: uppercase;
   margin: 0;
 }
 
@@ -7261,11 +7132,6 @@ figcaption {
 }
 
 .testimonials_title {
-  font-family: "Futura PT", sans-serif;
-  font-weight: 500;
-  font-size: 2rem;
-  line-height: 1.1;
-  text-transform: uppercase;
   margin: 0;
 }
 
@@ -7977,10 +7843,6 @@ figcaption {
   background-color: #ffffff;
 }
 .product-features_headline {
-  font-size: 2rem;
-  font-family: "Futura PT", sans-serif;
-  font-weight: 700;
-  text-transform: uppercase;
   margin-bottom: 2.5rem;
 }
 .swiper.is-product-features {
@@ -8023,10 +7885,8 @@ figcaption {
   line-height: 1.2;
 }
 .product-features_text {
-  font-size: 1rem;
   color: #0f0f0f;
   margin: 0;
-  line-height: 1.5;
 }
 @media screen and (max-width: 991px) {
   .swiper-slide.is-product-features {
@@ -8053,10 +7913,6 @@ figcaption {
   background-color: #f5f5f5;
 }
 .product-family_headline {
-  font-size: 0.75rem;
-  font-family: "Futura PT", sans-serif;
-  font-weight: 600;
-  text-transform: uppercase;
   letter-spacing: 0.1em;
   color: #111;
   margin: 0 0 2rem;
@@ -8437,9 +8293,6 @@ figcaption {
   background-color: #ffffff;
 }
 .product-faq_headline {
-  font-size: 2rem;
-  font-family: "Futura PT", sans-serif;
-  font-weight: 600;
   margin-bottom: 2rem;
 }
 .product-faq_list {
@@ -8506,10 +8359,6 @@ figcaption {
   margin-bottom: 2.5rem;
 }
 .product-add-to-kit_headline {
-  font-size: 1.75rem;
-  font-family: "Futura PT", sans-serif;
-  font-weight: 700;
-  text-transform: uppercase;
   letter-spacing: 0.04em;
   margin: 0;
 }
@@ -8624,7 +8473,7 @@ figcaption {
 
 /* ── Layout ──────────────────────────────────────────────── */
 .product-header_layout {
-  display: grid;
+  display: flex;
   grid-template-columns: 3fr 2fr;
   align-items: start;
   min-height: 100vh;
@@ -8639,6 +8488,7 @@ figcaption {
   height: 600px;
   overflow: hidden;
   background-color: #f4f4f4;
+  width: 60%;
 }
 
 /* ── Gallery ─────────────────────────────────────────────── */
@@ -8673,10 +8523,8 @@ figcaption {
   height: auto;
   margin-bottom: 8px;
   cursor: pointer;
-  border: 2px solid transparent;
-  border-radius: 4px;
   overflow: hidden;
-  transition: border-color 0.15s;
+  width: 100rem;
 }
 .swiper-slide.is-product-thumbnail.is-active {
   border-color: #111;
@@ -8693,17 +8541,16 @@ figcaption {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  padding: 2.5rem 6.25rem;
+  padding: 2.5rem 4.25rem;
+  width: 40%;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 /* ── Block: Produkt-Kopf ─────────────────────────────────── */
 .ph_title {
-  font-size: 1.5rem;
-  font-family: "Futura PT", sans-serif;
-  font-weight: 700;
   letter-spacing: 0.01em;
   margin: 0 0 0.5rem;
-  line-height: 1.2;
   color: #0f0f0f;
 }
 .ph_subtitle {
@@ -9189,6 +9036,112 @@ figcaption {
     font-size: 0.75rem;
   }
 }
+
+/* =============================================================
+   DICOTA PDP — Linked-Product Variant Selectors
+   (DICOTA pattern: variants are separate products, selectors link to them)
+   ============================================================= */
+.product-header_default-state {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.product-header_option-heading {
+  margin-bottom: 0.375rem;
+}
+.product-header_option-heading .text-size-regular {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #111;
+}
+.produkt_swatch-component {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.produkt_swatch-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.produkt_swatch-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.375rem;
+  width: 5rem;
+}
+.produkt_swatch-link {
+  display: block;
+  width: 5rem;
+  height: 5rem;
+  border: 1px solid #d0d0d0;
+  background-color: #f6f6f6;
+  overflow: hidden;
+  transition: border-color 0.15s, opacity 0.15s;
+  cursor: pointer;
+}
+.produkt_swatch-link:hover {
+  border-color: #111;
+}
+.produkt_swatch-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.produkt_swatch-img.is-darken {
+  mix-blend-mode: multiply;
+}
+.produkt_swatch-lable {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #0f0f0f;
+  text-align: center;
+  line-height: 1.2;
+}
+.produkt_swatch-lable.is-max {
+  max-width: 5rem;
+  word-break: break-word;
+}
+.product-header_radio-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.product-header_radio {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 0.875rem;
+  border: 1px solid #d0d0d0;
+  background-color: #ffffff;
+  color: #0f0f0f;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.15s, border-color 0.15s, color 0.15s;
+}
+.product-header_radio:hover {
+  border-color: #111;
+}
+
+@media screen and (max-width: 479px) {
+  .produkt_swatch-item,
+  .produkt_swatch-link {
+    width: 4.5rem;
+  }
+  .produkt_swatch-link {
+    height: 4.5rem;
+  }
+  .produkt_swatch-lable.is-max {
+    max-width: 4.5rem;
+  }
+}
+
 /* =============================================================
    DICOTA PDP — We Care / Sustainability Banner
    ============================================================= */
@@ -9342,8 +9295,6 @@ figcaption {
 }
 
 .collection-intro_desc {
-  font-size: 1rem;
-  line-height: 1.5;
   color: #3a3a3a;
 }
 
@@ -9645,8 +9596,6 @@ figcaption {
 }
 
 .coll_promo-card_desc {
-  font-size: 1rem;
-  line-height: 1.4;
   color: rgba(255,255,255,0.85);
   margin: 0;
 }
@@ -9725,5 +9674,2692 @@ figcaption {
   }
   .product-card_image-link {
     height: 11rem;
+  }
+}
+
+/* =============================================================
+   DICOTA — Collection Header Section
+   ============================================================= */
+.section_collection-header {
+  width: 100%;
+}
+
+.section_collection-header > .padding-global {
+  padding-top: 60px;
+  padding-bottom: 100px;
+  background-color: #ffffff;
+  color: #0f0f0f;
+}
+
+.collection-header_layout {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  width: 100%;
+}
+
+.collection-header_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+  width: 100%;
+}
+
+.collection-header_title {
+  font-family: "Futura PT", sans-serif;
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 0.98;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  margin: 0;
+  color: inherit;
+}
+
+.collection-header_desc {
+  font-family: "Futura PT", sans-serif;
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 1.26;
+  max-width: 29rem;
+  margin: 0;
+  color: inherit;
+  text-align: center;
+}
+
+.collection-header_button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  font-family: "Futura PT", sans-serif;
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.1);
+}
+
+.collection-header_media {
+  width: 100%;
+  margin: 0;
+  aspect-ratio: 1360 / 373;
+  overflow: hidden;
+}
+
+.collection-header_image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+@media screen and (max-width: 991px) {
+  .section_collection-header > .padding-global {
+    padding-top: 48px;
+    padding-bottom: 64px;
+  }
+  .collection-header_title {
+    font-size: 2.25rem;
+  }
+  .collection-header_desc {
+    font-size: 1.125rem;
+    max-width: 100%;
+  }
+  .collection-header_layout {
+    gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .section_collection-header > .padding-global {
+    padding-top: 32px;
+    padding-bottom: 48px;
+  }
+  .collection-header_title {
+    font-size: 1.75rem;
+  }
+  .collection-header_desc {
+    font-size: 1rem;
+  }
+  .collection-header_media {
+    aspect-ratio: 16 / 9;
+  }
+}
+
+/* =============================================================
+   DICOTA — Feature Product Section
+   ============================================================= */
+.section_feature-product {
+  width: 100%;
+}
+
+.section_feature-product > .padding-global {
+  padding-top: 60px;
+  padding-bottom: 100px;
+  background-color: #ffffff;
+  color: #0f0f0f;
+}
+
+.feature-product_card {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  background-color: #f6f6f6;
+  aspect-ratio: 1360 / 481;
+  min-height: 380px;
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+.feature-product_media {
+  position: relative;
+  padding: 10px;
+  overflow: hidden;
+  background-color: #f6f6f6;
+}
+
+.feature-product_image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.feature-product_favorite {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 1.75rem;
+  height: 1.75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #0f0f0f;
+  padding: 0;
+}
+
+.feature-product_content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1.5rem 3.75rem;
+}
+
+.feature-product_title {
+  font-family: "Futura PT", sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1.1;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  margin: 0;
+  color: inherit;
+}
+
+.feature-product_desc {
+  font-family: "Futura PT", sans-serif;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.34;
+  margin: 0;
+  color: inherit;
+}
+
+.feature-product_button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  font-family: "Futura PT", sans-serif;
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 991px) {
+  .section_feature-product > .padding-global {
+    padding-top: 48px;
+    padding-bottom: 64px;
+  }
+  .feature-product_card {
+    grid-template-columns: 1fr;
+    aspect-ratio: auto;
+    min-height: 0;
+  }
+  .feature-product_media {
+    aspect-ratio: 919 / 481;
+  }
+  .feature-product_content {
+    padding: 2rem 1.5rem;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .section_feature-product > .padding-global {
+    padding-top: 32px;
+    padding-bottom: 48px;
+  }
+  .feature-product_content {
+    padding: 1.5rem 1rem;
+  }
+  .feature-product_title {
+    font-size: 1.25rem;
+  }
+}
+
+/* =============================================================
+   DICOTA — About Us Page (Heading H1, Boxed Image, Why Us,
+   History, Owner, Discover, Triple Cards)
+   Generic utility classes used across marketing pages.
+   ============================================================= */
+
+/* Utilities */
+.default-flex-small {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
+}
+.default-flex-tiny {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+.default-regular-component {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.default-space-between {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  justify-content: space-between;
+}
+.default-bg-wrapper {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.default-bg-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.button-wrapper {
+  display: inline-flex;
+}
+.text-style-subline {
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  line-height: 1.35;
+  letter-spacing: 0.04em;
+  color: #686868;
+}
+.icon-1x1-xlarge {
+  width: 3rem;
+  height: 3rem;
+  display: block;
+}
+.icon-1x1-large {
+  width: 4rem;
+  height: 4rem;
+  display: block;
+}
+
+/* Section: Heading H1 */
+.section_heading-h1 {
+  width: 100%;
+}
+.heading-h1_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem 12rem;
+  align-items: start;
+}
+
+/* Section: Boxed Image */
+.section_boxed-image {
+  position: relative;
+  min-height: 80dvh;
+  overflow: hidden;
+  z-index: 1;
+}
+.boxed-image_bg-container {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr min(76rem, 100%) 1fr;
+}
+.boxed-image_image-wrapper {
+  grid-column: 2;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.boxed-image_image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Section: Why Us */
+.section_why-us {
+  width: 100%;
+}
+.why-us_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+.icon-cards_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid #e8e8e8;
+  border-bottom: none;
+}
+.icon-cards_card {
+  display: flex;
+  flex-direction: column;
+  gap: 3.75rem;
+  border-bottom: 1px solid #e8e8e8;
+  padding: 2.5rem 1.5rem;
+  position: relative;
+}
+.icon-cards_card.is-line-right {
+  border-right: 1px solid #e8e8e8;
+}
+.icon-cards_card.is-line-left {
+  border-left: 1px solid #e8e8e8;
+}
+.icon-cards_card.is-image {
+  z-index: 1;
+  color: #ffffff;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+.icon-cards_bg-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+}
+.company_icon-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem 6rem;
+  color: inherit;
+}
+.company_icon-block {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.company_icon-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+/* Section: History Swiper */
+.section_history {
+  width: 100%;
+}
+.swiper_component.is-history-swiper {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.history_pagination {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.history_drag-wrapper {
+  position: relative;
+  background-color: rgba(15, 15, 15, 0.1);
+  border-radius: 100vw;
+  width: 100%;
+  min-width: 18rem;
+  height: 4px;
+}
+.history_drag {
+  background-color: #0f0f0f;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}
+.history_swiper-wrapper {
+  position: relative;
+  z-index: 1;
+}
+.history_bg-line {
+  position: absolute;
+  inset: auto 0 2.5rem;
+  background-color: #c8c8c8;
+  width: 100%;
+  height: 1px;
+  z-index: -1;
+}
+.swiper.is-history-swiper {
+  overflow: visible;
+}
+.swiper-slide.is-history-swiper {
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+}
+.history_slide-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: #ffffff;
+  margin-bottom: 0.75rem;
+  padding: 1rem 1rem 1.75rem;
+  position: relative;
+}
+.history_slide-image {
+  width: 100%;
+  aspect-ratio: 2 / 1;
+  object-fit: cover;
+  display: block;
+}
+.history_slide-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding: 0 0.75rem;
+}
+.history_slide-svg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 0.625rem;
+  height: 2.75rem;
+}
+
+/* Section: Owner */
+.section_owner {
+  width: 100%;
+}
+.owner_grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 2rem 10rem;
+  align-items: center;
+}
+.owner_main-component {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: stretch;
+  min-height: 35rem;
+}
+.owner_text-wrapper {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 1rem;
+}
+.owner_text-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.25rem;
+}
+
+/* Section: Discover */
+.section_discover {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  min-height: 80dvh;
+  width: 100%;
+}
+.discover_image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.discover_item {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+.discover_item-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  width: 100%;
+  max-width: 27.5rem;
+  height: 100%;
+  padding: 4rem 2.5rem 4rem 6.25rem;
+  color: #ffffff;
+}
+.discover_item .heading-style-h2 {
+  color: inherit;
+}
+
+/* Section: Triple Cards / Solutions */
+.section_solutions {
+  width: 100%;
+}
+.solutions_grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.875rem;
+}
+.solutions_grid.is-3-columns {
+  grid-template-columns: repeat(3, 1fr);
+}
+.image-card_item {
+  position: relative;
+  overflow: hidden;
+  color: #ffffff;
+}
+.image-card_link {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  min-height: 20rem;
+  padding: 1.5rem;
+  gap: 1.25rem;
+  text-decoration: none;
+  color: inherit;
+}
+.image-card_link.is-large {
+  min-height: 30rem;
+}
+.image-card_bg-wrapper {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+.image-card_bg-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease-out;
+  display: block;
+}
+.image-card_bg-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+  opacity: 0.7;
+  transition: opacity 0.4s ease-out;
+  z-index: 2;
+}
+.image-card_button-wrapper {
+  opacity: 0;
+  margin-bottom: -4.5rem;
+  transition: margin 0.4s ease-out, opacity 0.4s ease-out;
+  overflow: hidden;
+}
+.image-card_link:hover .image-card_bg-image {
+  transform: scale(1.04);
+}
+.image-card_link:hover .image-card_bg-overlay {
+  opacity: 0.85;
+}
+.image-card_link:hover .image-card_button-wrapper {
+  opacity: 1;
+  margin-bottom: 0;
+}
+.button.is-white {
+  background-color: #ffffff;
+  color: #0f0f0f;
+  border-color: #ffffff;
+}
+.button.is-white:hover {
+  background-color: transparent;
+  color: #ffffff;
+  border-color: #ffffff;
+}
+.button.is-image-card {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.6rem 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* Responsive — About Us */
+@media screen and (max-width: 991px) {
+  .heading-h1_grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .why-us_grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .icon-cards_grid {
+    grid-template-columns: 1fr;
+  }
+  .icon-cards_card.is-line-right,
+  .icon-cards_card.is-line-left {
+    border-right: none;
+    border-left: none;
+  }
+  .default-space-between {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .owner_grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .owner_main-component {
+    min-height: 22rem;
+  }
+  .section_discover {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+  .discover_image {
+    aspect-ratio: 4 / 3;
+    height: auto;
+  }
+  .discover_item-content {
+    padding: 3rem 1.5rem;
+  }
+  .solutions_grid,
+  .solutions_grid.is-3-columns {
+    grid-template-columns: 1fr 1fr;
+  }
+  .section_boxed-image {
+    min-height: 40dvh;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .heading-h1_grid {
+    gap: 1rem;
+  }
+  .solutions_grid,
+  .solutions_grid.is-3-columns {
+    grid-template-columns: 1fr;
+  }
+  .image-card_link {
+    min-height: 16rem;
+  }
+  .image-card_link.is-large {
+    min-height: 22rem;
+  }
+  .image-card_button-wrapper {
+    opacity: 1;
+    margin-bottom: 0;
+  }
+  .swiper-slide.is-history-swiper {
+    width: 16rem;
+  }
+  .company_icon-list {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+}
+
+/* =============================================================
+   DICOTA — Career Page (Team, 4 Cards Swiper, Benefits,
+   Value Tabs, Jobs Filter+List, FAQ, Job Details Article)
+   ============================================================= */
+
+/* Generic helpers used across career sections */
+.default-medium-component {
+  display: flex;
+  flex-direction: column;
+  gap: 3.75rem;
+}
+.icon-1x1-huge {
+  width: 5rem;
+  height: 5rem;
+  display: block;
+}
+.icon-1x1-tiny {
+  width: 1rem;
+  height: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+}
+.overflow-hidden {
+  overflow: hidden;
+}
+
+/* Section: Boxed Image Center */
+.section_boxed-image-center {
+  width: 100%;
+}
+.boxed-image_image-centerd {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Section: Team */
+.section_team {
+  width: 100%;
+}
+.team_heading {
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  gap: 2rem 8rem;
+  align-items: start;
+}
+.team_grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border: 1px solid #e8e8e8;
+  border-bottom: none;
+}
+.team_grid .swiper_component {
+  grid-column: span 1;
+  position: relative;
+  overflow: hidden;
+  min-height: 22rem;
+}
+.swiper.is-team-swiper {
+  width: 100%;
+  height: 100%;
+}
+.swiper-wrapper.is-team-swiper,
+.swiper-slide.is-team-swiper {
+  height: 100%;
+}
+.swiper-slide.is-team-swiper {
+  position: relative;
+}
+.team_slide-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.team_slide-overlay {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
+}
+.swiper_navigation {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.swiper_navigation.is-absolute {
+  position: absolute;
+  inset: auto 1rem 1rem auto;
+  z-index: 10;
+}
+.swiper_button {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  line-height: 0;
+}
+
+/* Section: 4 Cards Swiper (extends Triple Cards layout) */
+.section_triple-cards {
+  width: 100%;
+}
+.swiper.is-quad-cards {
+  width: 100%;
+  overflow: hidden;
+}
+.swiper-slide.is-quad-cards {
+  height: auto;
+  display: flex;
+}
+.swiper-slide.is-quad-cards .image-card_item {
+  width: 100%;
+}
+
+/* Section: Benefits */
+.section_benefits {
+  width: 100%;
+}
+.benefits_grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3.75rem 3rem;
+}
+.benefits_item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
+}
+.benefits_text-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+/* Section: Value Tabs */
+.section_value-tabs {
+  width: 100%;
+  background-color: #f4f4f4;
+}
+.value-tabs_component {
+  display: grid;
+  grid-template-columns: 1fr 2.5fr;
+  gap: 4rem 10rem;
+}
+.value-tabs_menu {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.value-tabs_link-list {
+  display: flex;
+  flex-direction: column;
+}
+.value-tabs_link {
+  text-align: left;
+  background: transparent;
+  border: 0;
+  padding: 1rem 1.25rem;
+  font-size: 1.375rem;
+  font-weight: 500;
+  color: #686868;
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s, background-color 0.15s;
+  border-left: 2px solid transparent;
+}
+.value-tabs_link:hover {
+  color: #0f0f0f;
+}
+.value-tabs_link.is-active {
+  color: #0f0f0f;
+  border-left-color: #0f0f0f;
+  background-color: rgba(15, 15, 15, 0.04);
+}
+.value-tabs_tab-body {
+  position: relative;
+}
+.value-tabs_tab-pane {
+  background-color: #ffffff;
+  padding: 0.25rem;
+}
+.value-tabs_image {
+  width: 100%;
+  height: auto;
+  max-height: 18rem;
+  object-fit: cover;
+  display: block;
+}
+.value-tabs_content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 2.5rem;
+}
+
+/* Section: Jobs */
+.section_jobs {
+  width: 100%;
+}
+.jobs_layout {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 4rem 10rem;
+  align-items: start;
+}
+.filter_filters-wrapper {
+  position: sticky;
+  top: 7rem;
+}
+.filter_form_component {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 18rem;
+}
+.filter_form-block.w-form {
+  margin: 0;
+}
+.filter_form-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.filter_outer-heading {
+  margin-bottom: 0.5rem;
+}
+.filter_job-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.filter_form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+.filter_scroll-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.filter_filter-group-list {
+  display: flex;
+  flex-direction: column;
+}
+.filter_filter-group {
+  border-top: 1px solid #e8e8e8;
+}
+.filter_filter-group:last-child {
+  border-bottom: 1px solid #e8e8e8;
+}
+.filter_accordion {
+  display: flex;
+  flex-direction: column;
+}
+.filter_filter-group-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  cursor: pointer;
+  user-select: none;
+}
+.filter_filter-arrow {
+  transition: transform 0.2s ease;
+}
+.filter_filter-arrow.is-open {
+  transform: rotate(180deg);
+}
+.filter_filter-options {
+  overflow: hidden;
+  padding-bottom: 0.75rem;
+}
+.filter_list-wrapper {
+  overflow: hidden;
+}
+.filter_list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.filter_item {
+  display: flex;
+  align-items: center;
+}
+.filter_form_checkbox {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0.5rem 0 0.5rem 1.5rem;
+  cursor: pointer;
+}
+.filter_form_checkbox-icon {
+  border: 1px solid #0f0f0f;
+  border-radius: 0;
+  flex: none;
+  width: 1.125rem;
+  height: 1.125rem;
+  min-width: 1.125rem;
+  min-height: 1.125rem;
+  margin: 0 0.75rem 0 -1.5rem;
+  transition: background-color 0.15s, border-color 0.15s;
+}
+.filter_form_checkbox-icon.w--redirected-checked {
+  background-color: #0f0f0f;
+  border-color: #0f0f0f;
+  background-image: linear-gradient(45deg, transparent 45%, #fff 45%, #fff 55%, transparent 55%);
+  background-size: 60% 60%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.filter_form_checkbox-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #0f0f0f;
+}
+.jobs_right {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.jobs_list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.jobs_item {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: #f4f4f4;
+  padding: 1.5rem;
+  text-decoration: none;
+  color: inherit;
+  transition: background-color 0.15s;
+}
+.jobs_item:hover {
+  background-color: #ebebeb;
+}
+.jobs_item-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.jobs_item-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+.jobs_item-location {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  padding: 0.75rem;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.15);
+  flex: none;
+}
+.jobs_item-bottom {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.jobs_item-attribute {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.jobs_cta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  color: #ffffff;
+}
+.jobs_cta .jobs_item-heading {
+  flex: 1 1 16rem;
+}
+
+/* Section: FAQ */
+.section_faq {
+  width: 100%;
+  background-color: #f4f4f4;
+}
+.faq_wrapper {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1.75rem;
+}
+.faq_component {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  align-self: stretch;
+}
+.faq_item {
+  background-color: #ffffff;
+  cursor: pointer;
+}
+.faq_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem;
+  user-select: none;
+}
+.faq_icon-outer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+  background-color: #ffffff;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+  flex: none;
+}
+.faq_icon-line {
+  background-color: #0f0f0f;
+  width: 1rem;
+  height: 1px;
+}
+.faq_icon-line.is-rotating {
+  position: absolute;
+  inset: auto;
+  transform: rotate(90deg);
+  transition: transform 0.3s ease-in-out;
+  z-index: 1;
+}
+.faq_icon-line.is-rotating.is-open {
+  transform: rotate(0deg);
+}
+.faq_body {
+  display: grid;
+  grid-template-rows: 0fr;
+  padding: 0 1.25rem;
+  transition: grid-template-rows 0.3s ease, padding 0.3s ease;
+}
+.faq_body.is-open {
+  grid-template-rows: 1fr;
+  padding-bottom: 1.25rem;
+}
+.faq_body-content {
+  overflow: hidden;
+}
+
+/* Section: Article (Job Details / Article style) */
+.section_article {
+  width: 100%;
+}
+.article_grid {
+  display: grid;
+  grid-template-columns: 2.5fr 1fr;
+  gap: 5rem;
+  align-items: start;
+}
+.article_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 2.5rem;
+}
+.article_button-wrapper {
+  display: flex;
+  align-items: center;
+}
+.article_button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #0f0f0f;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+.article_button:hover {
+  color: #686868;
+}
+.article_button-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.article_header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+}
+.blog-hero_top-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}
+.blog_tag {
+  background-color: #ffffff;
+  padding: 0.2rem 0.4rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+.blog_tag.is-large {
+  padding: 0.3rem 1rem;
+  font-size: 0.875rem;
+}
+.blog_tag.is-large.is-dark {
+  background-color: #f4f4f4;
+}
+
+/* Rich text (used on Job Details) */
+.text-rich-text h1,
+.text-rich-text h2,
+.text-rich-text h3,
+.text-rich-text h4 {
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+.text-rich-text p {
+  margin-bottom: 1em;
+  line-height: 1.6;
+}
+.text-rich-text ul,
+.text-rich-text ol {
+  padding-left: 1.5em;
+  margin-bottom: 1em;
+}
+.text-rich-text li {
+  margin-bottom: 0.4em;
+  line-height: 1.6;
+}
+.text-rich-text a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+/* Responsive — Career */
+@media screen and (max-width: 991px) {
+  .team_heading {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .team_grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .team_grid .swiper_component {
+    grid-column: span 2;
+    min-height: 16rem;
+  }
+  .benefits_grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .value-tabs_component {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .jobs_layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .filter_filters-wrapper {
+    position: static;
+  }
+  .filter_form_component {
+    width: 100%;
+  }
+  .faq_wrapper {
+    grid-template-columns: 1fr;
+  }
+  .article_grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .team_grid {
+    grid-template-columns: 1fr;
+  }
+  .team_grid .swiper_component {
+    grid-column: span 1;
+  }
+  .benefits_grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .jobs_item-top {
+    flex-direction: column;
+  }
+  .jobs_item-location {
+    align-self: flex-start;
+  }
+  .jobs_cta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .value-tabs_content {
+    padding: 1.5rem;
+  }
+  .value-tabs_link {
+    font-size: 1.125rem;
+    padding: 0.75rem 1rem;
+  }
+}
+
+/* =============================================================
+   DICOTA — Sustainability Page (Image Hero, 4 Icons,
+   Split Image Left/Right)
+   ============================================================= */
+
+/* Section: Image Hero (full-bleed text-over-image) */
+.section_image-hero {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  min-height: 60vh;
+  overflow: hidden;
+}
+.section_image-hero .default-bg-wrapper {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.section_image-hero .default-bg-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.default-bg-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(59deg, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0));
+  z-index: 1;
+}
+.section_image-hero .padding-global,
+.section_image-hero .container-large {
+  position: relative;
+  z-index: 2;
+}
+
+/* Section: 4 Icons (stats strip on light grey) */
+.section_icons {
+  width: 100%;
+  background-color: #f4f4f4;
+}
+.company_icon {
+  width: 4rem;
+  height: 4rem;
+  display: block;
+}
+
+/* Section: Split Image (Left + Right) */
+.section_split-image-left,
+.section_split-image-right {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
+  width: 100%;
+}
+.split-image_image-block {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.split-image_image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.split-image_content-wrapper {
+  width: 100%;
+  max-width: 40.5rem;
+  padding-top: 6.25rem;
+  padding-bottom: 6.25rem;
+}
+.split-image_content-wrapper.is-left-image {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1.5rem;
+  padding-left: 6.25rem;
+  padding-right: 2.5rem;
+}
+.split-image_content-wrapper.is-right-image {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1.5rem;
+  padding-left: 2.5rem;
+  padding-right: 6.25rem;
+  margin-left: auto;
+}
+
+/* Responsive — Sustainability */
+@media screen and (max-width: 991px) {
+  .section_image-hero {
+    min-height: 50vh;
+  }
+  .section_split-image-left,
+  .section_split-image-right {
+    grid-template-columns: 1fr;
+  }
+  .section_split-image-right .split-image_image-block {
+    order: -1;
+  }
+  .split-image_content-wrapper.is-left-image,
+  .split-image_content-wrapper.is-right-image {
+    padding: 3rem 1.5rem;
+    max-width: 100%;
+  }
+  .split-image_image-block {
+    aspect-ratio: 4 / 3;
+    min-height: 0;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .section_image-hero {
+    min-height: 60vh;
+  }
+  .split-image_content-wrapper.is-left-image,
+  .split-image_content-wrapper.is-right-image {
+    padding: 2.5rem 1.25rem;
+  }
+}
+
+/* =============================================================
+   DICOTA — Account Templates (Subnav, Acc Hero, Acc Home Cards,
+   Acc Home Dis, Acc Home Welcome, Acc Home Hero, Acc Home,
+   Acc News, Acc Downloads, Banner variants)
+   ============================================================= */
+
+/* Section: Account Subnav (sticky sub-navigation) */
+.section_acc-subnav {
+  width: 100%;
+}
+.subnav_component {
+  position: sticky;
+  top: 4.5rem;
+  z-index: 80;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e8e8e8;
+  width: 100%;
+  padding: 0 2.5rem;
+}
+.subnav_menu {
+  width: 100%;
+}
+.subnav_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+.subnav_dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  font-size: 0.875rem;
+}
+.subnav_dropdown-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 1rem 0;
+  cursor: pointer;
+  transition: color 0.2s ease-out;
+  user-select: none;
+}
+.subnav_dropdown-toggle:hover,
+.subnav_dropdown-toggle.is-open {
+  color: var(--base-color-brand--blue, #4d65ff);
+}
+.dropdown-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1rem;
+  height: 1rem;
+}
+.nav_secondary-content.is-subnav {
+  position: absolute;
+  inset: 100% 0 auto auto;
+  background-color: #ffffff;
+  border: 1px solid #e8e8e8;
+  border-top: none;
+  padding: 2rem 2.5rem;
+  min-width: 30rem;
+  z-index: 100;
+}
+.subnav_dropdown-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem 3rem;
+}
+.subnav_dropdown-item,
+.subnav_child-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.subnav_dropdown-link {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+  text-decoration: none;
+  color: inherit;
+  padding: 0.25rem 0;
+  transition: color 0.15s;
+}
+.subnav_dropdown-link:hover {
+  color: var(--base-color-brand--blue, #4d65ff);
+}
+.subnav_child-link {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: inherit;
+}
+.subnav_points {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  flex: none;
+}
+.text-color-blue {
+  color: var(--base-color-brand--blue, #4d65ff);
+}
+
+/* Section: Acc Hero */
+.section_acc-hero {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  width: 100%;
+}
+.account-hero_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  gap: 1rem;
+  max-width: 40rem;
+  min-height: 18rem;
+}
+.acc-hero_bg-wrapper {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.acc-hero_bg-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  max-width: 76rem;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 2.5rem;
+}
+.acc-hero_bg-image {
+  width: 100%;
+  max-width: 40rem;
+  height: 80%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Section: Acc Home Cards (8-card icon grid) */
+.section_acc-cards {
+  width: 100%;
+  background-color: #f4f4f4;
+}
+.acc-cards_heading {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  align-items: start;
+  justify-content: space-between;
+}
+.acc-cards_grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border: 1px solid #e8e8e8;
+  border-bottom: none;
+  background-color: #ffffff;
+}
+
+/* Section: Acc Home Dis (Distributoren tabs) */
+.section_acc-dis {
+  width: 100%;
+  background-color: #f4f4f4;
+}
+.acc-dis_tab-component {
+  display: grid;
+  grid-template-columns: 1fr 2.5fr;
+  gap: 0.5rem;
+  align-items: start;
+}
+.acc-dis_tab-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  background-color: #ffffff;
+  padding: 0.5rem;
+}
+.acc-dis_tab-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: transparent;
+  border: 0;
+  padding: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  color: inherit;
+  text-align: left;
+  transition: background-color 0.15s;
+}
+.acc-dis_tab-link:hover {
+  background-color: #f4f4f4;
+}
+.acc-dis_tab-link.is-active {
+  background-color: #f4f4f4;
+}
+.acc-dis_tab-pane {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  background-color: #ffffff;
+  padding: 2.5rem;
+}
+.acc-dis_logo {
+  width: 100%;
+  height: 100%;
+  max-height: 4rem;
+  object-fit: contain;
+  display: block;
+}
+
+/* Section: Acc Home Welcome */
+.section_acc-welcome {
+  width: 100%;
+}
+.acc-welcome_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.acc-welcome_top {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  background-color: #f4f4f4;
+  padding: 0.75rem;
+}
+
+/* Section: Acc Home Hero (split greeting hero) */
+.section_split-hero {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  overflow: hidden;
+}
+.section_split-hero.background-color-primary {
+  color: #ffffff;
+}
+.split-hero_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem 14rem;
+  align-items: center;
+}
+.split-hero_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+  min-height: 15rem;
+}
+.split-hero_bg-wrapper {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.split-hero_bg-image {
+  grid-column: 2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Section: Acc Home / Acc News / Acc Download / Acc D Banners — shared layout */
+.section_acc-default {
+  width: 100%;
+  background-color: #f4f4f4;
+}
+.acc-default_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 3.75rem;
+}
+.acc-default_flex-small {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Breadcrumbs */
+.breadcrumbs_component {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding-left: 0;
+  margin: 0;
+  list-style: none;
+}
+.breadcrumbs_item {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  white-space: nowrap;
+  margin: 0;
+}
+.breadcrumbs_item a {
+  text-decoration: none;
+  color: inherit;
+}
+.breadcrumbs_icon {
+  flex: none;
+  width: 0.9375rem;
+  height: 0.9375rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Acc Cards (white card with content) */
+.acc-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1.5rem;
+  background-color: #ffffff;
+  padding: 2.5rem;
+}
+.acc-card.is-small {
+  padding: 1.5rem;
+  gap: 1rem;
+}
+.acc-card.is-dark {
+  background-color: #ebebeb;
+}
+.acc-card.gap-2-5 {
+  gap: 2.5rem;
+}
+.acc-card_16-9-image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+}
+.acc-card_3-2-image {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  display: block;
+}
+.acc-card_content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.acc-card_download-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  gap: 0.5rem;
+}
+.acc_cta-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: block;
+  flex: none;
+}
+
+/* Acc Banner (2-column dark banner with image + content) */
+.acc-banner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: #0f0f0f;
+  padding: 0.375rem;
+  gap: 0;
+}
+.acc-banner_image {
+  width: 100%;
+  height: auto;
+  max-height: 30rem;
+  object-fit: cover;
+  display: block;
+}
+.acc-banner_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  gap: 1.5rem;
+  padding: 4rem;
+}
+.acc-banner_heading {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.acc-banner_tag-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.acc-banner_tag {
+  border: 1px solid #ffffff;
+  padding: 0.375rem 0.5rem;
+}
+.acc-banner_button-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* Acc CTA (highlighted CTA strip) */
+.acc_cta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2.5rem;
+  padding: 1.25rem 1.75rem;
+}
+.acc_cta.is-grey {
+  background-color: #ebebeb;
+}
+.acc_cta-content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1.5rem;
+  flex: 1 1 20rem;
+}
+.acc_cta-content.is-grey {
+  align-items: center;
+}
+.acc_cta-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.background-color-red {
+  background-color: #c0392b;
+  color: #ffffff;
+}
+
+/* Acc Double + Acc Triple grids */
+.acc-double {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  align-self: stretch;
+  align-items: start;
+}
+.acc-triple {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  align-self: stretch;
+}
+
+/* Acc Banner Item (smaller banner pattern with image + text) */
+.acc_banner-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.5rem;
+  background-color: #ffffff;
+  align-self: stretch;
+}
+.acc_banner-item.is-large {
+  gap: 5rem;
+  padding: 1.5rem;
+}
+.acc_banner-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.acc_banner-content.is-large {
+  justify-content: center;
+  align-items: flex-start;
+  align-self: stretch;
+  gap: 0.5rem;
+}
+.acc_banner-image {
+  width: 100%;
+  max-width: 8rem;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.acc_banner-image.is-large {
+  max-width: 20rem;
+  max-height: 16rem;
+}
+.acc_banner-image.is-medium {
+  max-width: 12rem;
+}
+.acc_tag-list {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+}
+.max-width-large {
+  max-width: 40rem;
+}
+.default-small-component {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+/* Responsive — Account Templates */
+@media screen and (max-width: 991px) {
+  .subnav_component {
+    padding: 0 1rem;
+  }
+  .subnav_wrapper {
+    gap: 1rem;
+    overflow-x: auto;
+  }
+  .nav_secondary-content.is-subnav {
+    min-width: 100%;
+    left: 0;
+    right: 0;
+  }
+  .subnav_dropdown-list {
+    grid-template-columns: 1fr;
+  }
+  .acc-cards_heading {
+    grid-template-columns: 1fr;
+  }
+  .acc-cards_grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .acc-dis_tab-component {
+    grid-template-columns: 1fr;
+  }
+  .acc-dis_tab-pane {
+    grid-template-columns: 1fr 1fr;
+  }
+  .acc-welcome_top {
+    grid-template-columns: 1fr;
+  }
+  .split-hero_grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .split-hero_bg-wrapper {
+    grid-template-columns: 1fr;
+    opacity: 0.3;
+  }
+  .split-hero_bg-image {
+    grid-column: 1;
+  }
+  .acc-banner {
+    grid-template-columns: 1fr;
+  }
+  .acc-banner_content {
+    padding: 2.5rem 2rem;
+  }
+  .acc-banner_image {
+    max-height: 18rem;
+  }
+  .acc-double {
+    grid-template-columns: 1fr;
+  }
+  .acc-triple {
+    grid-template-columns: 1fr 1fr;
+  }
+  .acc-card {
+    padding: 1.75rem;
+  }
+  .acc_banner-item.is-large {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: flex-start;
+  }
+  .acc_banner-image.is-large {
+    max-width: 100%;
+    max-height: 14rem;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .account-hero_wrapper {
+    min-height: 14rem;
+  }
+  .acc-hero_bg-wrapper {
+    opacity: 0.25;
+  }
+  .acc-cards_grid {
+    grid-template-columns: 1fr;
+  }
+  .acc-dis_tab-pane {
+    grid-template-columns: 1fr 1fr;
+    padding: 1.5rem;
+  }
+  .acc-triple {
+    grid-template-columns: 1fr;
+  }
+  .acc-card {
+    padding: 1.25rem;
+  }
+  .acc-banner_content {
+    padding: 2rem 1.25rem;
+  }
+  .acc_cta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .acc-card_download-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* =============================================================
+   DICOTA — Account Marketing (Search form, Download Items)
+   ============================================================= */
+
+/* Search/Filter input inside acc-card */
+.acc_form-block {
+  align-self: stretch;
+  margin: 0;
+}
+.acc_form {
+  margin: 0;
+}
+.filter_input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.filter_input {
+  width: 100%;
+  height: 2.5rem;
+  padding: 0.75rem 0.75rem 0.75rem 2.5rem;
+  border: 0;
+  border-bottom: 1px solid #d8d8d8;
+  background-color: #f4f4f4;
+  color: #0f0f0f;
+  font-weight: 500;
+  line-height: 1;
+  margin: 0;
+  transition: border-color 0.2s, background-color 0.2s;
+}
+.filter_input:focus {
+  outline: 0;
+  border-bottom-color: var(--base-color-brand--blue, #4d65ff);
+  background-color: #ebebeb;
+}
+.filter_input::placeholder {
+  color: #6b6b6b;
+}
+.filter_input.is-white-bg {
+  background-color: #ffffff;
+}
+.filter_left-icon {
+  position: absolute;
+  inset: auto auto auto 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1rem;
+  height: 1rem;
+  pointer-events: none;
+  color: #0f0f0f;
+}
+
+/* Download Item (bordered download row inside acc-card) */
+.acc_download-item {
+  width: 100%;
+  background-color: #f4f4f4;
+}
+.acc_download-item.background-color-secondary {
+  background-color: #f4f4f4;
+}
+.acc_download-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  gap: 2rem;
+  padding: 1.5rem;
+  text-decoration: none;
+  color: inherit;
+  transition: background-color 0.15s;
+}
+.acc_download-banner.w-inline-block:hover {
+  background-color: #ebebeb;
+}
+.acc_download-banner.is-large {
+  padding: 2.5rem;
+}
+.acc_download-banner-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.acc_download-banner-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.6rem;
+}
+.acc_download-banner-heading {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+@media screen and (max-width: 479px) {
+  .acc_download-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.25rem;
+  }
+  .acc_download-banner-left {
+    align-items: flex-start;
+  }
+}
+
+/* =============================================================
+   DICOTA — Account Punkte (Gutschein-Form, Support-Cards,
+   FAQ Account variant, Double Icons)
+   ============================================================= */
+
+/* FAQ variants used inside acc-cards (larger padding) */
+.faq_header.is-account {
+  padding: 2rem 2.5rem;
+}
+.faq_body.is-account {
+  padding: 0 2.5rem;
+}
+.faq_body.is-account.is-open {
+  padding-bottom: 1.5rem;
+}
+.faq_icon-outer.is-grey {
+  background-color: #ebebeb;
+  box-shadow: none;
+}
+
+/* Gutschein / Punkte-Auszahlung Form (floating labels) */
+.acc_gutschein-form-wrapper {
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 9rem;
+}
+.acc_gutschein-form-block {
+  align-self: stretch;
+  margin: 0;
+}
+.acc_gutschein-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: #ffffff;
+  padding: 2.5rem;
+  margin: 0;
+}
+.form_field-wrapper {
+  position: relative;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.form_input.is-gutschein-form {
+  border: 0;
+  border-bottom: 1px solid #d8d8d8;
+  background-color: transparent;
+  padding: 0.75rem 0;
+  min-height: 2.5rem;
+  width: 100%;
+  margin: 0;
+  font-weight: 500;
+  transition: border-color 0.2s;
+}
+.form_input.is-gutschein-form:focus {
+  outline: 0;
+  border-bottom-color: #0f0f0f;
+}
+.form_input.is-gutschein-form::placeholder {
+  color: transparent;
+}
+.form_label.is-gutschein-form {
+  position: absolute;
+  top: 0.75rem;
+  left: 0;
+  background-color: transparent;
+  pointer-events: none;
+  color: #6b6b6b;
+  font-weight: 400;
+  transition: all 0.15s ease-out;
+}
+.form_input.is-gutschein-form:focus + .form_label.is-gutschein-form,
+.form_input.is-gutschein-form:not(:placeholder-shown) + .form_label.is-gutschein-form {
+  top: -0.7rem;
+  font-size: 0.7rem;
+  color: #0f0f0f;
+}
+
+/* Security icons row below form */
+.acc_double-icons-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 1rem;
+  padding: 1rem 0;
+}
+.acc_double-icons-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+/* Support Card (contact card with bg image + glassy content) */
+.acc_support-card {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: stretch;
+  aspect-ratio: 1;
+  width: 100%;
+  padding: 0.375rem;
+  overflow: hidden;
+}
+.acc_support-card .default-bg-wrapper {
+  z-index: -1;
+}
+.acc_support-card-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 2rem;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+}
+.acc_support-card-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.acc_support-card-text a {
+  color: inherit;
+  text-decoration: underline;
+}
+.acc_support-card-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: inherit;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 991px) {
+  .acc_gutschein-form-wrapper {
+    position: static;
+  }
+  .acc_gutschein-form {
+    padding: 1.75rem;
+  }
+  .faq_header.is-account {
+    padding: 1.25rem;
+  }
+  .faq_body.is-account {
+    padding: 0 1.25rem;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .acc_double-icons-list {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  .acc_support-card-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+}
+
+/* =============================================================
+   DICOTA — Account Service/Vertrieb (Multi-step Form,
+   standard form_input + form_label with floating labels)
+   ============================================================= */
+
+/* Multi-step form */
+.multi-form_component {
+  position: relative;
+  overflow: auto;
+}
+.multi-form_block {
+  margin: 0;
+}
+.multi-form_form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-content: start;
+  width: 100%;
+  margin: 0;
+}
+.multi-form_step {
+  background-color: #ffffff;
+}
+.multi-form_heading {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding: 1.5rem 2.5rem;
+  border-bottom: 1px solid #ebebeb;
+}
+.multi-form_progress-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+.multi-form_progress-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  opacity: 1;
+  font-weight: 500;
+}
+.multi-form_progress-item.multi-form_progress-disabled {
+  opacity: 0.3;
+}
+.multi-form_progress {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  border: 1px solid #0f0f0f;
+  border-radius: 9999px;
+}
+.multi-form_progress.multi-form_progress-current,
+.multi-form_progress.progress-current {
+  background-color: #0f0f0f;
+  color: #ffffff;
+}
+.multi-form_progress.completed {
+  background-color: #6b6b6b;
+  border-color: #6b6b6b;
+  color: #ffffff;
+}
+.multi-form_form-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  padding: 2.5rem;
+}
+.multi-form_triple {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.75rem;
+}
+.multi-form_double {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.75rem;
+}
+.multi-form_button-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.75rem;
+}
+
+/* Standard form_input + form_label (floating label, used in multi-step form) */
+.form_input.w-input {
+  width: 100%;
+  min-height: 3rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ebebeb;
+  background-color: transparent;
+  color: #0f0f0f;
+  font-weight: 500;
+  margin: 0;
+  transition: border-color 0.2s;
+}
+.form_input.w-input:focus {
+  outline: 0;
+  border-color: #0f0f0f;
+}
+.form_input.w-input::placeholder {
+  color: transparent;
+}
+.form_field-wrapper > .form_label:not(.is-gutschein-form) {
+  position: absolute;
+  top: 0.75rem;
+  left: 1rem;
+  background-color: transparent;
+  pointer-events: none;
+  margin: 0;
+  color: #6b6b6b;
+  font-weight: 400;
+  transition: all 0.15s ease-out;
+}
+.form_field-wrapper .form_input.w-input:focus + .form_label,
+.form_field-wrapper .form_input.w-input:not(:placeholder-shown) + .form_label {
+  top: -0.7rem;
+  left: 0.75rem;
+  padding: 0.25rem;
+  background-color: #ffffff;
+  font-size: 0.625rem;
+  color: #0f0f0f;
+}
+
+@media screen and (max-width: 991px) {
+  .multi-form_heading {
+    padding: 1.25rem 1.5rem;
+  }
+  .multi-form_form-content {
+    padding: 1.5rem;
+  }
+  .multi-form_triple {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  .multi-form_double {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+}
+
+/* =============================================================
+   DICOTA — Product Finder Page, Zertifikate, B2B Login
+   ============================================================= */
+
+/* Product Finder Page */
+.section_product-finder-page {
+  width: 100%;
+}
+.product-finder_intro {
+  margin-bottom: 2.5rem;
+}
+.product-finder_embed {
+  width: 100%;
+  background-color: #f4f4f4;
+  min-height: 32rem;
+}
+.product-finder_embed iframe {
+  width: 100%;
+  display: block;
+  border: 0;
+}
+
+/* Zertifikate Page (extends acc_download-item) */
+.zertifikate_search {
+  background-color: #ffffff;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+.zertifikate_form {
+  margin: 0;
+}
+.zertifikate_form-inner {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+}
+.zertifikate_form .filter_input-wrapper {
+  width: 100%;
+}
+.zertifikate_form .filter_input {
+  background-color: #ffffff;
+  border-bottom-color: transparent;
+}
+.zertifikate_list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+}
+.zertifikate_list .w-dyn-item {
+  list-style: none;
+}
+.zertifikate_img {
+  width: 4rem;
+  height: 4rem;
+  object-fit: contain;
+  display: block;
+  flex: none;
+  background-color: #f4f4f4;
+}
+.acc_download-banner.is-zertifikat {
+  padding: 1rem 1.5rem;
+}
+.acc_download-banner.is-zertifikat .acc_download-banner-left {
+  gap: 1.25rem;
+  align-items: center;
+}
+.acc_download-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  background-color: #f4f4f4;
+  color: #0f0f0f;
+  text-decoration: none;
+  transition: background-color 0.15s;
+  flex: none;
+}
+.acc_download-link:hover {
+  background-color: #ebebeb;
+}
+
+/* B2B Login Page */
+.section_b2b-login {
+  min-height: 80vh;
+}
+.section_b2b-login .split-image_content-wrapper.is-right-image {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  justify-content: center;
+  color: #ffffff;
+}
+.b2b-login_form-block {
+  align-self: stretch;
+  margin: 0;
+  width: 100%;
+  max-width: 28rem;
+}
+.b2b-login_form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  margin: 0;
+}
+.section_b2b-login .form_input.is-gutschein-form {
+  color: #ffffff;
+  border-bottom-color: rgba(255, 255, 255, 0.35);
+}
+.section_b2b-login .form_input.is-gutschein-form:focus {
+  border-bottom-color: #ffffff;
+}
+.section_b2b-login .form_label.is-gutschein-form {
+  color: rgba(255, 255, 255, 0.7);
+}
+.section_b2b-login .form_input.is-gutschein-form:focus + .form_label.is-gutschein-form,
+.section_b2b-login .form_input.is-gutschein-form:not(:placeholder-shown) + .form_label.is-gutschein-form {
+  color: #ffffff;
+}
+.b2b-login_links {
+  display: flex;
+  justify-content: flex-end;
+}
+.section_b2b-login .b2b-login_links .text-style-link,
+.section_b2b-login .b2b-login_register .text-style-link {
+  color: #ffffff;
+}
+.b2b-login_register {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+@media screen and (max-width: 479px) {
+  .product-finder_embed {
+    min-height: 24rem;
+  }
+  .acc_download-banner.is-zertifikat {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .acc_download-link {
+    align-self: flex-end;
   }
 }

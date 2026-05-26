@@ -1,0 +1,47 @@
+<div li-block="Meilenstein" class="swiper-slide is-history-swiper" {{ block.shopify_attributes }}>
+                    <div class="history_slide-content">{% if block.settings.image_slide_image %}
+{{ block.settings.image_slide_image | image_url: width: 600 | image_tag: loading: 'lazy', class: 'history_slide-image' }}
+{% else %}
+<img src="{{ 'platzhalter.svg' | asset_url }}" loading="lazy" alt="" class="history_slide-image">
+{% endif %}<div class="history_slide-text"><h3 class="heading-style-h4">
+{{ block.settings.text_slide_heading }}
+</h3><div class="text-size-regular"> {{ block.settings.textarea_slide_text }} </div></div></div>
+                    <div class="history_slide-svg w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="44" viewbox="0 0 11 44" fill="none"><path d="M6 0V34" stroke="#727272" stroke-dasharray="5 5"></path><circle cx="5.5" cy="38.5" r="5.5" fill="#0f0f0f"></circle></svg></div>
+                    <div class="text-size-regular">
+{{ block.settings.text_slide_year }}
+</div>
+                </div> {% schema %} {
+    "name": "Meilenstein",
+    "settings": [
+        {
+            "id": "image_slide_image",
+            "type": "image_picker",
+            "label": "Slide Image"
+        },
+        {
+            "id": "text_slide_heading",
+            "type": "text",
+            "label": "Slide Heading",
+            "default": "Gr\u00fcndung"
+        },
+        {
+            "id": "textarea_slide_text",
+            "type": "textarea",
+            "label": "Slide Text",
+            "default": "Start in der Schweiz mit der Vision, mobile Profis besser auszustatten."
+        },
+        {
+            "id": "text_slide_year",
+            "type": "text",
+            "label": "Slide Year",
+            "default": "1992"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Meilenstein",
+            "blocks": []
+        }
+    ],
+    "tag": null
+} {% endschema %}

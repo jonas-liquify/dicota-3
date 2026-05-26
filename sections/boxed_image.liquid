@@ -1,0 +1,23 @@
+<div class="boxed-image_bg-container"><div class="boxed-image_image-wrapper">{% if section.settings.image_image %}
+{{ section.settings.image_image | image_url: width: 1600 | image_tag: class: 'boxed-image_image', loading: 'lazy' }}
+{% else %}
+<img class="boxed-image_image" src="{{ 'platzhalter.svg' | asset_url }}" alt="" loading="lazy">
+{% endif %}</div></div> {% schema %} {
+    "tag": "section",
+    "name": "Boxed Image",
+    "class": "section_boxed-image",
+    "settings": [
+        {
+            "id": "image_image",
+            "type": "image_picker",
+            "label": "Image"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Boxed Image",
+            "category": "Showcase",
+            "blocks": []
+        }
+    ]
+} {% endschema %}

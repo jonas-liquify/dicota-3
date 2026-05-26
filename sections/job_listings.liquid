@@ -1,0 +1,124 @@
+<div class="padding-global padding-section-medium"><div class="container-large"><div class="jobs_layout"><div class="filter_filters-wrapper"><div class="filter_form_component"><div class="filter_form-block w-form"><form name="jobs-filter" data-name="jobs-filter" method="get" class="filter_form-inner"><div class="filter_outer-heading"><h2 class="heading-style-h3">
+{{ section.settings.text_heading }}
+</h2></div><div class="filter_job-form"><div class="filter_form-header"><div class="text-size-large">
+{{ section.settings.text_filter_label }}
+</div><a href="#" class="text-size-small text-weight-medium text-style-link w-inline-block"><div>
+{{ section.settings.text_alle_loschen }}
+</div></a></div><div class="filter_scroll-wrapper"><div class="filter_filter-group-list"><div x-data="{open:true}" class="filter_filter-group"><div class="filter_accordion"><div role="button" tabindex="0" x-on:click="open=!open" x-bind:aria-expanded="open?'true':'false'" class="filter_filter-group-heading"><div class="text-size-medium text-weight-medium">
+{{ section.settings.text_filter_1_label }}
+</div><div x-bind:class="open?'is-open':''" class="filter_filter-arrow"><div class="icon-1x1-small w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16" fill="none"><path d="M8.327 10.972a.46.46 0 0 1-.654 0L3.458 6.757a.31.31 0 0 1 0-.435l.218-.218a.31.31 0 0 1 .436 0L8 9.555l3.888-3.45a.31.31 0 0 1 .435 0l.219.218a.31.31 0 0 1 0 .435l-4.215 4.214Z" fill="#0F0F0F"></path></svg></div></div></div><div x-show="open" class="filter_filter-options"><div class="filter_list-wrapper"><div class="filter_list">{% for value in shop.metaobjects.stellen_location.values %}    <div li-for="value in shop.metaobjects.stellen_location.values" class="filter_item">
+                                    <label class="w-checkbox filter_form_checkbox"><div class="w-checkbox-input w-checkbox-input--inputType-custom filter_form_checkbox-icon"></div><input type="checkbox" style="opacity:0;position:absolute;z-index:-1"><span li-object="value.location" class="filter_form_checkbox-label w-form-label">{{ value.location }}</span></label>
+                        </div>
+{% endfor %}</div></div></div></div></div><div x-data="{open:true}" class="filter_filter-group"><div class="filter_accordion"><div role="button" tabindex="0" x-on:click="open=!open" x-bind:aria-expanded="open?'true':'false'" class="filter_filter-group-heading"><div class="text-size-medium text-weight-medium">
+{{ section.settings.text_filter_2_label }}
+</div><div x-bind:class="open?'is-open':''" class="filter_filter-arrow"><div class="icon-1x1-small w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16" fill="none"><path d="M8.327 10.972a.46.46 0 0 1-.654 0L3.458 6.757a.31.31 0 0 1 0-.435l.218-.218a.31.31 0 0 1 .436 0L8 9.555l3.888-3.45a.31.31 0 0 1 .435 0l.219.218a.31.31 0 0 1 0 .435l-4.215 4.214Z" fill="#0F0F0F"></path></svg></div></div></div><div x-show="open" class="filter_filter-options"><div class="filter_list-wrapper"><div class="filter_list">{% for value in shop.metaobjects.stellen_occupation.values %}    <div li-for="value in shop.metaobjects.stellen_occupation.values" class="filter_item">
+                                    <label class="w-checkbox filter_form_checkbox"><div class="w-checkbox-input w-checkbox-input--inputType-custom filter_form_checkbox-icon"></div><input type="checkbox" style="opacity:0;position:absolute;z-index:-1"><span li-object="value.occupation" class="filter_form_checkbox-label w-form-label">{{ value.occupation }}</span></label>
+                        </div>
+{% endfor %}</div></div></div></div></div></div></div></div></form></div></div></div><div class="jobs_right"><div class="jobs_list">{% for job in shop.metaobjects.stellen.values %}    <div li-for="job in shop.metaobjects.stellen.values">
+                                    <a li-object:href="job.system.url" href="{{ job.system.url }}" class="jobs_item w-inline-block"><div class="jobs_item-top"><div class="jobs_item-heading"><h3 li-object="job.stelle" class="text-size-large">{{ job.stelle }}</h3><div li-object="job.kurzbeschreibung" class="text-size-medium">{{ job.kurzbeschreibung }}</div></div><div class="jobs_item-location"><div li-object="job.location" class="text-size-small text-weight-medium text-style-nowrap">{{ job.location }}</div></div></div><div class="jobs_item-bottom"><div class="jobs_item-attribute"><div class="icon-1x1-tiny w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 24 24" fill="none"><path d="M12 8v4l3 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"></circle></svg></div><div li-object="job.occupation" class="text-size-regular">{{ job.occupation }}</div></div></div></a>
+                        </div>
+{% endfor %}</div>{% if section.settings.show_cta %}    <div li-if="section.settings.show_cta" class="jobs_cta background-color-primary">
+    <div class="jobs_item-heading"><h3 class="text-size-large">
+{{ section.settings.text_cta_heading }}
+</h3><div class="text-size-medium"> {{ section.settings.richtext_cta_text }} </div></div><a href="{{ section.settings.url_cta_button_link }}" class="button is-white w-button"> <span>{{ section.settings.text_cta_button_text }}</span> </a>    </div>
+{% endif %}</div></div></div></div> {% schema %} {
+    "tag": "section",
+    "name": "Job Listings",
+    "class": "section_jobs",
+    "settings": [
+        {
+            "id": "text_heading",
+            "type": "text",
+            "label": "Heading",
+            "default": "Offene Stellen"
+        },
+        {
+            "id": "text_filter_label",
+            "type": "text",
+            "label": "Filter Label",
+            "default": "Filter"
+        },
+        {
+            "id": "text_alle_loschen",
+            "type": "text",
+            "label": "Alle l\u00f6schen",
+            "default": "Alle l\u00f6schen"
+        },
+        {
+            "id": "text_filter_1_label",
+            "type": "text",
+            "label": "Filter 1 Label",
+            "default": "Standort"
+        },
+        {
+            "id": "text_filter_2_label",
+            "type": "text",
+            "label": "Filter 2 Label",
+            "default": "Bereich"
+        },
+        {
+            "id": "text_cta_heading",
+            "type": "text",
+            "label": "CTA Heading",
+            "default": "Initiativbewerbung"
+        },
+        {
+            "id": "richtext_cta_text",
+            "type": "richtext",
+            "label": "CTA Text",
+            "default": "<p>Keine passende Stelle dabei? Wir freuen uns trotzdem auf deine Bewerbung.<\/p>"
+        },
+        {
+            "id": "url_cta_button_link",
+            "type": "url",
+            "label": "CTA Button Link"
+        },
+        {
+            "id": "text_cta_button_text",
+            "type": "text",
+            "label": "CTA Button Text",
+            "default": "Jetzt bewerben"
+        },
+        {
+            "type": "header",
+            "content": "Layout"
+        },
+        {
+            "type": "checkbox",
+            "id": "show_cta",
+            "label": "Initiativbewerbungs-CTA anzeigen",
+            "default": true
+        },
+        {
+            "type": "header",
+            "content": "Abst\u00e4nde"
+        },
+        {
+            "type": "range",
+            "id": "padding_top",
+            "min": 0,
+            "max": 160,
+            "step": 4,
+            "unit": "px",
+            "label": "Abstand oben",
+            "default": 80
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom",
+            "min": 0,
+            "max": 160,
+            "step": 4,
+            "unit": "px",
+            "label": "Abstand unten",
+            "default": 80
+        }
+    ],
+    "presets": [
+        {
+            "name": "Job Listings",
+            "category": "Listing",
+            "blocks": []
+        }
+    ]
+} {% endschema %}

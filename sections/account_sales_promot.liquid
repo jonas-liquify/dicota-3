@@ -1,0 +1,100 @@
+<div class="padding-global padding-section-small"><div class="container-large"><div class="acc-default_wrapper"><div class="acc-default_flex-small"><ul role="list" class="breadcrumbs_component w-list-unstyled"><li class="breadcrumbs_item"><a li-object:href="routes.root_url" href="{{ routes.root_url }}" class="w-inline-block"><div class="text-size-regular">Home</div></a><div class="breadcrumbs_icon w-embed"><svg width="15" height="15" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="1.5" fill="none"></path></svg></div></li><li class="breadcrumbs_item"><div>
+{{ section.settings.text_breadcrumb }}
+</div></li></ul><div class="default-flex-tiny"><h1 class="heading-style-h2">
+{{ section.settings.text_heading_1 }}
+</h1><div class="text-size-medium max-width-large"> {{ section.settings.textarea_subheading }} </div></div><div class="acc-banner text-color-white">{% if section.settings.image_banner_bild %}
+{{ section.settings.image_banner_bild | image_url: width: 1200 | image_tag: loading: 'lazy', class: 'acc-banner_image' }}
+{% else %}
+<img src="{{ 'platzhalter.svg' | asset_url }}" loading="lazy" alt="" class="acc-banner_image">
+{% endif %}<div class="acc-banner_content"><div class="acc-banner_heading"><div class="acc-banner_tag-row"><div class="acc-banner_tag"><div class="text-style-subline">
+{{ section.settings.text_tag }}
+</div></div></div><h3 class="heading-style-h2">
+{{ section.settings.text_banner_heading }}
+</h3></div><div class="text-size-medium"> {{ section.settings.textarea_banner_text }} </div><div class="acc-banner_button-wrapper"><a href="{{ section.settings.url_banner_button_link }}" class="button is-white w-button"> <span>{{ section.settings.text_banner_button_text }}</span> </a></div></div></div><div class="acc-default_flex-small"><div class="default-flex-tiny"><h2 class="heading-style-h2">
+{{ section.settings.text_heading_2 }}
+</h2></div><div li-cf-theme-blocks="" class="acc-triple">
+{% content_for 'blocks' %}
+</div></div></div></div></div></div> {% schema %} {
+    "tag": "section",
+    "name": "Account \/ Sales \u2014 ",
+    "class": "section_acc-default",
+    "blocks": [
+        {
+            "type": "promo"
+        },
+        {
+            "type": "@app"
+        }
+    ],
+    "settings": [
+        {
+            "id": "text_breadcrumb",
+            "type": "text",
+            "label": "Breadcrumb",
+            "default": "Promotions"
+        },
+        {
+            "id": "text_heading_1",
+            "type": "text",
+            "label": "Heading 1",
+            "default": "Aktuelle Promotions"
+        },
+        {
+            "id": "textarea_subheading",
+            "type": "textarea",
+            "label": "Subheading",
+            "default": "Sonderkonditionen, Bundle-Preise und Quartals-Aktionen f\u00fcr Reseller und Distributoren."
+        },
+        {
+            "id": "image_banner_bild",
+            "type": "image_picker",
+            "label": "Banner Bild"
+        },
+        {
+            "id": "text_tag",
+            "type": "text",
+            "label": "Tag",
+            "default": "Aktiv bis 30.06."
+        },
+        {
+            "id": "text_banner_heading",
+            "type": "text",
+            "label": "Banner Heading",
+            "default": "Quartals-Aktion Q2"
+        },
+        {
+            "id": "textarea_banner_text",
+            "type": "textarea",
+            "label": "Banner Text",
+            "default": "15% Sonderrabatt auf Backpack Eco-Linie bei einer Mindestabnahme von 50 St\u00fcck."
+        },
+        {
+            "id": "url_banner_button_link",
+            "type": "url",
+            "label": "Banner Button Link"
+        },
+        {
+            "id": "text_banner_button_text",
+            "type": "text",
+            "label": "Banner Button Text",
+            "default": "Konditionen abrufen"
+        },
+        {
+            "id": "text_heading_2",
+            "type": "text",
+            "label": "Heading 2",
+            "default": "Weitere Promotions"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Account \/ Sales \u2014 ",
+            "category": "B2B",
+            "blocks": [
+                {
+                    "type": "promo"
+                }
+            ]
+        }
+    ]
+} {% endschema %}

@@ -1,0 +1,136 @@
+<div class="padding-global padding-section-small"><div class="container-large"><div class="acc-default_wrapper"><div class="acc-default_flex-small"><ul role="list" class="breadcrumbs_component w-list-unstyled"><li class="breadcrumbs_item"><a li-object:href="routes.root_url" href="{{ routes.root_url }}" class="w-inline-block"><div class="text-size-regular">Home</div></a><div class="breadcrumbs_icon w-embed"><svg width="15" height="15" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="1.5" fill="none"></path></svg></div></li><li class="breadcrumbs_item"><div>
+{{ section.settings.text_breadcrumb }}
+</div></li></ul><div class="default-flex-tiny"><h1 class="heading-style-h2">
+{{ section.settings.text_heading_1 }}
+</h1><div class="text-size-medium max-width-large"> {{ section.settings.textarea_subheading_1 }} </div></div><div class="acc-double"><div class="acc-card"><div class="text-style-subline">
+{{ section.settings.text_linke_karte_subline }}
+</div>{% if section.settings.image_linke_karte_bild %}
+{{ section.settings.image_linke_karte_bild | image_url: width: 800 | image_tag: loading: 'lazy', class: 'acc-card_16-9-image' }}
+{% else %}
+<img src="{{ 'platzhalter.svg' | asset_url }}" loading="lazy" alt="" class="acc-card_16-9-image">
+{% endif %}<div class="acc-card_content"><div class="text-size-large">
+{{ section.settings.text_linke_karte_heading }}
+</div><div class="text-size-regular"> {{ section.settings.textarea_linke_karte_text }} </div></div><a href="{{ section.settings.url_linke_karte_button_link }}" class="button w-button"> <span>{{ section.settings.text_linke_karte_button_text }}</span> </a></div><div class="acc-card"><div class="text-style-subline">
+{{ section.settings.text_rechte_karte_subline }}
+</div><div class="acc_banner-item is-large">{% if section.settings.image_rechte_karte_bild %}
+{{ section.settings.image_rechte_karte_bild | image_url: width: 400 | image_tag: loading: 'lazy', class: 'acc_banner-image is-large' }}
+{% else %}
+<img src="{{ 'platzhalter.svg' | asset_url }}" loading="lazy" alt="" class="acc_banner-image is-large">
+{% endif %}<div class="acc_banner-content is-large"><div class="acc_tag-list"><div class="text-style-subline">Q2 2026</div></div><h3 class="text-size-large">
+{{ section.settings.text_rechte_karte_heading }}
+</h3></div></div><a href="{{ section.settings.url_rechte_karte_button_link }}" class="button w-button"> <span>{{ section.settings.text_rechte_karte_button_text }}</span> </a></div></div><div class="acc-default_flex-small"><div class="default-flex-tiny"><h2 class="heading-style-h2">
+{{ section.settings.text_heading_2 }}
+</h2></div><div li-cf-theme-blocks="" class="acc-triple">
+{% content_for 'blocks' %}
+</div></div></div></div></div></div> {% schema %} {
+    "tag": "section",
+    "name": "Account \/ Sales \u2014 ",
+    "class": "section_acc-default",
+    "blocks": [
+        {
+            "type": "quicklink"
+        },
+        {
+            "type": "@app"
+        }
+    ],
+    "settings": [
+        {
+            "id": "text_breadcrumb",
+            "type": "text",
+            "label": "Breadcrumb",
+            "default": "Service &amp; Vertrieb"
+        },
+        {
+            "id": "text_heading_1",
+            "type": "text",
+            "label": "Heading 1",
+            "default": "Service &amp; Vertrieb"
+        },
+        {
+            "id": "textarea_subheading_1",
+            "type": "textarea",
+            "label": "Subheading 1",
+            "default": "Volumenpreise, Produktlisten, Promotions und Distributoren \u2014 alles f\u00fcr deine Verkaufsarbeit."
+        },
+        {
+            "id": "text_linke_karte_subline",
+            "type": "text",
+            "label": "Linke Karte Subline",
+            "default": "Quick-Action"
+        },
+        {
+            "id": "image_linke_karte_bild",
+            "type": "image_picker",
+            "label": "Linke Karte Bild"
+        },
+        {
+            "id": "text_linke_karte_heading",
+            "type": "text",
+            "label": "Linke Karte Heading",
+            "default": "Angebot anfragen"
+        },
+        {
+            "id": "textarea_linke_karte_text",
+            "type": "textarea",
+            "label": "Linke Karte Text",
+            "default": "Volumenpreise f\u00fcr deinen n\u00e4chsten Bedarf in vier kurzen Schritten anfragen."
+        },
+        {
+            "id": "url_linke_karte_button_link",
+            "type": "url",
+            "label": "Linke Karte Button Link"
+        },
+        {
+            "id": "text_linke_karte_button_text",
+            "type": "text",
+            "label": "Linke Karte Button Text",
+            "default": "Anfrage starten"
+        },
+        {
+            "id": "text_rechte_karte_subline",
+            "type": "text",
+            "label": "Rechte Karte Subline",
+            "default": "Promo"
+        },
+        {
+            "id": "image_rechte_karte_bild",
+            "type": "image_picker",
+            "label": "Rechte Karte Bild"
+        },
+        {
+            "id": "text_rechte_karte_heading",
+            "type": "text",
+            "label": "Rechte Karte Heading",
+            "default": "Aktuelle Promotion"
+        },
+        {
+            "id": "url_rechte_karte_button_link",
+            "type": "url",
+            "label": "Rechte Karte Button Link"
+        },
+        {
+            "id": "text_rechte_karte_button_text",
+            "type": "text",
+            "label": "Rechte Karte Button Text",
+            "default": "Promo ansehen"
+        },
+        {
+            "id": "text_heading_2",
+            "type": "text",
+            "label": "Heading 2",
+            "default": "Quick-Zugriff"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Account \/ Sales \u2014 ",
+            "category": "B2B",
+            "blocks": [
+                {
+                    "type": "quicklink"
+                }
+            ]
+        }
+    ]
+} {% endschema %}

@@ -1,0 +1,66 @@
+<div class="padding-global padding-section-medium"><div class="container-large"><div class="default-medium-component"><div class="acc-cards_heading"><h2 class="heading-style-h2">
+{{ section.settings.text_heading }}
+</h2><div class="text-size-medium"> {{ section.settings.textarea_text }} </div></div><div li-cf-theme-blocks="" class="acc-cards_grid">
+{% content_for 'blocks' %}
+</div></div></div></div> {% schema %} {
+    "tag": "section",
+    "name": "Account \/ Templates ",
+    "class": "section_acc-cards",
+    "blocks": [
+        {
+            "type": "karte"
+        },
+        {
+            "type": "@app"
+        }
+    ],
+    "settings": [
+        {
+            "id": "text_heading",
+            "type": "text",
+            "label": "Heading",
+            "default": "Was m\u00f6chtest du erreichen?"
+        },
+        {
+            "id": "textarea_text",
+            "type": "textarea",
+            "label": "Text",
+            "default": "W\u00e4hle einen Bereich und nutze deine DICOTA-Punkte gezielt."
+        },
+        {
+            "type": "header",
+            "content": "Abst\u00e4nde"
+        },
+        {
+            "type": "range",
+            "id": "padding_top",
+            "min": 0,
+            "max": 160,
+            "step": 4,
+            "unit": "px",
+            "label": "Abstand oben",
+            "default": 80
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom",
+            "min": 0,
+            "max": 160,
+            "step": 4,
+            "unit": "px",
+            "label": "Abstand unten",
+            "default": 80
+        }
+    ],
+    "presets": [
+        {
+            "name": "Account \/ Templates ",
+            "category": "B2B",
+            "blocks": [
+                {
+                    "type": "karte"
+                }
+            ]
+        }
+    ]
+} {% endschema %}

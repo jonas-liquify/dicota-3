@@ -1,0 +1,61 @@
+<div class="padding-global padding-section-medium"><div class="container-large"><div class="default-flex-small"><h1 class="heading-style-h1">
+{{ section.settings.text_heading }}
+</h1><div class="text-size-medium"> {{ section.settings.textarea_text }} </div></div></div></div><div class="default-bg-wrapper">{% if section.settings.image_hintergrundbild %}
+{{ section.settings.image_hintergrundbild | image_url: width: 2000 | image_tag: loading: 'lazy', class: 'default-bg-image' }}
+{% else %}
+<img src="{{ 'platzhalter.svg' | asset_url }}" loading="lazy" alt="" class="default-bg-image">
+{% endif %}<div class="default-bg-overlay"></div></div> {% schema %} {
+    "tag": "section",
+    "name": "Background Image Her",
+    "class": "section_image-hero text-color-white",
+    "settings": [
+        {
+            "id": "text_heading",
+            "type": "text",
+            "label": "Heading",
+            "default": "Nachhaltigkeit ist kein Trend \u2014 sie ist unsere Verantwortung"
+        },
+        {
+            "id": "textarea_text",
+            "type": "textarea",
+            "label": "Text",
+            "default": "Wir denken Produkte vom Ende her: langlebig, reparierbar und mit recycelten Materialien. Das ist der DICOTA-Weg."
+        },
+        {
+            "id": "image_hintergrundbild",
+            "type": "image_picker",
+            "label": "Hintergrundbild"
+        },
+        {
+            "type": "header",
+            "content": "Abst\u00e4nde"
+        },
+        {
+            "type": "range",
+            "id": "padding_top",
+            "min": 0,
+            "max": 200,
+            "step": 4,
+            "unit": "px",
+            "label": "Abstand oben",
+            "default": 120
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom",
+            "min": 0,
+            "max": 200,
+            "step": 4,
+            "unit": "px",
+            "label": "Abstand unten",
+            "default": 120
+        }
+    ],
+    "presets": [
+        {
+            "name": "Background Image Her",
+            "category": "Hero",
+            "blocks": []
+        }
+    ]
+} {% endschema %}

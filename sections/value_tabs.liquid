@@ -1,0 +1,68 @@
+<div class="padding-global padding-section-medium"><div class="container-large"><div x-data="{tab: 1}" role="tablist" class="value-tabs_component"><div class="value-tabs_menu"><h2 class="heading-style-h2">
+{{ section.settings.text_heading }}
+</h2><div li-cf-theme-blocks="" class="value-tabs_link-list">
+{% content_for 'blocks' %}
+</div></div><div class="value-tabs_tab-body"><div li-cf-theme-blocks="">
+{% content_for 'blocks' %}
+</div></div></div></div></div> {% schema %} {
+    "tag": "section",
+    "name": "Value Tabs",
+    "class": "section_value-tabs",
+    "blocks": [
+        {
+            "type": "tab-link"
+        },
+        {
+            "type": "tab-pane"
+        },
+        {
+            "type": "@app"
+        }
+    ],
+    "settings": [
+        {
+            "id": "text_heading",
+            "type": "text",
+            "label": "Heading",
+            "default": "Unsere Werte"
+        },
+        {
+            "type": "header",
+            "content": "Abst\u00e4nde"
+        },
+        {
+            "type": "range",
+            "id": "padding_top",
+            "min": 0,
+            "max": 160,
+            "step": 4,
+            "unit": "px",
+            "label": "Abstand oben",
+            "default": 80
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom",
+            "min": 0,
+            "max": 160,
+            "step": 4,
+            "unit": "px",
+            "label": "Abstand unten",
+            "default": 80
+        }
+    ],
+    "presets": [
+        {
+            "name": "Value Tabs",
+            "category": "Content",
+            "blocks": [
+                {
+                    "type": "tab-link"
+                },
+                {
+                    "type": "tab-pane"
+                }
+            ]
+        }
+    ]
+} {% endschema %}

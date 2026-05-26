@@ -1,8 +1,8 @@
-<div class="padding-global" style="padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px; background-color: {{ section.settings.bg_color }}; color: {{ section.settings.text_color }}; text-align: {{ section.settings.text_align }};"><div class="container-large"><div class="section-headline_inner"><div class="section-headline_titles"><p class="section-headline_pretitle">
+<div class="padding-global" style="padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px; background-color: {{ section.settings.bg_color }}; color: {{ section.settings.text_color }}; text-align: {{ section.settings.text_align }};"><div class="container-large"><div class="section-headline_inner"><div class="section-headline_titles"><p class="section-headline_pretitle heading-style-h1">
 {{ section.settings.text_vortitel }}
-</p><h2 class="section-headline_title">
+</p><h2 class="section-headline_title heading-style-h1">
 {{ section.settings.text_uberschrift }}
-</h2></div><p class="section-headline_subtext"> {{ section.settings.textarea_beschreibung }} </p></div></div></div> {% schema %} {
+</h2></div><p class="section-headline_subtext text-size-medium"> {{ section.settings.textarea_beschreibung }} </p></div></div></div> {% schema %} {
     "tag": "section",
     "name": "Section Headline",
     "class": "section_section-headline",
@@ -23,7 +23,7 @@
             "id": "textarea_beschreibung",
             "type": "textarea",
             "label": "Beschreibung",
-            "default": "Taschen gibt es wie Sand am Meer. Taschen mit Laptopfach ebenso. Aber wirkliche Computer Taschen, die gibt es nur bei Dicota."
+            "default": "Taschen gibt es wie Sand am Meer.\n                Taschen mit Laptopfach ebenso. Aber wirkliche Computer Taschen, die gibt es nur bei Dicota."
         },
         {
             "type": "header",
@@ -93,7 +93,7 @@
     "presets": [
         {
             "name": "Section Headline",
-            "category": "Liquify",
+            "category": "Content",
             "blocks": []
         }
     ]

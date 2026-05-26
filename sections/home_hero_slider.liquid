@@ -1,0 +1,72 @@
+<div class="hero_swiper swiper" data-autoplay="{{ section.settings.autoplay }}" data-autoplay-delay="{{ section.settings.autoplay_delay }}" style="--hero-min-height: {{ section.settings.min_height }}vh; color: {{ section.settings.text_color }};"><div li-cf-theme-blocks="" class="swiper-wrapper hero_slides">
+{% content_for 'blocks' %}
+</div><button type="button" class="hero_arrow hero_arrow-prev swiper-button-prev" aria-label="Vorherige Slide"><div class="icon-embed-xsmall w-embed">{% render 'icon_chevron_left' %}</div></button><button type="button" class="hero_arrow hero_arrow-next swiper-button-next" aria-label="Nächste Slide"><div class="icon-embed-xsmall w-embed">{% render 'icon_chevron_right' %}</div></button><div class="hero_pagination"><div class="swiper-pagination hero_dots"></div><button type="button" class="hero_autoplay-toggle" aria-label="Autoplay umschalten"><div class="icon-embed-xxsmall w-embed"><svg width="100%" height="100%" viewbox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="3" width="2.5" height="10"></rect><rect x="9.5" y="3" width="2.5" height="10"></rect></svg></div></button></div></div> {% schema %} {
+    "tag": "section",
+    "name": "Home Hero Slider",
+    "class": "section_hero",
+    "blocks": [
+        {
+            "type": "slide"
+        },
+        {
+            "type": "@app"
+        }
+    ],
+    "settings": [
+        {
+            "type": "header",
+            "content": "Slider"
+        },
+        {
+            "type": "checkbox",
+            "id": "autoplay",
+            "label": "Autoplay aktivieren",
+            "default": true
+        },
+        {
+            "type": "range",
+            "id": "autoplay_delay",
+            "min": 3000,
+            "max": 9500,
+            "step": 500,
+            "unit": "ms",
+            "label": "Autoplay-Geschwindigkeit",
+            "default": 6000
+        },
+        {
+            "type": "header",
+            "content": "Gr\u00f6\u00dfe"
+        },
+        {
+            "type": "range",
+            "id": "min_height",
+            "min": 60,
+            "max": 100,
+            "step": 5,
+            "unit": "vh",
+            "label": "Mindesth\u00f6he",
+            "default": 90
+        },
+        {
+            "type": "header",
+            "content": "Farben"
+        },
+        {
+            "type": "color",
+            "id": "text_color",
+            "label": "Textfarbe",
+            "default": "#ffffff"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Home Hero Slider",
+            "category": "Hero",
+            "blocks": [
+                {
+                    "type": "slide"
+                }
+            ]
+        }
+    ]
+} {% endschema %}

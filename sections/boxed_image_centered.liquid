@@ -1,0 +1,23 @@
+<div class="padding-global"><div class="container-large">{% if section.settings.image_image %}
+{{ section.settings.image_image | image_url: width: 1400 | image_tag: class: 'boxed-image_image-centerd', loading: 'lazy' }}
+{% else %}
+<img class="boxed-image_image-centerd" src="{{ 'platzhalter.svg' | asset_url }}" alt="" loading="lazy">
+{% endif %}</div></div> {% schema %} {
+    "tag": "section",
+    "name": "Boxed Image Centered",
+    "class": "section_boxed-image-center",
+    "settings": [
+        {
+            "id": "image_image",
+            "type": "image_picker",
+            "label": "Image"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Boxed Image Centered",
+            "category": "Showcase",
+            "blocks": []
+        }
+    ]
+} {% endschema %}
