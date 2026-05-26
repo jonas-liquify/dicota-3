@@ -19,43 +19,42 @@
 {% endfor %}</div></div></div>    </nav>
 {% endif %}
                         </div>
-{% endfor %}</nav><div class="nav_shop-icons"><div class="nav_search"><div data-hover="false" data-delay="0" class="nav_dropdown w-dropdown"><div class="nav_shop-icon nav_search-pill w-dropdown-toggle"><div class="icon-embed-xsmall w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 25 25" fill="none" preserveaspectratio="xMidYMid meet" aria-hidden="true" role="img"><mask id="mask0_2941_121300" style="mask-type:alpha" maskunits="userSpaceOnUse" x="0" y="0" width="25" height="25"><rect x="0.123535" y="0.987549" width="24" height="24" fill="#D9D9D9"></rect></mask><g mask="url(#mask0_2941_121300)"><path d="M19.7235 21.9875L13.4235 15.6875C12.9235 16.0875 12.3485 16.4042 11.6985 16.6375C11.0485 16.8709 10.3569 16.9875 9.62354 16.9875C7.80687 16.9875 6.26937 16.3584 5.01104 15.1C3.7527 13.8417 3.12354 12.3042 3.12354 10.4875C3.12354 8.67088 3.7527 7.13338 5.01104 5.87505C6.26937 4.61672 7.80687 3.98755 9.62354 3.98755C11.4402 3.98755 12.9777 4.61672 14.236 5.87505C15.4944 7.13338 16.1235 8.67088 16.1235 10.4875C16.1235 11.2209 16.0069 11.9125 15.7735 12.5625C15.5402 13.2125 15.2235 13.7875 14.8235 14.2875L21.1235 20.5875L19.7235 21.9875ZM9.62354 14.9875C10.8735 14.9875 11.936 14.55 12.811 13.675C13.686 12.8 14.1235 11.7375 14.1235 10.4875C14.1235 9.23755 13.686 8.17505 12.811 7.30005C11.936 6.42505 10.8735 5.98755 9.62354 5.98755C8.37354 5.98755 7.31104 6.42505 6.43604 7.30005C5.56104 8.17505 5.12354 9.23755 5.12354 10.4875C5.12354 11.7375 5.56104 12.8 6.43604 13.675C7.31104 14.55 8.37354 14.9875 9.62354 14.9875Z" fill="currentColor"></path></g></svg></div><span class="nav_search-placeholder">
+{% endfor %}</nav><div class="nav_shop-icons"><div class="nav_search"><div x-data="{ searchOpen: false, searchQuery: '' }" class="nav_search-trigger-wrap"><div x-on:click="searchOpen = true; $nextTick(() => $refs.searchInput && $refs.searchInput.focus())" class="nav_shop-icon nav_search-pill"><div class="icon-embed-xsmall w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 25 25" fill="none" preserveaspectratio="xMidYMid meet" aria-hidden="true" role="img"><mask id="mask0_2941_121300" style="mask-type:alpha" maskunits="userSpaceOnUse" x="0" y="0" width="25" height="25"><rect x="0.123535" y="0.987549" width="24" height="24" fill="#D9D9D9"></rect></mask><g mask="url(#mask0_2941_121300)"><path d="M19.7235 21.9875L13.4235 15.6875C12.9235 16.0875 12.3485 16.4042 11.6985 16.6375C11.0485 16.8709 10.3569 16.9875 9.62354 16.9875C7.80687 16.9875 6.26937 16.3584 5.01104 15.1C3.7527 13.8417 3.12354 12.3042 3.12354 10.4875C3.12354 8.67088 3.7527 7.13338 5.01104 5.87505C6.26937 4.61672 7.80687 3.98755 9.62354 3.98755C11.4402 3.98755 12.9777 4.61672 14.236 5.87505C15.4944 7.13338 16.1235 8.67088 16.1235 10.4875C16.1235 11.2209 16.0069 11.9125 15.7735 12.5625C15.5402 13.2125 15.2235 13.7875 14.8235 14.2875L21.1235 20.5875L19.7235 21.9875ZM9.62354 14.9875C10.8735 14.9875 11.936 14.55 12.811 13.675C13.686 12.8 14.1235 11.7375 14.1235 10.4875C14.1235 9.23755 13.686 8.17505 12.811 7.30005C11.936 6.42505 10.8735 5.98755 9.62354 5.98755C8.37354 5.98755 7.31104 6.42505 6.43604 7.30005C5.56104 8.17505 5.12354 9.23755 5.12354 10.4875C5.12354 11.7375 5.56104 12.8 6.43604 13.675C7.31104 14.55 8.37354 14.9875 9.62354 14.9875Z" fill="currentColor"></path></g></svg></div><span class="nav_search-placeholder">
 {{ section.settings.text_suche_placeholder }}
-</span></div><nav class="nav_predictive-search-holder w-dropdown-list"><div li-element="dropdown-toggle" class="nav_predictive-search-close" data-dropdowntoggle="" @click="LiquifyHelper.triggerClick($event.target.closest('.w-dropdown').querySelector('.w-dropdown-toggle.w--open'))"></div><div class="predictive-search_component"><div class="predictive-search_header"><div class="heading-style-h3">
-{{ section.settings.text_search }}
-</div><button li-element="dropdown-toggle" aria-label="Close Search" class="nav_dropdown-close-button" data-dropdowntoggle="" @click="LiquifyHelper.triggerClick($event.target.closest('.w-dropdown').querySelector('.w-dropdown-toggle.w--open'))"><div class="nav_dropdown-close-icon w-embed">{% render 'icon_close' %}</div></button></div><predictive-search><div class="predictive-search_holder"><div class="predictive-search_form w-form"><form id="wf-form-produkt-suche" name="wf-form-produkt-suche" data-name="produkt-suche" action="/search" method="get" class="predictive-search_form-component"><div class="predictive-search_input-holder"><label for="search-input" class="form_hidden-label">Suche</label><input type="search" id="search-input" placeholder="Suche nach Bags, Größe..." name="q" class="predictive-search_input"><a href="#" class="predictive-search_search-button w-inline-block"><div class="icon-embed-xsmall w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 25 25" fill="none" aria-hidden="true" role="img"><mask id="mask0_2941_121301" style="mask-type:alpha" maskunits="userSpaceOnUse" x="0" y="0" width="25" height="25"><rect x="0.123535" y="0.987549" width="24" height="24" fill="#D9D9D9"></rect></mask><g mask="url(#mask0_2941_121301)"><path d="M19.7235 21.9875L13.4235 15.6875C12.9235 16.0875 12.3485 16.4042 11.6985 16.6375C11.0485 16.8709 10.3569 16.9875 9.62354 16.9875C7.80687 16.9875 6.26937 16.3584 5.01104 15.1C3.7527 13.8417 3.12354 12.3042 3.12354 10.4875C3.12354 8.67088 3.7527 7.13338 5.01104 5.87505C6.26937 4.61672 7.80687 3.98755 9.62354 3.98755C11.4402 3.98755 12.9777 4.61672 14.236 5.87505C15.4944 7.13338 16.1235 8.67088 16.1235 10.4875C16.1235 11.2209 16.0069 11.9125 15.7735 12.5625C15.5402 13.2125 15.2235 13.7875 14.8235 14.2875L21.1235 20.5875L19.7235 21.9875Z" fill="currentColor"></path></g></svg></div></a><input type="submit" data-wait="Bitte warten..." id="submit-search" class="hide w-button" value="Submit"></div><div id="predictive-search" class="predictive-search_overflow no-scrollbar"><div li-section="predictive_search" class="predictive-search_section">{% if predictive_search.performed %}    <div li-if="predictive_search.performed" class="predictive-search_conditional">
-    {% assign first_column_results_size = predictive_search.resources.queries.size | plus: predictive_search.resources.collections.size | plus: predictive_search.resources.pages.size | plus: predictive_search.resources.articles.size | plus: predictive_search.resources.products.size %}{% if first_column_results_size > 0 %}    <div li-if="first_column_results_size > 0" class="predictive-search_conditional">
-    {% if predictive_search.resources.queries.size > 0 or predictive_search.resources.collections.size > 0 %}    <div li-if="predictive_search.resources.queries.size > 0 or predictive_search.resources.collections.size > 0" class="predictive-search_topic">
-    <div class="predictive-search_headline"><div class="text-style-muted">Vorschläge</div></div><ul role="list" class="predictive-search_list w-list-unstyled">{% for query in predictive_search.resources.queries %}    <li li-for="query in predictive_search.resources.queries" class="predictive-search_item">
-                                    <a li-object:href="query.url" href="{{ query.url }}" class="predictive-search_link w-inline-block"><div li-object="query.styled_text">{{ query.styled_text }}</div></a>
+</span></div><div x-cloak="" x-show="searchOpen" x-on:keydown.escape.window="searchOpen = false" class="nav_search-overlay" x-on:click.self="searchOpen = false; searchQuery = ''"><div class="nav_search-overlay-panel"><div class="nav_search-overlay-bar"><div class="nav_search-overlay-icon w-embed"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19.7235 21.9875L13.4235 15.6875C12.9235 16.0875 12.3485 16.4042 11.6985 16.6375C11.0485 16.8709 10.3569 16.9875 9.62354 16.9875C7.80687 16.9875 6.26937 16.3584 5.01104 15.1C3.7527 13.8417 3.12354 12.3042 3.12354 10.4875C3.12354 8.67088 3.7527 7.13338 5.01104 5.87505C6.26937 4.61672 7.80687 3.98755 9.62354 3.98755C11.4402 3.98755 12.9777 4.61672 14.236 5.87505C15.4944 7.13338 16.1235 8.67088 16.1235 10.4875C16.1235 11.2209 16.0069 11.9125 15.7735 12.5625C15.5402 13.2125 15.2235 13.7875 14.8235 14.2875L21.1235 20.5875L19.7235 21.9875ZM9.62354 14.9875C10.8735 14.9875 11.936 14.55 12.811 13.675C13.686 12.8 14.1235 11.7375 14.1235 10.4875C14.1235 9.23755 13.686 8.17505 12.811 7.30005C11.936 6.42505 10.8735 5.98755 9.62354 5.98755C8.37354 5.98755 7.31104 6.42505 6.43604 7.30005C5.56104 8.17505 5.12354 9.23755 5.12354 10.4875C5.12354 11.7375 5.56104 12.8 6.43604 13.675C7.31104 14.55 8.37354 14.9875 9.62354 14.9875Z" fill="currentColor"></path></svg></div><predictive-search><form action="/search" method="get" class="nav_search-overlay-form"><input type="search" name="q" x-ref="searchInput" x-model="searchQuery" placeholder="Wonach suchst du?" autocomplete="off" class="nav_search-overlay-input"></form></predictive-search><button x-on:click="searchOpen = false; searchQuery = ''" aria-label="Schließen" class="nav_search-overlay-close">{% render 'icon_close' %}</button></div><div class="nav_search-overlay-tip">
+{{ section.settings.text_search_tip }}
+</div><div x-show="!searchQuery || searchQuery.length === 0" class="nav_search-overlay-empty"><div class="nav_search-empty-grid"><div class="nav_search-empty-col"><div class="nav_search-empty-header"><div class="icon-1x1-small w-embed"><svg width="100%" height="100%" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 17l6-6 4 4 8-8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"></path></svg></div><div class="text-style-subline">
+{{ section.settings.text_beliebte_suchanfragen_label }}
+</div></div><div li-cf-theme-blocks="" class="nav_search-pills">
+{% content_for 'blocks' %}
+</div></div><div class="nav_search-empty-col"><div class="nav_search-empty-header"><div class="text-style-subline">
+{{ section.settings.text_kurzlich_angeschaut_label }}
+</div><a href="{{ section.settings.url_clear_link }}" class="text-size-small text-style-link"> <span>{{ section.settings.text_clear_label }}</span> </a></div><div class="nav_search-recent">{% for product in section.settings.collection_recent_products.products limit: section.settings.collection_recent_products_limit %}
+<div class="nav_search-recent-item">
+    <a li-object:href="product.url" href="{{ product.url }}" class="nav_search-recent-link"><img li-object:src="product.featured_image | image_url: width: 400" li-object:alt="product.title" src="{{ product.featured_image | image_url: width: 400 }}" loading="lazy" alt="{{ product.title }}" class="nav_search-recent-image"></a>
+</div>
+{% endfor %}</div></div></div></div><div x-show="searchQuery && searchQuery.length > 0" x-cloak="" class="nav_search-overlay-results"><div id="predictive-search" class="nav_search-results-inner"><div li-section="predictive_search" class="nav_search-results-section">{% if predictive_search.performed %}    <div li-if="predictive_search.performed" class="nav_search-results-grid">
+    {% if predictive_search.resources.queries.size > 0 or predictive_search.resources.collections.size > 0 %}    <div li-if="predictive_search.resources.queries.size > 0 or predictive_search.resources.collections.size > 0" class="nav_search-results-suggestions">
+    <div class="text-style-subline">
+{{ section.settings.text_suggestions_label }}
+</div><ul role="list" class="nav_search-suggestion-list w-list-unstyled">{% for query in predictive_search.resources.queries %}    <li li-for="query in predictive_search.resources.queries" class="nav_search-suggestion-item">
+                                    <a li-object:href="query.url" href="{{ query.url }}" class="nav_search-suggestion-link"><div li-object="query.styled_text">{{ query.styled_text }}</div></a>
                         </li>
-{% endfor %}{% for collection in predictive_search.resources.collections %}    <li li-for="collection in predictive_search.resources.collections" class="predictive-search_item">
-                                    <a li-object:href="collection.url" href="{{ collection.url }}" class="predictive-search_link w-inline-block"><div li-object="collection.title">{{ collection.title }}</div></a>
+{% endfor %}{% for collection in predictive_search.resources.collections %}    <li li-for="collection in predictive_search.resources.collections" class="nav_search-suggestion-item">
+                                    <a li-object:href="collection.url" href="{{ collection.url }}" class="nav_search-suggestion-link"><div li-object="collection.title">{{ collection.title }}</div></a>
                         </li>
 {% endfor %}</ul>    </div>
-{% endif %}{% if predictive_search.resources.products.size > 0 %}    <div li-if="predictive_search.resources.products.size > 0" class="predictive-search_topic">
-    <div class="predictive-search_headline"><div class="text-style-muted">Produkte</div></div><ul role="list" class="predictive-search_product-list w-list-unstyled">{% for product in predictive_search.resources.products %}    <li li-for="product in predictive_search.resources.products" class="predictive-search_produt-item">
-                                    <a li-object:href="product.url" href="{{ product.url }}" class="predictive-search_line-item w-inline-block"><div class="predictive-search_image-wrapper"><img li-object:src="product.featured_media | image_url: width: 150" li-object:alt="product.featured_image.alt" alt="{{ product.featured_image.alt }}" src="{{ product.featured_media | image_url: width: 150 }}" loading="lazy" class="predictive-search_image"></div><div class="predictive-search_product-info"><div class="text-size-regular text-weight-bold"><span li-object="product.title">{{ product.title }}</span></div><div class="text-size-small"><span li-object="product.price | money">{{ product.price | money }}</span></div></div></a>
+{% endif %}{% if predictive_search.resources.products.size > 0 %}    <div li-if="predictive_search.resources.products.size > 0" class="nav_search-results-products">
+    <ul role="list" class="nav_search-product-grid w-list-unstyled">{% for product in predictive_search.resources.products %}    <li li-for="product in predictive_search.resources.products" class="nav_search-product-item">
+                                    <a li-object:href="product.url" href="{{ product.url }}" class="nav_search-product-link"><div class="nav_search-product-image-wrap"><img li-object:src="product.featured_media | image_url: width: 400" li-object:alt="product.featured_image.alt" src="{{ product.featured_media | image_url: width: 400 }}" loading="lazy" alt="{{ product.featured_image.alt }}" class="nav_search-product-image"></div><div class="nav_search-product-info"><div li-object="product.title" class="nav_search-product-title text-size-regular text-weight-bold">{{ product.title }}</div>{% if product.vendor %}    <div li-if="product.vendor" li-object="product.vendor" class="nav_search-product-brand text-size-small text-style-muted">
+    Brand    </div>
+{% endif %}<div li-object="product.price | money" class="nav_search-product-price text-size-small">{{ product.price | money }}</div></div></a>
                         </li>
-{% endfor %}</ul>    </div>
+{% endfor %}</ul><a href="/search?q={{ predictive_search.terms }}" class="button is-outline nav_search-results-cta w-button"><span>Alle Produkte anzeigen (<span li-object="predictive_search.resources.products.size">{{ predictive_search.resources.products.size }}</span>)</span></a>    </div>
 {% endif %}    </div>
-{% endif %}{% if first_column_results_size == 0 %}    <div li-if="first_column_results_size == 0" class="predictive-search_conditional">
-    <div class="predictive-search_topic"><div class="text-style-muted">Keine Treffer für
-                                          "<span li-object="predictive_search.terms">{{ predictive_search.terms }}</span>"</div></div>    </div>
-{% endif %}    </div>
-{% endif %}{% unless predictive_search.performed %}    <div li-unless="predictive_search.performed" class="predictive-search_conditional">
-    <div class="predictive-search_overflow"><div class="predictive-search_topic"><div class="predictive-search_headline"><div class="text-style-muted">Beliebte Suchen</div></div><ul role="list" class="predictive-search_list w-list-unstyled">{% for block in section.blocks %}
-    {% if block.type == "search-suggestion" %}
-                    <li li-block="Search - Suggestion" class="predictive-search_item">
-                                    <a href="{{ block.settings.url_link }}" class="predictive-search_link w-inline-block"> <div>{{ block.settings.text_text }}</div> </a>
-                            </li>
-            {% endif %}
-{% endfor %}</ul></div><div class="predictive-search_topic"><div class="predictive-search_headline"><div class="text-style-muted">Bestseller</div></div><ul role="list" class="predictive-search_product-list w-list-unstyled">{% for product in section.settings.collection_search_bestseller.products limit: section.settings.collection_search_bestseller_limit %}
-<li class="predictive-search_produt-item">
-    <a li-object:href="product.url" href="{{ product.url }}" class="predictive-search_line-item w-inline-block"><div class="predictive-search_image-wrapper"><img li-object:src="product.featured_image | img_url: 'master'" li-object:alt="product.featured_image.alt" alt="{{ product.featured_image.alt }}" src="{{ product.featured_image | img_url: 'master' }}" loading="lazy" class="predictive-search_image"></div><div class="predictive-search_product-info"><div class="text-size-regular text-weight-bold"><span li-object="product.title">{{ product.title }}</span></div><div class="text-size-small"><span li-object="product.price | money">{{ product.price | money }}</span></div></div></a>
-</li>
-{% endfor %}</ul></div></div>    </div>
-{% endunless %}</div></div></form><div class="hide w-form-done"><div>Danke! Deine Suche wurde abgeschickt.</div></div><div class="hide w-form-fail"><div>Hoppla! Bei der Suche ist etwas schiefgegangen.</div></div></div></div></predictive-search></div></nav></div></div><div class="nav_wishlist"><a href="{{ section.settings.url_wishlist_link }}" class="nav_shop-icon w-inline-block"> <div class="icon-embed-xsmall w-embed">{% render 'icon_favorite' %}</div> </a></div>{% if shop.customer_accounts_optional %}    <div li-if="shop.customer_accounts_optional" class="nav_account">
+{% endif %}{% if predictive_search.performed and predictive_search.resources.products.size == 0 %}    <div li-if="predictive_search.performed and predictive_search.resources.products.size == 0" class="nav_search-no-results">
+    <div class="text-style-muted">Keine Treffer für "<span li-object="predictive_search.terms">{{ predictive_search.terms }}</span>"</div>    </div>
+{% endif %}</div></div></div></div></div></div></div><div class="nav_wishlist"><a href="{{ section.settings.url_wishlist_link }}" class="nav_shop-icon w-inline-block"> <div class="icon-embed-xsmall w-embed">{% render 'icon_favorite' %}</div> </a></div>{% if shop.customer_accounts_optional %}    <div li-if="shop.customer_accounts_optional" class="nav_account">
     <a href="{% if customer %}{{ routes.account_url }}{% else %}{{ routes.account_login_url }}{% endif %}" class="nav_shop-icon w-inline-block"><div class="icon-embed-xsmall w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 24 24" fill="none" aria-hidden="true" role="img"><mask id="mask0_2941_121306" style="mask-type:alpha" maskunits="userSpaceOnUse" x="0" y="0" width="24" height="24"><rect width="24" height="24" fill="#D9D9D9"></rect></mask><g mask="url(#mask0_2941_121306)"><path d="M12 12C10.9 12 9.95833 11.6083 9.175 10.825C8.39167 10.0417 8 9.1 8 8C8 6.9 8.39167 5.95833 9.175 5.175C9.95833 4.39167 10.9 4 12 4C13.1 4 14.0417 4.39167 14.825 5.175C15.6083 5.95833 16 6.9 16 8C16 9.1 15.6083 10.0417 14.825 10.825C14.0417 11.6083 13.1 12 12 12ZM4 20V17.2C4 16.6333 4.14583 16.1125 4.4375 15.6375C4.72917 15.1625 5.11667 14.8 5.6 14.55C6.63333 14.0333 7.68333 13.6458 8.75 13.3875C9.81667 13.1292 10.9 13 12 13C13.1 13 14.1833 13.1292 15.25 13.3875C16.3167 13.6458 17.3667 14.0333 18.4 14.55C18.8833 14.8 19.2708 15.1625 19.5625 15.6375C19.8542 16.1125 20 16.6333 20 17.2V20H4Z" fill="currentColor"></path></g></svg></div></a>    </div>
 {% endif %}<div class="nav_mini-cart"><script>
     document.addEventListener('alpine:init', () => {
@@ -454,27 +453,13 @@
         <div li-js-price="original_total_price" class="text-size-regular text-weight-bold text-style-strikethrough text-style-muted" x-text="LiquifyHelper.moneyFormat(original_total_price, true, '{{ shop.money_with_currency_format }}')">
                                   14,99 €</div>        </div>
     </template></div></div><div li-element="mini-cart-api-response" class="mini-cart_footer-message hide"><div class="mini-cart_footer-message-item"><div class="text-size-regular text-weight-bold">Hinweis</div><div li-js-object="cartApiResponse?.result?.message" class="text-size-regular text-weight-bold" x-text="cartApiResponse?.result?.message">14,99 €</div></div></div><a x-bind:href="'/checkout'" href="#" class="button w-button">Zur Kasse</a><a li-object:href="routes.cart_url" href="{{ routes.cart_url }}" class="button is-secondary w-button">Warenkorb
-                            anzeigen</a></div></div><div li-cloak="hide" li-element="mini-cart-empty" class="mini-cart_empty" :style="total.items && { display: 'none' }"><div class="mini-cart_header"><div class="heading-style-h3">Warenkorb</div><button li-element="dropdown-toggle" aria-label="Close Cart" class="nav_dropdown-close-button" data-dropdowntoggle="" @click="LiquifyHelper.triggerClick($event.target.closest('.w-dropdown').querySelector('.w-dropdown-toggle.w--open'))"><div class="nav_dropdown-close-icon w-embed">{% render 'icon_close' %}</div></button></div><div class="mini-cart_empty-content"><div class="text-size-regular">Dein Warenkorb ist leer</div></div></div></div></nav></div></div></div><div class="nav_menu-button w-nav-button"><div class="menu-icon"><div class="menu-icon_line-top"></div><div class="menu-icon_line-middle"><div class="menu-icon_line-middle-inner"></div></div><div class="menu-icon_line-bottom"></div></div></div></div></div> {% schema %} {
+                            anzeigen</a></div></div><div li-cloak="hide" li-element="mini-cart-empty" class="mini-cart_empty" :style="total.items && { display: 'none' }"><div class="mini-cart_header"><div class="heading-style-h3">Warenkorb</div><button li-element="dropdown-toggle" aria-label="Close Cart" class="nav_dropdown-close-button" data-dropdowntoggle="" @click="LiquifyHelper.triggerClick($event.target.closest('.w-dropdown').querySelector('.w-dropdown-toggle.w--open'))"><div class="nav_dropdown-close-icon w-embed">{% render 'icon_close' %}</div></button></div><div class="mini-cart_empty-content"><div class="text-size-regular">Dein Warenkorb ist leer</div></div></div></div></nav></div></div></div><div class="nav_menu-button w-nav-button"><div class="menu-icon"><div class="menu-icon_line-top"></div><div class="menu-icon_line-middle"><div class="menu-icon_line-middle-inner"></div></div><div class="menu-icon_line-bottom"></div></div></div></div></div><div class="hide w-embed w-script"><script>document.addEventListener("DOMContentLoaded", function() { var nav = document.querySelector(".section_navbar"); if (!nav) return; var style = nav.getAttribute("data-header-style") || "white"; if (style === "transparent") nav.classList.add("is-transparent"); else nav.classList.add("is-white"); var onScroll = function() { if (window.scrollY > 50) nav.classList.add("is-scrolled"); else nav.classList.remove("is-scrolled"); }; if (style === "transparent") { window.addEventListener("scroll", onScroll, { passive: true }); onScroll(); } });</script></div> {% schema %} {
     "tag": "section",
     "name": "Header",
     "class": "section_navbar",
     "blocks": [
         {
-            "name": "Search - Suggestion",
-            "type": "search-suggestion",
-            "settings": [
-                {
-                    "id": "url_link",
-                    "type": "url",
-                    "label": "Link"
-                },
-                {
-                    "id": "text_text",
-                    "type": "text",
-                    "label": "Text",
-                    "default": "Backpacks"
-                }
-            ]
+            "type": "@app"
         }
     ],
     "settings": [
@@ -490,24 +475,64 @@
             "default": "Suche nach Bags, Gr\u00f6\u00dfe..."
         },
         {
-            "id": "text_search",
+            "id": "text_search_tip",
             "type": "text",
-            "label": "Search",
-            "default": "Suche"
+            "label": "Search Tip",
+            "default": "Tipp: Suche nach Artikeln, Kategorien oder Anwendungsgebiet"
         },
         {
-            "id": "collection_search_bestseller",
+            "id": "text_beliebte_suchanfragen_label",
+            "type": "text",
+            "label": "Beliebte Suchanfragen Label",
+            "default": "Beliebte Suchanfragen"
+        },
+        {
+            "id": "url_pill_link",
+            "type": "url",
+            "label": "Pill Link"
+        },
+        {
+            "id": "text_pill_text",
+            "type": "text",
+            "label": "Pill Text",
+            "default": "Rucks\u00e4cke"
+        },
+        {
+            "id": "text_kurzlich_angeschaut_label",
+            "type": "text",
+            "label": "K\u00fcrzlich angeschaut Label",
+            "default": "K\u00fcrzlich angeschaut"
+        },
+        {
+            "id": "url_clear_link",
+            "type": "url",
+            "label": "Clear Link"
+        },
+        {
+            "id": "text_clear_label",
+            "type": "text",
+            "label": "Clear Label",
+            "default": "L\u00f6schen"
+        },
+        {
+            "id": "collection_recent_products",
             "type": "collection",
-            "label": "Search - Bestseller"
+            "label": "Recent Products"
         },
         {
             "type": "range",
-            "id": "collection_search_bestseller_limit",
+            "id": "collection_recent_products_limit",
             "min": 1,
             "max": 99,
             "step": 1,
-            "label": "Limit: Search - Bestseller",
+            "label": "Limit: Recent Products",
             "default": 6
+        },
+        {
+            "id": "text_suggestions_label",
+            "type": "text",
+            "label": "Suggestions Label",
+            "default": "Vorschl\u00e4ge"
         },
         {
             "id": "url_wishlist_link",
@@ -543,17 +568,33 @@
             "id": "text_color",
             "label": "Textfarbe",
             "default": "#ffffff"
+        },
+        {
+            "type": "header",
+            "content": "Header Style"
+        },
+        {
+            "type": "select",
+            "id": "header_style",
+            "label": "Header-Stil",
+            "options": [
+                {
+                    "value": "white",
+                    "label": "Solid wei\u00df"
+                },
+                {
+                    "value": "transparent",
+                    "label": "Transparent (\u00fcber Hero)"
+                }
+            ],
+            "default": "white"
         }
     ],
     "presets": [
         {
             "name": "Header",
-            "category": "Liquify",
-            "blocks": [
-                {
-                    "type": "search-suggestion"
-                }
-            ]
+            "category": "Global",
+            "blocks": []
         }
     ],
     "enabled_on": {
