@@ -2,9 +2,7 @@
 {{ section.settings.text_heading }}
 </h2><div class="text-size-medium"> {{ section.settings.textarea_text }} </div></div><div x-data="{tab: 1}" role="tablist" class="acc-dis_tab-component"><div li-cf-theme-blocks="" class="acc-dis_tab-menu">
 {% content_for 'blocks' %}
-</div><div class="acc-dis_tab-body"><div li-cf-theme-blocks="">
-{% content_for 'blocks' %}
-</div></div></div></div></div></div> {% schema %} {
+</div>{% content_for "block", type: "tab-panes", id: "tab-panes" %}</div></div></div></div> {% schema %} {
     "tag": "section",
     "name": "B2B \/ Templates \u2014 ",
     "class": "section_acc-dis",
@@ -42,7 +40,14 @@
                     "type": "tab"
                 },
                 {
-                    "type": "tab-pane"
+                    "type": "tab-panes",
+                    "static": true,
+                    "id": "tab-panes",
+                    "blocks": [
+                        {
+                            "type": "tab-pane"
+                        }
+                    ]
                 }
             ]
         }
