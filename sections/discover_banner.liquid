@@ -1,0 +1,48 @@
+{% if section.settings.image_bg_image %}
+{{ section.settings.image_bg_image | image_url: width: 1600 | image_tag: loading: 'lazy', class: 'discover_image' }}
+{% else %}
+<img src="{{ 'platzhalter.svg' | asset_url }}" loading="lazy" alt="" class="discover_image">
+{% endif %}<div class="discover_item background-color-primary"><div class="discover_item-content"><h2 class="heading-style-h2">
+{{ section.settings.text_heading }}
+</h2><div class="text-size-medium"> {{ section.settings.textarea_text }} </div><a href="{{ section.settings.url_button_link }}" class="button is-white w-button"> <span>{{ section.settings.text_button_text }}</span> </a></div></div> {% schema %} {
+    "tag": "section",
+    "name": "Discover Banner",
+    "class": "section_discover",
+    "settings": [
+        {
+            "id": "image_bg_image",
+            "type": "image_picker",
+            "label": "BG Image"
+        },
+        {
+            "id": "text_heading",
+            "type": "text",
+            "label": "Heading",
+            "default": "Einer f\u00fcr alle. Alle f\u00fcr Sie."
+        },
+        {
+            "id": "textarea_text",
+            "type": "textarea",
+            "label": "Text",
+            "default": "Die Menschen machen den ber\u00fchmten Unterschied. Spitzenleistungen werden nur von motivierten und zuverl\u00e4ssigen Kolleg:innen erbracht. Das leben wir bei DICOTA."
+        },
+        {
+            "id": "url_button_link",
+            "type": "url",
+            "label": "Button Link"
+        },
+        {
+            "id": "text_button_text",
+            "type": "text",
+            "label": "Button Text",
+            "default": "Jetzt entdecken"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Discover Banner",
+            "category": "Showcase",
+            "blocks": []
+        }
+    ]
+} {% endschema %}

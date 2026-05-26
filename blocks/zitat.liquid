@@ -1,0 +1,31 @@
+<div li-block="Zitat" class="owner_text-block" {{ block.shopify_attributes }}>
+                    <div class="text-size-large">
+{{ block.settings.text_block_heading }}
+</div>
+                    <div class="text-size-small">
+{{ block.settings.text_block_text }}
+</div>
+                </div> {% schema %} {
+    "name": "Zitat",
+    "settings": [
+        {
+            "id": "text_block_heading",
+            "type": "text",
+            "label": "Block Heading",
+            "default": "\"Wir denken in Generationen, nicht in Quartalen.\""
+        },
+        {
+            "id": "text_block_text",
+            "type": "text",
+            "label": "Block Text",
+            "default": "\u2014 Gesch\u00e4ftsf\u00fchrung"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Zitat",
+            "blocks": []
+        }
+    ],
+    "tag": null
+} {% endschema %}

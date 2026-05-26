@@ -1,0 +1,80 @@
+<div class="padding-global padding-section-small"><div class="container-large"><div class="acc-default_wrapper"><div class="acc-default_flex-small"><ul role="list" class="breadcrumbs_component w-list-unstyled"><li class="breadcrumbs_item"><a li-object:href="routes.root_url" href="{{ routes.root_url }}" class="w-inline-block"><div class="text-size-regular">Home</div></a><div class="breadcrumbs_icon w-embed"><svg width="15" height="15" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="1.5" fill="none"></path></svg></div></li><li class="breadcrumbs_item"><div>
+{{ section.settings.text_breadcrumb }}
+</div></li></ul><div class="default-flex-tiny"><h1 class="heading-style-h2">
+{{ section.settings.text_heading }}
+</h1><div class="text-size-medium max-width-large"> {{ section.settings.textarea_subheading }} </div></div><div class="acc-card"><div class="default-flex-tiny"><h2 class="heading-style-h4">
+{{ section.settings.text_liste_heading }}
+</h2><div class="text-size-regular">
+{{ section.settings.text_liste_subheading }}
+</div></div><div li-cf-theme-blocks="" class="acc-double">
+{% content_for 'blocks' %}
+</div><div class="acc_download-item background-color-secondary max-width-full"><div class="acc_download-banner"><div class="acc_download-banner-content"><div class="acc_download-banner-heading"><div class="icon-1x1-large w-embed"><svg width="100%" height="100%" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6" fill="none"></circle><path d="M12 8v5m0 3h.01" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path></svg></div><div class="text-size-large">
+{{ section.settings.text_info_heading }}
+</div></div><div class="text-rich-text w-richtext"> {{ section.settings.richtext_info_text }} </div></div></div></div></div></div></div></div></div> {% schema %} {
+    "tag": "section",
+    "name": "B2B \/ Sales \u2014 Prod",
+    "class": "section_acc-default",
+    "blocks": [
+        {
+            "type": "download"
+        },
+        {
+            "type": "@app"
+        }
+    ],
+    "settings": [
+        {
+            "id": "text_breadcrumb",
+            "type": "text",
+            "label": "Breadcrumb",
+            "default": "Produktliste"
+        },
+        {
+            "id": "text_heading",
+            "type": "text",
+            "label": "Heading",
+            "default": "Produktliste"
+        },
+        {
+            "id": "textarea_subheading",
+            "type": "textarea",
+            "label": "Subheading",
+            "default": "Aktuelle Sortimentsliste als Download \u2014 alle Artikel mit Preisen und Verf\u00fcgbarkeit."
+        },
+        {
+            "id": "text_liste_heading",
+            "type": "text",
+            "label": "Liste Heading",
+            "default": "Sortimentsliste"
+        },
+        {
+            "id": "text_liste_subheading",
+            "type": "text",
+            "label": "Liste Subheading",
+            "default": "Letzte Aktualisierung: heute morgen."
+        },
+        {
+            "id": "text_info_heading",
+            "type": "text",
+            "label": "Info Heading",
+            "default": "Folgende Informationen sind enthalten:"
+        },
+        {
+            "id": "richtext_info_text",
+            "type": "richtext",
+            "label": "Info Text",
+            "default": "<p>Artikel-Nr. \u00b7 Vorg\u00e4ngermodell \u00b7 EAN-Code \u00b7 Verf\u00fcgbarkeit \u00b7 Preisstufen \u00b7 Konstruktionstyp \u00b7 Farbe<\/p>"
+        }
+    ],
+    "presets": [
+        {
+            "name": "B2B \/ Sales \u2014 Prod",
+            "category": "B2B",
+            "blocks": [
+                {
+                    "type": "download"
+                }
+            ]
+        }
+    ]
+} {% endschema %}

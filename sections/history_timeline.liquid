@@ -1,0 +1,84 @@
+<div class="padding-global padding-section-medium"><div class="container-large"><div class="swiper_component is-history-swiper"><div class="default-space-between"><div class="default-flex-small"><div class="text-style-subline">
+{{ section.settings.text_subline }}
+</div><h2 class="heading-style-h2">
+{{ section.settings.text_heading }}
+</h2></div><div class="history_pagination"><div class="text-size-large">
+{{ section.settings.text_start_year }}
+</div><div class="history_drag-wrapper"><div class="history_drag"></div></div><div class="text-size-large">
+{{ section.settings.text_end_year }}
+</div></div></div><div class="history_swiper-wrapper"><div class="swiper is-history-swiper"><div li-cf-theme-blocks="" class="swiper-wrapper is-history-swiper">
+{% content_for 'blocks' %}
+</div></div><div class="history_bg-line"></div></div></div></div></div><div class="hide w-embed w-script"><script>document.addEventListener("DOMContentLoaded", function() { if (typeof Swiper === "undefined") { var s = document.createElement("script"); s.src = "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"; s.onload = initHistorySwiper; document.head.appendChild(s); } else { initHistorySwiper(); } function initHistorySwiper() { document.querySelectorAll(".swiper_component.is-history-swiper").forEach(function(component) { var swiperEl = component.querySelector(".swiper"); var dragWrap = component.querySelector(".history_drag-wrapper"); new Swiper(swiperEl, { autoHeight: false, followFinger: true, freeMode: true, slideToClickedSlide: true, slidesPerView: "auto", speed: 400, spaceBetween: 44, mousewheel: { forceToAxis: true }, keyboard: { enabled: true, onlyInViewport: true }, scrollbar: dragWrap ? { el: dragWrap, draggable: true, dragClass: "history_drag", snapOnRelease: true, dragSize: 30 } : false }); }); } });</script></div> {% schema %} {
+    "tag": "section",
+    "name": "History Timeline",
+    "class": "section_history background-color-primary",
+    "blocks": [
+        {
+            "type": "meilenstein"
+        },
+        {
+            "type": "@app"
+        }
+    ],
+    "settings": [
+        {
+            "id": "text_subline",
+            "type": "text",
+            "label": "Subline",
+            "default": "Unsere Geschichte"
+        },
+        {
+            "id": "text_heading",
+            "type": "text",
+            "label": "Heading",
+            "default": "Von 1992 bis heute"
+        },
+        {
+            "id": "text_start_year",
+            "type": "text",
+            "label": "Start Year",
+            "default": "1992"
+        },
+        {
+            "id": "text_end_year",
+            "type": "text",
+            "label": "End Year",
+            "default": "2026"
+        },
+        {
+            "type": "header",
+            "content": "Abst\u00e4nde"
+        },
+        {
+            "type": "range",
+            "id": "padding_top",
+            "min": 0,
+            "max": 160,
+            "step": 4,
+            "unit": "px",
+            "label": "Abstand oben",
+            "default": 80
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom",
+            "min": 0,
+            "max": 160,
+            "step": 4,
+            "unit": "px",
+            "label": "Abstand unten",
+            "default": 80
+        }
+    ],
+    "presets": [
+        {
+            "name": "History Timeline",
+            "category": "Listing",
+            "blocks": [
+                {
+                    "type": "meilenstein"
+                }
+            ]
+        }
+    ]
+} {% endschema %}

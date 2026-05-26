@@ -13,7 +13,7 @@
                             {% if forloop.index == section.settings.promo1_position %}    <div li-if="forloop.index == section.settings.promo1_position" class="coll_grid-item coll_promo-card">
     <div class="coll_promo-card_inner"><div class="coll_promo-card_content"><h3 class="coll_promo-card_title">
 {{ section.settings.text_promo_1_headline }}
-</h3><p class="coll_promo-card_desc"> {{ section.settings.textarea_promo_1_text }} </p><a href="{{ section.settings.url_promo_1_link }}" class="coll_promo-card_cta w-button"> <span>{{ section.settings.text_promo_1_button }}</span> </a></div><div class="coll_promo-card_media">{% if section.settings.image_promo_1_bild %}
+</h3><p class="coll_promo-card_desc text-size-regular"> {{ section.settings.textarea_promo_1_text }} </p><a href="{{ section.settings.url_promo_1_link }}" class="coll_promo-card_cta w-button"> <span>{{ section.settings.text_promo_1_button }}</span> </a></div><div class="coll_promo-card_media">{% if section.settings.image_promo_1_bild %}
 {{ section.settings.image_promo_1_bild | image_url: width: 500 | image_tag: loading: 'lazy', class: 'coll_promo-card_image' }}
 {% else %}
 <img src="{{ 'placeholder.svg' | asset_url }}" loading="lazy" alt="" class="coll_promo-card_image">
@@ -22,7 +22,7 @@
                             {% if forloop.index == section.settings.promo2_position %}    <div li-if="forloop.index == section.settings.promo2_position" class="coll_grid-item coll_promo-card">
     <div class="coll_promo-card_inner"><div class="coll_promo-card_content"><h3 class="coll_promo-card_title">
 {{ section.settings.text_promo_2_headline }}
-</h3><p class="coll_promo-card_desc"> {{ section.settings.textarea_promo_2_text }} </p><a href="{{ section.settings.url_promo_2_link }}" class="coll_promo-card_cta w-button"> <span>{{ section.settings.text_promo_2_button }}</span> </a></div><div class="coll_promo-card_media">{% if section.settings.image_promo_2_bild %}
+</h3><p class="coll_promo-card_desc text-size-regular"> {{ section.settings.textarea_promo_2_text }} </p><a href="{{ section.settings.url_promo_2_link }}" class="coll_promo-card_cta w-button"> <span>{{ section.settings.text_promo_2_button }}</span> </a></div><div class="coll_promo-card_media">{% if section.settings.image_promo_2_bild %}
 {{ section.settings.image_promo_2_bild | image_url: width: 500 | image_tag: loading: 'lazy', class: 'coll_promo-card_image' }}
 {% else %}
 <img src="{{ 'placeholder.svg' | asset_url }}" loading="lazy" alt="" class="coll_promo-card_image">
@@ -161,7 +161,7 @@
     "presets": [
         {
             "name": "Collection Products",
-            "category": "Liquify",
+            "category": "Listing",
             "blocks": []
         }
     ],

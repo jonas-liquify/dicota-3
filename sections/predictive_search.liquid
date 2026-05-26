@@ -15,7 +15,8 @@
 {% endfor %}</ul>    </div>
 {% endif %}    </div>
 {% endif %}{% if first_column_results_size == 0 %}    <div li-if="first_column_results_size == 0" class="predictive-search_conditional">
-    <div class="predictive-search_topic"><div class="text-style-muted">Keine Treffer für "<span li-object="predictive_search.terms">{{ predictive_search.terms }}</span>"</div></div>    </div>
+    <div class="predictive-search_topic"><div class="text-style-muted">Keine Treffer für
+                                          "<span li-object="predictive_search.terms">{{ predictive_search.terms }}</span>"</div></div>    </div>
 {% endif %}    </div>
 {% endif %}{% unless predictive_search.performed %}    <div li-unless="predictive_search.performed" class="predictive-search_conditional">
     <div class="predictive-search_overflow"><div class="predictive-search_topic"><div class="predictive-search_headline"><div class="text-style-muted">Beliebte Suchen</div></div><ul role="list" class="predictive-search_list w-list-unstyled">{% for block in section.blocks %}

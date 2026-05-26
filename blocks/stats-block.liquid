@@ -1,0 +1,40 @@
+<div li-block="Stats Block" class="company_icon-block" {{ block.shopify_attributes }}>
+                    {% if block.settings.image_icon %}
+{{ block.settings.image_icon | image_url: width: 80 | image_tag: loading: 'lazy', class: 'icon-1x1-large' }}
+{% else %}
+<img src="{{ 'platzhalter.svg' | asset_url }}" loading="lazy" alt="" class="icon-1x1-large">
+{% endif %}
+                    <div class="company_icon-text"><div class="text-size-large">
+{{ block.settings.text_zahl }}
+</div><div class="text-size-medium">
+{{ block.settings.text_label }}
+</div></div>
+                </div> {% schema %} {
+    "name": "Stats Block",
+    "settings": [
+        {
+            "id": "image_icon",
+            "type": "image_picker",
+            "label": "Icon"
+        },
+        {
+            "id": "text_zahl",
+            "type": "text",
+            "label": "Zahl",
+            "default": "14,2 Mio"
+        },
+        {
+            "id": "text_label",
+            "type": "text",
+            "label": "Label",
+            "default": "Recycelte PET-Flaschen"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Stats Block",
+            "blocks": []
+        }
+    ],
+    "tag": null
+} {% endschema %}

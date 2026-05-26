@@ -1,0 +1,65 @@
+<div class="padding-global padding-section-small"><div class="container-large"><div class="heading-h1_grid"><h1 class="heading-style-h1">
+{{ section.settings.text_heading }}
+</h1><div class="default-flex-small"><div class="text-size-medium"> {{ section.settings.textarea_text }} </div>{% if section.settings.text_button_text != blank %}    <div li-if="section.settings.text_button_text != blank" class="button-wrapper">
+    <a href="{{ section.settings.url_button_link }}" class="button w-button"> <span>{{ section.settings.text_button_text }}</span> </a>    </div>
+{% endif %}</div></div></div></div> {% schema %} {
+    "tag": "section",
+    "name": "Two-Column Hero",
+    "class": "section_heading-h1",
+    "settings": [
+        {
+            "id": "text_heading",
+            "type": "text",
+            "label": "Heading",
+            "default": "\u00dcber uns"
+        },
+        {
+            "id": "textarea_text",
+            "type": "textarea",
+            "label": "Text",
+            "default": "Wir entwickeln Produkte, die den Alltag von mobilen Profis sicherer, einfacher und nachhaltiger machen \u2014 seit \u00fcber 30 Jahren aus der Schweiz."
+        },
+        {
+            "id": "url_button_link",
+            "type": "url",
+            "label": "Button Link"
+        },
+        {
+            "id": "text_button_text",
+            "type": "text",
+            "label": "Button Text",
+            "default": "Mehr erfahren"
+        },
+        {
+            "type": "header",
+            "content": "Abst\u00e4nde"
+        },
+        {
+            "type": "range",
+            "id": "padding_top",
+            "min": 0,
+            "max": 160,
+            "step": 4,
+            "unit": "px",
+            "label": "Abstand oben",
+            "default": 80
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom",
+            "min": 0,
+            "max": 160,
+            "step": 4,
+            "unit": "px",
+            "label": "Abstand unten",
+            "default": 40
+        }
+    ],
+    "presets": [
+        {
+            "name": "Two-Column Hero",
+            "category": "Hero",
+            "blocks": []
+        }
+    ]
+} {% endschema %}
