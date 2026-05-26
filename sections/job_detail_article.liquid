@@ -1,0 +1,79 @@
+<div class="padding-global padding-section-small"><div class="container-large"><div class="article_grid"><div class="article_wrapper"><div class="article_button-wrapper"><a href="{{ section.settings.url_zuruck_link }}" class="article_button w-inline-block"> <div class="article_button-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewbox="0 0 18 18" fill="none"><path d="M11.25 3.375L5.625 9L11.25 14.625" stroke="currentColor" stroke-width="1.6875"></path></svg></div><div>{{ section.settings.text_zuruck_text }}</div> </a></div><div class="article_header"><h1 class="heading-style-h2">
+{{ section.settings.text_heading }}
+</h1><div class="blog-hero_top-row"><div class="blog_tag is-large is-dark"><div>
+{{ section.settings.text_tag_1 }}
+</div></div><div class="text-size-tiny">
+{{ section.settings.text_tag_2 }}
+</div></div></div><div class="text-rich-text w-richtext"> {{ section.settings.richtext_beschreibung }} </div></div></div></div></div> {% schema %} {
+    "tag": "section",
+    "name": "Job Detail Article",
+    "class": "section_article",
+    "settings": [
+        {
+            "id": "url_zuruck_link",
+            "type": "url",
+            "label": "Zur\u00fcck Link"
+        },
+        {
+            "id": "text_zuruck_text",
+            "type": "text",
+            "label": "Zur\u00fcck Text",
+            "default": "Alle Stellen"
+        },
+        {
+            "id": "text_heading",
+            "type": "text",
+            "label": "Heading",
+            "default": "Stellentitel"
+        },
+        {
+            "id": "text_tag_1",
+            "type": "text",
+            "label": "Tag 1",
+            "default": "Vollzeit"
+        },
+        {
+            "id": "text_tag_2",
+            "type": "text",
+            "label": "Tag 2",
+            "default": "Standort"
+        },
+        {
+            "id": "richtext_beschreibung",
+            "type": "richtext",
+            "label": "Beschreibung",
+            "default": "<p>\u00dcber die StelleBeschreibe hier die Aufgaben, Anforderungen und Benefits.<\/p>"
+        },
+        {
+            "type": "header",
+            "content": "Abst\u00e4nde"
+        },
+        {
+            "type": "range",
+            "id": "padding_top",
+            "min": 0,
+            "max": 160,
+            "step": 4,
+            "unit": "px",
+            "label": "Abstand oben",
+            "default": 40
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom",
+            "min": 0,
+            "max": 160,
+            "step": 4,
+            "unit": "px",
+            "label": "Abstand unten",
+            "default": 80
+        }
+    ],
+    "presets": [
+        {
+            "name": "Job Detail Article",
+            "category": "Content",
+            "blocks": []
+        }
+    ]
+} {% endschema %}

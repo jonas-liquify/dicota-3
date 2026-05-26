@@ -1,0 +1,51 @@
+<div li-block="Karte" class="icon-cards_card is-line-right" {{ block.shopify_attributes }}>
+                    {% if block.settings.image_icon %}
+{{ block.settings.image_icon | image_url: width: 96 | image_tag: loading: 'lazy', class: 'icon-1x1-xlarge' }}
+{% else %}
+<img src="{{ 'platzhalter.svg' | asset_url }}" loading="lazy" alt="" class="icon-1x1-xlarge">
+{% endif %}
+                    <div class="default-flex-tiny"><h3 class="text-size-large">
+{{ block.settings.text_heading }}
+</h3><div class="text-size-medium"> {{ block.settings.textarea_text }} </div>{% if block.settings.text_button_text != blank %}    <div li-if="block.settings.text_button_text != blank" class="button-wrapper">
+    <a href="{{ block.settings.url_button_link }}" class="button w-button"> <span>{{ block.settings.text_button_text }}</span> </a>    </div>
+{% endif %}</div>
+                </div> {% schema %} {
+    "name": "Karte",
+    "settings": [
+        {
+            "id": "image_icon",
+            "type": "image_picker",
+            "label": "Icon"
+        },
+        {
+            "id": "text_heading",
+            "type": "text",
+            "label": "Heading",
+            "default": "Schweizer Qualit\u00e4t"
+        },
+        {
+            "id": "textarea_text",
+            "type": "textarea",
+            "label": "Text",
+            "default": "Entwickelt und getestet in der Schweiz f\u00fcr h\u00f6chste Anspr\u00fcche."
+        },
+        {
+            "id": "url_button_link",
+            "type": "url",
+            "label": "Button Link"
+        },
+        {
+            "id": "text_button_text",
+            "type": "text",
+            "label": "Button Text",
+            "default": "Mehr erfahren"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Karte",
+            "blocks": []
+        }
+    ],
+    "tag": null
+} {% endschema %}

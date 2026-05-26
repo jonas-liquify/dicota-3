@@ -1,0 +1,76 @@
+<div class="split-image_content-wrapper is-right-image"><div class="default-flex-small"><div class="text-style-subline">
+{{ section.settings.text_subline }}
+</div><h1 class="heading-style-h1">
+{{ section.settings.text_heading }}
+</h1><div class="text-size-regular"> {{ section.settings.textarea_text }} </div></div><div class="b2b-login_form-block w-form">{% form 'customer-login', class: 'b2b-login_form' %}
+<div class="form_field-wrapper"><input class="form_input is-gutschein-form w-input" maxlength="256" name="customer[email]" placeholder=" " type="email" id="b2b-email" required=""><label for="b2b-email" class="form_label is-gutschein-form">E-Mail-Adresse*</label></div><div class="form_field-wrapper"><input class="form_input is-gutschein-form w-input" maxlength="256" name="customer[password]" placeholder=" " type="password" id="b2b-password" required=""><label for="b2b-password" class="form_label is-gutschein-form">Passwort*</label></div><div class="b2b-login_links"><a href="{{ section.settings.url_passwort_vergessen_link }}" class="text-size-small text-weight-medium text-style-link"> <span>{{ section.settings.text_passwort_vergessen_text }}</span> </a></div><div class="button-group margin-top margin-small"><input type="submit" data-wait="Bitte warten..." class="button is-white w-button" value="Einloggen"></div><div class="b2b-login_register"><div class="text-size-small">
+{{ section.settings.text_registrieren_text }}
+</div><a href="{{ section.settings.url_registrieren_link }}" class="text-size-small text-weight-medium text-style-link"> <span>{{ section.settings.text_registrieren_link_text }}</span> </a></div>{% endform %}</div></div><div class="split-image_image-block">{% if section.settings.image_bild %}
+{{ section.settings.image_bild | image_url: width: 1200 | image_tag: loading: 'lazy', class: 'split-image_image' }}
+{% else %}
+<img src="{{ 'platzhalter.svg' | asset_url }}" loading="lazy" alt="" class="split-image_image">
+{% endif %}</div> {% schema %} {
+    "tag": "section",
+    "name": "B2B Login",
+    "class": "section_split-image-right section_b2b-login background-color-primary",
+    "settings": [
+        {
+            "id": "text_subline",
+            "type": "text",
+            "label": "Subline",
+            "default": "B2B Partner"
+        },
+        {
+            "id": "text_heading",
+            "type": "text",
+            "label": "Heading",
+            "default": "Willkommen im DICOTA Partner-Bereich"
+        },
+        {
+            "id": "textarea_text",
+            "type": "textarea",
+            "label": "Text",
+            "default": "Logge dich ein, um Volumenpreise, Marketing-Material und exklusive Partner-Inhalte zu nutzen."
+        },
+        {
+            "id": "url_passwort_vergessen_link",
+            "type": "url",
+            "label": "Passwort vergessen Link"
+        },
+        {
+            "id": "text_passwort_vergessen_text",
+            "type": "text",
+            "label": "Passwort vergessen Text",
+            "default": "Passwort vergessen?"
+        },
+        {
+            "id": "text_registrieren_text",
+            "type": "text",
+            "label": "Registrieren Text",
+            "default": "Noch kein Partner-Account?"
+        },
+        {
+            "id": "url_registrieren_link",
+            "type": "url",
+            "label": "Registrieren Link"
+        },
+        {
+            "id": "text_registrieren_link_text",
+            "type": "text",
+            "label": "Registrieren Link Text",
+            "default": "Jetzt registrieren \u2192"
+        },
+        {
+            "id": "image_bild",
+            "type": "image_picker",
+            "label": "Bild"
+        }
+    ],
+    "presets": [
+        {
+            "name": "B2B Login",
+            "category": "Form",
+            "blocks": []
+        }
+    ]
+} {% endschema %}

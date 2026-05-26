@@ -1,0 +1,69 @@
+<div class="padding-global padding-section-medium"><div class="container-large"><div class="w-layout-grid contact_component"><div class="contact_content"><div class="margin-bottom margin-small"><h1 class="heading-style-h2">
+{{ section.settings.text_heading }}
+</h1></div><p class="text-size-medium">
+{{ section.settings.text_paragraph }}
+</p></div><div class="contact_form-block w-form">{% form 'contact', return_to: '/', class: 'contact_form' %}
+<div class="form_field-wrapper"><label for="First-Name-2" class="form_field-label">
+{{ section.settings.text_first_name }}
+</label><input class="form_input w-input" maxlength="256" name="contact[first_name]" data-name="First Name 2" placeholder="" type="text" id="First-Name-2" required=""></div><div class="form_field-wrapper"><label for="Last-Name-2" class="form_field-label">
+{{ section.settings.text_last_name }}
+</label><input class="form_input w-input" maxlength="256" name="contact[last_name]" data-name="Last Name 2" placeholder="" type="text" id="Last-Name-2" required=""></div><div class="form_field-wrapper"><label for="Email-2" class="form_field-label">
+{{ section.settings.text_email }}
+</label><input class="form_input w-input" maxlength="256" name="contact[email]" data-name="Email 2" placeholder="" type="email" id="Email-2" required=""></div><div class="form_field-wrapper"><label for="Message-2" class="form_field-label">
+{{ section.settings.text_message }}
+</label><textarea class="form_input is-text-area w-input" maxlength="5000" name="contact[body]" data-name="Message 2" placeholder="" id="Message-2" required=""></textarea></div><div class="margin-bottom margin-xsmall"><label id="Contact-5-Checkbox" class="w-checkbox form_checkbox" name="contact[checkbox]"><div class="w-checkbox-input w-checkbox-input--inputType-custom form_checkbox-icon"></div><input id="Checkbox-2" type="checkbox" name="Checkbox-2" data-name="Checkbox 2" required="" style="opacity:0;position:absolute;z-index:-1"><div for="Checkbox-2" class="form_checkbox-label text-size-small w-form-label"> {{ section.settings.richtext_i_accept_the_terms }} </div></label></div><input type="submit" data-wait="Please wait..." id="w-node-_6ca8e057-6645-9d42-e1be-60491d7bcc0d-1d7bcbea" class="button w-button" value="Submit">{% endform %}<div class="success-message w-form-done"><div class="success-text">Thank you! Your submission has been received!</div></div><div class="error-message w-form-fail"><div class="error-text">Oops! Something went wrong while submitting the form.</div></div></div></div></div></div> {% schema %} {
+    "tag": "section",
+    "name": "Contact Form",
+    "class": "section_contact",
+    "settings": [
+        {
+            "id": "text_heading",
+            "type": "text",
+            "label": "Heading",
+            "default": "Contact us"
+        },
+        {
+            "id": "text_paragraph",
+            "type": "text",
+            "label": "Paragraph",
+            "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        },
+        {
+            "id": "text_first_name",
+            "type": "text",
+            "label": "First Name",
+            "default": "First Name"
+        },
+        {
+            "id": "text_last_name",
+            "type": "text",
+            "label": "Last Name",
+            "default": "Last Name"
+        },
+        {
+            "id": "text_email",
+            "type": "text",
+            "label": "Email",
+            "default": "Email"
+        },
+        {
+            "id": "text_message",
+            "type": "text",
+            "label": "Message",
+            "default": "Message"
+        },
+        {
+            "id": "richtext_i_accept_the_terms",
+            "type": "richtext",
+            "label": "I accept the Terms",
+            "default": "<p>I accept the Terms<\/p>"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Contact Form",
+            "category": "Form",
+            "blocks": []
+        }
+    ]
+} {% endschema %}

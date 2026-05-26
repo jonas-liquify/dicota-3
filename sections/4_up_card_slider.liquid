@@ -1,0 +1,60 @@
+<div class="padding-global padding-section-medium"><div class="container-large"><div class="swiper_component is-quad-cards"><div class="default-space-between"><h2 class="heading-style-h2">
+{{ section.settings.text_heading }}
+</h2><div class="swiper_navigation"><button aria-label="Vorherige Slide" class="swiper_button swiper_prev"><div class="swiper_button-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewbox="0 0 38 38" fill="none"><rect x="38" y="0" width="38" height="38" rx="19" transform="rotate(90 38 0)" fill="#F4F4F4"></rect><path d="M12.7765 19.5483L21.2284 11.0964L22.8037 12.6718L15.9272 19.5483L22.8037 26.4249L21.2283 28.0002L12.7765 19.5483Z" fill="#0F0F0F"></path></svg></div></button><button aria-label="Nächste Slide" class="swiper_button swiper_next"><div class="swiper_button-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewbox="0 0 38 38" fill="none"><rect y="38" width="38" height="38" rx="19" transform="rotate(-90 0 38)" fill="#0F0F0F"></rect><path d="M25.2245 18.4522L16.7726 26.9041L15.1973 25.3287L22.0738 18.4522L15.1973 11.5756L16.7726 10.0003L25.2245 18.4522Z" fill="white"></path></svg></div></button></div></div><div class="swiper is-quad-cards"><div li-cf-theme-blocks="" class="swiper-wrapper is-quad-cards">
+{% content_for 'blocks' %}
+</div></div></div></div></div><div class="hide w-embed w-script"><script>document.addEventListener("DOMContentLoaded", function() { var ensure = function(cb) { if (typeof Swiper !== "undefined") return cb(); var s = document.createElement("script"); s.src = "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"; s.onload = cb; document.head.appendChild(s); }; ensure(function() { document.querySelectorAll(".swiper_component.is-quad-cards").forEach(function(c) { var prev = c.querySelector(".swiper_button.swiper_prev"); var next = c.querySelector(".swiper_button.swiper_next"); new Swiper(c.querySelector(".swiper"), { slidesPerView: 1, spaceBetween: 24, speed: 500, breakpoints: { 480: { slidesPerView: 2 }, 992: { slidesPerView: 4 } }, navigation: { prevEl: prev, nextEl: next, disabledClass: "swiper-button-disabled" } }); }); }); });</script></div> {% schema %} {
+    "tag": "section",
+    "name": "4-up Card Slider",
+    "class": "section_triple-cards",
+    "blocks": [
+        {
+            "type": "karte"
+        },
+        {
+            "type": "@app"
+        }
+    ],
+    "settings": [
+        {
+            "id": "text_heading",
+            "type": "text",
+            "label": "Heading",
+            "default": "Unsere Werte"
+        },
+        {
+            "type": "header",
+            "content": "Abst\u00e4nde"
+        },
+        {
+            "type": "range",
+            "id": "padding_top",
+            "min": 0,
+            "max": 160,
+            "step": 4,
+            "unit": "px",
+            "label": "Abstand oben",
+            "default": 80
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom",
+            "min": 0,
+            "max": 160,
+            "step": 4,
+            "unit": "px",
+            "label": "Abstand unten",
+            "default": 80
+        }
+    ],
+    "presets": [
+        {
+            "name": "4-up Card Slider",
+            "category": "Listing",
+            "blocks": [
+                {
+                    "type": "karte"
+                }
+            ]
+        }
+    ]
+} {% endschema %}

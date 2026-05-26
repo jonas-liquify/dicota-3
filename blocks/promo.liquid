@@ -1,0 +1,58 @@
+<div li-block="Promo" class="acc-card gap-2-5" {{ block.shopify_attributes }}>
+                    {% if block.settings.image_bild %}
+{{ block.settings.image_bild | image_url: width: 600 | image_tag: loading: 'lazy', class: 'acc-card_3-2-image' }}
+{% else %}
+<img src="{{ 'platzhalter.svg' | asset_url }}" loading="lazy" alt="" class="acc-card_3-2-image">
+{% endif %}
+                    <div class="acc-card_content"><div class="text-style-subline">
+{{ block.settings.text_tag }}
+</div><div class="text-size-large">
+{{ block.settings.text_heading }}
+</div><div class="text-size-regular"> {{ block.settings.textarea_text }} </div></div>
+                    <a href="{{ block.settings.url_button_link }}" class="button is-secondary w-button"> <span>{{ block.settings.text_button_text }}</span> </a>
+                </div> {% schema %} {
+    "name": "Promo",
+    "settings": [
+        {
+            "id": "image_bild",
+            "type": "image_picker",
+            "label": "Bild"
+        },
+        {
+            "id": "text_tag",
+            "type": "text",
+            "label": "Tag",
+            "default": "Bundle"
+        },
+        {
+            "id": "text_heading",
+            "type": "text",
+            "label": "Heading",
+            "default": "Promotion-Titel"
+        },
+        {
+            "id": "textarea_text",
+            "type": "textarea",
+            "label": "Text",
+            "default": "Beschreibung der Promo-Aktion mit Zielgruppe und Geltungszeitraum."
+        },
+        {
+            "id": "url_button_link",
+            "type": "url",
+            "label": "Button Link"
+        },
+        {
+            "id": "text_button_text",
+            "type": "text",
+            "label": "Button Text",
+            "default": "Details"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Promo",
+            "blocks": []
+        }
+    ],
+    "tag": null
+} {% endschema %}
