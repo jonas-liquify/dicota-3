@@ -82,8 +82,8 @@
         "text_button_text": "Alle New Releases",
         "collection_kollektion": "frontpage",
         "collection_kollektion_limit": 6,
-        "padding_top": 40,
-        "padding_bottom": 80,
+        "padding_top": 44,
+        "padding_bottom": 52,
         "bg_color": "#ffffff",
         "text_color": "#0f0f0f"
       }
@@ -91,6 +91,22 @@
     "usp_icon_row": {
       "type": "usp_icon_row",
       "blocks": {
+        "usp_QQHj3W": {
+          "type": "usp",
+          "name": "USP",
+          "settings": {
+            "text_text": "Gratis Versand ab 100 EUR"
+          },
+          "blocks": {}
+        },
+        "usp_qfniEk": {
+          "type": "usp",
+          "name": "USP",
+          "settings": {
+            "text_text": "Gratis Versand ab 100 EUR"
+          },
+          "blocks": {}
+        },
         "usp": {
           "type": "usp",
           "name": "USP",
@@ -101,6 +117,8 @@
         }
       },
       "block_order": [
+        "usp_QQHj3W",
+        "usp_qfniEk",
         "usp"
       ],
       "settings": {
@@ -130,6 +148,24 @@
     "shop_by_category": {
       "type": "shop_by_category",
       "blocks": {
+        "kategorie_iwYKrw": {
+          "type": "kategorie",
+          "name": "Kategorie",
+          "settings": {
+            "url_link": "",
+            "text_titel": "Backpacks"
+          },
+          "blocks": {}
+        },
+        "kategorie_tB3PWQ": {
+          "type": "kategorie",
+          "name": "Kategorie",
+          "settings": {
+            "url_link": "",
+            "text_titel": "Backpacks"
+          },
+          "blocks": {}
+        },
         "kategorie": {
           "type": "kategorie",
           "name": "Kategorie",
@@ -141,6 +177,8 @@
         }
       },
       "block_order": [
+        "kategorie_iwYKrw",
+        "kategorie_tB3PWQ",
         "kategorie"
       ],
       "settings": {
