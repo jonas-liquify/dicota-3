@@ -15,9 +15,9 @@
                             {% unless char %}    <span li-unless="char == '.'" class="sustainability_counter-digit" li-object="char">
     0    </span>
 {% endunless %}
-                    {% endfor %}    </div></div><h2 class="sustainability_title">
+                    {% endfor %}    </div></div><h2 class="sustainability_title heading-style-h2">
 {{ section.settings.text_uberschrift }}
-</h2><p class="sustainability_subtext"> {{ section.settings.textarea_beschreibung }} </p><div class="sustainability_actions"><a href="{{ section.settings.url_button_link }}" class="button sustainability_button w-button"> <span>{{ section.settings.text_button_text }}</span> </a></div></div> {% schema %} {
+</h2><p class="sustainability_subtext text-size-regular"> {{ section.settings.textarea_beschreibung }} </p><div class="sustainability_actions"><a href="{{ section.settings.url_button_link }}" class="button sustainability_button w-button"> <span>{{ section.settings.text_button_text }}</span> </a></div></div> {% schema %} {
     "tag": "section",
     "name": "Sustainability Banne",
     "class": "section_sustainability",
@@ -42,7 +42,7 @@
             "id": "textarea_beschreibung",
             "type": "textarea",
             "label": "Beschreibung",
-            "default": "Seit 1992 wurden mehr als 12 Millionen\n            PET-Flaschen verarbeitet, um Abfall zu minimieren und Nachhaltigkeit zu f\u00f6rdern"
+            "default": "Seit 1992 wurden mehr als 12 Millionen PET-Flaschen verarbeitet, um Abfall zu minimieren und Nachhaltigkeit zu f\u00f6rdern"
         },
         {
             "id": "url_button_link",

@@ -1,4 +1,4 @@
-<div class="header_background-image-wrapper"><div class="header_overlay-layer"></div>{% if collection.featured_image != blank %}    <div li-if="collection.featured_image != blank">
+<div><div class="header_overlay-layer"></div>{% if collection.featured_image != blank %}    <div li-if="collection.featured_image != blank">
     <img src="{{ collection.featured_image | image_url: width: 1000 }}" loading="eager" li-object:src="collection.featured_image | image_url: width: 1000" li-object:alt="collection.featured_image.alt" alt="{{ collection.featured_image.alt }}" class="header_background-image">    </div>
 {% endif %}</div><div class="padding-global padding-section-large"><div class="container-small"><div class="text-align-center"><div class="max-width-xlarge align-center"><div class="margin-bottom margin-small"><h1 li-object="collection.title" class="heading-style-h1 text-color-white">{{ collection.title }}</h1></div><p li-object="collection.description" class="text-size-medium text-color-white">{{ collection.description }}</p></div></div></div></div> {% schema %} {
     "tag": "section",

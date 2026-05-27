@@ -1,8 +1,6 @@
 <div class="padding-global padding-section-medium"><div class="container-large"><div class="default-small-component"><div class="default-flex-tiny"><h2 class="heading-style-h2">
 {{ section.settings.text_heading }}
-</h2><div class="text-size-medium"> {{ section.settings.textarea_text }} </div></div><div x-data="{tab: 1}" role="tablist" class="acc-dis_tab-component"><div li-cf-theme-blocks="" class="acc-dis_tab-menu">
-{% content_for 'blocks' %}
-</div>{% content_for "block", type: "tab-panes", id: "tab-panes" %}</div></div></div></div> {% schema %} {
+</h2><div class="text-size-medium"> {{ section.settings.textarea_text }} </div></div><div x-data="{tab: 1}" role="tablist" class="acc-dis_tab-component">{% content_for "block", type: "tab-menu", id: "tab-menu" %}{% content_for "block", type: "tab-panes", id: "tab-panes" %}</div></div></div></div> {% schema %} {
     "tag": "section",
     "name": "B2B \/ Templates \u2014 ",
     "class": "section_acc-dis",
@@ -37,7 +35,14 @@
             "category": "B2B",
             "blocks": [
                 {
-                    "type": "tab"
+                    "type": "tab-menu",
+                    "static": true,
+                    "id": "tab-menu",
+                    "blocks": [
+                        {
+                            "type": "tab"
+                        }
+                    ]
                 },
                 {
                     "type": "tab-panes",
