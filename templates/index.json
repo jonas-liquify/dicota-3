@@ -69,8 +69,7 @@
           "type": "usp",
           "name": "USP",
           "settings": {
-            "text_uberschrift": "Free Shipping ab 80 EUR",
-            "textarea_beschreibung": "Free standard shipping available in the European Union"
+            "text_text": "Gratis Versand ab 100 EUR"
           },
           "blocks": {}
         }
@@ -257,9 +256,7 @@
             "url_read_more_link": "",
             "text_read_more_label": "Read more",
             "text_name": "Louisa Maierhover",
-            "text_zeitpunkt": "vor 5 Stunden",
-            "rating": 5,
-            "verified": true
+            "text_zeitpunkt": "vor 5 Stunden"
           },
           "blocks": {}
         },
@@ -272,9 +269,7 @@
             "url_read_more_link": "",
             "text_read_more_label": "Read more",
             "text_name": "Louisa Maierhover",
-            "text_zeitpunkt": "vor 5 Stunden",
-            "rating": 5,
-            "verified": true
+            "text_zeitpunkt": "vor 5 Stunden"
           },
           "blocks": {}
         }
@@ -288,9 +283,9 @@
         "text_bewertung_zahl": "4,83",
         "text_bewertung_label": "Hervorragend",
         "text_anzahl_bewertungen": "17 982 Bewertungen",
-        "show_rating": true,
         "padding_top": 80,
-        "padding_bottom": 80
+        "padding_bottom": 80,
+        "show_rating": true
       }
     }
   },
