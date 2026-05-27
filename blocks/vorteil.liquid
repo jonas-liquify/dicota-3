@@ -1,0 +1,29 @@
+<div li-block="Vorteil" class="reseller-hub_acc-item" x-data="{ idx: 0 }" x-init="idx = ++count" {{ block.shopify_attributes }}>
+                    <button type="button" class="reseller-hub_acc-head" x-on:click="open = (open === idx ? null : idx)"><div class="reseller-hub_acc-icon w-embed"><svg width="100%" height="100%" viewbox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M18 11v2h4v-2h-4zm-2 6.61c.96.71 2.21 1.65 3.2 2.39.4-.53.8-1.07 1.2-1.6-.99-.74-2.24-1.68-3.2-2.4-.4.54-.8 1.08-1.2 1.61zM20.4 5.6c-.4-.53-.8-1.07-1.2-1.6-.99.74-2.24 1.68-3.2 2.4.4.53.8 1.07 1.2 1.6.96-.72 2.21-1.65 3.2-2.4zM4 9c-1.1 0-2 .9-2 2v2c0 1.1.9 2 2 2h1v4h2v-4h1l5 3V6L8 9H4zm11.5 3c0-1.33-.58-2.53-1.5-3.35v6.69c.92-.81 1.5-2.01 1.5-3.34z"></path></svg></div><span class="reseller-hub_acc-label">
+{{ block.settings.text_titel }}
+</span><div class="reseller-hub_acc-chev w-embed" x-bind:class="open === idx ? 'is-open' : ''"><svg width="100%" height="100%" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2.55806 6.29544C2.46043 6.19781 2.46043 6.03952 2.55806 5.94189L3.44195 5.058C3.53958 4.96037 3.69787 4.96037 3.7955 5.058L8.00001 9.26251L12.2045 5.058C12.3021 4.96037 12.4604 4.96037 12.5581 5.058L13.4419 5.94189C13.5396 6.03952 13.5396 6.19781 13.4419 6.29544L8.17678 11.5606C8.07915 11.6582 7.92086 11.6582 7.82323 11.5606L2.55806 6.29544Z" fill="currentColor"></path></svg></div></button>
+                    <div class="reseller-hub_acc-body" x-show="open === idx" x-cloak=""><p class="text-size-small"> {{ block.settings.textarea_text }} </p></div>
+                </div> {% schema %} {
+    "name": "Vorteil",
+    "settings": [
+        {
+            "id": "text_titel",
+            "type": "text",
+            "label": "Titel",
+            "default": "Marketing &amp; Sales"
+        },
+        {
+            "id": "textarea_text",
+            "type": "textarea",
+            "label": "Text",
+            "default": "Nutzen Sie die Tools und Ressourcen des Clubs f\u00fcr eine optimale Pr\u00e4sentation Ihres Sortiments \u2014 sowohl online als auch auf der Verkaufsfl\u00e4che!"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Vorteil",
+            "blocks": []
+        }
+    ],
+    "tag": null
+} {% endschema %}
