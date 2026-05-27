@@ -12,6 +12,30 @@
     "hero_slider": {
       "type": "hero_slider",
       "blocks": {
+        "slide_XCDh4f": {
+          "type": "slide",
+          "name": "Slide",
+          "settings": {
+            "text_headline_zeile_1": "Weigh Darker™",
+            "text_headline_zeile_2": "Moon Bag Ruffle",
+            "text_subtext": "Raffiniertes Design. Recycelte moderne Materialien.",
+            "url_button_link": "",
+            "text_button_text": "Jetzt shoppen test"
+          },
+          "blocks": {}
+        },
+        "slide_riGQW3": {
+          "type": "slide",
+          "name": "Slide",
+          "settings": {
+            "text_headline_zeile_1": "Weigh Darker™",
+            "text_headline_zeile_2": "Moon Bag Ruffle",
+            "text_subtext": "Raffiniertes Design. Recycelte moderne Materialien.",
+            "url_button_link": "",
+            "text_button_text": "Jetzt shoppen test"
+          },
+          "blocks": {}
+        },
         "slide": {
           "type": "slide",
           "name": "Slide",
@@ -26,6 +50,8 @@
         }
       },
       "block_order": [
+        "slide_XCDh4f",
+        "slide_riGQW3",
         "slide"
       ],
       "settings": {
