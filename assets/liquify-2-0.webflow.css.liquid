@@ -12377,8 +12377,11 @@ figcaption {
 .the-latest_title { margin: 0 0 2.5rem; max-width: 50rem; }
 .the-latest_slider-wrapper { position: relative; }
 .the-latest_swiper { width: 100%; overflow: hidden; }
+.the-latest_list { display: flex; gap: 1rem; }
 .the-latest_card {
   position: relative;
+  width: min(27rem, 82vw);
+  flex: none;
   height: 31.25rem;
   overflow: hidden;
   background-color: #0f0f0f;
@@ -12412,10 +12415,13 @@ figcaption {
 .dicota-difference_title { margin: 0 0 2.5rem; max-width: 46rem; }
 .dicota-difference_slider-wrapper { position: relative; }
 .dicota-difference_swiper { width: 100%; overflow: hidden; }
+.dicota-difference_list { display: flex; gap: .75rem; }
 .dicota-difference_card {
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
+  width: min(15.5rem, 62vw);
+  flex: none;
   height: auto;
   background-color: #ffffff;
   border: 1px solid #e8e8e8;
@@ -12509,3 +12515,32 @@ figcaption {
   .reseller-hub_panel-inner { padding: 1.75rem; }
   .reseller-promo_content, .the-latest_card-content { padding: 1.5rem; }
 }
+
+/* =============================================================
+   Swiper "auto" slides — fixed widths must beat the bundle's
+   injected .swiper-slide{width:100%} (compound specificity 0,2,0).
+   Without this, slidesPerView:"auto" sliders render 1 full-width slide.
+   ============================================================= */
+.swiper-slide.featured-products_item { width: min(20.5rem, 80vw); }
+.swiper-slide.shop-by-category_item { width: min(27.1875rem, 85vw); }
+.swiper-slide.accessories_item { width: min(20.5rem, 80vw); }
+.swiper-slide.the-latest_card { width: min(27rem, 82vw); }
+.swiper-slide.dicota-difference_card { width: min(15.5rem, 62vw); }
+
+/* =============================================================
+   Project slider arrows — override Swiper bundle's injected defaults.
+   The bundle (loaded after this file, equal specificity) forces
+   width:27px/height:44px, color:#007aff and a ::after glyph from the
+   swiper-icons font onto .swiper-button-prev/next — which clobbered our
+   circular arrow buttons and double-rendered an arrow on every slider.
+   Compound selectors (0,2,0) win regardless of load order.
+   ============================================================= */
+[class*="_arrow"].swiper-button-prev,
+[class*="_arrow"].swiper-button-next {
+  width: 3rem;
+  height: 3rem;
+  margin-top: 0;
+  color: #ffffff;
+}
+[class*="_arrow"].swiper-button-prev::after,
+[class*="_arrow"].swiper-button-next::after { content: none; }

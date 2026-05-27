@@ -1,24 +1,23 @@
-<div li-static-block="Tab Panes" class="acc-dis_tab-body"><div li-cf-theme-blocks="">
-{% content_for 'blocks' %}
-</div></div> {% schema %} {
+<div li-static-block="Tab Panes" class="value-tabs_tab-body"><div>{% for block in section.blocks %}
+    {% if block.type == "tab-pane" %}
+                    <div li-block="Tab Pane" role="tabpanel" class="value-tabs_tab-pane" id="tabpanel-{{ forloop.index }}" aria-labelledby="tab-{{ forloop.index }}" x-bind:style="tab === {{ forloop.index }} ? { display: 'block' } : { display: 'none' }" x-bind:aria-hidden="tab === {{ forloop.index }} ? 'false' : 'true'">
+                                    {% if block.settings.image_tab_bild %}
+{{ block.settings.image_tab_bild | image_url: width: 1200 | image_tag: loading: 'lazy', class: 'value-tabs_image' }}
+{% else %}
+<img src="{{ 'platzhalter.svg' | asset_url }}" loading="lazy" alt="" class="value-tabs_image">
+{% endif %}
+                                    <div class="value-tabs_content"><h3 class="heading-style-h3">
+{{ block.settings.text_tab_heading }}
+</h3><div class="text-size-medium"> {{ block.settings.textarea_tab_text }} </div></div>
+                            </div>
+            {% endif %}
+{% endfor %}</div></div> {% schema %} {
     "name": "Tab Panes",
-    "blocks": [
-        {
-            "type": "region-pane"
-        },
-        {
-            "type": "@app"
-        }
-    ],
     "settings": [],
     "presets": [
         {
             "name": "Tab Panes",
-            "blocks": [
-                {
-                    "type": "region-pane"
-                }
-            ]
+            "blocks": []
         }
     ],
     "tag": null
