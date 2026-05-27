@@ -1,18 +1,12 @@
-<div li-block="Slide" class="swiper-slide hero_slide" {{ block.shopify_attributes }}>
-                    <picture class="hero_bg-picture">{% if block.settings.image_hintergrundbild %}
-{{ block.settings.image_hintergrundbild | image_url: width: 2400 | image_tag: loading: 'eager', class: 'hero_bg-image' }}
+<article li-block="Slide" class="swiper-slide the-latest_card" {{ block.shopify_attributes }}>
+                    {% if block.settings.image_hintergrundbild %}
+{{ block.settings.image_hintergrundbild | image_url: width: 900 | image_tag: loading: 'lazy', class: 'the-latest_card-image' }}
 {% else %}
-<img src="{{ 'hero-apparel-1.svg' | asset_url }}" loading="eager" alt="" class="hero_bg-image">
-{% endif %}</picture>
-                    <div class="hero_overlay"></div>
-                    <div class="hero_content"><div class="hero_text"><div class="hero_headline"><p class="hero_headline-line">
-{{ block.settings.text_headline_zeile_1 }}
-</p><p class="hero_headline-line">
-{{ block.settings.text_headline_zeile_2 }}
-</p></div><p class="hero_subtext text-size-regular">
-{{ block.settings.text_subtext }}
-</p></div><div class="hero_actions"><a href="{{ block.settings.url_button_link }}" class="button hero_button w-button"> <span>{{ block.settings.text_button_text }}</span> </a></div></div>
-                </div> {% schema %} {
+<img src="{{ 'hero-apparel-3.svg' | asset_url }}" loading="lazy" alt="" class="the-latest_card-image">
+{% endif %}
+                    <div class="the-latest_card-overlay"></div>
+                    <a href="{{ block.settings.url_link }}" class="the-latest_card-link w-inline-block"> <div class="the-latest_card-content"><span li-unless="block.settings.badge == blank" class="the-latest_card-badge">{{ block.settings.text_badge }}</span><h3 class="the-latest_card-title heading-style-h4">{{ block.settings.text_titel }}</h3><p class="the-latest_card-text text-size-small"> {{ block.settings.textarea_text }} </p></div> </a>
+                </article> {% schema %} {
     "name": "Slide",
     "settings": [
         {
@@ -21,33 +15,27 @@
             "label": "Hintergrundbild"
         },
         {
-            "id": "text_headline_zeile_1",
-            "type": "text",
-            "label": "Headline Zeile 1",
-            "default": "Weigh Darker\u2122"
-        },
-        {
-            "id": "text_headline_zeile_2",
-            "type": "text",
-            "label": "Headline Zeile 2",
-            "default": "Moon Bag Ruffle"
-        },
-        {
-            "id": "text_subtext",
-            "type": "text",
-            "label": "Subtext",
-            "default": "Raffiniertes Design. Recycelte moderne Materialien."
-        },
-        {
-            "id": "url_button_link",
+            "id": "url_link",
             "type": "url",
-            "label": "Button Link"
+            "label": "Link"
         },
         {
-            "id": "text_button_text",
+            "id": "text_badge",
             "type": "text",
-            "label": "Button Text",
-            "default": "Jetzt shoppen test"
+            "label": "Badge",
+            "default": "NEW"
+        },
+        {
+            "id": "text_titel",
+            "type": "text",
+            "label": "Titel",
+            "default": "Seven"
+        },
+        {
+            "id": "textarea_text",
+            "type": "textarea",
+            "label": "Text",
+            "default": "(Platzhalter) Seit 1992 wurden mehr als 12 Millionen PET-Flaschen verarbeitet, um Abfall zu minimieren -"
         }
     ],
     "presets": [

@@ -12377,8 +12377,11 @@ figcaption {
 .the-latest_title { margin: 0 0 2.5rem; max-width: 50rem; }
 .the-latest_slider-wrapper { position: relative; }
 .the-latest_swiper { width: 100%; overflow: hidden; }
+.the-latest_list { display: flex; gap: 1rem; }
 .the-latest_card {
   position: relative;
+  width: min(27rem, 82vw);
+  flex: none;
   height: 31.25rem;
   overflow: hidden;
   background-color: #0f0f0f;
@@ -12412,10 +12415,13 @@ figcaption {
 .dicota-difference_title { margin: 0 0 2.5rem; max-width: 46rem; }
 .dicota-difference_slider-wrapper { position: relative; }
 .dicota-difference_swiper { width: 100%; overflow: hidden; }
+.dicota-difference_list { display: flex; gap: .75rem; }
 .dicota-difference_card {
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
+  width: min(15.5rem, 62vw);
+  flex: none;
   height: auto;
   background-color: #ffffff;
   border: 1px solid #e8e8e8;
