@@ -1,17 +1,5 @@
 {
     "sections": {
-        "announcement_bar": {
-            "type": "announcement_bar",
-            "blocks": {
-                "usp": {
-                    "type": "usp",
-                    "name": "USP"
-                }
-            },
-            "block_order": [
-                "usp"
-            ]
-        },
         "article_body": {
             "type": "article_body"
         },
@@ -43,8 +31,6 @@
         "announcement_bar",
         "article_body",
         "featured_products",
-        "weitere_storys",
-        "footer_newsletter",
-        "footer_bottom"
+        "weitere_storys"
     ]
 }
