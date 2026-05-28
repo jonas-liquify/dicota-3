@@ -83,6 +83,7 @@
         "text_button_text": "Alle New Releases",
         "collection_kollektion": "backpacks",
         "collection_kollektion_limit": 6,
+        "show_view_all": true,
         "padding_top": 40,
         "padding_bottom": 80,
         "bg_color": "#ffffff",
@@ -114,6 +115,7 @@
     "image_banner": {
       "type": "image_banner",
       "settings": {
+        "image_hintergrundbild": "shopify://shop_images/Dicota_hero_7f1d2a97-4f6a-4d89-b151-e2aa2115e1e1.avif",
         "text_headline_zeile_1": "Weigh Darker™",
         "text_headline_zeile_2": "Moon Bag Ruffle",
         "textarea_subtext": "Raffiniertes Design. Recycelte Materialien.",
@@ -131,17 +133,40 @@
     "shop_by_category": {
       "type": "shop_by_category",
       "blocks": {
+        "kategorie_fGcEcj": {
+          "type": "kategorie",
+          "name": "Kategorie",
+          "settings": {
+            "url_link": "",
+            "image_bild": "shopify://shop_images/Dicota_B2B_2756dd4f-7290-4be4-8489-408333a5a0d8.avif",
+            "text_titel": "Backpacks"
+          },
+          "blocks": {}
+        },
+        "kategorie_V9nXFi": {
+          "type": "kategorie",
+          "name": "Kategorie",
+          "settings": {
+            "url_link": "",
+            "image_bild": "shopify://shop_images/Dicota_Laptop_Bags_78775f76-fc72-4f09-be05-4bc9d20dfdf9.avif",
+            "text_titel": "Backpacks"
+          },
+          "blocks": {}
+        },
         "kategorie": {
           "type": "kategorie",
           "name": "Kategorie",
           "settings": {
             "url_link": "",
+            "image_bild": "shopify://shop_images/Dicota_Roller_c25f3e77-721b-45f9-8e7c-7aaf5d6930f3.avif",
             "text_titel": "Backpacks"
           },
           "blocks": {}
         }
       },
       "block_order": [
+        "kategorie_fGcEcj",
+        "kategorie_V9nXFi",
         "kategorie"
       ],
       "settings": {
@@ -159,6 +184,7 @@
           "type": "banner",
           "name": "Banner",
           "settings": {
+            "image_hintergrundbild": "shopify://shop_images/Dicota_Roller_c25f3e77-721b-45f9-8e7c-7aaf5d6930f3.avif",
             "text_uberschrift": "Tell A Friend & Get 15% Off",
             "textarea_subtext": "Give your friends 15% off their first order, and get a 15% off for each successful referral",
             "url_button_link": "",
@@ -170,6 +196,7 @@
           "type": "banner",
           "name": "Banner",
           "settings": {
+            "image_hintergrundbild": "shopify://shop_images/Dicota_B2B_2756dd4f-7290-4be4-8489-408333a5a0d8.avif",
             "text_uberschrift": "Tell A Friend & Get 15% Off",
             "textarea_subtext": "Give your friends 15% off their first order, and get a 15% off for each successful referral",
             "url_button_link": "",
@@ -262,6 +289,7 @@
     "sustainability_banne": {
       "type": "sustainability_banne",
       "settings": {
+        "image_hintergrundbild": "shopify://shop_images/Dicota_Plastik_c7450c5e-a440-4662-8c05-972c458eb3e7.avif",
         "text_uberschrift": "Verarbeitete Flaschen",
         "textarea_beschreibung": "Seit 1992 wurden mehr als 12 Millionen PET-Flaschen verarbeitet, um Abfall zu minimieren und Nachhaltigkeit zu fördern",
         "url_button_link": "",
@@ -283,7 +311,9 @@
             "url_read_more_link": "",
             "text_read_more_label": "Read more",
             "text_name": "Louisa Maierhover",
-            "text_zeitpunkt": "vor 5 Stunden"
+            "text_zeitpunkt": "vor 5 Stunden",
+            "rating": 5,
+            "verified": true
           },
           "blocks": {}
         },
@@ -296,7 +326,9 @@
             "url_read_more_link": "",
             "text_read_more_label": "Read more",
             "text_name": "Louisa Maierhover",
-            "text_zeitpunkt": "vor 5 Stunden"
+            "text_zeitpunkt": "vor 5 Stunden",
+            "rating": 5,
+            "verified": true
           },
           "blocks": {}
         }
