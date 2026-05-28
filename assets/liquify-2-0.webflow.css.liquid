@@ -692,7 +692,7 @@ figcaption {
   text-align: center;
   white-space: nowrap;
   padding: .65rem 1.5rem;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .button.is-secondary {
@@ -9954,12 +9954,18 @@ figcaption {
 }
 
 /* Section: Boxed Image */
-.section_boxed-image {
+.section_boxed-image { width: 100%; }
+/* Layout modes (merged Boxed Image + Boxed Image Centered) */
+.section_boxed-image .boxed-image_wrapper.is-full {
   position: relative;
   min-height: 80dvh;
   overflow: hidden;
   z-index: 1;
 }
+.section_boxed-image .boxed-image_wrapper.is-contained { width: 100%; }
+/* Only show the branch matching the active layout (li-if renders both in builder preview) */
+.section_boxed-image .boxed-image_wrapper.is-full > .padding-global { display: none; }
+.section_boxed-image .boxed-image_wrapper.is-contained > .boxed-image_bg-container { display: none; }
 .boxed-image_bg-container {
   position: absolute;
   inset: 0;
@@ -10863,6 +10869,52 @@ figcaption {
   padding-left: 2.5rem;
   padding-right: 6.25rem;
   margin-left: auto;
+}
+
+/* =============================================================
+   DICOTA — Image-Text (merged Left/Right → one section)
+   Image position is merchant-controllable via image_position select.
+   Base classes drive builder/local preview; .is-image-right
+   modifier (from li-attribute:class) controls production.
+   ============================================================= */
+.section_split-image { width: 100%; }
+.section_split-image .split-image_layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
+  width: 100%;
+}
+.section_split-image .split-image_image-block { width: 100%; height: 100%; overflow: hidden; }
+.section_split-image .split-image_image { width: 100%; height: 100%; object-fit: cover; display: block; }
+.section_split-image .split-image_content-wrapper {
+  width: 100%;
+  max-width: 40.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 6.25rem 2.5rem 6.25rem 6.25rem;   /* image-left: content on the right */
+}
+/* image right: swap grid order + mirror padding */
+.section_split-image .split-image_layout.is-image-right .split-image_image-block { order: 2; }
+.section_split-image .split-image_layout.is-image-right .split-image_content-wrapper {
+  order: 1;
+  margin-left: 0;
+  margin-right: auto;
+  padding: 6.25rem 6.25rem 6.25rem 2.5rem;
+}
+@media (max-width: 991px) {
+  .section_split-image .split-image_layout,
+  .section_split-image .split-image_layout.is-image-right { grid-template-columns: 1fr; }
+  .section_split-image .split-image_image-block,
+  .section_split-image .split-image_layout.is-image-right .split-image_image-block { order: 0; min-height: 60vw; }
+  .section_split-image .split-image_content-wrapper,
+  .section_split-image .split-image_layout.is-image-right .split-image_content-wrapper {
+    order: 0;
+    max-width: none;
+    padding: 2.5rem 1.25rem;
+  }
 }
 
 /* Responsive — Sustainability */
@@ -12544,3 +12596,789 @@ figcaption {
 }
 [class*="_arrow"].swiper-button-prev::after,
 [class*="_arrow"].swiper-button-next::after { content: none; }
+
+/* =============================================================
+   DICOTA — Collection Intro Cards (intro + 3 use-case cards)
+   ============================================================= */
+.section_collection-intro-cards { width: 100%; background-color: #ffffff; }
+.coll-intro-cards_padding { padding-top: 60px; padding-bottom: 100px; }
+.coll-intro-cards_layout {
+  display: flex;
+  gap: 2.5rem;
+  align-items: flex-start;
+}
+.coll-intro-cards_intro {
+  flex: none;
+  width: 23.5rem;
+  max-width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+}
+.coll-intro-cards_heading { margin: 0; }
+.coll-intro-cards_text { margin: 0; line-height: 1.26; font-weight: 500; }
+.coll-intro-cards_grid {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  gap: .75rem;
+  align-items: flex-start;
+}
+.coll-intro-cards_card {
+  flex: 1 1 0;
+  min-width: 0;
+  max-width: 20rem;
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+}
+.coll-intro-cards_image-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 307 / 273;
+  overflow: hidden;
+  background-color: #282828;
+}
+.coll-intro-cards_image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.coll-intro-cards_card-body {
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+}
+.coll-intro-cards_card-title {
+  margin: 0;
+  font-family: "Futura PT", sans-serif;
+  font-size: .875rem;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: #0f0f0f;
+}
+.coll-intro-cards_card-desc {
+  margin: 0;
+  color: #686868;
+  line-height: 1.34;
+}
+@media screen and (max-width: 991px) {
+  .coll-intro-cards_layout { flex-direction: column; gap: 2rem; }
+  .coll-intro-cards_intro { width: 100%; max-width: none; }
+}
+@media screen and (max-width: 767px) {
+  .coll-intro-cards_grid { flex-direction: column; gap: 1.75rem; }
+}
+
+/* =============================================================
+   DICOTA — B2B News Highlight (image + dark text panel)
+   ============================================================= */
+.section_b2b-news { width: 100%; background-color: #f6f6f6; }
+.b2b-news_padding { padding-top: 40px; padding-bottom: 60px; }
+.b2b-news_panel {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 600px;
+  background-color: #262626;
+  overflow: hidden;
+}
+.b2b-news_media {
+  position: relative;
+  min-height: 22rem;
+  overflow: hidden;
+}
+.b2b-news_image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.b2b-news_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 3.125rem 6.25rem 2.5rem;
+  color: #ffffff;
+}
+.b2b-news_head { display: flex; flex-direction: column; gap: .75rem; }
+.b2b-news_meta {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  font-size: .8125rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+.b2b-news_badge { color: #cc0404; font-weight: 500; }
+.b2b-news_divider {
+  flex: none;
+  width: 1px;
+  height: .75rem;
+  background-color: rgba(255, 255, 255, .4);
+}
+.b2b-news_cat, .b2b-news_date { color: #ffffff; }
+.b2b-news_title {
+  margin: 0;
+  font-family: "Futura PT", sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.05;
+  color: #ffffff;
+}
+.b2b-news_text {
+  margin: 0;
+  color: #ffffff;
+  line-height: 1.26;
+  font-weight: 500;
+  max-width: 30rem;
+}
+.b2b-news_btn { align-self: flex-start; }
+
+@media screen and (max-width: 991px) {
+  .b2b-news_panel { grid-template-columns: 1fr; min-height: 0; }
+  .b2b-news_content { padding: 2.5rem; gap: 1.25rem; }
+}
+@media screen and (max-width: 767px) {
+  .b2b-news_content { padding: 2rem 1.5rem; }
+}
+
+/* =============================================================
+   DICOTA — B2B News Updates (heading + slider: blue updates card + news cards)
+   ============================================================= */
+.section_news-updates { width: 100%; background-color: #f6f6f6; }
+.news-updates_padding { padding-top: 40px; padding-bottom: 60px; }
+.news-updates_heading {
+  margin: 0 0 1.5rem;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.news-updates_heading-bold { font-weight: 700; }
+.news-updates_heading-light { font-weight: 500; }
+.news-updates_slider-wrapper { position: relative; }
+.news-updates_swiper { width: 100%; overflow: hidden; }
+.news-updates_list { display: flex; gap: .75rem; align-items: stretch; }
+
+/* Blue updates card */
+.news-updates_blue-card {
+  width: min(27.8rem, 85vw);
+  flex: none;
+  height: 37.5rem;
+  background-color: #479ef8;
+}
+.news-updates_blue-inner {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 3.125rem 2.5rem 2.5rem;
+}
+.news-updates_blue-title {
+  margin: 0;
+  font-family: "Futura PT", sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.05;
+  color: #0f0f0f;
+}
+.news-updates_link-list {
+  display: flex;
+  flex-direction: column;
+}
+.news-updates_link {
+  display: flex;
+  align-items: center;
+  gap: 1.375rem;
+  padding: .6rem 0;
+  border-bottom: 1px solid rgba(15, 15, 15, .18);
+  text-decoration: none;
+  color: #0f0f0f;
+}
+.news-updates_link-text {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+}
+.news-updates_link-title { font-size: 1.125rem; font-weight: 500; color: #0f0f0f; line-height: 1.14; }
+.news-updates_link-sub { font-size: .875rem; font-weight: 500; color: rgba(15, 15, 15, .72); line-height: 1.14; }
+.news-updates_link-arrow {
+  flex: none;
+  width: 1.875rem;
+  height: 1.875rem;
+  border-radius: 999px;
+  background-color: #ffffff;
+  color: #0f0f0f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform .15s;
+}
+.news-updates_link-arrow svg { width: .9rem; height: .9rem; }
+.news-updates_link:hover .news-updates_link-arrow { transform: translateX(2px); }
+.news-updates_blue-btn { width: 100%; }
+
+/* News (editorial) card */
+.news-updates_card {
+  position: relative;
+  width: min(27.8rem, 85vw);
+  flex: none;
+  height: 37.5rem;
+  overflow: hidden;
+  background-color: #262626;
+}
+.news-updates_card-image { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+.news-updates_card-overlay {
+  position: absolute; inset: 0;
+  background-image: linear-gradient(180deg, rgba(0,0,0,.6), rgba(0,0,0,0) 50%);
+}
+.news-updates_card-link { position: relative; display: block; height: 100%; text-decoration: none; }
+.news-updates_card-content {
+  position: relative; z-index: 1;
+  display: flex; flex-direction: column; gap: .75rem;
+  padding: 3.125rem 2.5rem 2.5rem;
+  color: #ffffff;
+}
+.news-updates_card-badge {
+  align-self: flex-start;
+  color: #cc0404;
+  font-size: .8125rem;
+  font-weight: 500;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+.news-updates_card-title {
+  margin: 0;
+  font-family: "Futura PT", sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.1;
+  color: #ffffff;
+}
+.news-updates_card-text { margin: 0; font-size: 1rem; font-weight: 500; line-height: 1.34; color: #ffffff; max-width: 20rem; }
+
+/* arrows */
+.news-updates_arrow {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  z-index: 3;
+  width: 3rem;
+  height: 3rem;
+  transform: translateY(-50%);
+  border: none;
+  border-radius: 999px;
+  background-color: rgba(15, 15, 15, .7);
+  color: #ffffff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color .2s;
+}
+.news-updates_arrow:hover { background-color: rgba(15, 15, 15, .9); }
+.news-updates_arrow.is-prev { right: auto; left: 0; }
+.news-updates_arrow.swiper-button-disabled { opacity: .3; pointer-events: none; }
+
+/* fixed slide widths must beat Swiper's injected .swiper-slide{width:100%} */
+.swiper-slide.news-updates_blue-card,
+.swiper-slide.news-updates_card { width: min(27.8rem, 85vw); }
+
+@media screen and (max-width: 479px) {
+  .news-updates_blue-inner { padding: 2rem 1.5rem; }
+  .news-updates_card-content { padding: 2.5rem 1.5rem; }
+}
+
+/* =============================================================
+   DICOTA — Product Hero B2B features (SKU/GTIN, Mengenrabatt, Angebot)
+   ============================================================= */
+.ph_title-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.5rem;
+  width: 100%;
+}
+.ph_ids {
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: .25rem;
+  padding-top: .35rem;
+}
+.ph_id-row { display: flex; align-items: center; gap: .4rem; font-size: .75rem; line-height: 1.4; }
+.ph_id-label { color: #686868; font-weight: 500; text-transform: uppercase; letter-spacing: .02em; }
+.ph_id-value { color: #0f0f0f; font-weight: 500; }
+.ph_id-copy {
+  flex: none;
+  width: .8rem;
+  height: .8rem;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #686868;
+  cursor: pointer;
+  display: inline-flex;
+  transition: color .15s;
+}
+.ph_id-copy:hover { color: #0f0f0f; }
+
+/* Mengenrabatt / volume pricing */
+.ph_volume { display: flex; flex-direction: column; gap: .75rem; width: 100%; }
+.ph_volume-head { display: flex; align-items: center; justify-content: space-between; }
+.ph_volume-title, .ph_volume-unit {
+  font-size: .75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: .02em;
+  color: #0f0f0f;
+}
+.ph_volume-tiers { display: flex; flex-direction: column; gap: .5rem; }
+.ph_volume-tier {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .75rem;
+  padding: .35rem .75rem;
+  cursor: pointer;
+}
+.ph_volume-tier.is-active { background-color: #f4f4f4; }
+.ph_volume-radio {
+  -webkit-appearance: none;
+  appearance: none;
+  flex: none;
+  width: .75rem;
+  height: .75rem;
+  margin: 0;
+  border: 1px solid #0f0f0f;
+  border-radius: 50%;
+  background-color: #ffffff;
+  opacity: .5;
+  cursor: pointer;
+}
+.ph_volume-radio:checked {
+  opacity: 1;
+  background-image: radial-gradient(#0f0f0f 0 42%, transparent 52%);
+}
+.ph_volume-qty {
+  flex: 1;
+  min-width: 0;
+  font-size: .75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: .02em;
+  color: #686868;
+}
+.ph_volume-tier.is-active .ph_volume-qty { color: #0f0f0f; }
+.ph_volume-prices { display: flex; align-items: center; gap: .5rem; flex: none; }
+.ph_volume-price-col { display: flex; flex-direction: column; align-items: flex-end; line-height: 1.2; }
+.ph_volume-price { font-size: .75rem; font-weight: 500; text-transform: uppercase; color: #686868; }
+.ph_volume-tier.is-active .ph_volume-price { color: #0f0f0f; }
+.ph_volume-save { font-size: .75rem; font-weight: 500; color: #686868; }
+.ph_volume-badge {
+  flex: none;
+  background-color: #cc0404;
+  color: #ffffff;
+  font-size: .6875rem;
+  font-weight: 500;
+  line-height: 1.5;
+  padding: .1rem .45rem;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .1);
+}
+
+/* Angebot anfragen + buy actions */
+.ph_quote-btn {
+  display: block;
+  width: 100%;
+  margin-top: .75rem;
+  padding: .65rem 1.5rem;
+  text-align: center;
+  border: 1px solid #0f0f0f;
+  background-color: transparent;
+  color: #0f0f0f;
+  font-weight: 500;
+  transition: color .2s, background-color .2s;
+}
+.ph_quote-btn:hover { background-color: #0f0f0f; color: #ffffff; }
+.ph_buy-actions { display: flex; align-items: center; gap: 1.5rem; margin-top: 1rem; }
+.ph_buy-action {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  font-size: .8125rem;
+  font-weight: 500;
+  color: #0f0f0f;
+  text-decoration: none;
+}
+.ph_buy-action:hover { text-decoration: underline; }
+.ph_buy-action-icon { width: .85rem; height: .85rem; display: inline-flex; flex: none; }
+
+@media screen and (max-width: 479px) {
+  .ph_title-row { flex-direction: column; gap: .5rem; }
+  .ph_ids { align-items: flex-start; padding-top: 0; }
+}
+
+/* =============================================================
+   Product Hero — stack on tablet/mobile (was flex-row; the existing
+   ≤991 rule only set grid-template-columns which is dead on flex,
+   so gallery + 40%-wide details never stacked → content overflowed).
+   ============================================================= */
+@media screen and (max-width: 991px) {
+  .product-header_layout {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .product-header_gallery {
+    position: static;
+    height: auto;
+    width: 100%;
+  }
+  .product-header_details {
+    width: 100%;
+  }
+}
+
+/* =============================================================
+   DICOTA — Blog listing (dark): featured hero + filter bar + grid
+   ============================================================= */
+.main-wrapper.is-blog { background-color: #000000; }
+.section_blog-featured { width: 100%; background-color: #000000; }
+.blog-featured_padding { padding-top: 60px; padding-bottom: 48px; }
+.blog-featured_row {
+  display: flex;
+  gap: .75rem;
+  align-items: stretch;
+  text-decoration: none;
+  width: 100%;
+}
+.blog-featured_media {
+  flex: 0 0 66%;
+  position: relative;
+  aspect-ratio: 894 / 551;
+  overflow: hidden;
+  background-color: #f6f6f6;
+}
+.blog-featured_image { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+.blog-featured_panel {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 2.5rem;
+  color: #ffffff;
+}
+.blog-featured_content { display: flex; flex-direction: column; gap: 1.5rem; }
+.blog-featured_text { display: flex; flex-direction: column; gap: .75rem; }
+.blog-meta_dot { opacity: .7; }
+.blog-featured_meta,
+.blog-card_meta {
+  display: flex;
+  align-items: center;
+  gap: .25rem;
+  font-size: .75rem;
+  font-weight: 500;
+  letter-spacing: .02em;
+  color: rgba(255, 255, 255, .7);
+}
+.blog-featured_title {
+  margin: 0;
+  font-family: "Futura PT", sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.05;
+  color: #ffffff;
+}
+.blog-featured_excerpt { margin: 0; color: #ffffff; line-height: 1.26; font-weight: 500; }
+.blog-featured_btn { align-self: flex-start; }
+
+/* List section */
+.section_blog-list { width: 100%; background-color: #000000; }
+.blog-list_padding { padding-top: 0; padding-bottom: 80px; }
+.blog-list_bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  padding: 1rem 0 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, .15);
+  margin-bottom: 2.5rem;
+}
+.blog-list_filters { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
+.blog-list_filter {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  color: #ffffff;
+  font-size: .9375rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+.blog-list_filter-chev { width: .8rem; height: .8rem; display: inline-flex; opacity: .8; }
+.blog-list_sort { display: flex; align-items: center; gap: .5rem; color: #ffffff; font-size: .875rem; }
+.blog-list_sort-label { opacity: .7; }
+.blog-list_sort-value { display: inline-flex; align-items: center; gap: .35rem; font-weight: 500; cursor: pointer; }
+
+/* Article grid */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem 1rem;
+}
+.blog-card {
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+  text-decoration: none;
+  color: #ffffff;
+}
+.blog-card_image-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 442 / 551;
+  overflow: hidden;
+  background-color: #f6f6f6;
+}
+.blog-card_image { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .3s ease; }
+.blog-card:hover .blog-card_image { transform: scale(1.03); }
+.blog-card_body { display: flex; flex-direction: column; gap: .75rem; }
+.blog-card_head { display: flex; flex-direction: column; gap: .25rem; }
+.blog-card_title {
+  margin: 0;
+  font-family: "Futura PT", sans-serif;
+  font-size: .875rem;
+  font-weight: 500;
+  line-height: 1.34;
+  letter-spacing: .02em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.blog-card_excerpt { margin: 0; font-size: .875rem; font-weight: 500; line-height: 1.34; color: #ffffff; }
+.blog-card_link {
+  font-size: .875rem;
+  font-weight: 500;
+  color: #ffffff;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.blog-card:hover .blog-card_link { opacity: .8; }
+.blog-grid-empty { color: rgba(255, 255, 255, .7); padding: 2rem 0; }
+.section_blog-list .pagination_component { margin-top: 3rem; }
+.section_blog-list .pagination_count .text-style-link,
+.section_blog-list .pagination_item div { color: #ffffff; }
+
+@media screen and (max-width: 991px) {
+  .blog-featured_row { flex-direction: column; }
+  .blog-featured_media { flex: none; width: 100%; }
+  .blog-featured_panel { padding: 2rem 0 0; }
+  .blog-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media screen and (max-width: 767px) {
+  .blog-list_bar { flex-direction: column; align-items: flex-start; gap: 1rem; }
+}
+@media screen and (max-width: 479px) {
+  .blog-grid { grid-template-columns: 1fr; }
+}
+
+/* =============================================================
+   DICOTA — Blog Article detail (breadcrumb, article body, more stories)
+   ============================================================= */
+.section_article-breadcrumb { width: 100%; background-color: #ffffff; }
+.article_crumbs {
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+  padding: 1rem 0;
+  font-size: .8125rem;
+  color: rgba(15, 15, 15, .7);
+}
+.article_crumb { color: rgba(15, 15, 15, .7); text-decoration: none; white-space: nowrap; }
+.article_crumb:hover { color: #0f0f0f; }
+.article_crumb.is-current { color: #0f0f0f; overflow: hidden; text-overflow: ellipsis; max-width: 18rem; }
+.article_crumb-chev { width: .55rem; height: .55rem; display: inline-flex; opacity: .6; flex: none; }
+
+/* Article body */
+.section_article { width: 100%; background-color: #ffffff; }
+.article_padding { padding-top: 60px; padding-bottom: 60px; }
+.article_inner { display: flex; flex-direction: column; align-items: center; gap: 2.5rem; }
+.article_header { width: 100%; max-width: 47.5rem; display: flex; flex-direction: column; align-items: center; gap: .75rem; text-align: center; }
+.article_meta {
+  display: flex;
+  align-items: center;
+  gap: .25rem;
+  font-size: .75rem;
+  font-weight: 500;
+  letter-spacing: .02em;
+  color: rgba(15, 15, 15, .7);
+}
+.article_title { margin: 0; font-family: "Futura PT", sans-serif; font-size: 2rem; font-weight: 500; line-height: 1.1; color: #0f0f0f; }
+.article_intro { margin: 0; max-width: 39.5rem; font-size: 1.25rem; font-weight: 500; line-height: 1.26; color: #0f0f0f; }
+.article_hero {
+  width: 100%;
+  max-width: 64.375rem;
+  margin: 0;
+  aspect-ratio: 1030 / 551;
+  overflow: hidden;
+  background-color: #f6f6f6;
+}
+.article_hero-img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+.article_body { width: 100%; max-width: 47.5rem; color: #0f0f0f; }
+.article_body > * { margin: 0 0 1.5rem; }
+.article_body > *:last-child { margin-bottom: 0; }
+.article_body h2, .article_body h3 {
+  font-family: "Futura PT", sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.1;
+  margin-top: 1rem;
+}
+.article_body p { font-size: 1rem; font-weight: 500; line-height: 1.5; }
+.article_body blockquote {
+  border: 0;
+  padding: 0;
+  margin: 2rem auto;
+  max-width: 34rem;
+  font-family: "Futura PT", sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.15;
+  text-align: center;
+}
+.article_body a { color: inherit; text-decoration: underline; }
+.article_body img { max-width: 100%; height: auto; }
+
+/* More stories (light article cards) */
+.section_more-stories { width: 100%; background-color: #ffffff; }
+.more-stories_padding { padding-top: 40px; padding-bottom: 80px; }
+.more-stories_title { margin: 0 0 2rem; }
+.more-stories_grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem 1rem; }
+.story-card { display: flex; flex-direction: column; gap: .75rem; text-decoration: none; color: #0f0f0f; }
+.story-card_image-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 442 / 551;
+  overflow: hidden;
+  background-color: #f6f6f6;
+}
+.story-card_image { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .3s ease; }
+.story-card:hover .story-card_image { transform: scale(1.03); }
+.story-card_body { display: flex; flex-direction: column; gap: .75rem; }
+.story-card_head { display: flex; flex-direction: column; gap: .25rem; }
+.story-card_meta {
+  display: flex;
+  align-items: center;
+  gap: .25rem;
+  font-size: .75rem;
+  font-weight: 500;
+  letter-spacing: .02em;
+  color: rgba(15, 15, 15, .7);
+}
+.story-card_title {
+  margin: 0;
+  font-family: "Futura PT", sans-serif;
+  font-size: .875rem;
+  font-weight: 500;
+  line-height: 1.34;
+  letter-spacing: .02em;
+  text-transform: uppercase;
+  color: #0f0f0f;
+}
+.story-card_excerpt { margin: 0; font-size: .875rem; font-weight: 500; line-height: 1.34; color: #0f0f0f; }
+.story-card_link { font-size: .875rem; font-weight: 500; color: #0f0f0f; text-decoration: underline; text-underline-offset: 2px; }
+
+@media screen and (max-width: 991px) {
+  .more-stories_grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media screen and (max-width: 767px) {
+  .article_title, .article_body h2, .article_body h3, .article_body blockquote { font-size: 1.6rem; }
+  .article_intro { font-size: 1.125rem; }
+}
+@media screen and (max-width: 479px) {
+  .more-stories_grid { grid-template-columns: 1fr; }
+}
+
+/* =============================================================
+   DICOTA — Product gallery lightbox
+   ============================================================= */
+.product-header_gallery-lightbox.is-clickable { cursor: zoom-in; }
+.ph-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1200;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  background-color: rgba(0, 0, 0, .92);
+}
+.ph-lightbox.is-open { display: flex; }
+.ph-lightbox_img {
+  max-width: 90vw;
+  max-height: 88vh;
+  object-fit: contain;
+  display: block;
+}
+.ph-lightbox_close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #ffffff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ph-lightbox_nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3rem;
+  height: 3rem;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background-color: rgba(255, 255, 255, .12);
+  color: #ffffff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color .2s;
+}
+.ph-lightbox_nav:hover { background-color: rgba(255, 255, 255, .25); }
+.ph-lightbox_nav.is-prev { left: 1.5rem; }
+.ph-lightbox_nav.is-next { right: 1.5rem; }
+.ph-lightbox_icon { width: 1.5rem; height: 1.5rem; display: inline-flex; }
+.ph-lightbox_close .ph-lightbox_icon { width: 1.75rem; height: 1.75rem; }
+.ph-lightbox_counter {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(255, 255, 255, .85);
+  font-size: .875rem;
+  font-weight: 500;
+}
+@media screen and (max-width: 767px) {
+  .ph-lightbox { padding: 1.5rem; }
+  .ph-lightbox_nav { width: 2.5rem; height: 2.5rem; }
+  .ph-lightbox_nav.is-prev { left: .5rem; }
+  .ph-lightbox_nav.is-next { right: .5rem; }
+}

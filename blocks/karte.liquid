@@ -1,29 +1,44 @@
-<div li-block="Karte" class="swiper-slide is-quad-cards" {{ block.shopify_attributes }}>
-                    <div class="image-card_item"><a href="{{ block.settings.url_card_link }}" class="image-card_link is-large w-inline-block"> <h3 class="text-size-large">{{ block.settings.text_card_heading }}</h3><div class="image-card_button-wrapper"><div class="button is-white is-image-card"><span>{{ block.settings.text_card_button_text }}</span></div></div><div class="image-card_bg-wrapper"><div class="image-card_bg-overlay"></div>{% if block.settings.image_card_bg_image %} {{ block.settings.image_card_bg_image | image_url: width: 800 | image_tag: class: 'image-card_bg-image', loading: 'lazy' }} {% else %} <img class="image-card_bg-image" src="{{ 'platzhalter.svg' | asset_url }}" alt="" loading="lazy"> {% endif %}</div> </a></div>
+<div li-block="Karte" class="icon-cards_card is-line-right" {{ block.shopify_attributes }}>
+                    {% if block.settings.image_icon %}
+{{ block.settings.image_icon | image_url: width: 96 | image_tag: loading: 'lazy', class: 'icon-1x1-xlarge' }}
+{% else %}
+<img src="{{ 'platzhalter.svg' | asset_url }}" loading="lazy" alt="" class="icon-1x1-xlarge">
+{% endif %}
+                    <div class="default-flex-tiny"><h3 class="text-size-large">
+{{ block.settings.text_heading }}
+</h3><div class="text-size-medium"> {{ block.settings.textarea_text }} </div>{% if block.settings.text_button_text != blank %}    <div li-if="block.settings.text_button_text != blank" class="button-wrapper">
+    <a href="{{ block.settings.url_button_link }}" class="button w-button"> <span>{{ block.settings.text_button_text }}</span> </a>    </div>
+{% endif %}</div>
                 </div> {% schema %} {
     "name": "Karte",
     "settings": [
         {
-            "id": "url_card_link",
-            "type": "url",
-            "label": "Card Link"
-        },
-        {
-            "id": "text_card_heading",
-            "type": "text",
-            "label": "Card Heading",
-            "default": "Innovation"
-        },
-        {
-            "id": "text_card_button_text",
-            "type": "text",
-            "label": "Card Button Text",
-            "default": "Mehr erfahren"
-        },
-        {
-            "id": "image_card_bg_image",
+            "id": "image_icon",
             "type": "image_picker",
-            "label": "Card BG Image"
+            "label": "Icon"
+        },
+        {
+            "id": "text_heading",
+            "type": "text",
+            "label": "Heading",
+            "default": "Schweizer Qualit\u00e4t"
+        },
+        {
+            "id": "textarea_text",
+            "type": "textarea",
+            "label": "Text",
+            "default": "Entwickelt und getestet in der Schweiz f\u00fcr h\u00f6chste Anspr\u00fcche."
+        },
+        {
+            "id": "url_button_link",
+            "type": "url",
+            "label": "Button Link"
+        },
+        {
+            "id": "text_button_text",
+            "type": "text",
+            "label": "Button Text",
+            "default": "Mehr erfahren"
         }
     ],
     "presets": [

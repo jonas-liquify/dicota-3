@@ -1,0 +1,48 @@
+<article li-block="News Card" class="swiper-slide news-updates_card" {{ block.shopify_attributes }}>
+                    {% if block.settings.image_bild %}
+{{ block.settings.image_bild | image_url: width: 900 | image_tag: loading: 'lazy', class: 'news-updates_card-image' }}
+{% else %}
+<img src="{{ 'hero-apparel-1.svg' | asset_url }}" loading="lazy" alt="" class="news-updates_card-image">
+{% endif %}
+                    <div class="news-updates_card-overlay"></div>
+                    <a href="{{ block.settings.url_link }}" class="news-updates_card-link w-inline-block"> <div class="news-updates_card-content"><span li-unless="block.settings.badge == blank" class="news-updates_card-badge">{{ block.settings.text_badge }}</span><h3 class="news-updates_card-title">{{ block.settings.text_titel }}</h3><p class="news-updates_card-text"> {{ block.settings.textarea_text }} </p></div> </a>
+                </article> {% schema %} {
+    "name": "News Card",
+    "settings": [
+        {
+            "id": "image_bild",
+            "type": "image_picker",
+            "label": "Bild"
+        },
+        {
+            "id": "url_link",
+            "type": "url",
+            "label": "Link"
+        },
+        {
+            "id": "text_badge",
+            "type": "text",
+            "label": "Badge",
+            "default": "NEW"
+        },
+        {
+            "id": "text_titel",
+            "type": "text",
+            "label": "Titel",
+            "default": "Seven"
+        },
+        {
+            "id": "textarea_text",
+            "type": "textarea",
+            "label": "Text",
+            "default": "(Platzhalter) Seit 1992 wurden mehr als 12 Millionen PET-Flaschen verarbeitet, um Abfall zu minimieren -"
+        }
+    ],
+    "presets": [
+        {
+            "name": "News Card",
+            "blocks": []
+        }
+    ],
+    "tag": null
+} {% endschema %}

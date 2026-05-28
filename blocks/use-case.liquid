@@ -1,0 +1,38 @@
+<article li-block="Use Case" class="coll-intro-cards_card" {{ block.shopify_attributes }}>
+                    <div class="coll-intro-cards_image-wrap">{% if block.settings.image_bild %}
+{{ block.settings.image_bild | image_url: width: 800 | image_tag: loading: 'lazy', class: 'coll-intro-cards_image' }}
+{% else %}
+<img src="{{ 'hero-apparel-1.svg' | asset_url }}" loading="lazy" alt="" class="coll-intro-cards_image">
+{% endif %}</div>
+                    <div class="coll-intro-cards_card-body"><h3 class="coll-intro-cards_card-title">
+{{ block.settings.text_titel }}
+</h3><p class="coll-intro-cards_card-desc text-size-small"> {{ block.settings.textarea_text }} </p></div>
+                </article> {% schema %} {
+    "name": "Use Case",
+    "settings": [
+        {
+            "id": "image_bild",
+            "type": "image_picker",
+            "label": "Bild"
+        },
+        {
+            "id": "text_titel",
+            "type": "text",
+            "label": "Titel",
+            "default": "Entry Level or Project Tender"
+        },
+        {
+            "id": "textarea_text",
+            "type": "textarea",
+            "label": "Text",
+            "default": "Lorem ipsum dolor sit amet, consectetur delle scu adipiscing elit. Suspendisse varius enim in eros elementum tristique."
+        }
+    ],
+    "presets": [
+        {
+            "name": "Use Case",
+            "blocks": []
+        }
+    ],
+    "tag": null
+} {% endschema %}

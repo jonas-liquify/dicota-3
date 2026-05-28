@@ -1,0 +1,68 @@
+<div class="split-image_layout{% if section.settings.image_position == 'right' %} is-image-right{% endif %}"><div class="split-image_image-block">{% if section.settings.image_bild %}
+{{ section.settings.image_bild | image_url: width: 1200 | image_tag: loading: 'lazy', class: 'split-image_image' }}
+{% else %}
+<img src="{{ 'platzhalter.svg' | asset_url }}" loading="lazy" alt="" class="split-image_image">
+{% endif %}</div><div class="split-image_content-wrapper"><h2 class="heading-style-h2">
+{{ section.settings.text_heading }}
+</h2><div class="text-size-regular"> {{ section.settings.textarea_text }} </div><div class="margin-top margin-small"><div class="button-group"><div class="button-wrapper"><a href="{{ section.settings.url_button_link }}" class="button is-white w-button"> <span>{{ section.settings.text_button_text }}</span> </a></div></div></div></div></div> {% schema %} {
+    "tag": "section",
+    "name": "Image-Text",
+    "class": "section_split-image background-color-primary",
+    "settings": [
+        {
+            "id": "image_bild",
+            "type": "image_picker",
+            "label": "Bild"
+        },
+        {
+            "id": "text_heading",
+            "type": "text",
+            "label": "Heading",
+            "default": "Langlebig statt Wegwerf"
+        },
+        {
+            "id": "textarea_text",
+            "type": "textarea",
+            "label": "Text",
+            "default": "Wir designen f\u00fcr Jahre, nicht f\u00fcr Saisons. Reparierbare Komponenten, austauschbare Rei\u00dfverschl\u00fcsse und eine ehrliche Garantie sorgen daf\u00fcr, dass unsere Produkte lange begleiten."
+        },
+        {
+            "id": "url_button_link",
+            "type": "url",
+            "label": "Button Link"
+        },
+        {
+            "id": "text_button_text",
+            "type": "text",
+            "label": "Button Text",
+            "default": "Unsere Garantie"
+        },
+        {
+            "type": "header",
+            "content": "Layout"
+        },
+        {
+            "type": "select",
+            "id": "image_position",
+            "label": "Bildposition",
+            "options": [
+                {
+                    "value": "left",
+                    "label": "Bild links"
+                },
+                {
+                    "value": "right",
+                    "label": "Bild rechts"
+                }
+            ],
+            "default": "left"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Image-Text",
+            "category": "Showcase",
+            "blocks": []
+        }
+    ]
+} {% endschema %}

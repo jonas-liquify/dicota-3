@@ -1,18 +1,24 @@
-<div li-static-block="Tab Menu"><div class="value-tabs_link-list">{% for block in section.blocks %}
-    {% if block.type == "tab-link" %}
-                    <button li-block="Tab Link" type="button" role="tab" class="value-tabs_link" id="tab-{{ forloop.index }}" aria-controls="tabpanel-{{ forloop.index }}" x-on:click="tab = {{ forloop.index }}" x-bind:aria-selected="tab === {{ forloop.index }} ? 'true' : 'false'" x-bind:class="tab === {{ forloop.index }} ? 'is-active' : ''">
-                                    <div>
-{{ block.settings.text_tab_label }}
-</div>
-                            </button>
-            {% endif %}
-{% endfor %}</div></div> {% schema %} {
+<div li-static-block="Tab Menu"><div li-cf-theme-blocks="" class="acc-dis_tab-menu">
+{% content_for 'blocks' %}
+</div></div> {% schema %} {
     "name": "Tab Menu",
+    "blocks": [
+        {
+            "type": "region"
+        },
+        {
+            "type": "@app"
+        }
+    ],
     "settings": [],
     "presets": [
         {
             "name": "Tab Menu",
-            "blocks": []
+            "blocks": [
+                {
+                    "type": "region"
+                }
+            ]
         }
     ],
     "tag": null

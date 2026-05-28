@@ -1,0 +1,17 @@
+<div class="padding-global article_padding"><div class="container-large article_inner"><header class="article_header"><div class="article_meta"><span li-object="article.tags.first">{{ article.tags.first }}</span><span class="blog-meta_dot">·</span><span li-object="article.published_at | date: '%-d. %B %Y'">{{ article.published_at | date: '%-d. %B %Y' }}</span></div><h1 li-object="article.title" class="article_title">{{ article.title }}</h1><p li-object="article.excerpt" class="article_intro">{{ article.excerpt }}</p></header><figure class="article_hero"><img li-object:src="article.image | image_url: width: 2000" li-object:alt="article.image.alt" src="{{ article.image | image_url: width: 2000 }}" loading="eager" alt="{{ article.image.alt }}" class="article_hero-img"></figure><div li-object="article.content" class="article_body text-rich-text w-richtext">{{ article.content }}</div></div></div> {% schema %} {
+    "tag": "section",
+    "name": "Article Body",
+    "class": "section_article",
+    "presets": [
+        {
+            "name": "Article Body",
+            "category": "Liquify",
+            "blocks": []
+        }
+    ],
+    "enabled_on": {
+        "templates": [
+            "article"
+        ]
+    }
+} {% endschema %}
