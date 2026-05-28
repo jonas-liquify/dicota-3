@@ -13,7 +13,6 @@
     "layout": "theme",
     "wrapper": "main.main-wrapper",
     "order": [
-        "announcement_bar",
         "article_body",
         "featured_products",
         "weitere_storys"
