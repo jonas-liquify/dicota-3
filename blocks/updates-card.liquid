@@ -1,0 +1,51 @@
+<div li-block="Updates Card" class="swiper-slide news-updates_blue-card" {{ block.shopify_attributes }}>
+                    <div class="news-updates_blue-inner"><h3 class="news-updates_blue-title">
+{{ block.settings.text_titel }}
+</h3><div li-cf-theme-blocks="" class="news-updates_link-list">
+{% content_for 'blocks' %}
+</div><a href="{{ block.settings.url_button_link }}" class="button is-outline news-updates_blue-btn w-button"> <span>{{ block.settings.text_button_text }}</span> </a></div>
+                </div> {% schema %} {
+    "name": "Updates Card",
+    "blocks": [
+        {
+            "type": "@app"
+        }
+    ],
+    "settings": [
+        {
+            "id": "text_titel",
+            "type": "text",
+            "label": "Titel",
+            "default": "Seit dem letzten Login:"
+        },
+        {
+            "id": "url_link",
+            "type": "url",
+            "label": "Link"
+        },
+        {
+            "id": "text_untertitel",
+            "type": "text",
+            "label": "Untertitel",
+            "default": "Everyting you need to advertise"
+        },
+        {
+            "id": "url_button_link",
+            "type": "url",
+            "label": "Button Link"
+        },
+        {
+            "id": "text_button_text",
+            "type": "text",
+            "label": "Button Text",
+            "default": "Alle Updates"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Updates Card",
+            "blocks": []
+        }
+    ],
+    "tag": null
+} {% endschema %}

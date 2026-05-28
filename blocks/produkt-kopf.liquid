@@ -1,7 +1,7 @@
 <div li-block="Produkt-Kopf" {{ block.shopify_attributes }}>
-                    <h1 li-object:text="product.title" class="ph_title heading-style-h4">
+                    <div class="ph_title-row"><h1 li-object:text="product.title" class="ph_title heading-style-h4">
 {{ product.title }}
-</h1>
+</h1><div class="ph_ids"><div class="ph_id-row"><span class="ph_id-label">SKU</span><span li-object="product.selected_or_first_available_variant.sku" class="ph_id-value">{{ product.selected_or_first_available_variant.sku }}</span><button type="button" onclick="if(navigator.clipboard)navigator.clipboard.writeText(this.previousElementSibling.textContent)" aria-label="SKU kopieren" class="ph_id-copy w-embed"><svg width="100%" height="100%" viewbox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"></path></svg></button></div><div class="ph_id-row"><span class="ph_id-label">GTIN</span><span li-object="product.selected_or_first_available_variant.barcode" class="ph_id-value">{{ product.selected_or_first_available_variant.barcode }}</span><button type="button" onclick="if(navigator.clipboard)navigator.clipboard.writeText(this.previousElementSibling.textContent)" aria-label="GTIN kopieren" class="ph_id-copy w-embed"><svg width="100%" height="100%" viewbox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"></path></svg></button></div></div></div>
                     <p class="ph_subtitle">
 {{ block.settings.text_unterzeile }}
 </p>

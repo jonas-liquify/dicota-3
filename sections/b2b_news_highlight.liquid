@@ -1,0 +1,106 @@
+<div class="padding-global b2b-news_padding" style="padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px; background-color: {{ section.settings.bg_color }};"><div class="container-large"><div class="b2b-news_panel"><div class="b2b-news_media">{% if section.settings.image_bild %}
+{{ section.settings.image_bild | image_url: width: 1400 | image_tag: loading: 'lazy', class: 'b2b-news_image' }}
+{% else %}
+<img src="{{ 'hero-apparel-3.svg' | asset_url }}" loading="lazy" alt="" class="b2b-news_image">
+{% endif %}</div><div class="b2b-news_content"><div class="b2b-news_head"><div class="b2b-news_meta"><span li-unless="section.settings.badge == blank" class="b2b-news_badge">
+{{ section.settings.text_badge }}
+</span><span class="b2b-news_divider"></span><span class="b2b-news_cat">
+{{ section.settings.text_kategorie }}
+</span><span class="b2b-news_divider"></span><span class="b2b-news_date">
+{{ section.settings.text_datum }}
+</span></div><h2 class="b2b-news_title">
+{{ section.settings.text_uberschrift }}
+</h2></div><p class="b2b-news_text text-size-medium"> {{ section.settings.textarea_text }} </p><a href="{{ section.settings.url_button_link }}" class="button is-on-dark b2b-news_btn w-button"> <span>{{ section.settings.text_button_text }}</span> </a></div></div></div></div> {% schema %} {
+    "tag": "section",
+    "name": "B2B News Highlight",
+    "class": "section_b2b-news",
+    "settings": [
+        {
+            "id": "image_bild",
+            "type": "image_picker",
+            "label": "Bild"
+        },
+        {
+            "id": "text_badge",
+            "type": "text",
+            "label": "Badge",
+            "default": "NEW"
+        },
+        {
+            "id": "text_kategorie",
+            "type": "text",
+            "label": "Kategorie",
+            "default": "Company News"
+        },
+        {
+            "id": "text_datum",
+            "type": "text",
+            "label": "Datum",
+            "default": "5. Mai 2026"
+        },
+        {
+            "id": "text_uberschrift",
+            "type": "text",
+            "label": "\u00dcberschrift",
+            "default": "Dicota is opening another Office-Complex in Dubai"
+        },
+        {
+            "id": "textarea_text",
+            "type": "textarea",
+            "label": "Text",
+            "default": "(Platzhalter) Seit 1992 wurden mehr als 12 Millionen PET-Flaschen verarbeitet, um Abfall zu minimieren - DCT (DICOTA Cushion Technology) ist ein strukturiertes D\u00e4mpfungssystem, das St\u00f6sse, Schl\u00e4ge und Druck aus verschiedenen Winkeln absorbieren kann."
+        },
+        {
+            "id": "url_button_link",
+            "type": "url",
+            "label": "Button Link"
+        },
+        {
+            "id": "text_button_text",
+            "type": "text",
+            "label": "Button Text",
+            "default": "Learn more"
+        },
+        {
+            "type": "header",
+            "content": "Abst\u00e4nde"
+        },
+        {
+            "type": "range",
+            "id": "padding_top",
+            "min": 0,
+            "max": 160,
+            "step": 4,
+            "unit": "px",
+            "label": "Abstand oben",
+            "default": 40
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom",
+            "min": 0,
+            "max": 160,
+            "step": 4,
+            "unit": "px",
+            "label": "Abstand unten",
+            "default": 60
+        },
+        {
+            "type": "header",
+            "content": "Farben"
+        },
+        {
+            "type": "color",
+            "id": "bg_color",
+            "label": "Hintergrundfarbe",
+            "default": "#f6f6f6"
+        }
+    ],
+    "presets": [
+        {
+            "name": "B2B News Highlight",
+            "category": "B2B",
+            "blocks": []
+        }
+    ]
+} {% endschema %}

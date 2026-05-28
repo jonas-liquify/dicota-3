@@ -1,6 +1,6 @@
 <div class="padding-global" style="padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px; background-color: {{ section.settings.bg_color }}; color: {{ section.settings.text_color }};"><div class="container-large"><div class="featured-products_heading"><h3 class="featured-products_title heading-style-h3">
 {{ section.settings.text_uberschrift }}
-</h3><a href="{{ section.settings.url_button_link }}" class="button is-outline featured-products_button w-button"> <span>{{ section.settings.text_button_text }}</span> </a></div><div class="featured-products_slider-wrapper"><div class="featured-products_swiper swiper"><div role="list" class="swiper-wrapper featured-products_list">{% for product in section.settings.collection_kollektion.products limit: section.settings.collection_kollektion_limit %}
+</h3><a li-if="section.settings.show_view_all" href="{{ section.settings.url_button_link }}" class="button is-outline featured-products_button w-button"> <span>{{ section.settings.text_button_text }}</span> </a></div><div class="featured-products_slider-wrapper"><div class="featured-products_swiper swiper"><div role="list" class="swiper-wrapper featured-products_list">{% for product in section.settings.collection_kollektion.products limit: section.settings.collection_kollektion_limit %}
 <div role="listitem" class="swiper-slide featured-products_item">
     {% render 'product_card', product: product %}
 </div>
@@ -13,7 +13,7 @@
             "id": "text_uberschrift",
             "type": "text",
             "label": "\u00dcberschrift",
-            "default": "New Releases"
+            "default": "Passende Produkte"
         },
         {
             "id": "url_button_link",
@@ -39,6 +39,16 @@
             "step": 1,
             "label": "Limit: Kollektion",
             "default": 6
+        },
+        {
+            "type": "header",
+            "content": "Layout"
+        },
+        {
+            "type": "checkbox",
+            "id": "show_view_all",
+            "label": "\"Alle anzeigen\"-Button anzeigen",
+            "default": true
         },
         {
             "type": "paragraph",

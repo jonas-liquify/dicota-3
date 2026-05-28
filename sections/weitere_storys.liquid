@@ -1,0 +1,55 @@
+<div class="padding-global more-stories_padding" style="padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px;"><div class="container-large"><h2 class="more-stories_title heading-style-h4">
+{{ section.settings.text_uberschrift }}
+</h2><div role="list" class="more-stories_grid w-dyn-items">{% for article in blog.articles %}    <a li-for="article in blog.articles" li-object:href="article.url" href="#" role="listitem" class="story-card w-inline-block">
+                                    <div class="story-card_image-wrap"><img li-object:src="article.image | image_url: width: 700" li-object:alt="article.image.alt" src="{{ article.image | image_url: width: 700 }}" loading="lazy" alt="{{ article.image.alt }}" class="story-card_image"></div>
+                            <div class="story-card_body"><div class="story-card_head"><div class="story-card_meta"><span li-object="article.tags.first">{{ article.tags.first }}</span><span class="blog-meta_dot">·</span><span li-object="article.published_at | date: '%-d. %B %Y'">{{ article.published_at | date: '%-d. %B %Y' }}</span></div><h3 li-object="article.title" class="story-card_title">{{ article.title }}</h3></div><p li-object="article.excerpt" class="story-card_excerpt">{{ article.excerpt }}</p><span class="story-card_link">Learn more</span></div>
+                        </a>
+{% endfor %}</div></div></div> {% schema %} {
+    "tag": "section",
+    "name": "Weitere Storys",
+    "class": "section_more-stories",
+    "settings": [
+        {
+            "id": "text_uberschrift",
+            "type": "text",
+            "label": "\u00dcberschrift",
+            "default": "Weitere Storys"
+        },
+        {
+            "type": "header",
+            "content": "Abst\u00e4nde"
+        },
+        {
+            "type": "range",
+            "id": "padding_top",
+            "min": 0,
+            "max": 160,
+            "step": 4,
+            "unit": "px",
+            "label": "Abstand oben",
+            "default": 40
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom",
+            "min": 0,
+            "max": 160,
+            "step": 4,
+            "unit": "px",
+            "label": "Abstand unten",
+            "default": 80
+        }
+    ],
+    "presets": [
+        {
+            "name": "Weitere Storys",
+            "category": "Liquify",
+            "blocks": []
+        }
+    ],
+    "enabled_on": {
+        "templates": [
+            "article"
+        ]
+    }
+} {% endschema %}
