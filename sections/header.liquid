@@ -6,17 +6,17 @@
                                     <div class="nav_dropdown-toggle w-dropdown-toggle"><a li-object:href="link.url" href="{{ link.url }}" class="w-inline-block"><div><div li-object="link.title">{{ link.title }}</div></div></a>{% if link.links.size > 0 %}    <div li-if="link.links.size > 0" class="dropdown-icon w-embed">
     {% render 'icon_chevron_down' %}    </div>
 {% endif %}</div>
-                            {% if link.links.size > 0 %}    <nav li-if="link.links.size > 0" class="nav_dropdown-list no-scrollbar w-dropdown-list">
-    <div class="padding-global max-width-full"><div class="container-large"><div class="nav_dropdown-grid">{% for child_link in link.links %}    <div li-for="child_link in link.links" id="w-node-_9132635a-7891-b0d1-9b20-ecb0d5a86e09-d5a86df8">
-                                    <a href="{{ child_link.url }}" li-object="child_link.title" li-object:href="child_link.url" class="nav_dropdown-link w-dropdown-link">{{ child_link.title }}</a>
-                            {% if child_link.links.size > 0 %}    <div li-if="child_link.links.size > 0">
-    {% for grandchild_link in child_link.links %}    <div li-for="grandchild_link in child_link.links">
-                                    <a href="{{ grandchild_link.url }}" li-object="grandchild_link.title" li-object:href="grandchild_link.url" class="nav_dropdown-link_child w-dropdown-link">{{ grandchild_link.title }}</a>
-                        </div>
-{% endfor %}    </div>
+                            {% if link.links.size > 0 %}    <nav li-if="link.links.size > 0" class="nav_dropdown-list nav_mega no-scrollbar w-dropdown-list">
+    <div class="nav_mega-cols">{% for child_link in link.links %}    <div li-for="child_link in link.links" class="nav_mega-col">
+                                    <a href="{{ child_link.url }}" li-object="child_link.title" li-object:href="child_link.url" class="nav_mega-col-header w-dropdown-link">{{ child_link.title }}</a>
+                            {% if child_link.links.size > 0 %}    <ul li-if="child_link.links.size > 0" role="list" class="nav_mega-col-list w-list-unstyled">
+    {% for grandchild_link in child_link.links %}    <li li-for="grandchild_link in child_link.links" class="nav_mega-col-item">
+                                    <a href="{{ grandchild_link.url }}" li-object="grandchild_link.title" li-object:href="grandchild_link.url" class="nav_mega-col-link w-dropdown-link">{{ grandchild_link.title }}</a>
+                        </li>
+{% endfor %}    </ul>
 {% endif %}
                         </div>
-{% endfor %}</div></div></div>    </nav>
+{% endfor %}</div><a href="{{ section.settings.url_promo_link }}" class="nav_mega-promo w-inline-block"> {% if section.settings.image_promo_bild %} {{ section.settings.image_promo_bild | image_url: width: 1200 | image_tag: loading: 'lazy', class: 'nav_mega-promo-img' }} {% else %} <img src="{{ 'placeholder.svg' | asset_url }}" loading="lazy" alt="" class="nav_mega-promo-img"> {% endif %}<div class="nav_mega-promo-content"><h3 class="nav_mega-promo-headline">{{ section.settings.text_promo_headline }}</h3><p class="nav_mega-promo-text"> {{ section.settings.textarea_promo_text }} </p><span class="nav_mega-promo-btn"><span>{{ section.settings.text_promo_button_text }}</span></span></div> </a>    </nav>
 {% endif %}
                         </div>
 {% endfor %}</nav><div class="nav_shop-icons"><div class="nav_search nav_search-trigger-wrap" x-data="{ searchOpen: false, searchQuery: '' }"><button type="button" aria-label="Suche öffnen" class="nav_shop-icon nav_search-pill" x-on:click="searchOpen = true; $nextTick(() => $refs.searchInput && $refs.searchInput.focus())"><div class="icon-embed-xsmall w-embed"><svg width="100%" height="100%" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M19.6 21L13.3 14.7C12.8 15.1 12.225 15.4167 11.575 15.65C10.925 15.8833 10.2333 16 9.5 16C7.68333 16 6.14583 15.3708 4.8875 14.1125C3.62917 12.8542 3 11.3167 3 9.5C3 7.68333 3.62917 6.14583 4.8875 4.8875C6.14583 3.62917 7.68333 3 9.5 3C11.3167 3 12.8542 3.62917 14.1125 4.8875C15.3708 6.14583 16 7.68333 16 9.5C16 10.2333 15.8833 10.925 15.65 11.575C15.4167 12.225 15.1 12.8 14.7 13.3L21 19.6L19.6 21ZM9.5 14C10.75 14 11.8125 13.5625 12.6875 12.6875C13.5625 11.8125 14 10.75 14 9.5C14 8.25 13.5625 7.1875 12.6875 6.3125C11.8125 5.4375 10.75 5 9.5 5C8.25 5 7.1875 5.4375 6.3125 6.3125C5.4375 7.1875 5 8.25 5 9.5C5 10.75 5.4375 11.8125 6.3125 12.6875C7.1875 13.5625 8.25 14 9.5 14Z" fill="currentColor"></path></svg></div><span class="nav_search-placeholder">
@@ -426,6 +426,34 @@
             "id": "image_logo",
             "type": "image_picker",
             "label": "Logo"
+        },
+        {
+            "id": "url_promo_link",
+            "type": "url",
+            "label": "Promo Link"
+        },
+        {
+            "id": "image_promo_bild",
+            "type": "image_picker",
+            "label": "Promo Bild"
+        },
+        {
+            "id": "text_promo_headline",
+            "type": "text",
+            "label": "Promo Headline",
+            "default": "Weigh Darker\u2122 Moon Bag Ruffle"
+        },
+        {
+            "id": "textarea_promo_text",
+            "type": "textarea",
+            "label": "Promo Text",
+            "default": "Raffiniertes Design. Recycelte Materialien."
+        },
+        {
+            "id": "text_promo_button_text",
+            "type": "text",
+            "label": "Promo Button Text",
+            "default": "Jetzt shoppen"
         },
         {
             "id": "text_suche_placeholder",
