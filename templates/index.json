@@ -217,6 +217,24 @@
     "accessories_slider": {
       "type": "accessories_slider",
       "blocks": {
+        "kategorie_7Hd9NC": {
+          "type": "kategorie",
+          "name": "Kategorie",
+          "settings": {
+            "url_link": "",
+            "text_titel": "Backpacks"
+          },
+          "blocks": {}
+        },
+        "kategorie_ghmtaa": {
+          "type": "kategorie",
+          "name": "Kategorie",
+          "settings": {
+            "url_link": "",
+            "text_titel": "Backpacks"
+          },
+          "blocks": {}
+        },
         "kategorie": {
           "type": "kategorie",
           "name": "Kategorie",
@@ -228,10 +246,12 @@
         }
       },
       "block_order": [
+        "kategorie_7Hd9NC",
+        "kategorie_ghmtaa",
         "kategorie"
       ],
       "settings": {
-        "text_uberschrift": "Zubehör &amp; Accessories",
+        "text_uberschrift": "Zubehör & Accessories",
         "padding_top": 60,
         "padding_bottom": 60,
         "bg_color": "#ffffff",
