@@ -1,0 +1,33 @@
+<div li-block="Kategorie Wrapper" class="accessories_category" x-init="if (active === null) active = '{{ block.id }}'" x-show="active === '{{ block.id }}'" {{ block.shopify_attributes }}>
+                    <template x-teleport="#accessories-tabs"></template>
+                    <div class="accessories_swiper swiper"><div role="list" class="swiper-wrapper accessories_list">{% for product in block.settings.collection_kollektion.products limit: block.settings.collection_kollektion_limit %}
+<div role="listitem" class="swiper-slide accessories_item">
+    {% render 'product_card', product: product %}
+</div>
+{% endfor %}</div><div class="accessories_scrollbar swiper-scrollbar"></div></div>
+                </div> {% schema %} {
+    "name": "Kategorie Wrapper",
+    "settings": [
+        {
+            "id": "collection_kollektion",
+            "type": "collection",
+            "label": "Kollektion"
+        },
+        {
+            "type": "range",
+            "id": "collection_kollektion_limit",
+            "min": 1,
+            "max": 99,
+            "step": 1,
+            "label": "Limit: Kollektion",
+            "default": 6
+        }
+    ],
+    "presets": [
+        {
+            "name": "Kategorie Wrapper",
+            "blocks": []
+        }
+    ],
+    "tag": null
+} {% endschema %}
