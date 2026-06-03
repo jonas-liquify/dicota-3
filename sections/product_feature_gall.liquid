@@ -1,25 +1,27 @@
-<div class="padding-global" style="padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px; background-color: {{ section.settings.bg_color }}; color: {{ section.settings.text_color }};"><div class="container-large"><h2 class="product-features_headline heading-style-h2">
+{% if product.metafields.custom.key_features != blank %}    <div li-if="product.metafields.custom.key_features != blank" class="padding-global">
+    <div class="container-large"><h2 class="product-features_headline heading-style-h2">
 {{ section.settings.text_uberschrift }}
-</h2><div class="swiper is-product-features"><div li-cf-theme-blocks="" class="swiper-wrapper is-product-features">
-{% content_for 'blocks' %}
-</div></div></div></div><div class="hide w-embed w-script"><script>document.addEventListener("DOMContentLoaded", function() {  new Swiper(".swiper.is-product-features", {    slidesPerView: "auto",    spaceBetween: 24,    freeMode: true,    grabCursor: true,    breakpoints: { 0: { spaceBetween: 16 }, 768: { spaceBetween: 24 } }  });});</script></div> {% schema %} {
+</h2><div class="swiper is-product-features"><div class="swiper-wrapper is-product-features">{% for feature in product.metafields.custom.key_features.value %}    <div li-for="feature in product.metafields.custom.key_features.value" class="swiper-slide is-product-features product-features_item">
+                                    <div class="product-features_img-wrap"><img li-object:src="feature.image | image_url: width: 800" li-object:alt="feature.headline" src="{{ feature.image | image_url: width: 800 }}" loading="lazy" alt="{{ feature.headline }}" class="product-features_img"></div>
+                            <div class="product-features_content">{% if feature.category.value %}    <span li-if="feature.category != blank" li-object="feature.category.value" class="product-features_category text-style-subline">
+    Kategorie    </span>
+{% endif %}<h3 li-object="feature.headline" class="product-features_title heading-style-h4">{{ feature.headline }}</h3><div li-object="feature.description" class="product-features_text text-size-regular">{{ feature.description }}</div></div>
+                        </div>
+{% endfor %}</div></div></div>    </div>
+{% endif %}<div class="hide w-embed w-script"><script>document.addEventListener("DOMContentLoaded", function() { var ensure = function(cb) { if (typeof Swiper !== "undefined") return cb(); if (window.__swiperLoading) return window.__swiperLoading.then(cb); var s = document.createElement("script"); s.src = "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"; var link = document.createElement("link"); link.rel = "stylesheet"; link.href = "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"; document.head.appendChild(link); window.__swiperLoading = new Promise(function(res) { s.onload = res; }); document.head.appendChild(s); window.__swiperLoading.then(cb); }; ensure(function() { document.querySelectorAll(".swiper.is-product-features").forEach(function(el) { if (el.swiper) return; new Swiper(el, { slidesPerView: "auto", spaceBetween: 24, freeMode: true, grabCursor: true, breakpoints: { 0: { spaceBetween: 16 }, 768: { spaceBetween: 24 } } }); }); }); });</script></div> {% schema %} {
     "tag": "section",
     "name": "Product Feature Gall",
     "class": "section_product-features",
-    "blocks": [
-        {
-            "type": "feature"
-        },
-        {
-            "type": "@app"
-        }
-    ],
     "settings": [
         {
             "id": "text_uberschrift",
             "type": "text",
             "label": "\u00dcberschrift",
             "default": "Entdecke die Features"
+        },
+        {
+            "type": "paragraph",
+            "content": "Diese Sektion zieht ihre Inhalte automatisch aus dem Produkt-Metafeld custom.key_features (Liste von Key-Feature-Metaobjekten). Felder pro Eintrag: Headline \u00b7 Category \u00b7 Description \u00b7 Image. Ist das Metafeld auf einem Produkt leer, wird die Sektion ausgeblendet."
         },
         {
             "type": "header",
@@ -66,11 +68,7 @@
         {
             "name": "Product Feature Gall",
             "category": "Product",
-            "blocks": [
-                {
-                    "type": "feature"
-                }
-            ]
+            "blocks": []
         }
     ],
     "enabled_on": {
