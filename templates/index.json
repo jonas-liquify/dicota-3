@@ -367,12 +367,29 @@
         "padding_bottom": 80,
         "show_rating": true
       }
+    },
+    "rating_bar_qr8cYB": {
+      "type": "rating_bar",
+      "name": "Rating Bar",
+      "settings": {
+        "text_bewertung_zahl": "4,83",
+        "text_bewertung_label": "Hervorragend",
+        "text_anzahl_bewertungen": "17 982 Bewertungen",
+        "url_provider_link": "",
+        "alignment": "center",
+        "padding_top": 24,
+        "padding_bottom": 24,
+        "bg_color": "#ffffff",
+        "text_color": "#0f0f0f",
+        "stars_color": "#fd6612"
+      }
     }
   },
   "layout": "theme",
   "wrapper": "main.main-wrapper",
   "order": [
     "hero_slider",
+    "rating_bar_qr8cYB",
     "section_headline",
     "featured_products",
     "usp_icon_row",
