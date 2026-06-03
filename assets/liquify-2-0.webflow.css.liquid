@@ -8422,6 +8422,16 @@ figcaption {
   flex-direction: column;
   gap: 0.5rem;
 }
+.product-features_category {
+  display: inline-block;
+  font-family: "Futura PT", sans-serif;
+  font-weight: 500;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #6b6b6b;
+  margin: 0;
+}
 .product-features_title {
   font-size: 1.375rem;
   font-weight: 700;
@@ -12169,19 +12179,55 @@ figcaption {
   gap: 1.75rem;
   margin: 0;
 }
-.section_b2b-login .form_input.is-gutschein-form {
+/* B2B Login — Stacked input pattern (label above, clean dark input) */
+.section_b2b-login .b2b-login_field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.section_b2b-login .b2b-login_label {
+  display: block;
+  font-family: "Futura PT", sans-serif;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.85);
+  letter-spacing: 0.02em;
+  margin: 0;
+}
+.section_b2b-login .b2b-login_input {
+  display: block;
+  width: 100%;
+  height: auto;
+  min-height: 3rem;
+  margin: 0;
+  padding: 0.75rem 1rem;
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 4px;
   color: #ffffff;
-  border-bottom-color: rgba(255, 255, 255, 0.35);
+  font-family: "Futura PT", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.4;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+  -webkit-appearance: none;
+  appearance: none;
 }
-.section_b2b-login .form_input.is-gutschein-form:focus {
-  border-bottom-color: #ffffff;
+.section_b2b-login .b2b-login_input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+  font-weight: 400;
 }
-.section_b2b-login .form_label.is-gutschein-form {
-  color: rgba(255, 255, 255, 0.7);
+.section_b2b-login .b2b-login_input:focus,
+.section_b2b-login .b2b-login_input:focus-visible {
+  outline: none;
+  border-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
 }
-.section_b2b-login .form_input.is-gutschein-form:focus + .form_label.is-gutschein-form,
-.section_b2b-login .form_input.is-gutschein-form:not(:placeholder-shown) + .form_label.is-gutschein-form {
-  color: #ffffff;
+.section_b2b-login .b2b-login_input:-webkit-autofill {
+  -webkit-text-fill-color: #ffffff;
+  -webkit-box-shadow: 0 0 0px 1000px rgba(15, 15, 15, 0.95) inset;
+  caret-color: #ffffff;
 }
 .b2b-login_links {
   display: flex;
