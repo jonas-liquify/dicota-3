@@ -1499,18 +1499,18 @@ figcaption {
 }
 
 .nav_container {
-  grid-column-gap: 2rem;
-  grid-row-gap: 2rem;
-  grid-template-rows: auto;
-  grid-template-columns: 1fr auto 1fr;
-  grid-auto-columns: 1fr;
-  justify-content: space-between;
+  display: flex;
   align-items: center;
+  justify-content: flex-start;
+  gap: 2.5rem;
   width: 100%;
   height: 100%;
   margin-left: auto;
   margin-right: auto;
-  display: flex;
+}
+/* Shop icons cluster on the right edge (search, wishlist, account, cart) */
+.nav_container > .nav_shop-icons {
+  margin-left: auto;
 }
 
 .nav_menu {
@@ -4326,6 +4326,36 @@ figcaption {
   .more-stories_grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  .nav_dropdown-list.nav_mega {
+    position: static;
+    inset: auto;
+    grid-template-columns: 1fr;
+    border-top: 0;
+    max-height: none;
+  }
+  .nav_mega-cols {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1.25rem;
+  }
+  .nav_mega-col {
+    gap: .5rem;
+  }
+  .nav_mega-promo {
+    min-height: 16rem;
+    padding: 1.5rem;
+  }
+  .nav_mega-promo-headline {
+    font-size: 1.5rem;
+  }
+  .nav_mega-promo-text {
+    font-size: 1rem;
+  }
+  .nav_menu-dropdown .nav_dropdown-toggle {
+    opacity: 1;
+  }
+  .nav_menu-dropdown:hover .nav_dropdown-toggle a > div > div,
+  .nav_menu-dropdown.w--open .nav_dropdown-toggle a > div > div { font-weight: 500; }
 }
 
 @media screen and (max-width: 767px) {
@@ -4946,6 +4976,26 @@ figcaption {
   .ph-lightbox_nav.is-next {
     right: .5rem;
   }
+  .hero_arrow {
+    width: 2rem;
+    height: 2rem;
+  }
+  .hero_arrow-prev {
+    left: .75rem;
+  }
+  .hero_arrow-next {
+    right: .75rem;
+  }
+  .hero_pagination {
+    bottom: 1rem;
+    gap: .75rem;
+  }
+  .hero_dots {
+    gap: .5rem;
+  }
+  .hero_bullet.is-active {
+    width: 2.25rem;
+  }
 }
 
 @media screen and (max-width: 479px) {
@@ -5504,6 +5554,21 @@ figcaption {
   }
   .more-stories_grid {
     grid-template-columns: 1fr;
+  }
+  .nav_mega-promo {
+    min-height: 14rem;
+    padding: 1rem;
+  }
+  .nav_mega-promo-headline {
+    font-size: 1.25rem;
+  }
+  .rating-bar_inner {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .5rem .75rem;
+  }
+  .rating-bar_divider {
+    display: none;
   }
 }
 
@@ -6109,13 +6174,20 @@ figcaption {
   background-color: #ffffff;
   color: #0f0f0f;
 }
-.hero_arrow-prev { left: 1.5rem; }
-.hero_arrow-next { right: 1.5rem; }
+.hero_arrow-prev {
+  left: 1.5rem;
+}
+.hero_arrow-next {
+  right: 1.5rem;
+}
 .hero_arrow.swiper-button-disabled {
   opacity: .4;
   pointer-events: none;
 }
-.hero_arrow .icon-embed-xsmall { width: 1rem; height: 1rem; }
+.hero_arrow .icon-embed-xsmall {
+  width: 1rem;
+  height: 1rem;
+}
 
 /* Pagination wrapper — fixed bottom-center, holds bullets + pause toggle */
 .hero_pagination {
@@ -6125,7 +6197,7 @@ figcaption {
   z-index: 3;
   display: flex;
   align-items: center;
-  gap: 1.0625rem;   /* 17px between dot strip and pause */
+  gap: 1.0625rem;
   transform: translateX(-50%);
 }
 
@@ -6152,7 +6224,7 @@ figcaption {
   padding: 0;
   cursor: pointer;
   display: inline-block;
-  width: .5rem;          /* 8px */
+  width: .5rem;
   height: .5rem;
   background-color: rgba(255, 255, 255, .5);
   backdrop-filter: blur(2.77px);
@@ -6164,7 +6236,7 @@ figcaption {
 }
 /* Active bullet — wide pill that contains an inner progress fill */
 .hero_bullet.is-active {
-  width: 3.4375rem;      /* 55px */
+  width: 3.4375rem;
 }
 /* Inner progress — sits inside every bullet, only shows on the active one */
 .hero_bullet-progress {
@@ -6185,7 +6257,7 @@ figcaption {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 1.25rem;        /* 20px — matches Figma 19.4px */
+  width: 1.25rem;
   height: 1.25rem;
   padding: 0;
   border: none;
@@ -6206,19 +6278,17 @@ figcaption {
   height: .75rem;
 }
 /* Toggle visibility based on toggle state — default: paused-icon (pause bars) visible */
-.hero_autoplay-toggle .hero_autoplay-icon-play { display: none; }
-.hero_autoplay-toggle.is-paused .hero_autoplay-icon-pause { display: none; }
-.hero_autoplay-toggle.is-paused .hero_autoplay-icon-play { display: inline-flex; }
+.hero_autoplay-toggle .hero_autoplay-icon-play {
+  display: none;
+}
+.hero_autoplay-toggle.is-paused .hero_autoplay-icon-pause {
+  display: none;
+}
+.hero_autoplay-toggle.is-paused .hero_autoplay-icon-play {
+  display: inline-flex;
+}
 
 /* Mobile adaptations */
-@media screen and (max-width: 767px) {
-  .hero_arrow { width: 2rem; height: 2rem; }
-  .hero_arrow-prev { left: .75rem; }
-  .hero_arrow-next { right: .75rem; }
-  .hero_pagination { bottom: 1rem; gap: .75rem; }
-  .hero_dots { gap: .5rem; }
-  .hero_bullet.is-active { width: 2.25rem; }
-}
 
 /* =============================================================
    DICOTA — Section Headline (brand intro block)
@@ -9883,6 +9953,7 @@ figcaption {
    ============================================================= */
 .section_collection-header {
   width: 100%;
+  display: none;
 }
 
 .section_collection-header > .padding-global {
@@ -12349,8 +12420,11 @@ figcaption {
 
 /* =============================================================
    DICOTA — Navbar Style Modes (transparent vs white solid)
+   Modifier class lives on .nav_component (the inner wrapper),
+   not on .section_navbar, because Liquiflow forbids
+   li-attribute:class on the <section> element directly.
    ============================================================= */
-.section_navbar.is-transparent {
+.section_navbar .nav_component.is-transparent {
   background-color: transparent;
   color: #ffffff;
   position: absolute;
@@ -12358,32 +12432,32 @@ figcaption {
   right: 0;
   z-index: 90;
 }
-.section_navbar.is-transparent::before {
+.section_navbar .nav_component.is-transparent::before {
   content: ""; position: absolute; inset: 0;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0));
   pointer-events: none; z-index: -1;
 }
-.section_navbar.is-transparent .nav_logo {
+.section_navbar .nav_component.is-transparent .nav_logo {
   filter: brightness(0) invert(1);
 }
-.section_navbar.is-white {
+.section_navbar .nav_component.is-white {
   background-color: #ffffff;
   color: #0f0f0f;
 }
-.section_navbar.is-white .nav_search-pill {
+.section_navbar .nav_component.is-white .nav_search-pill {
   background-color: #f4f4f4;
 }
-.section_navbar.is-white .nav_search-placeholder {
+.section_navbar .nav_component.is-white .nav_search-placeholder {
   color: #6b6b6b;
 }
-.section_navbar.is-transparent.is-scrolled {
+.section_navbar .nav_component.is-transparent.is-scrolled {
   background-color: #ffffff;
   color: #0f0f0f;
   position: sticky;
   top: 0;
 }
-.section_navbar.is-transparent.is-scrolled::before { display: none; }
-.section_navbar.is-transparent.is-scrolled .nav_logo {
+.section_navbar .nav_component.is-transparent.is-scrolled::before { display: none; }
+.section_navbar .nav_component.is-transparent.is-scrolled .nav_logo {
   filter: none;
 }
 
@@ -14012,25 +14086,65 @@ figcaption {
   font-weight: 500;
 }
 
-
 /* =============================================================
    DICOTA — Header Mega Menu (Figma 5890:5881)
    Restructures .nav_dropdown-list into a 2-column layout:
    left = link columns (each child_link is a column header),
    right = promotional panel with image + headline + CTA.
    ============================================================= */
-.nav_dropdown-list.nav_mega {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0;
+/* CLOSED state inherits Webflow's `.w-dropdown-list { display: none }`,
+   so the mega menu is fully removed from the layout AND hit-testing
+   when not hovered. Only when .w--open is added do we apply the grid
+   layout + positioning. Webflow IX2 handles opacity/transform animation
+   on top of the .w--open state via inline styles. */
+.section_navbar .nav_dropdown-list.nav_mega {
+  background-color: #ffffff;
+  border-top: 1px solid rgba(0, 0, 0, .1);
   width: 100%;
   max-height: 80vh;
   padding: 0;
-  border-top: 1px solid rgba(0, 0, 0, .1);
-  background-color: #ffffff;
-  position: fixed;
-  inset: 5rem 0 auto;
   overflow: auto;
+}
+/* Belt-and-braces: force closed dropdown to be FULLY hidden + non-interactive,
+   even if some other CSS or Webflow IX2 tries to keep it visible via inline
+   opacity/display. Without .w--open, this dropdown must not block underlying clicks. */
+.section_navbar .nav_dropdown-list.nav_mega:not(.w--open) {
+  display: none !important;
+  pointer-events: none !important;
+  visibility: hidden !important;
+}
+.section_navbar .nav_dropdown-list.nav_mega.w--open {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  position: absolute;
+  inset: 100% 0 auto 0;   /* sit flush under the .nav_component, full-width */
+  z-index: 80;
+  /* Webflow IX2 leaves an inline opacity:0 + translate3d(0,-3rem,0) on the
+     dropdown as the "hidden" keyframe. If the IX2 animation engine isn't
+     running (e.g. local preview), the dropdown would stay invisible.
+     These overrides guarantee visibility whenever .w--open is present. */
+  opacity: 1 !important;
+  transform: none !important;
+  transition: opacity .2s ease;
+}
+/* Ensure the navbar component is the positioning context for the dropdown
+   so it sticks below the nav bar instead of the viewport top. We also
+   reset the position of .nav_menu-dropdown (which Webflow's .w-dropdown
+   sets to position:relative) so the abs-positioned dropdown-list breaks
+   out and is sized against the full-width .nav_component instead of the
+   narrow toggle wrapper. */
+.section_navbar .nav_component {
+  position: relative;
+}
+/* Reset every intermediate that Webflow makes position:relative so the
+   abs-positioned mega menu attaches to .nav_component, not the narrow
+   toggle (or the menu container). */
+.section_navbar .nav_container,
+.section_navbar .nav_menu,
+.section_navbar .nav_menu.is-page-height-tablet,
+.section_navbar .nav_menu-dropdown.w-dropdown {
+  position: static;
 }
 .nav_mega-cols {
   display: grid;
@@ -14056,8 +14170,18 @@ figcaption {
   padding: 0;
 }
 .nav_mega-col-header:hover { opacity: .7; }
-.nav_mega-col-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: .25rem; }
-.nav_mega-col-item { padding: 0; margin: 0; }
+.nav_mega-col-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+}
+.nav_mega-col-item {
+  padding: 0;
+  margin: 0;
+}
 .nav_mega-col-link {
   display: block;
   font-family: "Futura PT", sans-serif;
@@ -14144,44 +14268,33 @@ figcaption {
 .nav_mega-promo:hover .nav_mega-promo-btn { transform: translateY(-1px); transition: transform .2s ease; }
 
 /* Active/open dropdown — Webflow toggles .w--open on .nav_menu-dropdown */
-.nav_menu-dropdown .nav_dropdown-toggle { transition: opacity .15s ease; opacity: .7; }
+.nav_menu-dropdown .nav_dropdown-toggle {
+  transition: opacity .15s ease;
+  opacity: .7;
+}
 .nav_menu-dropdown:hover .nav_dropdown-toggle,
 .nav_menu-dropdown.w--open .nav_dropdown-toggle { opacity: 1; }
 .nav_menu-dropdown:hover .nav_dropdown-toggle a > div > div,
 .nav_menu-dropdown.w--open .nav_dropdown-toggle a > div > div { font-weight: 700; }
-.nav_menu-dropdown .dropdown-icon { transition: transform .2s ease; }
-.nav_menu-dropdown.w--open .dropdown-icon { transform: rotate(180deg); }
+.nav_menu-dropdown .dropdown-icon {
+  transition: transform .2s ease;
+}
+.nav_menu-dropdown.w--open .dropdown-icon {
+  transform: rotate(180deg);
+}
 
 /* Mobile — collapse mega menu to single-column accordion-friendly stack */
-@media screen and (max-width: 991px) {
-  .nav_dropdown-list.nav_mega {
-    position: static;
-    inset: auto;
-    grid-template-columns: 1fr;
-    border-top: 0;
-    max-height: none;
-  }
-  .nav_mega-cols { grid-template-columns: 1fr; gap: 1rem; padding: 1.25rem; }
-  .nav_mega-col { gap: .5rem; }
-  .nav_mega-promo { min-height: 16rem; padding: 1.5rem; }
-  .nav_mega-promo-headline { font-size: 1.5rem; }
-  .nav_mega-promo-text { font-size: 1rem; }
-  /* Reset the open-state font-weight bump on mobile (hover-driven layouts don't apply cleanly) */
-  .nav_menu-dropdown .nav_dropdown-toggle { opacity: 1; }
-  .nav_menu-dropdown:hover .nav_dropdown-toggle a > div > div,
-  .nav_menu-dropdown.w--open .nav_dropdown-toggle a > div > div { font-weight: 500; }
-}
-@media screen and (max-width: 479px) {
-  .nav_mega-promo { min-height: 14rem; padding: 1rem; }
-  .nav_mega-promo-headline { font-size: 1.25rem; }
-}
 
 /* =============================================================
    DICOTA — Announcement Bar dividers (Figma 5890:5881)
    Adds vertical separators between right-side link blocks
    without needing extra divider elements in markup.
    ============================================================= */
-.announcement-bar_links { display: inline-flex; align-items: center; gap: 1rem; }
+.announcement-bar_links {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+}
 .announcement-bar_links > .announcement-bar_link + .announcement-bar_link::before {
   content: "";
   display: inline-block;
@@ -14244,7 +14357,9 @@ figcaption {
    Standalone horizontal trust strip: 5 stars + score + label
    + review count + provider logo. Editorial alignment via setting.
    ============================================================= */
-.section_rating-bar { width: 100%; }
+.section_rating-bar {
+  width: 100%;
+}
 .section_rating-bar > .padding-global {
   padding-top: 24px;
   padding-bottom: 24px;
@@ -14261,7 +14376,9 @@ figcaption {
   width: auto;
 }
 /* Alignment helper — the inner is inline-flex, so we center via parent text-align */
-.section_rating-bar .container-large { text-align: center; }
+.section_rating-bar .container-large {
+  text-align: center;
+}
 .section_rating-bar .container-large:has(.rating-bar_inner.is-align-left) { text-align: left; }
 .section_rating-bar .container-large:has(.rating-bar_inner.is-align-right) { text-align: right; }
 
@@ -14273,7 +14390,9 @@ figcaption {
 }
 .rating-bar_stars svg { width: 100%; height: 100%; }
 
-.rating-bar_score { font-weight: 500; }
+.rating-bar_score {
+  font-weight: 500;
+}
 .rating-bar_label,
 .rating-bar_count { font-weight: 500; opacity: .85; }
 
@@ -14286,14 +14405,13 @@ figcaption {
   margin: 0 .25rem;
 }
 
-.rating-bar_provider { display: inline-flex; align-items: center; }
+.rating-bar_provider {
+  display: inline-flex;
+  align-items: center;
+}
 .rating-bar_logo {
   height: 1.25rem;
   width: auto;
   display: block;
 }
 
-@media screen and (max-width: 479px) {
-  .rating-bar_inner { flex-wrap: wrap; justify-content: center; gap: .5rem .75rem; }
-  .rating-bar_divider { display: none; }
-}
