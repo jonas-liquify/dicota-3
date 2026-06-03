@@ -29,7 +29,7 @@
           "type": "slide",
           "name": "Slide",
           "settings": {
-            "image_hintergrundbild": "shopify://shop_images/2_MT_Five.webp",
+            "image_hintergrundbild": "shopify://shop_images/2_PITw_Filter_b6157506-bf05-4037-b4c5-78007bf08f3f.jpg",
             "text_headline_zeile_1": "Weigh Darker™",
             "text_headline_zeile_2": "Moon Bag Ruffle",
             "text_subtext": "Raffiniertes Design. Recycelte moderne Materialien.",
@@ -192,12 +192,12 @@
     "image_banner": {
       "type": "image_banner",
       "settings": {
-        "image_hintergrundbild": "shopify://shop_images/Dicota_hero_7f1d2a97-4f6a-4d89-b151-e2aa2115e1e1.avif",
-        "text_headline_zeile_1": "Weigh Darker™",
-        "text_headline_zeile_2": "Moon Bag Ruffle",
+        "image_hintergrundbild": "shopify://shop_images/2_PITw_Filter_b6157506-bf05-4037-b4c5-78007bf08f3f.jpg",
+        "text_headline_zeile_1": "DICOTA",
+        "text_headline_zeile_2": "MAGNETIC PRIVACY FILTERS",
         "textarea_subtext": "Raffiniertes Design. Recycelte Materialien.",
         "url_button_link": "",
-        "text_button_text": "Jetzt shoppen",
+        "text_button_text": "Explore Now",
         "min_height": 55,
         "full_bleed": true,
         "content_horizontal": "flex-start",
