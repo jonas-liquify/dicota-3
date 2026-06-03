@@ -426,10 +426,29 @@
     "loved_by_customers": {
       "type": "loved_by_customers",
       "blocks": {
+        "foto_kDUgGU": {
+          "type": "foto",
+          "name": "Foto",
+          "settings": {
+            "image_foto": "shopify://shop_images/5_MT_OneMore.webp",
+            "tagged_product": ""
+          },
+          "blocks": {}
+        },
+        "foto_6Fi78A": {
+          "type": "foto",
+          "name": "Foto",
+          "settings": {
+            "image_foto": "shopify://shop_images/1_MT_Seven.webp",
+            "tagged_product": ""
+          },
+          "blocks": {}
+        },
         "foto_n74NAz": {
           "type": "foto",
           "name": "Foto",
           "settings": {
+            "image_foto": "shopify://shop_images/2_MT_Five.webp",
             "tagged_product": ""
           },
           "blocks": {}
@@ -438,6 +457,7 @@
           "type": "foto",
           "name": "Foto",
           "settings": {
+            "image_foto": "shopify://shop_images/4_MT_PrivacyFilter.webp",
             "tagged_product": ""
           },
           "blocks": {}
@@ -452,11 +472,14 @@
         }
       },
       "block_order": [
+        "foto_kDUgGU",
+        "foto_6Fi78A",
         "foto_n74NAz",
         "foto_TtXdDw",
         "foto"
       ],
       "settings": {
+        "image_header_bild": "shopify://shop_images/3_MT_Urban.webp",
         "text_uberschrift": "Loved by 350.000 Customers DACH",
         "text_bewertungstext": "4,9/5.0 Sterne bei 80.000+ Bewertungen",
         "padding_top": 60,
