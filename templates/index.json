@@ -232,21 +232,21 @@
         },
         "kategorie_fGcEcj": {
           "type": "kategorie",
-          "name": "Kategorie",
+          "name": "Sleeves",
           "settings": {
             "url_link": "",
-            "image_bild": "shopify://shop_images/Dicota_B2B_2756dd4f-7290-4be4-8489-408333a5a0d8.avif",
-            "text_titel": "Backpacks"
+            "image_bild": "shopify://shop_images/CT1c_Sleeves.jpg",
+            "text_titel": "Sleeves"
           },
           "blocks": {}
         },
         "kategorie_V9nXFi": {
           "type": "kategorie",
-          "name": "Kategorie",
+          "name": "Trolleys",
           "settings": {
             "url_link": "",
-            "image_bild": "shopify://shop_images/Dicota_Laptop_Bags_78775f76-fc72-4f09-be05-4bc9d20dfdf9.avif",
-            "text_titel": "Backpacks"
+            "image_bild": "shopify://shop_images/CT1c_Trolley.jpg",
+            "text_titel": "Trolleys"
           },
           "blocks": {}
         },
