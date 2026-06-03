@@ -1725,13 +1725,9 @@ figcaption {
 }
 
 .product-header_layout {
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-  grid-template-rows: auto;
-  grid-template-columns: 3fr 2fr;
-  grid-auto-columns: 1fr;
-  align-items: start;
   display: flex;
+  align-items: flex-start;
+  gap: 2rem;
   min-height: 100vh;
 }
 
@@ -8965,7 +8961,7 @@ figcaption {
   overflow: visible;
 }
 .swiper-slide.is-add-to-kit {
-  width: 220px;
+  width: min(20.5rem, 80vw);   /* same width as Featured Products cards */
   flex-shrink: 0;
 }
 .product-add-to-kit_card {
@@ -9041,7 +9037,8 @@ figcaption {
   align-items: stretch;
   position: sticky;
   top: 72px;
-  width: 60%;
+  flex: 1 1 auto;           /* grows to fill remaining space on wide screens */
+  min-width: 0;
 }
 
 /* ── Gallery ─────────────────────────────────────────────── */
@@ -9052,14 +9049,24 @@ figcaption {
 }
 
 /* ── Product Details column ──────────────────────────────── */
+/* Fixed comfortable reading width — gallery grows to fill the rest
+   on bigger screens so images get bigger, not the form column. */
 .product-header_details {
   display: flex;
   flex-direction: column;
   gap: 2rem;
   padding: 2.5rem 2.25rem;
-  width: 40%;
+  flex: 0 0 auto;
+  width: 100%;
+  max-width: 32rem;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: stretch;            /* children fill the column width */
+}
+/* Every direct child of details column spans the full column width
+   so title, USPs, price, options, buttons all line up vertically. */
+.product-header_details > * {
+  width: 100%;
+  max-width: 100%;
 }
 
 /* ── Block: Produkt-Kopf ─────────────────────────────────── */
