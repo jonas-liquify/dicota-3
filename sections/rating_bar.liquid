@@ -1,0 +1,118 @@
+<div class="padding-global" style="padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px; background-color: {{ section.settings.bg_color }}; color: {{ section.settings.text_color }}; --rating-stars-color: {{ section.settings.stars_color }};"><div class="container-large"><div class="rating-bar_inner{% if section.settings.alignment == 'left' %} is-align-left{% elsif section.settings.alignment == 'right' %} is-align-right{% endif %}"><div class="rating-bar_stars" aria-hidden="true"><svg viewbox="0 0 100 20" xmlns="http://www.w3.org/2000/svg"><g fill="currentColor"><polygon points="10,0 12.3,7.2 20,7.2 13.9,11.6 16.2,18.8 10,14.4 3.8,18.8 6.1,11.6 0,7.2 7.7,7.2"></polygon><polygon points="30,0 32.3,7.2 40,7.2 33.9,11.6 36.2,18.8 30,14.4 23.8,18.8 26.1,11.6 20,7.2 27.7,7.2"></polygon><polygon points="50,0 52.3,7.2 60,7.2 53.9,11.6 56.2,18.8 50,14.4 43.8,18.8 46.1,11.6 40,7.2 47.7,7.2"></polygon><polygon points="70,0 72.3,7.2 80,7.2 73.9,11.6 76.2,18.8 70,14.4 63.8,18.8 66.1,11.6 60,7.2 67.7,7.2"></polygon><polygon points="90,0 92.3,7.2 100,7.2 93.9,11.6 96.2,18.8 90,14.4 83.8,18.8 86.1,11.6 80,7.2 87.7,7.2"></polygon></g></svg></div><span class="rating-bar_score">
+{{ section.settings.text_bewertung_zahl }}
+</span><span class="rating-bar_label">
+{{ section.settings.text_bewertung_label }}
+</span><span class="rating-bar_divider" aria-hidden="true"></span><span class="rating-bar_count">
+{{ section.settings.text_anzahl_bewertungen }}
+</span><a href="{{ section.settings.url_provider_link }}" class="rating-bar_provider w-inline-block"> {% if section.settings.image_provider_logo %} {{ section.settings.image_provider_logo | image_url: width: 60 | image_tag: loading: 'lazy', class: 'rating-bar_logo' }} {% else %} <img src="{{ 'placeholder.svg' | asset_url }}" loading="lazy" alt="" class="rating-bar_logo"> {% endif %} </a></div></div></div> {% schema %} {
+    "tag": "section",
+    "name": "Rating Bar",
+    "class": "section_rating-bar",
+    "settings": [
+        {
+            "id": "text_bewertung_zahl",
+            "type": "text",
+            "label": "Bewertung (Zahl)",
+            "default": "4,83"
+        },
+        {
+            "id": "text_bewertung_label",
+            "type": "text",
+            "label": "Bewertung (Label)",
+            "default": "Hervorragend"
+        },
+        {
+            "id": "text_anzahl_bewertungen",
+            "type": "text",
+            "label": "Anzahl Bewertungen",
+            "default": "17 982 Bewertungen"
+        },
+        {
+            "id": "url_provider_link",
+            "type": "url",
+            "label": "Provider-Link"
+        },
+        {
+            "id": "image_provider_logo",
+            "type": "image_picker",
+            "label": "Provider-Logo"
+        },
+        {
+            "type": "header",
+            "content": "Layout"
+        },
+        {
+            "type": "select",
+            "id": "alignment",
+            "label": "Ausrichtung",
+            "options": [
+                {
+                    "value": "center",
+                    "label": "Zentriert"
+                },
+                {
+                    "value": "left",
+                    "label": "Links"
+                },
+                {
+                    "value": "right",
+                    "label": "Rechts"
+                }
+            ],
+            "default": "center"
+        },
+        {
+            "type": "header",
+            "content": "Abst\u00e4nde"
+        },
+        {
+            "type": "range",
+            "id": "padding_top",
+            "min": 0,
+            "max": 80,
+            "step": 4,
+            "unit": "px",
+            "label": "Abstand oben",
+            "default": 24
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom",
+            "min": 0,
+            "max": 80,
+            "step": 4,
+            "unit": "px",
+            "label": "Abstand unten",
+            "default": 24
+        },
+        {
+            "type": "header",
+            "content": "Farben"
+        },
+        {
+            "type": "color",
+            "id": "bg_color",
+            "label": "Hintergrundfarbe",
+            "default": "#ffffff"
+        },
+        {
+            "type": "color",
+            "id": "text_color",
+            "label": "Textfarbe",
+            "default": "#0f0f0f"
+        },
+        {
+            "type": "color",
+            "id": "stars_color",
+            "label": "Sternenfarbe",
+            "default": "#fd6612"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Rating Bar",
+            "category": "Content",
+            "blocks": []
+        }
+    ]
+} {% endschema %}

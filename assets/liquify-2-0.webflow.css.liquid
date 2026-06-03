@@ -6081,7 +6081,10 @@ figcaption {
   filter: drop-shadow(0 2px 1px rgba(0, 0, 0, .1));
 }
 
-/* Arrows */
+/* =============================================================
+   DICOTA — Hero Slider Navigation (Figma 5404:3815)
+   ============================================================= */
+/* Arrows — translucent white pills, blur background, white chevron */
 .hero_arrow {
   position: absolute;
   top: 50%;
@@ -6094,32 +6097,27 @@ figcaption {
   padding: 0;
   border: none;
   border-radius: 999px;
-  color: var(--base-color-neutral--black, #0f0f0f);
-  background-color: rgba(255, 255, 255, .85);
-  backdrop-filter: blur(4px);
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, .2);
+  backdrop-filter: blur(4.65px);
+  -webkit-backdrop-filter: blur(4.65px);
   cursor: pointer;
   transform: translateY(-50%);
-  transition: background-color .2s ease;
+  transition: background-color .2s ease, color .2s ease;
 }
-
 .hero_arrow:hover {
-  background-color: var(--base-color-neutral--white, #fff);
+  background-color: #ffffff;
+  color: #0f0f0f;
 }
-
-.hero_arrow-prev {
-  left: 1.5rem;
-}
-
-.hero_arrow-next {
-  right: 1.5rem;
-}
-
+.hero_arrow-prev { left: 1.5rem; }
+.hero_arrow-next { right: 1.5rem; }
 .hero_arrow.swiper-button-disabled {
   opacity: .4;
   pointer-events: none;
 }
+.hero_arrow .icon-embed-xsmall { width: 1rem; height: 1rem; }
 
-/* Pagination */
+/* Pagination wrapper — fixed bottom-center, holds bullets + pause toggle */
 .hero_pagination {
   position: absolute;
   bottom: 1.5rem;
@@ -6127,45 +6125,99 @@ figcaption {
   z-index: 3;
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 1.0625rem;   /* 17px between dot strip and pause */
   transform: translateX(-50%);
 }
 
-.hero_dots {
+/* Bullet strip — need higher specificity than Swiper bundle's
+   `.swiper-pagination-bullets.swiper-pagination-horizontal { width:100% }` (0,2,0) */
+.hero_pagination > .hero_dots,
+.hero_swiper .hero_pagination .hero_dots {
   position: static;
   display: flex;
-  gap: .75rem;
+  align-items: center;
+  gap: .75rem;       /* 12px between bullets */
   width: auto;
+  bottom: auto;
+  left: auto;
+  right: auto;
+  transform: none;
 }
 
-.hero_dots .swiper-pagination-bullet {
-  width: .5rem;
+/* Each bullet — inactive: small translucent circle */
+.hero_bullet {
+  appearance: none;
+  -webkit-appearance: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  display: inline-block;
+  width: .5rem;          /* 8px */
   height: .5rem;
   background-color: rgba(255, 255, 255, .5);
-  opacity: 1;
-  backdrop-filter: blur(3px);
+  backdrop-filter: blur(2.77px);
+  -webkit-backdrop-filter: blur(2.77px);
   border-radius: 999px;
-  transition: width .25s ease, background-color .25s ease;
+  overflow: hidden;
+  position: relative;
+  transition: width .35s cubic-bezier(.4, 0, .2, 1);
 }
-
-.hero_dots .swiper-pagination-bullet-active {
-  width: 3.5rem;
-  background-color: var(--base-color-neutral--white, #fff);
+/* Active bullet — wide pill that contains an inner progress fill */
+.hero_bullet.is-active {
+  width: 3.4375rem;      /* 55px */
 }
+/* Inner progress — sits inside every bullet, only shows on the active one */
+.hero_bullet-progress {
+  position: absolute;
+  inset: 0;
+  background-color: #ffffff;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform .15s linear;
+  pointer-events: none;
+}
+/* Hide progress on non-active bullets so it doesn't peek through */
+.hero_bullet:not(.is-active) .hero_bullet-progress { display: none; }
 
+/* Pause / play toggle */
 .hero_autoplay-toggle {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 1.25rem;
+  width: 1.25rem;        /* 20px — matches Figma 19.4px */
   height: 1.25rem;
   padding: 0;
   border: none;
   border-radius: 999px;
   background-color: rgba(255, 255, 255, .2);
-  backdrop-filter: blur(6px);
-  color: var(--base-color-neutral--white, #fff);
+  backdrop-filter: blur(6.33px);
+  -webkit-backdrop-filter: blur(6.33px);
+  color: #ffffff;
   cursor: pointer;
+  transition: background-color .2s ease;
+}
+.hero_autoplay-toggle:hover { background-color: rgba(255, 255, 255, .35); }
+.hero_autoplay-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: .75rem;
+  height: .75rem;
+}
+/* Toggle visibility based on toggle state — default: paused-icon (pause bars) visible */
+.hero_autoplay-toggle .hero_autoplay-icon-play { display: none; }
+.hero_autoplay-toggle.is-paused .hero_autoplay-icon-pause { display: none; }
+.hero_autoplay-toggle.is-paused .hero_autoplay-icon-play { display: inline-flex; }
+
+/* Mobile adaptations */
+@media screen and (max-width: 767px) {
+  .hero_arrow { width: 2rem; height: 2rem; }
+  .hero_arrow-prev { left: .75rem; }
+  .hero_arrow-next { right: .75rem; }
+  .hero_pagination { bottom: 1rem; gap: .75rem; }
+  .hero_dots { gap: .5rem; }
+  .hero_bullet.is-active { width: 2.25rem; }
 }
 
 /* =============================================================
@@ -14185,4 +14237,63 @@ figcaption {
   z-index: auto;
   margin: 1.5rem auto 0;
   text-align: center;
+}
+
+/* =============================================================
+   DICOTA — Rating Bar (Figma 5404:3844)
+   Standalone horizontal trust strip: 5 stars + score + label
+   + review count + provider logo. Editorial alignment via setting.
+   ============================================================= */
+.section_rating-bar { width: 100%; }
+.section_rating-bar > .padding-global {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  background-color: #ffffff;
+  color: #0f0f0f;
+  --rating-stars-color: #fd6612;
+}
+.rating-bar_inner {
+  display: inline-flex;
+  align-items: center;
+  gap: .75rem;
+  font-family: "Futura PT", sans-serif;
+  font-size: .9375rem;
+  width: auto;
+}
+/* Alignment helper — the inner is inline-flex, so we center via parent text-align */
+.section_rating-bar .container-large { text-align: center; }
+.section_rating-bar .container-large:has(.rating-bar_inner.is-align-left) { text-align: left; }
+.section_rating-bar .container-large:has(.rating-bar_inner.is-align-right) { text-align: right; }
+
+.rating-bar_stars {
+  width: 6.25rem;
+  height: 1.25rem;
+  display: inline-flex;
+  color: var(--rating-stars-color, #fd6612);
+}
+.rating-bar_stars svg { width: 100%; height: 100%; }
+
+.rating-bar_score { font-weight: 500; }
+.rating-bar_label,
+.rating-bar_count { font-weight: 500; opacity: .85; }
+
+.rating-bar_divider {
+  display: inline-block;
+  width: 1px;
+  height: 1rem;
+  background-color: currentColor;
+  opacity: .25;
+  margin: 0 .25rem;
+}
+
+.rating-bar_provider { display: inline-flex; align-items: center; }
+.rating-bar_logo {
+  height: 1.25rem;
+  width: auto;
+  display: block;
+}
+
+@media screen and (max-width: 479px) {
+  .rating-bar_inner { flex-wrap: wrap; justify-content: center; gap: .5rem .75rem; }
+  .rating-bar_divider { display: none; }
 }
