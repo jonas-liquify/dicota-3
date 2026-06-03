@@ -1,0 +1,20 @@
+<div li-block="Produkt" class="swiper-slide is-add-to-kit" {{ block.shopify_attributes }}>
+                    {% render 'product_card', product: block.settings.product %}
+                    
+                </div> {% schema %} {
+    "name": "Produkt",
+    "settings": [
+        {
+            "type": "product",
+            "id": "product",
+            "label": "Produkt"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Produkt",
+            "blocks": []
+        }
+    ],
+    "tag": null
+} {% endschema %}

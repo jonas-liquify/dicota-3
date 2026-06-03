@@ -10,13 +10,13 @@
 {{ section.settings.text_tab_4_label }}
 </button></div></div><div class="swiper is-add-to-kit"><div li-cf-theme-blocks="" class="swiper-wrapper is-add-to-kit">
 {% content_for 'blocks' %}
-</div></div></div></div><div class="hide w-embed w-script"><script>document.addEventListener("DOMContentLoaded", function() {  new Swiper(".swiper.is-add-to-kit", {    slidesPerView: "auto",    spaceBetween: 24,    grabCursor: true,    breakpoints: { 0: { spaceBetween: 16 }, 768: { spaceBetween: 24 } }  });  var tabs = document.querySelectorAll(".product-add-to-kit_tab");  tabs.forEach(function(tab) {    tab.addEventListener("click", function() {      tabs.forEach(function(t) { t.classList.remove("is-active"); });      this.classList.add("is-active");    });  });});</script></div> {% schema %} {
+</div></div></div></div><div class="hide w-embed w-script"><script>document.addEventListener("DOMContentLoaded", function() { var ensure = function(cb) { if (typeof Swiper !== "undefined") return cb(); if (window.__swiperLoading) return window.__swiperLoading.then(cb); var s = document.createElement("script"); s.src = "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"; var link = document.createElement("link"); link.rel = "stylesheet"; link.href = "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"; document.head.appendChild(link); window.__swiperLoading = new Promise(function(res) { s.onload = res; }); document.head.appendChild(s); window.__swiperLoading.then(cb); }; ensure(function() { document.querySelectorAll(".swiper.is-add-to-kit").forEach(function(el) { if (el.swiper) return; new Swiper(el, { slidesPerView: "auto", spaceBetween: 24, grabCursor: true, breakpoints: { 0: { spaceBetween: 16 }, 768: { spaceBetween: 24 } } }); }); var tabs = document.querySelectorAll(".product-add-to-kit_tab"); tabs.forEach(function(tab) { tab.addEventListener("click", function() { tabs.forEach(function(t) { t.classList.remove("is-active"); }); this.classList.add("is-active"); }); }); });</script></div> {% schema %} {
     "tag": "section",
     "name": "Add to Your Kit",
     "class": "section_product-add-to-kit",
     "blocks": [
         {
-            "type": "produkt-karte"
+            "type": "produkt"
         },
         {
             "type": "@app"
@@ -52,6 +52,10 @@
             "type": "text",
             "label": "Tab 4 Label",
             "default": "Input Devices"
+        },
+        {
+            "type": "paragraph",
+            "content": "Pro Block w\u00e4hlst du ein Shopify-Produkt aus \u2014 es wird im standard Product-Card-Format gerendert (gleich wie in Featured Products etc.). Die Tab-Buttons sind aktuell rein visuell (Klick toggelt nur den aktiven State)."
         },
         {
             "type": "header",
@@ -100,7 +104,7 @@
             "category": "Product",
             "blocks": [
                 {
-                    "type": "produkt-karte"
+                    "type": "produkt"
                 }
             ]
         }
