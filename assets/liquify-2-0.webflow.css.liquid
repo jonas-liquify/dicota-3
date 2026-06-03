@@ -1502,15 +1502,28 @@ figcaption {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 2.5rem;
+  gap: 1.25rem;                      /* tighter logo→menu gap */
   width: 100%;
   height: 100%;
   margin-left: auto;
   margin-right: auto;
 }
+/* Logo never shrinks — must stay readable even when nav links wrap/squeeze */
+.nav_container > .nav_logo-link {
+  flex: 0 0 auto;
+}
+.nav_container > .nav_logo-link .nav_logo {
+  flex-shrink: 0;
+  min-width: 0;
+}
 /* Shop icons cluster on the right edge (search, wishlist, account, cart) */
 .nav_container > .nav_shop-icons {
   margin-left: auto;
+  flex-shrink: 0;
+}
+/* Allow only the menu (middle area) to shrink/wrap */
+.nav_container > .nav_menu {
+  min-width: 0;
 }
 
 .nav_menu {
@@ -1531,7 +1544,7 @@ figcaption {
 
 .nav_dropdown-toggle {
   align-items: center;
-  padding: .5rem 2.5rem .5rem 1rem;
+  padding: .5rem 1rem .5rem .75rem;   /* tighter horizontal padding between nav links */
   display: flex;
 }
 
@@ -2002,6 +2015,9 @@ figcaption {
   justify-content: center;
   align-items: center;
   height: 2.4rem;
+  width: auto;
+  min-width: 8rem;      /* keeps the DICOTA wordmark from collapsing */
+  flex-shrink: 0;
   display: flex;
 }
 
@@ -5908,11 +5924,23 @@ figcaption {
 /* ---- Announcement Bar ---- */
 .section_announcement-bar {
   background-color: #0f0f0f;
-  color: var(--base-color-neutral--white);
+  color: #ffffff;
   width: 100%;
   font-size: .75rem;
   line-height: 1.5;
 }
+/* Defensive: explicit white on all common text children in case
+   CSS-variable inheritance doesn't resolve (Liquiflow Builder timing). */
+.section_announcement-bar,
+.section_announcement-bar a,
+.section_announcement-bar p,
+.section_announcement-bar span,
+.section_announcement-bar div,
+.section_announcement-bar li {
+  color: #ffffff;
+}
+.section_announcement-bar a:visited { color: #ffffff; }
+.section_announcement-bar a:hover { color: #ffffff; opacity: .8; }
 
 .announcement-bar_container {
   justify-content: space-between;
@@ -7966,10 +7994,12 @@ figcaption {
 }
 /* Defensive: enforce white text on all common children, in case some
    parent's `color: var(--base-color-neutral--white)` doesn't resolve
-   in the Liquiflow Builder preview (CSS-variable timing). */
-.section_footer-newsletter a,
-.section_footer-newsletter p,
-.section_footer-newsletter span,
+   in the Liquiflow Builder preview (CSS-variable timing).
+   EXCLUDES buttons and elements inside buttons — those keep their
+   own coloring (white buttons would otherwise lose their dark text). */
+.section_footer-newsletter a:not(.button):not(.w-button):not(.footer-newsletter_promo),
+.section_footer-newsletter p:not(.button):not(.w-button),
+.section_footer-newsletter span:not(.button):not(.w-button),
 .section_footer-newsletter h1,
 .section_footer-newsletter h2,
 .section_footer-newsletter h3,
@@ -7980,8 +8010,22 @@ figcaption {
 .section_footer-newsletter label {
   color: #ffffff;
 }
-.section_footer-newsletter a:visited { color: #ffffff; }
-.section_footer-newsletter a:hover { color: #ffffff; opacity: .7; }
+.section_footer-newsletter a:not(.button):not(.w-button):not(.footer-newsletter_promo):visited { color: #ffffff; }
+.section_footer-newsletter a:not(.button):not(.w-button):not(.footer-newsletter_promo):hover { color: #ffffff; opacity: .7; }
+/* Buttons keep their own dark text on white background.
+   `!important` here overrides the more-specific white-text rule above
+   which would otherwise color the spans INSIDE the promo links white. */
+.section_footer-newsletter .button,
+.section_footer-newsletter .w-button,
+.section_footer-newsletter .footer-newsletter_promo,
+.section_footer-newsletter .footer-newsletter_promo *,
+.section_footer-newsletter .button *,
+.section_footer-newsletter .w-button *,
+.section_footer-newsletter input[type="submit"],
+.section_footer-newsletter button:not(.is-dark-bg),
+.section_footer-newsletter button:not(.is-dark-bg) * {
+  color: #0f0f0f !important;
+}
 
 .footer-newsletter_inner {
   display: flex;
