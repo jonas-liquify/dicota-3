@@ -1,0 +1,129 @@
+{
+    "sections": {
+        "announcement_bar": {
+            "type": "announcement_bar",
+            "blocks": {
+                "usp": {
+                    "type": "usp",
+                    "name": "USP"
+                },
+                "rechte-seite": {
+                    "name": "Rechte Seite",
+                    "type": "rechte-seite",
+                    "static": true
+                }
+            },
+            "block_order": [
+                "usp"
+            ]
+        },
+        "two_column_hero": {
+            "type": "two_column_hero"
+        },
+        "boxed_image": {
+            "type": "boxed_image"
+        },
+        "team_grid": {
+            "type": "team_grid",
+            "blocks": {
+                "team-slide": {
+                    "type": "team-slide",
+                    "name": "Team Slide"
+                }
+            },
+            "block_order": [
+                "team-slide"
+            ]
+        },
+        "4_up_card_slider": {
+            "type": "4_up_card_slider",
+            "blocks": {
+                "karte": {
+                    "type": "karte",
+                    "name": "Karte"
+                }
+            },
+            "block_order": [
+                "karte"
+            ]
+        },
+        "benefits_grid": {
+            "type": "benefits_grid",
+            "blocks": {
+                "benefit": {
+                    "type": "benefit",
+                    "name": "Benefit"
+                }
+            },
+            "block_order": [
+                "benefit"
+            ]
+        },
+        "value_tabs": {
+            "type": "value_tabs",
+            "blocks": {
+                "tab-link": {
+                    "type": "tab-link",
+                    "name": "Tab Link"
+                },
+                "tab-panes": {
+                    "name": "Tab Panes",
+                    "type": "tab-panes",
+                    "static": true,
+                    "blocks": {
+                        "tab-pane": {
+                            "type": "tab-pane",
+                            "name": "Tab Pane"
+                        }
+                    },
+                    "block_order": [
+                        "tab-pane"
+                    ]
+                }
+            },
+            "block_order": [
+                "tab-link"
+            ]
+        },
+        "job_listings": {
+            "type": "job_listings"
+        },
+        "faq_accordion": {
+            "type": "faq_accordion"
+        },
+        "job_detail_article": {
+            "type": "job_detail_article"
+        },
+        "footer_newsletter": {
+            "type": "footer_newsletter"
+        },
+        "footer_bottom": {
+            "type": "footer_bottom",
+            "blocks": {
+                "social": {
+                    "type": "social",
+                    "name": "Social"
+                }
+            },
+            "block_order": [
+                "social"
+            ]
+        }
+    },
+    "layout": "theme",
+    "wrapper": "main.main-wrapper",
+    "order": [
+        "announcement_bar",
+        "two_column_hero",
+        "boxed_image",
+        "team_grid",
+        "4_up_card_slider",
+        "benefits_grid",
+        "value_tabs",
+        "job_listings",
+        "faq_accordion",
+        "job_detail_article",
+        "footer_newsletter",
+        "footer_bottom"
+    ]
+}
