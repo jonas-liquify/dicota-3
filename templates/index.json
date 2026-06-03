@@ -93,17 +93,28 @@
     "usp_icon_row": {
       "type": "usp_icon_row",
       "blocks": {
-        "usp": {
-          "type": "usp",
-          "name": "USP",
+        "usp_block_XJcARm": {
+          "type": "usp-block",
+          "name": "USP Block",
           "settings": {
-            "text_text": "Gratis Versand ab 100 EUR"
+            "text_uberschrift": "Free Shipping ab 80 EUR",
+            "textarea_beschreibung": "Free standard shipping available in the European Union"
+          },
+          "blocks": {}
+        },
+        "usp_block_cziYXN": {
+          "type": "usp-block",
+          "name": "USP Block",
+          "settings": {
+            "text_uberschrift": "Free Shipping ab 80 EUR",
+            "textarea_beschreibung": "Free standard shipping available in the European Union"
           },
           "blocks": {}
         }
       },
       "block_order": [
-        "usp"
+        "usp_block_XJcARm",
+        "usp_block_cziYXN"
       ],
       "settings": {
         "padding_top": 60,
@@ -217,38 +228,18 @@
     "accessories_slider": {
       "type": "accessories_slider",
       "blocks": {
-        "kategorie_7Hd9NC": {
-          "type": "kategorie",
-          "name": "Kategorie",
+        "kategorie_wrapper_iENcFb": {
+          "type": "kategorie-wrapper",
+          "name": "Kategorie Wrapper",
           "settings": {
-            "url_link": "",
-            "text_titel": "Backpacks"
-          },
-          "blocks": {}
-        },
-        "kategorie_ghmtaa": {
-          "type": "kategorie",
-          "name": "Kategorie",
-          "settings": {
-            "url_link": "",
-            "text_titel": "Backpacks"
-          },
-          "blocks": {}
-        },
-        "kategorie": {
-          "type": "kategorie",
-          "name": "Kategorie",
-          "settings": {
-            "url_link": "",
-            "text_titel": "Backpacks"
+            "collection_kollektion": "accessories",
+            "collection_kollektion_limit": 6
           },
           "blocks": {}
         }
       },
       "block_order": [
-        "kategorie_7Hd9NC",
-        "kategorie_ghmtaa",
-        "kategorie"
+        "kategorie_wrapper_iENcFb"
       ],
       "settings": {
         "text_uberschrift": "Zubehör & Accessories",
