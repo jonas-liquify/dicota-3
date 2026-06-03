@@ -259,6 +259,15 @@
             "text_titel": "Screen Filters"
           },
           "blocks": {}
+        },
+        "kategorie_GdXAga": {
+          "type": "kategorie",
+          "name": "Accessories",
+          "settings": {
+            "url_link": "",
+            "text_titel": "Accessories"
+          },
+          "blocks": {}
         }
       },
       "block_order": [
@@ -266,7 +275,8 @@
         "kategorie_d6iRbp",
         "kategorie_fGcEcj",
         "kategorie_V9nXFi",
-        "kategorie"
+        "kategorie",
+        "kategorie_GdXAga"
       ],
       "settings": {
         "text_uberschrift": "Shop by Category",
