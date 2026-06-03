@@ -81,16 +81,7 @@
             ]
         },
         "product_feature_gall": {
-            "type": "product_feature_gall",
-            "blocks": {
-                "feature": {
-                    "type": "feature",
-                    "name": "Feature"
-                }
-            },
-            "block_order": [
-                "feature"
-            ]
+            "type": "product_feature_gall"
         },
         "produktfamilie": {
             "type": "produktfamilie"
