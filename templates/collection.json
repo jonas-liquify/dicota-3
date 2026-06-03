@@ -31,7 +31,6 @@
     "layout": "theme",
     "wrapper": "main.main-wrapper",
     "order": [
-        "product_breadcrumb",
         "collection_intro",
         "collection_products",
         "testimonials"
