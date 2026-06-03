@@ -1,8 +1,5 @@
 {
     "sections": {
-        "product_breadcrumb": {
-            "type": "product_breadcrumb"
-        },
         "collection_intro": {
             "type": "collection_intro",
             "blocks": {
