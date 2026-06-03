@@ -11,6 +11,45 @@
   "type": "header",
   "name": "Header Group",
   "sections": {
+    "announcement_bar_Mgp9nw": {
+      "type": "announcement_bar",
+      "blocks": {
+        "usp_Bdmhh9": {
+          "type": "usp",
+          "settings": {
+            "text_text": "Gratis Versand ab 100 EUR"
+          },
+          "blocks": {}
+        },
+        "account-bar": {
+          "type": "account-bar",
+          "static": true,
+          "settings": {
+            "url_uber_dicota_link": "",
+            "text_uber_dicota": "Über DICOTA",
+            "url_reseller_link": "",
+            "text_reseller_label": "D2C Reseller Shop",
+            "url_kontakt_link": "",
+            "text_kontakt_label": "Kontakt & Hilfe"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "usp_Bdmhh9"
+      ],
+      "name": "Announcement Bar",
+      "settings": {
+        "url_uber_dicota_link": "",
+        "text_uber_dicota": "Über DICOTA",
+        "url_reseller_link": "",
+        "text_reseller_label": "D2C Reseller Shop",
+        "url_kontakt_link": "",
+        "text_kontakt_label": "Kontakt & Hilfe",
+        "bg_color": "#0f0f0f",
+        "text_color": "#ffffff"
+      }
+    },
     "header": {
       "type": "header",
       "settings": {
@@ -22,12 +61,13 @@
         "text_suche_placeholder": "Suche nach Bags, Größe...",
         "url_wishlist_link": "",
         "menu": "main-menu-d2c",
-        "bg_color": "#1a1a1a",
-        "text_color": "#ffffff"
+        "bg_color": "#ffffff",
+        "text_color": "#000000"
       }
     }
   },
   "order": [
+    "announcement_bar_Mgp9nw",
     "header"
   ]
 }
