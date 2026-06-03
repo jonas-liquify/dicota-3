@@ -9,6 +9,21 @@
  */
 {
   "sections": {
+    "featured_product_qe68Cr": {
+      "type": "featured_product",
+      "name": "Featured Product",
+      "settings": {
+        "text_produkt_titel": "Blickschutzfilter 2-fach magnetisch Universal (16:10)",
+        "textarea_beschreibung": "Der DICOTA 2-Wege-Blickschutzfilter ist ideal für die Arbeit in öffentlichen Umgebungen wie Bibliotheken, Großraumbüros, Flughäfen und Zügen. Er schützt persönliche und vertrauliche Daten, indem er die rechte und linke Seite des Bildschirms in einem Winkel von +/- 30 Grad abdunkelt.",
+        "url_button_link": "",
+        "text_button_text": "Mehr erfahren",
+        "padding_top": 60,
+        "padding_bottom": 100,
+        "bg_color": "#ffffff",
+        "text_color": "#0f0f0f",
+        "card_bg": "#f6f6f6"
+      }
+    },
     "collection_intro": {
       "type": "collection_intro",
       "blocks": {
@@ -105,11 +120,18 @@
         "padding_bottom": 60,
         "show_rating": true
       }
+    },
+    "collection_hero_8TRwPe": {
+      "type": "collection_hero",
+      "name": "Collection Hero",
+      "settings": {}
     }
   },
   "layout": "theme",
   "wrapper": "main.main-wrapper",
   "order": [
+    "collection_hero_8TRwPe",
+    "featured_product_qe68Cr",
     "collection_intro",
     "collection_products",
     "testimonials"
