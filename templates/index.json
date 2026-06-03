@@ -222,11 +222,11 @@
         },
         "kategorie_d6iRbp": {
           "type": "kategorie",
-          "name": "Kategorie",
+          "name": "Laptop Bags",
           "settings": {
             "url_link": "",
             "image_bild": "shopify://shop_images/Dicota_Roller_c25f3e77-721b-45f9-8e7c-7aaf5d6930f3.avif",
-            "text_titel": "Backpacks"
+            "text_titel": "Laptop Bags"
           },
           "blocks": {}
         },
