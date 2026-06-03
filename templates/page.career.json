@@ -43,30 +43,7 @@
             ]
         },
         "value_tabs": {
-            "type": "value_tabs",
-            "blocks": {
-                "tab-link": {
-                    "type": "tab-link",
-                    "name": "Tab Link"
-                },
-                "tab-panes": {
-                    "name": "Tab Panes",
-                    "type": "tab-panes",
-                    "static": true,
-                    "blocks": {
-                        "tab-pane": {
-                            "type": "tab-pane",
-                            "name": "Tab Pane"
-                        }
-                    },
-                    "block_order": [
-                        "tab-pane"
-                    ]
-                }
-            },
-            "block_order": [
-                "tab-link"
-            ]
+            "type": "value_tabs"
         },
         "job_listings": {
             "type": "job_listings"
