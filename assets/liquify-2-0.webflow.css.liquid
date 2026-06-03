@@ -1778,9 +1778,14 @@ figcaption {
 
 .swiper.is-product-gallery {
   flex: 1;
-  height: 600px;
+  height: 100%;
+  min-height: 0;
   overflow: hidden;
   width: 100%;
+}
+.swiper.is-product-gallery > .swiper-wrapper,
+.swiper.is-product-gallery > .swiper-wrapper > .swiper-slide {
+  height: 100% !important;   /* override Swiper's inline content-sized height */
 }
 
 .swiper.is-product-thumbnail {
@@ -1885,7 +1890,8 @@ figcaption {
 
 .product-header_gallery-lightbox {
   width: 100%;
-  height: 600px;
+  height: 100%;
+  min-height: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1899,6 +1905,7 @@ figcaption {
   object-position: 50% 50%;
   width: 100%;
   height: 100%;
+  max-height: 100%;
   display: block;
 }
 
@@ -4996,6 +5003,11 @@ figcaption {
   .hero_bullet.is-active {
     width: 2.25rem;
   }
+  .product-loved-by_grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, minmax(0, 1fr));
+    height: clamp(40rem, 130vw, 60rem);
+  }
 }
 
 @media screen and (max-width: 479px) {
@@ -7954,7 +7966,26 @@ figcaption {
   width: 100%;
   padding-top: 3.75rem;
   background-color: #000;
+  color: #ffffff;
 }
+/* Defensive: enforce white text on all common children, in case some
+   parent's `color: var(--base-color-neutral--white)` doesn't resolve
+   in the Liquiflow Builder preview (CSS-variable timing). */
+.section_footer-newsletter a,
+.section_footer-newsletter p,
+.section_footer-newsletter span,
+.section_footer-newsletter h1,
+.section_footer-newsletter h2,
+.section_footer-newsletter h3,
+.section_footer-newsletter h4,
+.section_footer-newsletter h5,
+.section_footer-newsletter h6,
+.section_footer-newsletter li,
+.section_footer-newsletter label {
+  color: #ffffff;
+}
+.section_footer-newsletter a:visited { color: #ffffff; }
+.section_footer-newsletter a:hover { color: #ffffff; opacity: .7; }
 
 .footer-newsletter_inner {
   display: flex;
@@ -8152,6 +8183,20 @@ figcaption {
   width: 100%;
   padding-top: 2.5rem;
   background-color: #000;
+  color: #ffffff;
+}
+.section_footer-bottom a,
+.section_footer-bottom p,
+.section_footer-bottom span,
+.section_footer-bottom li {
+  color: #ffffff;
+}
+.section_footer-bottom a:visited { color: #ffffff; }
+.section_footer-bottom a:hover { color: #ffffff; opacity: .7; }
+/* Allow intentionally muted elements to override (e.g. legal links, copyright) */
+.section_footer-bottom .text-style-muted,
+.section_footer-bottom .text-color-muted {
+  color: rgba(255, 255, 255, .55);
 }
 
 .footer-bottom_row {
@@ -8473,32 +8518,49 @@ figcaption {
 .section_product-loved-by > .padding-global {
   padding-top: 80px;
   padding-bottom: 80px;
-  background-color: #ffffff;
+  background-color: #0f0f0f;
+  color: #ffffff;
 }
 .product-loved-by_headline {
-  font-size: 2rem;
   font-family: "Futura PT", sans-serif;
-  font-weight: 600;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.5;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
   text-align: center;
-  margin-bottom: 2.5rem;
+  color: #ffffff;
+  margin: 0 0 1.5rem;
 }
+/* Bento grid: 4 cols × 2 rows, column-flow.
+   Order of product images (_40, _41, _42, _43, _44, _45) fills cols:
+   - _40 col1 row1   _41 col1 row2
+   - _42 (is-big) col2 rows1-2 (full column)
+   - _43 col3 row1   _44 col3 row2
+   - _45 (is-big) col4 rows1-2 (full column) */
 .product-loved-by_grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 0.75rem;
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  grid-auto-flow: column;
+  gap: 0.5rem;
+  height: clamp(28rem, 50vw, 44rem);
 }
-.product-loved-by_col {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-.product-loved-by_col:nth-child(even) { margin-top: 2rem; }
+/* Wrappers from li-if:inside are transparent — let img act as the grid child */
+.product-loved-by_grid > div { display: contents; }
 .product-loved-by_img {
   width: 100%;
-  border-radius: 0.25rem;
+  height: 100%;
   object-fit: cover;
   display: block;
 }
+.product-loved-by_img.is-big {
+  grid-row: span 2;
+}
+
+.product-loved-by_col {
+  display: none;
+}   /* legacy class no longer used */
 
 /* =============================================================
    DICOTA PDP — Product Comparison
@@ -8976,21 +9038,17 @@ figcaption {
   display: grid;
   grid-template-columns: 1fr 280px;
   gap: 8px;
-  align-items: start;
+  align-items: stretch;
   position: sticky;
   top: 72px;
-  height: 600px;
-  overflow: hidden;
   width: 60%;
 }
 
 /* ── Gallery ─────────────────────────────────────────────── */
 
-/* ── Thumbnail strip (vertical) ─────────────────────────── */
+/* ── Thumbnail strip (vertical) — height determined by content ──── */
 .product-header_thumbs {
   padding: 0;
-  height: 600px;
-  overflow: hidden;
 }
 
 /* ── Product Details column ──────────────────────────────── */
@@ -9350,6 +9408,7 @@ figcaption {
 .ph_upsell {
   border-top: 1px solid #eeeeee;
   padding-top: 1.25rem;
+  width: 100rem;
 }
 .ph_upsell-header {
   display: flex;
@@ -10691,21 +10750,32 @@ figcaption {
   width: 100%;
   background-color: #f4f4f4;
 }
+/* Value Tabs — single block source approach:
+   Each .value-tabs_item contains both the LINK and the PANE.
+   `display: contents` makes the item invisible to layout so its
+   children (link + pane) become direct grid children of .value-tabs_component:
+   - all links flow into the first column (menu)
+   - all panes overlap in the second column (body) — only the active is visible
+   This way we only need ONE block type ("Tab") + ONE li-cf-theme-blocks, which
+   avoids the Shopify preset validation error on nested tab-pane blocks. */
 .value-tabs_component {
   display: grid;
   grid-template-columns: 1fr 2.5fr;
-  gap: 4rem 10rem;
+  grid-auto-rows: min-content;
+  column-gap: 4rem;
+  row-gap: 0.5rem;
 }
 .value-tabs_menu {
+  grid-column: 1;
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
+  margin-bottom: 1rem;
 }
-.value-tabs_link-list {
-  display: flex;
-  flex-direction: column;
-}
+.value-tabs_blocks { display: contents; }
+.value-tabs_item { display: contents; }
 .value-tabs_link {
+  grid-column: 1;
   text-align: left;
   background: transparent;
   border: 0;
@@ -10717,20 +10787,18 @@ figcaption {
   transition: color 0.15s, border-color 0.15s, background-color 0.15s;
   border-left: 2px solid transparent;
 }
-.value-tabs_link:hover {
-  color: #0f0f0f;
-}
+.value-tabs_link:hover { color: #0f0f0f; }
 .value-tabs_link.is-active {
   color: #0f0f0f;
   border-left-color: #0f0f0f;
   background-color: rgba(15, 15, 15, 0.04);
 }
-.value-tabs_tab-body {
-  position: relative;
-}
-.value-tabs_tab-pane {
+.value-tabs_pane {
+  grid-column: 2;
+  grid-row: 1 / -1;        /* all panes overlap in this body cell */
   background-color: #ffffff;
   padding: 0.25rem;
+  align-self: start;
 }
 .value-tabs_image {
   width: 100%;
@@ -10745,6 +10813,13 @@ figcaption {
   align-items: flex-start;
   gap: 1.5rem;
   padding: 2.5rem;
+}
+@media screen and (max-width: 767px) {
+  .value-tabs_component {
+    grid-template-columns: 1fr;
+  }
+  .value-tabs_link, .value-tabs_pane { grid-column: 1; }
+  .value-tabs_pane { grid-row: auto; }
 }
 
 /* Section: Jobs */
@@ -14199,9 +14274,14 @@ figcaption {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  justify-content: flex-start;
+  align-items: stretch;
+  text-align: left;
 }
 .nav_mega-col-header {
   display: block;
+  width: 100%;
+  text-align: left;
   font-family: "Futura PT", sans-serif;
   font-weight: 500;
   font-size: 1rem;
@@ -14226,6 +14306,8 @@ figcaption {
 }
 .nav_mega-col-link {
   display: block;
+  width: 100%;
+  text-align: left;
   font-family: "Futura PT", sans-serif;
   font-weight: 500;
   font-size: .875rem;
@@ -14457,3 +14539,29 @@ figcaption {
   display: block;
 }
 
+/* =============================================================
+   DICOTA — Breadcrumb: hide li-if/li-unless branches in builder preview
+   In production Liquiflow strips li-* attributes when converting to
+   Liquid, so these attribute selectors only match in the local/builder
+   preview. Result: local preview shows just "Home", production shows
+   the matching template branch.
+   Note: attribute names with `:` must be escaped in CSS selectors.
+   ============================================================= */
+.product-breadcrumb_nav [li-if],
+.product-breadcrumb_nav [li-if\:inside],
+.product-breadcrumb_nav [li-unless],
+.product-breadcrumb_nav [li-unless\:inside] { display: none !important; }
+
+.nav_shop-icon.nav_shop-icon-cart.w-dropdown-toggle {
+  color: #ffffff;
+}
+/* Force navbar dropdown toggles + links to INHERIT navbar color
+   (Webflow's `.w-dropdown-toggle { color: #222 }` from webflow.css
+   would otherwise hard-set them to dark gray). */
+.section_navbar .nav_dropdown-toggle,
+.section_navbar .nav_menu-dropdown .w-dropdown-toggle,
+.section_navbar .nav_menu-dropdown .w-dropdown-link,
+.section_navbar .nav_menu-dropdown a,
+.section_navbar .w-dropdown-toggle.nav_dropdown-toggle {
+  color: inherit;
+}
