@@ -1,22 +1,5 @@
 {
     "sections": {
-        "announcement_bar": {
-            "type": "announcement_bar",
-            "blocks": {
-                "usp": {
-                    "type": "usp",
-                    "name": "USP"
-                },
-                "rechte-seite": {
-                    "name": "Rechte Seite",
-                    "type": "rechte-seite",
-                    "static": true
-                }
-            },
-            "block_order": [
-                "usp"
-            ]
-        },
         "b2b_subnav": {
             "type": "b2b_subnav"
         },
@@ -94,27 +77,11 @@
         },
         "b2b_marketing_event_": {
             "type": "b2b_marketing_event_"
-        },
-        "footer_newsletter": {
-            "type": "footer_newsletter"
-        },
-        "footer_bottom": {
-            "type": "footer_bottom",
-            "blocks": {
-                "social": {
-                    "type": "social",
-                    "name": "Social"
-                }
-            },
-            "block_order": [
-                "social"
-            ]
         }
     },
     "layout": "theme",
     "wrapper": "main.main-wrapper",
     "order": [
-        "announcement_bar",
         "b2b_subnav",
         "b2b_marketing_overvi",
         "b2b_marketing_produc",
@@ -122,8 +89,6 @@
         "b2b_marketing_press",
         "b2b_marketing_events",
         "b2b_marketing_giveaw",
-        "b2b_marketing_event_",
-        "footer_newsletter",
-        "footer_bottom"
+        "b2b_marketing_event_"
     ]
 }
