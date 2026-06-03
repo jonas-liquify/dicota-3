@@ -214,7 +214,7 @@
           "type": "kategorie",
           "name": "Backpacks",
           "settings": {
-            "url_link": "",
+            "url_link": "shopify://collections/d2c-backpacks-all",
             "image_bild": "shopify://shop_images/3_MT_Urban.webp",
             "text_titel": "Backpacks"
           },
