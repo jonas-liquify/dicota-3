@@ -225,7 +225,7 @@
           "name": "Kategorie",
           "settings": {
             "url_link": "",
-            "image_bild": "shopify://shop_images/CT1c_Backpack.png",
+            "image_bild": "shopify://shop_images/3_MT_Urban.webp",
             "text_titel": "Backpacks"
           },
           "blocks": {}
@@ -350,7 +350,7 @@
     "image_link_list": {
       "type": "image_link_list",
       "blocks": {
-        "link": {
+        "link_67ddV8": {
           "type": "link",
           "name": "Link",
           "settings": {
@@ -358,12 +358,63 @@
             "text_label": "Mobile Working"
           },
           "blocks": {}
+        },
+        "link_hFyATT": {
+          "type": "link",
+          "name": "Link",
+          "settings": {
+            "url_link_ziel": "",
+            "text_label": "Hybrid Working"
+          },
+          "blocks": {}
+        },
+        "link_pyWkDk": {
+          "type": "link",
+          "name": "Link",
+          "settings": {
+            "url_link_ziel": "",
+            "text_label": "Business Trip"
+          },
+          "blocks": {}
+        },
+        "link_yzFfrA": {
+          "type": "link",
+          "name": "Link",
+          "settings": {
+            "url_link_ziel": "",
+            "text_label": "Education"
+          },
+          "blocks": {}
+        },
+        "link": {
+          "type": "link",
+          "name": "Link",
+          "settings": {
+            "url_link_ziel": "",
+            "text_label": "Safety at Work"
+          },
+          "blocks": {}
+        },
+        "link_RFQf43": {
+          "type": "link",
+          "name": "Link",
+          "settings": {
+            "url_link_ziel": "",
+            "text_label": "tailor Made"
+          },
+          "blocks": {}
         }
       },
       "block_order": [
-        "link"
+        "link_67ddV8",
+        "link_hFyATT",
+        "link_pyWkDk",
+        "link_yzFfrA",
+        "link",
+        "link_RFQf43"
       ],
       "settings": {
+        "image_bild": "shopify://shop_images/2_MT_Five.webp",
         "text_subtitle": "Wonach suchst du?",
         "url_button_link": "",
         "text_button_text": "Zum Product-Finder",
@@ -375,16 +426,34 @@
     "loved_by_customers": {
       "type": "loved_by_customers",
       "blocks": {
-        "foto": {
+        "foto_n74NAz": {
           "type": "foto",
           "name": "Foto",
           "settings": {
             "tagged_product": ""
           },
           "blocks": {}
+        },
+        "foto_TtXdDw": {
+          "type": "foto",
+          "name": "Foto",
+          "settings": {
+            "tagged_product": ""
+          },
+          "blocks": {}
+        },
+        "foto": {
+          "type": "foto",
+          "name": "Foto",
+          "settings": {
+            "tagged_product": "10-in-1-docking-station-8k-tb4-hdmi-pd-96w-ch"
+          },
+          "blocks": {}
         }
       },
       "block_order": [
+        "foto_n74NAz",
+        "foto_TtXdDw",
         "foto"
       ],
       "settings": {
