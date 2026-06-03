@@ -210,6 +210,16 @@
     "shop_by_category": {
       "type": "shop_by_category",
       "blocks": {
+        "kategorie_yVWL3E": {
+          "type": "kategorie",
+          "name": "Backpacks",
+          "settings": {
+            "url_link": "",
+            "image_bild": "shopify://shop_images/3_MT_Urban.webp",
+            "text_titel": "Backpacks"
+          },
+          "blocks": {}
+        },
         "kategorie_d6iRbp": {
           "type": "kategorie",
           "name": "Kategorie",
@@ -217,16 +227,6 @@
             "url_link": "",
             "image_bild": "shopify://shop_images/Dicota_Roller_c25f3e77-721b-45f9-8e7c-7aaf5d6930f3.avif",
             "text_titel": "Backpacks"
-          },
-          "blocks": {}
-        },
-        "kategorie_yVWL3E": {
-          "type": "kategorie",
-          "name": "Kategorie",
-          "settings": {
-            "url_link": "",
-            "image_bild": "shopify://shop_images/3_MT_Urban.webp",
-            "text_titel": "Laptop Bags"
           },
           "blocks": {}
         },
@@ -262,8 +262,8 @@
         }
       },
       "block_order": [
-        "kategorie_d6iRbp",
         "kategorie_yVWL3E",
+        "kategorie_d6iRbp",
         "kategorie_fGcEcj",
         "kategorie_V9nXFi",
         "kategorie"
