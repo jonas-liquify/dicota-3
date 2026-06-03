@@ -228,17 +228,27 @@
     "accessories_slider": {
       "type": "accessories_slider",
       "blocks": {
+        "kategorie_wrapper_tRwQph": {
+          "type": "kategorie-wrapper",
+          "name": "Kategorie Wrapper",
+          "settings": {
+            "collection_kollektion": "",
+            "collection_kollektion_limit": 6
+          },
+          "blocks": {}
+        },
         "kategorie_wrapper_iENcFb": {
           "type": "kategorie-wrapper",
           "name": "Kategorie Wrapper",
           "settings": {
-            "collection_kollektion": "accessories",
+            "collection_kollektion": "bags-and-backpacks",
             "collection_kollektion_limit": 6
           },
           "blocks": {}
         }
       },
       "block_order": [
+        "kategorie_wrapper_tRwQph",
         "kategorie_wrapper_iENcFb"
       ],
       "settings": {
