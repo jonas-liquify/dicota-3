@@ -1,64 +1,46 @@
 <div class="padding-global" style="padding-top:{{ section.settings.padding_top }}px;padding-bottom:{{ section.settings.padding_bottom }}px;background-color:{{ section.settings.bg_color }};color:{{ section.settings.text_color }};"><div class="container-large"><nav class="product-breadcrumb_nav" aria-label="Breadcrumb"><a href="{{ routes.root_url }}" li-object:href="routes.root_url" class="product-breadcrumb_link"><span>
 {{ section.settings.text_home_label }}
-</span></a>{% if template.name == 'product' %}    <span li-if="template.name == 'product'" class="product-breadcrumb_sep">
-    ›    </span>
-{% endif %}{% if template.name == 'product' and product.collections.first != blank %}    <a li-if="template.name == 'product' and product.collections.first != blank" li-object:href="product.collections.first.url" href="product.collections.first.url" class="product-breadcrumb_link">
-    <span li-object="product.collections.first.title">{{ product.collections.first.title }}</span>    </a>
-{% endif %}{% if template.name == 'product' and product.collections.first != blank %}    <span li-if="template.name == 'product' and product.collections.first != blank" class="product-breadcrumb_sep">
-    ›    </span>
-{% endif %}{% if product.title %}    <span li-if="template.name == 'product'" li-object="product.title" class="product-breadcrumb_current">
-    Produkt    </span>
-{% endif %}{% if template.name == 'collection' %}    <span li-if="template.name == 'collection'" class="product-breadcrumb_sep">
-    ›    </span>
-{% endif %}{% if template.name == 'collection' %}    <a li-if="template.name == 'collection'" href="routes.collections_url" li-object:href="routes.collections_url" class="product-breadcrumb_link">
-    <span>
+</span></a><span li-if:inside="template.name == 'product'" inside="1">
+        {% if template.name == 'product' %}
+            <span class="product-breadcrumb_sep">›</span><span li-if:inside="product.collections.first != blank" inside="1">
+        {% if product.collections.first != blank %}
+            <a li-object:href="product.collections.first.url" href="{{ product.collections.first.url }}" class="product-breadcrumb_link"><span li-object="product.collections.first.title">{{ product.collections.first.title }}</span></a><span class="product-breadcrumb_sep">›</span>        {% endif %}
+    </span><span class="product-breadcrumb_current" li-object="product.title">{{ product.title }}</span>        {% endif %}
+    </span><span li-if:inside="template.name == 'collection'" inside="1">
+        {% if template.name == 'collection' %}
+            <span class="product-breadcrumb_sep">›</span><a href="{{ routes.collections_url }}" li-object:href="routes.collections_url" class="product-breadcrumb_link"><span>
 {{ section.settings.text_kollektionen_label }}
-</span>    </a>
-{% endif %}{% if template.name == 'collection' %}    <span li-if="template.name == 'collection'" class="product-breadcrumb_sep">
-    ›    </span>
-{% endif %}{% if collection.title %}    <span li-if="template.name == 'collection'" li-object="collection.title" class="product-breadcrumb_current">
-    Alle Produkte    </span>
-{% endif %}{% if template.name == 'list-collections' %}    <span li-if="template.name == 'list-collections'" class="product-breadcrumb_sep">
-    ›    </span>
-{% endif %}{% if template.name == 'list-collections' %}    <span li-if="template.name == 'list-collections'" class="product-breadcrumb_current">
-    <span>
+</span></a><span class="product-breadcrumb_sep">›</span><span class="product-breadcrumb_current" li-object="collection.title">{{ collection.title }}</span>        {% endif %}
+    </span><span li-if:inside="template.name == 'list-collections'" inside="1">
+        {% if template.name == 'list-collections' %}
+            <span class="product-breadcrumb_sep">›</span><span class="product-breadcrumb_current"><span>
 {{ section.settings.text_kollektionen_label }}
-</span>    </span>
-{% endif %}{% if template.name == 'article' %}    <span li-if="template.name == 'article'" class="product-breadcrumb_sep">
-    ›    </span>
-{% endif %}{% if template.name == 'article' %}    <a li-if="template.name == 'article'" li-object:href="blog.url" href="blog.url" class="product-breadcrumb_link">
-    <span li-object="blog.title">{{ blog.title }}</span>    </a>
-{% endif %}{% if template.name == 'article' %}    <span li-if="template.name == 'article'" class="product-breadcrumb_sep">
-    ›    </span>
-{% endif %}{% if article.title %}    <span li-if="template.name == 'article'" li-object="article.title" class="product-breadcrumb_current">
-    Artikel    </span>
-{% endif %}{% if template.name == 'blog' %}    <span li-if="template.name == 'blog'" class="product-breadcrumb_sep">
-    ›    </span>
-{% endif %}{% if blog.title %}    <span li-if="template.name == 'blog'" li-object="blog.title" class="product-breadcrumb_current">
-    Blog    </span>
-{% endif %}{% if template.name == 'page' %}    <span li-if="template.name == 'page'" class="product-breadcrumb_sep">
-    ›    </span>
-{% endif %}{% if page.title %}    <span li-if="template.name == 'page'" li-object="page.title" class="product-breadcrumb_current">
-    Seite    </span>
-{% endif %}{% if template.name == 'search' %}    <span li-if="template.name == 'search'" class="product-breadcrumb_sep">
-    ›    </span>
-{% endif %}{% if template.name == 'search' %}    <span li-if="template.name == 'search'" class="product-breadcrumb_current">
-    <span>
+</span></span>        {% endif %}
+    </span><span li-if:inside="template.name == 'article'" inside="1">
+        {% if template.name == 'article' %}
+            <span class="product-breadcrumb_sep">›</span><a li-object:href="blog.url" href="{{ blog.url }}" class="product-breadcrumb_link"><span li-object="blog.title">{{ blog.title }}</span></a><span class="product-breadcrumb_sep">›</span><span class="product-breadcrumb_current" li-object="article.title">{{ article.title }}</span>        {% endif %}
+    </span><span li-if:inside="template.name == 'blog'" inside="1">
+        {% if template.name == 'blog' %}
+            <span class="product-breadcrumb_sep">›</span><span class="product-breadcrumb_current" li-object="blog.title">{{ blog.title }}</span>        {% endif %}
+    </span><span li-if:inside="template.name == 'page'" inside="1">
+        {% if template.name == 'page' %}
+            <span class="product-breadcrumb_sep">›</span><span class="product-breadcrumb_current" li-object="page.title">{{ page.title }}</span>        {% endif %}
+    </span><span li-if:inside="template.name == 'search'" inside="1">
+        {% if template.name == 'search' %}
+            <span class="product-breadcrumb_sep">›</span><span class="product-breadcrumb_current"><span>
 {{ section.settings.text_suche_label }}
-</span>    </span>
-{% endif %}{% if template.name == 'cart' %}    <span li-if="template.name == 'cart'" class="product-breadcrumb_sep">
-    ›    </span>
-{% endif %}{% if template.name == 'cart' %}    <span li-if="template.name == 'cart'" class="product-breadcrumb_current">
-    <span>
+</span></span>        {% endif %}
+    </span><span li-if:inside="template.name == 'cart'" inside="1">
+        {% if template.name == 'cart' %}
+            <span class="product-breadcrumb_sep">›</span><span class="product-breadcrumb_current"><span>
 {{ section.settings.text_warenkorb_label }}
-</span>    </span>
-{% endif %}{% if template.name == '404' %}    <span li-if="template.name == '404'" class="product-breadcrumb_sep">
-    ›    </span>
-{% endif %}{% if template.name == '404' %}    <span li-if="template.name == '404'" class="product-breadcrumb_current">
-    <span>
+</span></span>        {% endif %}
+    </span><span li-if:inside="template.name == '404'" inside="1">
+        {% if template.name == '404' %}
+            <span class="product-breadcrumb_sep">›</span><span class="product-breadcrumb_current"><span>
 {{ section.settings.text_404_label }}
-</span>    </span>
-{% endif %}</nav></div></div> {% schema %} {
+</span></span>        {% endif %}
+    </span></nav></div></div> {% schema %} {
     "tag": "section",
     "name": "Product Breadcrumb",
     "class": "section_product-breadcrumb",
