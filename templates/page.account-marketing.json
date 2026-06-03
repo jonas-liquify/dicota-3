@@ -1,0 +1,129 @@
+{
+    "sections": {
+        "announcement_bar": {
+            "type": "announcement_bar",
+            "blocks": {
+                "usp": {
+                    "type": "usp",
+                    "name": "USP"
+                },
+                "rechte-seite": {
+                    "name": "Rechte Seite",
+                    "type": "rechte-seite",
+                    "static": true
+                }
+            },
+            "block_order": [
+                "usp"
+            ]
+        },
+        "b2b_subnav": {
+            "type": "b2b_subnav"
+        },
+        "b2b_marketing_overvi": {
+            "type": "b2b_marketing_overvi",
+            "blocks": {
+                "quicklink": {
+                    "type": "quicklink",
+                    "name": "Quicklink"
+                }
+            },
+            "block_order": [
+                "quicklink"
+            ]
+        },
+        "b2b_marketing_produc": {
+            "type": "b2b_marketing_produc",
+            "blocks": {
+                "download": {
+                    "type": "download",
+                    "name": "Download"
+                }
+            },
+            "block_order": [
+                "download"
+            ]
+        },
+        "b2b_marketing_campai": {
+            "type": "b2b_marketing_campai",
+            "blocks": {
+                "kampagnen-karte": {
+                    "type": "kampagnen-karte",
+                    "name": "Kampagnen-Karte"
+                }
+            },
+            "block_order": [
+                "kampagnen-karte"
+            ]
+        },
+        "b2b_marketing_press": {
+            "type": "b2b_marketing_press",
+            "blocks": {
+                "pressemitteilung": {
+                    "type": "pressemitteilung",
+                    "name": "Pressemitteilung"
+                }
+            },
+            "block_order": [
+                "pressemitteilung"
+            ]
+        },
+        "b2b_marketing_events": {
+            "type": "b2b_marketing_events",
+            "blocks": {
+                "event": {
+                    "type": "event",
+                    "name": "Event"
+                }
+            },
+            "block_order": [
+                "event"
+            ]
+        },
+        "b2b_marketing_giveaw": {
+            "type": "b2b_marketing_giveaw",
+            "blocks": {
+                "giveaway": {
+                    "type": "giveaway",
+                    "name": "Giveaway"
+                }
+            },
+            "block_order": [
+                "giveaway"
+            ]
+        },
+        "b2b_marketing_event_": {
+            "type": "b2b_marketing_event_"
+        },
+        "footer_newsletter": {
+            "type": "footer_newsletter"
+        },
+        "footer_bottom": {
+            "type": "footer_bottom",
+            "blocks": {
+                "social": {
+                    "type": "social",
+                    "name": "Social"
+                }
+            },
+            "block_order": [
+                "social"
+            ]
+        }
+    },
+    "layout": "theme",
+    "wrapper": "main.main-wrapper",
+    "order": [
+        "announcement_bar",
+        "b2b_subnav",
+        "b2b_marketing_overvi",
+        "b2b_marketing_produc",
+        "b2b_marketing_campai",
+        "b2b_marketing_press",
+        "b2b_marketing_events",
+        "b2b_marketing_giveaw",
+        "b2b_marketing_event_",
+        "footer_newsletter",
+        "footer_bottom"
+    ]
+}

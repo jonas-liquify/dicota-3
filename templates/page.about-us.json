@@ -1,0 +1,128 @@
+{
+    "sections": {
+        "announcement_bar": {
+            "type": "announcement_bar",
+            "blocks": {
+                "usp": {
+                    "type": "usp",
+                    "name": "USP"
+                },
+                "rechte-seite": {
+                    "name": "Rechte Seite",
+                    "type": "rechte-seite",
+                    "static": true
+                }
+            },
+            "block_order": [
+                "usp"
+            ]
+        },
+        "two_column_hero": {
+            "type": "two_column_hero"
+        },
+        "boxed_image": {
+            "type": "boxed_image"
+        },
+        "feature_card_grid": {
+            "type": "feature_card_grid",
+            "blocks": {
+                "feature-cards": {
+                    "name": "Feature Cards",
+                    "type": "feature-cards",
+                    "static": true,
+                    "blocks": {
+                        "karte": {
+                            "type": "karte",
+                            "name": "Karte"
+                        }
+                    },
+                    "block_order": [
+                        "karte"
+                    ]
+                },
+                "stats-row": {
+                    "name": "Stats Row",
+                    "type": "stats-row",
+                    "static": true,
+                    "blocks": {
+                        "stats-block": {
+                            "type": "stats-block",
+                            "name": "Stats Block"
+                        }
+                    },
+                    "block_order": [
+                        "stats-block"
+                    ]
+                }
+            }
+        },
+        "history_timeline": {
+            "type": "history_timeline",
+            "blocks": {
+                "meilenstein": {
+                    "type": "meilenstein",
+                    "name": "Meilenstein"
+                }
+            },
+            "block_order": [
+                "meilenstein"
+            ]
+        },
+        "owner_spotlight": {
+            "type": "owner_spotlight",
+            "blocks": {
+                "zitat": {
+                    "type": "zitat",
+                    "name": "Zitat"
+                }
+            },
+            "block_order": [
+                "zitat"
+            ]
+        },
+        "discover_banner": {
+            "type": "discover_banner"
+        },
+        "triple_cards": {
+            "type": "triple_cards",
+            "blocks": {
+                "karte": {
+                    "type": "karte",
+                    "name": "Karte"
+                }
+            },
+            "block_order": [
+                "karte"
+            ]
+        },
+        "footer_newsletter": {
+            "type": "footer_newsletter"
+        },
+        "footer_bottom": {
+            "type": "footer_bottom",
+            "blocks": {
+                "social": {
+                    "type": "social",
+                    "name": "Social"
+                }
+            },
+            "block_order": [
+                "social"
+            ]
+        }
+    },
+    "layout": "theme",
+    "wrapper": "main.main-wrapper",
+    "order": [
+        "announcement_bar",
+        "two_column_hero",
+        "boxed_image",
+        "feature_card_grid",
+        "history_timeline",
+        "owner_spotlight",
+        "discover_banner",
+        "triple_cards",
+        "footer_newsletter",
+        "footer_bottom"
+    ]
+}

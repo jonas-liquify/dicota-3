@@ -1,9 +1,82 @@
-<div><div class="header_overlay-layer"></div>{% if collection.featured_image != blank %}    <div li-if="collection.featured_image != blank">
-    <img src="{{ collection.featured_image | image_url: width: 1000 }}" loading="eager" li-object:src="collection.featured_image | image_url: width: 1000" li-object:alt="collection.featured_image.alt" alt="{{ collection.featured_image.alt }}" class="header_background-image">    </div>
-{% endif %}</div><div class="padding-global padding-section-large"><div class="container-small"><div class="text-align-center"><div class="max-width-xlarge align-center"><div class="margin-bottom margin-small"><h1 li-object="collection.title" class="heading-style-h1 text-color-white">{{ collection.title }}</h1></div><p li-object="collection.description" class="text-size-medium text-color-white">{{ collection.description }}</p></div></div></div></div> {% schema %} {
+<div class="padding-global" style="padding-top:{{ section.settings.padding_top }}px;padding-bottom:{{ section.settings.padding_bottom }}px;background-color:{{ section.settings.bg_color }};color:{{ section.settings.text_color }};"><div class="container-large"><div class="collection-header_layout"><div class="collection-header_content"><h1 li-object="collection.title" class="collection-header_title">{{ collection.title }}</h1><p li-object="collection.description" class="collection-header_desc">{{ collection.description }}</p><a li-if="section.settings.show_button" href="{{ section.settings.url_button_link }}" class="button collection-header_button"> <span>{{ section.settings.text_button_text }}</span> </a></div>{% if section.settings.image_override != blank or collection.image != blank %}    <figure class="collection-header_media" li-if="section.settings.image_override != blank or collection.image != blank">
+    <img li-object:src="section.settings.image_override | default: collection.image | image_url: width: 1600" li-object:alt="collection.title" src="{{ section.settings.image_override | default: collection.image | image_url: width: 1600 }}" alt="{{ collection.title }}" loading="eager" class="collection-header_image">    </figure>
+{% endif %}</div></div></div> {% schema %} {
     "tag": "section",
     "name": "Collection Hero",
     "class": "section_collection-header",
+    "settings": [
+        {
+            "id": "url_button_link",
+            "type": "url",
+            "label": "Button Link"
+        },
+        {
+            "id": "text_button_text",
+            "type": "text",
+            "label": "Button Text",
+            "default": "Mehr erfahren"
+        },
+        {
+            "type": "header",
+            "content": "Button"
+        },
+        {
+            "type": "checkbox",
+            "id": "show_button",
+            "label": "Button anzeigen",
+            "default": true
+        },
+        {
+            "type": "header",
+            "content": "Bild"
+        },
+        {
+            "type": "image_picker",
+            "id": "image_override",
+            "label": "Hero-Bild (Override; sonst Kollektions-Bild)",
+            "info": "L\u00e4sst du das Feld leer, wird automatisch das in Shopify hinterlegte Kollektions-Bild verwendet."
+        },
+        {
+            "type": "header",
+            "content": "Abst\u00e4nde"
+        },
+        {
+            "type": "range",
+            "id": "padding_top",
+            "min": 0,
+            "max": 160,
+            "step": 4,
+            "unit": "px",
+            "label": "Abstand oben",
+            "default": 60
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom",
+            "min": 0,
+            "max": 160,
+            "step": 4,
+            "unit": "px",
+            "label": "Abstand unten",
+            "default": 100
+        },
+        {
+            "type": "header",
+            "content": "Farben"
+        },
+        {
+            "type": "color",
+            "id": "bg_color",
+            "label": "Hintergrundfarbe",
+            "default": "#ffffff"
+        },
+        {
+            "type": "color",
+            "id": "text_color",
+            "label": "Textfarbe",
+            "default": "#0f0f0f"
+        }
+    ],
     "presets": [
         {
             "name": "Collection Hero",

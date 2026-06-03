@@ -1,9 +1,22 @@
 <div class="padding-global padding-section-medium"><div class="container-large"><div x-data="{tab: 1}" role="tablist" class="value-tabs_component"><div class="value-tabs_menu"><h2 class="heading-style-h2">
 {{ section.settings.text_heading }}
-</h2>{% content_for "block", type: "tab-menu", id: "tab-menu" %}</div>{% content_for "block", type: "tab-panes", id: "tab-panes" %}</div></div></div> {% schema %} {
+</h2><div li-cf-theme-blocks="" class="value-tabs_link-list">
+{% content_for 'blocks' %}
+</div></div>{% content_for "block", type: "tab-panes", id: "tab-panes" %}</div></div></div> {% schema %} {
     "tag": "section",
     "name": "Value Tabs",
     "class": "section_value-tabs",
+    "blocks": [
+        {
+            "type": "tab-link"
+        },
+        {
+            "type": "tab-pane"
+        },
+        {
+            "type": "@app"
+        }
+    ],
     "settings": [
         {
             "id": "text_heading",
@@ -42,14 +55,7 @@
             "category": "Content",
             "blocks": [
                 {
-                    "type": "tab-menu",
-                    "static": true,
-                    "id": "tab-menu",
-                    "blocks": [
-                        {
-                            "type": "tab-link"
-                        }
-                    ]
+                    "type": "tab-link"
                 },
                 {
                     "type": "tab-panes",

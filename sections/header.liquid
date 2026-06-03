@@ -1,4 +1,4 @@
-<div data-animation="default" class="nav_component w-nav" data-easing2="ease" fs-scrolldisable-element="smart-nav" data-easing="ease" data-collapse="medium" data-w-id="9132635a-7891-b0d1-9b20-ecb0d5a86df9" role="banner" data-duration="400" x-data=""><div class="nav_container"><a href="{{ routes.root_url }}" li-object:href="routes.root_url" class="nav_logo-link w-nav-brand">{% if section.settings.image_logo %}
+<div data-animation="default" class="nav_component w-nav{% if section.settings.transparent_over_first %} is-transparent{% endif %}" data-easing2="ease" fs-scrolldisable-element="smart-nav" data-easing="ease" data-collapse="medium" data-w-id="9132635a-7891-b0d1-9b20-ecb0d5a86df9" role="banner" data-duration="400" x-data=""><div class="nav_container"><a href="{{ routes.root_url }}" li-object:href="routes.root_url" class="nav_logo-link w-nav-brand" aria-label="Zur Startseite">{% if section.settings.image_logo %}
 {{ section.settings.image_logo | image_url: width: 300 | image_tag: loading: 'lazy', class: 'nav_logo' }}
 {% else %}
 <img src="{{ 'liquify-logo-white.svg' | asset_url }}" loading="lazy" alt="" class="nav_logo">
@@ -478,23 +478,14 @@
         },
         {
             "type": "header",
-            "content": "Layout & Farben"
+            "content": "Darstellung"
         },
         {
-            "type": "header",
-            "content": "Farben"
-        },
-        {
-            "type": "color",
-            "id": "bg_color",
-            "label": "Hintergrundfarbe",
-            "default": "#1a1a1a"
-        },
-        {
-            "type": "color",
-            "id": "text_color",
-            "label": "Textfarbe",
-            "default": "#ffffff"
+            "type": "checkbox",
+            "id": "transparent_over_first",
+            "label": "Transparent \u00fcber erster Sektion (z.B. Hero)",
+            "info": "Header wird transparent gerendert und legt sich \u00fcber das erste Hero-Bild. Wird beim Scrollen zu solid wei\u00df.",
+            "default": false
         }
     ],
     "presets": [

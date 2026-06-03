@@ -1,8 +1,106 @@
-<div class="padding-global" style="padding-top:{{ section.settings.padding_top }}px;padding-bottom:{{ section.settings.padding_bottom }}px;background-color:{{ section.settings.bg_color }};color:{{ section.settings.text_color }};"><div class="container-large"><nav class="product-breadcrumb_nav" aria-label="Breadcrumb"><a href="{{ routes.root_url }}" li-object:href="routes.root_url" class="product-breadcrumb_link">Home</a><span class="product-breadcrumb_sep">›</span><a href="/collections" class="product-breadcrumb_link">Produkte</a><span class="product-breadcrumb_sep">›</span><span li-object="collection.title" class="product-breadcrumb_current">{{ collection.title }}</span></nav></div></div> {% schema %} {
+<div class="padding-global" style="padding-top:{{ section.settings.padding_top }}px;padding-bottom:{{ section.settings.padding_bottom }}px;background-color:{{ section.settings.bg_color }};color:{{ section.settings.text_color }};"><div class="container-large"><nav class="product-breadcrumb_nav" aria-label="Breadcrumb"><a href="{{ routes.root_url }}" li-object:href="routes.root_url" class="product-breadcrumb_link"><span>
+{{ section.settings.text_home_label }}
+</span></a>{% if template.name == 'product' %}    <span li-if="template.name == 'product'" class="product-breadcrumb_sep">
+    ›    </span>
+{% endif %}{% if template.name == 'product' and product.collections.first != blank %}    <a li-if="template.name == 'product' and product.collections.first != blank" li-object:href="product.collections.first.url" href="product.collections.first.url" class="product-breadcrumb_link">
+    <span li-object="product.collections.first.title">{{ product.collections.first.title }}</span>    </a>
+{% endif %}{% if template.name == 'product' and product.collections.first != blank %}    <span li-if="template.name == 'product' and product.collections.first != blank" class="product-breadcrumb_sep">
+    ›    </span>
+{% endif %}{% if product.title %}    <span li-if="template.name == 'product'" li-object="product.title" class="product-breadcrumb_current">
+    Produkt    </span>
+{% endif %}{% if template.name == 'collection' %}    <span li-if="template.name == 'collection'" class="product-breadcrumb_sep">
+    ›    </span>
+{% endif %}{% if template.name == 'collection' %}    <a li-if="template.name == 'collection'" href="routes.collections_url" li-object:href="routes.collections_url" class="product-breadcrumb_link">
+    <span>
+{{ section.settings.text_kollektionen_label }}
+</span>    </a>
+{% endif %}{% if template.name == 'collection' %}    <span li-if="template.name == 'collection'" class="product-breadcrumb_sep">
+    ›    </span>
+{% endif %}{% if collection.title %}    <span li-if="template.name == 'collection'" li-object="collection.title" class="product-breadcrumb_current">
+    Alle Produkte    </span>
+{% endif %}{% if template.name == 'list-collections' %}    <span li-if="template.name == 'list-collections'" class="product-breadcrumb_sep">
+    ›    </span>
+{% endif %}{% if template.name == 'list-collections' %}    <span li-if="template.name == 'list-collections'" class="product-breadcrumb_current">
+    <span>
+{{ section.settings.text_kollektionen_label }}
+</span>    </span>
+{% endif %}{% if template.name == 'article' %}    <span li-if="template.name == 'article'" class="product-breadcrumb_sep">
+    ›    </span>
+{% endif %}{% if template.name == 'article' %}    <a li-if="template.name == 'article'" li-object:href="blog.url" href="blog.url" class="product-breadcrumb_link">
+    <span li-object="blog.title">{{ blog.title }}</span>    </a>
+{% endif %}{% if template.name == 'article' %}    <span li-if="template.name == 'article'" class="product-breadcrumb_sep">
+    ›    </span>
+{% endif %}{% if article.title %}    <span li-if="template.name == 'article'" li-object="article.title" class="product-breadcrumb_current">
+    Artikel    </span>
+{% endif %}{% if template.name == 'blog' %}    <span li-if="template.name == 'blog'" class="product-breadcrumb_sep">
+    ›    </span>
+{% endif %}{% if blog.title %}    <span li-if="template.name == 'blog'" li-object="blog.title" class="product-breadcrumb_current">
+    Blog    </span>
+{% endif %}{% if template.name == 'page' %}    <span li-if="template.name == 'page'" class="product-breadcrumb_sep">
+    ›    </span>
+{% endif %}{% if page.title %}    <span li-if="template.name == 'page'" li-object="page.title" class="product-breadcrumb_current">
+    Seite    </span>
+{% endif %}{% if template.name == 'search' %}    <span li-if="template.name == 'search'" class="product-breadcrumb_sep">
+    ›    </span>
+{% endif %}{% if template.name == 'search' %}    <span li-if="template.name == 'search'" class="product-breadcrumb_current">
+    <span>
+{{ section.settings.text_suche_label }}
+</span>    </span>
+{% endif %}{% if template.name == 'cart' %}    <span li-if="template.name == 'cart'" class="product-breadcrumb_sep">
+    ›    </span>
+{% endif %}{% if template.name == 'cart' %}    <span li-if="template.name == 'cart'" class="product-breadcrumb_current">
+    <span>
+{{ section.settings.text_warenkorb_label }}
+</span>    </span>
+{% endif %}{% if template.name == '404' %}    <span li-if="template.name == '404'" class="product-breadcrumb_sep">
+    ›    </span>
+{% endif %}{% if template.name == '404' %}    <span li-if="template.name == '404'" class="product-breadcrumb_current">
+    <span>
+{{ section.settings.text_404_label }}
+</span>    </span>
+{% endif %}</nav></div></div> {% schema %} {
     "tag": "section",
     "name": "Product Breadcrumb",
     "class": "section_product-breadcrumb",
     "settings": [
+        {
+            "id": "text_home_label",
+            "type": "text",
+            "label": "Home-Label",
+            "default": "Home"
+        },
+        {
+            "id": "text_kollektionen_label",
+            "type": "text",
+            "label": "Kollektionen-Label",
+            "default": "Kollektionen"
+        },
+        {
+            "id": "text_suche_label",
+            "type": "text",
+            "label": "Suche-Label",
+            "default": "Suche"
+        },
+        {
+            "id": "text_warenkorb_label",
+            "type": "text",
+            "label": "Warenkorb-Label",
+            "default": "Warenkorb"
+        },
+        {
+            "id": "text_404_label",
+            "type": "text",
+            "label": "404-Label",
+            "default": "Seite nicht gefunden"
+        },
+        {
+            "type": "header",
+            "content": "Beschriftung"
+        },
+        {
+            "type": "paragraph",
+            "content": "Die Breadcrumbs werden je nach Template (Produkt, Kollektion, Blog, Artikel, Statische Seite, Suche, Warenkorb, 404) automatisch generiert. Die Texte hier sind nur Fallback-Labels f\u00fcr Home \/ Kollektionen \/ Suche \/ Warenkorb \/ 404."
+        },
         {
             "type": "header",
             "content": "Abst\u00e4nde"
@@ -47,13 +145,8 @@
     "presets": [
         {
             "name": "Product Breadcrumb",
-            "category": "Product",
+            "category": "Global",
             "blocks": []
         }
-    ],
-    "enabled_on": {
-        "templates": [
-            "product"
-        ]
-    }
+    ]
 } {% endschema %}

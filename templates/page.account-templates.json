@@ -1,0 +1,160 @@
+{
+    "sections": {
+        "announcement_bar": {
+            "type": "announcement_bar",
+            "blocks": {
+                "usp": {
+                    "type": "usp",
+                    "name": "USP"
+                },
+                "rechte-seite": {
+                    "name": "Rechte Seite",
+                    "type": "rechte-seite",
+                    "static": true
+                }
+            },
+            "block_order": [
+                "usp"
+            ]
+        },
+        "b2b_subnav": {
+            "type": "b2b_subnav"
+        },
+        "b2b_templates_hero": {
+            "type": "b2b_templates_hero"
+        },
+        "b2b_templates_card_g": {
+            "type": "b2b_templates_card_g",
+            "blocks": {
+                "karte": {
+                    "type": "karte",
+                    "name": "Karte"
+                }
+            },
+            "block_order": [
+                "karte"
+            ]
+        },
+        "b2b_templates_distri": {
+            "type": "b2b_templates_distri",
+            "blocks": {
+                "tab": {
+                    "type": "tab",
+                    "name": "Tab"
+                },
+                "tab-panes": {
+                    "name": "Tab Panes",
+                    "type": "tab-panes",
+                    "static": true,
+                    "blocks": {
+                        "tab-pane": {
+                            "type": "tab-pane",
+                            "name": "Tab Pane"
+                        }
+                    },
+                    "block_order": [
+                        "tab-pane"
+                    ]
+                }
+            },
+            "block_order": [
+                "tab"
+            ]
+        },
+        "b2b_templates_welcom": {
+            "type": "b2b_templates_welcom"
+        },
+        "b2b_templates_dashbo": {
+            "type": "b2b_templates_dashbo",
+            "blocks": {
+                "quicklink": {
+                    "type": "quicklink",
+                    "name": "Quicklink"
+                }
+            },
+            "block_order": [
+                "quicklink"
+            ]
+        },
+        "b2b_templates_news_h": {
+            "type": "b2b_templates_news_h",
+            "blocks": {
+                "news-karte": {
+                    "type": "news-karte",
+                    "name": "News Karte"
+                }
+            },
+            "block_order": [
+                "news-karte"
+            ]
+        },
+        "b2b_templates_news_l": {
+            "type": "b2b_templates_news_l",
+            "blocks": {
+                "listen-eintrag": {
+                    "type": "listen-eintrag",
+                    "name": "Listen-Eintrag"
+                }
+            },
+            "block_order": [
+                "listen-eintrag"
+            ]
+        },
+        "b2b_templates_downlo": {
+            "type": "b2b_templates_downlo",
+            "blocks": {
+                "download-karte": {
+                    "type": "download-karte",
+                    "name": "Download Karte"
+                }
+            },
+            "block_order": [
+                "download-karte"
+            ]
+        },
+        "b2b_templates_banner": {
+            "type": "b2b_templates_banner",
+            "blocks": {
+                "banner": {
+                    "type": "banner",
+                    "name": "Banner"
+                }
+            },
+            "block_order": [
+                "banner"
+            ]
+        },
+        "footer_newsletter": {
+            "type": "footer_newsletter"
+        },
+        "footer_bottom": {
+            "type": "footer_bottom",
+            "blocks": {
+                "social": {
+                    "type": "social",
+                    "name": "Social"
+                }
+            },
+            "block_order": [
+                "social"
+            ]
+        }
+    },
+    "layout": "theme",
+    "wrapper": "main.main-wrapper",
+    "order": [
+        "announcement_bar",
+        "b2b_subnav",
+        "b2b_templates_hero",
+        "b2b_templates_card_g",
+        "b2b_templates_distri",
+        "b2b_templates_welcom",
+        "b2b_templates_dashbo",
+        "b2b_templates_news_h",
+        "b2b_templates_news_l",
+        "b2b_templates_downlo",
+        "b2b_templates_banner",
+        "footer_newsletter",
+        "footer_bottom"
+    ]
+}
