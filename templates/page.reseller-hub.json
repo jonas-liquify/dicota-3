@@ -1,22 +1,5 @@
 {
     "sections": {
-        "announcement_bar": {
-            "type": "announcement_bar",
-            "blocks": {
-                "usp": {
-                    "type": "usp",
-                    "name": "USP"
-                },
-                "rechte-seite": {
-                    "name": "Rechte Seite",
-                    "type": "rechte-seite",
-                    "static": true
-                }
-            },
-            "block_order": [
-                "usp"
-            ]
-        },
         "reseller_hero": {
             "type": "reseller_hero"
         },
@@ -90,27 +73,11 @@
                 "updates-card",
                 "news-card"
             ]
-        },
-        "footer_newsletter": {
-            "type": "footer_newsletter"
-        },
-        "footer_bottom": {
-            "type": "footer_bottom",
-            "blocks": {
-                "social": {
-                    "type": "social",
-                    "name": "Social"
-                }
-            },
-            "block_order": [
-                "social"
-            ]
         }
     },
     "layout": "theme",
     "wrapper": "main.main-wrapper",
     "order": [
-        "announcement_bar",
         "reseller_hero",
         "reseller_category_ro",
         "reseller_hub",
@@ -118,8 +85,6 @@
         "the_dicota_differenc",
         "reseller_promo_grid",
         "b2b_news_highlight",
-        "b2b_news_updates",
-        "footer_newsletter",
-        "footer_bottom"
+        "b2b_news_updates"
     ]
 }
