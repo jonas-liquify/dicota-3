@@ -466,6 +466,7 @@
           "type": "foto",
           "name": "Foto",
           "settings": {
+            "image_foto": "shopify://shop_images/1_MT_Seven.webp",
             "tagged_product": "10-in-1-docking-station-8k-tb4-hdmi-pd-96w-ch"
           },
           "blocks": {}
