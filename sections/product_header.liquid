@@ -4,18 +4,65 @@
     <div class="product-header_gallery-lightbox is-clickable"><img li-object:src="media | image_url: width: 1200" li-object:alt="media.alt" alt="{{ media.alt }}" src="{{ media | image_url: width: 1200 }}" loading="lazy" class="product-header_gallery-image"></div>    </div>
 {% endif %}
                             {% if media.media_type == 'video' %}    <div li-if="media.media_type == 'video'" class="swiper-slide is-product-gallery">
-    <div class="product-header_gallery-lightbox"><div li-object="media | video_tag: controls: true" class="product-header_gallery-image">{{ media | video_tag: controls: true }}</div></div>    </div>
+    <div class="product-header_gallery-lightbox"><div li-object="media | video_tag: controls: true, image_size: '1200x'" class="product-header_gallery-image is-video">{{ media | video_tag: controls: true, image_size: '1200x' }}</div></div>    </div>
+{% endif %}
+                            {% if media.media_type == 'external_video' %}    <div li-if="media.media_type == 'external_video'" class="swiper-slide is-product-gallery">
+    <div class="product-header_gallery-lightbox"><div li-object="media | external_video_tag" class="product-header_gallery-image is-external-video">{{ media | external_video_tag }}</div></div>    </div>
+{% endif %}
+                            {% if media.media_type == 'model' %}    <div li-if="media.media_type == 'model'" class="swiper-slide is-product-gallery">
+    <div class="product-header_gallery-lightbox"><div li-object="media | model_viewer_tag" class="product-header_gallery-image is-model">{{ media | model_viewer_tag }}</div></div>    </div>
 {% endif %}
                     {% endfor %}    </div></div><div class="product-header_thumbs"><div class="swiper is-product-thumbnail"><div class="swiper-wrapper is-product-thumbnail"><div li-for:inside="media in product.media" class="swiper-slide is-product-thumbnail">
         {% for media in product.media %}                            {% if media.media_type == 'image' %}    <div li-if="media.media_type == 'image'">
     <img li-object:src="media | image_url: width: 200" li-object:alt="media.alt" alt="{{ media.alt }}" src="{{ media | image_url: width: 200 }}" loading="lazy" class="product-header_thumbnail-image">    </div>
 {% endif %}
                             {% if media.media_type == 'video' %}    <div li-if="media.media_type == 'video'">
-    <img li-object:src="media | image_url: width: 200" li-object:alt="media.alt" alt="{{ media.alt }}" src="{{ media | image_url: width: 200 }}" loading="lazy" class="product-header_thumbnail-image"><div aria-hidden="true" class="product-header_play-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="currentColor" width="100%" height="100%"><path d="M8 5v14l11-7z"></path></svg></div>    </div>
+    <img li-object:src="media.preview_image | image_url: width: 200" li-object:alt="media.alt" alt="{{ media.alt }}" src="{{ media.preview_image | image_url: width: 200 }}" loading="lazy" class="product-header_thumbnail-image"><div aria-hidden="true" class="product-header_play-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="currentColor" width="100%" height="100%"><path d="M8 5v14l11-7z"></path></svg></div>    </div>
+{% endif %}
+                            {% if media.media_type == 'external_video' %}    <div li-if="media.media_type == 'external_video'">
+    <img li-object:src="media.preview_image | image_url: width: 200" li-object:alt="media.alt" alt="{{ media.alt }}" src="{{ media.preview_image | image_url: width: 200 }}" loading="lazy" class="product-header_thumbnail-image"><div aria-hidden="true" class="product-header_play-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="currentColor" width="100%" height="100%"><path d="M8 5v14l11-7z"></path></svg></div>    </div>
+{% endif %}
+                            {% if media.media_type == 'model' %}    <div li-if="media.media_type == 'model'">
+    <img li-object:src="media.preview_image | image_url: width: 200" li-object:alt="media.alt" alt="{{ media.alt }}" src="{{ media.preview_image | image_url: width: 200 }}" loading="lazy" class="product-header_thumbnail-image"><div aria-hidden="true" class="product-header_model-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="100%" height="100%"><path d="M12 2L3 7v10l9 5 9-5V7l-9-5z"></path><path d="M3 7l9 5 9-5"></path><path d="M12 22V12"></path></svg></div>    </div>
 {% endif %}
                     {% endfor %}    </div></div></div></div></div><div li-content-for-theme-blocks="" class="product-header_details">
 {% content_for 'blocks' %}
-</div></div><div class="hide w-embed w-script"><script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script><script>document.addEventListener("DOMContentLoaded", function() {var thumbSwiper = new Swiper(".swiper.is-product-thumbnail", {direction: "vertical",slidesPerView: "auto",freeMode: true,slideToClickedSlide: true,spaceBetween: 8,watchSlidesProgress: true});new Swiper(".swiper.is-product-gallery", {thumbs: { swiper: thumbSwiper, slideThumbActiveClass: "is-active" },keyboard: { enabled: true, onlyInViewport: true }});new Swiper(".swiper.is-we-care", {slidesPerView: 1, loop: true,autoplay: { delay: 5000, disableOnInteraction: false },pagination: { el: ".ph_we-care-dots", clickable: true }});new Swiper(".swiper.is-upsell", {slidesPerView: 1,navigation: { nextEl: ".ph_upsell-next", prevEl: ".ph_upsell-prev" }});var tabs = document.querySelectorAll(".ph_tab");var panels = document.querySelectorAll(".ph_tab-panel");function activateTab(idx) {tabs.forEach(function(t,i){ t.classList.toggle("is-active", i===idx); });panels.forEach(function(p,i){ p.style.display = i===idx ? "block" : "none"; });}tabs.forEach(function(tab, i) { tab.addEventListener("click", function(){ activateTab(i); }); });(function(){ var activeIdx = Array.from(tabs).findIndex(function(t){ return t.classList.contains("is-active"); }); activateTab(activeIdx >= 0 ? activeIdx : 0); })();var seeMore = document.querySelector(".ph_see-more");if (seeMore) {seeMore.addEventListener("click", function(e) {e.preventDefault();var panel = document.querySelector(".ph_tab-panel[style*='block']") || document.querySelector(".ph_tab-panel");if (panel) { panel.classList.toggle("is-expanded"); }this.textContent = panel && panel.classList.contains("is-expanded") ? "Weniger anzeigen" : "Mehr anzeigen";});}});</script></div> {% schema %} {
+</div></div><div class="hide w-embed w-script"><script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script><script>document.addEventListener("DOMContentLoaded", function() {
+var thumbEl = document.querySelector(".swiper.is-product-thumbnail");
+var galleryEl = document.querySelector(".swiper.is-product-gallery");
+var thumbSwiper = null;
+var gallerySwiper = null;
+function isDesktop() { return window.matchMedia("(min-width: 992px)").matches; }
+function initGallerySwipers() {
+  if (!thumbEl || !galleryEl) return;
+  if (thumbSwiper) { try { thumbSwiper.destroy(true, true); } catch(e){} thumbSwiper = null; }
+  if (gallerySwiper) { try { gallerySwiper.destroy(true, true); } catch(e){} gallerySwiper = null; }
+  var desktop = isDesktop();
+  thumbSwiper = new Swiper(thumbEl, {
+    direction: desktop ? "vertical" : "horizontal",
+    slidesPerView: desktop ? "auto" : 4.5,
+    freeMode: true,
+    slideToClickedSlide: true,
+    spaceBetween: 8,
+    watchSlidesProgress: true
+  });
+  gallerySwiper = new Swiper(galleryEl, {
+    spaceBetween: 0,
+    thumbs: { swiper: thumbSwiper, slideThumbActiveClass: "is-active" },
+    keyboard: { enabled: true, onlyInViewport: true }
+  });
+}
+initGallerySwipers();
+var lastDesktop = isDesktop();
+var resizeTimer;
+window.addEventListener("resize", function() {
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(function() {
+    var nowDesktop = isDesktop();
+    if (nowDesktop !== lastDesktop) { lastDesktop = nowDesktop; initGallerySwipers(); }
+  }, 150);
+});
+new Swiper(".swiper.is-we-care", {slidesPerView: 1, loop: true,autoplay: { delay: 5000, disableOnInteraction: false },pagination: { el: ".ph_we-care-dots", clickable: true }});new Swiper(".swiper.is-upsell", {slidesPerView: 1,navigation: { nextEl: ".ph_upsell-next", prevEl: ".ph_upsell-prev" }});var tabs = document.querySelectorAll(".ph_tab");var panels = document.querySelectorAll(".ph_tab-panel");function activateTab(idx) {tabs.forEach(function(t,i){ t.classList.toggle("is-active", i===idx); });panels.forEach(function(p,i){ p.style.display = i===idx ? "block" : "none"; });}tabs.forEach(function(tab, i) { tab.addEventListener("click", function(){ activateTab(i); }); });(function(){ var activeIdx = Array.from(tabs).findIndex(function(t){ return t.classList.contains("is-active"); }); activateTab(activeIdx >= 0 ? activeIdx : 0); })();var seeMore = document.querySelector(".ph_see-more");if (seeMore) {seeMore.addEventListener("click", function(e) {e.preventDefault();var panel = document.querySelector(".ph_tab-panel[style*='block']") || document.querySelector(".ph_tab-panel");if (panel) { panel.classList.toggle("is-expanded"); }this.textContent = panel && panel.classList.contains("is-expanded") ? "Weniger anzeigen" : "Mehr anzeigen";});}});</script></div> {% schema %} {
     "tag": "section",
     "name": "Product Header",
     "class": "section_product-header",

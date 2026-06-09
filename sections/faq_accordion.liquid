@@ -1,7 +1,7 @@
 <div class="padding-global padding-section-medium"><div class="container-large"><div class="faq_wrapper"><div class="default-flex-small"><h2 class="heading-style-h2">
 {{ section.settings.text_heading }}
-</h2><div class="text-size-medium"> {{ section.settings.textarea_text }} </div></div><div class="faq_component" li-for:inside="faq in shop.metaobjects.faq.values">
-        {% for faq in shop.metaobjects.faq.values %}                            <div x-data="{open: false}" class="faq_item background-color-alternate"><div tabindex="0" role="button" x-on:click="open=!open" x-bind:aria-expanded="open?'true':'false'" class="faq_header"><div li-object="faq.frage" class="text-size-medium text-weight-medium">{{ faq.frage }}</div><div class="faq_icon-outer"><div class="faq_icon-line"></div><div x-bind:class="open?'is-open':''" class="faq_icon-line is-rotating"></div></div></div><div x-bind:class="open?'is-open':''" class="faq_body"><div class="faq_body-content"><div li-object="faq.antwort" class="text-size-regular">{{ faq.antwort }}</div></div></div></div>
+</h2><div class="text-size-medium"> {{ section.settings.textarea_text }} </div></div><div class="faq_component" li-for:inside="faq in section.settings.faqs">
+        {% for faq in section.settings.faqs %}                            <div x-data="{open: false}" class="faq_item background-color-alternate"><div tabindex="0" role="button" x-on:click="open=!open" x-bind:aria-expanded="open?'true':'false'" class="faq_header"><div li-object="faq.frage" class="text-size-medium text-weight-medium">{{ faq.frage }}</div><div class="faq_icon-outer"><div class="faq_icon-line"></div><div x-bind:class="open?'is-open':''" class="faq_icon-line is-rotating"></div></div></div><div x-bind:class="open?'is-open':''" class="faq_body"><div class="faq_body-content"><div li-object="faq.antwort" class="text-size-regular">{{ faq.antwort }}</div></div></div></div>
                     {% endfor %}    </div></div></div></div> {% schema %} {
     "tag": "section",
     "name": "FAQ Accordion",
@@ -42,6 +42,22 @@
             "unit": "px",
             "label": "Abstand unten",
             "default": 80
+        },
+        {
+            "type": "header",
+            "content": "FAQ-Auswahl"
+        },
+        {
+            "type": "metaobject_list",
+            "id": "faqs",
+            "label": "FAQs",
+            "metaobject_type": "faq",
+            "limit": 50,
+            "info": "W\u00e4hle manuell die FAQ-Eintr\u00e4ge aus dem Metaobjekt \"faq\". Jeder Eintrag braucht die Felder frage (single_line_text) und antwort (multi_line_text oder rich_text)."
+        },
+        {
+            "type": "paragraph",
+            "content": "Vorgehen: Zuerst in Shopify Admin \u2192 Einstellungen \u2192 Benutzerdefinierte Daten \u2192 Metaobjekte ein Metaobjekt vom Typ \"faq\" mit den Feldern frage + antwort anlegen, dann hier die gew\u00fcnschten Eintr\u00e4ge ausw\u00e4hlen. Reihenfolge im Theme-Editor wird zur Darstellungs-Reihenfolge."
         }
     ],
     "presets": [
