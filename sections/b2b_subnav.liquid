@@ -1,19 +1,18 @@
-<div class="subnav_component"><div class="container-large"><nav class="subnav_menu"><div class="subnav_wrapper">{% for link in linklists[section.settings.account_menu].links %}    <div li-for="link in linklists[section.settings.account_menu].links" x-data="{open:false}" class="subnav_dropdown">
-                                    <div x-on:click="open=!open" x-on:click.outside="open=false" class="subnav_dropdown-toggle"><div li-object="link.title" class="text-weight-medium">{{ link.title }}</div>{% if link.links.size > 0 %}    <div li-if="link.links.size > 0" class="dropdown-icon w-embed">
+<div class="subnav_component"><div class="container-large"><nav class="subnav_menu"><div class="subnav_wrapper" li-for:inside="link in linklists[section.settings.account_menu].links">
+        {% for link in linklists[section.settings.account_menu].links %}                            <div x-data="{open:false}" class="subnav_dropdown"><div x-on:click="open=!open" x-on:click.outside="open=false" class="subnav_dropdown-toggle"><div li-object="link.title" class="text-weight-medium">{{ link.title }}</div>{% if link.links.size > 0 %}    <div li-if="link.links.size > 0" class="dropdown-icon w-embed">
     {% render 'icon_chevron_down' %}    </div>
-{% endif %}</div>
-                            {% if link.links.size > 0 %}    <nav x-show="open" x-cloak="" li-if="link.links.size > 0" class="nav_secondary-content is-subnav">
+{% endif %}</div>{% if link.links.size > 0 %}    <nav x-show="open" x-cloak="" li-if="link.links.size > 0" class="nav_secondary-content is-subnav">
     <div class="container-large"><div class="subnav_dropdown-list">{% for child_link in link.links %}    <div li-for="child_link in link.links" class="subnav_dropdown-item">
                                     <a li-object:href="child_link.url" href="{{ child_link.url }}" class="subnav_dropdown-link w-inline-block"><div li-object="child_link.title" class="text-size-regular text-weight-medium">{{ child_link.title }}</div><div class="text-size-small">
 {{ section.settings.text_dummy_description }}
 </div></a>
                         </div>
 {% endfor %}</div></div>    </nav>
-{% endif %}
-                        </div>
-{% endfor %}<div class="subnav_points"><div class="text-size-small">
+{% endif %}</div>
+                            <div class="subnav_points"><div class="text-size-small">
 {{ section.settings.text_punkte_label }}
-</div><div class="text-size-small text-color-blue text-weight-medium"><span li-object="customer.metafields.custom.points | default: '0'">{{ customer.metafields.custom.points | default: '0' }}</span>P</div></div></div></nav></div></div> {% schema %} {
+</div><div class="text-size-small text-color-blue text-weight-medium"><span li-object="customer.metafields.custom.points | default: '0'">{{ customer.metafields.custom.points | default: '0' }}</span>P</div></div>
+                    {% endfor %}    </div></nav></div></div> {% schema %} {
     "tag": "section",
     "name": "B2B Subnav",
     "class": "section_acc-subnav",

@@ -52,4 +52,13 @@
           }
         }
         customElements.define('predictive-search', PredictiveSearch);
+      </script><script>
+        /* Re-init Alpine for [x-data] elements that liquify-core rendered after Alpine's initial scan
+           (e.g. elements inside li-for[:inside] parents). Runs after window.load so liquify-core is done. */
+        window.addEventListener('load', function () {
+          if (!window.Alpine) return;
+          document.querySelectorAll('[x-data]').forEach(function (el) {
+            if (!el._x_dataStack) window.Alpine.initTree(el);
+          });
+        });
       </script>

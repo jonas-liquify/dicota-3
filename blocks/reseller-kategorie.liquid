@@ -1,0 +1,30 @@
+<div li-block="Reseller Kategorie" style="display:contents" {{ block.shopify_attributes }}>
+                    <a href="{{ block.settings.url_link }}" class="category-row_item w-inline-block"> <div><div class="category-row_circle">{% if block.settings.image_bild %} {{ block.settings.image_bild | image_url: width: 300 | image_tag: loading: 'lazy', class: 'category-row_image' }} {% else %} <img src="{{ 'collection-apparel-1.svg' | asset_url }}" loading="lazy" alt="" class="category-row_image"> {% endif %}</div><div class="category-row_label text-size-small">{{ block.settings.text_titel }}</div></div> </a>
+                </div> {% schema %} {
+    "name": "Reseller Kategorie",
+    "settings": [
+        {
+            "id": "url_link",
+            "type": "url",
+            "label": "Link"
+        },
+        {
+            "id": "image_bild",
+            "type": "image_picker",
+            "label": "Bild"
+        },
+        {
+            "id": "text_titel",
+            "type": "text",
+            "label": "Titel",
+            "default": "Backpacks"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Reseller Kategorie",
+            "blocks": []
+        }
+    ],
+    "tag": null
+} {% endschema %}

@@ -6491,6 +6491,7 @@ figcaption {
   position: relative;
   width: 100%;
   height: 100%;
+  background-color: #fff;
 }
 
 .product-card_image {
@@ -6510,6 +6511,11 @@ figcaption {
 
 .product-card_image-link:hover .product-card_image.is-hover {
   opacity: 1;
+}
+
+/* Auf Hover die Basis ausblenden, damit das zweite Bild nicht durch das erste durchscheint */
+.product-card_image-link:hover .product-card_image:not(.is-hover) {
+  opacity: 0;
 }
 
 .product-card_badge {

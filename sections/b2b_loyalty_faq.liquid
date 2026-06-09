@@ -2,11 +2,9 @@
 {{ section.settings.text_breadcrumb }}
 </div></li></ul><div class="default-flex-tiny"><h1 class="heading-style-h2">
 {{ section.settings.text_heading }}
-</h1><div class="text-size-medium max-width-large"> {{ section.settings.textarea_subheading }} </div></div><div class="faq_component">{% for faq in shop.metaobjects.faq.values %}    <div x-data="{open:false}" li-for="faq in shop.metaobjects.faq.values" class="faq_item background-color-alternate">
-                                    <div tabindex="0" role="button" x-on:click="open=!open" x-bind:aria-expanded="open?'true':'false'" class="faq_header is-account"><div li-object="faq.frage" class="heading-style-h4">{{ faq.frage }}</div><div class="faq_icon-outer is-grey"><div class="faq_icon-line"></div><div x-bind:class="open?'is-open':''" class="faq_icon-line is-rotating"></div></div></div>
-                            <div x-bind:class="open?'is-open':''" class="faq_body is-account"><div class="faq_body-content"><div li-object="faq.antwort" class="text-size-medium">{{ faq.antwort }}</div></div></div>
-                        </div>
-{% endfor %}</div></div></div></div></div> {% schema %} {
+</h1><div class="text-size-medium max-width-large"> {{ section.settings.textarea_subheading }} </div></div><div class="faq_component" li-for:inside="faq in shop.metaobjects.faq.values">
+        {% for faq in shop.metaobjects.faq.values %}                            <div x-data="{open:false}" class="faq_item background-color-alternate"><div tabindex="0" role="button" x-on:click="open=!open" x-bind:aria-expanded="open?'true':'false'" class="faq_header is-account"><div li-object="faq.frage" class="heading-style-h4">{{ faq.frage }}</div><div class="faq_icon-outer is-grey"><div class="faq_icon-line"></div><div x-bind:class="open?'is-open':''" class="faq_icon-line is-rotating"></div></div></div><div x-bind:class="open?'is-open':''" class="faq_body is-account"><div class="faq_body-content"><div li-object="faq.antwort" class="text-size-medium">{{ faq.antwort }}</div></div></div></div>
+                    {% endfor %}    </div></div></div></div></div> {% schema %} {
     "tag": "section",
     "name": "B2B \/ Loyalty \u2014 FA",
     "class": "section_acc-default",

@@ -1,0 +1,31 @@
+<div li-block="Reseller Header Link" style="display:contents" {{ block.shopify_attributes }}>
+                    <a href="{{ block.settings.url_link_url }}" class="announcement-bar_link{% if block.settings.highlighted %} is-highlighted{% endif %}"> <span>{{ block.settings.text_link_text }}</span> </a>
+                </div> {% schema %} {
+    "name": "Reseller Header Link",
+    "settings": [
+        {
+            "id": "url_link_url",
+            "type": "url",
+            "label": "Link URL"
+        },
+        {
+            "id": "text_link_text",
+            "type": "text",
+            "label": "Link Text",
+            "default": "D2C Reseller Shop"
+        },
+        {
+            "type": "checkbox",
+            "id": "highlighted",
+            "label": "Hervorheben (Hintergrund-Akzent)",
+            "default": false
+        }
+    ],
+    "presets": [
+        {
+            "name": "Reseller Header Link",
+            "blocks": []
+        }
+    ],
+    "tag": null
+} {% endschema %}
