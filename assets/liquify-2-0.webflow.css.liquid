@@ -3428,7 +3428,8 @@ figcaption {
   display: none;
 }
 
-.product-header_play-icon {
+.product-header_play-icon,
+.product-header_model-icon {
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -3437,6 +3438,28 @@ figcaption {
   display: flex;
   position: absolute;
   inset: auto 0% 0% auto;
+  pointer-events: none;
+}
+
+/* Container für Video / External-Video / 3D-Modell innerhalb der Haupt-Gallery */
+.product-header_gallery-image.is-video,
+.product-header_gallery-image.is-external-video,
+.product-header_gallery-image.is-model {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.product-header_gallery-image.is-video video,
+.product-header_gallery-image.is-external-video iframe,
+.product-header_gallery-image.is-model model-viewer {
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
 }
 
 .gift_card-logo {
@@ -14774,4 +14797,67 @@ figcaption {
   .reseller-header_actions { gap: 0.5rem; }
   .reseller-header_btn-outline,
   .reseller-header_btn-solid { padding: 0.625rem 1rem; font-size: 0.8125rem; }
+}
+
+/* =============================================================
+   DICOTA PDP — Product Hero Gallery: Mobile-Stack
+   Desktop: Big image left, vertical thumbs right (siehe basis-rule)
+   ≤991px: stack — big image oben, horizontale thumbs unter
+   ============================================================= */
+@media screen and (max-width: 991px) {
+  .product-header_gallery {
+    display: flex !important;
+    flex-direction: column;
+    grid-template-columns: none !important;
+    gap: 0.5rem;
+    width: 100%;
+  }
+  .swiper.is-product-gallery {
+    order: 1;
+    width: 100%;
+    height: 75vw;
+    max-height: 480px;
+  }
+  .product-header_thumbs {
+    order: 2;
+    width: 100%;
+    height: auto !important;
+    max-height: none !important;
+  }
+  .swiper.is-product-thumbnail {
+    width: 100%;
+    height: auto;
+  }
+  .swiper-wrapper.is-product-thumbnail {
+    flex-direction: row;
+  }
+  .swiper-slide.is-product-thumbnail {
+    width: auto;
+    height: 4.5rem;
+    aspect-ratio: 1 / 1;
+  }
+  .product-header_thumbnail-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .swiper.is-product-gallery {
+    height: 85vw;
+    max-height: 420px;
+  }
+  .swiper-slide.is-product-thumbnail {
+    height: 4rem;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .swiper.is-product-gallery {
+    height: 90vw;
+  }
+  .swiper-slide.is-product-thumbnail {
+    height: 3.5rem;
+  }
 }
