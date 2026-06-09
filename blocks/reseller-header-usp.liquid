@@ -1,0 +1,23 @@
+<div li-block="Reseller Header USP" class="announcement-bar_item" {{ block.shopify_attributes }}>
+                    <div class="announcement-bar_icon w-embed"><svg width="100%" height="100%" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zm-.5 1.5 1.96 2.5H17V9.5h2.5zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm12 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z" fill="currentColor"></path></svg></div>
+                    <div class="announcement-bar_text">
+{{ block.settings.text_text }}
+</div>
+                </div> {% schema %} {
+    "name": "Reseller Header USP",
+    "settings": [
+        {
+            "id": "text_text",
+            "type": "text",
+            "label": "Text",
+            "default": "B2B Benefit"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Reseller Header USP",
+            "blocks": []
+        }
+    ],
+    "tag": null
+} {% endschema %}
