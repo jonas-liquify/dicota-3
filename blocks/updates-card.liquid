@@ -8,6 +8,9 @@
     "name": "Updates Card",
     "blocks": [
         {
+            "type": "update"
+        },
+        {
             "type": "@app"
         }
     ],
@@ -17,17 +20,6 @@
             "type": "text",
             "label": "Titel",
             "default": "Seit dem letzten Login:"
-        },
-        {
-            "id": "url_link",
-            "type": "url",
-            "label": "Link"
-        },
-        {
-            "id": "text_untertitel",
-            "type": "text",
-            "label": "Untertitel",
-            "default": "Everyting you need to advertise"
         },
         {
             "id": "url_button_link",
@@ -44,7 +36,11 @@
     "presets": [
         {
             "name": "Updates Card",
-            "blocks": []
+            "blocks": [
+                {
+                    "type": "update"
+                }
+            ]
         }
     ],
     "tag": null
