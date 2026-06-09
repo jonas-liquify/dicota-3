@@ -12,5 +12,234 @@
     "market": "all-b2b"
   },
   "parent": "index.json",
-  "sections": {}
+  "sections": {
+    "reseller_hero_97i8b": {
+      "type": "reseller_hero",
+      "disabled": false,
+      "settings": {
+        "image_hintergrundbild": null,
+        "text_headline": "Willkommen bei DICOTA myDCT",
+        "textarea_subtext": "Profitieren Sie von attraktiven Preisen und Angeboten für Ihre Endkunden",
+        "text_kategorie_label": "Kategorien",
+        "url_link": "",
+        "text_text": "Summer Release",
+        "header-7f750169dc2f74344287dacf4ce6c9e3": null,
+        "min_height": 78,
+        "header-f58bb5bee3fd12c2e99ceda2964015dc": null,
+        "text_color": "#ffffff"
+      },
+      "blocks": {},
+      "block_order": [],
+      "name": "Reseller Hero"
+    },
+    "reseller_category_ro_WCArV": {
+      "type": "reseller_category_ro",
+      "disabled": false,
+      "settings": {
+        "url_link": "",
+        "image_bild": null,
+        "text_titel": "Backpacks",
+        "header-ca3e6ef08f09e4fcea45300e0f5abcd8": null,
+        "padding_top": 60,
+        "padding_bottom": 60
+      },
+      "blocks": {},
+      "block_order": [],
+      "name": "Reseller Category Ro"
+    },
+    "reseller_hub_EwB6Y": {
+      "type": "reseller_hub",
+      "disabled": false,
+      "settings": {
+        "image_bild": null,
+        "text_heading": "DICOTA Reseller Hub. Ein No-Brainer, für alle die Vorteile geniessen wollen",
+        "url_button_1_link": "",
+        "text_button_1_text": "Einloggen",
+        "url_button_2_link": "",
+        "text_button_2_text": "Registrieren"
+      },
+      "blocks": {
+        "vorteil_aptkx": {
+          "type": "vorteil",
+          "disabled": false,
+          "settings": {
+            "text_titel": "Marketing &amp; Sales",
+            "textarea_text": "Nutzen Sie die Tools und Ressourcen des Clubs für eine optimale Präsentation Ihres Sortiments — sowohl online als auch auf der Verkaufsfläche!"
+          }
+        }
+      },
+      "block_order": [
+        "vorteil_aptkx"
+      ],
+      "name": "Reseller Hub"
+    },
+    "the_latest_XDCD3": {
+      "type": "the_latest",
+      "disabled": false,
+      "settings": {
+        "text_heading": "The Latest. Take a look at what's new, right now.",
+        "header-fb1f030b549e04036c3615608af9a086": null,
+        "padding_top": 80,
+        "padding_bottom": 80
+      },
+      "blocks": {
+        "slide_Wd8wR": {
+          "type": "slide",
+          "disabled": false,
+          "settings": {
+            "image_hintergrundbild": null,
+            "text_headline_zeile_1": "Weigh Darker™",
+            "text_headline_zeile_2": "Moon Bag Ruffle",
+            "text_subtext": "Raffiniertes Design. Recycelte moderne Materialien.",
+            "url_button_link": "",
+            "text_button_text": "Jetzt shoppen test"
+          }
+        }
+      },
+      "block_order": [
+        "slide_Wd8wR"
+      ],
+      "name": "The Latest"
+    },
+    "the_dicota_differenc_JXxMG": {
+      "type": "the_dicota_differenc",
+      "disabled": false,
+      "settings": {
+        "text_heading": "The Dicota Difference. Even more reasons to become a reseller.",
+        "url_button_1_link": "",
+        "text_button_1_text": "Einloggen",
+        "url_button_2_link": "",
+        "text_button_2_text": "Registrieren",
+        "header-1b0a6d73820bb000e7e09e4eb6bfd72c": null,
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "header-ce37ceb3736315638f4c05251a27c7e6": null,
+        "bg_color": "#f4f4f4"
+      },
+      "blocks": {
+        "vorteil_UGKnf": {
+          "type": "vorteil",
+          "disabled": false,
+          "settings": {
+            "text_titel": "Marketing &amp; Sales",
+            "textarea_text": "Nutzen Sie die Tools und Ressourcen des Clubs für eine optimale Präsentation Ihres Sortiments — sowohl online als auch auf der Verkaufsfläche!"
+          }
+        }
+      },
+      "block_order": [
+        "vorteil_UGKnf"
+      ],
+      "name": "The Dicota Differenc"
+    },
+    "reseller_promo_grid_ydyLg": {
+      "type": "reseller_promo_grid",
+      "disabled": false,
+      "settings": {},
+      "blocks": {
+        "banner_bXLrV": {
+          "type": "banner",
+          "disabled": false,
+          "settings": {
+            "image_hintergrundbild": null,
+            "text_uberschrift": "Tell A Friend &amp; Get 15% Off",
+            "textarea_subtext": "Give your friends 15% off their first order, and get a 15% off for each successful referral",
+            "url_button_link": "",
+            "text_button_text": "Freund einladen"
+          }
+        }
+      },
+      "block_order": [
+        "banner_bXLrV"
+      ],
+      "name": "Reseller Promo Grid"
+    },
+    "b2b_news_updates_EaWiQ": {
+      "type": "b2b_news_updates",
+      "disabled": false,
+      "settings": {
+        "text_titel_fett": "Noch nicht genug?",
+        "text_titel_normal": "Weitere News frisch aus dem Drucker",
+        "header-45d841ca8abddb1896dd7dc2f8b98c4f": null,
+        "padding_top": 40,
+        "padding_bottom": 60,
+        "header-8b0919c4c585d96550ec61544d973834": null,
+        "bg_color": "#f6f6f6"
+      },
+      "blocks": {
+        "updates_card_PkERC": {
+          "type": "updates-card",
+          "disabled": false,
+          "blocks": {},
+          "block_order": [],
+          "settings": {
+            "text_titel": "Seit dem letzten Login:",
+            "url_link": "",
+            "text_untertitel": "Everyting you need to advertise",
+            "url_button_link": "",
+            "text_button_text": "Alle Updates"
+          }
+        },
+        "news_card_3YQdB": {
+          "type": "news-card",
+          "disabled": false,
+          "settings": {
+            "image_bild": null,
+            "url_link": "",
+            "text_badge": "NEW",
+            "text_titel": "Seven",
+            "textarea_text": "(Platzhalter) Seit 1992 wurden mehr als 12 Millionen PET-Flaschen verarbeitet, um Abfall zu minimieren -"
+          }
+        }
+      },
+      "block_order": [
+        "updates_card_PkERC",
+        "news_card_3YQdB"
+      ],
+      "name": "B2B News Updates"
+    },
+    "b2b_news_highlight_LhrNM": {
+      "type": "b2b_news_highlight",
+      "disabled": false,
+      "settings": {
+        "image_bild": null,
+        "text_badge": "NEW",
+        "text_kategorie": "Company News",
+        "text_datum": "5. Mai 2026",
+        "text_uberschrift": "Dicota is opening another Office-Complex in Dubai",
+        "textarea_text": "(Platzhalter) Seit 1992 wurden mehr als 12 Millionen PET-Flaschen verarbeitet, um Abfall zu minimieren - DCT (DICOTA Cushion Technology) ist ein strukturiertes Dämpfungssystem, das Stösse, Schläge und Druck aus verschiedenen Winkeln absorbieren kann.",
+        "url_button_link": "",
+        "text_button_text": "Learn more",
+        "header-9a74bd3b6bf03dd73659e1a00e2b9c0e": null,
+        "padding_top": 40,
+        "padding_bottom": 60,
+        "header-a70a634049c2424a5e47d416c01069ec": null,
+        "bg_color": "#f6f6f6"
+      },
+      "blocks": {},
+      "block_order": [],
+      "name": "B2B News Highlight"
+    }
+  },
+  "order": [
+    "reseller_hero_97i8b",
+    "reseller_category_ro_WCArV",
+    "reseller_hub_EwB6Y",
+    "the_latest_XDCD3",
+    "the_dicota_differenc_JXxMG",
+    "reseller_promo_grid_ydyLg",
+    "b2b_news_highlight_LhrNM",
+    "b2b_news_updates_EaWiQ",
+    "rating_bar_qr8cYB",
+    "section_headline",
+    "featured_products",
+    "usp_icon_row",
+    "image_banner",
+    "shop_by_category",
+    "two_column_banner",
+    "accessories_slider",
+    "image_link_list",
+    "loved_by_customers",
+    "sustainability_banne",
+    "testimonials"
+  ]
 }
