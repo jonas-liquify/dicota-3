@@ -14620,17 +14620,15 @@ figcaption {
 }
 
 /* =============================================================
-   DICOTA — Breadcrumb: hide li-if/li-unless branches in builder preview
-   In production Liquiflow strips li-* attributes when converting to
-   Liquid, so these attribute selectors only match in the local/builder
-   preview. Result: local preview shows just "Home", production shows
-   the matching template branch.
-   Note: attribute names with `:` must be escaped in CSS selectors.
+   DICOTA — Breadcrumb (formerly: hid li-if branches in builder preview)
+   Vorher gab es hier `.product-breadcrumb_nav [li-if] { display:none }`
+   um in der Builder-Vorschau nur "Home" zu zeigen. Annahme war: Liquiflow
+   strippt li-* Attribute beim Convertieren — STIMMT NICHT. Die Attribute
+   bleiben im gerendeten Shopify-HTML, und der CSS-Selector matched dann
+   auch in Produktion → blendet die echten Breadcrumb-Branches aus.
+   Daher entfernt. Im Builder zeigt der Breadcrumb jetzt zwar mehrere
+   Branches gleichzeitig (Vorschau-Artefakt), aber in Produktion stimmt's.
    ============================================================= */
-.product-breadcrumb_nav [li-if],
-.product-breadcrumb_nav [li-if\:inside],
-.product-breadcrumb_nav [li-unless],
-.product-breadcrumb_nav [li-unless\:inside] { display: none !important; }
 
 .nav_shop-icon.nav_shop-icon-cart.w-dropdown-toggle {
   color: #ffffff;
@@ -14854,6 +14852,8 @@ figcaption {
     width: 100%;
     align-items: stretch;
     height: auto !important;            /* override desktop clamp */
+    position: static !important;        /* override desktop sticky — auf mobile mitscrollen */
+    top: auto !important;
   }
   .product-header_gallery > .swiper.is-product-gallery {
     order: 1;
