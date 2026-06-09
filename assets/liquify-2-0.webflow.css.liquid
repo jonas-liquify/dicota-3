@@ -14809,20 +14809,25 @@ figcaption {
    ≤991px: stack — big image oben, horizontale Thumbs unten.
    ============================================================= */
 
-/* Desktop base — Höhe vom Hauptbild diktieren */
+/* Desktop base — fester Gallery-Container-Höhenrahmen.
+   Sowohl Big-Image als auch Thumb-Strip teilen sich diese Höhe (align-items: stretch
+   ist Grid-Default), so kann die Thumb-Anzahl die Höhe NIE noch hochziehen.
+   Big-Image füllt die Zelle, das eingebettete <img> nutzt object-fit: contain
+   und bleibt damit auch bei nicht-quadratischer Zellengröße proportional. */
 .product-header_gallery {
-  align-items: start;                          /* Spalten nicht mehr stretchen */
+  align-items: stretch;
+  height: clamp(480px, 64vh, 720px);
 }
 .product-header_gallery > .swiper.is-product-gallery {
-  aspect-ratio: 1 / 1;                         /* Hauptbild quadratisch */
-  height: auto !important;                     /* Override des fluiden height: 100% */
+  height: 100% !important;
+  max-height: 100%;
   min-height: 0;
-  max-height: 720px;
+  aspect-ratio: auto;
 }
 .product-header_gallery > .product-header_thumbs {
-  height: 100%;                                /* Match Big-Image-Höhe (via aspect-ratio) */
+  height: 100%;
   max-height: 100%;
-  overflow: hidden;                            /* Thumbs, die rausragen, blendet Swiper aus */
+  overflow: hidden;
 }
 .product-header_gallery > .product-header_thumbs > .swiper.is-product-thumbnail {
   height: 100%;
@@ -14848,6 +14853,7 @@ figcaption {
     gap: 0.5rem;
     width: 100%;
     align-items: stretch;
+    height: auto !important;            /* override desktop clamp */
   }
   .product-header_gallery > .swiper.is-product-gallery {
     order: 1;
