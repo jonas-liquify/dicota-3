@@ -1,0 +1,190 @@
+{
+    "sections": {
+        "announcement_bar": {
+            "type": "announcement_bar",
+            "blocks": {
+                "usp": {
+                    "type": "usp",
+                    "name": "USP"
+                },
+                "rechte-seite": {
+                    "name": "Rechte Seite",
+                    "type": "rechte-seite",
+                    "static": true,
+                    "blocks": {
+                        "link": {
+                            "type": "link",
+                            "name": "Link"
+                        }
+                    },
+                    "block_order": [
+                        "link"
+                    ]
+                }
+            },
+            "block_order": [
+                "usp"
+            ]
+        },
+        "reseller_header": {
+            "type": "reseller_header",
+            "blocks": {
+                "usp": {
+                    "type": "usp",
+                    "name": "USP"
+                },
+                "rechte-seite": {
+                    "name": "Rechte Seite",
+                    "type": "rechte-seite",
+                    "static": true,
+                    "blocks": {
+                        "link": {
+                            "type": "link",
+                            "name": "Link"
+                        }
+                    },
+                    "block_order": [
+                        "link"
+                    ]
+                },
+                "reseller-menu": {
+                    "name": "Reseller Menu",
+                    "type": "reseller-menu",
+                    "static": true
+                }
+            },
+            "block_order": [
+                "usp"
+            ]
+        },
+        "reseller_hero": {
+            "type": "reseller_hero",
+            "blocks": {
+                "trend-tag": {
+                    "type": "trend-tag",
+                    "name": "Trend Tag"
+                }
+            },
+            "block_order": [
+                "trend-tag"
+            ]
+        },
+        "reseller_category_ro": {
+            "type": "reseller_category_ro",
+            "blocks": {
+                "kategorie": {
+                    "type": "kategorie",
+                    "name": "Kategorie"
+                }
+            },
+            "block_order": [
+                "kategorie"
+            ]
+        },
+        "reseller_hub": {
+            "type": "reseller_hub",
+            "blocks": {
+                "vorteil": {
+                    "type": "vorteil",
+                    "name": "Vorteil"
+                }
+            },
+            "block_order": [
+                "vorteil"
+            ]
+        },
+        "the_latest": {
+            "type": "the_latest",
+            "blocks": {
+                "slide": {
+                    "type": "slide",
+                    "name": "Slide"
+                }
+            },
+            "block_order": [
+                "slide"
+            ]
+        },
+        "the_dicota_differenc": {
+            "type": "the_dicota_differenc",
+            "blocks": {
+                "vorteil": {
+                    "type": "vorteil",
+                    "name": "Vorteil"
+                }
+            },
+            "block_order": [
+                "vorteil"
+            ]
+        },
+        "reseller_promo_grid": {
+            "type": "reseller_promo_grid",
+            "blocks": {
+                "banner": {
+                    "type": "banner",
+                    "name": "Banner"
+                }
+            },
+            "block_order": [
+                "banner"
+            ]
+        },
+        "b2b_news_highlight": {
+            "type": "b2b_news_highlight"
+        },
+        "b2b_news_updates": {
+            "type": "b2b_news_updates",
+            "blocks": {
+                "updates-card": {
+                    "type": "updates-card",
+                    "name": "Updates Card",
+                    "blocks": {
+                        "update": {
+                            "type": "update",
+                            "name": "Update"
+                        }
+                    }
+                },
+                "news-card": {
+                    "type": "news-card",
+                    "name": "News Card"
+                }
+            },
+            "block_order": [
+                "updates-card",
+                "news-card"
+            ]
+        },
+        "footer_newsletter": {
+            "type": "footer_newsletter"
+        },
+        "footer_bottom": {
+            "type": "footer_bottom",
+            "blocks": {
+                "social": {
+                    "type": "social",
+                    "name": "Social"
+                }
+            },
+            "block_order": [
+                "social"
+            ]
+        }
+    },
+    "layout": "b2b",
+    "wrapper": "main.main-wrapper",
+    "order": [
+        "announcement_bar",
+        "reseller_header",
+        "reseller_hero",
+        "reseller_category_ro",
+        "reseller_hub",
+        "the_latest",
+        "the_dicota_differenc",
+        "reseller_promo_grid",
+        "b2b_news_highlight",
+        "b2b_news_updates",
+        "footer_newsletter",
+        "footer_bottom"
+    ]
+}
