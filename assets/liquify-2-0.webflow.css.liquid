@@ -14800,10 +14800,46 @@ figcaption {
 }
 
 /* =============================================================
-   DICOTA PDP — Product Hero Gallery: Mobile-Stack
-   Desktop: Big image left, vertical thumbs right (siehe basis-rule)
-   ≤991px: stack — big image oben, horizontale thumbs unter
+   DICOTA PDP — Product Hero Gallery
+   Desktop (≥992px): big image LEFT, vertical thumb-strip RIGHT.
+     - Höhe wird vom Big Image bestimmt (aspect-ratio 1:1), NICHT
+       von der Anzahl der Thumbs → keine unschöne Streckung mehr.
+     - Thumb-Strip scrollt intern (Swiper freeMode) wenn mehr
+       Thumbs als sichtbar reinpassen.
+   ≤991px: stack — big image oben, horizontale Thumbs unten.
    ============================================================= */
+
+/* Desktop base — Höhe vom Hauptbild diktieren */
+.product-header_gallery {
+  align-items: start;                          /* Spalten nicht mehr stretchen */
+}
+.product-header_gallery > .swiper.is-product-gallery {
+  aspect-ratio: 1 / 1;                         /* Hauptbild quadratisch */
+  height: auto !important;                     /* Override des fluiden height: 100% */
+  min-height: 0;
+  max-height: 720px;
+}
+.product-header_gallery > .product-header_thumbs {
+  height: 100%;                                /* Match Big-Image-Höhe (via aspect-ratio) */
+  max-height: 100%;
+  overflow: hidden;                            /* Thumbs, die rausragen, blendet Swiper aus */
+}
+.product-header_gallery > .product-header_thumbs > .swiper.is-product-thumbnail {
+  height: 100%;
+}
+/* Thumb-Slide Dimensionen für vertikales Layout (Desktop) */
+.swiper-slide.is-product-thumbnail {
+  width: 100% !important;                      /* Override Webflow's 100rem */
+  height: 84px !important;
+  cursor: pointer;
+}
+.swiper-slide.is-product-thumbnail .product-header_thumbnail-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Mobile / Tablet — vertikal stacken, Thumbs horizontal unter Big Image */
 @media screen and (max-width: 991px) {
   .product-header_gallery {
     display: flex !important;
@@ -14811,20 +14847,23 @@ figcaption {
     grid-template-columns: none !important;
     gap: 0.5rem;
     width: 100%;
+    align-items: stretch;
   }
-  .swiper.is-product-gallery {
+  .product-header_gallery > .swiper.is-product-gallery {
     order: 1;
     width: 100%;
-    height: 75vw;
-    max-height: 480px;
+    aspect-ratio: 1 / 1;
+    height: auto !important;
+    max-height: 520px;
   }
-  .product-header_thumbs {
+  .product-header_gallery > .product-header_thumbs {
     order: 2;
     width: 100%;
     height: auto !important;
     max-height: none !important;
+    overflow: hidden;
   }
-  .swiper.is-product-thumbnail {
+  .product-header_gallery > .product-header_thumbs > .swiper.is-product-thumbnail {
     width: 100%;
     height: auto;
   }
@@ -14832,32 +14871,22 @@ figcaption {
     flex-direction: row;
   }
   .swiper-slide.is-product-thumbnail {
-    width: auto;
-    height: 4.5rem;
+    width: 4.5rem !important;
+    height: 4.5rem !important;
     aspect-ratio: 1 / 1;
-  }
-  .product-header_thumbnail-image {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
   }
 }
 
 @media screen and (max-width: 767px) {
-  .swiper.is-product-gallery {
-    height: 85vw;
-    max-height: 420px;
-  }
   .swiper-slide.is-product-thumbnail {
-    height: 4rem;
+    width: 4rem !important;
+    height: 4rem !important;
   }
 }
 
 @media screen and (max-width: 479px) {
-  .swiper.is-product-gallery {
-    height: 90vw;
-  }
   .swiper-slide.is-product-thumbnail {
-    height: 3.5rem;
+    width: 3.5rem !important;
+    height: 3.5rem !important;
   }
 }
