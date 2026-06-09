@@ -1,0 +1,25 @@
+<div li-block="Trend Tag" style="display:contents" {{ block.shopify_attributes }}>
+                    <a href="{{ block.settings.url_link }}" class="reseller-hero_trend w-inline-block"> <span>{{ block.settings.text_text }}</span> </a>
+                </div> {% schema %} {
+    "name": "Trend Tag",
+    "settings": [
+        {
+            "id": "url_link",
+            "type": "url",
+            "label": "Link"
+        },
+        {
+            "id": "text_text",
+            "type": "text",
+            "label": "Text",
+            "default": "Summer Release"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Trend Tag",
+            "blocks": []
+        }
+    ],
+    "tag": null
+} {% endschema %}

@@ -1,0 +1,15 @@
+<nav li-static-block="Reseller Menu" class="reseller-header_menu"><div li-for:inside="link in linklists[section.settings.reseller_menu].links" class="reseller-header_menu-dropdown w-dropdown">
+        {% for link in linklists[section.settings.reseller_menu].links %}                            <div class="reseller-header_dropdown-toggle w-dropdown-toggle"><a li-object:href="link.url" href="{{ link.url }}" class="reseller-header_link w-inline-block"><span li-object="link.title">{{ link.title }}</span></a>{% if link.links.size > 0 %}    <div li-if="link.links.size > 0" class="reseller-header_chevron w-embed">
+    {% render 'icon_chevron_down' %}    </div>
+{% endif %}</div>
+                    {% endfor %}    </div></nav> {% schema %} {
+    "name": "Reseller Menu",
+    "settings": [],
+    "presets": [
+        {
+            "name": "Reseller Menu",
+            "blocks": []
+        }
+    ],
+    "tag": null
+} {% endschema %}

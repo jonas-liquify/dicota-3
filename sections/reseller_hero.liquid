@@ -14,6 +14,9 @@
     "class": "section_reseller-hero",
     "blocks": [
         {
+            "type": "trend-tag"
+        },
+        {
             "type": "@app"
         }
     ],
@@ -40,17 +43,6 @@
             "type": "text",
             "label": "Kategorie Label",
             "default": "Kategorien"
-        },
-        {
-            "id": "url_link",
-            "type": "url",
-            "label": "Link"
-        },
-        {
-            "id": "text_text",
-            "type": "text",
-            "label": "Text",
-            "default": "Summer Release"
         },
         {
             "type": "header",
@@ -81,7 +73,11 @@
         {
             "name": "Reseller Hero",
             "category": "Hero",
-            "blocks": []
+            "blocks": [
+                {
+                    "type": "trend-tag"
+                }
+            ]
         }
     ]
 } {% endschema %}
