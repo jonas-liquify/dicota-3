@@ -5,9 +5,9 @@
 <div class="footer-newsletter_form-field"><label for="footer-newsletter-email" class="form_hidden-label">Deine E-Mail-Adresse</label><input class="form_input footer-newsletter_form-input w-input" maxlength="256" name="contact[email]" data-name="Email" placeholder="{{ section.settings.placeholder_text }}" type="email" id="footer-newsletter-email" required=""></div><input type="hidden" name="contact[accepts_marketing]" value="true"><input type="submit" data-wait="Bitte warten..." class="button footer-newsletter_form-submit w-button" value="Jetzt anmelden">{% endform %}<div class="hide w-form-done"><div>Danke! Deine Anmeldung wurde gespeichert.</div></div><div class="hide w-form-fail"><div>Hoppla! Beim Anmelden ist etwas schiefgegangen.</div></div>    </div>
 {% endif %}<a li-unless="section.settings.show_form == true" href="{{ section.settings.url_button_link }}" class="button footer-newsletter_button w-button"> <span>{{ section.settings.text_button_text }}</span> </a></div><nav class="footer-newsletter_link-grid">{% for link in linklists[section.settings.footer_menu].links %}    <div li-for="link in linklists[section.settings.footer_menu].links" class="footer-newsletter_link-column">
                                     <p li-object="link.title" class="footer-newsletter_link-column-title">{{ link.title }}</p>
-                            <ul role="list" class="footer-newsletter_link-list"><li li-for:inside="child_link in link.links" class="footer-newsletter_link-item">
-        {% for child_link in link.links %}                            <a li-object="child_link.title" li-object:href="child_link.url" href="{{ child_link.url }}" class="footer-newsletter_link">{{ child_link.title }}</a>
-                    {% endfor %}    </li></ul>
+                            <ul li-for:inside="child_link in link.links" role="list" class="footer-newsletter_link-list">
+        {% for child_link in link.links %}                            <li class="footer-newsletter_link-item"><a li-object="child_link.title" li-object:href="child_link.url" href="{{ child_link.url }}" class="footer-newsletter_link">{{ child_link.title }}</a></li>
+                    {% endfor %}    </ul>
                         </div>
 {% endfor %}</nav></div></div> {% schema %} {
     "tag": "section",
