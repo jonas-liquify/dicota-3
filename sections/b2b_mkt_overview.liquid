@@ -16,15 +16,21 @@
 {{ section.settings.image_rechte_karte_bild | image_url: width: 400 | image_tag: loading: 'lazy', class: 'acc_banner-image is-large' }}
 {% else %}
 <img src="{{ 'platzhalter.svg' | asset_url }}" loading="lazy" alt="" class="acc_banner-image is-large">
-{% endif %}<div class="acc_banner-content is-large"><div class="acc_tag-list"><div class="text-style-subline">Q2 2026</div></div><h3 class="text-size-large">
+{% endif %}<div class="acc_banner-content is-large"><div class="acc_tag-list"><div class="text-style-subline">Press</div><div class="text-style-subline">·</div><div class="text-style-subline">Q2</div></div><h3 class="text-size-large">
 {{ section.settings.text_rechte_karte_heading }}
-</h3></div></div><a href="{{ section.settings.url_rechte_karte_button_link }}" class="button w-button"> <span>{{ section.settings.text_rechte_karte_button_text }}</span> </a></div></div><div class="acc-default_flex-small"><div class="default-flex-tiny"><h2 class="heading-style-h2">
+</h3></div></div><a href="{{ section.settings.url_rechte_karte_button_link }}" class="button w-button"> <span>{{ section.settings.text_rechte_karte_button_text }}</span> </a></div></div><div class="acc-banner text-color-white">{% if section.settings.image_banner_bild %}
+{{ section.settings.image_banner_bild | image_url: width: 1200 | image_tag: loading: 'lazy', class: 'acc-banner_image' }}
+{% else %}
+<img src="{{ 'platzhalter.svg' | asset_url }}" loading="lazy" alt="" class="acc-banner_image">
+{% endif %}<div class="acc-banner_content"><h3 class="heading-style-h2">
+{{ section.settings.text_banner_heading }}
+</h3><div class="text-size-medium"> {{ section.settings.textarea_banner_text }} </div><div class="button-group margin-top margin-small"><a href="{{ section.settings.url_banner_button_link }}" class="button is-white w-button"> <span>{{ section.settings.text_banner_button_text }}</span> </a></div></div></div></div><div class="acc-default_flex-small"><div class="default-flex-tiny"><h2 class="heading-style-h2">
 {{ section.settings.text_heading_2 }}
 </h2></div><div li-cf-theme-blocks="" class="acc-triple">
 {% content_for 'blocks' %}
-</div></div></div></div></div></div> {% schema %} {
+</div></div></div></div></div> {% schema %} {
     "tag": "section",
-    "name": "B2B Sales Overview",
+    "name": "B2B Mkt Overview",
     "class": "section_acc-default",
     "blocks": [
         {
@@ -39,25 +45,25 @@
             "id": "text_breadcrumb",
             "type": "text",
             "label": "Breadcrumb",
-            "default": "Service &amp; Vertrieb"
+            "default": "Marketing"
         },
         {
             "id": "text_heading_1",
             "type": "text",
             "label": "Heading 1",
-            "default": "Service &amp; Vertrieb"
+            "default": "Marketing-\u00dcbersicht"
         },
         {
             "id": "textarea_subheading_1",
             "type": "textarea",
             "label": "Subheading 1",
-            "default": "Volumenpreise, Produktlisten, Promotions und Distributoren \u2014 alles f\u00fcr deine Verkaufsarbeit."
+            "default": "Alles f\u00fcr deine Kampagnen-Arbeit \u2014 Produktbilder, Pressetexte, Event-Material und mehr."
         },
         {
             "id": "text_linke_karte_subline",
             "type": "text",
             "label": "Linke Karte Subline",
-            "default": "Quick-Action"
+            "default": "Highlight"
         },
         {
             "id": "image_linke_karte_bild",
@@ -68,13 +74,13 @@
             "id": "text_linke_karte_heading",
             "type": "text",
             "label": "Linke Karte Heading",
-            "default": "Angebot anfragen"
+            "default": "Aktuelle Kampagne"
         },
         {
             "id": "textarea_linke_karte_text",
             "type": "textarea",
             "label": "Linke Karte Text",
-            "default": "Volumenpreise f\u00fcr deinen n\u00e4chsten Bedarf in vier kurzen Schritten anfragen."
+            "default": "Alle Materialien zur laufenden Hauptkampagne \u2014 Print, Social und Web."
         },
         {
             "id": "url_linke_karte_button_link",
@@ -85,13 +91,13 @@
             "id": "text_linke_karte_button_text",
             "type": "text",
             "label": "Linke Karte Button Text",
-            "default": "Anfrage starten"
+            "default": "Material ansehen"
         },
         {
             "id": "text_rechte_karte_subline",
             "type": "text",
             "label": "Rechte Karte Subline",
-            "default": "Promo"
+            "default": "Neu"
         },
         {
             "id": "image_rechte_karte_bild",
@@ -102,7 +108,7 @@
             "id": "text_rechte_karte_heading",
             "type": "text",
             "label": "Rechte Karte Heading",
-            "default": "Aktuelle Promotion"
+            "default": "Neueste Pressemitteilung"
         },
         {
             "id": "url_rechte_karte_button_link",
@@ -113,7 +119,35 @@
             "id": "text_rechte_karte_button_text",
             "type": "text",
             "label": "Rechte Karte Button Text",
-            "default": "Promo ansehen"
+            "default": "Lesen"
+        },
+        {
+            "id": "image_banner_bild",
+            "type": "image_picker",
+            "label": "Banner Bild"
+        },
+        {
+            "id": "text_banner_heading",
+            "type": "text",
+            "label": "Banner Heading",
+            "default": "Trade Show Season"
+        },
+        {
+            "id": "textarea_banner_text",
+            "type": "textarea",
+            "label": "Banner Text",
+            "default": "Bestelle dein Event-Kit f\u00fcr die kommenden Messen. Lieferung in 5-7 Werktagen."
+        },
+        {
+            "id": "url_banner_button_link",
+            "type": "url",
+            "label": "Banner Button Link"
+        },
+        {
+            "id": "text_banner_button_text",
+            "type": "text",
+            "label": "Banner Button Text",
+            "default": "Event-Kit bestellen"
         },
         {
             "id": "text_heading_2",
@@ -124,7 +158,7 @@
     ],
     "presets": [
         {
-            "name": "B2B Sales Overview",
+            "name": "B2B Mkt Overview",
             "category": "_B2B",
             "blocks": [
                 {

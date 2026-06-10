@@ -1,0 +1,76 @@
+<div class="padding-global padding-section-small"><div class="container-large"><div class="acc-default_wrapper"><div class="acc-default_flex-small"><h2 class="heading-style-h2">
+{{ section.settings.text_heading }}
+</h2><div class="text-size-medium max-width-large"> {{ section.settings.textarea_text }} </div><div class="acc_cta background-color-red"><div class="acc_cta-content">{% if section.settings.image_cta_icon %}
+{{ section.settings.image_cta_icon | image_url: width: 80 | image_tag: loading: 'lazy', class: 'acc_cta-icon' }}
+{% else %}
+<img src="{{ 'platzhalter.svg' | asset_url }}" loading="lazy" alt="" class="acc_cta-icon">
+{% endif %}<div class="acc_cta-text"><div class="heading-style-h4">
+{{ section.settings.text_cta_heading }}
+</div><div class="text-size-medium"> {{ section.settings.textarea_cta_text }} </div></div></div><a href="{{ section.settings.url_cta_button_link }}" class="button is-white w-button"> <span>{{ section.settings.text_cta_button_text }}</span> </a></div><div li-cf-theme-blocks="" class="acc-triple">
+{% content_for 'blocks' %}
+</div></div></div></div></div> {% schema %} {
+    "tag": "section",
+    "name": "B2B Tpl News Highl",
+    "class": "section_acc-default",
+    "blocks": [
+        {
+            "type": "news-karte"
+        },
+        {
+            "type": "@app"
+        }
+    ],
+    "settings": [
+        {
+            "id": "text_heading",
+            "type": "text",
+            "label": "Heading",
+            "default": "Neues von DICOTA"
+        },
+        {
+            "id": "textarea_text",
+            "type": "textarea",
+            "label": "Text",
+            "default": "Aktuelle Ank\u00fcndigungen, Releases und Aktionen \u2014 alles auf einen Blick."
+        },
+        {
+            "id": "image_cta_icon",
+            "type": "image_picker",
+            "label": "CTA Icon"
+        },
+        {
+            "id": "text_cta_heading",
+            "type": "text",
+            "label": "CTA Heading",
+            "default": "Wichtige Information"
+        },
+        {
+            "id": "textarea_cta_text",
+            "type": "textarea",
+            "label": "CTA Text",
+            "default": "Achte auf unsere neuen Lieferbedingungen ab n\u00e4chster Woche."
+        },
+        {
+            "id": "url_cta_button_link",
+            "type": "url",
+            "label": "CTA Button Link"
+        },
+        {
+            "id": "text_cta_button_text",
+            "type": "text",
+            "label": "CTA Button Text",
+            "default": "Details"
+        }
+    ],
+    "presets": [
+        {
+            "name": "B2B Tpl News Highl",
+            "category": "_B2B",
+            "blocks": [
+                {
+                    "type": "news-karte"
+                }
+            ]
+        }
+    ]
+} {% endschema %}

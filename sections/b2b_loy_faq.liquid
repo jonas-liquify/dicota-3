@@ -1,0 +1,38 @@
+<div class="padding-global padding-section-small"><div class="container-large"><div class="acc-default_wrapper"><div class="acc-default_flex-small"><ul role="list" class="breadcrumbs_component w-list-unstyled"><li class="breadcrumbs_item"><a li-object:href="routes.root_url" href="{{ routes.root_url }}" class="w-inline-block"><div class="text-size-regular">Home</div></a><div class="breadcrumbs_icon w-embed"><svg width="15" height="15" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="1.5" fill="none"></path></svg></div></li><li class="breadcrumbs_item"><div>
+{{ section.settings.text_breadcrumb }}
+</div></li></ul><div class="default-flex-tiny"><h1 class="heading-style-h2">
+{{ section.settings.text_heading }}
+</h1><div class="text-size-medium max-width-large"> {{ section.settings.textarea_subheading }} </div></div><div class="faq_component" li-for:inside="faq in shop.metaobjects.faq.values">
+        {% for faq in shop.metaobjects.faq.values %}                            <div x-data="{open:false}" class="faq_item background-color-alternate"><div tabindex="0" role="button" x-on:click="open=!open" x-bind:aria-expanded="open?'true':'false'" class="faq_header is-account"><div li-object="faq.frage" class="heading-style-h4">{{ faq.frage }}</div><div class="faq_icon-outer is-grey"><div class="faq_icon-line"></div><div x-bind:class="open?'is-open':''" class="faq_icon-line is-rotating"></div></div></div><div x-bind:class="open?'is-open':''" class="faq_body is-account"><div class="faq_body-content"><div li-object="faq.antwort" class="text-size-medium">{{ faq.antwort }}</div></div></div></div>
+                    {% endfor %}    </div></div></div></div></div> {% schema %} {
+    "tag": "section",
+    "name": "B2B Loy FAQ",
+    "class": "section_acc-default",
+    "settings": [
+        {
+            "id": "text_breadcrumb",
+            "type": "text",
+            "label": "Breadcrumb",
+            "default": "FAQ"
+        },
+        {
+            "id": "text_heading",
+            "type": "text",
+            "label": "Heading",
+            "default": "H\u00e4ufige Fragen"
+        },
+        {
+            "id": "textarea_subheading",
+            "type": "textarea",
+            "label": "Subheading",
+            "default": "Antworten auf die wichtigsten Fragen rund um den DICOTA Club."
+        }
+    ],
+    "presets": [
+        {
+            "name": "B2B Loy FAQ",
+            "category": "_B2B",
+            "blocks": []
+        }
+    ]
+} {% endschema %}
