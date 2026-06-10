@@ -45,18 +45,8 @@
         "b2b_news_updates": {
             "type": "b2b_news_updates",
             "blocks": {
-                "updates-card": {
-                    "type": "updates-card",
-                    "name": "Updates Card"
-                },
-                "news-card": {
-                    "type": "news-card",
-                    "name": "News Card"
-                }
             },
             "block_order": [
-                "updates-card",
-                "news-card"
             ]
         }
     },
