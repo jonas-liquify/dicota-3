@@ -1,0 +1,154 @@
+{
+    "sections": {
+        "announcement_bar": {
+            "type": "announcement_bar",
+            "blocks": {
+                "usp": {
+                    "type": "usp",
+                    "name": "USP"
+                },
+                "rechte-seite": {
+                    "name": "Rechte Seite",
+                    "type": "rechte-seite",
+                    "static": true,
+                    "blocks": {
+                        "link": {
+                            "type": "link",
+                            "name": "Link"
+                        }
+                    },
+                    "block_order": [
+                        "link"
+                    ]
+                }
+            },
+            "block_order": [
+                "usp"
+            ]
+        },
+        "b2b_subnav": {
+            "type": "b2b_subnav"
+        },
+        "b2b_loy_overview": {
+            "type": "b2b_loy_overview",
+            "blocks": {
+                "b2b-loy-news": {
+                    "type": "b2b-loy-news",
+                    "name": "B2B Loy News"
+                }
+            },
+            "block_order": [
+                "b2b-loy-news"
+            ]
+        },
+        "b2b_loy_vouchers": {
+            "type": "b2b_loy_vouchers",
+            "blocks": {
+                "b2b-gutschein": {
+                    "type": "b2b-gutschein",
+                    "name": "B2B Gutschein"
+                }
+            },
+            "block_order": [
+                "b2b-gutschein"
+            ]
+        },
+        "b2b_loy_rewards": {
+            "type": "b2b_loy_rewards",
+            "blocks": {
+                "b2b-sachpramie": {
+                    "type": "b2b-sachpramie",
+                    "name": "B2B Sachpr\u00e4mie"
+                }
+            },
+            "block_order": [
+                "b2b-sachpramie"
+            ]
+        },
+        "b2b_loy_cashback": {
+            "type": "b2b_loy_cashback"
+        },
+        "b2b_loy_distributors": {
+            "type": "b2b_loy_distributors",
+            "blocks": {
+                "b2b-loy-menu": {
+                    "name": "B2B Loy Menu",
+                    "type": "b2b-loy-menu",
+                    "static": true,
+                    "blocks": {
+                        "b2b-loy-region": {
+                            "type": "b2b-loy-region",
+                            "name": "B2B Loy Region"
+                        }
+                    },
+                    "block_order": [
+                        "b2b-loy-region"
+                    ]
+                },
+                "b2b-loy-panes": {
+                    "name": "B2B Loy Panes",
+                    "type": "b2b-loy-panes",
+                    "static": true,
+                    "blocks": {
+                        "b2b-loy-region-pane": {
+                            "type": "b2b-loy-region-pane",
+                            "name": "B2B Loy Region Pane"
+                        }
+                    },
+                    "block_order": [
+                        "b2b-loy-region-pane"
+                    ]
+                }
+            }
+        },
+        "b2b_loy_faq": {
+            "type": "b2b_loy_faq"
+        },
+        "b2b_loy_club_support": {
+            "type": "b2b_loy_club_support",
+            "blocks": {
+                "b2b-loy-kontakt": {
+                    "type": "b2b-loy-kontakt",
+                    "name": "B2B Loy Kontakt"
+                }
+            },
+            "block_order": [
+                "b2b-loy-kontakt"
+            ]
+        },
+        "b2b_loy_club_info": {
+            "type": "b2b_loy_club_info"
+        },
+        "footer_newsletter": {
+            "type": "footer_newsletter"
+        },
+        "footer_bottom": {
+            "type": "footer_bottom",
+            "blocks": {
+                "social": {
+                    "type": "social",
+                    "name": "Social"
+                }
+            },
+            "block_order": [
+                "social"
+            ]
+        }
+    },
+    "layout": "theme",
+    "wrapper": "main.main-wrapper",
+    "order": [
+        "announcement_bar",
+        "b2b_subnav",
+        "b2b_loy_overview",
+        "b2b_loy_vouchers",
+        "b2b_loy_rewards",
+        "b2b_loy_cashback",
+        "b2b_loy_distributors",
+        "b2b_loy_faq",
+        "b2b_loy_club_support",
+        "b2b_loy_club_info",
+        "footer_newsletter",
+        "footer_bottom"
+    ]
+}
