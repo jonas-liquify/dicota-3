@@ -320,8 +320,8 @@
       ],
       "settings": {
         "min_height": 70,
-        "overlay_color": "#f5f5f5",
-        "overlay_strength": 20,
+        "overlay_color": "#000000",
+        "overlay_strength": 60,
         "overlay_start": 50
       }
     },
