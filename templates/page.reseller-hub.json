@@ -34,13 +34,9 @@
         "reseller_promo_grid": {
             "type": "reseller_promo_grid",
             "blocks": {
-                "banner": {
-                    "type": "banner",
-                    "name": "Banner"
-                }
+                
             },
             "block_order": [
-                "banner"
             ]
         },
         "b2b_news_highlight": {
