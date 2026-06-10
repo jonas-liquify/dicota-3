@@ -360,68 +360,10 @@
     "image_link_list": {
       "type": "image_link_list",
       "blocks": {
-        "link_67ddV8": {
-          "type": "link",
-          "name": "Link",
-          "settings": {
-            "url_link_ziel": "",
-            "text_label": "Mobile Working"
-          },
-          "blocks": {}
-        },
-        "link_hFyATT": {
-          "type": "link",
-          "name": "Link",
-          "settings": {
-            "url_link_ziel": "",
-            "text_label": "Hybrid Working"
-          },
-          "blocks": {}
-        },
-        "link_pyWkDk": {
-          "type": "link",
-          "name": "Link",
-          "settings": {
-            "url_link_ziel": "",
-            "text_label": "Business Trip"
-          },
-          "blocks": {}
-        },
-        "link_yzFfrA": {
-          "type": "link",
-          "name": "Link",
-          "settings": {
-            "url_link_ziel": "",
-            "text_label": "Education"
-          },
-          "blocks": {}
-        },
-        "link": {
-          "type": "link",
-          "name": "Link",
-          "settings": {
-            "url_link_ziel": "",
-            "text_label": "Safety at Work"
-          },
-          "blocks": {}
-        },
-        "link_RFQf43": {
-          "type": "link",
-          "name": "Link",
-          "settings": {
-            "url_link_ziel": "",
-            "text_label": "tailor Made"
-          },
-          "blocks": {}
-        }
+        
       },
       "block_order": [
-        "link_67ddV8",
-        "link_hFyATT",
-        "link_pyWkDk",
-        "link_yzFfrA",
-        "link",
-        "link_RFQf43"
+        
       ],
       "settings": {
         "image_bild": "shopify://shop_images/2_MT_Five.webp",
