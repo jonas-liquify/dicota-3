@@ -4396,8 +4396,8 @@ figcaption {
   .nav_menu-dropdown .nav_dropdown-toggle {
     opacity: 1;
   }
-  .nav_menu-dropdown:hover .nav_dropdown-toggle a > div > div,
-  .nav_menu-dropdown.w--open .nav_dropdown-toggle a > div > div { font-weight: 500; }
+  /* Bewusst KEIN font-weight-Wechsel auf Hover/Open — sonst verschiebt
+     sich das Layout horizontal. Hover-Affordance über opacity oben. */
 }
 
 @media screen and (max-width: 767px) {
@@ -6514,7 +6514,7 @@ figcaption {
   position: relative;
   width: 100%;
   height: 100%;
-  background-color: #fff;
+  background-color: #f4f4f4;
 }
 
 .product-card_image {
@@ -14478,8 +14478,9 @@ figcaption {
 }
 .nav_menu-dropdown:hover .nav_dropdown-toggle,
 .nav_menu-dropdown.w--open .nav_dropdown-toggle { opacity: 1; }
-.nav_menu-dropdown:hover .nav_dropdown-toggle a > div > div,
-.nav_menu-dropdown.w--open .nav_dropdown-toggle a > div > div { font-weight: 700; }
+/* Bewusst KEIN font-weight-Wechsel auf Hover — fettere Schrift ist breiter und
+   verschiebt sonst alle nachfolgenden Nav-Items horizontal. Hover-Affordance
+   wird über opacity (.7 → 1) signalisiert. */
 .nav_menu-dropdown .dropdown-icon {
   transition: transform .2s ease;
 }

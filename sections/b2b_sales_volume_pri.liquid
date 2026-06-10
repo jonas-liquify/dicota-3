@@ -14,7 +14,7 @@
 {{ section.settings.text_step_4_label }}
 </div></div></div></div><div class="multi-form_form-content"><div class="text-size-medium text-weight-medium">Reseller-Daten eingeben</div><div class="multi-form_triple"><div class="form_field-wrapper"><input class="form_input w-input" maxlength="256" name="contact[name]" placeholder=" " type="text" id="ansprechpartner" required=""><label for="ansprechpartner" class="form_label">Ansprechpartner*</label></div><div class="form_field-wrapper"><input class="form_input w-input" maxlength="256" name="contact[email]" placeholder=" " type="email" id="email" required=""><label for="email" class="form_label">E-Mail-Adresse*</label></div><div class="form_field-wrapper"><input class="form_input w-input" maxlength="256" name="contact[phone]" placeholder=" " type="tel" id="telefon"><label for="telefon" class="form_label">Telefon</label></div></div><div class="multi-form_button-group"><button type="button" x-on:click="step = step > 1 ? step - 1 : 1" x-show="step > 1" class="button is-secondary w-button">Zurück</button><button type="button" x-on:click="step = step < 4 ? step + 1 : 4" x-show="step < 4" class="button w-button">Weiter</button><button type="submit" x-show="step === 4" class="button w-button">Absenden</button></div></div></div></form></div></div></div></div></div></div> {% schema %} {
     "tag": "section",
-    "name": "B2B \/ Sales \u2014 Volu",
+    "name": "B2B Sales Volume Pri",
     "class": "section_acc-default",
     "settings": [
         {
@@ -68,7 +68,7 @@
     ],
     "presets": [
         {
-            "name": "B2B \/ Sales \u2014 Volu",
+            "name": "B2B Sales Volume Pri",
             "category": "_B2B",
             "blocks": []
         }
