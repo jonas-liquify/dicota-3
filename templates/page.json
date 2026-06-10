@@ -1,0 +1,56 @@
+{
+    "sections": {
+        "announcement_bar": {
+            "type": "announcement_bar",
+            "blocks": {
+                "usp": {
+                    "type": "usp",
+                    "name": "USP"
+                },
+                "rechte-seite": {
+                    "name": "Rechte Seite",
+                    "type": "rechte-seite",
+                    "static": true,
+                    "blocks": {
+                        "link": {
+                            "type": "link",
+                            "name": "Link"
+                        }
+                    },
+                    "block_order": [
+                        "link"
+                    ]
+                }
+            },
+            "block_order": [
+                "usp"
+            ]
+        },
+        "page_content": {
+            "type": "page_content"
+        },
+        "footer_newsletter": {
+            "type": "footer_newsletter"
+        },
+        "footer_bottom": {
+            "type": "footer_bottom",
+            "blocks": {
+                "social": {
+                    "type": "social",
+                    "name": "Social"
+                }
+            },
+            "block_order": [
+                "social"
+            ]
+        }
+    },
+    "layout": "theme",
+    "wrapper": "main.main-wrapper",
+    "order": [
+        "announcement_bar",
+        "page_content",
+        "footer_newsletter",
+        "footer_bottom"
+    ]
+}
