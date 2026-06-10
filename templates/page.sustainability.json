@@ -1,42 +1,57 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
-    "sections": {
-        "background_image_her": {
-            "type": "background_image_her"
-        },
-        "stats_strip": {
-            "type": "stats_strip",
-            "blocks": {
-                "icon-block": {
-                    "type": "icon-block",
-                    "name": "Icon Block"
-                }
-            },
-            "block_order": [
-                "icon-block"
-            ]
-        },
-        "image_text": {
-            "type": "image_text"
-        },
-        "triple_cards": {
-            "type": "triple_cards",
-            "blocks": {
-                "karte": {
-                    "type": "karte",
-                    "name": "Karte"
-                }
-            },
-            "block_order": [
-                "karte"
-            ]
-        }
+  "sections": {
+    "background_image_her": {
+      "type": "background_image_her",
+      "settings": {}
     },
-    "layout": "theme",
-    "wrapper": "main.main-wrapper",
-    "order": [
-        "background_image_her",
-        "stats_strip",
-        "image_text",
-        "triple_cards"
-    ]
+    "stats_strip": {
+      "type": "stats_strip",
+      "blocks": {
+        "icon-block": {
+          "type": "icon-block",
+          "name": "Icon Block",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "icon-block"
+      ],
+      "settings": {}
+    },
+    "image_text": {
+      "type": "image_text",
+      "settings": {}
+    },
+    "triple_cards": {
+      "type": "triple_cards",
+      "blocks": {
+        "karte": {
+          "type": "karte",
+          "name": "Karte",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "karte"
+      ],
+      "settings": {}
+    }
+  },
+  "layout": "theme",
+  "wrapper": "main.main-wrapper",
+  "order": [
+    "background_image_her",
+    "stats_strip",
+    "image_text",
+    "triple_cards"
+  ]
 }

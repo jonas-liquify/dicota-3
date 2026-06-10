@@ -1,144 +1,178 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
-    "sections": {
-        "product_breadcrumb": {
-            "type": "product_breadcrumb"
-        },
-        "product_header": {
-            "type": "product_header",
-            "blocks": {
-                "produkt-kopf": {
-                    "type": "produkt-kopf",
-                    "name": "Produkt-Kopf"
-                },
-                "preis": {
-                    "type": "preis",
-                    "name": "Preis"
-                },
-                "kaufen": {
-                    "type": "kaufen",
-                    "name": "Kaufen"
-                },
-                "we-care": {
-                    "type": "we-care",
-                    "name": "We Care",
-                    "blocks": {
-                        "we-care-item": {
-                            "type": "we-care-item",
-                            "name": "We Care Item"
-                        }
-                    }
-                },
-                "beschreibungs-tabs": {
-                    "type": "beschreibungs-tabs",
-                    "name": "Beschreibungs-Tabs",
-                    "blocks": {
-                        "tab-inhalt": {
-                            "type": "tab-inhalt",
-                            "name": "Tab Inhalt"
-                        }
-                    }
-                },
-                "upsell": {
-                    "type": "upsell",
-                    "name": "Upsell",
-                    "blocks": {
-                        "upsell-produkt": {
-                            "type": "upsell-produkt",
-                            "name": "Upsell Produkt"
-                        }
-                    }
-                }
-            },
-            "block_order": [
-                "produkt-kopf",
-                "preis",
-                "kaufen",
-                "we-care",
-                "beschreibungs-tabs",
-                "upsell"
-            ]
-        },
-        "product_usp_bar": {
-            "type": "product_usp_bar",
-            "blocks": {
-                "usp-item": {
-                    "type": "usp-item",
-                    "name": "USP Item"
-                }
-            },
-            "block_order": [
-                "usp-item"
-            ]
-        },
-        "product_feature_gall": {
-            "type": "product_feature_gall"
-        },
-        "product_family": {
-            "type": "product_family"
-        },
-        "product_loved_by_gal": {
-            "type": "product_loved_by_gal"
-        },
-        "product_comparison": {
-            "type": "product_comparison",
-            "blocks": {
-                "vergleichszeile": {
-                    "type": "vergleichszeile",
-                    "name": "Vergleichszeile"
-                }
-            },
-            "block_order": [
-                "vergleichszeile"
-            ]
-        },
-        "we_care_banner": {
-            "type": "we_care_banner"
-        },
-        "add_to_your_kit": {
-            "type": "add_to_your_kit",
-            "blocks": {
-                "produkt": {
-                    "type": "produkt",
-                    "name": "Produkt"
-                }
-            },
-            "block_order": [
-                "produkt"
-            ]
-        },
-        "recommended_products": {
-            "type": "recommended_products"
-        },
-        "product_reviews": {
-            "type": "product_reviews",
-            "blocks": {
-                "rezension": {
-                    "type": "rezension",
-                    "name": "Rezension"
-                }
-            },
-            "block_order": [
-                "rezension"
-            ]
-        },
-        "product_faq": {
-            "type": "product_faq"
-        }
+  "sections": {
+    "product_breadcrumb": {
+      "type": "product_breadcrumb",
+      "settings": {}
     },
-    "layout": "theme",
-    "wrapper": "main.main-wrapper",
-    "order": [
-        "product_breadcrumb",
-        "product_header",
-        "product_usp_bar",
-        "product_feature_gall",
-        "product_family",
-        "product_loved_by_gal",
-        "product_comparison",
-        "we_care_banner",
-        "add_to_your_kit",
-        "recommended_products",
-        "product_reviews",
-        "product_faq"
-    ]
+    "product_header": {
+      "type": "product_header",
+      "blocks": {
+        "produkt-kopf": {
+          "type": "produkt-kopf",
+          "name": "Produkt-Kopf",
+          "settings": {}
+        },
+        "preis": {
+          "type": "preis",
+          "name": "Preis",
+          "settings": {}
+        },
+        "kaufen": {
+          "type": "kaufen",
+          "name": "Kaufen",
+          "settings": {}
+        },
+        "we-care": {
+          "type": "we-care",
+          "name": "We Care",
+          "settings": {},
+          "blocks": {
+            "we-care-item": {
+              "type": "we-care-item",
+              "name": "We Care Item",
+              "settings": {}
+            }
+          }
+        },
+        "beschreibungs-tabs": {
+          "type": "beschreibungs-tabs",
+          "name": "Beschreibungs-Tabs",
+          "settings": {},
+          "blocks": {
+            "tab-inhalt": {
+              "type": "tab-inhalt",
+              "name": "Tab Inhalt",
+              "settings": {}
+            }
+          }
+        },
+        "upsell": {
+          "type": "upsell",
+          "name": "Upsell",
+          "settings": {},
+          "blocks": {
+            "upsell-produkt": {
+              "type": "upsell-produkt",
+              "name": "Upsell Produkt",
+              "settings": {}
+            }
+          }
+        }
+      },
+      "block_order": [
+        "produkt-kopf",
+        "preis",
+        "kaufen",
+        "we-care",
+        "beschreibungs-tabs",
+        "upsell"
+      ],
+      "settings": {}
+    },
+    "product_usp_bar": {
+      "type": "product_usp_bar",
+      "blocks": {
+        "usp-item": {
+          "type": "usp-item",
+          "name": "USP Item",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "usp-item"
+      ],
+      "settings": {}
+    },
+    "product_feature_gall": {
+      "type": "product_feature_gall",
+      "settings": {}
+    },
+    "product_family": {
+      "type": "product_family",
+      "settings": {}
+    },
+    "product_loved_by_gal": {
+      "type": "product_loved_by_gal",
+      "settings": {}
+    },
+    "product_comparison": {
+      "type": "product_comparison",
+      "blocks": {
+        "vergleichszeile": {
+          "type": "vergleichszeile",
+          "name": "Vergleichszeile",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "vergleichszeile"
+      ],
+      "settings": {}
+    },
+    "we_care_banner": {
+      "type": "we_care_banner",
+      "settings": {}
+    },
+    "add_to_your_kit": {
+      "type": "add_to_your_kit",
+      "blocks": {
+        "produkt": {
+          "type": "produkt",
+          "name": "Produkt",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "produkt"
+      ],
+      "settings": {}
+    },
+    "recommended_products": {
+      "type": "recommended_products",
+      "settings": {}
+    },
+    "product_reviews": {
+      "type": "product_reviews",
+      "blocks": {
+        "rezension": {
+          "type": "rezension",
+          "name": "Rezension",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "rezension"
+      ],
+      "settings": {}
+    },
+    "product_faq": {
+      "type": "product_faq",
+      "settings": {}
+    }
+  },
+  "layout": "theme",
+  "wrapper": "main.main-wrapper",
+  "order": [
+    "product_breadcrumb",
+    "product_header",
+    "product_usp_bar",
+    "product_feature_gall",
+    "product_family",
+    "product_loved_by_gal",
+    "product_comparison",
+    "we_care_banner",
+    "add_to_your_kit",
+    "recommended_products",
+    "product_reviews",
+    "product_faq"
+  ]
 }

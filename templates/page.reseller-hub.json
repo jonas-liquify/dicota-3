@@ -1,65 +1,57 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
-    "sections": {
-        "reseller_hero": {
-            "type": "reseller_hero"
-        },
-        "reseller_category_ro": {
-            "type": "reseller_category_ro"
-        },
-        "reseller_hub": {
-            "type": "reseller_hub",
-            "blocks": {
-   
-            },
-            "block_order": [
-
-            ]
-        },
-        "the_latest": {
-            "type": "the_latest",
-            "blocks": {
-                
-            },
-            "block_order": [
-            ]
-        },
-        "the_dicota_differenc": {
-            "type": "the_dicota_differenc",
-            "blocks": {
-            
-            },
-            "block_order": [
-            ]
-        },
-        "reseller_promo_grid": {
-            "type": "reseller_promo_grid",
-            "blocks": {
-                
-            },
-            "block_order": [
-            ]
-        },
-        "b2b_news_highlight": {
-            "type": "b2b_news_highlight"
-        },
-        "b2b_news_updates": {
-            "type": "b2b_news_updates",
-            "blocks": {
-            },
-            "block_order": [
-            ]
-        }
+  "sections": {
+    "reseller_hero": {
+      "type": "reseller_hero",
+      "settings": {}
     },
-    "layout": "page.reseller-hub",
-    "wrapper": "main.main-wrapper",
-    "order": [
-        "reseller_hero",
-        "reseller_category_ro",
-        "reseller_hub",
-        "the_latest",
-        "the_dicota_differenc",
-        "reseller_promo_grid",
-        "b2b_news_highlight",
-        "b2b_news_updates"
-    ]
+    "reseller_category_ro": {
+      "type": "reseller_category_ro",
+      "settings": {}
+    },
+    "reseller_hub": {
+      "type": "reseller_hub",
+      "settings": {}
+    },
+    "the_latest": {
+      "type": "the_latest",
+      "settings": {}
+    },
+    "the_dicota_differenc": {
+      "type": "the_dicota_differenc",
+      "settings": {}
+    },
+    "reseller_promo_grid": {
+      "type": "reseller_promo_grid",
+      "settings": {}
+    },
+    "b2b_news_highlight": {
+      "type": "b2b_news_highlight",
+      "settings": {}
+    },
+    "b2b_news_updates": {
+      "type": "b2b_news_updates",
+      "settings": {}
+    }
+  },
+  "layout": "page.reseller-hub",
+  "wrapper": "main.main-wrapper",
+  "order": [
+    "reseller_hero",
+    "reseller_category_ro",
+    "reseller_hub",
+    "the_latest",
+    "the_dicota_differenc",
+    "reseller_promo_grid",
+    "b2b_news_highlight",
+    "b2b_news_updates"
+  ]
 }

@@ -320,7 +320,9 @@
       ],
       "settings": {
         "min_height": 70,
-        "overlay_strength": 25
+        "overlay_color": "#f5f5f5",
+        "overlay_strength": 20,
+        "overlay_start": 50
       }
     },
     "accessories_slider": {
@@ -359,12 +361,6 @@
     },
     "image_link_list": {
       "type": "image_link_list",
-      "blocks": {
-        
-      },
-      "block_order": [
-        
-      ],
       "settings": {
         "image_bild": "shopify://shop_images/2_MT_Five.webp",
         "text_subtitle": "Wonach suchst du?",

@@ -1,93 +1,116 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
-    "sections": {
-        "two_column_hero": {
-            "type": "two_column_hero"
-        },
-        "boxed_image": {
-            "type": "boxed_image"
-        },
-        "feature_card_grid": {
-            "type": "feature_card_grid",
-            "blocks": {
-                "feature-cards": {
-                    "name": "Feature Cards",
-                    "type": "feature-cards",
-                    "static": true,
-                    "blocks": {
-                        "feature-karte": {
-                            "type": "feature-karte",
-                            "name": "Feature Karte"
-                        }
-                    },
-                    "block_order": [
-                        "feature-karte"
-                    ]
-                },
-                "stats-row": {
-                    "name": "Stats Row",
-                    "type": "stats-row",
-                    "static": true,
-                    "blocks": {
-                        "stats-block": {
-                            "type": "stats-block",
-                            "name": "Stats Block"
-                        }
-                    },
-                    "block_order": [
-                        "stats-block"
-                    ]
-                }
-            }
-        },
-        "history_timeline": {
-            "type": "history_timeline",
-            "blocks": {
-                "meilenstein": {
-                    "type": "meilenstein",
-                    "name": "Meilenstein"
-                }
-            },
-            "block_order": [
-                "meilenstein"
-            ]
-        },
-        "owner_spotlight": {
-            "type": "owner_spotlight",
-            "blocks": {
-                "zitat": {
-                    "type": "zitat",
-                    "name": "Zitat"
-                }
-            },
-            "block_order": [
-                "zitat"
-            ]
-        },
-        "discover_banner": {
-            "type": "discover_banner"
-        },
-        "triple_cards": {
-            "type": "triple_cards",
-            "blocks": {
-                "karte": {
-                    "type": "karte",
-                    "name": "Karte"
-                }
-            },
-            "block_order": [
-                "karte"
-            ]
-        }
+  "sections": {
+    "two_column_hero": {
+      "type": "two_column_hero",
+      "settings": {}
     },
-    "layout": "theme",
-    "wrapper": "main.main-wrapper",
-    "order": [
-        "two_column_hero",
-        "boxed_image",
-        "feature_card_grid",
-        "history_timeline",
-        "owner_spotlight",
-        "discover_banner",
-        "triple_cards"
-    ]
+    "boxed_image": {
+      "type": "boxed_image",
+      "settings": {}
+    },
+    "feature_card_grid": {
+      "type": "feature_card_grid",
+      "blocks": {
+        "feature-cards": {
+          "type": "feature-cards",
+          "name": "Feature Cards",
+          "static": true,
+          "settings": {},
+          "blocks": {
+            "feature-karte": {
+              "type": "feature-karte",
+              "name": "Feature Karte",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "feature-karte"
+          ]
+        },
+        "stats-row": {
+          "type": "stats-row",
+          "name": "Stats Row",
+          "static": true,
+          "settings": {},
+          "blocks": {
+            "stats-block": {
+              "type": "stats-block",
+              "name": "Stats Block",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "stats-block"
+          ]
+        }
+      },
+      "settings": {}
+    },
+    "history_timeline": {
+      "type": "history_timeline",
+      "blocks": {
+        "meilenstein": {
+          "type": "meilenstein",
+          "name": "Meilenstein",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "meilenstein"
+      ],
+      "settings": {}
+    },
+    "owner_spotlight": {
+      "type": "owner_spotlight",
+      "blocks": {
+        "zitat": {
+          "type": "zitat",
+          "name": "Zitat",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "zitat"
+      ],
+      "settings": {}
+    },
+    "discover_banner": {
+      "type": "discover_banner",
+      "settings": {}
+    },
+    "triple_cards": {
+      "type": "triple_cards",
+      "blocks": {
+        "karte": {
+          "type": "karte",
+          "name": "Karte",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "karte"
+      ],
+      "settings": {}
+    }
+  },
+  "layout": "theme",
+  "wrapper": "main.main-wrapper",
+  "order": [
+    "two_column_hero",
+    "boxed_image",
+    "feature_card_grid",
+    "history_timeline",
+    "owner_spotlight",
+    "discover_banner",
+    "triple_cards"
+  ]
 }
