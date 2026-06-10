@@ -8,24 +8,26 @@
                     {% endfor %}    </select><div class="icon-embed-xsmall w-embed"><svg width="100%" height="100%" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2.55806 6.29544C2.46043 6.19781 2.46043 6.03952 2.55806 5.94189L3.44195 5.058C3.53958 4.96037 3.69787 4.96037 3.7955 5.058L8.00001 9.26251L12.2045 5.058C12.3021 4.96037 12.4604 4.96037 12.5581 5.058L13.4419 5.94189C13.5396 6.03952 13.5396 6.19781 13.4419 6.29544L8.17678 11.5606C8.07915 11.6582 7.92086 11.6582 7.82323 11.5606L2.55806 6.29544Z" fill="currentColor"></path></svg></div></div></div></div></div></div></div><div class="padding-global"><div class="container-large">{% paginate collection.products by 24 %}
     <div li-paginate="collection.products" li-paginate:by="24" by="24"><div class="coll_grid" li-for:inside="product in collection.products">
         {% for product in collection.products %}                            <div class="coll_grid-item">{% render 'product_card', product: product %}</div>
-                            {% if forloop.index == section.settings.promo1_position %}    <div li-if="forloop.index == section.settings.promo1_position" class="coll_grid-item coll_promo-card">
-    <div class="coll_promo-card_inner"><div class="coll_promo-card_content"><h3 class="coll_promo-card_title">
+                            <div li-if:inside="forloop.index == section.settings.promo1_position" style="display:contents" inside="1">
+        {% if forloop.index == section.settings.promo1_position %}
+            <div class="coll_grid-item coll_promo-card" style="background-color: {{ section.settings.promo1_bg }};"><div class="coll_promo-card_inner"><div class="coll_promo-card_content"><h3 class="coll_promo-card_title">
 {{ section.settings.text_promo_1_headline }}
 </h3><p class="coll_promo-card_desc text-size-regular"> {{ section.settings.textarea_promo_1_text }} </p><a href="{{ section.settings.url_promo_1_link }}" class="coll_promo-card_cta w-button"> <span>{{ section.settings.text_promo_1_button }}</span> </a></div><div class="coll_promo-card_media">{% if section.settings.image_promo_1_bild %}
 {{ section.settings.image_promo_1_bild | image_url: width: 500 | image_tag: loading: 'lazy', class: 'coll_promo-card_image' }}
 {% else %}
 <img src="{{ 'placeholder.svg' | asset_url }}" loading="lazy" alt="" class="coll_promo-card_image">
-{% endif %}</div></div>    </div>
-{% endif %}
-                            {% if forloop.index == section.settings.promo2_position %}    <div li-if="forloop.index == section.settings.promo2_position" class="coll_grid-item coll_promo-card">
-    <div class="coll_promo-card_inner"><div class="coll_promo-card_content"><h3 class="coll_promo-card_title">
+{% endif %}</div></div></div>        {% endif %}
+    </div>
+                            <div li-if:inside="forloop.index == section.settings.promo2_position" style="display:contents" inside="1">
+        {% if forloop.index == section.settings.promo2_position %}
+            <div class="coll_grid-item coll_promo-card" style="background-color: {{ section.settings.promo2_bg }};"><div class="coll_promo-card_inner"><div class="coll_promo-card_content"><h3 class="coll_promo-card_title">
 {{ section.settings.text_promo_2_headline }}
 </h3><p class="coll_promo-card_desc text-size-regular"> {{ section.settings.textarea_promo_2_text }} </p><a href="{{ section.settings.url_promo_2_link }}" class="coll_promo-card_cta w-button"> <span>{{ section.settings.text_promo_2_button }}</span> </a></div><div class="coll_promo-card_media">{% if section.settings.image_promo_2_bild %}
 {{ section.settings.image_promo_2_bild | image_url: width: 500 | image_tag: loading: 'lazy', class: 'coll_promo-card_image' }}
 {% else %}
 <img src="{{ 'placeholder.svg' | asset_url }}" loading="lazy" alt="" class="coll_promo-card_image">
-{% endif %}</div></div>    </div>
-{% endif %}
+{% endif %}</div></div></div>        {% endif %}
+    </div>
                     {% endfor %}    </div>{% if collection.products == blank %}    <div li-if="collection.products == blank" class="coll_empty">
     <div class="heading-style-h5">Keine Produkte gefunden.</div><p>Es gibt keine Produkte mit diesen Filterkriterien.</p>    </div>
 {% endif %}{% if paginate.pages > 1 %}    <nav li-if="paginate.pages > 1" class="pagination_component">

@@ -1,5 +1,6 @@
-<div class="hide w-embed">{% assign loved_gallery = false %}{% for image in product.images %}{% if image.src contains '_40' %}{% assign loved_gallery = true %}{% break %}{% endif %}{% endfor %}</div>{% if loved_gallery %}    <div li-if="loved_gallery" class="padding-global">
-    <div class="container-large"><h2 class="product-loved-by_headline">
+<div class="hide w-embed">{% assign loved_gallery = false %}{% for image in product.images %}{% if image.src contains '_40' %}{% assign loved_gallery = true %}{% break %}{% endif %}{% endfor %}</div><div li-if:inside="loved_gallery" style="display:contents" inside="1">
+        {% if loved_gallery %}
+            <div class="padding-global" style="padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px; background-color: {{ section.settings.bg_color }}; color: {{ section.settings.text_color }};"><div class="container-large"><h2 class="product-loved-by_headline">
 {{ section.settings.text_uberschrift }}
 </h2><div class="product-loved-by_grid" li-for:inside="image in product.images">
         {% for image in product.images %}                            <div li-if:inside="image.src contains '_40'" inside="1">
@@ -26,8 +27,8 @@
         {% if image.src contains '_45' %}
             <img class="product-loved-by_img is-big" li-object:src="image | image_url: width: 1200" li-object:alt="image.alt" src="{{ image | image_url: width: 1200 }}" loading="lazy" alt="{{ image.alt }}">        {% endif %}
     </div>
-                    {% endfor %}    </div></div>    </div>
-{% endif %} {% schema %} {
+                    {% endfor %}    </div></div></div>        {% endif %}
+    </div> {% schema %} {
     "tag": "section",
     "name": "Product Loved-by Gal",
     "class": "section_product-loved-by",
