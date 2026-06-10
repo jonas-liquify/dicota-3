@@ -1,0 +1,47 @@
+<div li-block="B2B Tpl List Eintr" class="acc-card is-small" {{ block.shopify_attributes }}>
+                    <div class="acc-card_download-content"><div class="default-flex-tiny"><div class="text-style-subline">
+{{ block.settings.text_datum }}
+</div><div class="text-size-large">
+{{ block.settings.text_heading }}
+</div><div class="text-size-regular"> {{ block.settings.textarea_text }} </div></div><a href="{{ block.settings.url_button_link }}" class="button is-secondary w-button"> <span>{{ block.settings.text_button_text }}</span> </a></div>
+                </div> {% schema %} {
+    "name": "B2B Tpl List Eintr",
+    "settings": [
+        {
+            "id": "text_datum",
+            "type": "text",
+            "label": "Datum",
+            "default": "DD.MM.YYYY"
+        },
+        {
+            "id": "text_heading",
+            "type": "text",
+            "label": "Heading",
+            "default": "News-Artikel-Titel"
+        },
+        {
+            "id": "textarea_text",
+            "type": "textarea",
+            "label": "Text",
+            "default": "Vorschautext des Artikels."
+        },
+        {
+            "id": "url_button_link",
+            "type": "url",
+            "label": "Button Link"
+        },
+        {
+            "id": "text_button_text",
+            "type": "text",
+            "label": "Button Text",
+            "default": "Lesen"
+        }
+    ],
+    "presets": [
+        {
+            "name": "B2B Tpl List Eintr",
+            "blocks": []
+        }
+    ],
+    "tag": null
+} {% endschema %}

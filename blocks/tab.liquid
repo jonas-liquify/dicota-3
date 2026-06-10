@@ -1,25 +1,39 @@
-<button li-block="Tab" type="button" role="tab" class="acc-dis_tab-link" id="acc-tab-{{ forloop.index }}" aria-controls="acc-tabpanel-{{ forloop.index }}" x-on:click="tab = {{ forloop.index }}" x-bind:aria-selected="tab === {{ forloop.index }} ? 'true' : 'false'" x-bind:class="tab === {{ forloop.index }} ? 'is-active' : ''" {{ block.shopify_attributes }}>
-                    {% if block.settings.image_tab_icon %}
-{{ block.settings.image_tab_icon | image_url: width: 48 | image_tag: loading: 'lazy', class: 'icon-1x1-small' }}
-{% else %}
-<img src="{{ 'platzhalter.svg' | asset_url }}" loading="lazy" alt="" class="icon-1x1-small">
-{% endif %}
-                    <div>
+<div li-block="Tab" class="value-tabs_item" x-data="{idx: 0}" x-init="idx = ++count" {{ block.shopify_attributes }}>
+                    <button x-on:click="tab = idx" x-bind:class="tab === idx ? 'is-active' : ''" x-bind:aria-selected="tab === idx ? 'true' : 'false'" type="button" role="tab" class="value-tabs_link"><span>
 {{ block.settings.text_tab_label }}
-</div>
-                </button> {% schema %} {
+</span></button>
+                    <div role="tabpanel" x-show="tab === idx" x-cloak="" class="value-tabs_pane">{% if block.settings.image_tab_bild %}
+{{ block.settings.image_tab_bild | image_url: width: 1200 | image_tag: loading: 'lazy', class: 'value-tabs_image' }}
+{% else %}
+<img src="{{ 'platzhalter.svg' | asset_url }}" loading="lazy" alt="" class="value-tabs_image">
+{% endif %}<div class="value-tabs_content"><h3 class="heading-style-h3">
+{{ block.settings.text_tab_heading }}
+</h3><div class="text-size-medium"> {{ block.settings.textarea_tab_text }} </div></div></div>
+                </div> {% schema %} {
     "name": "Tab",
     "settings": [
-        {
-            "id": "image_tab_icon",
-            "type": "image_picker",
-            "label": "Tab Icon"
-        },
         {
             "id": "text_tab_label",
             "type": "text",
             "label": "Tab Label",
-            "default": "Region"
+            "default": "Vertrauen"
+        },
+        {
+            "id": "image_tab_bild",
+            "type": "image_picker",
+            "label": "Tab Bild"
+        },
+        {
+            "id": "text_tab_heading",
+            "type": "text",
+            "label": "Tab Heading",
+            "default": "Vertrauen"
+        },
+        {
+            "id": "textarea_tab_text",
+            "type": "textarea",
+            "label": "Tab Text",
+            "default": "Wir setzen auf langfristige Beziehungen \u2014 zu Kund:innen, Partner:innen und Kolleg:innen."
         }
     ],
     "presets": [
