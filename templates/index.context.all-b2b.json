@@ -74,21 +74,8 @@
         "padding_bottom": 80
       },
       "blocks": {
-        "slide_Wd8wR": {
-          "type": "slide",
-          "disabled": false,
-          "settings": {
-            "image_hintergrundbild": null,
-            "text_headline_zeile_1": "Weigh Darker™",
-            "text_headline_zeile_2": "Moon Bag Ruffle",
-            "text_subtext": "Raffiniertes Design. Recycelte moderne Materialien.",
-            "url_button_link": "",
-            "text_button_text": "Jetzt shoppen test"
-          }
-        }
       },
       "block_order": [
-        "slide_Wd8wR"
       ],
       "name": "The Latest"
     },
