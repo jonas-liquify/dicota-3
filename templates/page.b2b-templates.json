@@ -1,0 +1,190 @@
+{
+    "sections": {
+        "announcement_bar": {
+            "type": "announcement_bar",
+            "blocks": {
+                "usp": {
+                    "type": "usp",
+                    "name": "USP"
+                },
+                "rechte-seite": {
+                    "name": "Rechte Seite",
+                    "type": "rechte-seite",
+                    "static": true,
+                    "blocks": {
+                        "link": {
+                            "type": "link",
+                            "name": "Link"
+                        }
+                    },
+                    "block_order": [
+                        "link"
+                    ]
+                }
+            },
+            "block_order": [
+                "usp"
+            ]
+        },
+        "b2b_subnav": {
+            "type": "b2b_subnav"
+        },
+        "b2b_tpl_hero": {
+            "type": "b2b_tpl_hero"
+        },
+        "b2b_tpl_card_grid": {
+            "type": "b2b_tpl_card_grid",
+            "blocks": {
+                "b2b-tpl-karte": {
+                    "type": "b2b-tpl-karte",
+                    "name": "B2B Tpl Karte"
+                }
+            },
+            "block_order": [
+                "b2b-tpl-karte"
+            ]
+        },
+        "b2b_tpl_distri_tabs": {
+            "type": "b2b_tpl_distri_tabs",
+            "blocks": {
+                "b2b-tpl-tab": {
+                    "type": "b2b-tpl-tab",
+                    "name": "B2B Tpl Tab"
+                },
+                "b2b-tpl-panes": {
+                    "name": "B2B Tpl Panes",
+                    "type": "b2b-tpl-panes",
+                    "static": true,
+                    "blocks": {
+                        "b2b-tpl-tab-pane": {
+                            "type": "b2b-tpl-tab-pane",
+                            "name": "B2B Tpl Tab Pane"
+                        }
+                    },
+                    "block_order": [
+                        "b2b-tpl-tab-pane"
+                    ]
+                }
+            },
+            "block_order": [
+                "b2b-tpl-tab"
+            ]
+        },
+        "b2b_tpl_welcome_crds": {
+            "type": "b2b_tpl_welcome_crds",
+            "blocks": {
+                "b2b-welcome-karte": {
+                    "type": "b2b-welcome-karte",
+                    "name": "B2B Welcome Karte"
+                }
+            },
+            "block_order": [
+                "b2b-welcome-karte"
+            ]
+        },
+        "b2b_tpl_welcome_hero": {
+            "type": "b2b_tpl_welcome_hero"
+        },
+        "b2b_tpl_dashboard": {
+            "type": "b2b_tpl_dashboard",
+            "blocks": {
+                "b2b-tpl-quicklink": {
+                    "type": "b2b-tpl-quicklink",
+                    "name": "B2B Tpl Quicklink"
+                }
+            },
+            "block_order": [
+                "b2b-tpl-quicklink"
+            ]
+        },
+        "b2b_tpl_news_highl": {
+            "type": "b2b_tpl_news_highl",
+            "blocks": {
+                "b2b-tpl-news-karte": {
+                    "type": "b2b-tpl-news-karte",
+                    "name": "B2B Tpl News Karte"
+                }
+            },
+            "block_order": [
+                "b2b-tpl-news-karte"
+            ]
+        },
+        "b2b_tpl_news_list": {
+            "type": "b2b_tpl_news_list",
+            "blocks": {
+                "b2b-tpl-list-eintr": {
+                    "type": "b2b-tpl-list-eintr",
+                    "name": "B2B Tpl List Eintr"
+                }
+            },
+            "block_order": [
+                "b2b-tpl-list-eintr"
+            ]
+        },
+        "b2b_tpl_downloads": {
+            "type": "b2b_tpl_downloads",
+            "blocks": {
+                "b2b-tpl-dl-karte": {
+                    "type": "b2b-tpl-dl-karte",
+                    "name": "B2B Tpl Dl Karte"
+                }
+            },
+            "block_order": [
+                "b2b-tpl-dl-karte"
+            ]
+        },
+        "b2b_tpl_banner_1x": {
+            "type": "b2b_tpl_banner_1x"
+        },
+        "b2b_tpl_banner_wide": {
+            "type": "b2b_tpl_banner_wide"
+        },
+        "b2b_tpl_banner_2x": {
+            "type": "b2b_tpl_banner_2x",
+            "blocks": {
+                "b2b-tpl-banner": {
+                    "type": "b2b-tpl-banner",
+                    "name": "B2B Tpl Banner"
+                }
+            },
+            "block_order": [
+                "b2b-tpl-banner"
+            ]
+        },
+        "footer_newsletter": {
+            "type": "footer_newsletter"
+        },
+        "footer_bottom": {
+            "type": "footer_bottom",
+            "blocks": {
+                "social": {
+                    "type": "social",
+                    "name": "Social"
+                }
+            },
+            "block_order": [
+                "social"
+            ]
+        }
+    },
+    "layout": "theme",
+    "wrapper": "main.main-wrapper",
+    "order": [
+        "announcement_bar",
+        "b2b_subnav",
+        "b2b_tpl_hero",
+        "b2b_tpl_card_grid",
+        "b2b_tpl_distri_tabs",
+        "b2b_tpl_welcome_crds",
+        "b2b_tpl_welcome_hero",
+        "b2b_tpl_dashboard",
+        "b2b_tpl_news_highl",
+        "b2b_tpl_news_list",
+        "b2b_tpl_downloads",
+        "b2b_tpl_banner_1x",
+        "b2b_tpl_banner_wide",
+        "b2b_tpl_banner_2x",
+        "footer_newsletter",
+        "footer_bottom"
+    ]
+}

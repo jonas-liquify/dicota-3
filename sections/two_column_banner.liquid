@@ -32,14 +32,33 @@
             "content": "Overlay"
         },
         {
+            "type": "color",
+            "id": "overlay_color",
+            "label": "Overlay-Farbe",
+            "default": "#0F0F0F",
+            "info": "Farbe des Fade-Overlays \u2014 verl\u00e4uft von transparent (oben) zur eingestellten Intensit\u00e4t (unten)."
+        },
+        {
             "type": "range",
             "id": "overlay_strength",
             "min": 0,
-            "max": 60,
+            "max": 100,
             "step": 5,
             "unit": "%",
-            "label": "Dunkles Overlay",
-            "default": 25
+            "label": "Overlay-Intensit\u00e4t (unten)",
+            "default": 70,
+            "info": "Deckkraft am unteren Bildrand. 0 = kein Overlay."
+        },
+        {
+            "type": "range",
+            "id": "overlay_start",
+            "min": 0,
+            "max": 80,
+            "step": 5,
+            "unit": "%",
+            "label": "Fade-Start (von oben)",
+            "default": 30,
+            "info": "Bis zu dieser H\u00f6he bleibt das Bild vollst\u00e4ndig sichtbar; ab hier beginnt der Verlauf."
         }
     ],
     "presets": [
