@@ -18,13 +18,9 @@
         "the_latest": {
             "type": "the_latest",
             "blocks": {
-                "slide": {
-                    "type": "slide",
-                    "name": "Slide"
-                }
+                
             },
             "block_order": [
-                "slide"
             ]
         },
         "the_dicota_differenc": {
