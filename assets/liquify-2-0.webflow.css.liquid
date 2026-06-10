@@ -1502,7 +1502,7 @@ figcaption {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 1.25rem;                      /* tighter logo→menu gap */
+  gap: 1.25rem;
   width: 100%;
   height: 100%;
   margin-left: auto;
@@ -1544,7 +1544,7 @@ figcaption {
 
 .nav_dropdown-toggle {
   align-items: center;
-  padding: .5rem 1rem .5rem .75rem;   /* tighter horizontal padding between nav links */
+  padding: .5rem 1rem .5rem .75rem;
   display: flex;
 }
 
@@ -1829,8 +1829,8 @@ figcaption {
 }
 
 .swiper-slide.is-product-thumbnail {
-  width: 100rem;
-  height: auto;
+  width: 100%;
+  height: 84px;
   position: relative;
   margin-bottom: 8px;
   cursor: pointer;
@@ -2016,7 +2016,7 @@ figcaption {
   align-items: center;
   height: 2.4rem;
   width: auto;
-  min-width: 8rem;      /* keeps the DICOTA wordmark from collapsing */
+  min-width: 8rem;
   flex-shrink: 0;
   display: flex;
 }
@@ -4068,10 +4068,14 @@ figcaption {
   }
   .product-header_gallery {
     position: static;
-    top: 0;
+    top: auto;
     height: auto;
-    grid-template-columns: 1fr 160px;
+    grid-template-columns: none;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: stretch;
   }
   .swiper.is-product-gallery {
     height: 70vw;
@@ -4396,8 +4400,46 @@ figcaption {
   .nav_menu-dropdown .nav_dropdown-toggle {
     opacity: 1;
   }
-  /* Bewusst KEIN font-weight-Wechsel auf Hover/Open — sonst verschiebt
-     sich das Layout horizontal. Hover-Affordance über opacity oben. */
+  .reseller-header_nav {
+    padding: 1rem 1.25rem;
+  }
+  .reseller-header_left {
+    gap: 1.5rem;
+  }
+  .reseller-header_menu {
+    display: none;
+  }
+  .reseller-header_actions {
+    gap: 0.5rem;
+  }
+  .reseller-header_btn-outline,
+  .reseller-header_btn-solid { padding: 0.625rem 1rem; font-size: 0.8125rem; }
+  .product-header_gallery > .swiper.is-product-gallery {
+    order: 1;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    height: auto !important;
+    max-height: 520px;
+  }
+  .product-header_gallery > .product-header_thumbs {
+    order: 2;
+    width: 100%;
+    height: auto !important;
+    max-height: none !important;
+    overflow: hidden;
+  }
+  .product-header_gallery > .product-header_thumbs > .swiper.is-product-thumbnail {
+    width: 100%;
+    height: auto;
+  }
+  .swiper-wrapper.is-product-thumbnail {
+    flex-direction: row;
+  }
+  .swiper-slide.is-product-thumbnail {
+    width: 4.5rem;
+    height: 4.5rem;
+    aspect-ratio: 1 / 1;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -5043,6 +5085,17 @@ figcaption {
     grid-template-rows: repeat(4, minmax(0, 1fr));
     height: clamp(40rem, 130vw, 60rem);
   }
+  .value-tabs_component {
+    grid-template-columns: 1fr;
+  }
+  .value-tabs_link, .value-tabs_pane { grid-column: 1; }
+  .value-tabs_pane {
+    grid-row: auto;
+  }
+  .swiper-slide.is-product-thumbnail {
+    width: 4rem;
+    height: 4rem;
+  }
 }
 
 @media screen and (max-width: 479px) {
@@ -5617,6 +5670,10 @@ figcaption {
   .rating-bar_divider {
     display: none;
   }
+  .swiper-slide.is-product-thumbnail {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
 }
 
 #w-node-_5eccf730-c887-5204-0e0c-693f99a7329a-99a7328f {
@@ -5951,6 +6008,7 @@ figcaption {
   width: 100%;
   font-size: .75rem;
   line-height: 1.5;
+  z-index: 10;
 }
 /* Defensive: explicit white on all common text children in case
    CSS-variable inheritance doesn't resolve (Liquiflow Builder timing). */
@@ -9034,7 +9092,7 @@ figcaption {
   overflow: visible;
 }
 .swiper-slide.is-add-to-kit {
-  width: min(20.5rem, 80vw);   /* same width as Featured Products cards */
+  width: min(20.5rem, 80vw);
   flex-shrink: 0;
 }
 .product-add-to-kit_card {
@@ -9110,8 +9168,9 @@ figcaption {
   align-items: stretch;
   position: sticky;
   top: 72px;
-  flex: 1 1 auto;           /* grows to fill remaining space on wide screens */
+  flex: 1 1 auto;
   min-width: 0;
+  height: clamp(480px, 64vh, 720px);
 }
 
 /* ── Gallery ─────────────────────────────────────────────── */
@@ -9133,7 +9192,7 @@ figcaption {
   width: 100%;
   max-width: 32rem;
   justify-content: flex-start;
-  align-items: stretch;            /* children fill the column width */
+  align-items: stretch;
 }
 /* Every direct child of details column spans the full column width
    so title, USPs, price, options, buttons all line up vertically. */
@@ -10852,8 +10911,12 @@ figcaption {
   gap: 1.25rem;
   margin-bottom: 1rem;
 }
-.value-tabs_blocks { display: contents; }
-.value-tabs_item { display: contents; }
+.value-tabs_blocks {
+  display: contents;
+}
+.value-tabs_item {
+  display: contents;
+}
 .value-tabs_link {
   grid-column: 1;
   text-align: left;
@@ -10875,7 +10938,7 @@ figcaption {
 }
 .value-tabs_pane {
   grid-column: 2;
-  grid-row: 1 / -1;        /* all panes overlap in this body cell */
+  grid-row: 1 / -1;
   background-color: #ffffff;
   padding: 0.25rem;
   align-self: start;
@@ -10893,13 +10956,6 @@ figcaption {
   align-items: flex-start;
   gap: 1.5rem;
   padding: 2.5rem;
-}
-@media screen and (max-width: 767px) {
-  .value-tabs_component {
-    grid-template-columns: 1fr;
-  }
-  .value-tabs_link, .value-tabs_pane { grid-column: 1; }
-  .value-tabs_pane { grid-row: auto; }
 }
 
 /* Section: Jobs */
@@ -14707,7 +14763,9 @@ figcaption {
   gap: 1.25rem;
   min-width: 0;
 }
-.reseller-header_menu-dropdown { position: static; }
+.reseller-header_menu-dropdown {
+  position: static;
+}
 .reseller-header_dropdown-toggle {
   display: flex;
   align-items: center;
@@ -14789,15 +14847,6 @@ figcaption {
   display: inline-flex;
 }
 
-@media screen and (max-width: 991px) {
-  .reseller-header_nav { padding: 1rem 1.25rem; }
-  .reseller-header_left { gap: 1.5rem; }
-  .reseller-header_menu { display: none; }
-  .reseller-header_actions { gap: 0.5rem; }
-  .reseller-header_btn-outline,
-  .reseller-header_btn-solid { padding: 0.625rem 1rem; font-size: 0.8125rem; }
-}
-
 /* =============================================================
    DICOTA PDP — Product Hero Gallery
    Desktop (≥992px): big image LEFT, vertical thumb-strip RIGHT.
@@ -14813,10 +14862,7 @@ figcaption {
    ist Grid-Default), so kann die Thumb-Anzahl die Höhe NIE noch hochziehen.
    Big-Image füllt die Zelle, das eingebettete <img> nutzt object-fit: contain
    und bleibt damit auch bei nicht-quadratischer Zellengröße proportional. */
-.product-header_gallery {
-  align-items: stretch;
-  height: clamp(480px, 64vh, 720px);
-}
+
 .product-header_gallery > .swiper.is-product-gallery {
   height: 100% !important;
   max-height: 100%;
@@ -14832,11 +14878,7 @@ figcaption {
   height: 100%;
 }
 /* Thumb-Slide Dimensionen für vertikales Layout (Desktop) */
-.swiper-slide.is-product-thumbnail {
-  width: 100% !important;                      /* Override Webflow's 100rem */
-  height: 84px !important;
-  cursor: pointer;
-}
+
 .swiper-slide.is-product-thumbnail .product-header_thumbnail-image {
   width: 100%;
   height: 100%;
@@ -14844,56 +14886,4 @@ figcaption {
 }
 
 /* Mobile / Tablet — vertikal stacken, Thumbs horizontal unter Big Image */
-@media screen and (max-width: 991px) {
-  .product-header_gallery {
-    display: flex !important;
-    flex-direction: column;
-    grid-template-columns: none !important;
-    gap: 0.5rem;
-    width: 100%;
-    align-items: stretch;
-    height: auto !important;            /* override desktop clamp */
-    position: static !important;        /* override desktop sticky — auf mobile mitscrollen */
-    top: auto !important;
-  }
-  .product-header_gallery > .swiper.is-product-gallery {
-    order: 1;
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    height: auto !important;
-    max-height: 520px;
-  }
-  .product-header_gallery > .product-header_thumbs {
-    order: 2;
-    width: 100%;
-    height: auto !important;
-    max-height: none !important;
-    overflow: hidden;
-  }
-  .product-header_gallery > .product-header_thumbs > .swiper.is-product-thumbnail {
-    width: 100%;
-    height: auto;
-  }
-  .swiper-wrapper.is-product-thumbnail {
-    flex-direction: row;
-  }
-  .swiper-slide.is-product-thumbnail {
-    width: 4.5rem !important;
-    height: 4.5rem !important;
-    aspect-ratio: 1 / 1;
-  }
-}
 
-@media screen and (max-width: 767px) {
-  .swiper-slide.is-product-thumbnail {
-    width: 4rem !important;
-    height: 4rem !important;
-  }
-}
-
-@media screen and (max-width: 479px) {
-  .swiper-slide.is-product-thumbnail {
-    width: 3.5rem !important;
-    height: 3.5rem !important;
-  }
-}

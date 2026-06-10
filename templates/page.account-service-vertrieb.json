@@ -1,0 +1,146 @@
+{
+    "sections": {
+        "announcement_bar": {
+            "type": "announcement_bar",
+            "blocks": {
+                "usp": {
+                    "type": "usp",
+                    "name": "USP"
+                },
+                "rechte-seite": {
+                    "name": "Rechte Seite",
+                    "type": "rechte-seite",
+                    "static": true,
+                    "blocks": {
+                        "link": {
+                            "type": "link",
+                            "name": "Link"
+                        }
+                    },
+                    "block_order": [
+                        "link"
+                    ]
+                }
+            },
+            "block_order": [
+                "usp"
+            ]
+        },
+        "b2b_subnav": {
+            "type": "b2b_subnav"
+        },
+        "b2b_sales_overview": {
+            "type": "b2b_sales_overview",
+            "blocks": {
+                "b2b-sales-quicklink": {
+                    "type": "b2b-sales-quicklink",
+                    "name": "B2B Sales Quicklink"
+                }
+            },
+            "block_order": [
+                "b2b-sales-quicklink"
+            ]
+        },
+        "b2b_sales_volume_pri": {
+            "type": "b2b_sales_volume_pri"
+        },
+        "b2b_sales_product_li": {
+            "type": "b2b_sales_product_li",
+            "blocks": {
+                "b2b-sales-download": {
+                    "type": "b2b-sales-download",
+                    "name": "B2B Sales Download"
+                }
+            },
+            "block_order": [
+                "b2b-sales-download"
+            ]
+        },
+        "b2b_sales_promotions": {
+            "type": "b2b_sales_promotions",
+            "blocks": {
+                "b2b-promo": {
+                    "type": "b2b-promo",
+                    "name": "B2B Promo"
+                }
+            },
+            "block_order": [
+                "b2b-promo"
+            ]
+        },
+        "b2b_sales_distributo": {
+            "type": "b2b_sales_distributo",
+            "blocks": {
+                "b2b-sales-menu": {
+                    "name": "B2B Sales Menu",
+                    "type": "b2b-sales-menu",
+                    "static": true,
+                    "blocks": {
+                        "b2b-sales-region": {
+                            "type": "b2b-sales-region",
+                            "name": "B2B Sales Region"
+                        }
+                    },
+                    "block_order": [
+                        "b2b-sales-region"
+                    ]
+                },
+                "b2b-sales-panes": {
+                    "name": "B2B Sales Panes",
+                    "type": "b2b-sales-panes",
+                    "static": true,
+                    "blocks": {
+                        "b2b-sales-region-pane": {
+                            "type": "b2b-sales-region-pane",
+                            "name": "B2B Sales Region Pane"
+                        }
+                    },
+                    "block_order": [
+                        "b2b-sales-region-pane"
+                    ]
+                }
+            }
+        },
+        "b2b_sales_support": {
+            "type": "b2b_sales_support",
+            "blocks": {
+                "b2b-sales-kontakt": {
+                    "type": "b2b-sales-kontakt",
+                    "name": "B2B Sales Kontakt"
+                }
+            },
+            "block_order": [
+                "b2b-sales-kontakt"
+            ]
+        },
+        "footer_newsletter": {
+            "type": "footer_newsletter"
+        },
+        "footer_bottom": {
+            "type": "footer_bottom",
+            "blocks": {
+                "social": {
+                    "type": "social",
+                    "name": "Social"
+                }
+            },
+            "block_order": [
+                "social"
+            ]
+        }
+    },
+    "layout": "theme",
+    "wrapper": "main.main-wrapper",
+    "order": [
+        "announcement_bar",
+        "b2b_subnav",
+        "b2b_sales_overview",
+        "b2b_sales_volume_pri",
+        "b2b_sales_product_li",
+        "b2b_sales_promotions",
+        "b2b_sales_distributo",
+        "b2b_sales_support",
+        "footer_newsletter",
+        "footer_bottom"
+    ]
+}
