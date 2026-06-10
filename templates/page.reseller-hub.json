@@ -33,13 +33,9 @@
         "the_dicota_differenc": {
             "type": "the_dicota_differenc",
             "blocks": {
-                "vorteil": {
-                    "type": "vorteil",
-                    "name": "Vorteil"
-                }
+            
             },
             "block_order": [
-                "vorteil"
             ]
         },
         "reseller_promo_grid": {
