@@ -1,0 +1,58 @@
+<div li-block="B2B Giveaway" class="acc-card" {{ block.shopify_attributes }}>
+                    {% if block.settings.image_bild %}
+{{ block.settings.image_bild | image_url: width: 600 | image_tag: loading: 'lazy', class: 'acc-card_16-9-image' }}
+{% else %}
+<img src="{{ 'platzhalter.svg' | asset_url }}" loading="lazy" alt="" class="acc-card_16-9-image">
+{% endif %}
+                    <div class="acc-card_content"><div class="text-style-subline">
+{{ block.settings.text_kategorie }}
+</div><div class="text-size-large">
+{{ block.settings.text_heading }}
+</div><div class="text-size-regular"> {{ block.settings.textarea_text }} </div></div>
+                    <a href="{{ block.settings.url_button_link }}" class="button w-button"> <span>{{ block.settings.text_button_text }}</span> </a>
+                </div> {% schema %} {
+    "name": "B2B Giveaway",
+    "settings": [
+        {
+            "id": "image_bild",
+            "type": "image_picker",
+            "label": "Bild"
+        },
+        {
+            "id": "text_kategorie",
+            "type": "text",
+            "label": "Kategorie",
+            "default": "Giveaway"
+        },
+        {
+            "id": "text_heading",
+            "type": "text",
+            "label": "Heading",
+            "default": "Stoffbeutel DICOTA"
+        },
+        {
+            "id": "textarea_text",
+            "type": "textarea",
+            "label": "Text",
+            "default": "100% recycelte Baumwolle \u00b7 ab 50 St\u00fcck bestellbar"
+        },
+        {
+            "id": "url_button_link",
+            "type": "url",
+            "label": "Button Link"
+        },
+        {
+            "id": "text_button_text",
+            "type": "text",
+            "label": "Button Text",
+            "default": "Bestellen"
+        }
+    ],
+    "presets": [
+        {
+            "name": "B2B Giveaway",
+            "blocks": []
+        }
+    ],
+    "tag": null
+} {% endschema %}

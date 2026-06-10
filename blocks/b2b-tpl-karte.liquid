@@ -1,0 +1,38 @@
+<div li-block="B2B Tpl Karte" class="icon-cards_card is-line-right" {{ block.shopify_attributes }}>
+                    {% if block.settings.image_icon %}
+{{ block.settings.image_icon | image_url: width: 96 | image_tag: loading: 'lazy', class: 'icon-1x1-xlarge' }}
+{% else %}
+<img src="{{ 'platzhalter.svg' | asset_url }}" loading="lazy" alt="" class="icon-1x1-xlarge">
+{% endif %}
+                    <div class="default-flex-tiny"><h3 class="text-size-large">
+{{ block.settings.text_heading }}
+</h3><div class="text-size-medium"> {{ block.settings.textarea_text }} </div></div>
+                </div> {% schema %} {
+    "name": "B2B Tpl Karte",
+    "settings": [
+        {
+            "id": "image_icon",
+            "type": "image_picker",
+            "label": "Icon"
+        },
+        {
+            "id": "text_heading",
+            "type": "text",
+            "label": "Heading",
+            "default": "Punkte einl\u00f6sen"
+        },
+        {
+            "id": "textarea_text",
+            "type": "textarea",
+            "label": "Text",
+            "default": "Wandle Punkte in Gutscheine oder Sachpr\u00e4mien um."
+        }
+    ],
+    "presets": [
+        {
+            "name": "B2B Tpl Karte",
+            "blocks": []
+        }
+    ],
+    "tag": null
+} {% endschema %}
