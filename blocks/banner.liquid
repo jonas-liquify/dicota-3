@@ -4,9 +4,10 @@
 {% else %}
 <img src="{{ 'hero-apparel-2.svg' | asset_url }}" loading="lazy" alt="" class="two-column-banner_image">
 {% endif %}</picture>
-                    {% if section.settings.overlay_strength > 0 %}    <div li-if="section.settings.overlay_strength > 0" class="two-column-banner_overlay">
-        </div>
-{% endif %}
+                    <div li-if:inside="section.settings.overlay_strength > 0" style="display:contents" inside="1">
+        {% if section.settings.overlay_strength > 0 %}
+            <div class="two-column-banner_overlay" style="--overlay-color: {{ section.settings.overlay_color }}; --overlay-strength: {{ section.settings.overlay_strength }}%; --overlay-start: {{ section.settings.overlay_start }}%;"></div>        {% endif %}
+    </div>
                     <div class="two-column-banner_content"><h3 class="two-column-banner_title heading-style-h3">
 {{ block.settings.text_uberschrift }}
 </h3><p class="two-column-banner_subtext text-size-regular"> {{ block.settings.textarea_subtext }} </p><a href="{{ block.settings.url_button_link }}" class="button two-column-banner_button w-button"> <span>{{ block.settings.text_button_text }}</span> </a></div>
