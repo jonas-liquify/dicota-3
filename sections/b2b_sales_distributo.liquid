@@ -2,16 +2,16 @@
 {{ section.settings.text_breadcrumb }}
 </div></li></ul><div class="default-flex-tiny"><h1 class="heading-style-h2">
 {{ section.settings.text_heading }}
-</h1><div class="text-size-medium max-width-large"> {{ section.settings.textarea_subheading }} </div></div><div x-data="{tab: 1}" role="tablist" class="acc-dis_tab-component">{% content_for "block", type: "tab-menu", id: "tab-menu" %}{% content_for "block", type: "tab-panes", id: "tab-panes" %}</div></div></div></div></div> {% schema %} {
+</h1><div class="text-size-medium max-width-large"> {{ section.settings.textarea_subheading }} </div></div><div x-data="{tab: 1}" role="tablist" class="acc-dis_tab-component">{% content_for "block", type: "b2b-sales-menu", id: "b2b-sales-menu" %}{% content_for "block", type: "b2b-sales-panes", id: "b2b-sales-panes" %}</div></div></div></div></div> {% schema %} {
     "tag": "section",
     "name": "B2B Sales Distributo",
     "class": "section_acc-default",
     "blocks": [
         {
-            "type": "region"
+            "type": "b2b-sales-region"
         },
         {
-            "type": "region-pane"
+            "type": "b2b-sales-region-pane"
         },
         {
             "type": "@app"
@@ -43,22 +43,22 @@
             "category": "_B2B",
             "blocks": [
                 {
-                    "type": "tab-menu",
+                    "type": "b2b-sales-menu",
                     "static": true,
-                    "id": "tab-menu",
+                    "id": "b2b-sales-menu",
                     "blocks": [
                         {
-                            "type": "region"
+                            "type": "b2b-sales-region"
                         }
                     ]
                 },
                 {
-                    "type": "tab-panes",
+                    "type": "b2b-sales-panes",
                     "static": true,
-                    "id": "tab-panes",
+                    "id": "b2b-sales-panes",
                     "blocks": [
                         {
-                            "type": "region-pane"
+                            "type": "b2b-sales-region-pane"
                         }
                     ]
                 }

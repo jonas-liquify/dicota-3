@@ -1,0 +1,47 @@
+<div li-block="B2B Presse" class="acc-card is-small" {{ block.shopify_attributes }}>
+                    <div class="acc-card_download-content"><div class="default-flex-tiny"><div class="text-style-subline">
+{{ block.settings.text_datum }}
+</div><div class="text-size-large">
+{{ block.settings.text_heading }}
+</div><div class="text-size-regular"> {{ block.settings.textarea_text }} </div></div><a href="{{ block.settings.url_download_link }}" class="button is-secondary w-button"> <span>{{ block.settings.text_button_text }}</span> </a></div>
+                </div> {% schema %} {
+    "name": "B2B Presse",
+    "settings": [
+        {
+            "id": "text_datum",
+            "type": "text",
+            "label": "Datum",
+            "default": "2026-Q2"
+        },
+        {
+            "id": "text_heading",
+            "type": "text",
+            "label": "Heading",
+            "default": "Pressemitteilung-Titel"
+        },
+        {
+            "id": "textarea_text",
+            "type": "textarea",
+            "label": "Text",
+            "default": "Kurze Zusammenfassung des Inhalts."
+        },
+        {
+            "id": "url_download_link",
+            "type": "url",
+            "label": "Download Link"
+        },
+        {
+            "id": "text_button_text",
+            "type": "text",
+            "label": "Button Text",
+            "default": "Herunterladen"
+        }
+    ],
+    "presets": [
+        {
+            "name": "B2B Presse",
+            "blocks": []
+        }
+    ],
+    "tag": null
+} {% endschema %}

@@ -1,0 +1,60 @@
+<div li-block="B2B Tpl Dl Karte" class="acc-card gap-2-5" {{ block.shopify_attributes }}>
+                    {% if block.settings.image_vorschau %}
+{{ block.settings.image_vorschau | image_url: width: 600 | image_tag: loading: 'lazy', class: 'acc-card_3-2-image' }}
+{% else %}
+<img src="{{ 'platzhalter.svg' | asset_url }}" loading="lazy" alt="" class="acc-card_3-2-image">
+{% endif %}
+                    <div class="acc-card_content"><div class="text-style-subline">
+{{ block.settings.text_kategorie }}
+</div><div class="text-size-large">
+{{ block.settings.text_titel }}
+</div></div>
+                    <div class="acc-card_download-content"><div class="text-size-small text-style-muted">
+{{ block.settings.text_dateigrosse }}
+</div><a href="{{ block.settings.url_download_link }}" class="button is-secondary w-button"> <span>{{ block.settings.text_button_text }}</span> </a></div>
+                </div> {% schema %} {
+    "name": "B2B Tpl Dl Karte",
+    "settings": [
+        {
+            "id": "image_vorschau",
+            "type": "image_picker",
+            "label": "Vorschau"
+        },
+        {
+            "id": "text_kategorie",
+            "type": "text",
+            "label": "Kategorie",
+            "default": "PDF"
+        },
+        {
+            "id": "text_titel",
+            "type": "text",
+            "label": "Titel",
+            "default": "Datenblatt"
+        },
+        {
+            "id": "text_dateigrosse",
+            "type": "text",
+            "label": "Dateigr\u00f6\u00dfe",
+            "default": "2,3 MB"
+        },
+        {
+            "id": "url_download_link",
+            "type": "url",
+            "label": "Download Link"
+        },
+        {
+            "id": "text_button_text",
+            "type": "text",
+            "label": "Button Text",
+            "default": "Herunterladen"
+        }
+    ],
+    "presets": [
+        {
+            "name": "B2B Tpl Dl Karte",
+            "blocks": []
+        }
+    ],
+    "tag": null
+} {% endschema %}
