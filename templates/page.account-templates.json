@@ -1,125 +1,286 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
-    "sections": {
-        "b2b_subnav": {
-            "type": "b2b_subnav"
-        },
-        "b2b_templates_hero": {
-            "type": "b2b_templates_hero"
-        },
-        "b2b_templates_card_g": {
-            "type": "b2b_templates_card_g",
-            "blocks": {
-                "karte": {
-                    "type": "karte",
-                    "name": "Karte"
-                }
-            },
-            "block_order": [
-                "karte"
-            ]
-        },
-        "b2b_templates_distri": {
-            "type": "b2b_templates_distri",
-            "blocks": {
-                "tab": {
-                    "type": "tab",
-                    "name": "Tab"
-                },
-                "tab-panes": {
-                    "name": "Tab Panes",
-                    "type": "tab-panes",
-                    "static": true,
-                    "blocks": {
-                        "tab-pane": {
-                            "type": "tab-pane",
-                            "name": "Tab Pane"
-                        }
-                    },
-                    "block_order": [
-                        "tab-pane"
-                    ]
-                }
-            },
-            "block_order": [
-                "tab"
-            ]
-        },
-        "b2b_templates_welcom": {
-            "type": "b2b_templates_welcom"
-        },
-        "b2b_templates_dashbo": {
-            "type": "b2b_templates_dashbo",
-            "blocks": {
-                "quicklink": {
-                    "type": "quicklink",
-                    "name": "Quicklink"
-                }
-            },
-            "block_order": [
-                "quicklink"
-            ]
-        },
-        "b2b_templates_news_h": {
-            "type": "b2b_templates_news_h",
-            "blocks": {
-                "news-karte": {
-                    "type": "news-karte",
-                    "name": "News Karte"
-                }
-            },
-            "block_order": [
-                "news-karte"
-            ]
-        },
-        "b2b_templates_news_l": {
-            "type": "b2b_templates_news_l",
-            "blocks": {
-                "listen-eintrag": {
-                    "type": "listen-eintrag",
-                    "name": "Listen-Eintrag"
-                }
-            },
-            "block_order": [
-                "listen-eintrag"
-            ]
-        },
-        "b2b_templates_downlo": {
-            "type": "b2b_templates_downlo",
-            "blocks": {
-                "download-karte": {
-                    "type": "download-karte",
-                    "name": "Download Karte"
-                }
-            },
-            "block_order": [
-                "download-karte"
-            ]
-        },
-        "b2b_templates_banner": {
-            "type": "b2b_templates_banner",
-            "blocks": {
-                "banner": {
-                    "type": "banner",
-                    "name": "Banner"
-                }
-            },
-            "block_order": [
-                "banner"
-            ]
-        }
+  "sections": {
+    "b2b_subnav": {
+      "type": "b2b_subnav",
+      "settings": {
+        "text_dummy_description": "Kurzbeschreibung",
+        "text_punkte_label": "Aktuelle Punktzahl:",
+        "account_menu": ""
+      }
     },
-    "layout": "theme",
-    "wrapper": "main.main-wrapper",
-    "order": [
-        "b2b_subnav",
-        "b2b_templates_hero",
-        "b2b_templates_card_g",
-        "b2b_templates_distri",
-        "b2b_templates_welcom",
-        "b2b_templates_dashbo",
-        "b2b_templates_news_h",
-        "b2b_templates_news_l",
-        "b2b_templates_downlo",
-        "b2b_templates_banner"
-    ]
+    "b2b_templates_hero": {
+      "type": "b2b_templates_hero",
+      "settings": {
+        "text_subline": "DICOTA Club",
+        "text_heading": "Willkommen in deinem Bereich",
+        "url_button_1_link": "",
+        "text_button_1_text": "Jetzt einlösen",
+        "url_button_2_link": "",
+        "text_button_2_text": "Mehr erfahren",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "b2b_templates_card_g": {
+      "type": "b2b_templates_card_g",
+      "blocks": {
+        "karte_jtPGr9": {
+          "type": "karte",
+          "name": "Karte",
+          "settings": {
+            "url_card_link": "",
+            "text_card_heading": "Nachhaltigkeit",
+            "text_card_button_text": "Mehr erfahren"
+          },
+          "blocks": {}
+        },
+        "karte_fxHGcG": {
+          "type": "karte",
+          "name": "Karte",
+          "settings": {
+            "url_card_link": "",
+            "text_card_heading": "Nachhaltigkeit",
+            "text_card_button_text": "Mehr erfahren"
+          },
+          "blocks": {}
+        },
+        "karte_CFafwK": {
+          "type": "karte",
+          "name": "Karte",
+          "settings": {
+            "url_card_link": "",
+            "text_card_heading": "Nachhaltigkeit",
+            "text_card_button_text": "Mehr erfahren"
+          },
+          "blocks": {}
+        },
+        "karte": {
+          "type": "karte",
+          "name": "Karte",
+          "settings": {
+            "url_card_link": "",
+            "text_card_heading": "Nachhaltigkeit",
+            "text_card_button_text": "Mehr erfahren"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "karte_jtPGr9",
+        "karte_fxHGcG",
+        "karte_CFafwK",
+        "karte"
+      ],
+      "settings": {
+        "text_heading": "Was möchtest du erreichen?",
+        "textarea_text": "Wähle einen Bereich und nutze deine DICOTA-Punkte gezielt.",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "b2b_templates_distri": {
+      "type": "b2b_templates_distri",
+      "blocks": {
+        "tab": {
+          "type": "tab",
+          "name": "Tab",
+          "settings": {
+            "text_tab_label": "Region"
+          },
+          "blocks": {}
+        },
+        "tab-panes": {
+          "type": "tab-panes",
+          "name": "Tab Panes",
+          "static": true,
+          "settings": {},
+          "blocks": {
+            "tab-pane": {
+              "type": "tab-pane",
+              "name": "Tab Pane",
+              "settings": {},
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "tab-pane"
+          ]
+        }
+      },
+      "block_order": [
+        "tab"
+      ],
+      "settings": {
+        "text_heading": "Distributoren",
+        "textarea_text": "Unsere autorisierten Vertriebspartner weltweit."
+      }
+    },
+    "b2b_templates_welcom": {
+      "type": "b2b_templates_welcom",
+      "settings": {
+        "text_begrussung": "Hallo",
+        "text_untertitel": "Schön, dass du da bist.",
+        "textarea_text": "Hier findest du alle deine Vorteile, Punkte und exklusiven Inhalte als DICOTA-Partner."
+      }
+    },
+    "b2b_templates_dashbo": {
+      "type": "b2b_templates_dashbo",
+      "blocks": {
+        "quicklink": {
+          "type": "quicklink",
+          "name": "Quicklink",
+          "settings": {
+            "text_heading": "Produktbilder",
+            "richtext_text": "<p>Alle Produktbilder in hoher Auflösung als ZIP.</p>",
+            "url_button_link": "",
+            "text_button_text": "Öffnen"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "quicklink"
+      ],
+      "settings": {
+        "text_aktueller_bereich": "Account",
+        "text_heading_1": "Punkte einlösen",
+        "textarea_subheading_1": "Hier findest du eine Übersicht über alle deine verfügbaren Optionen zur Einlösung deiner Punkte.",
+        "text_linke_karte_subline": "Featured",
+        "text_linke_karte_heading": "Top-Prämie des Monats",
+        "textarea_linke_karte_text": "Sichere dir diese Prämie, solange der Vorrat reicht.",
+        "url_linke_karte_button_link": "",
+        "text_linke_karte_button_text": "Jetzt einlösen",
+        "text_rechte_karte_subline": "Neu",
+        "text_rechte_karte_heading": "Premium-Bundle",
+        "url_rechte_karte_button_link": "",
+        "text_rechte_karte_button_text": "Details ansehen",
+        "text_mittel_banner_heading": "Exklusive Aktion",
+        "textarea_mittel_banner_text": "Nur diesen Monat: Doppelte Punkte auf alle Sachprämien.",
+        "url_mittel_banner_button_link": "",
+        "text_mittel_banner_button_text": "Mehr erfahren",
+        "text_heading_2": "Quicklinks",
+        "textarea_subheading_2": "Schnellzugriff auf die wichtigsten Funktionen.",
+        "padding_top": 40,
+        "padding_bottom": 80
+      }
+    },
+    "b2b_templates_news_h": {
+      "type": "b2b_templates_news_h",
+      "blocks": {
+        "news-karte": {
+          "type": "news-karte",
+          "name": "News Karte",
+          "settings": {
+            "text_tag": "News",
+            "text_heading": "News-Titel",
+            "textarea_text": "Kurze Zusammenfassung des News-Artikels.",
+            "url_button_link": "",
+            "text_button_text": "Weiterlesen"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "news-karte"
+      ],
+      "settings": {
+        "text_heading": "Neues von DICOTA",
+        "textarea_text": "Aktuelle Ankündigungen, Releases und Aktionen — alles auf einen Blick.",
+        "text_cta_heading": "Wichtige Information",
+        "textarea_cta_text": "Achte auf unsere neuen Lieferbedingungen ab nächster Woche.",
+        "url_cta_button_link": "",
+        "text_cta_button_text": "Details"
+      }
+    },
+    "b2b_templates_news_l": {
+      "type": "b2b_templates_news_l",
+      "blocks": {
+        "listen-eintrag": {
+          "type": "listen-eintrag",
+          "name": "Listen-Eintrag",
+          "settings": {
+            "text_datum": "DD.MM.YYYY",
+            "text_heading": "News-Artikel-Titel",
+            "textarea_text": "Vorschautext des Artikels.",
+            "url_button_link": "",
+            "text_button_text": "Lesen"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "listen-eintrag"
+      ],
+      "settings": {
+        "text_heading": "Alle News"
+      }
+    },
+    "b2b_templates_downlo": {
+      "type": "b2b_templates_downlo",
+      "blocks": {
+        "download-karte": {
+          "type": "download-karte",
+          "name": "Download Karte",
+          "settings": {
+            "text_kategorie": "PDF",
+            "text_titel": "Datenblatt",
+            "text_dateigrosse": "2,3 MB",
+            "url_download_link": "",
+            "text_button_text": "Herunterladen"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "download-karte"
+      ],
+      "settings": {
+        "text_heading": "Downloads",
+        "textarea_text": "Marketing-Material, Produktbilder, Datenblätter — alles zentral."
+      }
+    },
+    "b2b_templates_banner": {
+      "type": "b2b_templates_banner",
+      "blocks": {
+        "banner": {
+          "type": "banner",
+          "name": "Banner",
+          "settings": {
+            "text_uberschrift": "Tell A Friend &amp; Get 15% Off",
+            "textarea_subtext": "Give your friends 15% off their first order, and get a 15% off for each successful referral",
+            "url_button_link": "",
+            "text_button_text": "Freund einladen"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "banner"
+      ],
+      "settings": {}
+    }
+  },
+  "layout": "theme",
+  "wrapper": "main.main-wrapper",
+  "order": [
+    "b2b_subnav",
+    "b2b_templates_hero",
+    "b2b_templates_card_g",
+    "b2b_templates_distri",
+    "b2b_templates_welcom",
+    "b2b_templates_dashbo",
+    "b2b_templates_news_h",
+    "b2b_templates_news_l",
+    "b2b_templates_downlo",
+    "b2b_templates_banner"
+  ]
 }
