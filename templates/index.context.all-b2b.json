@@ -153,50 +153,6 @@
       ],
       "name": "Reseller Promo Grid"
     },
-    "b2b_news_updates_EaWiQ": {
-      "type": "b2b_news_updates",
-      "disabled": false,
-      "settings": {
-        "text_titel_fett": "Noch nicht genug?",
-        "text_titel_normal": "Weitere News frisch aus dem Drucker",
-        "header-45d841ca8abddb1896dd7dc2f8b98c4f": null,
-        "padding_top": 40,
-        "padding_bottom": 60,
-        "header-8b0919c4c585d96550ec61544d973834": null,
-        "bg_color": "#f6f6f6"
-      },
-      "blocks": {
-        "updates_card_PkERC": {
-          "type": "updates-card",
-          "disabled": false,
-          "blocks": {},
-          "block_order": [],
-          "settings": {
-            "text_titel": "Seit dem letzten Login:",
-            "url_link": "",
-            "text_untertitel": "Everyting you need to advertise",
-            "url_button_link": "",
-            "text_button_text": "Alle Updates"
-          }
-        },
-        "news_card_3YQdB": {
-          "type": "news-card",
-          "disabled": false,
-          "settings": {
-            "image_bild": null,
-            "url_link": "",
-            "text_badge": "NEW",
-            "text_titel": "Seven",
-            "textarea_text": "(Platzhalter) Seit 1992 wurden mehr als 12 Millionen PET-Flaschen verarbeitet, um Abfall zu minimieren -"
-          }
-        }
-      },
-      "block_order": [
-        "updates_card_PkERC",
-        "news_card_3YQdB"
-      ],
-      "name": "B2B News Updates"
-    },
     "b2b_news_highlight_LhrNM": {
       "type": "b2b_news_highlight",
       "disabled": false,
@@ -227,8 +183,6 @@
     "the_latest_XDCD3",
     "the_dicota_differenc_JXxMG",
     "reseller_promo_grid_ydyLg",
-    "b2b_news_highlight_LhrNM",
-    "b2b_news_updates_EaWiQ",
-    "rating_bar_qr8cYB"
+    "b2b_news_highlight_LhrNM"
   ]
 }
