@@ -9,13 +9,10 @@
         "reseller_hub": {
             "type": "reseller_hub",
             "blocks": {
-                "vorteil": {
-                    "type": "vorteil",
-                    "name": "Vorteil"
-                }
+   
             },
             "block_order": [
-                "vorteil"
+
             ]
         },
         "the_latest": {
