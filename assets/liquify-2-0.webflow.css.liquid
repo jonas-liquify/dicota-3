@@ -8493,6 +8493,17 @@ figcaption {
   gap: 0.25rem;
   flex-wrap: wrap;
 }
+/* Die Branch-Wrapper-Spans (mit `li-if="template == 'X'"`) sollen das
+   Flex-Layout NICHT brechen — ohne diese Regel würden die inneren
+   Elemente in einer Inline-Box stecken und der erste Block-Level-Inhalt
+   darin (z.B. `.product-breadcrumb_sep { display: flex }`) würde einen
+   Zeilenumbruch erzwingen. `display: contents` macht die Wrapper-Spans
+   layout-transparent, alle Branch-Children werden direkte Flex-Kinder
+   der nav. Greift auch in Production, da `li-if`-Attribute im
+   gerenderten Shopify-HTML bleiben. */
+.product-breadcrumb_nav span[li-if] {
+  display: contents;
+}
 .product-breadcrumb_link {
   font-size: 0.8125rem;
   color: inherit;
@@ -8500,7 +8511,7 @@ figcaption {
 }
 .product-breadcrumb_link:hover { text-decoration: underline; }
 .product-breadcrumb_sep {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   color: #999999;
 }
@@ -14694,9 +14705,6 @@ figcaption {
    Branches gleichzeitig (Vorschau-Artefakt), aber in Produktion stimmt's.
    ============================================================= */
 
-.nav_shop-icon.nav_shop-icon-cart.w-dropdown-toggle {
-  color: #ffffff;
-}
 /* Force navbar dropdown toggles + links to INHERIT navbar color
    (Webflow's `.w-dropdown-toggle { color: #222 }` from webflow.css
    would otherwise hard-set them to dark gray). */
