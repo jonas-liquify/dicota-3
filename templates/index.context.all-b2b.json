@@ -64,21 +64,6 @@
       ],
       "name": "Reseller Hub"
     },
-    "the_latest_XDCD3": {
-      "type": "the_latest",
-      "disabled": false,
-      "settings": {
-        "text_heading": "The Latest. Take a look at what's new, right now.",
-        "header-fb1f030b549e04036c3615608af9a086": null,
-        "padding_top": 80,
-        "padding_bottom": 80
-      },
-      "blocks": {
-      },
-      "block_order": [
-      ],
-      "name": "The Latest"
-    },
     "the_dicota_differenc_JXxMG": {
       "type": "the_dicota_differenc",
       "disabled": false,
@@ -146,7 +131,6 @@
     "reseller_hero_97i8b",
     "reseller_category_ro_WCArV",
     "reseller_hub_EwB6Y",
-    "the_latest_XDCD3",
     "the_dicota_differenc_JXxMG",
     "reseller_promo_grid_ydyLg",
     "b2b_news_highlight_LhrNM"
