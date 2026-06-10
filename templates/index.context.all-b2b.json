@@ -58,10 +58,8 @@
         "url_button_2_link": "",
         "text_button_2_text": "Registrieren"
       },
-      "blocks": {
-      },
-      "block_order": [
-      ],
+      "blocks": {},
+      "block_order": [],
       "name": "Reseller Hub"
     },
     "the_dicota_differenc_JXxMG": {
@@ -98,10 +96,8 @@
       "type": "reseller_promo_grid",
       "disabled": false,
       "settings": {},
-      "blocks": {
-      },
-      "block_order": [
-      ],
+      "blocks": {},
+      "block_order": [],
       "name": "Reseller Promo Grid"
     },
     "b2b_news_highlight_LhrNM": {

@@ -11,6 +11,62 @@
   "type": "header",
   "name": "Header Group",
   "sections": {
+    "announcement_bar_YPJcxP": {
+      "type": "announcement_bar",
+      "blocks": {
+        "usp_VQEH4V": {
+          "type": "usp",
+          "name": "USP",
+          "settings": {
+            "text_text": "Gratis Versand ab 100 EUR"
+          },
+          "blocks": {}
+        },
+        "usp_LWymfg": {
+          "type": "usp",
+          "settings": {
+            "text_text": "Gratis Versand ab 100 EUR"
+          },
+          "blocks": {}
+        },
+        "rechte-seite": {
+          "type": "rechte-seite",
+          "static": true,
+          "settings": {},
+          "blocks": {
+            "link_FwVW6k": {
+              "type": "link",
+              "name": "Link",
+              "settings": {
+                "url_link_url": "",
+                "text_link_text": "Über DICOTA",
+                "highlighted": false
+              },
+              "blocks": {}
+            },
+            "link_bkFDLT": {
+              "type": "link",
+              "settings": {
+                "url_link_url": "",
+                "text_link_text": "Über DICOTA",
+                "highlighted": false
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "link_FwVW6k",
+            "link_bkFDLT"
+          ]
+        }
+      },
+      "block_order": [
+        "usp_VQEH4V",
+        "usp_LWymfg"
+      ],
+      "name": "Announcement Bar",
+      "settings": {}
+    },
     "reseller_header_UNKmKg": {
       "type": "reseller_header",
       "blocks": {
@@ -58,7 +114,8 @@
         "url_contact_sales_link": "",
         "text_contact_sales_text": "Contact Sales",
         "url_login_link": "",
-        "text_login_text": "myDCT Login"
+        "text_login_text": "myDCT Login",
+        "reseller_menu": ""
       }
     },
     "header_kCAMUF": {
@@ -78,6 +135,7 @@
     }
   },
   "order": [
+    "announcement_bar_YPJcxP",
     "reseller_header_UNKmKg",
     "header_kCAMUF"
   ]
