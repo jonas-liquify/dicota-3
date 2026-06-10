@@ -59,14 +59,6 @@
         "text_button_2_text": "Registrieren"
       },
       "blocks": {
-        "vorteil_aptkx": {
-          "type": "vorteil",
-          "disabled": false,
-          "settings": {
-            "text_titel": "Marketing &amp; Sales",
-            "textarea_text": "Nutzen Sie die Tools und Ressourcen des Clubs für eine optimale Präsentation Ihres Sortiments — sowohl online als auch auf der Verkaufsfläche!"
-          }
-        }
       },
       "block_order": [
         "vorteil_aptkx"
