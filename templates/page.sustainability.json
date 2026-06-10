@@ -34,7 +34,6 @@
     "layout": "theme",
     "wrapper": "main.main-wrapper",
     "order": [
-        "announcement_bar",
         "background_image_her",
         "stats_strip",
         "image_text",
