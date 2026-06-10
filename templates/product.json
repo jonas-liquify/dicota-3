@@ -1,31 +1,5 @@
 {
     "sections": {
-        "announcement_bar": {
-            "type": "announcement_bar",
-            "blocks": {
-                "usp": {
-                    "type": "usp",
-                    "name": "USP"
-                },
-                "rechte-seite": {
-                    "name": "Rechte Seite",
-                    "type": "rechte-seite",
-                    "static": true,
-                    "blocks": {
-                        "link": {
-                            "type": "link",
-                            "name": "Link"
-                        }
-                    },
-                    "block_order": [
-                        "link"
-                    ]
-                }
-            },
-            "block_order": [
-                "usp"
-            ]
-        },
         "product_breadcrumb": {
             "type": "product_breadcrumb"
         },
@@ -149,27 +123,11 @@
         },
         "product_faq": {
             "type": "product_faq"
-        },
-        "footer_newsletter": {
-            "type": "footer_newsletter"
-        },
-        "footer_bottom": {
-            "type": "footer_bottom",
-            "blocks": {
-                "social": {
-                    "type": "social",
-                    "name": "Social"
-                }
-            },
-            "block_order": [
-                "social"
-            ]
         }
     },
     "layout": "theme",
     "wrapper": "main.main-wrapper",
     "order": [
-        "announcement_bar",
         "product_breadcrumb",
         "product_header",
         "product_usp_bar",
@@ -181,8 +139,6 @@
         "add_to_your_kit",
         "recommended_products",
         "product_reviews",
-        "product_faq",
-        "footer_newsletter",
-        "footer_bottom"
+        "product_faq"
     ]
 }

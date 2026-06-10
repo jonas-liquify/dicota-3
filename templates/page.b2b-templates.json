@@ -1,31 +1,5 @@
 {
     "sections": {
-        "announcement_bar": {
-            "type": "announcement_bar",
-            "blocks": {
-                "usp": {
-                    "type": "usp",
-                    "name": "USP"
-                },
-                "rechte-seite": {
-                    "name": "Rechte Seite",
-                    "type": "rechte-seite",
-                    "static": true,
-                    "blocks": {
-                        "link": {
-                            "type": "link",
-                            "name": "Link"
-                        }
-                    },
-                    "block_order": [
-                        "link"
-                    ]
-                }
-            },
-            "block_order": [
-                "usp"
-            ]
-        },
         "b2b_subnav": {
             "type": "b2b_subnav"
         },
@@ -150,27 +124,11 @@
             "block_order": [
                 "b2b-tpl-banner"
             ]
-        },
-        "footer_newsletter": {
-            "type": "footer_newsletter"
-        },
-        "footer_bottom": {
-            "type": "footer_bottom",
-            "blocks": {
-                "social": {
-                    "type": "social",
-                    "name": "Social"
-                }
-            },
-            "block_order": [
-                "social"
-            ]
         }
     },
     "layout": "theme",
     "wrapper": "main.main-wrapper",
     "order": [
-        "announcement_bar",
         "b2b_subnav",
         "b2b_tpl_hero",
         "b2b_tpl_card_grid",
@@ -183,8 +141,6 @@
         "b2b_tpl_downloads",
         "b2b_tpl_banner_1x",
         "b2b_tpl_banner_wide",
-        "b2b_tpl_banner_2x",
-        "footer_newsletter",
-        "footer_bottom"
+        "b2b_tpl_banner_2x"
     ]
 }

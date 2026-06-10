@@ -1,31 +1,5 @@
 {
     "sections": {
-        "announcement_bar": {
-            "type": "announcement_bar",
-            "blocks": {
-                "usp": {
-                    "type": "usp",
-                    "name": "USP"
-                },
-                "rechte-seite": {
-                    "name": "Rechte Seite",
-                    "type": "rechte-seite",
-                    "static": true,
-                    "blocks": {
-                        "link": {
-                            "type": "link",
-                            "name": "Link"
-                        }
-                    },
-                    "block_order": [
-                        "link"
-                    ]
-                }
-            },
-            "block_order": [
-                "usp"
-            ]
-        },
         "two_column_hero": {
             "type": "two_column_hero"
         },
@@ -103,35 +77,17 @@
             "block_order": [
                 "karte"
             ]
-        },
-        "footer_newsletter": {
-            "type": "footer_newsletter"
-        },
-        "footer_bottom": {
-            "type": "footer_bottom",
-            "blocks": {
-                "social": {
-                    "type": "social",
-                    "name": "Social"
-                }
-            },
-            "block_order": [
-                "social"
-            ]
         }
     },
     "layout": "theme",
     "wrapper": "main.main-wrapper",
     "order": [
-        "announcement_bar",
         "two_column_hero",
         "boxed_image",
         "feature_card_grid",
         "history_timeline",
         "owner_spotlight",
         "discover_banner",
-        "triple_cards",
-        "footer_newsletter",
-        "footer_bottom"
+        "triple_cards"
     ]
 }

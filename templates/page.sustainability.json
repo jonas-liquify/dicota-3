@@ -1,31 +1,5 @@
 {
     "sections": {
-        "announcement_bar": {
-            "type": "announcement_bar",
-            "blocks": {
-                "usp": {
-                    "type": "usp",
-                    "name": "USP"
-                },
-                "rechte-seite": {
-                    "name": "Rechte Seite",
-                    "type": "rechte-seite",
-                    "static": true,
-                    "blocks": {
-                        "link": {
-                            "type": "link",
-                            "name": "Link"
-                        }
-                    },
-                    "block_order": [
-                        "link"
-                    ]
-                }
-            },
-            "block_order": [
-                "usp"
-            ]
-        },
         "background_image_her": {
             "type": "background_image_her"
         },
@@ -55,21 +29,6 @@
             "block_order": [
                 "karte"
             ]
-        },
-        "footer_newsletter": {
-            "type": "footer_newsletter"
-        },
-        "footer_bottom": {
-            "type": "footer_bottom",
-            "blocks": {
-                "social": {
-                    "type": "social",
-                    "name": "Social"
-                }
-            },
-            "block_order": [
-                "social"
-            ]
         }
     },
     "layout": "theme",
@@ -79,8 +38,6 @@
         "background_image_her",
         "stats_strip",
         "image_text",
-        "triple_cards",
-        "footer_newsletter",
-        "footer_bottom"
+        "triple_cards"
     ]
 }
