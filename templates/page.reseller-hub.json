@@ -75,7 +75,7 @@
             ]
         }
     },
-    "layout": "reseller-hub",
+    "layout": "page.reseller-hub",
     "wrapper": "main.main-wrapper",
     "order": [
         "reseller_hero",
