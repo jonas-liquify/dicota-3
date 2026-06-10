@@ -65,13 +65,14 @@
       "type": "header",
       "name": "Header",
       "settings": {
+        "image_logo": "shopify://shop_images/DICOTA_Logo_Black_50fefa8e-4fdf-4b7a-9fef-188442185399.png",
         "url_promo_link": "",
         "text_promo_headline": "Weigh Darker™ Moon Bag Ruffle",
         "textarea_promo_text": "Raffiniertes Design. Recycelte Materialien.",
         "text_promo_button_text": "Jetzt shoppen",
         "text_suche_placeholder": "Suche nach Bags, Größe...",
         "url_wishlist_link": "",
-        "menu": "main-menu",
+        "menu": "main-menu-d2c",
         "transparent_over_first": false
       }
     }
