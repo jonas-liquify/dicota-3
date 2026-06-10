@@ -1,0 +1,15 @@
+{
+  "cart": {
+    "heading": "Cart",
+    "empty": "Your cart is empty",
+    "get_free_shipping": "Unlock free shipping",
+    "still": "Only",
+    "to_free_shipping": "away from free shipping",
+    "free_shipping_heading": "Free shipping unlocked",
+    "free_shipping_text": "You qualify for free shipping on this order.",
+    "total_price": "Subtotal",
+    "shipping_fee": "Shipping",
+    "free": "Free",
+    "go_to_checkout": "Checkout"
+  }
+}

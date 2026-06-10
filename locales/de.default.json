@@ -1,0 +1,15 @@
+{
+  "cart": {
+    "heading": "Warenkorb",
+    "empty": "Dein Warenkorb ist leer",
+    "get_free_shipping": "Sichere dir den Gratis-Versand",
+    "still": "Noch",
+    "to_free_shipping": "bis Gratis-Versand",
+    "free_shipping_heading": "Gratis-Versand freigeschaltet",
+    "free_shipping_text": "Du erhältst kostenlosen Versand auf diese Bestellung.",
+    "total_price": "Zwischensumme",
+    "shipping_fee": "Versand",
+    "free": "Gratis",
+    "go_to_checkout": "Zur Kasse"
+  }
+}
