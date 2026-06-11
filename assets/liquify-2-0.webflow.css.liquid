@@ -9216,7 +9216,7 @@ figcaption {
 
 .product-header_gallery {
   display: grid;
-  grid-template-columns: 1fr 280px;
+  grid-template-columns: 1fr 90px;
   gap: 8px;
   align-items: stretch;
   position: sticky;
@@ -14416,25 +14416,24 @@ figcaption {
   max-height: 80vh;
   padding: 0;
   overflow: auto;
-}
-/* Belt-and-braces: force closed dropdown to be FULLY hidden + non-interactive,
-   even if some other CSS or Webflow IX2 tries to keep it visible via inline
-   opacity/display. Without .w--open, this dropdown must not block underlying clicks. */
-.section_navbar .nav_dropdown-list.nav_mega:not(.w--open) {
-  display: none !important;
-  pointer-events: none !important;
-  visibility: hidden !important;
-}
-.section_navbar .nav_dropdown-list.nav_mega.w--open {
-  display: grid;
+  /* Immer als Grid dargestellt — opacity+visibility statt display-Toggle */
+  display: grid !important;
   grid-template-columns: 1fr 1fr;
   gap: 0;
   position: absolute;
   inset: 100% 0 auto 0;
   z-index: 80;
+  transform: none !important;
+  /* Geschlossen: unsichtbar + keine Interaktion */
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity .12s ease, visibility .12s ease;
+}
+.section_navbar .nav_dropdown-list.nav_mega.w--open {
   opacity: 1;
-  transform: none;
-  transition: opacity .2s ease;
+  visibility: visible;
+  pointer-events: auto;
 }
 /* Ensure the navbar component is the positioning context for the dropdown
    so it sticks below the nav bar instead of the viewport top. We also
@@ -14935,6 +14934,7 @@ figcaption {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  aspect-ratio: auto;
 }
 
 /* Mobile / Tablet — vertikal stacken, Thumbs horizontal unter Big Image */
@@ -15760,4 +15760,127 @@ figcaption {
   .nav_mega-promo-headline { font-size: 1.25rem; }
   .rating-bar_inner { flex-wrap: wrap; justify-content: center; gap: .5rem .75rem; }
   .rating-bar_divider { display: none; }
+}
+
+/* =============================================================
+   LOVED BY CUSTOMERS — Headline als injizierter erster Slide (Mobile)
+   ============================================================= */
+
+/* Injizierter Slide erbt das Styling des standalone Headline-Tiles */
+.loved-by_slide-headline {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  flex-shrink: 0;
+}
+
+/* =============================================================
+   MINI-CART — Fehlende & aliasierte Styles
+   ============================================================= */
+
+/* Header-Zeile (CART-Titel + Schließen-Button) */
+.nav_dropdown-header {
+  border-bottom: 1px solid var(--base-color-neutral--neutral-lightest);
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+}
+
+/* Kreisrunder X-Button */
+.mini-cart_close {
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+/* Leerer Warenkorb */
+.mini-cart_empty {
+  flex-direction: column;
+  flex: 1;
+  justify-content: flex-start;
+  display: flex;
+}
+
+/* Zeilen innerhalb product-info (Titel+Preis / Menge+Löschen) */
+.mini-cart_line-item-content {
+  grid-column-gap: .5rem;
+  grid-row-gap: .5rem;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  display: flex;
+}
+.mini-cart_line-item-content.justify-center {
+  align-items: center;
+}
+
+/* Löschen-Button */
+.mini-cart_line-item-remove {
+  color: var(--base-color-neutral--neutral-light);
+  cursor: pointer;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+}
+.mini-cart_line-item-remove:hover {
+  color: var(--base-color-neutral--black);
+}
+
+/* Footer-Summen-Zeile (HTML nutzt _total, CSS hatte -total) */
+.mini-cart_footer_total {
+  justify-content: space-between;
+  align-items: flex-end;
+  display: flex;
+}
+
+/* Preis-Block in der Footer-Zeile */
+.mini-cart_footer-sum {
+  grid-column-gap: .25rem;
+  grid-row-gap: .25rem;
+  flex-direction: column;
+  align-items: flex-end;
+  display: flex;
+}
+
+/* Versand-Progress-Bar Container */
+.mini-cart_footer_progress-component {
+  grid-row-gap: .5rem;
+  border-bottom: 1px solid var(--base-color-neutral--neutral-lightest);
+  flex-direction: column;
+  padding: 1rem 1.5rem;
+  display: flex;
+}
+
+/* Progress-Bar Spur */
+.mini-cart_footer_progress-bar {
+  background-color: var(--base-color-neutral--neutral-lightest);
+  border-radius: 100px;
+  width: 100%;
+  height: .375rem;
+  overflow: hidden;
+}
+
+/* Progress-Bar Füllung */
+.mini-cart_footer_progress-bar-innner {
+  background-color: var(--base-color-brand--blue);
+  border-radius: 100px;
+  height: 100%;
+  max-width: 100%;
+  transition: width .4s ease;
+}
+
+/* Checkout-Button in Marken-Blau */
+.button.is-blue {
+  background-color: var(--base-color-brand--blue);
+  border-color: var(--base-color-brand--blue);
+  color: #fff;
+}
+.button.is-blue:hover {
+  background-color: var(--base-color-brand--blue-dark);
+  border-color: var(--base-color-brand--blue-dark);
 }
