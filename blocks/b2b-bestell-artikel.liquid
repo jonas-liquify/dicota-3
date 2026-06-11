@@ -1,0 +1,51 @@
+<div li-block="B2B Bestell-Artikel" role="row" class="mkt-order_row" x-data="{ qty: 0 }" {{ block.shopify_attributes }}>
+                    <div role="cell" class="mkt-order_cell mkt-order_cell-img">{% if block.settings.image_bild %}
+{{ block.settings.image_bild | image_url: width: 200 | image_tag: loading: 'lazy', class: 'mkt-order_img' }}
+{% else %}
+<img src="{{ 'product-apparel-2.svg' | asset_url }}" loading="lazy" alt="" class="mkt-order_img">
+{% endif %}</div>
+                    <div role="cell" class="mkt-order_cell mkt-order_cell-desc"><span class="text-size-regular text-weight-medium">
+{{ block.settings.text_bezeichnung }}
+</span></div>
+                    <div role="cell" class="mkt-order_cell mkt-order_cell-art"><span class="text-size-regular">
+{{ block.settings.text_art_nr }}
+</span></div>
+                    <div role="cell" class="mkt-order_cell mkt-order_cell-price"><span class="text-size-regular text-weight-medium">
+{{ block.settings.text_preis }}
+</span></div>
+                    <div role="cell" class="mkt-order_cell mkt-order_cell-qty"><div class="mkt-order_qty"><button type="button" x-on:click="qty = Math.max(0, qty - 1)" aria-label="Menge verringern" class="mkt-order_qty-btn">−</button><input type="number" x-model.number="qty" min="0" name="contact[{{ block.settings.bezeichnung }} ({{ block.settings.art_nr }}) — Menge]" class="mkt-order_qty-input"><button type="button" x-on:click="qty = qty + 1" aria-label="Menge erhöhen" class="mkt-order_qty-btn">+</button></div></div>
+                </div> {% schema %} {
+    "name": "B2B Bestell-Artikel",
+    "settings": [
+        {
+            "id": "image_bild",
+            "type": "image_picker",
+            "label": "Bild"
+        },
+        {
+            "id": "text_bezeichnung",
+            "type": "text",
+            "label": "Bezeichnung",
+            "default": "Laptop Rucksack Slim Eco MOTION 13-15.6\""
+        },
+        {
+            "id": "text_art_nr",
+            "type": "text",
+            "label": "Art. Nr.",
+            "default": "MO223"
+        },
+        {
+            "id": "text_preis",
+            "type": "text",
+            "label": "Preis",
+            "default": "Free*"
+        }
+    ],
+    "presets": [
+        {
+            "name": "B2B Bestell-Artikel",
+            "blocks": []
+        }
+    ],
+    "tag": null
+} {% endschema %}

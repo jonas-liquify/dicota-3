@@ -1,22 +1,48 @@
-<div class="padding-global padding-section-small"><div class="container-large"><div class="acc-default_wrapper"><div class="acc-default_flex-small"><ul role="list" class="breadcrumbs_component w-list-unstyled"><li class="breadcrumbs_item"><a li-object:href="routes.root_url" href="{{ routes.root_url }}" class="w-inline-block"><div class="text-size-regular">Home</div></a><div class="breadcrumbs_icon w-embed"><svg width="15" height="15" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="1.5" fill="none"></path></svg></div></li><li class="breadcrumbs_item"><div>
+<div class="padding-global padding-section-small"><div class="container-large"><div class="acc-default_wrapper"><div class="acc-default_flex-small"><ul role="list" class="breadcrumbs_component w-list-unstyled"><li class="breadcrumbs_item"><a li-object:href="routes.root_url" href="{{ routes.root_url }}" class="w-inline-block"><div class="text-size-regular">Home</div></a><div class="breadcrumbs_icon w-embed"><svg width="15" height="15" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="1.5" fill="none"></path></svg></div></li>{% if section.settings.breadcrumb_parent_label != blank %}    <li li-if="section.settings.breadcrumb_parent_label != blank" class="breadcrumbs_item">
+    <a href="{{ section.settings.url_breadcrumb_parent_link }}" class="w-inline-block"> <div class="text-size-regular">{{ section.settings.text_breadcrumb_parent_label }}</div> </a><div class="breadcrumbs_icon w-embed"><svg width="15" height="15" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="1.5" fill="none"></path></svg></div>    </li>
+{% endif %}<li class="breadcrumbs_item"><div>
 {{ section.settings.text_breadcrumb }}
 </div></li></ul><div class="default-flex-tiny"><h1 class="heading-style-h2">
 {{ section.settings.text_heading }}
-</h1><div class="text-size-medium max-width-large"> {{ section.settings.textarea_subheading }} </div></div><div li-cf-theme-blocks="" class="acc-triple">
+</h1><div class="text-size-medium max-width-large"> {{ section.settings.textarea_subheading }} </div></div>{% form 'contact', class: 'mkt-order_form' %}
+<div class="mkt-order_card mkt-order_table-card"><div role="row" class="mkt-order_thead"><div role="columnheader" class="mkt-order_th mkt-order_th-img"><span class="text-style-subline">
+{{ section.settings.text_spalte_article }}
+</span></div><div role="columnheader" class="mkt-order_th mkt-order_th-desc"><span class="text-style-subline">
+{{ section.settings.text_spalte_beschreibung }}
+</span></div><div role="columnheader" class="mkt-order_th mkt-order_th-art"><span class="text-style-subline">
+{{ section.settings.text_spalte_art_nr }}
+</span></div><div role="columnheader" class="mkt-order_th mkt-order_th-price"><span class="text-style-subline">
+{{ section.settings.text_spalte_preis }}
+</span></div><div role="columnheader" class="mkt-order_th mkt-order_th-qty"><span class="text-style-subline">
+{{ section.settings.text_spalte_menge }}
+</span></div></div><div li-cf-theme-blocks="" class="mkt-order_tbody">
 {% content_for 'blocks' %}
-</div></div></div></div></div> {% schema %} {
+</div></div><div class="mkt-order_card"><div class="mkt-order_field"><label for="mkt-order-date" class="mkt-order_label">{{ section.settings.field_date_label | default: 'Bevorzugtes Lieferdatum:' }}<span class="mkt-order_required" aria-hidden="true">*</span></label><p class="mkt-order_help"> {{ section.settings.textarea_datum_hinweistext }} </p><input type="date" id="mkt-order-date" name="contact[Lieferdatum]" required="" class="mkt-order_input"></div></div><div class="mkt-order_card"><div class="mkt-order_field"><label for="mkt-order-event" class="mkt-order_label">{{ section.settings.field_event_label | default: 'Event/Aktivität:' }}<span class="mkt-order_required" aria-hidden="true">*</span></label><p class="mkt-order_help"> {{ section.settings.textarea_event_hinweistext }} </p><textarea id="mkt-order-event" name="contact[Event/Aktivität]" placeholder="Schreiben Sie uns…" rows="4" required="" class="mkt-order_textarea"></textarea></div></div><div class="mkt-order_submit-row"><button type="submit" class="button mkt-order_submit w-button"><span>
+{{ section.settings.text_submit_button }}
+</span></button></div>{% endform %}</div></div></div></div> {% schema %} {
     "tag": "section",
     "name": "B2B Mkt Giveaways",
-    "class": "section_acc-default",
+    "class": "section_acc-default section_mkt-order",
     "blocks": [
         {
-            "type": "b2b-giveaway"
+            "type": "b2b-bestell-artikel"
         },
         {
             "type": "@app"
         }
     ],
     "settings": [
+        {
+            "id": "url_breadcrumb_parent_link",
+            "type": "url",
+            "label": "Breadcrumb Parent Link"
+        },
+        {
+            "id": "text_breadcrumb_parent_label",
+            "type": "text",
+            "label": "Breadcrumb Parent Label",
+            "default": "Marketing"
+        },
         {
             "id": "text_breadcrumb",
             "type": "text",
@@ -33,16 +59,100 @@
             "id": "textarea_subheading",
             "type": "textarea",
             "label": "Subheading",
-            "default": "Bestelle Giveaways, Flyer und Werbemittel f\u00fcr deine n\u00e4chste Aktion."
+            "default": "Bestelle Werbemittel, Flyer und Giveaways f\u00fcr deine n\u00e4chste Aktion. W\u00e4hle St\u00fcckzahlen und teile uns Lieferdatum und Anlass mit."
+        },
+        {
+            "id": "text_spalte_article",
+            "type": "text",
+            "label": "Spalte Article",
+            "default": "Article"
+        },
+        {
+            "id": "text_spalte_beschreibung",
+            "type": "text",
+            "label": "Spalte Beschreibung",
+            "default": "Beschreibung"
+        },
+        {
+            "id": "text_spalte_art_nr",
+            "type": "text",
+            "label": "Spalte Art. Nr.",
+            "default": "Art. No."
+        },
+        {
+            "id": "text_spalte_preis",
+            "type": "text",
+            "label": "Spalte Preis",
+            "default": "Price"
+        },
+        {
+            "id": "text_spalte_menge",
+            "type": "text",
+            "label": "Spalte Menge",
+            "default": "Amount"
+        },
+        {
+            "id": "textarea_datum_hinweistext",
+            "type": "textarea",
+            "label": "Datum Hinweistext",
+            "default": "Express-Lieferung wird zus\u00e4tzlich berechnet."
+        },
+        {
+            "id": "textarea_event_hinweistext",
+            "type": "textarea",
+            "label": "Event Hinweistext",
+            "default": "Wof\u00fcr ben\u00f6tigst du das Werbematerial?"
+        },
+        {
+            "id": "text_submit_button",
+            "type": "text",
+            "label": "Submit Button",
+            "default": "Jetzt absenden"
+        },
+        {
+            "type": "header",
+            "content": "Kopfbereich"
+        },
+        {
+            "type": "text",
+            "id": "breadcrumb_parent_label",
+            "label": "Breadcrumb Parent Label",
+            "info": "Optional. Falls leer wird die Ebene \u00fcbersprungen.",
+            "default": "Marketing"
+        },
+        {
+            "type": "url",
+            "id": "breadcrumb_parent_link",
+            "label": "Breadcrumb Parent Link"
+        },
+        {
+            "type": "header",
+            "content": "Formular-Labels"
+        },
+        {
+            "type": "text",
+            "id": "field_date_label",
+            "label": "Label Lieferdatum",
+            "default": "Bevorzugtes Lieferdatum:"
+        },
+        {
+            "type": "text",
+            "id": "field_event_label",
+            "label": "Label Event\/Aktivit\u00e4t",
+            "default": "Event\/Aktivit\u00e4t:"
+        },
+        {
+            "type": "paragraph",
+            "content": "Bei jedem Bestell-Artikel-Block werden die eingegebenen Mengen, Bezeichnung und Art.-Nr. als Felder ans Shopify-Contact-Formular gesendet. Du erh\u00e4ltst die Bestellung an die Shop-Kontakt-E-Mail."
         }
     ],
     "presets": [
         {
             "name": "B2B Mkt Giveaways",
-            "category": "_B2B",
+            "category": "_B2B Mkt",
             "blocks": [
                 {
-                    "type": "b2b-giveaway"
+                    "type": "b2b-bestell-artikel"
                 }
             ]
         }

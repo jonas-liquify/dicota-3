@@ -1,41 +1,79 @@
-{% if predictive_search.performed %}    <div li-if="predictive_search.performed" class="nav_search-results-grid">
-    {% if predictive_search.resources.queries.size > 0 or predictive_search.resources.collections.size > 0 %}    <div li-if="predictive_search.resources.queries.size > 0 or predictive_search.resources.collections.size > 0" class="nav_search-results-suggestions">
-    <div class="text-style-subline">
-{{ section.settings.text_suggestions_label }}
-</div><ul role="list" class="nav_search-suggestion-list w-list-unstyled">{% for query in predictive_search.resources.queries %}    <li li-for="query in predictive_search.resources.queries" class="nav_search-suggestion-item">
-                                    <a li-object:href="query.url" href="{{ query.url }}" class="nav_search-suggestion-link"><div li-object="query.styled_text">{{ query.styled_text }}</div></a>
-                        </li>
-{% endfor %}{% for collection in predictive_search.resources.collections %}    <li li-for="collection in predictive_search.resources.collections" class="nav_search-suggestion-item">
-                                    <a li-object:href="collection.url" href="{{ collection.url }}" class="nav_search-suggestion-link"><div li-object="collection.title">{{ collection.title }}</div></a>
-                        </li>
-{% endfor %}</ul>    </div>
-{% endif %}{% if predictive_search.resources.products.size > 0 %}    <div li-if="predictive_search.resources.products.size > 0" class="nav_search-results-products">
-    <ul role="list" class="nav_search-product-grid w-list-unstyled">{% for product in predictive_search.resources.products %}    <li li-for="product in predictive_search.resources.products" class="nav_search-product-item">
-                                    <a li-object:href="product.url" href="{{ product.url }}" class="nav_search-product-link"><div class="nav_search-product-image-wrap"><img li-object:src="product.featured_media | image_url: width: 400" li-object:alt="product.featured_image.alt" src="{{ product.featured_media | image_url: width: 400 }}" loading="lazy" alt="{{ product.featured_image.alt }}" class="nav_search-product-image"></div><div class="nav_search-product-info"><div li-object="product.title" class="nav_search-product-title text-size-regular text-weight-bold">{{ product.title }}</div>{% if product.vendor %}    <div li-if="product.vendor" li-object="product.vendor" class="nav_search-product-brand text-size-small text-style-muted">
-    Brand    </div>
-{% endif %}<div li-object="product.price | money" class="nav_search-product-price text-size-small">{{ product.price | money }}</div></div></a>
-                        </li>
-{% endfor %}</ul><a href="/search?q={{ predictive_search.terms }}" class="button is-outline nav_search-results-cta w-button"><span>Alle Produkte anzeigen (<span li-object="predictive_search.resources.products.size">{{ predictive_search.resources.products.size }}</span>)</span></a>    </div>
-{% endif %}    </div>
-{% endif %}{% if predictive_search.performed and predictive_search.resources.products.size == 0 %}    <div li-if="predictive_search.performed and predictive_search.resources.products.size == 0" class="nav_search-no-results">
-    <div class="text-style-muted">Keine Treffer für "<span li-object="predictive_search.terms">{{ predictive_search.terms }}</span>"</div>    </div>
-{% endif %} {% schema %} {
+<div x-show="!searchQuery || searchQuery.length === 0" class="nav_search-empty-grid"><div class="nav_search-empty-col"><div class="nav_search-empty-header"><div class="text-style-subline">Beliebte Suchanfragen</div></div><div class="nav_search-pills">{% for block in section.blocks %}
+    {% if block.type == "nav-search-suggestion" %}
+                    <div li-block="Nav Search Suggestion" style="display:contents">
+                                    <a href="{{ block.settings.url_link }}" class="nav_search-pill-item"> <span>{{ block.settings.text_text }}</span> </a>
+                            </div>
+            {% endif %}
+{% endfor %}</div></div><div class="nav_search-empty-col"><div class="nav_search-empty-header"><div class="text-style-subline">Kürzlich angeschaut</div><a href="#" class="text-style-link">Löschen</a></div><div class="nav_search-recent">{% for product in section.settings.collection_search_recent.products limit: section.settings.collection_search_recent_limit %}
+<div class="nav_search-recent-item">
+    <a li-object:href="product.url" href="{{ product.url }}" class="nav_search-recent-link"><img li-object:src="product.featured_image | image_url: width: 400" li-object:alt="product.featured_image.alt" src="{{ product.featured_image | image_url: width: 400 }}" loading="lazy" alt="{{ product.featured_image.alt }}" class="nav_search-recent-image"></a>
+</div>
+{% endfor %}</div></div></div><div x-cloak="" x-show="searchQuery && searchQuery.length > 0" class="nav_search-results-grid"><div class="nav_search-empty-col"><div class="text-style-subline">Vorschläge</div><ul role="list" class="nav_search-suggestion-list w-list-unstyled"><li class="nav_search-suggestion-item"><a href="#" class="nav_search-suggestion-link">Rucksäcke</a></li><li class="nav_search-suggestion-item"><a href="#" class="nav_search-suggestion-link">Taschen & Rucksäcke</a></li><li class="nav_search-suggestion-item"><a href="#" class="nav_search-suggestion-link">Auslaufprodukte: Taschen & Rucksäcke</a></li></ul></div><div class="nav_search-empty-col"><ul role="list" class="nav_search-product-grid w-list-unstyled">{% for product in section.settings.collection_search_bestseller.products limit: section.settings.collection_search_bestseller_limit %}
+<li role="listitem">
+    <a li-object:href="product.url" href="{{ product.url }}" class="nav_search-product-link"><div class="nav_search-product-image-wrap"><img li-object:src="product.featured_image | image_url: width: 400" li-object:alt="product.featured_image.alt" src="{{ product.featured_image | image_url: width: 400 }}" loading="lazy" alt="{{ product.featured_image.alt }}" class="nav_search-product-image"></div><div class="nav_search-product-info"><div li-object="product.title" class="nav_search-product-title text-size-small text-weight-medium">{{ product.title }}</div><div li-object="product.type" class="nav_search-product-brand text-size-tiny text-style-muted">{{ product.type }}</div><div li-object="product.price | money" class="text-size-small">{{ product.price | money }}</div></div></a>
+</li>
+{% endfor %}</ul><a href="/search" class="button is-outline nav_search-results-cta w-button"><span>Alle Produkte anzeigen</span></a></div></div> {% schema %} {
     "tag": "div",
     "name": "predictive_search",
-    "class": "nav_search-results-section",
+    "class": "nav_search-overlay-states",
+    "blocks": [
+        {
+            "name": "Nav Search Suggestion",
+            "type": "nav-search-suggestion",
+            "settings": [
+                {
+                    "id": "url_link",
+                    "type": "url",
+                    "label": "Link"
+                },
+                {
+                    "id": "text_text",
+                    "type": "text",
+                    "label": "Text",
+                    "default": "Rucks\u00e4cke"
+                }
+            ]
+        }
+    ],
     "settings": [
         {
-            "id": "text_suggestions_label",
-            "type": "text",
-            "label": "Suggestions Label",
-            "default": "Vorschl\u00e4ge"
+            "id": "collection_search_recent",
+            "type": "collection",
+            "label": "Search - Recent"
+        },
+        {
+            "type": "range",
+            "id": "collection_search_recent_limit",
+            "min": 1,
+            "max": 99,
+            "step": 1,
+            "label": "Limit: Search - Recent",
+            "default": 6
+        },
+        {
+            "id": "collection_search_bestseller",
+            "type": "collection",
+            "label": "Search - Bestseller"
+        },
+        {
+            "type": "range",
+            "id": "collection_search_bestseller_limit",
+            "min": 1,
+            "max": 99,
+            "step": 1,
+            "label": "Limit: Search - Bestseller",
+            "default": 6
         }
     ],
     "presets": [
         {
             "name": "predictive_search",
             "category": "Liquify",
-            "blocks": []
+            "blocks": [
+                {
+                    "type": "nav-search-suggestion"
+                }
+            ]
         }
     ]
 } {% endschema %}
