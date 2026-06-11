@@ -56,7 +56,7 @@
     var section=getSection();
     if(!section){warn('no section in DOM');return;}
     var sectionId=section.dataset.sectionId;
-    if(!sectionId||sectionId.indexOf('{{')!==-1){warn('sectionId missing or unevaluated:',sectionId,'&mdash; falling back to navigation');location.href=url;return;}
+    if(!sectionId||sectionId.indexOf('{'+'{'  )!==-1){warn('sectionId missing or unevaluated:',sectionId,'&mdash; falling back to navigation');location.href=url;return;}
     var target;try{target=new URL(url,location.origin);}catch(e){warn('invalid URL:',url);location.href=url;return;}
     var fetchUrl=new URL(target.toString());
     fetchUrl.searchParams.set('section_id',sectionId);
@@ -94,7 +94,7 @@
     if(!link){var pag=e.target.closest('[data-coll-pagination]');if(pag)link=e.target.closest('a');}
     if(!link)return;
     var href=link.getAttribute('href');
-    if(!href||href==='#'||href.indexOf('{{')!==-1){log('skipped link (no real href):',href);return;}
+    if(!href||href==='#'||href.indexOf('{'+'{'  )!==-1){log('skipped link (no real href):',href);return;}
     log('intercepting click on',href);
     e.preventDefault();
     renderFromUrl(link.href);
