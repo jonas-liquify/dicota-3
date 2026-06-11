@@ -16,7 +16,7 @@
 </div></div><div li-for:inside="pair in combo_pairs" class="product-header_radio-list">
         {% for pair in combo_pairs %}                            <div class="li-tag w-embed">{% assign parts = pair | split: '::' %}{% assign label = parts[0] %}{% assign url = parts[1] %}{% assign available = parts[2] %}</div>
                             {% unless label == blank or url == blank %}    <div li-unless="label == blank or url == blank">
-    <a li-object:href="url" href="{{ url }}" class="product-header_radio" style="{% if size_label == label %}background-color: black; color: white; border-color: black;{% endif %}{% unless available == 'true' %}opacity: 0.5;{% endunless %}"><div li-object="label" class="text-size-regular text-weight-normal">{{ label }}</div></a>    </div>
+    <a li-object:href="url" href="{{ url }}" class="product-header_radio" style="{% if size_label == label %}background-color: #f4f4f4; border-color: #0f0f0f; color: #0f0f0f;{% endif %}{% unless available == 'true' %}opacity: 0.5;{% endunless %}"><div li-object="label" class="text-size-regular text-weight-normal">{{ label }}</div></a>    </div>
 {% endunless %}
                     {% endfor %}    </div>    </div>
 {% endif %}{% if color_pairs.size > 1 %}    <div li-if="color_pairs.size > 1" class="produkt_swatch-component">
@@ -25,7 +25,7 @@
 </div></div><div li-for:inside="pair in color_pairs" class="product-header_radio-list">
         {% for pair in color_pairs %}                            <div class="li-tag w-embed">{% assign parts = pair | split: '::' %}{% assign color = parts[0] %}{% assign url = parts[1] %}{% assign available = parts[2] %}</div>
                             {% unless color == blank or url == blank %}    <div li-unless="color == blank or url == blank">
-    <a li-object:href="url" href="{{ url }}" class="product-header_radio" style="{% if product.metafields.sl_ART.extra_PRODUCTCOLOUR.value == color %}background-color: black; color: white; border-color: black;{% endif %}{% unless available == 'true' %}opacity: 0.5;{% endunless %}"><div li-object="color" class="text-size-regular text-weight-normal">{{ color }}</div></a>    </div>
+    <a li-object:href="url" href="{{ url }}" class="product-header_radio" style="{% if product.metafields.sl_ART.extra_PRODUCTCOLOUR.value == color %}background-color: #f4f4f4; border-color: #0f0f0f; color: #0f0f0f;{% endif %}{% unless available == 'true' %}opacity: 0.5;{% endunless %}"><div li-object="color" class="text-size-regular text-weight-normal">{{ color }}</div></a>    </div>
 {% endunless %}
                     {% endfor %}    </div>    </div>
 {% endif %}    </div>
@@ -45,7 +45,7 @@
 </div></div><div li-for:inside="pair in segment_pairs" class="product-header_radio-list">
         {% for pair in segment_pairs %}                            <div class="li-tag w-embed">{% assign parts = pair | split: '::' %}{% assign seg = parts[0] %}{% assign url = parts[1] %}{% assign available = parts[2] %}</div>
                             {% unless seg == blank or url == blank %}    <div li-unless="seg == blank or url == blank">
-    <a li-object:href="url" href="{{ url }}" class="product-header_radio" style="{% if product.metafields.sl_ART.extra_PRODUCTSEGMENT.value == seg %}background-color: black; color: white; border-color: black;{% endif %}{% unless available == 'true' %}opacity: 0.5;{% endunless %}"><div li-object="seg" class="text-size-regular text-weight-normal">{{ seg }}</div></a>    </div>
+    <a li-object:href="url" href="{{ url }}" class="product-header_radio" style="{% if product.metafields.sl_ART.extra_PRODUCTSEGMENT.value == seg %}background-color: #f4f4f4; border-color: #0f0f0f; color: #0f0f0f;{% endif %}{% unless available == 'true' %}opacity: 0.5;{% endunless %}"><div li-object="seg" class="text-size-regular text-weight-normal">{{ seg }}</div></a>    </div>
 {% endunless %}
                     {% endfor %}    </div>    </div>
 {% endif %}{% if contype_pairs.size > 1 %}    <div li-if="contype_pairs.size > 1" class="produkt_swatch-component">
@@ -54,7 +54,7 @@
 </div></div><div li-for:inside="pair in contype_pairs" class="product-header_radio-list">
         {% for pair in contype_pairs %}                            <div class="li-tag w-embed">{% assign parts = pair | split: '::' %}{% assign ctype = parts[0] %}{% assign url = parts[1] %}{% assign available = parts[2] %}</div>
                             {% unless ctype == blank or url == blank %}    <div li-unless="ctype == blank or url == blank">
-    <a li-object:href="url" href="{{ url }}" class="product-header_radio" style="{% if product.metafields.sl_ART.extra_CONSTRUCTIONTYPE.value == ctype %}background-color: black; color: white; border-color: black;{% endif %}{% unless available == 'true' %}opacity: 0.5;{% endunless %}"><div li-object="ctype" class="text-size-regular text-weight-normal">{{ ctype }}</div></a>    </div>
+    <a li-object:href="url" href="{{ url }}" class="product-header_radio" style="{% if product.metafields.sl_ART.extra_CONSTRUCTIONTYPE.value == ctype %}background-color: #f4f4f4; border-color: #0f0f0f; color: #0f0f0f;{% endif %}{% unless available == 'true' %}opacity: 0.5;{% endunless %}"><div li-object="ctype" class="text-size-regular text-weight-normal">{{ ctype }}</div></a>    </div>
 {% endunless %}
                     {% endfor %}    </div>    </div>
 {% endif %}    </div>

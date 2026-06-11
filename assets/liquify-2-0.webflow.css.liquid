@@ -802,7 +802,7 @@ figcaption {
 }
 
 .section_navbar {
-  z-index: 10;
+  z-index: 1000;
   background-color: var(--base-color-neutral--white);
   position: sticky;
   top: 0;
@@ -1787,19 +1787,7 @@ figcaption {
 }
 
 .swiper.is-product-gallery {
-  flex: 1;
-  height: 100%;
-  min-height: 0;
-  overflow: hidden;
   width: 100%;
-}
-.swiper.is-product-gallery > .swiper-wrapper,
-.swiper.is-product-gallery > .swiper-wrapper > .swiper-slide {
-  height: 100% !important;   /* override Swiper's inline content-sized height */
-}
-
-.swiper.is-product-thumbnail {
-  height: 100%;
   position: relative;
   overflow: hidden;
 }
@@ -1809,12 +1797,12 @@ figcaption {
   display: flex;
 }
 
+/* Desktop (Figma 5404-6245): gestapeltes Galerie-Layout — Hauptbild links
+   (~63%), weitere Bilder als Quadrate rechts (~36%). Kein Swiper aktiv. */
 .swiper-wrapper.is-product-gallery {
-  height: auto;
-}
-
-.swiper-wrapper.is-product-thumbnail {
+  display: flow-root;
   width: 100%;
+  height: auto;
 }
 
 .swiper-slide {
@@ -1826,21 +1814,33 @@ figcaption {
 }
 
 .swiper-slide.is-product-gallery {
-  width: 100%;
-}
-
-.swiper-slide.is-product-thumbnail {
-  width: 100%;
-  height: 84px;
-  position: relative;
-  margin-bottom: 8px;
-  cursor: pointer;
+  width: 36.4%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  margin-left: auto;
+  margin-bottom: 6px;
   overflow: hidden;
 }
 
-.swiper-slide.is-product-thumbnail.is-active {
-  border: 1px solid var(--accessible-components-dark-grey\<deleted\|variable-c4d8099c\>);
-  border-color: #111;
+.swiper-slide.is-product-gallery:first-child {
+  float: left;
+  width: calc(63.6% - 6px);
+  aspect-ratio: 545 / 606;
+  margin-left: 0;
+  margin-bottom: 0;
+}
+
+/* Rechte Spalte: Fotos füllen das Quadrat (cover), kein Innenabstand */
+.swiper-slide.is-product-gallery:not(:first-child) .product-header_gallery-lightbox {
+  padding: 0;
+}
+.swiper-slide.is-product-gallery:not(:first-child) .product-header_gallery-image {
+  object-fit: cover;
+}
+
+/* Mobile Progressbar-Pagination (nur < 992px sichtbar) */
+.ph_gallery-progress {
+  display: none;
 }
 
 .swiper_button-wrapper {
@@ -2137,16 +2137,17 @@ figcaption {
 
 .product-header_radio {
   background-color: #ffffff;
-  padding: 0.5rem 0.875rem;
-  font-weight: 500;
+  padding: 0.125rem 0.875rem;
+  font-weight: 600;
   position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid #d0d0d0;
-  color: #0f0f0f;
+  border: 1px solid transparent;
+  color: #686868;
   text-decoration: none;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
+  line-height: 1.5;
   cursor: pointer;
   transition: background-color 0.15s, border-color 0.15s, color 0.15s;
 }
@@ -4080,24 +4081,58 @@ figcaption {
     position: static;
     top: auto;
     height: auto;
-    grid-template-columns: none;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    align-items: stretch;
+    display: block;
   }
+  /* Mobile (Figma 5407-24728): vollbreiter 1-Slide-Swiper mit Progressbar */
   .swiper.is-product-gallery {
-    height: 70vw;
-    max-height: 500px;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    max-height: 520px;
+  }
+  .swiper-wrapper.is-product-gallery {
+    display: flex;
+    height: 100%;
+  }
+  .swiper-slide.is-product-gallery {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: auto;
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+  .swiper-slide.is-product-gallery:first-child {
+    float: none;
+    width: 100%;
+    aspect-ratio: auto;
+  }
+  .swiper-slide.is-product-gallery:not(:first-child) .product-header_gallery-lightbox {
+    padding: 1rem;
+  }
+  .swiper-slide.is-product-gallery:not(:first-child) .product-header_gallery-image {
+    object-fit: contain;
   }
   .product-header_gallery-lightbox {
     height: 100%;
     padding: 1rem;
   }
-  .product-header_thumbs {
-    height: 70vw;
-    max-height: 500px;
+  .ph_gallery-progress {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: auto;
+    height: 3px;
+    background-color: rgba(15, 15, 15, .08);
+    z-index: 5;
+  }
+  .ph_gallery-progress .swiper-pagination-progressbar-fill {
+    position: absolute;
+    inset: 0;
+    transform-origin: left top;
+    background-color: #0f0f0f;
   }
   .product-header_details {
     padding: 2rem 2.5rem;
@@ -4425,33 +4460,6 @@ figcaption {
   }
   .reseller-header_btn-outline,
   .reseller-header_btn-solid { padding: 0.625rem 1rem; font-size: 0.8125rem; }
-  .product-header_gallery > .swiper.is-product-gallery {
-    order: 1;
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    height: auto !important;
-    max-height: 520px;
-  }
-  .product-header_gallery > .product-header_thumbs {
-    order: 2;
-    width: 100%;
-    height: auto !important;
-    max-height: none !important;
-    overflow: hidden;
-  }
-  .product-header_gallery > .product-header_thumbs > .swiper.is-product-thumbnail {
-    width: 100%;
-    height: auto;
-  }
-  .swiper-wrapper.is-product-thumbnail {
-    flex-direction: row;
-  }
-  .swiper-slide.is-product-thumbnail {
-    width: 4.5rem;
-    height: 4.5rem;
-    aspect-ratio: 1 / 1;
-  }
-
   /* ── Touch-Target-Mindestgrößen (Mobile/Tablet) ──
      Icon-Buttons bekommen ≥40px Tap-Area; das sichtbare Icon bleibt klein,
      der Button wächst über Padding/Min-Size. */
@@ -4994,16 +5002,17 @@ figcaption {
   .swiper-slide.is-add-to-kit {
     width: 180px;
   }
-  .product-header_gallery {
-    grid-template-columns: 1fr 100px;
+  /* Varianten-Auswahl mobile (Figma): große 50%-Boxen mit Border */
+  .product-header_radio-list > div:not(.li-tag) {
+    flex: 1 1 calc(50% - .25rem);
+    display: flex;
   }
-  .swiper.is-product-gallery {
-    height: 75vw;
-    max-height: 420px;
-  }
-  .product-header_thumbs {
-    height: 75vw;
-    max-height: 420px;
+  .product-header_radio {
+    flex: 1;
+    min-height: 2.75rem;
+    font-size: .875rem;
+    border-color: #e0e0e0;
+    color: #0f0f0f;
   }
   .ph_price-row {
     flex-direction: column;
@@ -5127,10 +5136,6 @@ figcaption {
   .value-tabs_link, .value-tabs_pane { grid-column: 1; }
   .value-tabs_pane {
     grid-row: auto;
-  }
-  .swiper-slide.is-product-thumbnail {
-    width: 4rem;
-    height: 4rem;
   }
 }
 
@@ -5286,9 +5291,6 @@ figcaption {
   .swiper_button.swiper-next.pointer-events-on {
     width: 2.5rem;
     height: 2.5rem;
-  }
-  .product-header_gallery-image {
-    height: 22rem;
   }
   .spacer-xsmall {
     padding-top: .75rem;
@@ -5499,9 +5501,6 @@ figcaption {
   .produkt_swatch-lable.is-max {
     max-width: 4.5rem;
   }
-  .product-header_gallery {
-    grid-template-columns: 1fr 72px;
-  }
   .product-header_details {
     padding: 1.5rem 1.25rem;
   }
@@ -5705,10 +5704,6 @@ figcaption {
   }
   .rating-bar_divider {
     display: none;
-  }
-  .swiper-slide.is-product-thumbnail {
-    width: 3.5rem;
-    height: 3.5rem;
   }
 }
 
@@ -6139,11 +6134,29 @@ figcaption {
   display: flex;
 }
 
-.announcement-bar_lang .li-lang_dd-toggle {
+/* Compound selector: both classes are on the SAME element */
+.li-lang_dd-toggle.announcement-bar_lang {
   grid-column-gap: .5rem;
   color: inherit;
+  background-color: transparent;
+  border: none;
+  padding: 0 .5rem;
   align-items: center;
   display: flex;
+}
+
+/* Chevron inside the lang toggle */
+.announcement-bar_lang .dropdown-icon {
+  position: static;
+  width: 1rem;
+  height: 1rem;
+  margin: 0;
+}
+
+/* Dropdown opens downward in the top bar */
+.section_announcement-bar .li-lang_dd-list.w--open {
+  bottom: auto;
+  top: 100%;
 }
 
 .announcement-bar_lang-flag {
@@ -9215,23 +9228,12 @@ figcaption {
 /* ── Layout ──────────────────────────────────────────────── */
 
 .product-header_gallery {
-  display: grid;
-  grid-template-columns: 1fr 90px;
-  gap: 8px;
-  align-items: stretch;
-  position: sticky;
-  top: 72px;
+  display: block;
   flex: 1 1 auto;
   min-width: 0;
-  height: clamp(480px, 64vh, 720px);
 }
 
 /* ── Gallery ─────────────────────────────────────────────── */
-
-/* ── Thumbnail strip (vertical) — height determined by content ──── */
-.product-header_thumbs {
-  padding: 0;
-}
 
 /* ── Product Details column ──────────────────────────────── */
 /* Fixed comfortable reading width — gallery grows to fill the rest
@@ -14899,47 +14901,6 @@ figcaption {
 }
 
 /* =============================================================
-   DICOTA PDP — Product Hero Gallery
-   Desktop (≥992px): big image LEFT, vertical thumb-strip RIGHT.
-     - Höhe wird vom Big Image bestimmt (aspect-ratio 1:1), NICHT
-       von der Anzahl der Thumbs → keine unschöne Streckung mehr.
-     - Thumb-Strip scrollt intern (Swiper freeMode) wenn mehr
-       Thumbs als sichtbar reinpassen.
-   ≤991px: stack — big image oben, horizontale Thumbs unten.
-   ============================================================= */
-
-/* Desktop base — fester Gallery-Container-Höhenrahmen.
-   Sowohl Big-Image als auch Thumb-Strip teilen sich diese Höhe (align-items: stretch
-   ist Grid-Default), so kann die Thumb-Anzahl die Höhe NIE noch hochziehen.
-   Big-Image füllt die Zelle, das eingebettete <img> nutzt object-fit: contain
-   und bleibt damit auch bei nicht-quadratischer Zellengröße proportional. */
-
-.product-header_gallery > .swiper.is-product-gallery {
-  height: 100% !important;
-  max-height: 100%;
-  min-height: 0;
-  aspect-ratio: auto;
-}
-.product-header_gallery > .product-header_thumbs {
-  height: 100%;
-  max-height: 100%;
-  overflow: hidden;
-}
-.product-header_gallery > .product-header_thumbs > .swiper.is-product-thumbnail {
-  height: 100%;
-}
-/* Thumb-Slide Dimensionen für vertikales Layout (Desktop) */
-
-.swiper-slide.is-product-thumbnail .product-header_thumbnail-image {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  aspect-ratio: auto;
-}
-
-/* Mobile / Tablet — vertikal stacken, Thumbs horizontal unter Big Image */
-
-/* =============================================================
    DICOTA — Order Marketing Material (B2B/Acc Mkt Giveaways)
    Bestellformular mit Item-Tabelle + Lieferdatum + Event-Beschreibung.
    Layout-Pattern: Karten mit hellgrauem Hintergrund auf weißer Section.
@@ -15475,8 +15436,7 @@ figcaption {
   .product-comparison_table { min-width: 420px; }
   .product-reviews_layout { grid-template-columns: 1fr; }
   .product-reviews_summary { position: static; }
-  .product-header_gallery { position: static; top: auto; height: auto; grid-template-columns: none; width: 100%; display: flex; flex-direction: column; gap: 0.5rem; align-items: stretch; }
-  .product-header_thumbs { height: 70vw; max-height: 500px; }
+  .product-header_gallery { position: static; top: auto; height: auto; width: 100%; display: block; }
   .product-header_details { padding: 2rem 2.5rem; width: 100%; max-width: 100%; }
   .collection-intro_layout { grid-template-columns: 1fr; gap: 2rem; }
   .collection-intro_tiles { grid-template-columns: repeat(3, 1fr); }
@@ -15572,9 +15532,7 @@ figcaption {
   .reseller-header_actions { gap: 0.5rem; }
   .reseller-header_btn-outline,
   .reseller-header_btn-solid { padding: 0.625rem 1rem; font-size: 0.8125rem; }
-  .product-header_gallery > .swiper.is-product-gallery { order: 1; width: 100%; aspect-ratio: 1 / 1; height: auto !important; max-height: 520px; }
-  .product-header_gallery > .product-header_thumbs { order: 2; width: 100%; height: auto !important; max-height: none !important; overflow: hidden; }
-  .product-header_gallery > .product-header_thumbs > .swiper.is-product-thumbnail { width: 100%; height: auto; }
+  .product-header_gallery > .swiper.is-product-gallery { width: 100%; aspect-ratio: 1 / 1; height: auto !important; max-height: 520px; }
   .product-card_favorite { min-width: 40px; min-height: 40px; display: flex; align-items: center; justify-content: center; }
   .footer-bottom_social-link { min-width: 36px; min-height: 36px; display: inline-flex; align-items: center; justify-content: center; }
 }
@@ -15627,8 +15585,6 @@ figcaption {
   .swiper-slide.is-product-features { width: calc(66.666% - 1rem); }
   .product-add-to-kit_header { flex-direction: column; align-items: flex-start; }
   .swiper-slide.is-add-to-kit { width: 180px; }
-  .product-header_gallery { grid-template-columns: 1fr 100px; }
-  .product-header_thumbs { height: 75vw; max-height: 420px; }
   .ph_price-row { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
   .ph_trust-grid { grid-template-columns: 1fr; gap: 0.5rem; }
   .ph_trust-item { flex-direction: row; text-align: left; }
@@ -15697,7 +15653,6 @@ figcaption {
   .produkt_swatch-link { width: 4.5rem; }
   .produkt_swatch-link { height: 4.5rem; }
   .produkt_swatch-lable.is-max { max-width: 4.5rem; }
-  .product-header_gallery { grid-template-columns: 1fr 72px; }
   .product-header_details { padding: 1.5rem 1.25rem; }
   .ph_title { font-size: 1.25rem; }
   .collection-intro_tiles { grid-template-columns: 1fr; }
