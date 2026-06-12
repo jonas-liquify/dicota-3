@@ -20,52 +20,62 @@
     "b2b_mkt_giveaways": {
       "type": "b2b_mkt_giveaways",
       "blocks": {
-        "b2b_giveaway_VtdwfP": {
-          "type": "b2b-giveaway",
-          "name": "B2B Giveaway",
+        "b2b_bestell_artikel_fdtqdz": {
+          "type": "b2b-bestell-artikel",
+          "name": "B2B Bestell-Artikel",
           "settings": {
-            "text_kategorie": "Giveaway",
-            "text_heading": "Stoffbeutel DICOTA",
-            "textarea_text": "100% recycelte Baumwolle · ab 50 Stück bestellbar",
-            "url_button_link": "",
-            "text_button_text": "Bestellen"
+            "text_bezeichnung": "Laptop Rucksack Slim Eco MOTION 13-15.6\"",
+            "text_art_nr": "MO223",
+            "text_preis": "Free*"
           },
           "blocks": {}
         },
-        "b2b_giveaway_LLTewD": {
-          "type": "b2b-giveaway",
-          "name": "B2B Giveaway",
+        "b2b_bestell_artikel_Bfgtaj": {
+          "type": "b2b-bestell-artikel",
+          "name": "B2B Bestell-Artikel",
           "settings": {
-            "text_kategorie": "Giveaway",
-            "text_heading": "Stoffbeutel DICOTA",
-            "textarea_text": "100% recycelte Baumwolle · ab 50 Stück bestellbar",
-            "url_button_link": "",
-            "text_button_text": "Bestellen"
+            "image_bild": "shopify://shop_images/GiveAway_BallPenBlack.png",
+            "text_bezeichnung": "Ball Pen Black",
+            "text_art_nr": "MO346",
+            "text_preis": "€1.60*"
           },
           "blocks": {}
         },
-        "b2b-giveaway": {
-          "type": "b2b-giveaway",
-          "name": "B2B Giveaway",
+        "b2b_bestell_artikel_3f6X4G": {
+          "type": "b2b-bestell-artikel",
+          "name": "B2B Bestell-Artikel",
           "settings": {
-            "text_kategorie": "Giveaway",
-            "text_heading": "Stoffbeutel DICOTA",
-            "textarea_text": "100% recycelte Baumwolle · ab 50 Stück bestellbar",
-            "url_button_link": "",
-            "text_button_text": "Bestellen"
+            "image_bild": "shopify://shop_images/GiveAway_Peppermint_Box.png",
+            "text_bezeichnung": "Peppermint Box",
+            "text_art_nr": "MO266",
+            "text_preis": "€1.16*"
           },
           "blocks": {}
         }
       },
       "block_order": [
-        "b2b_giveaway_VtdwfP",
-        "b2b_giveaway_LLTewD",
-        "b2b-giveaway"
+        "b2b_bestell_artikel_fdtqdz",
+        "b2b_bestell_artikel_Bfgtaj",
+        "b2b_bestell_artikel_3f6X4G"
       ],
       "settings": {
+        "url_breadcrumb_parent_link": "",
+        "text_breadcrumb_parent_label": "Marketing",
         "text_breadcrumb": "Giveaways",
         "text_heading": "Order Marketing Material",
-        "textarea_subheading": "Order giveaways, DICOTA magazines, and marketing materials for your next cliustomer visit, event, or promotion. We looking forward to receive your order and send ship it immediately to your address."
+        "textarea_subheading": "Order giveaways, DICOTA magazines, and marketing materials for your next cliustomer visit, event, or promotion. We looking forward to receive your order and send ship it immediately to your address.",
+        "text_spalte_article": "Article",
+        "text_spalte_beschreibung": "Beschreibung",
+        "text_spalte_art_nr": "Art. No.",
+        "text_spalte_preis": "Price",
+        "text_spalte_menge": "Amount",
+        "textarea_datum_hinweistext": "Express-Lieferung wird zusätzlich berechnet.",
+        "textarea_event_hinweistext": "Wofür benötigst du das Werbematerial?",
+        "text_submit_button": "Jetzt absenden",
+        "breadcrumb_parent_label": "Marketing",
+        "breadcrumb_parent_link": "",
+        "field_date_label": "Bevorzugtes Lieferdatum:",
+        "field_event_label": "Event/Aktivität:"
       }
     },
     "b2b_mkt_overview": {
@@ -86,7 +96,6 @@
       "block_order": [
         "b2b-mkt-quicklink"
       ],
-      "disabled": true,
       "settings": {
         "text_breadcrumb": "Marketing",
         "text_heading_1": "Marketing-Übersicht",
