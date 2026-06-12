@@ -51,12 +51,24 @@
             "text_preis": "€1.16*"
           },
           "blocks": {}
+        },
+        "b2b_bestell_artikel_jzJNmm": {
+          "type": "b2b-bestell-artikel",
+          "name": "B2B Bestell-Artikel",
+          "settings": {
+            "image_bild": "shopify://shop_images/GiveAway_Notebook_Black.png",
+            "text_bezeichnung": "Notebook Black",
+            "text_art_nr": "MO344",
+            "text_preis": "€2.68*"
+          },
+          "blocks": {}
         }
       },
       "block_order": [
         "b2b_bestell_artikel_fdtqdz",
         "b2b_bestell_artikel_Bfgtaj",
-        "b2b_bestell_artikel_3f6X4G"
+        "b2b_bestell_artikel_3f6X4G",
+        "b2b_bestell_artikel_jzJNmm"
       ],
       "settings": {
         "url_breadcrumb_parent_link": "",
