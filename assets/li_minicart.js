@@ -187,7 +187,7 @@ document.addEventListener('alpine:init', () => {
          */
         get note() { // deprecated
             //console.warn('Deprecated "get note" in mini_cart')
-            return this.cart.note;
+            return this.cart?.note;
         },
         /**
          * @deprecated
@@ -201,7 +201,7 @@ document.addEventListener('alpine:init', () => {
          */
         get attributes() { // deprecated
             //console.warn('Deprecated "get attributes" in mini_cart')
-            return this.cart.attributes;
+            return this.cart?.attributes;
         },
         /**
          * @deprecated
