@@ -8,11 +8,7 @@
 <div class="nav_search-recent-item">
     <a li-object:href="product.url" href="{{ product.url }}" class="nav_search-recent-link"><img li-object:src="product.featured_image | image_url: width: 400" li-object:alt="product.featured_image.alt" src="{{ product.featured_image | image_url: width: 400 }}" loading="lazy" alt="{{ product.featured_image.alt }}" class="nav_search-recent-image"></a>
 </div>
-{% endfor %}</div></div></div><div x-cloak="" x-show="searchQuery && searchQuery.length > 0" class="nav_search-results-grid"><div class="nav_search-empty-col"><div class="text-style-subline">Suggestions</div><ul role="list" class="nav_search-suggestion-list w-list-unstyled"><li class="nav_search-suggestion-item"><a href="#" class="nav_search-suggestion-link">Backpacks</a></li><li class="nav_search-suggestion-item"><a href="#" class="nav_search-suggestion-link">Bags & Backpacks</a></li><li class="nav_search-suggestion-item"><a href="#" class="nav_search-suggestion-link">Discontinued: Bags & Backpacks</a></li></ul></div><div class="nav_search-empty-col"><ul role="list" class="nav_search-product-grid w-list-unstyled">{% for product in section.settings.collection_search_bestseller.products limit: section.settings.collection_search_bestseller_limit %}
-<li role="listitem">
-    <a li-object:href="product.url" href="{{ product.url }}" class="nav_search-product-link"><div class="nav_search-product-image-wrap"><img li-object:src="product.featured_image | image_url: width: 400" li-object:alt="product.featured_image.alt" src="{{ product.featured_image | image_url: width: 400 }}" loading="lazy" alt="{{ product.featured_image.alt }}" class="nav_search-product-image"></div><div class="nav_search-product-info"><div li-object="product.title" class="nav_search-product-title text-size-small text-weight-medium">{{ product.title }}</div><div li-object="product.type" class="nav_search-product-brand text-size-tiny text-style-muted">{{ product.type }}</div><div li-object="product.price | money" class="text-size-small">{{ product.price | money }}</div></div></a>
-</li>
-{% endfor %}</ul><a href="/search" class="button is-outline nav_search-results-cta w-button"><span>View all products</span></a></div></div> {% schema %} {
+{% endfor %}</div></div></div><div x-cloak="" x-show="searchQuery && searchQuery.length > 0" class="nav_search-results-grid"><div class="nav_search-empty-col"><div class="text-style-subline">Suggestions</div><ul role="list" class="nav_search-suggestion-list w-list-unstyled"><template x-for="s in suggestions" :key="(s.text || s.title)"></template><li x-show="!loading && suggestions.length === 0" class="nav_search-suggestion-item"><span class="nav_search-suggestion-link" style="opacity:.55">No suggestions</span></li></ul></div><div class="nav_search-empty-col"><ul role="list" class="nav_search-product-grid w-list-unstyled"><template x-for="p in results" :key="p.id"></template><li x-show="loading" role="listitem" class="nav_search-product-status">Searching…</li><li x-show="!loading && results.length === 0" role="listitem" class="nav_search-product-status">No products found.</li></ul><a x-bind:href="'/search?q=' + encodeURIComponent(searchQuery)" href="/search" class="button is-outline nav_search-results-cta w-button"><span>View all products</span></a></div></div> {% schema %} {
     "tag": "div",
     "name": "predictive_search",
     "class": "nav_search-overlay-states",
@@ -48,20 +44,6 @@
             "max": 99,
             "step": 1,
             "label": "Limit: Search - Recent",
-            "default": 6
-        },
-        {
-            "id": "collection_search_bestseller",
-            "type": "collection",
-            "label": "Search - Bestseller"
-        },
-        {
-            "type": "range",
-            "id": "collection_search_bestseller_limit",
-            "min": 1,
-            "max": 99,
-            "step": 1,
-            "label": "Limit: Search - Bestseller",
             "default": 6
         }
     ],

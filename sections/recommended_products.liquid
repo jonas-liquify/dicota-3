@@ -1,7 +1,7 @@
 <div data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit=4&intent=related" class="padding-global padding-section-medium product-recommendations"><div class="container-large"><div class="headline-wrapper"><h2 class="heading-style-h2">
 {{ section.settings.text_heading }}
 </h2></div><div class="product_list-wrapper"><ul role="list" class="product_list w-list-unstyled">{% for product in recommendations.products %}    <li li-for="product in recommendations.products" class="product_list-item">
-                                    {% render 'product_item', product: product %}
+                                    {% render 'product_card', product: product %}
                         </li>
 {% endfor %}</ul></div></div></div><div class="hide w-embed w-script"><script>
               document.addEventListener('DOMContentLoaded', function() {

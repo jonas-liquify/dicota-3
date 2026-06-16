@@ -1,36 +1,125 @@
-<div class="padding-global" style="padding-top:{{ section.settings.padding_top }}px;padding-bottom:{{ section.settings.padding_bottom }}px;background-color:{{ section.settings.bg_color }};color:{{ section.settings.text_color }};"><div class="container-large"><div class="product-reviews_layout"><div class="product-reviews_summary"><div class="product-reviews_rating-block"><div class="product-reviews_stars"><svg width="16" height="16" viewbox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg><svg width="16" height="16" viewbox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg><svg width="16" height="16" viewbox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg><svg width="16" height="16" viewbox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg><svg width="16" height="16" viewbox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg></div><p class="product-reviews_score">
-{{ section.settings.text_score }}
-</p><p class="product-reviews_count">
-{{ section.settings.text_anzahl }}
-</p></div><div class="product-reviews_breakdown"><p class="product-reviews_breakdown-title">
+<div id="bewertungen" class="padding-global" style="padding-top:{{ section.settings.padding_top }}px;padding-bottom:{{ section.settings.padding_bottom }}px;background-color:{{ section.settings.bg_color }};color:{{ section.settings.text_color }};"><div class="container-large"><div data-jm-reviews="" class="hide w-embed" data-jm-base="{{ section.settings.api_base }}" data-jm-shop="{{ section.settings.shop_domain }}" data-jm-token="{{ section.settings.api_token }}" data-jm-per-page="{{ section.settings.per_page }}" data-jm-product-id="{{ product.id }}" data-jm-handle="{{ product.handle }}" data-jm-product-url="{{ product.url }}"></div><div data-jm-badge="" class="hide w-embed">{{ product.metafields.judgeme.badge }}</div><div class="product-reviews_layout"><div class="product-reviews_summary"><div class="product-reviews_rating-block"><div class="product-reviews_stars" data-jm-summary-stars=""><svg width="16" height="16" viewbox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg><svg width="16" height="16" viewbox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg><svg width="16" height="16" viewbox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg><svg width="16" height="16" viewbox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg><svg width="16" height="16" viewbox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg></div><p class="product-reviews_score" data-jm-score="">4.9/5.0 rating</p><p class="product-reviews_count" data-jm-count="">Based on 11 reviews</p></div><div class="product-reviews_breakdown"><p class="product-reviews_breakdown-title">
 {{ section.settings.text_breakdown_titel }}
-</p><div class="product-reviews_bars"><div class="product-reviews_bar-row"><span class="product-reviews_bar-label">5</span><div class="product-reviews_bar-track"><div class="product-reviews_bar-fill" style="width: {{ section.settings.stars_5_pct }}%"></div></div></div><div class="product-reviews_bar-row"><span class="product-reviews_bar-label">4</span><div class="product-reviews_bar-track"><div class="product-reviews_bar-fill" style="width: {{ section.settings.stars_4_pct }}%"></div></div></div><div class="product-reviews_bar-row"><span class="product-reviews_bar-label">3</span><div class="product-reviews_bar-track"><div class="product-reviews_bar-fill" style="width: {{ section.settings.stars_3_pct }}%"></div></div></div><div class="product-reviews_bar-row"><span class="product-reviews_bar-label">2</span><div class="product-reviews_bar-track"><div class="product-reviews_bar-fill" style="width: {{ section.settings.stars_2_pct }}%"></div></div></div><div class="product-reviews_bar-row"><span class="product-reviews_bar-label">1</span><div class="product-reviews_bar-track"><div class="product-reviews_bar-fill" style="width: {{ section.settings.stars_1_pct }}%"></div></div></div></div></div><a href="{{ section.settings.url_rezension_schreiben_link }}" class="button product-reviews_write-btn"> Write a review </a></div><div class="product-reviews_list"><div li-cf-theme-blocks="" class="product-reviews_items">
-{% content_for 'blocks' %}
-</div><a href="{{ section.settings.url_mehr_bewertungen_link }}" class="button is-secondary product-reviews_more-btn"> Load more reviews </a></div></div></div></div> {% schema %} {
+</p><div class="product-reviews_bars"><div class="product-reviews_bar-row"><span class="product-reviews_bar-label">5</span><div class="product-reviews_bar-track"><div class="product-reviews_bar-fill" data-jm-bar="5" style="width:0%"></div></div></div><div class="product-reviews_bar-row"><span class="product-reviews_bar-label">4</span><div class="product-reviews_bar-track"><div class="product-reviews_bar-fill" data-jm-bar="4" style="width:0%"></div></div></div><div class="product-reviews_bar-row"><span class="product-reviews_bar-label">3</span><div class="product-reviews_bar-track"><div class="product-reviews_bar-fill" data-jm-bar="3" style="width:0%"></div></div></div><div class="product-reviews_bar-row"><span class="product-reviews_bar-label">2</span><div class="product-reviews_bar-track"><div class="product-reviews_bar-fill" data-jm-bar="2" style="width:0%"></div></div></div><div class="product-reviews_bar-row"><span class="product-reviews_bar-label">1</span><div class="product-reviews_bar-track"><div class="product-reviews_bar-fill" data-jm-bar="1" style="width:0%"></div></div></div></div></div><button type="button" class="button product-reviews_write-btn" data-jm-open="">Write a review</button></div><div class="product-reviews_list"><div class="product-reviews_items" data-jm-list=""></div><p class="product-reviews_empty" data-jm-empty="" style="display:none">No reviews yet. Be the first to write one.</p><a href="#" class="button is-secondary product-reviews_more-btn" data-jm-more="" style="display:none">Load more reviews</a></div></div><div class="hide" data-jm-template=""><div class="product-reviews_item"><div class="product-reviews_item-stars" data-stars=""></div><h3 class="product-reviews_item-hl" data-hl=""></h3><p class="product-reviews_item-text" data-text=""></p><div class="product-reviews_item-footer"><span class="product-reviews_item-author" data-author=""></span><span class="product-reviews_item-date" data-date=""></span></div></div></div><div data-jm-review-modal="" class="jm-review-modal" aria-hidden="true"><div class="jm-review-modal_overlay" data-jm-close=""></div><div class="jm-review-modal_panel" role="dialog" aria-modal="true" aria-label="Write a review"><div class="jm-review-modal_header"><h3 class="jm-review-modal_title">Write a review</h3><button type="button" class="jm-review-modal_close" data-jm-close="" aria-label="Close"><svg width="20" height="20" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 6L18 18M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg></button></div><form class="jm-review-form" data-jm-form="" novalidate=""><div class="jm-review-form_field"><label>Your rating</label><div class="jm-review-stars-input" data-jm-rating-input=""><button type="button" aria-label="1 star"><svg width="28" height="28" viewbox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg></button><button type="button" aria-label="2 stars"><svg width="28" height="28" viewbox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg></button><button type="button" aria-label="3 stars"><svg width="28" height="28" viewbox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg></button><button type="button" aria-label="4 stars"><svg width="28" height="28" viewbox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg></button><button type="button" aria-label="5 stars"><svg width="28" height="28" viewbox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg></button></div></div><div class="jm-review-form_field"><label for="jm-rv-name">Name</label><input id="jm-rv-name" name="name" type="text" required=""></div><div class="jm-review-form_field"><label for="jm-rv-email">Email</label><input id="jm-rv-email" name="email" type="email" required=""></div><div class="jm-review-form_field"><label for="jm-rv-title">Review title</label><input id="jm-rv-title" name="title" type="text"></div><div class="jm-review-form_field"><label for="jm-rv-body">Your review</label><textarea id="jm-rv-body" name="body" rows="5" required=""></textarea></div><button type="submit" class="button jm-review-form_submit">Submit review</button><p class="jm-review-form_msg" data-jm-msg=""></p></form></div></div></div></div><div class="hide w-embed w-script"><script>document.addEventListener("DOMContentLoaded", function(){
+  var root = document.querySelector(".section_product-reviews");
+  if(!root) return;
+  var cfg = root.querySelector("[data-jm-reviews]");
+  if(!cfg) return;
+  var base = (cfg.getAttribute("data-jm-base") || "https://judge.me/api/v1").replace(/\/+$/,"");
+  var shop = cfg.getAttribute("data-jm-shop");
+  var token = cfg.getAttribute("data-jm-token");
+  var perPage = parseInt(cfg.getAttribute("data-jm-per-page"),10) || 10;
+  var productId = cfg.getAttribute("data-jm-product-id");
+  var handle = cfg.getAttribute("data-jm-handle");
+  var productUrl = cfg.getAttribute("data-jm-product-url");
+
+  var STAR = '<path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z">';
+  function stars(rating){ var n=Math.round(rating||0),out=""; for(var i=1;i<=5;i++){ out+='<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="'+(i<=n?"":"is-empty")+'">'+STAR+''; } return out; }
+  function fmtDate(s){ try { return new Date(s).toLocaleDateString(undefined,{year:"numeric",month:"short",day:"numeric"}); } catch(e){ return ""; } }
+  function q(p){ return Object.keys(p).filter(function(k){ return p[k]!=null && p[k]!==""; }).map(function(k){ return encodeURIComponent(k)+"="+encodeURIComponent(p[k]); }).join("&"); }
+  function jget(url){ return fetch(url,{headers:{"Accept":"application/json"}}).then(function(r){ if(!r.ok) throw new Error("HTTP "+r.status); return r.json(); }); }
+
+  var summaryStars = root.querySelector("[data-jm-summary-stars]");
+  var scoreEl = root.querySelector("[data-jm-score]");
+  var countEl = root.querySelector("[data-jm-count]");
+
+  /* Authoritative aggregate from the Judge.me badge metafield (server-side, no token needed) */
+  var badgeEl = root.querySelector("[data-jm-badge] [data-average-rating]");
+  var badgeAvg = badgeEl ? parseFloat(badgeEl.getAttribute("data-average-rating")) : NaN;
+  var badgeCount = badgeEl ? parseInt(badgeEl.getAttribute("data-number-of-reviews"),10) : NaN;
+
+  var all = [];
+  function renderSummary(){
+    var n = all.length;
+    var count = !isNaN(badgeCount) ? badgeCount : n;
+    var avg = !isNaN(badgeAvg) ? badgeAvg : (n ? all.reduce(function(a,r){ return a + (r.rating||0); }, 0) / n : 0);
+    if(countEl) countEl.textContent = "Based on " + count + " review" + (count===1?"":"s");
+    if(scoreEl) scoreEl.textContent = (Math.round(avg*10)/10).toFixed(1) + "/5.0 rating";
+    if(summaryStars) summaryStars.innerHTML = stars(avg);
+    var dist = {1:0,2:0,3:0,4:0,5:0};
+    all.forEach(function(r){ var k = Math.round(r.rating); if(dist[k]!=null) dist[k]++; });
+    [5,4,3,2,1].forEach(function(k){ var bar = root.querySelector('[data-jm-bar="'+k+'"]'); if(bar) bar.style.width = (n ? Math.round(dist[k]/n*100) : 0) + "%"; });
+  }
+
+  /* ---- Write-Review Slide-in Panel (oeffentlicher Submit, kein Token noetig) ---- */
+  (function(){
+    var modal = root.querySelector("[data-jm-review-modal]");
+    var openBtn = root.querySelector("[data-jm-open]");
+    if(!modal || !openBtn) return;
+    if(modal.parentNode !== document.body) document.body.appendChild(modal);
+    var form = modal.querySelector("[data-jm-form]");
+    var msg = modal.querySelector("[data-jm-msg]");
+    var ratingWrap = modal.querySelector("[data-jm-rating-input]");
+    var ratingStars = ratingWrap ? ratingWrap.querySelectorAll("button") : [];
+    var rating = 0;
+    function paint(v){ for(var i=0;i<ratingStars.length;i++){ ratingStars[i].classList.toggle("is-active", i < v); } }
+    Array.prototype.forEach.call(ratingStars, function(b,i){ b.addEventListener("click", function(){ rating=i+1; paint(rating); }); b.addEventListener("mouseenter", function(){ paint(i+1); }); });
+    if(ratingWrap) ratingWrap.addEventListener("mouseleave", function(){ paint(rating); });
+    function openModal(){ modal.classList.add("is-open"); modal.setAttribute("aria-hidden","false"); document.documentElement.style.overflow="hidden"; }
+    function closeModal(){ modal.classList.remove("is-open"); modal.setAttribute("aria-hidden","true"); document.documentElement.style.overflow=""; }
+    openBtn.addEventListener("click", function(e){ e.preventDefault(); openModal(); });
+    Array.prototype.forEach.call(modal.querySelectorAll("[data-jm-close]"), function(b){ b.addEventListener("click", closeModal); });
+    document.addEventListener("keydown", function(e){ if(e.key==="Escape" && modal.classList.contains("is-open")) closeModal(); });
+    function val(n){ var el=form.elements[n]; return el?el.value.trim():""; }
+    if(form){
+      form.addEventListener("submit", function(e){
+        e.preventDefault();
+        if(!rating){ if(msg){ msg.className="jm-review-form_msg is-error"; msg.textContent="Please select a rating."; } return; }
+        if(!val("name") || !val("email") || !val("body")){ if(msg){ msg.className="jm-review-form_msg is-error"; msg.textContent="Please fill in name, email and your review."; } return; }
+        var payload = { shop_domain:shop, platform:"shopify", id:productId, url:productUrl, name:val("name"), email:val("email"), rating:rating, title:val("title"), body:val("body") };
+        var btn = form.querySelector('[type="submit"]'); if(btn) btn.disabled=true;
+        if(msg){ msg.className="jm-review-form_msg"; msg.textContent="Submitting&hellip;"; }
+        fetch(base + "/reviews", { method:"POST", headers:{"Content-Type":"application/x-www-form-urlencoded","Accept":"application/json"}, body:q(payload) })
+          .then(function(r){ return r.ok; })
+          .then(function(ok){
+            if(btn) btn.disabled=false;
+            if(ok){ form.reset(); rating=0; paint(0); if(msg){ msg.className="jm-review-form_msg is-success"; msg.textContent="Thank you! Your review was submitted and will appear after moderation."; } }
+            else { if(msg){ msg.className="jm-review-form_msg is-error"; msg.textContent="Sorry, something went wrong. Please try again."; } }
+          })
+          .catch(function(){ if(btn) btn.disabled=false; if(msg){ msg.className="jm-review-form_msg is-error"; msg.textContent="Sorry, something went wrong. Please try again."; } });
+      });
+    }
+  })();
+
+  /* Summary sofort aus dem Badge-Metafeld (auch ohne Token/Live-Liste). Nur wenn das Badge echte Werte liefert &mdash; sonst statische Vorschau lassen. */
+  if(!isNaN(badgeAvg) || !isNaN(badgeCount)) renderSummary();
+
+  /* ---- Read & render review list (braucht Shop + Token) ---- */
+  if(!shop || !token) return;
+  var listEl = root.querySelector("[data-jm-list]");
+  var tplEl = root.querySelector("[data-jm-template] .product-reviews_item");
+  var moreBtn = root.querySelector("[data-jm-more]");
+  var emptyEl = root.querySelector("[data-jm-empty]");
+  if(!listEl || !tplEl) return;
+  var shown = 0;
+  function renderBatch(){
+    var slice = all.slice(shown, shown+perPage);
+    slice.forEach(function(r){
+      var node = tplEl.cloneNode(true);
+      node.querySelector("[data-stars]").innerHTML = stars(r.rating);
+      var hl = node.querySelector("[data-hl]");
+      if(r.title){ hl.textContent = r.title; } else { hl.parentNode.removeChild(hl); }
+      node.querySelector("[data-text]").textContent = r.body || "";
+      var name = (r.reviewer && r.reviewer.name) || r.reviewer_name || r.name || "Anonymous";
+      node.querySelector("[data-author]").textContent = name;
+      node.querySelector("[data-date]").textContent = fmtDate(r.created_at);
+      listEl.appendChild(node);
+    });
+    shown += slice.length;
+    if(moreBtn) moreBtn.style.display = shown < all.length ? "" : "none";
+  }
+  jget(base + "/products/-1?" + q({api_token:token, shop_domain:shop, external_id:productId, handle:handle}))
+    .then(function(d){ return d && d.product && d.product.id; })
+    .catch(function(){ return null; })
+    .then(function(jmId){ var params = { api_token:token, shop_domain:shop, per_page:100, page:1, published:"true" }; if(jmId){ params.product_id = jmId; } else { params.handle = handle; } return jget(base + "/reviews?" + q(params)); })
+    .then(function(d){ all = (d && d.reviews) || []; renderSummary(); if(!all.length){ if(emptyEl) emptyEl.style.display = ""; if(moreBtn) moreBtn.style.display = "none"; return; } renderBatch(); })
+    .catch(function(err){ if(window.console) console.warn("[Judge.me] reviews failed:", err.message); });
+  if(moreBtn){ moreBtn.addEventListener("click", function(e){ e.preventDefault(); renderBatch(); }); }
+});</script></div> {% schema %} {
     "tag": "section",
     "name": "Product Reviews",
     "class": "section_product-reviews",
-    "blocks": [
-        {
-            "type": "rezension"
-        },
-        {
-            "type": "@app"
-        }
-    ],
     "settings": [
-        {
-            "id": "text_score",
-            "type": "text",
-            "label": "Score",
-            "default": "4.9\/5.0 rating"
-        },
-        {
-            "id": "text_anzahl",
-            "type": "text",
-            "label": "Anzahl",
-            "default": "Based on 11 reviews"
-        },
         {
             "id": "text_breakdown_titel",
             "type": "text",
@@ -38,48 +127,34 @@
             "default": "Rating overview"
         },
         {
-            "id": "url_rezension_schreiben_link",
-            "type": "url",
-            "label": "Rezension schreiben Link"
-        },
-        {
-            "id": "url_mehr_bewertungen_link",
-            "type": "url",
-            "label": "Mehr Bewertungen Link"
-        },
-        {
             "type": "header",
-            "content": "Bewertungs\u00fcbersicht"
+            "content": "Judge.me"
         },
         {
             "type": "text",
-            "id": "stars_5_pct",
-            "label": "5-Sterne Prozent 0-100",
-            "default": "80"
+            "id": "shop_domain",
+            "label": "Judge.me Shop-Domain (z.B. dicota.myshopify.com)"
         },
         {
             "type": "text",
-            "id": "stars_4_pct",
-            "label": "4-Sterne Prozent 0-100",
-            "default": "20"
+            "id": "api_token",
+            "label": "Judge.me API Token (privat)"
+        },
+        {
+            "type": "number",
+            "id": "per_page",
+            "label": "Reviews pro Seite",
+            "default": 10
         },
         {
             "type": "text",
-            "id": "stars_3_pct",
-            "label": "3-Sterne Prozent 0-100",
-            "default": "0"
+            "id": "api_base",
+            "label": "API Base URL (Proxy optional)",
+            "default": "https:\/\/judge.me\/api\/v1"
         },
         {
-            "type": "text",
-            "id": "stars_2_pct",
-            "label": "2-Sterne Prozent 0-100",
-            "default": "0"
-        },
-        {
-            "type": "text",
-            "id": "stars_1_pct",
-            "label": "1-Sterne Prozent 0-100",
-            "default": "0"
+            "type": "paragraph",
+            "content": "Die Reviews werden live aus Judge.me geladen (Reviews-API). Trage Shop-Domain + API-Token ein. Hinweis: Der API-Token ist im Quelltext sichtbar und die Judge.me-API erlaubt ggf. keine direkten Browser-Anfragen (CORS) \u2014 in dem Fall eine Proxy-\/App-Proxy-URL als 'API Base URL' eintragen."
         },
         {
             "type": "header",
@@ -126,11 +201,7 @@
         {
             "name": "Product Reviews",
             "category": "Product",
-            "blocks": [
-                {
-                    "type": "rezension"
-                }
-            ]
+            "blocks": []
         }
     ],
     "enabled_on": {
