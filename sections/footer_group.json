@@ -11,6 +11,23 @@
   "type": "footer",
   "name": "Footer Group",
   "sections": {
+    "footer_newsletter_ULQtmR": {
+      "type": "footer_newsletter",
+      "name": "Footer Newsletter",
+      "settings": {
+        "url_promo_1_link": "",
+        "text_promo_1_text": "Tell a friend + get 10%",
+        "url_promo_2_link": "",
+        "text_promo_2_text": "Earn 10 EUR Store Credit",
+        "text_headline": "Sichere dir gratis Produkte & exklusive Prämien",
+        "textarea_subtext": "Sammle Dicota-Punkte und löse sie für exklusive Prämien ein",
+        "url_button_link": "",
+        "text_button_text": "Jetzt anmelden",
+        "show_form": false,
+        "placeholder_text": "Deine E-Mail-Adresse",
+        "footer_menu": "footer"
+      }
+    },
     "footer_bottom_KAUrCE": {
       "type": "footer_bottom",
       "blocks": {
@@ -29,23 +46,6 @@
       "settings": {
         "text_copyright": "©2026 DCT Group AG",
         "legal_menu": "footer"
-      }
-    },
-    "footer_newsletter_ULQtmR": {
-      "type": "footer_newsletter",
-      "name": "Footer Newsletter",
-      "settings": {
-        "url_promo_1_link": "",
-        "text_promo_1_text": "Tell a friend + get 10%",
-        "url_promo_2_link": "",
-        "text_promo_2_text": "Earn 10 EUR Store Credit",
-        "text_headline": "Sichere dir gratis Produkte & exklusive Prämien",
-        "textarea_subtext": "Sammle Dicota-Punkte und löse sie für exklusive Prämien ein",
-        "url_button_link": "",
-        "text_button_text": "Jetzt anmelden",
-        "show_form": false,
-        "placeholder_text": "Deine E-Mail-Adresse",
-        "footer_menu": "footer"
       }
     }
   },

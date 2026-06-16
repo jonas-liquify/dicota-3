@@ -11,7 +11,17 @@
   "sections": {
     "product_breadcrumb": {
       "type": "product_breadcrumb",
-      "settings": {}
+      "settings": {
+        "text_home_label": "Home",
+        "text_kollektionen_label": "Kollektionen",
+        "text_suche_label": "Suche",
+        "text_warenkorb_label": "Warenkorb",
+        "text_404_label": "Seite nicht gefunden",
+        "padding_top": 8,
+        "padding_bottom": 8,
+        "bg_color": "#ffffff",
+        "text_color": "#0f0f0f"
+      }
     },
     "product_header": {
       "type": "product_header",
@@ -19,53 +29,136 @@
         "produkt-kopf": {
           "type": "produkt-kopf",
           "name": "Produkt-Kopf",
-          "settings": {}
+          "settings": {
+            "text_unterzeile": "Wenn Funktion, Design und Schutz zusammenkommen, der ideale Begleiter für Ihr Unternehmen",
+            "richtext_highlights": "<p>Schlichtes, modernes DesignBeste Organisation on the wayTop Protection für dein Deviceund auch noch günstig</p>"
+          },
+          "blocks": {}
         },
         "preis": {
           "type": "preis",
           "name": "Preis",
-          "settings": {}
+          "settings": {
+            "url_bewertungslink": "",
+            "text_bewertungsscore": "4.8",
+            "text_bewertungsanzahl": "(11)"
+          },
+          "blocks": {}
         },
         "kaufen": {
           "type": "kaufen",
           "name": "Kaufen",
-          "settings": {}
+          "settings": {
+            "text_label_construction_type": "Bauart",
+            "text_label_grosse": "Größe",
+            "text_label_farbe": "Farbe",
+            "text_label_produktfamilie": "Produktfamilie",
+            "text_label_segment": "Segment",
+            "text_liefertext": "Bis 16 Uhr bestellen, zwischen 26. & 27. März bei dir",
+            "url_angebot_link": "",
+            "text_angebot_text": "Angebot anfragen",
+            "url_merken_link": "",
+            "text_merken_text": "Merken",
+            "url_vergleichen_link": "",
+            "text_vergleichen_text": "Vergleichen",
+            "text_trust_1": "Kostenloser Versand ab €59,00",
+            "text_trust_2": "Kauf auf Rechnung mit Klarna",
+            "text_trust_3": "30 Tage Geld-zurück-Garantie"
+          },
+          "blocks": {}
         },
         "we-care": {
           "type": "we-care",
           "name": "We Care",
           "settings": {},
-          "blocks": {
-            "we-care-item": {
-              "type": "we-care-item",
-              "name": "We Care Item",
-              "settings": {}
-            }
-          }
+          "blocks": {}
         },
         "beschreibungs-tabs": {
           "type": "beschreibungs-tabs",
           "name": "Beschreibungs-Tabs",
-          "settings": {},
+          "settings": {
+            "text_tab_1": "Spezifikationen",
+            "text_tab_2": "Ausstattungen",
+            "text_tab_3": "Beschreibung",
+            "text_tab_4": "Downloads"
+          },
           "blocks": {
-            "tab-inhalt": {
+            "tab_inhalt_6erFgy": {
               "type": "tab-inhalt",
               "name": "Tab Inhalt",
-              "settings": {}
+              "settings": {
+                "richtext_inhalt": "<p>Inhalt eingeben...</p>",
+                "use_product_desc": false
+              },
+              "blocks": {}
+            },
+            "tab_inhalt_gRMR3B": {
+              "type": "tab-inhalt",
+              "name": "Tab Inhalt",
+              "settings": {
+                "richtext_inhalt": "<p>Inhalt eingeben...</p>",
+                "use_product_desc": false
+              },
+              "blocks": {}
+            },
+            "tab_inhalt_itGWke": {
+              "type": "tab-inhalt",
+              "name": "Tab Inhalt",
+              "settings": {
+                "richtext_inhalt": "<p>Inhalt eingeben...</p>",
+                "use_product_desc": false
+              },
+              "blocks": {}
+            },
+            "tab_inhalt_dmajpU": {
+              "type": "tab-inhalt",
+              "name": "Tab Inhalt",
+              "settings": {
+                "richtext_inhalt": "<p>Inhalt eingeben...</p>",
+                "use_product_desc": false
+              },
+              "blocks": {}
             }
-          }
+          },
+          "block_order": [
+            "tab_inhalt_6erFgy",
+            "tab_inhalt_gRMR3B",
+            "tab_inhalt_itGWke",
+            "tab_inhalt_dmajpU"
+          ]
         },
         "upsell": {
           "type": "upsell",
           "name": "Upsell",
-          "settings": {},
+          "settings": {
+            "text_upsell_titel": "Passt gut zusammen"
+          },
           "blocks": {
-            "upsell-produkt": {
+            "upsell_produkt_WJVrDP": {
               "type": "upsell-produkt",
               "name": "Upsell Produkt",
-              "settings": {}
+              "settings": {
+                "text_produktname": "Blickschutzfilter 4-Way",
+                "text_preis": "54,90 EUR",
+                "url_kaufen_link": ""
+              },
+              "blocks": {}
+            },
+            "upsell_produkt_QzcbVA": {
+              "type": "upsell-produkt",
+              "name": "Upsell Produkt",
+              "settings": {
+                "text_produktname": "Blickschutzfilter 4-Way",
+                "text_preis": "54,90 EUR",
+                "url_kaufen_link": ""
+              },
+              "blocks": {}
             }
-          }
+          },
+          "block_order": [
+            "upsell_produkt_WJVrDP",
+            "upsell_produkt_QzcbVA"
+          ]
         }
       },
       "block_order": [
@@ -84,25 +177,51 @@
         "usp-item": {
           "type": "usp-item",
           "name": "USP Item",
-          "settings": {}
+          "settings": {
+            "text_titel": "Kostenloser Versand",
+            "textarea_beschreibung": "Ab 50 EUR Bestellwert, schnell und zuverlässig"
+          },
+          "blocks": {}
         }
       },
       "block_order": [
         "usp-item"
       ],
-      "settings": {}
+      "settings": {
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "bg_color": "#ffffff",
+        "text_color": "#000000"
+      }
     },
     "product_feature_gall": {
       "type": "product_feature_gall",
-      "settings": {}
+      "settings": {
+        "text_uberschrift": "Entdecke die Features",
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "bg_color": "#ffffff",
+        "text_color": "#000000"
+      }
     },
     "product_family": {
       "type": "product_family",
-      "settings": {}
+      "settings": {
+        "text_uberschrift": "Die Produktfamilie auf einen Blick",
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "bg_color": "#f5f5f5"
+      }
     },
     "product_loved_by_gal": {
       "type": "product_loved_by_gal",
-      "settings": {}
+      "settings": {
+        "text_uberschrift": "How People Wear It",
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "bg_color": "#0f0f0f",
+        "text_color": "#ffffff"
+      }
     },
     "product_comparison": {
       "type": "product_comparison",
@@ -110,17 +229,40 @@
         "vergleichszeile": {
           "type": "vergleichszeile",
           "name": "Vergleichszeile",
-          "settings": {}
+          "settings": {
+            "text_merkmal": "Kernkompetenz",
+            "text_dicota_wert": "Fokus auf Computertaschen",
+            "text_andere_wert": "Keine Kernkompetenz, querbeet"
+          },
+          "blocks": {}
         }
       },
       "block_order": [
         "vergleichszeile"
       ],
-      "settings": {}
+      "settings": {
+        "text_headline_zeile_1": "BECOME",
+        "text_headline_zeile_2": "WHATEVER MAKES YOU BRILLIANT",
+        "textarea_beschreibung": "Als German Design Award Winner stehen wir absolut hinter unserem Produkt. Und 100.000 Kunden auch.",
+        "text_grunder_namen": "Stephan Meyer, Michael Mühlenbruch, Ruedi Nauer",
+        "text_grunder_titel": "Management",
+        "text_andere_label": "Andere",
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "bg_color": "#0f0f0f",
+        "text_color": "#ffffff"
+      }
     },
     "we_care_banner": {
       "type": "we_care_banner",
-      "settings": {}
+      "settings": {
+        "text_zahler": "12.483.129",
+        "text_headline": "Verarbeitete Flaschen",
+        "textarea_beschreibung": "Seit 1992 wurden mehr als 12 Millionen PET-Flaschen verarbeitet, um Abfall zu minimieren und Nachhaltigkeit zu fördern",
+        "url_cta_link": "",
+        "text_cta_text": "Mehr zur Nachhaltigkeit",
+        "bg_color": "#0a1628"
+      }
     },
     "add_to_your_kit": {
       "type": "add_to_your_kit",
@@ -128,17 +270,32 @@
         "produkt": {
           "type": "produkt",
           "name": "Produkt",
-          "settings": {}
+          "settings": {
+            "product": ""
+          },
+          "blocks": {}
         }
       },
       "block_order": [
         "produkt"
       ],
-      "settings": {}
+      "settings": {
+        "text_uberschrift": "Add to Your Kit",
+        "text_tab_1_label": "Screen Filters",
+        "text_tab_2_label": "Locks",
+        "text_tab_3_label": "Hub Chargers",
+        "text_tab_4_label": "Input Devices",
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "bg_color": "#ffffff",
+        "text_color": "#000000"
+      }
     },
     "recommended_products": {
       "type": "recommended_products",
-      "settings": {}
+      "settings": {
+        "text_heading": "Recommended"
+      }
     },
     "product_reviews": {
       "type": "product_reviews",
@@ -146,17 +303,45 @@
         "rezension": {
           "type": "rezension",
           "name": "Rezension",
-          "settings": {}
+          "settings": {
+            "text_headline": "Absolut empfehlenswert!",
+            "textarea_text": "Ich liebe das Produkt das ich gekauft habe. Auch der Kundenservice war sehr gut.",
+            "text_autor": "Louisa Maierhover",
+            "text_datum": "vor 5 Stunden"
+          },
+          "blocks": {}
         }
       },
       "block_order": [
         "rezension"
       ],
-      "settings": {}
+      "settings": {
+        "text_score": "4,9/5,0 Bewertung",
+        "text_anzahl": "Basierend auf 11 Bewertungen",
+        "text_breakdown_titel": "Bewertungsüberblick",
+        "url_rezension_schreiben_link": "",
+        "url_mehr_bewertungen_link": "",
+        "stars_5_pct": "80",
+        "stars_4_pct": "20",
+        "stars_3_pct": "0",
+        "stars_2_pct": "0",
+        "stars_1_pct": "0",
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "bg_color": "#ffffff",
+        "text_color": "#000000"
+      }
     },
     "product_faq": {
       "type": "product_faq",
-      "settings": {}
+      "settings": {
+        "text_titel": "FAQ",
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "bg_color": "#ffffff",
+        "text_color": "#000000",
+        "faqs": []
+      }
     }
   },
   "layout": "theme",
