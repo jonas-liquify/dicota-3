@@ -2,7 +2,7 @@
 {{ section.settings.image_produkt_bild | image_url: width: 1400 | image_tag: loading: 'lazy', class: 'feature-product_image' }}
 {% else %}
 <img src="{{ 'platzhalter.svg' | asset_url }}" loading="lazy" alt="" class="feature-product_image">
-{% endif %}<button type="button" class="feature-product_favorite" aria-label="Auf Wunschliste setzen"><div class="icon-embed-xsmall w-embed">{% render 'icon_favorite' %}</div></button></div><div class="feature-product_content"><h2 class="feature-product_title">
+{% endif %}<button type="button" class="feature-product_favorite" aria-label="Add to wishlist"><div class="icon-embed-xsmall w-embed">{% render 'icon_favorite' %}</div></button></div><div class="feature-product_content"><h2 class="feature-product_title">
 {{ section.settings.text_produkt_titel }}
 </h2><p class="feature-product_desc"> {{ section.settings.textarea_beschreibung }} </p><a href="{{ section.settings.url_button_link }}" class="button is-outline feature-product_button w-button"> <span>{{ section.settings.text_button_text }}</span> </a></div></article></div></div> {% schema %} {
     "tag": "section",
@@ -18,13 +18,13 @@
             "id": "text_produkt_titel",
             "type": "text",
             "label": "Produkt-Titel",
-            "default": "Blickschutzfilter 2-fach magnetisch Universal (16:10)"
+            "default": "2-Way Magnetic Privacy Filter Universal (16:10)"
         },
         {
             "id": "textarea_beschreibung",
             "type": "textarea",
             "label": "Beschreibung",
-            "default": "Der DICOTA 2-Wege-Blickschutzfilter ist ideal f\u00fcr die Arbeit in \u00f6ffentlichen Umgebungen wie Bibliotheken, Gro\u00dfraumb\u00fcros, Flugh\u00e4fen und Z\u00fcgen. Er sch\u00fctzt pers\u00f6nliche und vertrauliche Daten, indem er die rechte und linke Seite des Bildschirms in einem Winkel von +\/- 30 Grad abdunkelt."
+            "default": "The DICOTA 2-Way Privacy Filter is ideal for working in public environments such as libraries, open-plan offices, airports and trains. It protects personal and confidential data by darkening the right and left sides of the screen at an angle of +\/- 30 degrees."
         },
         {
             "id": "url_button_link",
@@ -35,7 +35,7 @@
             "id": "text_button_text",
             "type": "text",
             "label": "Button Text",
-            "default": "Mehr erfahren"
+            "default": "Learn more"
         },
         {
             "type": "header",

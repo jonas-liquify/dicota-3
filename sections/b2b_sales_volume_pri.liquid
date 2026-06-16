@@ -12,7 +12,7 @@
 {{ section.settings.text_step_3_label }}
 </div></div><div class="multi-form_progress-item" x-bind:class="step >= 4 ? '' : 'multi-form_progress-disabled'"><div class="multi-form_progress" x-bind:class="step === 4 ? 'multi-form_progress-current' : ''"><div>4</div></div><div>
 {{ section.settings.text_step_4_label }}
-</div></div></div></div><div class="multi-form_form-content"><div class="text-size-medium text-weight-medium">Reseller-Daten eingeben</div><div class="multi-form_triple"><div class="form_field-wrapper"><input class="form_input w-input" maxlength="256" name="contact[name]" placeholder=" " type="text" id="ansprechpartner" required=""><label for="ansprechpartner" class="form_label">Ansprechpartner*</label></div><div class="form_field-wrapper"><input class="form_input w-input" maxlength="256" name="contact[email]" placeholder=" " type="email" id="email" required=""><label for="email" class="form_label">E-Mail-Adresse*</label></div><div class="form_field-wrapper"><input class="form_input w-input" maxlength="256" name="contact[phone]" placeholder=" " type="tel" id="telefon"><label for="telefon" class="form_label">Telefon</label></div></div><div class="multi-form_button-group"><button type="button" x-on:click="step = step > 1 ? step - 1 : 1" x-show="step > 1" class="button is-secondary w-button">Zurück</button><button type="button" x-on:click="step = step < 4 ? step + 1 : 4" x-show="step < 4" class="button w-button">Weiter</button><button type="submit" x-show="step === 4" class="button w-button">Absenden</button></div></div></div></form></div></div></div></div></div></div> {% schema %} {
+</div></div></div></div><div class="multi-form_form-content"><div class="text-size-medium text-weight-medium">Enter reseller details</div><div class="multi-form_triple"><div class="form_field-wrapper"><input class="form_input w-input" maxlength="256" name="contact[name]" placeholder=" " type="text" id="ansprechpartner" required=""><label for="ansprechpartner" class="form_label">Contact person*</label></div><div class="form_field-wrapper"><input class="form_input w-input" maxlength="256" name="contact[email]" placeholder=" " type="email" id="email" required=""><label for="email" class="form_label">Email address*</label></div><div class="form_field-wrapper"><input class="form_input w-input" maxlength="256" name="contact[phone]" placeholder=" " type="tel" id="telefon"><label for="telefon" class="form_label">Phone</label></div></div><div class="multi-form_button-group"><button type="button" x-on:click="step = step > 1 ? step - 1 : 1" x-show="step > 1" class="button is-secondary w-button">Back</button><button type="button" x-on:click="step = step < 4 ? step + 1 : 4" x-show="step < 4" class="button w-button">Next</button><button type="submit" x-show="step === 4" class="button w-button">Submit</button></div></div></div></form></div></div></div></div></div></div> {% schema %} {
     "tag": "section",
     "name": "B2B Sales Volume Pri",
     "class": "section_acc-default",
@@ -21,25 +21,25 @@
             "id": "text_breadcrumb",
             "type": "text",
             "label": "Breadcrumb",
-            "default": "Volumenpreise"
+            "default": "Volume Pricing"
         },
         {
             "id": "text_heading",
             "type": "text",
             "label": "Heading",
-            "default": "Volumenpreise anfragen"
+            "default": "Request Volume Pricing"
         },
         {
             "id": "textarea_subheading",
             "type": "textarea",
             "label": "Subheading",
-            "default": "Fordere ein individuelles Angebot in vier Schritten an: Reseller-Daten, Distributor, Endkunde und deine Anmerkungen."
+            "default": "Request an individual quote in four steps: reseller details, distributor, end customer and your notes."
         },
         {
             "id": "text_form_heading",
             "type": "text",
             "label": "Form Heading",
-            "default": "Angebot anfragen"
+            "default": "Request a quote"
         },
         {
             "id": "text_step_1_label",
@@ -57,13 +57,13 @@
             "id": "text_step_3_label",
             "type": "text",
             "label": "Step 3 Label",
-            "default": "Endkunde"
+            "default": "End customer"
         },
         {
             "id": "text_step_4_label",
             "type": "text",
             "label": "Step 4 Label",
-            "default": "Anmerkungen"
+            "default": "Notes"
         }
     ],
     "presets": [

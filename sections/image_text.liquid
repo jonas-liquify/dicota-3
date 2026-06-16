@@ -4,7 +4,7 @@
 <img src="{{ 'platzhalter.svg' | asset_url }}" loading="lazy" alt="" class="split-image_image">
 {% endif %}</div><div class="split-image_content-wrapper"><h2 class="heading-style-h2">
 {{ section.settings.text_heading }}
-</h2><div class="text-size-regular"> {{ section.settings.textarea_text }} </div><div class="margin-top margin-small"><div class="button-group"><div class="button-wrapper"><a href="{{ section.settings.url_button_link }}" class="button is-white w-button"> <span>{{ section.settings.text_button_text }}</span> </a></div></div></div></div></div> {% schema %} {
+</h2><div class="text-size-regular"> {{ section.settings.textarea_text }} </div><div class="margin-top margin-small"><div class="button-group"><div class="button-wrapper"><a href="{{ section.settings.url_button_link }}" class="button is-secondary w-button"> <span>{{ section.settings.text_button_text }}</span> </a></div></div></div></div></div> {% schema %} {
     "tag": "section",
     "name": "Image-Text",
     "class": "section_split-image background-color-primary",
@@ -18,13 +18,13 @@
             "id": "text_heading",
             "type": "text",
             "label": "Heading",
-            "default": "Langlebig statt Wegwerf"
+            "default": "Recycled materials"
         },
         {
             "id": "textarea_text",
             "type": "textarea",
             "label": "Text",
-            "default": "Wir designen f\u00fcr Jahre, nicht f\u00fcr Saisons. Reparierbare Komponenten, austauschbare Rei\u00dfverschl\u00fcsse und eine ehrliche Garantie sorgen daf\u00fcr, dass unsere Produkte lange begleiten."
+            "default": "Our backpacks are made largely from recycled PET. That's how we give used plastic bottles a second life \u2014 as a rugged companion for everyday work."
         },
         {
             "id": "url_button_link",
@@ -35,7 +35,7 @@
             "id": "text_button_text",
             "type": "text",
             "label": "Button Text",
-            "default": "Unsere Garantie"
+            "default": "Learn more"
         },
         {
             "type": "header",

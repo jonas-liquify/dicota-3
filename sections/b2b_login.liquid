@@ -3,7 +3,7 @@
 </div><h1 class="heading-style-h1">
 {{ section.settings.text_heading }}
 </h1><div class="text-size-regular"> {{ section.settings.textarea_text }} </div></div><div class="b2b-login_form-block w-form">{% form 'customer-login', class: 'b2b-login_form' %}
-<div class="b2b-login_field"><label for="b2b-email" class="b2b-login_label">E-Mail-Adresse*</label><input class="b2b-login_input w-input" maxlength="256" name="customer[email]" placeholder="z. B. partner@firma.de" type="email" id="b2b-email" required=""></div><div class="b2b-login_field"><label for="b2b-password" class="b2b-login_label">Passwort*</label><input class="b2b-login_input w-input" maxlength="256" name="customer[password]" placeholder="••••••••" type="password" id="b2b-password" required=""></div><div class="b2b-login_links"><a href="{{ section.settings.url_passwort_vergessen_link }}" class="text-size-small text-weight-medium text-style-link"> <span>{{ section.settings.text_passwort_vergessen_text }}</span> </a></div><div class="button-group margin-top margin-small"><input type="submit" data-wait="Bitte warten..." class="button is-white w-button" value="Einloggen"></div><div class="b2b-login_register"><div class="text-size-small">
+<div class="b2b-login_field"><label for="b2b-email" class="b2b-login_label">Email address*</label><input class="b2b-login_input w-input" maxlength="256" name="customer[email]" placeholder="e.g. partner@company.com" type="email" id="b2b-email" required=""></div><div class="b2b-login_field"><label for="b2b-password" class="b2b-login_label">Password*</label><input class="b2b-login_input w-input" maxlength="256" name="customer[password]" placeholder="••••••••" type="password" id="b2b-password" required=""></div><div class="b2b-login_links"><a href="{{ section.settings.url_passwort_vergessen_link }}" class="text-size-small text-weight-medium text-style-link"> <span>{{ section.settings.text_passwort_vergessen_text }}</span> </a></div><div class="button-group margin-top margin-small"><input type="submit" data-wait="Please wait..." class="button is-white w-button" value="Log in"></div><div class="b2b-login_register"><div class="text-size-small">
 {{ section.settings.text_registrieren_text }}
 </div><a href="{{ section.settings.url_registrieren_link }}" class="text-size-small text-weight-medium text-style-link"> <span>{{ section.settings.text_registrieren_link_text }}</span> </a></div>{% endform %}</div></div><div class="split-image_image-block">{% if section.settings.image_bild %}
 {{ section.settings.image_bild | image_url: width: 1200 | image_tag: loading: 'lazy', class: 'split-image_image' }}
@@ -18,19 +18,19 @@
             "id": "text_subline",
             "type": "text",
             "label": "Subline",
-            "default": "B2B Partner"
+            "default": "B2B partner"
         },
         {
             "id": "text_heading",
             "type": "text",
             "label": "Heading",
-            "default": "Willkommen im DICOTA Partner-Bereich"
+            "default": "Welcome to the DICOTA Partner Area"
         },
         {
             "id": "textarea_text",
             "type": "textarea",
             "label": "Text",
-            "default": "Logge dich ein, um Volumenpreise, Marketing-Material und exklusive Partner-Inhalte zu nutzen."
+            "default": "Log in to access volume pricing, marketing materials and exclusive partner content."
         },
         {
             "id": "url_passwort_vergessen_link",
@@ -41,13 +41,13 @@
             "id": "text_passwort_vergessen_text",
             "type": "text",
             "label": "Passwort vergessen Text",
-            "default": "Passwort vergessen?"
+            "default": "Forgot your password?"
         },
         {
             "id": "text_registrieren_text",
             "type": "text",
             "label": "Registrieren Text",
-            "default": "Noch kein Partner-Account?"
+            "default": "No partner account yet?"
         },
         {
             "id": "url_registrieren_link",
@@ -58,7 +58,7 @@
             "id": "text_registrieren_link_text",
             "type": "text",
             "label": "Registrieren Link Text",
-            "default": "Jetzt registrieren \u2192"
+            "default": "Register now \u2192"
         },
         {
             "id": "image_bild",

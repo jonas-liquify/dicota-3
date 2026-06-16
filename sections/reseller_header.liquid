@@ -1,6 +1,6 @@
 <div class="section_announcement-bar section_b2b-announcement-bar reseller-header_top"><div class="announcement-bar_container"><div li-cf-theme-blocks="" class="announcement-bar_items">
 {% content_for 'blocks' %}
-</div>{% content_for "block", type: "reseller-rechte-seite", id: "reseller-rechte-seite" %}</div></div><div class="reseller-header_nav"><div class="reseller-header_nav-inner"><div class="reseller-header_left"><a href="{{ routes.root_url }}" li-object:href="routes.root_url" class="reseller-header_brand" aria-label="Zur Startseite">{% if section.settings.image_logo %}
+</div>{% content_for "block", type: "reseller-rechte-seite", id: "reseller-rechte-seite" %}</div></div><div class="reseller-header_nav"><div class="reseller-header_nav-inner"><div class="reseller-header_left"><a href="{{ routes.root_url }}" li-object:href="routes.root_url" class="reseller-header_brand" aria-label="To the homepage">{% if section.settings.image_logo %}
 {{ section.settings.image_logo | image_url: width: 300 | image_tag: loading: 'lazy', class: 'reseller-header_logo' }}
 {% else %}
 <img src="{{ 'liquify-logo-black.svg' | asset_url }}" loading="lazy" alt="" class="reseller-header_logo">

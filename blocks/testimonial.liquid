@@ -4,7 +4,7 @@
 </h3><div class="testimonials_card-text"><p class="testimonials_card-quote"> {{ block.settings.textarea_bewertungs_text }} </p><a href="{{ block.settings.url_read_more_link }}" class="testimonials_card-readmore"> <span>{{ block.settings.text_read_more_label }}</span> </a></div></div>
                     <footer class="testimonials_card-footer"><div class="testimonials_card-author"><span class="testimonials_card-author-name">
 {{ block.settings.text_name }}
-</span>{% if block.settings.verified %}    <span li-if="block.settings.verified" class="testimonials_card-author-badge" aria-label="Verifiziert">
+</span>{% if block.settings.verified %}    <span li-if="block.settings.verified" class="testimonials_card-author-badge" aria-label="Verified">
     <svg width="11" height="22" viewbox="0 0 11 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.5 4L1 6V11C1 14 3 16.5 5.5 17.5C8 16.5 10 14 10 11V6L5.5 4Z" fill="currentColor" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"></path><path d="M3.5 10.5L4.8 12L8 8.5" stroke="white" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path></svg>    </span>
 {% endif %}</div><span class="testimonials_card-time">
 {{ block.settings.text_zeitpunkt }}
@@ -46,7 +46,7 @@
             "id": "text_zeitpunkt",
             "type": "text",
             "label": "Zeitpunkt",
-            "default": "vor 5 Stunden"
+            "default": "5 hours ago"
         },
         {
             "type": "range",
