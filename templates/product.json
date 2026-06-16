@@ -23,21 +23,16 @@
         "text_color": "#0f0f0f"
       }
     },
-    "product_header": {
+    "product_header_bqWCq3": {
       "type": "product_header",
       "blocks": {
-        "produkt-kopf": {
+        "produkt_kopf_CfNxpi": {
           "type": "produkt-kopf",
-          "name": "Produkt-Kopf",
-          "settings": {
-            "text_unterzeile": "Wenn Funktion, Design und Schutz zusammenkommen, der ideale Begleiter für Ihr Unternehmen",
-            "richtext_highlights": "<p>Schlichtes, modernes DesignBeste Organisation on the wayTop Protection für dein Deviceund auch noch günstig</p>"
-          },
+          "settings": {},
           "blocks": {}
         },
-        "preis": {
+        "preis_RVzH4L": {
           "type": "preis",
-          "name": "Preis",
           "settings": {
             "url_bewertungslink": "",
             "text_bewertungsscore": "4.8",
@@ -45,166 +40,89 @@
           },
           "blocks": {}
         },
-        "kaufen": {
+        "kaufen_bLY6zn": {
           "type": "kaufen",
-          "name": "Kaufen",
           "settings": {
-            "text_label_construction_type": "Bauart",
-            "text_label_grosse": "Größe",
-            "text_label_farbe": "Farbe",
-            "text_label_produktfamilie": "Produktfamilie",
+            "text_label_construction_type": "Construction",
+            "text_label_grosse": "Size",
+            "text_label_farbe": "Color",
+            "text_label_produktfamilie": "Product family",
             "text_label_segment": "Segment",
-            "text_liefertext": "Bis 16 Uhr bestellen, zwischen 26. & 27. März bei dir",
+            "text_liefertext": "Order by 4 PM, delivered between <strong>March 26 & 27</strong>",
             "url_angebot_link": "",
-            "text_angebot_text": "Angebot anfragen",
-            "url_merken_link": "",
-            "text_merken_text": "Merken",
+            "text_angebot_text": "Request a quote",
+            "text_merken_text": "Save",
             "url_vergleichen_link": "",
-            "text_vergleichen_text": "Vergleichen",
-            "text_trust_1": "Kostenloser Versand ab €59,00",
-            "text_trust_2": "Kauf auf Rechnung mit Klarna",
-            "text_trust_3": "30 Tage Geld-zurück-Garantie"
+            "text_vergleichen_text": "Compare",
+            "text_trust_1": "Free shipping from €59.00",
+            "text_trust_2": "Pay by invoice with Klarna",
+            "text_trust_3": "30-day money-back guarantee"
           },
           "blocks": {}
         },
-        "we-care": {
+        "we_care_TYnr9m": {
           "type": "we-care",
-          "name": "We Care",
           "settings": {},
           "blocks": {
-            "we_care_item_UPNEDJ": {
+            "we_care_item_atw3EC": {
               "type": "we-care-item",
-              "name": "We Care Item",
               "settings": {
-                "text_headline": "30 Jahre deutsche Qualität &amp; Zuverlässigkeit",
+                "text_headline": "30 years of German quality &amp; reliability",
                 "url_link": "",
-                "text_linktext": "Unsere Prinzipien ansehen"
-              },
-              "blocks": {}
-            },
-            "we_care_item_eNxJjq": {
-              "type": "we-care-item",
-              "name": "We Care Item",
-              "settings": {
-                "text_headline": "30 Jahre deutsche Qualität & Zuverlässigkeit",
-                "url_link": "",
-                "text_linktext": "Unsere Prinzipien ansehen"
-              },
-              "blocks": {}
-            },
-            "we_care_item_mxhMrH": {
-              "type": "we-care-item",
-              "name": "We Care Item",
-              "settings": {
-                "text_headline": "30 Jahre deutsche Qualität & Zuverlässigkeit",
-                "url_link": "",
-                "text_linktext": "Unsere Prinzipien ansehen"
+                "text_linktext": "See our principles"
               },
               "blocks": {}
             }
           },
           "block_order": [
-            "we_care_item_UPNEDJ",
-            "we_care_item_eNxJjq",
-            "we_care_item_mxhMrH"
+            "we_care_item_atw3EC"
           ]
         },
-        "beschreibungs-tabs": {
+        "beschreibungs_tabs_4QbGBE": {
           "type": "beschreibungs-tabs",
-          "name": "Beschreibungs-Tabs",
           "settings": {
-            "text_tab_1": "Spezifikationen",
-            "text_tab_2": "Ausstattungen",
-            "text_tab_3": "Beschreibung",
-            "text_tab_4": "Downloads"
+            "text_tab_1": "Description",
+            "text_tab_2": "Features",
+            "text_tab_3": "Care",
+            "text_tab_4": "Downloads",
+            "richtext_ausstattung": "<p>Enter features...</p>",
+            "richtext_pflege": "<p>Enter care instructions...</p>",
+            "text_download_1_titel": "PDF Datasheet",
+            "url_download_1_link": "",
+            "text_download_2_titel": "Letter of Conformity",
+            "text_download_3_titel": "User Manual",
+            "text_download_4_titel": "Product Images"
           },
-          "blocks": {
-            "tab_inhalt_6erFgy": {
-              "type": "tab-inhalt",
-              "name": "Tab Inhalt",
-              "settings": {
-                "richtext_inhalt": "<p>Inhalt eingeben...</p>",
-                "use_product_desc": false
-              },
-              "blocks": {}
-            },
-            "tab_inhalt_gRMR3B": {
-              "type": "tab-inhalt",
-              "name": "Tab Inhalt",
-              "settings": {
-                "richtext_inhalt": "<p>Inhalt eingeben...</p>",
-                "use_product_desc": false
-              },
-              "blocks": {}
-            },
-            "tab_inhalt_itGWke": {
-              "type": "tab-inhalt",
-              "name": "Tab Inhalt",
-              "settings": {
-                "richtext_inhalt": "<p>Inhalt eingeben...</p>",
-                "use_product_desc": false
-              },
-              "blocks": {}
-            },
-            "tab_inhalt_dmajpU": {
-              "type": "tab-inhalt",
-              "name": "Tab Inhalt",
-              "settings": {
-                "richtext_inhalt": "<p>Inhalt eingeben...</p>",
-                "use_product_desc": false
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "tab_inhalt_6erFgy",
-            "tab_inhalt_gRMR3B",
-            "tab_inhalt_itGWke",
-            "tab_inhalt_dmajpU"
-          ]
+          "blocks": {}
         },
-        "upsell": {
+        "upsell_7GQFaq": {
           "type": "upsell",
-          "name": "Upsell",
           "settings": {
-            "text_upsell_titel": "Passt gut zusammen"
+            "text_upsell_titel": "Pairs well together"
           },
           "blocks": {
-            "upsell_produkt_WJVrDP": {
+            "upsell_produkt_4iW66f": {
               "type": "upsell-produkt",
-              "name": "Upsell Produkt",
               "settings": {
-                "text_produktname": "Blickschutzfilter 4-Way",
-                "text_preis": "54,90 EUR",
-                "url_kaufen_link": ""
-              },
-              "blocks": {}
-            },
-            "upsell_produkt_QzcbVA": {
-              "type": "upsell-produkt",
-              "name": "Upsell Produkt",
-              "settings": {
-                "text_produktname": "Blickschutzfilter 4-Way",
-                "text_preis": "54,90 EUR",
-                "url_kaufen_link": ""
+                "upsell_product": ""
               },
               "blocks": {}
             }
           },
           "block_order": [
-            "upsell_produkt_WJVrDP",
-            "upsell_produkt_QzcbVA"
+            "upsell_produkt_4iW66f"
           ]
         }
       },
       "block_order": [
-        "produkt-kopf",
-        "preis",
-        "kaufen",
-        "we-care",
-        "beschreibungs-tabs",
-        "upsell"
+        "produkt_kopf_CfNxpi",
+        "preis_RVzH4L",
+        "kaufen_bLY6zn",
+        "we_care_TYnr9m",
+        "beschreibungs_tabs_4QbGBE",
+        "upsell_7GQFaq"
       ],
+      "name": "Product Header",
       "settings": {}
     },
     "product_usp_bar": {
@@ -384,7 +302,7 @@
   "wrapper": "main.main-wrapper",
   "order": [
     "product_breadcrumb",
-    "product_header",
+    "product_header_bqWCq3",
     "product_usp_bar",
     "product_feature_gall",
     "product_family",
