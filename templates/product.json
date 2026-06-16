@@ -104,7 +104,7 @@
             "upsell_produkt_4iW66f": {
               "type": "upsell-produkt",
               "settings": {
-                "upsell_product": ""
+                "upsell_product": "{{ closest.product }}"
               },
               "blocks": {}
             }
