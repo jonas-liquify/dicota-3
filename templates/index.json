@@ -92,13 +92,13 @@
         "text_color": "#ffffff"
       }
     },
-    "rating_bar_qr8cYB": {
+    "rating_bar_APJfec": {
       "type": "rating_bar",
       "name": "Rating Bar",
       "settings": {
-        "text_bewertung_zahl": "4,83",
-        "text_bewertung_label": "Hervorragend",
-        "text_anzahl_bewertungen": "17 982 Bewertungen",
+        "text_bewertung_zahl": "4.83",
+        "text_bewertung_label": "Excellent",
+        "text_anzahl_bewertungen": "17,982 reviews",
         "url_provider_link": "",
         "alignment": "center",
         "padding_top": 24,
@@ -361,6 +361,60 @@
     },
     "image_link_list": {
       "type": "image_link_list",
+      "blocks": {
+        "imagelink_list_link_TqEPkp": {
+          "type": "imagelink-list-link",
+          "name": "Image+Link List Link",
+          "settings": {
+            "url_link_ziel": "",
+            "text_label": "Mobile Working"
+          },
+          "blocks": {}
+        },
+        "imagelink_list_link_JHBbCE": {
+          "type": "imagelink-list-link",
+          "name": "Image+Link List Link",
+          "settings": {
+            "url_link_ziel": "",
+            "text_label": "Mobile Working"
+          },
+          "blocks": {}
+        },
+        "imagelink_list_link_PVkDYW": {
+          "type": "imagelink-list-link",
+          "name": "Image+Link List Link",
+          "settings": {
+            "url_link_ziel": "",
+            "text_label": "Mobile Working"
+          },
+          "blocks": {}
+        },
+        "imagelink_list_link_Y9J94a": {
+          "type": "imagelink-list-link",
+          "name": "Image+Link List Link",
+          "settings": {
+            "url_link_ziel": "",
+            "text_label": "Mobile Working"
+          },
+          "blocks": {}
+        },
+        "imagelink_list_link_ACND9D": {
+          "type": "imagelink-list-link",
+          "name": "Image+Link List Link",
+          "settings": {
+            "url_link_ziel": "",
+            "text_label": "Mobile Working"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "imagelink_list_link_TqEPkp",
+        "imagelink_list_link_JHBbCE",
+        "imagelink_list_link_PVkDYW",
+        "imagelink_list_link_Y9J94a",
+        "imagelink_list_link_ACND9D"
+      ],
       "settings": {
         "image_bild": "shopify://shop_images/2_MT_Five.webp",
         "text_subtitle": "Wonach suchst du?",
@@ -502,7 +556,7 @@
   "wrapper": "main.main-wrapper",
   "order": [
     "hero_slider",
-    "rating_bar_qr8cYB",
+    "rating_bar_APJfec",
     "section_headline",
     "featured_products",
     "usp_icon_row",
