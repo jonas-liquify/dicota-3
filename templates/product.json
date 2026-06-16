@@ -71,7 +71,43 @@
           "type": "we-care",
           "name": "We Care",
           "settings": {},
-          "blocks": {}
+          "blocks": {
+            "we_care_item_UPNEDJ": {
+              "type": "we-care-item",
+              "name": "We Care Item",
+              "settings": {
+                "text_headline": "30 Jahre deutsche Qualität &amp; Zuverlässigkeit",
+                "url_link": "",
+                "text_linktext": "Unsere Prinzipien ansehen"
+              },
+              "blocks": {}
+            },
+            "we_care_item_eNxJjq": {
+              "type": "we-care-item",
+              "name": "We Care Item",
+              "settings": {
+                "text_headline": "30 Jahre deutsche Qualität & Zuverlässigkeit",
+                "url_link": "",
+                "text_linktext": "Unsere Prinzipien ansehen"
+              },
+              "blocks": {}
+            },
+            "we_care_item_mxhMrH": {
+              "type": "we-care-item",
+              "name": "We Care Item",
+              "settings": {
+                "text_headline": "30 Jahre deutsche Qualität & Zuverlässigkeit",
+                "url_link": "",
+                "text_linktext": "Unsere Prinzipien ansehen"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "we_care_item_UPNEDJ",
+            "we_care_item_eNxJjq",
+            "we_care_item_mxhMrH"
+          ]
         },
         "beschreibungs-tabs": {
           "type": "beschreibungs-tabs",
