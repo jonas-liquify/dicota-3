@@ -1,27 +1,14 @@
 <div li-block="Produkt-Kopf" {{ block.shopify_attributes }}>
                     <div class="ph_title-row"><h1 li-object:text="product.title" class="ph_title heading-style-h4">
 {{ product.title }}
-</h1><div class="ph_ids"><div class="ph_id-row"><span class="ph_id-label">SKU</span><span li-object="product.selected_or_first_available_variant.sku" class="ph_id-value">{{ product.selected_or_first_available_variant.sku }}</span><button type="button" onclick="if(navigator.clipboard)navigator.clipboard.writeText(this.previousElementSibling.textContent)" aria-label="SKU kopieren" class="ph_id-copy w-embed"><svg width="100%" height="100%" viewbox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"></path></svg></button></div><div class="ph_id-row"><span class="ph_id-label">GTIN</span><span li-object="product.selected_or_first_available_variant.barcode" class="ph_id-value">{{ product.selected_or_first_available_variant.barcode }}</span><button type="button" onclick="if(navigator.clipboard)navigator.clipboard.writeText(this.previousElementSibling.textContent)" aria-label="GTIN kopieren" class="ph_id-copy w-embed"><svg width="100%" height="100%" viewbox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"></path></svg></button></div></div></div>
-                    <p class="ph_subtitle">
-{{ block.settings.text_unterzeile }}
-</p>
-                    <div class="ph_highlights text-rich-text w-richtext"> {{ block.settings.richtext_highlights }} </div>
+</h1><div class="ph_ids"><div class="ph_id-row"><span class="ph_id-label">SKU</span><span li-object="product.selected_or_first_available_variant.sku" class="ph_id-value">{{ product.selected_or_first_available_variant.sku }}</span><button type="button" onclick="if(navigator.clipboard)navigator.clipboard.writeText(this.previousElementSibling.textContent)" aria-label="Copy SKU" class="ph_id-copy w-embed"><svg width="100%" height="100%" viewbox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"></path></svg></button></div><div class="ph_id-row"><span class="ph_id-label">GTIN</span><span li-object="product.selected_or_first_available_variant.barcode" class="ph_id-value">{{ product.selected_or_first_available_variant.barcode }}</span><button type="button" onclick="if(navigator.clipboard)navigator.clipboard.writeText(this.previousElementSibling.textContent)" aria-label="Copy GTIN" class="ph_id-copy w-embed"><svg width="100%" height="100%" viewbox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"></path></svg></button></div></div></div>
+                    <p li-object="product.metafields.custom.product_tagline" class="ph_subtitle">{{ product.metafields.custom.product_tagline }}</p>
+                    <div class="ph_highlights"><ul li-for:inside="argument in product.metafields.custom.sales_arguments.value" role="list">
+        {% for argument in product.metafields.custom.sales_arguments.value %}                            <li li-object="argument">{{ argument }}</li>
+                    {% endfor %}    </ul></div>
                 </div> {% schema %} {
     "name": "Produkt-Kopf",
-    "settings": [
-        {
-            "id": "text_unterzeile",
-            "type": "text",
-            "label": "Unterzeile",
-            "default": "Wenn Funktion, Design und Schutz zusammenkommen, der ideale Begleiter f\u00fcr Ihr Unternehmen"
-        },
-        {
-            "id": "richtext_highlights",
-            "type": "richtext",
-            "label": "Highlights",
-            "default": "<p>Schlichtes, modernes DesignBeste Organisation on the wayTop Protection f\u00fcr dein Deviceund auch noch g\u00fcnstig<\/p>"
-        }
-    ],
+    "settings": [],
     "presets": [
         {
             "name": "Produkt-Kopf",

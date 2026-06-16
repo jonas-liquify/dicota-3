@@ -4,9 +4,9 @@
 {{ section.settings.text_anzahl }}
 </p></div><div class="product-reviews_breakdown"><p class="product-reviews_breakdown-title">
 {{ section.settings.text_breakdown_titel }}
-</p><div class="product-reviews_bars"><div class="product-reviews_bar-row"><span class="product-reviews_bar-label">5</span><div class="product-reviews_bar-track"><div class="product-reviews_bar-fill" style="width: {{ section.settings.stars_5_pct }}%"></div></div></div><div class="product-reviews_bar-row"><span class="product-reviews_bar-label">4</span><div class="product-reviews_bar-track"><div class="product-reviews_bar-fill" style="width: {{ section.settings.stars_4_pct }}%"></div></div></div><div class="product-reviews_bar-row"><span class="product-reviews_bar-label">3</span><div class="product-reviews_bar-track"><div class="product-reviews_bar-fill" style="width: {{ section.settings.stars_3_pct }}%"></div></div></div><div class="product-reviews_bar-row"><span class="product-reviews_bar-label">2</span><div class="product-reviews_bar-track"><div class="product-reviews_bar-fill" style="width: {{ section.settings.stars_2_pct }}%"></div></div></div><div class="product-reviews_bar-row"><span class="product-reviews_bar-label">1</span><div class="product-reviews_bar-track"><div class="product-reviews_bar-fill" style="width: {{ section.settings.stars_1_pct }}%"></div></div></div></div></div><a href="{{ section.settings.url_rezension_schreiben_link }}" class="button product-reviews_write-btn"> Rezension schreiben </a></div><div class="product-reviews_list"><div li-cf-theme-blocks="" class="product-reviews_items">
+</p><div class="product-reviews_bars"><div class="product-reviews_bar-row"><span class="product-reviews_bar-label">5</span><div class="product-reviews_bar-track"><div class="product-reviews_bar-fill" style="width: {{ section.settings.stars_5_pct }}%"></div></div></div><div class="product-reviews_bar-row"><span class="product-reviews_bar-label">4</span><div class="product-reviews_bar-track"><div class="product-reviews_bar-fill" style="width: {{ section.settings.stars_4_pct }}%"></div></div></div><div class="product-reviews_bar-row"><span class="product-reviews_bar-label">3</span><div class="product-reviews_bar-track"><div class="product-reviews_bar-fill" style="width: {{ section.settings.stars_3_pct }}%"></div></div></div><div class="product-reviews_bar-row"><span class="product-reviews_bar-label">2</span><div class="product-reviews_bar-track"><div class="product-reviews_bar-fill" style="width: {{ section.settings.stars_2_pct }}%"></div></div></div><div class="product-reviews_bar-row"><span class="product-reviews_bar-label">1</span><div class="product-reviews_bar-track"><div class="product-reviews_bar-fill" style="width: {{ section.settings.stars_1_pct }}%"></div></div></div></div></div><a href="{{ section.settings.url_rezension_schreiben_link }}" class="button product-reviews_write-btn"> Write a review </a></div><div class="product-reviews_list"><div li-cf-theme-blocks="" class="product-reviews_items">
 {% content_for 'blocks' %}
-</div><a href="{{ section.settings.url_mehr_bewertungen_link }}" class="button is-secondary product-reviews_more-btn"> Weitere Bewertungen laden </a></div></div></div></div> {% schema %} {
+</div><a href="{{ section.settings.url_mehr_bewertungen_link }}" class="button is-secondary product-reviews_more-btn"> Load more reviews </a></div></div></div></div> {% schema %} {
     "tag": "section",
     "name": "Product Reviews",
     "class": "section_product-reviews",
@@ -23,19 +23,19 @@
             "id": "text_score",
             "type": "text",
             "label": "Score",
-            "default": "4,9\/5,0 Bewertung"
+            "default": "4.9\/5.0 rating"
         },
         {
             "id": "text_anzahl",
             "type": "text",
             "label": "Anzahl",
-            "default": "Basierend auf 11 Bewertungen"
+            "default": "Based on 11 reviews"
         },
         {
             "id": "text_breakdown_titel",
             "type": "text",
             "label": "Breakdown Titel",
-            "default": "Bewertungs\u00fcberblick"
+            "default": "Rating overview"
         },
         {
             "id": "url_rezension_schreiben_link",

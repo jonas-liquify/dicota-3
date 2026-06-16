@@ -13,7 +13,7 @@
                     <div role="cell" class="mkt-order_cell mkt-order_cell-price"><span class="text-size-regular text-weight-medium">
 {{ block.settings.text_preis }}
 </span></div>
-                    <div role="cell" class="mkt-order_cell mkt-order_cell-qty"><div class="mkt-order_qty"><button type="button" x-on:click="qty = Math.max(0, qty - 1)" aria-label="Menge verringern" class="mkt-order_qty-btn">−</button><input type="number" x-model.number="qty" min="0" name="contact[{{ block.settings.bezeichnung }} ({{ block.settings.art_nr }}) — Menge]" class="mkt-order_qty-input"><button type="button" x-on:click="qty = qty + 1" aria-label="Menge erhöhen" class="mkt-order_qty-btn">+</button></div></div>
+                    <div role="cell" class="mkt-order_cell mkt-order_cell-qty"><div class="mkt-order_qty"><button type="button" x-on:click="qty = Math.max(0, qty - 1)" aria-label="Decrease quantity" class="mkt-order_qty-btn">−</button><input type="number" x-model.number="qty" min="0" name="contact[{{ block.settings.bezeichnung }} ({{ block.settings.art_nr }}) — Menge]" class="mkt-order_qty-input"><button type="button" x-on:click="qty = qty + 1" aria-label="Increase quantity" class="mkt-order_qty-btn">+</button></div></div>
                 </div> {% schema %} {
     "name": "B2B Bestell-Artikel",
     "settings": [
@@ -26,7 +26,7 @@
             "id": "text_bezeichnung",
             "type": "text",
             "label": "Bezeichnung",
-            "default": "Laptop Rucksack Slim Eco MOTION 13-15.6\""
+            "default": "Laptop Backpack Slim Eco MOTION 13-15.6\""
         },
         {
             "id": "text_art_nr",

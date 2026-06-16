@@ -2,7 +2,7 @@
 {{ section.settings.text_heading }}
 </h2><div class="text-size-medium"> {{ section.settings.textarea_text }} </div></div><div class="team_grid"><div class="swiper_component is-team-swiper"><div class="swiper is-team-swiper"><div li-cf-theme-blocks="" class="swiper-wrapper is-team-swiper">
 {% content_for 'blocks' %}
-</div></div><div class="swiper_navigation is-absolute"><button aria-label="Vorherige Slide" class="swiper_button swiper_prev"><div class="swiper_button-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewbox="0 0 38 38" fill="none"><rect x="38" y="0" width="38" height="38" rx="19" transform="rotate(90 38 0)" fill="rgba(255,255,255,0.85)"></rect><path d="M12.7765 19.5483L21.2284 11.0964L22.8037 12.6718L15.9272 19.5483L22.8037 26.4249L21.2283 28.0002L12.7765 19.5483Z" fill="#0F0F0F"></path></svg></div></button><button aria-label="Nächste Slide" class="swiper_button swiper_next"><div class="swiper_button-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewbox="0 0 38 38" fill="none"><rect y="38" width="38" height="38" rx="19" transform="rotate(-90 0 38)" fill="#0F0F0F"></rect><path d="M25.2245 18.4522L16.7726 26.9041L15.1973 25.3287L22.0738 18.4522L15.1973 11.5756L16.7726 10.0003L25.2245 18.4522Z" fill="white"></path></svg></div></button></div></div><div class="icon-cards_card is-line-left">{% if section.settings.image_karte_1_icon %}
+</div></div><div class="swiper_navigation is-absolute"><button aria-label="Previous slide" class="swiper_button swiper_prev"><div class="swiper_button-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewbox="0 0 38 38" fill="none"><rect x="38" y="0" width="38" height="38" rx="19" transform="rotate(90 38 0)" fill="rgba(255,255,255,0.85)"></rect><path d="M12.7765 19.5483L21.2284 11.0964L22.8037 12.6718L15.9272 19.5483L22.8037 26.4249L21.2283 28.0002L12.7765 19.5483Z" fill="#0F0F0F"></path></svg></div></button><button aria-label="Next slide" class="swiper_button swiper_next"><div class="swiper_button-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewbox="0 0 38 38" fill="none"><rect y="38" width="38" height="38" rx="19" transform="rotate(-90 0 38)" fill="#0F0F0F"></rect><path d="M25.2245 18.4522L16.7726 26.9041L15.1973 25.3287L22.0738 18.4522L15.1973 11.5756L16.7726 10.0003L25.2245 18.4522Z" fill="white"></path></svg></div></button></div></div><div class="icon-cards_card is-line-left">{% if section.settings.image_karte_1_icon %}
 {{ section.settings.image_karte_1_icon | image_url: width: 120 | image_tag: loading: 'lazy', class: 'icon-1x1-huge' }}
 {% else %}
 <img src="{{ 'platzhalter.svg' | asset_url }}" loading="lazy" alt="" class="icon-1x1-huge">
@@ -37,13 +37,13 @@
             "id": "text_heading",
             "type": "text",
             "label": "Heading",
-            "default": "Das Team hinter DICOTA"
+            "default": "The team behind DICOTA"
         },
         {
             "id": "textarea_text",
             "type": "textarea",
             "label": "Text",
-            "default": "\u00dcber 100 Kolleg:innen weltweit teilen die Leidenschaft, mobile Profis besser auszustatten. Lerne sie kennen."
+            "default": "Over 100 colleagues worldwide share the passion to better equip mobile professionals. Get to know them."
         },
         {
             "id": "image_karte_1_icon",
@@ -54,13 +54,13 @@
             "id": "text_karte_1_heading",
             "type": "text",
             "label": "Karte 1 Heading",
-            "default": "Vielfalt"
+            "default": "Diversity"
         },
         {
             "id": "textarea_karte_1_text",
             "type": "textarea",
             "label": "Karte 1 Text",
-            "default": "Unterschiedliche Hintergr\u00fcnde machen uns st\u00e4rker \u2014 gemeinsam denken wir weiter."
+            "default": "Different backgrounds make us stronger \u2014 together we think further."
         },
         {
             "id": "image_karte_2_icon",
@@ -71,13 +71,13 @@
             "id": "text_karte_2_heading",
             "type": "text",
             "label": "Karte 2 Heading",
-            "default": "Verantwortung"
+            "default": "Responsibility"
         },
         {
             "id": "textarea_karte_2_text",
             "type": "textarea",
             "label": "Karte 2 Text",
-            "default": "Wir \u00fcbertragen Verantwortung fr\u00fch \u2014 und stehen hinter unseren Entscheidungen."
+            "default": "We hand over responsibility early \u2014 and stand behind our decisions."
         },
         {
             "id": "image_karte_3_icon",
@@ -88,13 +88,13 @@
             "id": "text_karte_3_heading",
             "type": "text",
             "label": "Karte 3 Heading",
-            "default": "Wachstum"
+            "default": "Growth"
         },
         {
             "id": "textarea_karte_3_text",
             "type": "textarea",
             "label": "Karte 3 Text",
-            "default": "Pers\u00f6nliche und fachliche Weiterentwicklung geh\u00f6rt bei uns zum Alltag."
+            "default": "Personal and professional development is part of everyday life here."
         },
         {
             "id": "url_button_link",
@@ -105,7 +105,7 @@
             "id": "text_button_text",
             "type": "text",
             "label": "Button Text",
-            "default": "Mehr \u00fcber uns"
+            "default": "More about us"
         },
         {
             "type": "header",

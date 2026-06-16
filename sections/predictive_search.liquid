@@ -1,18 +1,18 @@
-<div x-show="!searchQuery || searchQuery.length === 0" class="nav_search-empty-grid"><div class="nav_search-empty-col"><div class="nav_search-empty-header"><div class="text-style-subline">Beliebte Suchanfragen</div></div><div class="nav_search-pills">{% for block in section.blocks %}
+<div x-show="!searchQuery || searchQuery.length === 0" class="nav_search-empty-grid"><div class="nav_search-empty-col"><div class="nav_search-empty-header"><div class="text-style-subline">Popular searches</div></div><div class="nav_search-pills">{% for block in section.blocks %}
     {% if block.type == "nav-search-suggestion" %}
                     <div li-block="Nav Search Suggestion" style="display:contents">
                                     <a href="{{ block.settings.url_link }}" class="nav_search-pill-item"> <span>{{ block.settings.text_text }}</span> </a>
                             </div>
             {% endif %}
-{% endfor %}</div></div><div class="nav_search-empty-col"><div class="nav_search-empty-header"><div class="text-style-subline">Kürzlich angeschaut</div><a href="#" class="text-style-link">Löschen</a></div><div class="nav_search-recent">{% for product in section.settings.collection_search_recent.products limit: section.settings.collection_search_recent_limit %}
+{% endfor %}</div></div><div class="nav_search-empty-col"><div class="nav_search-empty-header"><div class="text-style-subline">Recently viewed</div><a href="#" class="text-style-link">Clear</a></div><div class="nav_search-recent">{% for product in section.settings.collection_search_recent.products limit: section.settings.collection_search_recent_limit %}
 <div class="nav_search-recent-item">
     <a li-object:href="product.url" href="{{ product.url }}" class="nav_search-recent-link"><img li-object:src="product.featured_image | image_url: width: 400" li-object:alt="product.featured_image.alt" src="{{ product.featured_image | image_url: width: 400 }}" loading="lazy" alt="{{ product.featured_image.alt }}" class="nav_search-recent-image"></a>
 </div>
-{% endfor %}</div></div></div><div x-cloak="" x-show="searchQuery && searchQuery.length > 0" class="nav_search-results-grid"><div class="nav_search-empty-col"><div class="text-style-subline">Vorschläge</div><ul role="list" class="nav_search-suggestion-list w-list-unstyled"><li class="nav_search-suggestion-item"><a href="#" class="nav_search-suggestion-link">Rucksäcke</a></li><li class="nav_search-suggestion-item"><a href="#" class="nav_search-suggestion-link">Taschen & Rucksäcke</a></li><li class="nav_search-suggestion-item"><a href="#" class="nav_search-suggestion-link">Auslaufprodukte: Taschen & Rucksäcke</a></li></ul></div><div class="nav_search-empty-col"><ul role="list" class="nav_search-product-grid w-list-unstyled">{% for product in section.settings.collection_search_bestseller.products limit: section.settings.collection_search_bestseller_limit %}
+{% endfor %}</div></div></div><div x-cloak="" x-show="searchQuery && searchQuery.length > 0" class="nav_search-results-grid"><div class="nav_search-empty-col"><div class="text-style-subline">Suggestions</div><ul role="list" class="nav_search-suggestion-list w-list-unstyled"><li class="nav_search-suggestion-item"><a href="#" class="nav_search-suggestion-link">Backpacks</a></li><li class="nav_search-suggestion-item"><a href="#" class="nav_search-suggestion-link">Bags & Backpacks</a></li><li class="nav_search-suggestion-item"><a href="#" class="nav_search-suggestion-link">Discontinued: Bags & Backpacks</a></li></ul></div><div class="nav_search-empty-col"><ul role="list" class="nav_search-product-grid w-list-unstyled">{% for product in section.settings.collection_search_bestseller.products limit: section.settings.collection_search_bestseller_limit %}
 <li role="listitem">
     <a li-object:href="product.url" href="{{ product.url }}" class="nav_search-product-link"><div class="nav_search-product-image-wrap"><img li-object:src="product.featured_image | image_url: width: 400" li-object:alt="product.featured_image.alt" src="{{ product.featured_image | image_url: width: 400 }}" loading="lazy" alt="{{ product.featured_image.alt }}" class="nav_search-product-image"></div><div class="nav_search-product-info"><div li-object="product.title" class="nav_search-product-title text-size-small text-weight-medium">{{ product.title }}</div><div li-object="product.type" class="nav_search-product-brand text-size-tiny text-style-muted">{{ product.type }}</div><div li-object="product.price | money" class="text-size-small">{{ product.price | money }}</div></div></a>
 </li>
-{% endfor %}</ul><a href="/search" class="button is-outline nav_search-results-cta w-button"><span>Alle Produkte anzeigen</span></a></div></div> {% schema %} {
+{% endfor %}</ul><a href="/search" class="button is-outline nav_search-results-cta w-button"><span>View all products</span></a></div></div> {% schema %} {
     "tag": "div",
     "name": "predictive_search",
     "class": "nav_search-overlay-states",
@@ -30,7 +30,7 @@
                     "id": "text_text",
                     "type": "text",
                     "label": "Text",
-                    "default": "Rucks\u00e4cke"
+                    "default": "Backpacks"
                 }
             ]
         }

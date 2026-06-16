@@ -6,7 +6,7 @@
 {{ section.settings.text_info_heading }}
 </div><div class="text-rich-text w-richtext"> {{ section.settings.richtext_info_text }} </div></div><div class="acc_gutschein-form-wrapper"><div class="acc_gutschein-form-block w-form"><form name="punkte-auszahlen" data-name="Punkte auszahlen" method="get" class="acc_gutschein-form"><h2 class="heading-style-h4">
 {{ section.settings.text_form_heading }}
-</h2><div class="form_field-wrapper"><input class="form_input is-gutschein-form w-input" maxlength="256" name="punkte" placeholder=" " type="number" id="punkte-auszahlen" required=""><label for="punkte-auszahlen" class="form_label is-gutschein-form">Auszuzahlende Punkte (Min. 10.000)</label></div><div class="form_field-wrapper"><input class="form_input is-gutschein-form w-input" maxlength="256" name="iban" placeholder=" " type="text" id="iban" required=""><label for="iban" class="form_label is-gutschein-form">Kontonummer / IBAN</label></div><div class="form_field-wrapper"><input class="form_input is-gutschein-form w-input" maxlength="256" name="kontoinhaber" placeholder=" " type="text" id="kontoinhaber" required=""><label for="kontoinhaber" class="form_label is-gutschein-form">Kontoinhaber</label></div><div class="form_field-wrapper"><input class="form_input is-gutschein-form w-input" maxlength="256" name="bank" placeholder=" " type="text" id="bank" required=""><label for="bank" class="form_label is-gutschein-form">Bank</label></div><div class="button-group margin-top margin-small"><input type="submit" class="button w-button" value="Absenden"></div></form></div><div class="acc_double-icons-list"><div class="acc_double-icons-item"><div class="icon-1x1-medium w-embed"><svg width="100%" height="100%" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zM9 8V6c0-1.66 1.34-3 3-3s3 1.34 3 3v2H9z" fill="currentColor"></path></svg></div><div class="text-size-regular">
+</h2><div class="form_field-wrapper"><input class="form_input is-gutschein-form w-input" maxlength="256" name="punkte" placeholder=" " type="number" id="punkte-auszahlen" required=""><label for="punkte-auszahlen" class="form_label is-gutschein-form">Points to pay out (min. 10,000)</label></div><div class="form_field-wrapper"><input class="form_input is-gutschein-form w-input" maxlength="256" name="iban" placeholder=" " type="text" id="iban" required=""><label for="iban" class="form_label is-gutschein-form">Account number / IBAN</label></div><div class="form_field-wrapper"><input class="form_input is-gutschein-form w-input" maxlength="256" name="kontoinhaber" placeholder=" " type="text" id="kontoinhaber" required=""><label for="kontoinhaber" class="form_label is-gutschein-form">Account holder</label></div><div class="form_field-wrapper"><input class="form_input is-gutschein-form w-input" maxlength="256" name="bank" placeholder=" " type="text" id="bank" required=""><label for="bank" class="form_label is-gutschein-form">Bank</label></div><div class="button-group margin-top margin-small"><input type="submit" class="button w-button" value="Submit"></div></form></div><div class="acc_double-icons-list"><div class="acc_double-icons-item"><div class="icon-1x1-medium w-embed"><svg width="100%" height="100%" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zM9 8V6c0-1.66 1.34-3 3-3s3 1.34 3 3v2H9z" fill="currentColor"></path></svg></div><div class="text-size-regular">
 {{ section.settings.text_icon_text_1 }}
 </div></div><div class="acc_double-icons-item"><div class="icon-1x1-medium w-embed"><svg width="100%" height="100%" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z" fill="currentColor"></path></svg></div><div class="text-size-regular">
 {{ section.settings.text_icon_text_2 }}
@@ -19,49 +19,49 @@
             "id": "text_breadcrumb",
             "type": "text",
             "label": "Breadcrumb",
-            "default": "R\u00fcckverg\u00fctung"
+            "default": "Cashback"
         },
         {
             "id": "text_heading",
             "type": "text",
             "label": "Heading",
-            "default": "Punkte als R\u00fcckverg\u00fctung"
+            "default": "Points as Cashback"
         },
         {
             "id": "textarea_subheading",
             "type": "textarea",
             "label": "Subheading",
-            "default": "Ab 10.000 Punkten kannst du dir die gesammelten Punkte als Bank\u00fcberweisung auszahlen lassen."
+            "default": "From 10,000 points you can have your collected points paid out via bank transfer."
         },
         {
             "id": "text_info_heading",
             "type": "text",
             "label": "Info Heading",
-            "default": "So funktioniert die R\u00fcckverg\u00fctung"
+            "default": "How cashback works"
         },
         {
             "id": "richtext_info_text",
             "type": "richtext",
             "label": "Info Text",
-            "default": "<p>Mindestens 10.000 Punkte erforderlichUmrechnungskurs: 50 Punkte = 1 EUR\/CHFAuszahlung quartalsweise per Bank\u00fcberweisungBankverbindung muss mit Firmennamen \u00fcbereinstimmenDICOTA beh\u00e4lt sich vor, zus\u00e4tzliche Informationen einzufordern oder Auszahlungen bei Bedenken zu verweigern. Der Umrechnungskurs kann ohne Vorank\u00fcndigung ge\u00e4ndert werden.<\/p>"
+            "default": "<p>At least 10,000 points requiredConversion rate: 50 points = 1 EUR\/CHFQuarterly payout via bank transferBank details must match the company nameDICOTA reserves the right to request additional information or to refuse payouts in case of concerns. The conversion rate may change without prior notice.<\/p>"
         },
         {
             "id": "text_form_heading",
             "type": "text",
             "label": "Form Heading",
-            "default": "Auszahlung anfordern"
+            "default": "Request payout"
         },
         {
             "id": "text_icon_text_1",
             "type": "text",
             "label": "Icon Text 1",
-            "default": "256-Bit SSL-Verschl\u00fcsselung"
+            "default": "256-bit SSL encryption"
         },
         {
             "id": "text_icon_text_2",
             "type": "text",
             "label": "Icon Text 2",
-            "default": "Sichere Transaktionen"
+            "default": "Secure transactions"
         }
     ],
     "presets": [

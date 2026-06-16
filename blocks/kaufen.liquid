@@ -16,7 +16,7 @@
 </div></div><div li-for:inside="pair in combo_pairs" class="product-header_radio-list">
         {% for pair in combo_pairs %}                            <div class="li-tag w-embed">{% assign parts = pair | split: '::' %}{% assign label = parts[0] %}{% assign url = parts[1] %}{% assign available = parts[2] %}</div>
                             {% unless label == blank or url == blank %}    <div li-unless="label == blank or url == blank">
-    <a li-object:href="url" href="{{ url }}" class="product-header_radio" style="{% if size_label == label %}background-color: #f4f4f4; border-color: #0f0f0f; color: #0f0f0f;{% endif %}{% unless available == 'true' %}opacity: 0.5;{% endunless %}"><div li-object="label" class="text-size-regular text-weight-normal">{{ label }}</div></a>    </div>
+    <a li-object:href="url" href="{{ url }}" class="product-header_radio" style="{% if size_label == label %}background-color: #f4f4f4; color: #0f0f0f;{% endif %}{% unless available == 'true' %}opacity: 0.5;{% endunless %}"><div li-object="label" class="text-size-regular text-weight-normal">{{ label }}</div></a>    </div>
 {% endunless %}
                     {% endfor %}    </div>    </div>
 {% endif %}{% if color_pairs.size > 1 %}    <div li-if="color_pairs.size > 1" class="produkt_swatch-component">
@@ -25,7 +25,7 @@
 </div></div><div li-for:inside="pair in color_pairs" class="product-header_radio-list">
         {% for pair in color_pairs %}                            <div class="li-tag w-embed">{% assign parts = pair | split: '::' %}{% assign color = parts[0] %}{% assign url = parts[1] %}{% assign available = parts[2] %}</div>
                             {% unless color == blank or url == blank %}    <div li-unless="color == blank or url == blank">
-    <a li-object:href="url" href="{{ url }}" class="product-header_radio" style="{% if product.metafields.sl_ART.extra_PRODUCTCOLOUR.value == color %}background-color: #f4f4f4; border-color: #0f0f0f; color: #0f0f0f;{% endif %}{% unless available == 'true' %}opacity: 0.5;{% endunless %}"><div li-object="color" class="text-size-regular text-weight-normal">{{ color }}</div></a>    </div>
+    <a li-object:href="url" href="{{ url }}" class="product-header_radio" style="{% if product.metafields.sl_ART.extra_PRODUCTCOLOUR.value == color %}background-color: #f4f4f4; color: #0f0f0f;{% endif %}{% unless available == 'true' %}opacity: 0.5;{% endunless %}"><div li-object="color" class="text-size-regular text-weight-normal">{{ color }}</div></a>    </div>
 {% endunless %}
                     {% endfor %}    </div>    </div>
 {% endif %}    </div>
@@ -45,7 +45,7 @@
 </div></div><div li-for:inside="pair in segment_pairs" class="product-header_radio-list">
         {% for pair in segment_pairs %}                            <div class="li-tag w-embed">{% assign parts = pair | split: '::' %}{% assign seg = parts[0] %}{% assign url = parts[1] %}{% assign available = parts[2] %}</div>
                             {% unless seg == blank or url == blank %}    <div li-unless="seg == blank or url == blank">
-    <a li-object:href="url" href="{{ url }}" class="product-header_radio" style="{% if product.metafields.sl_ART.extra_PRODUCTSEGMENT.value == seg %}background-color: #f4f4f4; border-color: #0f0f0f; color: #0f0f0f;{% endif %}{% unless available == 'true' %}opacity: 0.5;{% endunless %}"><div li-object="seg" class="text-size-regular text-weight-normal">{{ seg }}</div></a>    </div>
+    <a li-object:href="url" href="{{ url }}" class="product-header_radio" style="{% if product.metafields.sl_ART.extra_PRODUCTSEGMENT.value == seg %}background-color: #f4f4f4; color: #0f0f0f;{% endif %}{% unless available == 'true' %}opacity: 0.5;{% endunless %}"><div li-object="seg" class="text-size-regular text-weight-normal">{{ seg }}</div></a>    </div>
 {% endunless %}
                     {% endfor %}    </div>    </div>
 {% endif %}{% if contype_pairs.size > 1 %}    <div li-if="contype_pairs.size > 1" class="produkt_swatch-component">
@@ -54,15 +54,15 @@
 </div></div><div li-for:inside="pair in contype_pairs" class="product-header_radio-list">
         {% for pair in contype_pairs %}                            <div class="li-tag w-embed">{% assign parts = pair | split: '::' %}{% assign ctype = parts[0] %}{% assign url = parts[1] %}{% assign available = parts[2] %}</div>
                             {% unless ctype == blank or url == blank %}    <div li-unless="ctype == blank or url == blank">
-    <a li-object:href="url" href="{{ url }}" class="product-header_radio" style="{% if product.metafields.sl_ART.extra_CONSTRUCTIONTYPE.value == ctype %}background-color: #f4f4f4; border-color: #0f0f0f; color: #0f0f0f;{% endif %}{% unless available == 'true' %}opacity: 0.5;{% endunless %}"><div li-object="ctype" class="text-size-regular text-weight-normal">{{ ctype }}</div></a>    </div>
+    <a li-object:href="url" href="{{ url }}" class="product-header_radio" style="{% if product.metafields.sl_ART.extra_CONSTRUCTIONTYPE.value == ctype %}background-color: #f4f4f4; color: #0f0f0f;{% endif %}{% unless available == 'true' %}opacity: 0.5;{% endunless %}"><div li-object="ctype" class="text-size-regular text-weight-normal">{{ ctype }}</div></a>    </div>
 {% endunless %}
                     {% endfor %}    </div>    </div>
 {% endif %}    </div>
 {% endif %}{% if product.selected_or_first_available_variant.quantity_price_breaks_configured? %}    <div li-if="product.selected_or_first_available_variant.quantity_price_breaks_configured?" class="ph_volume">
-    <div class="ph_volume-head"><span class="ph_volume-title">Mengenrabatt</span><span class="ph_volume-unit">Stückpreis</span></div><div class="ph_volume-tiers"><label class="ph_volume-tier is-active"><input type="radio" name="volume" checked="checked" class="ph_volume-radio"><span class="ph_volume-qty"><span li-object="product.selected_or_first_available_variant.quantity_rule.min">{{ product.selected_or_first_available_variant.quantity_rule.min }}</span>+</span><span class="ph_volume-prices"><span class="ph_volume-price-col"><span li-object="product.selected_or_first_available_variant.price | money" class="ph_volume-price">{{ product.selected_or_first_available_variant.price | money }}</span></span></span></label>{% for price_break in product.selected_or_first_available_variant.quantity_price_breaks %}    <label li-for="price_break in product.selected_or_first_available_variant.quantity_price_breaks" class="ph_volume-tier">
+    <div class="ph_volume-head"><span class="ph_volume-title">Volume discount</span><span class="ph_volume-unit">Unit price</span></div><div class="ph_volume-tiers"><label class="ph_volume-tier is-active"><input type="radio" name="volume" checked="checked" class="ph_volume-radio"><span class="ph_volume-qty"><span li-object="product.selected_or_first_available_variant.quantity_rule.min">{{ product.selected_or_first_available_variant.quantity_rule.min }}</span>+</span><span class="ph_volume-prices"><span class="ph_volume-price-col"><span li-object="product.selected_or_first_available_variant.price | money" class="ph_volume-price">{{ product.selected_or_first_available_variant.price | money }}</span></span></span></label>{% for price_break in product.selected_or_first_available_variant.quantity_price_breaks %}    <label li-for="price_break in product.selected_or_first_available_variant.quantity_price_breaks" class="ph_volume-tier">
                                     <input type="radio" name="volume" class="ph_volume-radio">
                             <span class="ph_volume-qty"><span li-object="price_break.minimum_quantity">{{ price_break.minimum_quantity }}</span>+</span>
-                            <span class="ph_volume-prices"><span class="ph_volume-price-col"><span li-object="price_break.price | money" class="ph_volume-price">{{ price_break.price | money }}</span><span class="ph_volume-save"><span li-object="product.selected_or_first_available_variant.price | minus: price_break.price | money">{{ product.selected_or_first_available_variant.price | minus: price_break.price | money }}</span> sparen</span></span>{% if product.selected_or_first_available_variant.price > price_break.price %}    <span li-if="product.selected_or_first_available_variant.price > price_break.price" class="ph_volume-badge">
+                            <span class="ph_volume-prices"><span class="ph_volume-price-col"><span li-object="price_break.price | money" class="ph_volume-price">{{ price_break.price | money }}</span><span class="ph_volume-save">Save <span li-object="product.selected_or_first_available_variant.price | minus: price_break.price | money">{{ product.selected_or_first_available_variant.price | minus: price_break.price | money }}</span></span></span>{% if product.selected_or_first_available_variant.price > price_break.price %}    <span li-if="product.selected_or_first_available_variant.price > price_break.price" class="ph_volume-badge">
     -<span li-object="product.selected_or_first_available_variant.price | minus: price_break.price | times: 100 | divided_by: product.selected_or_first_available_variant.price">{{ product.selected_or_first_available_variant.price | minus: price_break.price | times: 100 | divided_by: product.selected_or_first_available_variant.price }}</span>%    </span>
 {% endif %}</span>
                         </label>
@@ -71,11 +71,13 @@
 {{ block.settings.text_liefertext }}
 </span></div><template x-if="selected_or_first_available_variant.available">
             <div li-js-if="selected_or_first_available_variant.available" class="ph_atc-wrap">
-        <a li-element="add-to-cart" href="#" class="ph_atc-btn w-button" @click="addToCart($event, true)" :disabled="!addToCartButton">In den Warenkorb</a>        </div>
+        <a li-element="add-to-cart" href="#" class="ph_atc-btn w-button" @click="addToCart($event, true)" :disabled="!addToCartButton">Add to cart</a>        </div>
     </template><template x-if="!selected_or_first_available_variant.available">
             <div li-js-if="!selected_or_first_available_variant.available" class="ph_atc-wrap">
-        <a href="#" class="ph_atc-btn is-disabled w-button pointer-events-off">Nicht verfügbar</a>        </div>
-    </template><a href="{{ block.settings.url_angebot_link }}" class="ph_quote-btn w-button"> <span>{{ block.settings.text_angebot_text }}</span> </a><div class="ph_buy-actions"><a href="{{ block.settings.url_merken_link }}" class="ph_buy-action"> <span class="ph_buy-action-icon w-embed"><svg width="100%" height="100%" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 21.35L10.55 20.03C5.4 15.36 2 12.28 2 8.5C2 5.42 4.42 3 7.5 3C9.24 3 10.91 3.81 12 5.09C13.09 3.81 14.76 3 16.5 3C19.58 3 22 5.42 22 8.5C22 12.28 18.6 15.36 13.45 20.04L12 21.35Z" stroke="currentColor" stroke-width="1.8" fill="none"></path></svg></span><span>{{ block.settings.text_merken_text }}</span> </a><a href="{{ block.settings.url_vergleichen_link }}" class="ph_buy-action"> <span class="ph_buy-action-icon w-embed"><svg width="100%" height="100%" viewbox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M9.01 14H2v2h7.01v3L13 15l-3.99-4v3zm5.98-1v-3H22V8h-7.01V5L11 9l3.99 4z"></path></svg></span><span>{{ block.settings.text_vergleichen_text }}</span> </a></div>{% endform %}<div class="hide w-form-done"><div>Erfolgreich hinzugefügt!</div></div><div class="hide w-form-fail"><div>Fehler beim Hinzufügen.</div></div></div>
+        <a href="#" class="ph_atc-btn is-disabled w-button pointer-events-off">Unavailable</a>        </div>
+    </template><a href="{{ block.settings.url_angebot_link }}" class="ph_quote-btn w-button"> <span>{{ block.settings.text_angebot_text }}</span> </a><div class="ph_buy-actions"><button li-element="wishlist-button" type="button" class="ph_buy-action" data-variant-id="{{ product.selected_or_first_available_variant.id }}"><span class="ph_buy-action-icon w-embed"><svg width="100%" height="100%" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 21.35L10.55 20.03C5.4 15.36 2 12.28 2 8.5C2 5.42 4.42 3 7.5 3C9.24 3 10.91 3.81 12 5.09C13.09 3.81 14.76 3 16.5 3C19.58 3 22 5.42 22 8.5C22 12.28 18.6 15.36 13.45 20.04L12 21.35Z" stroke="currentColor" stroke-width="1.8" fill="none"></path></svg></span><span>
+{{ block.settings.text_merken_text }}
+</span></button><a href="{{ block.settings.url_vergleichen_link }}" class="ph_buy-action"> <span class="ph_buy-action-icon w-embed"><svg width="100%" height="100%" viewbox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M9.01 14H2v2h7.01v3L13 15l-3.99-4v3zm5.98-1v-3H22V8h-7.01V5L11 9l3.99 4z"></path></svg></span><span>{{ block.settings.text_vergleichen_text }}</span> </a></div>{% endform %}<div class="hide w-form-done"><div>Successfully added!</div></div><div class="hide w-form-fail"><div>Error adding to cart.</div></div></div>
                     <div><div class="ph_trust-grid"><div class="ph_trust-item"><div class="ph_trust-icon w-embed"><svg width="22" height="22" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zm-1.5 1.5 1.96 2.5H17V9.5h1.5zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9 1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z" fill="currentColor"></path></svg></div><span class="ph_trust-label">
 {{ block.settings.text_trust_1 }}
 </span></div><div class="ph_trust-item"><div class="ph_trust-icon w-embed"><svg width="22" height="22" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z" fill="currentColor"></path></svg></div><span class="ph_trust-label">
@@ -90,25 +92,25 @@
             "id": "text_label_construction_type",
             "type": "text",
             "label": "Label Construction Type",
-            "default": "Bauart"
+            "default": "Construction"
         },
         {
             "id": "text_label_grosse",
             "type": "text",
             "label": "Label Gr\u00f6\u00dfe",
-            "default": "Gr\u00f6\u00dfe"
+            "default": "Size"
         },
         {
             "id": "text_label_farbe",
             "type": "text",
             "label": "Label Farbe",
-            "default": "Farbe"
+            "default": "Color"
         },
         {
             "id": "text_label_produktfamilie",
             "type": "text",
             "label": "Label Produktfamilie",
-            "default": "Produktfamilie"
+            "default": "Product family"
         },
         {
             "id": "text_label_segment",
@@ -120,7 +122,7 @@
             "id": "text_liefertext",
             "type": "text",
             "label": "Liefertext",
-            "default": "Bis 16 Uhr bestellen, zwischen <strong>26. &amp; 27. M\u00e4rz<\/strong> bei dir"
+            "default": "Order by 4 PM, delivered between <strong>March 26 &amp; 27<\/strong>"
         },
         {
             "id": "url_angebot_link",
@@ -131,18 +133,13 @@
             "id": "text_angebot_text",
             "type": "text",
             "label": "Angebot Text",
-            "default": "Angebot anfragen"
-        },
-        {
-            "id": "url_merken_link",
-            "type": "url",
-            "label": "Merken Link"
+            "default": "Request a quote"
         },
         {
             "id": "text_merken_text",
             "type": "text",
             "label": "Merken Text",
-            "default": "Merken"
+            "default": "Save"
         },
         {
             "id": "url_vergleichen_link",
@@ -153,25 +150,25 @@
             "id": "text_vergleichen_text",
             "type": "text",
             "label": "Vergleichen Text",
-            "default": "Vergleichen"
+            "default": "Compare"
         },
         {
             "id": "text_trust_1",
             "type": "text",
             "label": "Trust 1",
-            "default": "Kostenloser Versand ab \u20ac59,00"
+            "default": "Free shipping from \u20ac59.00"
         },
         {
             "id": "text_trust_2",
             "type": "text",
             "label": "Trust 2",
-            "default": "Kauf auf Rechnung mit Klarna"
+            "default": "Pay by invoice with Klarna"
         },
         {
             "id": "text_trust_3",
             "type": "text",
             "label": "Trust 3",
-            "default": "30 Tage Geld-zur\u00fcck-Garantie"
+            "default": "30-day money-back guarantee"
         }
     ],
     "presets": [

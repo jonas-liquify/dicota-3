@@ -17,7 +17,7 @@
 {{ section.settings.text_spalte_menge }}
 </span></div></div><div li-cf-theme-blocks="" class="mkt-order_tbody">
 {% content_for 'blocks' %}
-</div></div><div class="mkt-order_card"><div class="mkt-order_field"><label for="mkt-order-date" class="mkt-order_label">{{ section.settings.field_date_label | default: 'Bevorzugtes Lieferdatum:' }}<span class="mkt-order_required" aria-hidden="true">*</span></label><p class="mkt-order_help"> {{ section.settings.textarea_datum_hinweistext }} </p><input type="date" id="mkt-order-date" name="contact[Lieferdatum]" required="" class="mkt-order_input"></div></div><div class="mkt-order_card"><div class="mkt-order_field"><label for="mkt-order-event" class="mkt-order_label">{{ section.settings.field_event_label | default: 'Event/Aktivität:' }}<span class="mkt-order_required" aria-hidden="true">*</span></label><p class="mkt-order_help"> {{ section.settings.textarea_event_hinweistext }} </p><textarea id="mkt-order-event" name="contact[Event/Aktivität]" placeholder="Schreiben Sie uns…" rows="4" required="" class="mkt-order_textarea"></textarea></div></div><div class="mkt-order_submit-row"><button type="submit" class="button mkt-order_submit w-button"><span>
+</div></div><div class="mkt-order_card"><div class="mkt-order_field"><label for="mkt-order-date" class="mkt-order_label">{{ section.settings.field_date_label | default: 'Preferred delivery date:' }}<span class="mkt-order_required" aria-hidden="true">*</span></label><p class="mkt-order_help"> {{ section.settings.textarea_datum_hinweistext }} </p><input type="date" id="mkt-order-date" name="contact[Lieferdatum]" required="" class="mkt-order_input"></div></div><div class="mkt-order_card"><div class="mkt-order_field"><label for="mkt-order-event" class="mkt-order_label">{{ section.settings.field_event_label | default: 'Event/Activity:' }}<span class="mkt-order_required" aria-hidden="true">*</span></label><p class="mkt-order_help"> {{ section.settings.textarea_event_hinweistext }} </p><textarea id="mkt-order-event" name="contact[Event/Aktivität]" placeholder="Write to us…" rows="4" required="" class="mkt-order_textarea"></textarea></div></div><div class="mkt-order_submit-row"><button type="submit" class="button mkt-order_submit w-button"><span>
 {{ section.settings.text_submit_button }}
 </span></button></div>{% endform %}</div></div></div></div> {% schema %} {
     "tag": "section",
@@ -59,7 +59,7 @@
             "id": "textarea_subheading",
             "type": "textarea",
             "label": "Subheading",
-            "default": "Bestelle Werbemittel, Flyer und Giveaways f\u00fcr deine n\u00e4chste Aktion. W\u00e4hle St\u00fcckzahlen und teile uns Lieferdatum und Anlass mit."
+            "default": "Order promotional materials, flyers and giveaways for your next activity. Choose quantities and let us know your delivery date and occasion."
         },
         {
             "id": "text_spalte_article",
@@ -71,7 +71,7 @@
             "id": "text_spalte_beschreibung",
             "type": "text",
             "label": "Spalte Beschreibung",
-            "default": "Beschreibung"
+            "default": "Description"
         },
         {
             "id": "text_spalte_art_nr",
@@ -95,19 +95,19 @@
             "id": "textarea_datum_hinweistext",
             "type": "textarea",
             "label": "Datum Hinweistext",
-            "default": "Express-Lieferung wird zus\u00e4tzlich berechnet."
+            "default": "Express delivery is charged separately."
         },
         {
             "id": "textarea_event_hinweistext",
             "type": "textarea",
             "label": "Event Hinweistext",
-            "default": "Wof\u00fcr ben\u00f6tigst du das Werbematerial?"
+            "default": "What do you need the promotional material for?"
         },
         {
             "id": "text_submit_button",
             "type": "text",
             "label": "Submit Button",
-            "default": "Jetzt absenden"
+            "default": "Submit now"
         },
         {
             "type": "header",

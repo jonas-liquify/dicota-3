@@ -36,9 +36,15 @@ document.addEventListener('alpine:init', () => {
         isProductPage: window.location.pathname.includes('/products/'),
         filter: {},
 
+        /**
+         * Whether the selected variant is pushed to the browser history / URL.
+         * Disable per container via the `li-variant-history="false"` attribute.
+         */
+        trackVariantHistory: true,
+
         // Use init for debugging
         init() {
-
+            this.trackVariantHistory = this.$el.getAttribute('li-variant-history') !== 'false';
         },
 
         qs(selector) {
@@ -263,11 +269,11 @@ document.addEventListener('alpine:init', () => {
             checkboxes.forEach(checkbox => {
                 checkbox.addEventListener('change', function() {
                     this.parentNode.parentNode.querySelectorAll("[li-element=product-option-input]").forEach(element => {
-                        element.previousElementSibling.classList.remove('w--redirected-checked', 'w--redirected-focus')
+                        element.previousElementSibling?.classList.remove('w--redirected-checked', 'w--redirected-focus')
                     })
 
                     if (this.checked) {
-                        this.previousElementSibling.classList.add('w--redirected-checked', 'w--redirected-focus')
+                        this.previousElementSibling?.classList.add('w--redirected-checked', 'w--redirected-focus')
                     }
                 });
             });
@@ -321,9 +327,9 @@ document.addEventListener('alpine:init', () => {
 
         activateVariant(element) {
             element.parentNode.parentNode.querySelectorAll("[li-element=product-option-input]").forEach(element => {
-                element.previousElementSibling.classList.remove('w--redirected-checked', 'w--redirected-focus')
+                element.previousElementSibling?.classList.remove('w--redirected-checked', 'w--redirected-focus')
             })
-            element.previousElementSibling.classList.add('w--redirected-checked')
+            element.previousElementSibling?.classList.add('w--redirected-checked')
         },
 
         /**
@@ -433,8 +439,8 @@ document.addEventListener('alpine:init', () => {
             this.product.selected_or_first_available_variant.featured_image = product?.featured_image?.src
             this.product.selected_or_first_available_variant.price = product?.price;
 
-            // nur für die Detailseiten
-            if (pushState && this.isProductPage) {
+            // only on detail pages
+            if (pushState && this.isProductPage && this.trackVariantHistory) {
                 this.setUrlParam()
             }
         },

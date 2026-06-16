@@ -6,7 +6,7 @@
 {{ section.settings.text_headline }}
 </h1><p class="reseller-hero_subtext text-size-medium"> {{ section.settings.textarea_subtext }} </p><form action="/search" method="get" role="search" class="reseller-hero_search"><div class="reseller-hero_search-cat"><span>
 {{ section.settings.text_kategorie_label }}
-</span><div class="reseller-hero_search-cat-icon w-embed">{% render 'icon_chevron_down' %}</div></div><input type="search" name="q" placeholder="Suche nach Artikeln, Kategorien oder Anwendungsgebiet" autocomplete="off" class="reseller-hero_search-input"><button type="submit" aria-label="Suchen" class="reseller-hero_search-btn"><div class="reseller-hero_search-btn-icon w-embed"><svg width="100%" height="100%" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M19.6 21L13.3 14.7C12.8 15.1 12.225 15.4167 11.575 15.65C10.925 15.8833 10.2333 16 9.5 16C7.68333 16 6.14583 15.3708 4.8875 14.1125C3.62917 12.8542 3 11.3167 3 9.5C3 7.68333 3.62917 6.14583 4.8875 4.8875C6.14583 3.62917 7.68333 3 9.5 3C11.3167 3 12.8542 3.62917 14.1125 4.8875C15.3708 6.14583 16 7.68333 16 9.5C16 10.2333 15.8833 10.925 15.65 11.575C15.4167 12.225 15.1 12.8 14.7 13.3L21 19.6L19.6 21Z" fill="currentColor"></path></svg></div></button></form><div class="reseller-hero_trends"><span class="reseller-hero_trends-label">Im Trend</span><div li-cf-theme-blocks="" class="reseller-hero_trend-list">
+</span><div class="reseller-hero_search-cat-icon w-embed">{% render 'icon_chevron_down' %}</div></div><input type="search" name="q" placeholder="Search for articles, categories or application area" autocomplete="off" class="reseller-hero_search-input"><button type="submit" aria-label="Search" class="reseller-hero_search-btn"><div class="reseller-hero_search-btn-icon w-embed"><svg width="100%" height="100%" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M19.6 21L13.3 14.7C12.8 15.1 12.225 15.4167 11.575 15.65C10.925 15.8833 10.2333 16 9.5 16C7.68333 16 6.14583 15.3708 4.8875 14.1125C3.62917 12.8542 3 11.3167 3 9.5C3 7.68333 3.62917 6.14583 4.8875 4.8875C6.14583 3.62917 7.68333 3 9.5 3C11.3167 3 12.8542 3.62917 14.1125 4.8875C15.3708 6.14583 16 7.68333 16 9.5C16 10.2333 15.8833 10.925 15.65 11.575C15.4167 12.225 15.1 12.8 14.7 13.3L21 19.6L19.6 21Z" fill="currentColor"></path></svg></div></button></form><div class="reseller-hero_trends"><span class="reseller-hero_trends-label">Trending</span><div li-cf-theme-blocks="" class="reseller-hero_trend-list">
 {% content_for 'blocks' %}
 </div></div></div></div></div> {% schema %} {
     "tag": "section",
@@ -30,19 +30,19 @@
             "id": "text_headline",
             "type": "text",
             "label": "Headline",
-            "default": "Willkommen bei DICOTA myDCT"
+            "default": "Welcome to DICOTA myDCT"
         },
         {
             "id": "textarea_subtext",
             "type": "textarea",
             "label": "Subtext",
-            "default": "Profitieren Sie von attraktiven Preisen und Angeboten f\u00fcr Ihre Endkunden"
+            "default": "Benefit from attractive prices and offers for your end customers"
         },
         {
             "id": "text_kategorie_label",
             "type": "text",
             "label": "Kategorie Label",
-            "default": "Kategorien"
+            "default": "Categories"
         },
         {
             "type": "header",
