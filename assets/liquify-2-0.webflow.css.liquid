@@ -5145,7 +5145,8 @@ figcaption {
     width: 16rem;
   }
   .product-card_image-link {
-    height: 22rem;
+    height: auto;
+    aspect-ratio: 3 / 4;
   }
   .featured-products_arrow {
     width: 2.5rem;
@@ -5775,7 +5776,8 @@ figcaption {
     gap: 0.75rem 0.5rem;
   }
   .product-card_image-link {
-    height: 11rem;
+    height: auto;
+    aspect-ratio: 3 / 4;
   }
   .section_collection-header > .padding-global {
     padding-top: 32px;
@@ -6905,6 +6907,7 @@ figcaption {
   flex-direction: column;
   gap: .75rem;
   width: 100%;
+  position: relative;
 }
 
 .product-card_image-link {
@@ -15920,4 +15923,125 @@ figcaption {
   .ph_gallery-more:hover {
     background-color: #e9e9e9;
   }
+}
+
+/* =============================================================
+   DICOTA PDP — Reviews (Judge.me-Daten, Figma-Design)
+   Leere Sterne abgeschwächt + Empty-State.
+   ============================================================= */
+.product-reviews_stars svg.is-empty,
+.product-reviews_item-stars svg.is-empty {
+  color: #d9d9d9;
+}
+.product-reviews_empty {
+  color: #686868;
+  font-size: .9375rem;
+  margin: 0 0 1rem;
+}
+
+/* =============================================================
+   DICOTA — Produktkachel-Höhe Mobile (proportional statt fix)
+   Höhere Spezifität + Datei-Ende, damit es die Basis-Fixhöhe
+   (.product-card_image-link height) zuverlässig überschreibt.
+   ============================================================= */
+@media screen and (max-width: 767px) {
+  .product-card .product-card_image-link {
+    height: auto;
+    aspect-ratio: 3 / 4;
+  }
+}
+
+/* =============================================================
+   DICOTA PDP — Review-Schreiben Slide-in Panel (Judge.me Submit)
+   ============================================================= */
+.jm-review-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1200;
+  display: none;
+}
+.jm-review-modal.is-open { display: block; }
+.jm-review-modal_overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, .45);
+  opacity: 0;
+  transition: opacity .3s ease;
+}
+.jm-review-modal.is-open .jm-review-modal_overlay { opacity: 1; }
+.jm-review-modal_panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 30rem;
+  max-width: 92vw;
+  background: #fff;
+  box-shadow: -8px 0 30px rgba(0, 0, 0, .15);
+  transform: translateX(100%);
+  transition: transform .35s ease;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+.jm-review-modal.is-open .jm-review-modal_panel { transform: translateX(0); }
+.jm-review-modal_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--base-color-neutral--neutral-lightest, #eee);
+}
+.jm-review-modal_title { margin: 0; font-size: 1.25rem; font-weight: 600; }
+.jm-review-modal_close {
+  background: none;
+  border: 0;
+  cursor: pointer;
+  color: #0f0f0f;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+}
+.jm-review-form { padding: 1.5rem; display: flex; flex-direction: column; gap: 1rem; }
+.jm-review-form_field { display: flex; flex-direction: column; gap: .375rem; }
+.jm-review-form_field label { font-size: .8125rem; font-weight: 600; color: #0f0f0f; }
+.jm-review-form_field input,
+.jm-review-form_field textarea {
+  border: 1px solid #d0d0d0;
+  background: #fff;
+  padding: .625rem .75rem;
+  font: inherit;
+  color: #0f0f0f;
+  border-radius: 2px;
+}
+.jm-review-form_field input:focus,
+.jm-review-form_field textarea:focus { outline: none; border-color: #0f0f0f; }
+.jm-review-form_field textarea { resize: vertical; min-height: 6rem; }
+.jm-review-stars-input { display: flex; gap: .25rem; }
+.jm-review-stars-input button {
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  width: 1.75rem;
+  height: 1.75rem;
+  color: #d9d9d9;
+  transition: color .12s ease;
+}
+.jm-review-stars-input button.is-active { color: #0f0f0f; }
+.jm-review-form_submit { margin-top: .25rem; width: 100%; justify-content: center; }
+.jm-review-form_msg { margin: 0; font-size: .875rem; }
+.jm-review-form_msg.is-error { color: #e3342f; }
+.jm-review-form_msg.is-success { color: #149534; }
+
+/* Live predictive-search status (loading / empty) */
+.nav_search-product-status {
+  grid-column: 1 / -1;
+  padding: .5rem 0;
+  color: #686868;
+  font-size: .875rem;
+  list-style: none;
 }
