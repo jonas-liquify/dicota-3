@@ -3,8 +3,8 @@
     <img li-object:src="product.images[1] | image_url: width: 600" li-object:alt="product.title" src="{{ product.images[1] | image_url: width: 600 }}" loading="lazy" alt="{{ product.title }}" class="product-card_image is-hover">    </div>
 {% endif %}{% if product.compare_at_price_max > product.price %}    <div li-if="product.compare_at_price_max > product.price" class="product-card_badge">
     <span class="product-card_badge-text">On sale</span>    </div>
-{% endif %}{% if product.metafields.reviews.rating %}    <div li-if="product.metafields.reviews.rating" class="product-card_rating">
-    <div class="product-card_stars"><div class="product-card_star" style="--rating: {{ product.metafields.reviews.rating.value }}"></div></div><span li-object="product.metafields.reviews.rating.value | round: 1" class="product-card_rating-count">{{ product.metafields.reviews.rating.value | round: 1 }}</span>    </div>
+{% endif %}{% if product.metafields.judgeme.review_count.value > 0 %}    <div li-if="product.metafields.judgeme.review_count.value > 0" class="product-card_rating">
+    <div class="product-card_stars" style="--rating: {{ product.metafields.judgeme.evarege_rating.value }}"></div><span li-object="product.metafields.judgeme.evarege_rating.value | round: 1" class="product-card_rating-count">{{ product.metafields.judgeme.evarege_rating.value | round: 1 }}</span>    </div>
 {% endif %}<div class="product-card_hover-cta"><button li-element="add-to-cart" type="button" class="button product-card_add-button w-button" @click="addToCart($event, true)" :disabled="!addToCartButton">
                         Add to cart
                       </button></div></div></a><a li-object:href="product.url" href="{{ product.url }}" class="product-card_text-link w-inline-block"><h4 li-object="product.title" class="product-card_title">{{ product.title }}</h4><div class="product-card_price-row">{% if product.compare_at_price_max > product.price %}    <div li-if="product.compare_at_price_max > product.price">

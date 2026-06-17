@@ -9644,9 +9644,13 @@ figcaption {
   white-space: nowrap;
 }
 .ph_stars {
-  color: #f5a623;
-  font-size: 0.875rem;
-  letter-spacing: -1px;
+  --rating: 5;
+  display: inline-block;
+  width: 5rem;
+  height: 1rem;
+  background: linear-gradient(to right, #f5a623 calc(var(--rating) * 20%), rgba(0, 0, 0, .18) calc(var(--rating) * 20%));
+  -webkit-mask: url(data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 12'><g fill='black'><polygon points='6,0 7.4,4.3 12,4.3 8.3,7 9.7,11.3 6,8.6 2.3,11.3 3.7,7 0,4.3 4.6,4.3'/><polygon points='18,0 19.4,4.3 24,4.3 20.3,7 21.7,11.3 18,8.6 14.3,11.3 15.7,7 12,4.3 16.6,4.3'/><polygon points='30,0 31.4,4.3 36,4.3 32.3,7 33.7,11.3 30,8.6 26.3,11.3 27.7,7 24,4.3 28.6,4.3'/><polygon points='42,0 43.4,4.3 48,4.3 44.3,7 45.7,11.3 42,8.6 38.3,11.3 39.7,7 36,4.3 40.6,4.3'/><polygon points='54,0 55.4,4.3 60,4.3 56.3,7 57.7,11.3 54,8.6 50.3,11.3 51.7,7 48,4.3 52.6,4.3'/></g></svg>) left/contain no-repeat;
+  mask: url(data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 12'><g fill='black'><polygon points='6,0 7.4,4.3 12,4.3 8.3,7 9.7,11.3 6,8.6 2.3,11.3 3.7,7 0,4.3 4.6,4.3'/><polygon points='18,0 19.4,4.3 24,4.3 20.3,7 21.7,11.3 18,8.6 14.3,11.3 15.7,7 12,4.3 16.6,4.3'/><polygon points='30,0 31.4,4.3 36,4.3 32.3,7 33.7,11.3 30,8.6 26.3,11.3 27.7,7 24,4.3 28.6,4.3'/><polygon points='42,0 43.4,4.3 48,4.3 44.3,7 45.7,11.3 42,8.6 38.3,11.3 39.7,7 36,4.3 40.6,4.3'/><polygon points='54,0 55.4,4.3 60,4.3 56.3,7 57.7,11.3 54,8.6 50.3,11.3 51.7,7 48,4.3 52.6,4.3'/></g></svg>) left/contain no-repeat;
 }
 .ph_rating-score {
   font-size: 0.875rem;
@@ -16044,4 +16048,59 @@ figcaption {
   color: #686868;
   font-size: .875rem;
   list-style: none;
+}
+
+/* =============================================================
+   DICOTA PDP — Product Video Section (aus filter_image_set.video)
+   ============================================================= */
+.section_product-video {
+  width: 100%;
+}
+.product-video_headline {
+  margin: 0 0 1.5rem;
+}
+.product-video_player {
+  width: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+  background: #000;
+}
+.product-video_player video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.product-video_player iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  display: block;
+  border: 0;
+}
+
+/* Product Hero — Features-Tab: Feature-Headlines aus custom.features */
+.ph_features-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+.ph_features-item {
+  position: relative;
+  padding-left: 1.5rem;
+  font-size: .9375rem;
+  line-height: 1.45;
+  color: #0f0f0f;
+}
+.ph_features-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: .45em;
+  width: .5rem;
+  height: .5rem;
+  border-right: 1.5px solid #0f0f0f;
+  border-bottom: 1.5px solid #0f0f0f;
+  transform: rotate(45deg);
 }

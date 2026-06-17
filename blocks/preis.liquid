@@ -2,7 +2,9 @@
                     <div class="ph_price-row"><div class="ph_price-col"><div class="ph_price-amount"><span li-js-price="product.selected_or_first_available_variant.price" class="ph_price-value" x-text="LiquifyHelper.moneyFormat(product.selected_or_first_available_variant.price, true, '{{ shop.money_with_currency_format }}')">109,90 €</span><template x-if="product.selected_or_first_available_variant.compare_at_price > product.selected_or_first_available_variant.price">
             <div li-js-if="product.selected_or_first_available_variant.compare_at_price > product.selected_or_first_available_variant.price">
         <span li-js-price="product.selected_or_first_available_variant.compare_at_price" class="ph_price-compare" x-text="LiquifyHelper.moneyFormat(product.selected_or_first_available_variant.compare_at_price, true, '{{ shop.money_with_currency_format }}')"></span>        </div>
-    </template></div><p class="ph_price-note">Incl. VAT, plus <a href="/policies/shipping-policy" class="ph_price-link">shipping</a></p></div><a href="{{ block.settings.url_bewertungslink }}" class="ph_rating"> <span class="ph_stars" aria-hidden="true">★★★★☆</span><strong class="ph_rating-score">{{ block.settings.text_bewertungsscore }}</strong><span class="ph_rating-count">{{ block.settings.text_bewertungsanzahl }}</span> </a></div>
+    </template></div><p class="ph_price-note">Incl. VAT, plus <a href="/policies/shipping-policy" class="ph_price-link">shipping</a></p></div>{% if product.metafields.judgeme.review_count.value > 0 %}    <a li-if="product.metafields.judgeme.review_count.value > 0" href="#bewertungen" class="ph_rating">
+    <span class="ph_stars" aria-hidden="true" style="--rating: {{ product.metafields.judgeme.evarege_rating.value }}"></span><strong li-object="product.metafields.judgeme.evarege_rating.value | round: 1" class="ph_rating-score">{{ product.metafields.judgeme.evarege_rating.value | round: 1 }}</strong><span class="ph_rating-count">(<span li-object="product.metafields.judgeme.review_count.value">{{ product.metafields.judgeme.review_count.value }}</span>)</span>    </a>
+{% endif %}</div>
                     <div class="product-header_tag-list"><template x-if="product.selected_or_first_available_variant.available != true">
             <div li-js-if="product.selected_or_first_available_variant.available != true" class="product-item_tag">
         Out of stock        </div>
@@ -12,25 +14,7 @@
     </template></div>
                 </div> {% schema %} {
     "name": "Preis",
-    "settings": [
-        {
-            "id": "url_bewertungslink",
-            "type": "url",
-            "label": "Bewertungslink"
-        },
-        {
-            "id": "text_bewertungsscore",
-            "type": "text",
-            "label": "Bewertungsscore",
-            "default": "4.8"
-        },
-        {
-            "id": "text_bewertungsanzahl",
-            "type": "text",
-            "label": "Bewertungsanzahl",
-            "default": "(11)"
-        }
-    ],
+    "settings": [],
     "presets": [
         {
             "name": "Preis",
