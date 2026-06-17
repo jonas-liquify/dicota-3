@@ -7,6 +7,8 @@
 {{ block.settings.text_tab_3 }}
 </button><button data-tab="downloads" class="ph_tab">
 {{ block.settings.text_tab_4 }}
+</button><button data-tab="dimensions" data-ph-dim-open="" class="ph_tab">
+{{ block.settings.text_tab_5 }}
 </button></div></div>
                     <div class="ph_tab-panels"><div class="ph_tab-panel"><div li-object="product.metafields.custom.product_description | metafield_tag" class="text-rich-text w-richtext">{{ product.metafields.custom.product_description | metafield_tag }}</div></div><div class="ph_tab-panel"><ul li-for:inside="feature in product.metafields.custom.features.value" role="list" class="ph_features-list">
         {% for feature in product.metafields.custom.features.value %}                            <li li-object="feature.headline" class="ph_features-item">{{ feature.headline }}</li>
@@ -50,6 +52,12 @@
             "type": "text",
             "label": "Tab 4",
             "default": "Downloads"
+        },
+        {
+            "id": "text_tab_5",
+            "type": "text",
+            "label": "Tab 5",
+            "default": "Dimensions"
         },
         {
             "id": "text_download_1_titel",

@@ -25,24 +25,27 @@ var galleryEl = document.querySelector(".swiper.is-product-gallery");
 var gallerySwiper = null;
 function isDesktop() { return window.matchMedia("(min-width: 992px)").matches; }
 function galleryWrapperEl() { return galleryEl ? galleryEl.querySelector(".swiper-wrapper.is-product-gallery") : null; }
-function removeGalleryMore() { var b = galleryEl ? galleryEl.querySelector(".ph_gallery-more") : null; if (b) b.remove(); }
+function galleryRootEl() { return galleryEl ? (galleryEl.closest(".product-header_gallery") || galleryEl.parentNode) : null; }
+function removeGalleryMore() { var root = galleryRootEl(); if (!root) return; var b = root.querySelector(".ph_gallery-more"); if (b) b.remove(); root.classList.remove("is-expanded"); }
 function addGalleryMoreIfNeeded() {
-  /* Desktop: ab dem 5. Bild eine "Mehr erfahren"-Kachel statt weiterer Thumbs.
-     Klick oeffnet die Lightbox (zeigt alle Bilder). */
+  /* Desktop: ab dem 5. Bild ein "More Images"-Text-Link UNTER der Galerie.
+     Klick blendet die restlichen Bilder inline ein (keine Lightbox). Mobile: weg. */
   var wrap = galleryWrapperEl();
-  if (!wrap) return;
+  var root = galleryRootEl();
+  if (!wrap || !root) return;
   removeGalleryMore();
   var slides = wrap.querySelectorAll(".swiper-slide.is-product-gallery");
   if (slides.length <= 4) return;
   var btn = document.createElement("button");
   btn.type = "button";
   btn.className = "ph_gallery-more";
-  btn.textContent = "Learn more";
-  btn.addEventListener("click", function() {
-    var trigger = galleryEl.querySelector(".product-header_gallery-lightbox.is-clickable");
-    if (trigger) trigger.click();
+  btn.textContent = "More Images";
+  btn.addEventListener("click", function(e) {
+    e.preventDefault();
+    root.classList.add("is-expanded");
+    btn.remove();
   });
-  wrap.appendChild(btn);
+  root.appendChild(btn);
 }
 function initGallerySwipers() {
   if (!galleryEl) return;
@@ -72,7 +75,7 @@ window.addEventListener("resize", function() {
     if (nowDesktop !== lastDesktop) { lastDesktop = nowDesktop; initGallerySwipers(); }
   }, 150);
 });
-new Swiper(".swiper.is-we-care", {slidesPerView: 1, loop: true,autoplay: { delay: 5000, disableOnInteraction: false },pagination: { el: ".ph_we-care-dots", clickable: true }});new Swiper(".swiper.is-upsell", {slidesPerView: 1,navigation: { nextEl: ".ph_upsell-next", prevEl: ".ph_upsell-prev" }});var tabs = document.querySelectorAll(".ph_tab");var dynPanels = document.querySelectorAll(".ph_tab-panels > .ph_tab-panel");var dlPanel = document.querySelector(".ph_tab-panel-downloads");var seeMoreLink = document.querySelector(".ph_see-more");function activateTab(key) {tabs.forEach(function(t){ t.classList.toggle("is-active", t.getAttribute("data-tab") === key); });dynPanels.forEach(function(p,i){ p.style.display = (String(i) === key) ? "block" : "none"; });if (dlPanel) dlPanel.style.display = (key === "downloads") ? "block" : "none";if (seeMoreLink) seeMoreLink.style.display = (key === "downloads") ? "none" : "";}tabs.forEach(function(tab) { tab.addEventListener("click", function(){ activateTab(tab.getAttribute("data-tab")); }); });(function(){ var active = document.querySelector(".ph_tab.is-active"); activateTab(active ? active.getAttribute("data-tab") : "0"); })();var seeMore = document.querySelector(".ph_see-more");if (seeMore) {seeMore.addEventListener("click", function(e) {e.preventDefault();var panel = document.querySelector(".ph_tab-panel[style*='block']") || document.querySelector(".ph_tab-panel");if (panel) { panel.classList.toggle("is-expanded"); }this.textContent = panel && panel.classList.contains("is-expanded") ? "Show less" : "Show more";});}});</script></div> {% schema %} {
+new Swiper(".swiper.is-we-care", {slidesPerView: 1, loop: true,autoplay: { delay: 5000, disableOnInteraction: false },pagination: { el: ".ph_we-care-dots", clickable: true }});new Swiper(".swiper.is-upsell", {slidesPerView: 1,navigation: { nextEl: ".ph_upsell-next", prevEl: ".ph_upsell-prev" }});var tabs = document.querySelectorAll(".ph_tab");var dynPanels = document.querySelectorAll(".ph_tab-panels > .ph_tab-panel");var dlPanel = document.querySelector(".ph_tab-panel-downloads");var seeMoreLink = document.querySelector(".ph_see-more");function activateTab(key) {tabs.forEach(function(t){ t.classList.toggle("is-active", t.getAttribute("data-tab") === key); });dynPanels.forEach(function(p,i){ p.style.display = (String(i) === key) ? "block" : "none"; });if (dlPanel) dlPanel.style.display = (key === "downloads") ? "block" : "none";if (seeMoreLink) seeMoreLink.style.display = (key === "downloads") ? "none" : "";}tabs.forEach(function(tab) { tab.addEventListener("click", function(){ if (tab.getAttribute("data-tab") === "dimensions") return; activateTab(tab.getAttribute("data-tab")); }); });(function(){ var active = document.querySelector(".ph_tab.is-active"); activateTab(active ? active.getAttribute("data-tab") : "0"); })();(function(){ var dm = document.querySelector("[data-ph-dim-modal]"); if(!dm) return; if(dm.parentNode !== document.body) document.body.appendChild(dm); function openDM(){ dm.classList.add("is-open"); dm.setAttribute("aria-hidden","false"); document.documentElement.style.overflow="hidden"; } function closeDM(){ dm.classList.remove("is-open"); dm.setAttribute("aria-hidden","true"); document.documentElement.style.overflow=""; } document.querySelectorAll("[data-ph-dim-open]").forEach(function(b){ b.addEventListener("click", function(e){ e.preventDefault(); openDM(); }); }); dm.querySelectorAll("[data-ph-dim-close]").forEach(function(b){ b.addEventListener("click", closeDM); }); dm.addEventListener("click", function(e){ if(e.target===dm) closeDM(); }); document.addEventListener("keydown", function(e){ if(e.key==="Escape" && dm.classList.contains("is-open")) closeDM(); }); })();var seeMore = document.querySelector(".ph_see-more");if (seeMore) {seeMore.addEventListener("click", function(e) {e.preventDefault();var panel = document.querySelector(".ph_tab-panel[style*='block']") || document.querySelector(".ph_tab-panel");if (panel) { panel.classList.toggle("is-expanded"); }this.textContent = panel && panel.classList.contains("is-expanded") ? "Show less" : "Show more";});}});</script></div> {% schema %} {
     "tag": "section",
     "name": "Product Header",
     "class": "section_product-header",

@@ -15905,27 +15905,27 @@ figcaption {
   .swiper-slide.is-product-gallery:nth-child(n+5) {
     display: none;
   }
+  .product-header_gallery.is-expanded .swiper-slide.is-product-gallery:nth-child(n+5) {
+    display: block;
+  }
   .ph_gallery-more {
-    width: 36.4%;
-    aspect-ratio: 1 / 1;
-    margin-left: auto;
-    margin-bottom: 6px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: .5rem;
-    background-color: #f4f4f4;
+    display: block;
+    width: 100%;
+    margin-top: .75rem;
+    padding: .25rem 0;
+    background: none;
     border: 0;
     cursor: pointer;
+    text-align: left;
     font-family: "Futura PT", sans-serif;
     font-weight: 600;
     font-size: .875rem;
     color: #0f0f0f;
-    transition: background-color .15s;
+    text-decoration: underline;
+    text-underline-offset: .2em;
   }
   .ph_gallery-more:hover {
-    background-color: #e9e9e9;
+    opacity: .65;
   }
 }
 
@@ -16103,4 +16103,87 @@ figcaption {
   border-right: 1.5px solid #0f0f0f;
   border-bottom: 1.5px solid #0f0f0f;
   transform: rotate(45deg);
+}
+
+/* =============================================================
+   DICOTA PDP — Abmessungen/Dimensions Modal (Tab öffnet Modal)
+   Bild aus custom.dimensions_image + Spec-Tabelle aus
+   custom.technical_specification_set (dynamische Metafeld-Werte).
+   ============================================================= */
+.ph-dim-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1200;
+  display: none;
+}
+.ph-dim-modal.is-open { display: block; }
+.ph-dim-modal_overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, .55);
+}
+.ph-dim-modal_panel {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(1100px, 92vw);
+  height: min(80vh, 760px);
+  background: #fff;
+  display: flex;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, .25);
+}
+.ph-dim-modal_media {
+  flex: 1 1 62%;
+  min-width: 0;
+  background: #f4f4f4;
+}
+.ph-dim-modal_image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.ph-dim-modal_content {
+  flex: 0 0 38%;
+  max-width: 38%;
+  padding: 2.5rem 2rem;
+  overflow-y: auto;
+  position: relative;
+}
+.ph-dim-modal_close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  color: #0f0f0f;
+  display: flex;
+  width: 2rem;
+  height: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+.ph-dim-modal_title {
+  margin: 0 0 1.75rem;
+  text-decoration: underline;
+  text-underline-offset: .2em;
+}
+.ph-dim_specs { display: flex; flex-direction: column; }
+.ph-dim_row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--base-color-neutral--neutral-lightest, #e8e8e8);
+}
+.ph-dim_label { color: #686868; font-size: .8125rem; line-height: 1.4; }
+.ph-dim_value { color: #0f0f0f; font-size: .8125rem; line-height: 1.4; }
+
+@media screen and (max-width: 767px) {
+  .ph-dim-modal_panel { flex-direction: column; width: 94vw; height: 90vh; }
+  .ph-dim-modal_media { flex: 0 0 38%; }
+  .ph-dim-modal_content { flex: 1 1 auto; max-width: 100%; padding: 1.5rem 1.25rem; }
 }
