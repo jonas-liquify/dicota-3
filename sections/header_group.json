@@ -125,10 +125,8 @@
         "text_such_tipp": "Tip: Search by products, categories or use case",
         "collection_search_recent": "",
         "collection_search_recent_limit": 6,
-        "collection_search_bestseller": "",
-        "collection_search_bestseller_limit": 6,
         "url_wishlist_link": "",
-        "menu": "main-menu",
+        "menu": "main-menu-d2c",
         "transparent_over_first": false
       }
     }
