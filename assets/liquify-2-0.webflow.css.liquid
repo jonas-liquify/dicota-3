@@ -16187,3 +16187,20 @@ figcaption {
   .ph-dim-modal_media { flex: 0 0 38%; }
   .ph-dim-modal_content { flex: 1 1 auto; max-width: 100%; padding: 1.5rem 1.25rem; }
 }
+
+/* =============================================================
+   DICOTA PDP — Produkt-Shots auf grauem Hintergrund
+   Produktfotos haben einen weißen Hintergrund. Per
+   mix-blend-mode: multiply blendet das Weiß auf das bereits
+   graue Container-Grau (.product-header_gallery-lightbox =
+   #f4f4f4), das Produkt selbst bleibt dunkel. Lifestyle-Fotos
+   werden dabei nur ~4% dunkler (kaum sichtbar). Gleicher Ansatz
+   wie bei den Produktkarten (dort mix-blend-mode: darken).
+   Nur auf <img> beschränkt → Video-/3D-/External-Tiles bleiben
+   unberührt; die Lightbox-Zoom-Ansicht (.ph-lightbox_img, auf
+   dunklem Overlay) ebenfalls, da sie eine eigene Klasse hat.
+   ============================================================= */
+img.product-header_gallery-image {
+  background-color: transparent;
+  mix-blend-mode: multiply;
+}
