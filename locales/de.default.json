@@ -19,6 +19,105 @@
     "total_price": "Zwischensumme",
     "shipping_fee": "Versand",
     "free": "Gratis",
-    "go_to_checkout": "Zur Kasse"
+    "go_to_checkout": "Zur Kasse",
+    "note": "Anmerkung"
+  },
+  "blog": {
+    "no_posts": "Keine Beiträge gefunden."
+  },
+  "certificates": {
+    "intro": "Alle DICOTA-Produkte mit Konformitätserklärung (CE) — gefiltert nach SKU oder Produkttitel."
+  },
+  "collection": {
+    "no_items": "Keine Artikel gefunden.",
+    "no_matches": "Es gibt keine Produkte, die diesen Filtern entsprechen.",
+    "no_products": "Keine Produkte gefunden."
+  },
+  "general": {
+    "back": "Zurück",
+    "clear": "Zurücksetzen",
+    "filters": "Filter",
+    "form": {
+      "error": "Hoppla! Beim Absenden ist etwas schiefgelaufen.",
+      "success": "Vielen Dank! Deine Anfrage wurde übermittelt."
+    },
+    "home": "Startseite",
+    "next": "Weiter",
+    "previous": "Zurück",
+    "product": "Produkt",
+    "search": "Suchen",
+    "sort_by": "Sortieren nach",
+    "submit": "Absenden",
+    "trending": "Im Trend"
+  },
+  "jobs": {
+    "about_role": "Über die Rolle",
+    "open_application": "Keine passende Stelle dabei? Wir freuen uns trotzdem über deine Bewerbung."
+  },
+  "loyalty": {
+    "cashback": {
+      "account_holder": "Kontoinhaber",
+      "bank": "Bank",
+      "bank_match": "Die Bankdaten müssen mit dem Firmennamen übereinstimmen",
+      "conversion": "Umrechnungskurs: 50 Punkte = 1 EUR/CHF",
+      "disclaimer": "DICOTA behält sich das Recht vor, zusätzliche Informationen anzufordern oder Auszahlungen bei Bedenken abzulehnen. Der Umrechnungskurs kann sich ohne vorherige Ankündigung ändern.",
+      "iban": "Kontonummer / IBAN",
+      "min_points": "Mindestens 10.000 Punkte erforderlich",
+      "payout": "Vierteljährliche Auszahlung per Banküberweisung",
+      "points_label": "Auszuzahlende Punkte (mind. 10.000)"
+    },
+    "club": {
+      "benefit_cashback": "Cashback ab 10.000 Punkten",
+      "benefit_early": "Früher Zugang zu neuen Produkten",
+      "benefit_earn": "Sammle Punkte bei jedem Einkauf",
+      "benefit_rewards": "Exklusive Prämien und Bundles",
+      "benefit_support": "Persönlicher Club-Support"
+    },
+    "reward": "Prämie"
+  },
+  "marketing": {
+    "press": "Presse",
+    "product_imgs": {
+      "meta_line": "Art.-Nr. · Vorgängermodell · EAN-Code · Verfügbarkeit · Bauart · Farbe"
+    }
+  },
+  "products": {
+    "add_to_cart": "In den Warenkorb",
+    "on_sale": "Im Angebot"
+  },
+  "reseller": {
+    "form": {
+      "contact_person": "Ansprechpartner*",
+      "email": "E-Mail-Adresse*",
+      "heading": "Händlerdaten eingeben",
+      "phone": "Telefon"
+    }
+  },
+  "reviews": {
+    "body": "Deine Bewertung",
+    "email": "E-Mail",
+    "empty": "Noch keine Bewertungen. Schreibe die erste.",
+    "load_more": "Weitere Bewertungen laden",
+    "name": "Name",
+    "submit": "Bewertung absenden",
+    "title": "Titel der Bewertung",
+    "write": "Bewertung schreiben",
+    "your_rating": "Deine Wertung"
+  },
+  "sales": {
+    "product_list": {
+      "meta_line": "Art.-Nr. · Vorgängermodell · EAN-Code · Verfügbarkeit · Preisstaffeln · Bauart · Farbe"
+    }
+  },
+  "search": {
+    "heading": "Produkte suchen",
+    "no_results": "Keine Ergebnisse gefunden.",
+    "no_results_hint": "Es gibt keine Ergebnisse mit diesen Kriterien. Ändere deine Suche.",
+    "no_suggestions": "Keine Vorschläge",
+    "popular": "Beliebte Suchanfragen",
+    "recently_viewed": "Zuletzt angesehen",
+    "searching": "Suche läuft…",
+    "suggestions": "Vorschläge",
+    "view_all": "Alle Produkte ansehen"
   }
 }

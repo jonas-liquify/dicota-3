@@ -19,6 +19,105 @@
     "total_price": "Subtotal",
     "shipping_fee": "Shipping",
     "free": "Free",
-    "go_to_checkout": "Checkout"
+    "go_to_checkout": "Checkout",
+    "note": "Note"
+  },
+  "blog": {
+    "no_posts": "No posts found."
+  },
+  "certificates": {
+    "intro": "All DICOTA products with a Letter of Conformity (CE) — filtered by SKU or product title."
+  },
+  "collection": {
+    "no_items": "No items found.",
+    "no_matches": "There are no products matching these filters.",
+    "no_products": "No products found."
+  },
+  "general": {
+    "back": "Back",
+    "clear": "Clear",
+    "filters": "Filters",
+    "form": {
+      "error": "Oops! Something went wrong while submitting.",
+      "success": "Thank you! Your submission has been received."
+    },
+    "home": "Home",
+    "next": "Next",
+    "previous": "Previous",
+    "product": "Product",
+    "search": "Search",
+    "sort_by": "Sort by",
+    "submit": "Submit",
+    "trending": "Trending"
+  },
+  "jobs": {
+    "about_role": "About the role",
+    "open_application": "No suitable position for you? We'd still love to hear from you."
+  },
+  "loyalty": {
+    "cashback": {
+      "account_holder": "Account holder",
+      "bank": "Bank",
+      "bank_match": "Bank details must match the company name",
+      "conversion": "Conversion rate: 50 points = 1 EUR/CHF",
+      "disclaimer": "DICOTA reserves the right to request additional information or to refuse payouts in case of concerns. The conversion rate may change without prior notice.",
+      "iban": "Account number / IBAN",
+      "min_points": "At least 10,000 points required",
+      "payout": "Quarterly payout via bank transfer",
+      "points_label": "Points to pay out (min. 10,000)"
+    },
+    "club": {
+      "benefit_cashback": "Cashback from 10,000 points",
+      "benefit_early": "Early access to new products",
+      "benefit_earn": "Earn points with every purchase",
+      "benefit_rewards": "Exclusive rewards and bundles",
+      "benefit_support": "Personal club support"
+    },
+    "reward": "Reward"
+  },
+  "marketing": {
+    "press": "Press",
+    "product_imgs": {
+      "meta_line": "Item no. · Predecessor model · EAN code · Availability · Construction type · Color"
+    }
+  },
+  "products": {
+    "add_to_cart": "Add to cart",
+    "on_sale": "On sale"
+  },
+  "reseller": {
+    "form": {
+      "contact_person": "Contact person*",
+      "email": "Email address*",
+      "heading": "Enter reseller details",
+      "phone": "Phone"
+    }
+  },
+  "reviews": {
+    "body": "Your review",
+    "email": "Email",
+    "empty": "No reviews yet. Be the first to write one.",
+    "load_more": "Load more reviews",
+    "name": "Name",
+    "submit": "Submit review",
+    "title": "Review title",
+    "write": "Write a review",
+    "your_rating": "Your rating"
+  },
+  "sales": {
+    "product_list": {
+      "meta_line": "Item no. · Predecessor model · EAN code · Availability · Price tiers · Construction type · Color"
+    }
+  },
+  "search": {
+    "heading": "Search for Products",
+    "no_results": "No results found.",
+    "no_results_hint": "There are no results with this criteria. Try changing your search.",
+    "no_suggestions": "No suggestions",
+    "popular": "Popular searches",
+    "recently_viewed": "Recently viewed",
+    "searching": "Searching…",
+    "suggestions": "Suggestions",
+    "view_all": "View all products"
   }
 }
