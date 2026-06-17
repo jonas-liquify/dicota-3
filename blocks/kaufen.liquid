@@ -67,9 +67,17 @@
 {% endif %}</span>
                         </label>
 {% endfor %}</div>    </div>
-{% endif %}<div class="ph_delivery"><span class="ph_delivery-dot"></span><span>
-{{ block.settings.text_liefertext }}
-</span></div><template x-if="selected_or_first_available_variant.available">
+{% endif %}<template x-if="selected_or_first_available_variant.available">
+            <div li-js-if="selected_or_first_available_variant.available" class="ph_delivery">
+        <span class="ph_delivery-dot"></span><span>
+{{ block.settings.text_verfugbar_text }}
+</span>        </div>
+    </template><template x-if="!selected_or_first_available_variant.available">
+            <div li-js-if="!selected_or_first_available_variant.available" class="ph_delivery is-unavailable">
+        <span class="ph_delivery-dot"></span><span>
+{{ block.settings.text_nicht_verfugbar_text }}
+</span>        </div>
+    </template><template x-if="selected_or_first_available_variant.available">
             <div li-js-if="selected_or_first_available_variant.available" class="ph_atc-wrap">
         <a li-element="add-to-cart" href="#" class="ph_atc-btn w-button" @click="addToCart($event, true)" :disabled="!addToCartButton">Add to cart</a>        </div>
     </template><template x-if="!selected_or_first_available_variant.available">
@@ -119,10 +127,16 @@
             "default": "Segment"
         },
         {
-            "id": "text_liefertext",
+            "id": "text_verfugbar_text",
             "type": "text",
-            "label": "Liefertext",
-            "default": "Order by 4 PM, delivered between <strong>March 26 &amp; 27<\/strong>"
+            "label": "Verf\u00fcgbar Text",
+            "default": "In stock"
+        },
+        {
+            "id": "text_nicht_verfugbar_text",
+            "type": "text",
+            "label": "Nicht verf\u00fcgbar Text",
+            "default": "Out of stock"
         },
         {
             "id": "url_angebot_link",
