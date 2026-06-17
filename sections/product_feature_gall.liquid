@@ -1,8 +1,8 @@
-<div li-if:inside="product.metafields.custom.key_features != blank" style="display:contents" inside="1">
-        {% if product.metafields.custom.key_features != blank %}
+<div class="li-tag w-embed">{% assign ph_kf = product.metafields.custom.key_features.value %}{% if product.metafields.custom.filter_image_set != blank and product.metafields.custom.filter_image_set.value.key_features.value != blank %}{% assign ph_kf = product.metafields.custom.filter_image_set.value.key_features.value %}{% endif %}</div><div li-if:inside="ph_kf != blank" style="display:contents" inside="1">
+        {% if ph_kf != blank %}
             <div class="padding-global" style="padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px; background-color: {{ section.settings.bg_color }}; color: {{ section.settings.text_color }};"><div class="container-large"><h2 class="product-features_headline heading-style-h2">
 {{ section.settings.text_uberschrift }}
-</h2><div class="swiper is-product-features"><div class="swiper-wrapper is-product-features">{% for feature in product.metafields.custom.key_features.value %}    <div li-for="feature in product.metafields.custom.key_features.value" class="swiper-slide is-product-features product-features_item">
+</h2><div class="swiper is-product-features"><div class="swiper-wrapper is-product-features">{% for feature in ph_kf %}    <div li-for="feature in ph_kf" class="swiper-slide is-product-features product-features_item">
                                     <div class="product-features_img-wrap"><img li-object:src="feature.image | image_url: width: 800" li-object:alt="feature.headline" src="{{ feature.image | image_url: width: 800 }}" loading="lazy" alt="{{ feature.headline }}" class="product-features_img"></div>
                             <div class="product-features_content"><h3 li-object="feature.headline" class="product-features_title heading-style-h4">{{ feature.headline }}</h3><div li-object="feature.description | metafield_tag" class="product-features_text text-size-regular">{{ feature.description | metafield_tag }}</div></div>
                         </div>
