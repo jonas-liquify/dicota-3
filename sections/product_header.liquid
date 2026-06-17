@@ -81,7 +81,69 @@ window.addEventListener("resize", function() {
     if (nowDesktop !== lastDesktop) { lastDesktop = nowDesktop; initGallerySwipers(); }
   }, 150);
 });
-new Swiper(".swiper.is-we-care", {slidesPerView: 1, loop: true,autoplay: { delay: 5000, disableOnInteraction: false },pagination: { el: ".ph_we-care-dots", clickable: true }});new Swiper(".swiper.is-upsell", {slidesPerView: 1,navigation: { nextEl: ".ph_upsell-next", prevEl: ".ph_upsell-prev" }});var tabs = document.querySelectorAll(".ph_tab");var dynPanels = document.querySelectorAll(".ph_tab-panels > .ph_tab-panel");var dlPanel = document.querySelector(".ph_tab-panel-downloads");var seeMoreLink = document.querySelector(".ph_see-more");function activateTab(key) {tabs.forEach(function(t){ t.classList.toggle("is-active", t.getAttribute("data-tab") === key); });dynPanels.forEach(function(p,i){ p.style.display = (String(i) === key) ? "block" : "none"; });if (dlPanel) dlPanel.style.display = (key === "downloads") ? "block" : "none";if (seeMoreLink) seeMoreLink.style.display = (key === "downloads") ? "none" : "";}(function(){ var dm = document.querySelector("[data-ph-dim-modal]"); if(dm && dm.parentNode !== document.body) document.body.appendChild(dm); window.__phOpenDim = function(){ if(!dm) return; dm.classList.add("is-open"); dm.setAttribute("aria-hidden","false"); document.documentElement.style.overflow="hidden"; }; window.__phCloseDim = function(){ if(!dm) return; dm.classList.remove("is-open"); dm.setAttribute("aria-hidden","true"); document.documentElement.style.overflow=""; }; if(dm){ dm.querySelectorAll("[data-ph-dim-close]").forEach(function(b){ b.addEventListener("click", window.__phCloseDim); }); dm.addEventListener("click", function(e){ if(e.target===dm) window.__phCloseDim(); }); document.addEventListener("keydown", function(e){ if(e.key==="Escape" && dm.classList.contains("is-open")) window.__phCloseDim(); }); } })();tabs.forEach(function(tab) { tab.addEventListener("click", function(e){ var key = tab.getAttribute("data-tab"); if (key === "dimensions") { if(e && e.preventDefault) e.preventDefault(); if(window.__phOpenDim) window.__phOpenDim(); return; } activateTab(key); }); });(function(){ var active = document.querySelector(".ph_tab.is-active"); activateTab(active ? active.getAttribute("data-tab") : "0"); })();var seeMore = document.querySelector(".ph_see-more");if (seeMore) {seeMore.addEventListener("click", function(e) {e.preventDefault();var panel = document.querySelector(".ph_tab-panel[style*='block']") || document.querySelector(".ph_tab-panel");if (panel) { panel.classList.toggle("is-expanded"); }this.textContent = panel && panel.classList.contains("is-expanded") ? "Show less" : "Show more";});}}if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",__phInit);}else{__phInit();}})();</script></div> {% schema %} {
+new Swiper(".swiper.is-we-care", {slidesPerView: 1, loop: true,autoplay: { delay: 5000, disableOnInteraction: false },pagination: { el: ".ph_we-care-dots", clickable: true }});new Swiper(".swiper.is-upsell", {slidesPerView: 1,navigation: { nextEl: ".ph_upsell-next", prevEl: ".ph_upsell-prev" }});var tabs = document.querySelectorAll(".ph_tab");var dynPanels = document.querySelectorAll(".ph_tab-panels > .ph_tab-panel");var dlPanel = document.querySelector(".ph_tab-panel-downloads");var seeMoreLink = document.querySelector(".ph_see-more");function activateTab(key) {tabs.forEach(function(t){ t.classList.toggle("is-active", t.getAttribute("data-tab") === key); });dynPanels.forEach(function(p,i){ p.style.display = (String(i) === key) ? "block" : "none"; });if (dlPanel) dlPanel.style.display = (key === "downloads") ? "block" : "none";if (seeMoreLink) seeMoreLink.style.display = (key === "downloads") ? "none" : "";}(function(){ var dm = document.querySelector("[data-ph-dim-modal]"); if(dm && dm.parentNode !== document.body) document.body.appendChild(dm); window.__phOpenDim = function(){ if(!dm) return; dm.classList.add("is-open"); dm.setAttribute("aria-hidden","false"); document.documentElement.style.overflow="hidden"; }; window.__phCloseDim = function(){ if(!dm) return; dm.classList.remove("is-open"); dm.setAttribute("aria-hidden","true"); document.documentElement.style.overflow=""; }; if(dm){ dm.querySelectorAll("[data-ph-dim-close]").forEach(function(b){ b.addEventListener("click", window.__phCloseDim); }); dm.addEventListener("click", function(e){ if(e.target===dm) window.__phCloseDim(); }); document.addEventListener("keydown", function(e){ if(e.key==="Escape" && dm.classList.contains("is-open")) window.__phCloseDim(); }); } })();tabs.forEach(function(tab) { tab.addEventListener("click", function(e){ var key = tab.getAttribute("data-tab"); if (key === "dimensions") { if(e && e.preventDefault) e.preventDefault(); if(window.__phOpenDim) window.__phOpenDim(); return; } activateTab(key); }); });(function(){ var active = document.querySelector(".ph_tab.is-active"); activateTab(active ? active.getAttribute("data-tab") : "0"); })();var seeMore = document.querySelector(".ph_see-more");if (seeMore) {seeMore.addEventListener("click", function(e) {e.preventDefault();var panel = document.querySelector(".ph_tab-panel[style*='block']") || document.querySelector(".ph_tab-panel");if (panel) { panel.classList.toggle("is-expanded"); }this.textContent = panel && panel.classList.contains("is-expanded") ? "Show less" : "Show more";});}}if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",__phInit);}else{__phInit();}})();</script></div><div class="hide w-embed"><script type="application/json" id="pdf-datasheet-data">{% liquid
+  assign nutshell_found = false
+  assign nutshell_url = ""
+  assign spec_image_url = ""
+  assign spec_image_default = true
+  for image in product.images
+    if image.src contains '_30'
+      assign nutshell_found = true
+      assign nutshell_url = image | image_url: width: 1500
+    endif
+    if image.src contains '_21'
+      assign spec_image_url = image | image_url: width: 600
+      assign spec_image_default = false
+    endif
+  endfor
+  if spec_image_default
+    assign spec_image_url = product.images[2] | image_url: width: 600
+  endif
+  assign ph_highlights = product.metafields.custom.sales_arguments.value
+  assign ph_spec_set = product.metafields.custom.technical_specification_set.value
+%}{
+  "title": {{ product.title | json }},
+  "subtitle": {{ product.metafields.custom.product_tagline | json }},
+  "est_text": {{ section.settings.text_est | default: 'Est. in Germany 1992' | json }},
+  "product_images": [
+    "https:{{ product.images[0] | image_url: width: 1000 }}",
+    "https:{{ product.images[1] | image_url: width: 1000 }}"
+  ],
+  "description": {{ product.metafields.custom.product_description | metafield_tag | strip_html | json }},
+  "characteristics_title": {{ section.settings.text_characteristics | default: 'Characteristics' | json }},
+  "highlights": [{% for tag in ph_highlights %}{{ tag | strip_html | strip | json }}{% unless forloop.last %},{% endunless %}{% endfor %}],
+  "specifications_title": {{ section.settings.text_specifications | default: 'Specifications' | json }},
+  "specifications": [{% for definition in ph_spec_set.specifications.value %}{% assign mf_parts = definition.metafield_key | split: '.' %}{% if mf_parts[1] %}{% assign mf_value = product.metafields[mf_parts[0]][mf_parts[1]] %}{% else %}{% assign mf_value = product.metafields.custom[mf_parts[0]] %}{% endif %}{ "label": {{ definition.titel | json }}, "value": {{ mf_value | json }} }{% unless forloop.last %},{% endunless %}{% endfor %}],
+  "spec_image": "https:{{ spec_image_url }}",
+  "has_nutshell": {{ nutshell_found }},
+  "nutshell_title": {{ section.settings.text_in_a_nutshell | default: 'In a Nutshell Product Family' | json }},
+  "nutshell_image": "https:{{ nutshell_url }}",
+  "product_url": "{{ shop.url }}{{ product.url }}",
+  "footer-text1": "For further details, please visit",
+  "footer-text2": "As a leading brand for premium carry solutions, we are consciously aware of our social and ecological responsibility \u2013 from people for people.",
+  "sku": {{ product.selected_or_first_available_variant.sku | json }},
+  "gtin": {{ product.selected_or_first_available_variant.barcode | json }}
+}</script></div><div class="hide w-embed w-script"><script>(function(){
+  function getData(){ var el=document.getElementById("pdf-datasheet-data"); if(!el) return null; try{ return JSON.parse(el.textContent); }catch(e){ return null; } }
+  window.generatePDF = function(trigger){
+    var payload = getData(); if(!payload) return;
+    var btn = trigger || document.getElementById("pdf-download-btn");
+    var orig = btn ? btn.innerHTML : "";
+    if(btn){ btn.innerHTML = "Generating..."; btn.classList.add("is-loading"); }
+    fetch("https://hook.eu1.make.com/wql12kz537x3rwkhga1lq3v7tquuus7j", { method:"POST", headers:{ "Content-Type":"application/json" }, body: JSON.stringify(payload) })
+      .then(function(r){ if(!r.ok) throw new Error("bad response"); return r.blob(); })
+      .then(function(blob){ var url=window.URL.createObjectURL(blob); var a=document.createElement("a"); a.style.display="none"; a.href=url; a.download=payload.sku+"_"+payload.title+".pdf"; document.body.appendChild(a); a.click(); a.remove(); window.URL.revokeObjectURL(url); })
+      .catch(function(e){ console.error("PDF error:", e); })
+      .finally(function(){ if(btn){ btn.innerHTML=orig; btn.classList.remove("is-loading"); } });
+  };
+  function initPdf(){
+    var btn = document.getElementById("pdf-download-btn");
+    if(btn) btn.addEventListener("click", function(e){ e.preventDefault(); window.generatePDF(btn); });
+    document.querySelectorAll("[data-ph-dim-downloads]").forEach(function(d){ d.addEventListener("click", function(e){ e.preventDefault(); window.generatePDF(d); }); });
+    if(new URLSearchParams(window.location.search).get("generate") === "true"){ setTimeout(function(){ window.generatePDF(); }, 500); }
+  }
+  if(document.readyState === "loading") document.addEventListener("DOMContentLoaded", initPdf); else initPdf();
+})();</script></div> {% schema %} {
     "tag": "section",
     "name": "Product Header",
     "class": "section_product-header",
