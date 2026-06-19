@@ -33,11 +33,7 @@
         },
         "preis_RVzH4L": {
           "type": "preis",
-          "settings": {
-            "url_bewertungslink": "",
-            "text_bewertungsscore": "4.8",
-            "text_bewertungsanzahl": "(11)"
-          },
+          "settings": {},
           "blocks": {}
         },
         "kaufen_bLY6zn": {
@@ -48,7 +44,8 @@
             "text_label_farbe": "Color",
             "text_label_produktfamilie": "Product family",
             "text_label_segment": "Segment",
-            "text_liefertext": "Order by 4 PM, delivered between <strong>March 26 & 27</strong>",
+            "text_verfugbar_text": "In stock",
+            "text_nicht_verfugbar_text": "Out of stock",
             "url_angebot_link": "",
             "text_angebot_text": "Request a quote",
             "text_merken_text": "Save",
@@ -85,8 +82,7 @@
             "text_tab_2": "Features",
             "text_tab_3": "Care",
             "text_tab_4": "Downloads",
-            "richtext_ausstattung": "<p>Enter features...</p>",
-            "richtext_pflege": "<p>Enter care instructions...</p>",
+            "text_tab_5": "Specifications",
             "text_download_1_titel": "PDF Datasheet",
             "url_download_1_link": "",
             "text_download_2_titel": "Letter of Conformity",
@@ -123,7 +119,9 @@
         "upsell_7GQFaq"
       ],
       "name": "Product Header",
-      "settings": {}
+      "settings": {
+        "text_modal_titel": "Dimensions"
+      }
     },
     "product_usp_bar": {
       "type": "product_usp_bar",
@@ -253,33 +251,12 @@
     },
     "product_reviews": {
       "type": "product_reviews",
-      "blocks": {
-        "rezension": {
-          "type": "rezension",
-          "name": "Rezension",
-          "settings": {
-            "text_headline": "Absolut empfehlenswert!",
-            "textarea_text": "Ich liebe das Produkt das ich gekauft habe. Auch der Kundenservice war sehr gut.",
-            "text_autor": "Louisa Maierhover",
-            "text_datum": "vor 5 Stunden"
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "rezension"
-      ],
       "settings": {
-        "text_score": "4,9/5,0 Bewertung",
-        "text_anzahl": "Basierend auf 11 Bewertungen",
         "text_breakdown_titel": "Bewertungsüberblick",
-        "url_rezension_schreiben_link": "",
-        "url_mehr_bewertungen_link": "",
-        "stars_5_pct": "80",
-        "stars_4_pct": "20",
-        "stars_3_pct": "0",
-        "stars_2_pct": "0",
-        "stars_1_pct": "0",
+        "shop_domain": "",
+        "api_token": "",
+        "per_page": 10,
+        "api_base": "https://judge.me/api/v1",
         "padding_top": 80,
         "padding_bottom": 80,
         "bg_color": "#ffffff",
@@ -293,8 +270,7 @@
         "padding_top": 80,
         "padding_bottom": 80,
         "bg_color": "#ffffff",
-        "text_color": "#000000",
-        "faqs": []
+        "text_color": "#000000"
       }
     }
   },
