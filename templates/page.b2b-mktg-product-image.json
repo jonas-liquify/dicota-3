@@ -1,0 +1,214 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "b2b_subnav": {
+      "type": "b2b_subnav",
+      "settings": {
+        "text_dummy_description": "Kurzbeschreibung",
+        "text_punkte_label": "Aktuelle Punktzahl:",
+        "account_menu": ""
+      }
+    },
+    "b2b_mkt_product_imgs": {
+      "type": "b2b_mkt_product_imgs",
+      "blocks": {
+        "b2b_mkt_download_NcHJ8B": {
+          "type": "b2b-mkt-download",
+          "name": "Laptop Bags & Packs",
+          "settings": {
+            "url_download_link": "",
+            "text_heading": "Laptop Bags & Packs",
+            "text_subheading": "All our current cut & sew products (23 Dateien · 142 MB)"
+          },
+          "blocks": {}
+        },
+        "b2b_mkt_download_9Ci9mX": {
+          "type": "b2b-mkt-download",
+          "name": "Accessories",
+          "settings": {
+            "url_download_link": "",
+            "text_heading": "Accessories",
+            "text_subheading": "All our current accessory products (23 files · 142 MB)"
+          },
+          "blocks": {}
+        },
+        "b2b-mkt-download": {
+          "type": "b2b-mkt-download",
+          "name": "B2B Mkt Download",
+          "settings": {
+            "url_download_link": "",
+            "text_heading": "Privacy Filters",
+            "text_subheading": "23 Dateien · 142 MB"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "b2b_mkt_download_NcHJ8B",
+        "b2b_mkt_download_9Ci9mX",
+        "b2b-mkt-download"
+      ],
+      "settings": {
+        "text_breadcrumb": "Product Images & Contents",
+        "text_heading_1": "Product Images & Contents",
+        "textarea_subheading_1": "Download product images and content in convenient ZIP packages tailored to your needs.",
+        "text_heading_2": "Search your product",
+        "text_subheading_2": "SKU, EAN/GTIN, or product name ...",
+        "text_downloads_heading": "Download Product Images (all)",
+        "text_liste_heading": "Sortimentliste",
+        "text_liste_subheading": "Tabellarische Übersicht aller verfügbaren Artikel.",
+        "text_info_heading": "Folgende Informationen sind enthalten:",
+        "richtext_info_text": "<p>Artikel-Nr. · Vorgängermodell · EAN-Code · Verfügbarkeit · Konstruktionstyp · Farbe</p>"
+      }
+    },
+    "b2b_mkt_overview": {
+      "type": "b2b_mkt_overview",
+      "blocks": {
+        "b2b-mkt-quicklink": {
+          "type": "b2b-mkt-quicklink",
+          "name": "B2B Mkt Quicklink",
+          "settings": {
+            "text_heading": "Produktbilder",
+            "richtext_text": "<p>Alle Produktbilder in hoher Auflösung als ZIP.</p>",
+            "url_button_link": "",
+            "text_button_text": "Öffnen"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "b2b-mkt-quicklink"
+      ],
+      "settings": {
+        "text_breadcrumb": "Marketing",
+        "text_heading_1": "Marketing-Übersicht",
+        "textarea_subheading_1": "Alles für deine Kampagnen-Arbeit — Produktbilder, Pressetexte, Event-Material und mehr.",
+        "text_linke_karte_subline": "Highlight",
+        "text_linke_karte_heading": "Aktuelle Kampagne",
+        "textarea_linke_karte_text": "Alle Materialien zur laufenden Hauptkampagne — Print, Social und Web.",
+        "url_linke_karte_button_link": "",
+        "text_linke_karte_button_text": "Material ansehen",
+        "text_rechte_karte_subline": "Neu",
+        "text_rechte_karte_heading": "Neueste Pressemitteilung",
+        "url_rechte_karte_button_link": "",
+        "text_rechte_karte_button_text": "Lesen",
+        "text_banner_heading": "Trade Show Season",
+        "textarea_banner_text": "Bestelle dein Event-Kit für die kommenden Messen. Lieferung in 5-7 Werktagen.",
+        "url_banner_button_link": "",
+        "text_banner_button_text": "Event-Kit bestellen",
+        "text_heading_2": "Quick-Zugriff"
+      }
+    },
+    "b2b_mkt_campaigns": {
+      "type": "b2b_mkt_campaigns",
+      "blocks": {
+        "b2b-kampagne": {
+          "type": "b2b-kampagne",
+          "name": "B2B Kampagne",
+          "settings": {
+            "text_status": "Live",
+            "text_heading": "Kampagnen-Titel",
+            "textarea_text": "Kurze Beschreibung der Kampagne und Zielgruppe.",
+            "url_button_link": "",
+            "text_button_text": "Assets ansehen"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "b2b-kampagne"
+      ],
+      "disabled": true,
+      "settings": {
+        "text_breadcrumb": "Kampagnen",
+        "text_heading": "Kampagnen",
+        "textarea_subheading": "Aktuelle und vergangene Marketing-Kampagnen mit allen Assets und Texten."
+      }
+    },
+    "b2b_mkt_press": {
+      "type": "b2b_mkt_press",
+      "blocks": {
+        "b2b-presse": {
+          "type": "b2b-presse",
+          "name": "B2B Presse",
+          "settings": {
+            "text_datum": "2026-Q2",
+            "text_heading": "Pressemitteilung-Titel",
+            "textarea_text": "Kurze Zusammenfassung des Inhalts.",
+            "url_download_link": "",
+            "text_button_text": "Herunterladen"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "b2b-presse"
+      ],
+      "disabled": true,
+      "settings": {
+        "text_breadcrumb": "Presse",
+        "text_heading": "Presse-Bereich",
+        "textarea_subheading": "Pressemitteilungen, Logos, Boilerplate-Texte und Pressekontakte."
+      }
+    },
+    "b2b_mkt_events": {
+      "type": "b2b_mkt_events",
+      "blocks": {
+        "b2b-event": {
+          "type": "b2b-event",
+          "name": "B2B Event",
+          "settings": {
+            "text_datum_ort": "15.06.2026 · Berlin",
+            "text_heading": "Event-Titel",
+            "textarea_text": "Beschreibung des Events und der DICOTA-Präsenz.",
+            "url_button_link": "",
+            "text_button_text": "Details"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "b2b-event"
+      ],
+      "disabled": true,
+      "settings": {
+        "text_breadcrumb": "Veranstaltungen",
+        "text_heading": "Veranstaltungen",
+        "textarea_subheading": "Messen, Trade Shows und exklusive Events — alles auf einen Blick."
+      }
+    },
+    "b2b_mkt_event_kit": {
+      "type": "b2b_mkt_event_kit",
+      "disabled": true,
+      "settings": {
+        "text_breadcrumb": "Event Kit",
+        "text_heading": "Event Kit",
+        "textarea_subheading": "Komplettes Messe-Paket: Rollups, Tischdecken, Broschüren und Produktmuster.",
+        "text_tag": "Standard-Kit",
+        "text_banner_heading": "Trade Show Starter",
+        "textarea_banner_text": "Inhalt: 2 Rollups, Tischdecke, 100× Broschüren A4, 50× Produktmuster.",
+        "url_banner_button_link": "",
+        "text_banner_button_text": "Kit bestellen"
+      }
+    }
+  },
+  "layout": "theme",
+  "wrapper": "main.main-wrapper",
+  "order": [
+    "b2b_subnav",
+    "b2b_mkt_product_imgs",
+    "b2b_mkt_overview",
+    "b2b_mkt_campaigns",
+    "b2b_mkt_press",
+    "b2b_mkt_events",
+    "b2b_mkt_event_kit"
+  ]
+}
