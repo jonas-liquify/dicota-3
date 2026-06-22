@@ -22,11 +22,21 @@
       "blocks": {
         "b2b_mkt_download_NcHJ8B": {
           "type": "b2b-mkt-download",
-          "name": "B2B Mkt Download",
+          "name": "Laptop Bags & Packs",
           "settings": {
             "url_download_link": "",
             "text_heading": "Laptop Bags & Packs",
             "text_subheading": "All our current cut & sew products (23 Dateien · 142 MB)"
+          },
+          "blocks": {}
+        },
+        "b2b_mkt_download_9Ci9mX": {
+          "type": "b2b-mkt-download",
+          "name": "Accessories",
+          "settings": {
+            "url_download_link": "",
+            "text_heading": "Accessories",
+            "text_subheading": "All our current accessory products (23 files · 142 MB)"
           },
           "blocks": {}
         },
@@ -35,7 +45,7 @@
           "name": "B2B Mkt Download",
           "settings": {
             "url_download_link": "",
-            "text_heading": "Backpacks Q2",
+            "text_heading": "Privacy Filters",
             "text_subheading": "23 Dateien · 142 MB"
           },
           "blocks": {}
@@ -43,15 +53,16 @@
       },
       "block_order": [
         "b2b_mkt_download_NcHJ8B",
+        "b2b_mkt_download_9Ci9mX",
         "b2b-mkt-download"
       ],
       "settings": {
-        "text_breadcrumb": "Produktbilder",
-        "text_heading_1": "Produktbilder",
-        "textarea_subheading_1": "Suche, finde und lade DICOTA-Produktbilder in verschiedenen Auflösungen herunter.",
-        "text_heading_2": "Suche",
-        "text_subheading_2": "SKU, EAN oder Produktname.",
-        "text_downloads_heading": "Produktbilder (ZIP)",
+        "text_breadcrumb": "Product Images & Contents",
+        "text_heading_1": "Product Images & Contents",
+        "textarea_subheading_1": "Download product images and content in convenient ZIP packages tailored to your needs.",
+        "text_heading_2": "Search your product",
+        "text_subheading_2": "SKU, EAN/GTIN, or product name ...",
+        "text_downloads_heading": "Download Product Images (all)",
         "text_liste_heading": "Sortimentliste",
         "text_liste_subheading": "Tabellarische Übersicht aller verfügbaren Artikel.",
         "text_info_heading": "Folgende Informationen sind enthalten:",
