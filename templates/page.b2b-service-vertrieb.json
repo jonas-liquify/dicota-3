@@ -11,7 +11,11 @@
   "sections": {
     "b2b_subnav": {
       "type": "b2b_subnav",
-      "settings": {}
+      "settings": {
+        "text_dummy_description": "Short description",
+        "text_punkte_label": "Current point balance:",
+        "account_menu": ""
+      }
     },
     "b2b_sales_overview": {
       "type": "b2b_sales_overview",
@@ -19,17 +23,46 @@
         "b2b-sales-quicklink": {
           "type": "b2b-sales-quicklink",
           "name": "B2B Sales Quicklink",
-          "settings": {}
+          "settings": {
+            "text_heading": "Product list",
+            "richtext_text": "<p>Current product range with all items, EANs and availability.</p>",
+            "url_button_link": "",
+            "text_button_text": "Open"
+          },
+          "blocks": {}
         }
       },
       "block_order": [
         "b2b-sales-quicklink"
       ],
-      "settings": {}
+      "settings": {
+        "text_breadcrumb": "Service &amp; Sales",
+        "text_heading_1": "Service &amp; Sales",
+        "textarea_subheading_1": "Volume pricing, product lists, promotions and distributors — everything for your sales work.",
+        "text_linke_karte_subline": "Quick Action",
+        "text_linke_karte_heading": "Request a quote",
+        "textarea_linke_karte_text": "Request volume pricing for your next order in four quick steps.",
+        "url_linke_karte_button_link": "",
+        "text_linke_karte_button_text": "Start request",
+        "text_rechte_karte_subline": "Promo",
+        "text_rechte_karte_heading": "Current promotion",
+        "url_rechte_karte_button_link": "",
+        "text_rechte_karte_button_text": "View promo",
+        "text_heading_2": "Quick access"
+      }
     },
     "b2b_sales_volume_pri": {
       "type": "b2b_sales_volume_pri",
-      "settings": {}
+      "settings": {
+        "text_breadcrumb": "Volume Pricing",
+        "text_heading": "Request Volume Pricing",
+        "textarea_subheading": "Request an individual quote in four steps: reseller details, distributor, end customer and your notes.",
+        "text_form_heading": "Request a quote",
+        "text_step_1_label": "Reseller",
+        "text_step_2_label": "Distributor",
+        "text_step_3_label": "End customer",
+        "text_step_4_label": "Notes"
+      }
     },
     "b2b_sales_product_li": {
       "type": "b2b_sales_product_li",
@@ -37,13 +70,26 @@
         "b2b-sales-download": {
           "type": "b2b-sales-download",
           "name": "B2B Sales Download",
-          "settings": {}
+          "settings": {
+            "url_download_link": "",
+            "text_heading": "Product Range Q2 2026",
+            "text_subheading": "XLSX · 1.2 MB"
+          },
+          "blocks": {}
         }
       },
       "block_order": [
         "b2b-sales-download"
       ],
-      "settings": {}
+      "settings": {
+        "text_breadcrumb": "Product List",
+        "text_heading": "Product List",
+        "textarea_subheading": "Current product range as a download — all items with prices and availability.",
+        "text_liste_heading": "Product range",
+        "text_liste_subheading": "Last updated: this morning.",
+        "text_info_heading": "The following information is included:",
+        "richtext_info_text": "<p>Item no. · Predecessor model · EAN code · Availability · Price tiers · Construction type · Color</p>"
+      }
     },
     "b2b_sales_promotions": {
       "type": "b2b_sales_promotions",
@@ -51,13 +97,30 @@
         "b2b-promo": {
           "type": "b2b-promo",
           "name": "B2B Promo",
-          "settings": {}
+          "settings": {
+            "text_tag": "Bundle",
+            "text_heading": "Promotion title",
+            "textarea_text": "Description of the promotion with target audience and validity period.",
+            "url_button_link": "",
+            "text_button_text": "Details"
+          },
+          "blocks": {}
         }
       },
       "block_order": [
         "b2b-promo"
       ],
-      "settings": {}
+      "settings": {
+        "text_breadcrumb": "Promotions",
+        "text_heading_1": "Current Promotions",
+        "textarea_subheading": "Special conditions, bundle prices and quarterly promotions for resellers and distributors.",
+        "text_tag": "Active until 30.06.",
+        "text_banner_heading": "Q2 Quarterly Promotion",
+        "textarea_banner_text": "15% special discount on the Backpack Eco line with a minimum order of 50 units.",
+        "url_banner_button_link": "",
+        "text_banner_button_text": "View conditions",
+        "text_heading_2": "More Promotions"
+      }
     },
     "b2b_sales_distributo": {
       "type": "b2b_sales_distributo",
@@ -68,13 +131,43 @@
           "static": true,
           "settings": {},
           "blocks": {
+            "b2b_sales_region_iCTkRq": {
+              "type": "b2b-sales-region",
+              "name": "B2B Sales Region",
+              "settings": {
+                "text_region_name": "Austria"
+              },
+              "blocks": {}
+            },
+            "b2b_sales_region_b6qNt7": {
+              "type": "b2b-sales-region",
+              "name": "B2B Sales Region",
+              "settings": {
+                "text_region_name": "DACH"
+              },
+              "blocks": {}
+            },
+            "b2b_sales_region_FnmXPr": {
+              "type": "b2b-sales-region",
+              "name": "B2B Sales Region",
+              "settings": {
+                "text_region_name": "Switzerland"
+              },
+              "blocks": {}
+            },
             "b2b-sales-region": {
               "type": "b2b-sales-region",
               "name": "B2B Sales Region",
-              "settings": {}
+              "settings": {
+                "text_region_name": "Germany"
+              },
+              "blocks": {}
             }
           },
           "block_order": [
+            "b2b_sales_region_iCTkRq",
+            "b2b_sales_region_b6qNt7",
+            "b2b_sales_region_FnmXPr",
             "b2b-sales-region"
           ]
         },
@@ -87,7 +180,8 @@
             "b2b-sales-region-pane": {
               "type": "b2b-sales-region-pane",
               "name": "B2B Sales Region Pane",
-              "settings": {}
+              "settings": {},
+              "blocks": {}
             }
           },
           "block_order": [
@@ -95,7 +189,11 @@
           ]
         }
       },
-      "settings": {}
+      "settings": {
+        "text_breadcrumb": "Distributors",
+        "text_heading": "Distributor Overview",
+        "textarea_subheading": "Authorized DICOTA distribution partners by region — contacts and details at a glance."
+      }
     },
     "b2b_sales_support": {
       "type": "b2b_sales_support",
@@ -103,13 +201,24 @@
         "b2b-sales-kontakt": {
           "type": "b2b-sales-kontakt",
           "name": "B2B Sales Kontakt",
-          "settings": {}
+          "settings": {
+            "text_name": "First Last",
+            "text_e_mail": "sales@dicota.com",
+            "text_telefon": "+41 00 000 00 00",
+            "url_linkedin_link": ""
+          },
+          "blocks": {}
         }
       },
       "block_order": [
         "b2b-sales-kontakt"
       ],
-      "settings": {}
+      "settings": {
+        "text_breadcrumb": "Support",
+        "text_heading_1": "Sales Support",
+        "textarea_subheading": "Your direct line to the DICOTA sales team for individual requests.",
+        "text_heading_2": "DICOTA Schweiz AG"
+      }
     }
   },
   "layout": "theme",
