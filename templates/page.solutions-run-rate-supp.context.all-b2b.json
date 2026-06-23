@@ -12,5 +12,55 @@
     "market": "all-b2b"
   },
   "parent": "page.solutions-run-rate-supp.json",
-  "sections": {}
+  "sections": {
+    "feature_card_grid": {
+      "settings": {
+        "text_subline": "Run Rate Supply"
+      },
+      "blocks": {}
+    },
+    "two_column_hero": {
+      "settings": {
+        "text_heading": "Run Rate supply",
+        "textarea_text": "DICOTA is your reliable partner for recurring business with major customers. With a broad portfolio of best-selling products, consistently high availability, and clear processes, we generate steady revenue, keep acquisition costs low, and foster strong customer loyalty.",
+        "text_button_text": "Talk to our Sales Team",
+        "url_button_link": "shopify://pages/contact"
+      },
+      "blocks": {}
+    },
+    "stats_strip_rXkQ4": {
+      "type": "stats_strip",
+      "disabled": false,
+      "settings": {
+        "header-04453d19538a26b67fd4c9c09e305a44": null,
+        "padding_top": 40,
+        "padding_bottom": 40
+      },
+      "blocks": {
+        "icon_block_4Yydw": {
+          "type": "icon-block",
+          "disabled": false,
+          "settings": {
+            "image_icon": null,
+            "text_zahl": "Top 50",
+            "text_label": "Bestsellers always in stock"
+          }
+        }
+      },
+      "block_order": [
+        "icon_block_4Yydw"
+      ],
+      "name": "Stats Strip"
+    }
+  },
+  "order": [
+    "two_column_hero",
+    "boxed_image",
+    "stats_strip_rXkQ4",
+    "feature_card_grid",
+    "history_timeline",
+    "owner_spotlight",
+    "discover_banner",
+    "triple_cards"
+  ]
 }
