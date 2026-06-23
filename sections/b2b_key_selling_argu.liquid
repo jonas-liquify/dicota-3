@@ -1,0 +1,74 @@
+<div class="padding-global padding-section-medium" style="padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px;"><div class="container-large"><div class="default-medium-component"><div class="default-flex-tiny"><div class="text-style-subline">
+{{ section.settings.text_subline }}
+</div><h1 class="heading-style-h2">
+{{ section.settings.text_heading }}
+</h1><div class="text-size-medium max-width-large"> {{ section.settings.textarea_text }} </div></div><div li-cf-theme-blocks="" class="benefits_grid">
+{% content_for 'blocks' %}
+</div></div></div></div> {% schema %} {
+    "tag": "section",
+    "name": "B2B Key Selling Argu",
+    "class": "section_acc-default",
+    "blocks": [
+        {
+            "type": "argument"
+        },
+        {
+            "type": "@app"
+        }
+    ],
+    "settings": [
+        {
+            "id": "text_subline",
+            "type": "text",
+            "label": "Subline",
+            "default": "Why DICOTA for B2B"
+        },
+        {
+            "id": "text_heading",
+            "type": "text",
+            "label": "Heading",
+            "default": "Key selling arguments"
+        },
+        {
+            "id": "textarea_text",
+            "type": "textarea",
+            "label": "Text",
+            "default": "The most compelling reasons for resellers and end customers to choose DICOTA \u2014 ready to use in your sales conversations."
+        },
+        {
+            "type": "header",
+            "content": "Abst\u00e4nde"
+        },
+        {
+            "type": "range",
+            "id": "padding_top",
+            "min": 0,
+            "max": 160,
+            "step": 4,
+            "unit": "px",
+            "label": "Abstand oben",
+            "default": 80
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom",
+            "min": 0,
+            "max": 160,
+            "step": 4,
+            "unit": "px",
+            "label": "Abstand unten",
+            "default": 80
+        }
+    ],
+    "presets": [
+        {
+            "name": "B2B Key Selling Argu",
+            "category": "_B2B",
+            "blocks": [
+                {
+                    "type": "argument"
+                }
+            ]
+        }
+    ]
+} {% endschema %}

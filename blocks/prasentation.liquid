@@ -1,0 +1,46 @@
+<div li-block="Präsentation" class="presentations_row" {{ block.shopify_attributes }}>
+                    <div class="presentations_row-left"><div class="presentations_icon w-embed"><svg width="100%" height="100%" viewbox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.256 18.087C4.835 18.087 4.479 17.941 4.188 17.649C3.896 17.358 3.75 17.001 3.75 16.58V3.76C3.75 3.339 3.896 2.983 4.188 2.691C4.479 2.399 4.835 2.253 5.256 2.253H11.875L16.25 6.628V16.58C16.25 17.001 16.104 17.358 15.813 17.649C15.521 17.941 15.165 18.087 14.744 18.087H5.256ZM11.25 7.253V3.503H5.256C5.192 3.503 5.134 3.53 5.08 3.584C5.027 3.637 5 3.696 5 3.76V16.58C5 16.644 5.027 16.703 5.08 16.757C5.134 16.81 5.192 16.837 5.256 16.837H14.744C14.808 16.837 14.866 16.81 14.92 16.757C14.973 16.703 15 16.644 15 16.58V7.253H11.25Z" fill="currentColor"></path></svg></div><div class="presentations_row-text"><div class="presentations_row-title text-size-regular text-weight-medium">
+{{ block.settings.text_titel }}
+</div><div class="presentations_row-meta text-size-tiny text-style-muted">
+{{ block.settings.text_datei_info }}
+</div></div></div>
+                    <div class="presentations_row-langs"><a href="{{ block.settings.url_de_datei }}" target="_blank" rel="noopener" class="presentations_lang"> DE </a><a href="{{ block.settings.url_en_datei }}" target="_blank" rel="noopener" class="presentations_lang"> EN </a><a href="{{ block.settings.url_fr_datei }}" target="_blank" rel="noopener" class="presentations_lang"> FR </a></div>
+                </div> {% schema %} {
+    "name": "Pr\u00e4sentation",
+    "settings": [
+        {
+            "id": "text_titel",
+            "type": "text",
+            "label": "Titel",
+            "default": "Product Presentation PDF"
+        },
+        {
+            "id": "text_datei_info",
+            "type": "text",
+            "label": "Datei-Info",
+            "default": "PDF \u00b7 25 MB"
+        },
+        {
+            "id": "url_de_datei",
+            "type": "url",
+            "label": "DE Datei"
+        },
+        {
+            "id": "url_en_datei",
+            "type": "url",
+            "label": "EN Datei"
+        },
+        {
+            "id": "url_fr_datei",
+            "type": "url",
+            "label": "FR Datei"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Pr\u00e4sentation",
+            "blocks": []
+        }
+    ],
+    "tag": null
+} {% endschema %}

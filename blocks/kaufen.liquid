@@ -67,17 +67,31 @@
 {% endif %}</span>
                         </label>
 {% endfor %}</div>    </div>
-{% endif %}<template x-if="selected_or_first_available_variant.available">
-            <div li-js-if="selected_or_first_available_variant.available" class="ph_delivery">
-        <span class="ph_delivery-dot"></span><span>
+{% endif %}<div class="hide w-embed">{% liquid
+  assign ph_v = product.selected_or_first_available_variant
+  assign ph_stock = 'out'
+  if ph_v.available
+    if ph_v.inventory_management == blank
+      assign ph_stock = 'high'
+    elsif ph_v.inventory_quantity > 100
+      assign ph_stock = 'high'
+    else
+      assign ph_stock = 'low'
+    endif
+  endif
+%}</div>{% if ph_stock == 'high' %}    <div li-if="ph_stock == 'high'" class="ph_delivery">
+    <span class="ph_delivery-dot"></span><span>
 {{ block.settings.text_verfugbar_text }}
-</span>        </div>
-    </template><template x-if="!selected_or_first_available_variant.available">
-            <div li-js-if="!selected_or_first_available_variant.available" class="ph_delivery is-unavailable">
-        <span class="ph_delivery-dot"></span><span>
+</span>    </div>
+{% endif %}{% if ph_stock == 'low' %}    <div li-if="ph_stock == 'low'" class="ph_delivery is-low">
+    <span class="ph_delivery-dot"></span><span>
+{{ block.settings.text_limitiert_text }}
+</span>    </div>
+{% endif %}{% if ph_stock == 'out' %}    <div li-if="ph_stock == 'out'" class="ph_delivery is-unavailable">
+    <span class="ph_delivery-dot"></span><span>
 {{ block.settings.text_nicht_verfugbar_text }}
-</span>        </div>
-    </template><template x-if="selected_or_first_available_variant.available">
+</span>    </div>
+{% endif %}<template x-if="selected_or_first_available_variant.available">
             <div li-js-if="selected_or_first_available_variant.available" class="ph_atc-wrap">
         <a li-element="add-to-cart" href="#" class="ph_atc-btn w-button" @click="addToCart($event, true)" :disabled="!addToCartButton">Add to cart</a>        </div>
     </template><template x-if="!selected_or_first_available_variant.available">
@@ -131,6 +145,12 @@
             "type": "text",
             "label": "Verf\u00fcgbar Text",
             "default": "In stock"
+        },
+        {
+            "id": "text_limitiert_text",
+            "type": "text",
+            "label": "Limitiert Text",
+            "default": "Limited stock"
         },
         {
             "id": "text_nicht_verfugbar_text",

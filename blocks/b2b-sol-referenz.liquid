@@ -1,0 +1,23 @@
+<div li-block="B2B Sol Referenz" class="sol-refs_item" {{ block.shopify_attributes }}>
+                    {% if block.settings.image_logo %}
+{{ block.settings.image_logo | image_url: width: 200 | image_tag: loading: 'lazy', class: 'sol-refs_logo' }}
+{% else %}
+<img src="{{ 'platzhalter.svg' | asset_url }}" loading="lazy" alt="" class="sol-refs_logo">
+{% endif %}
+                </div> {% schema %} {
+    "name": "B2B Sol Referenz",
+    "settings": [
+        {
+            "id": "image_logo",
+            "type": "image_picker",
+            "label": "Logo"
+        }
+    ],
+    "presets": [
+        {
+            "name": "B2B Sol Referenz",
+            "blocks": []
+        }
+    ],
+    "tag": null
+} {% endschema %}

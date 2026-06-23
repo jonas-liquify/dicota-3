@@ -1,0 +1,200 @@
+<div class="padding-global padding-section-small"><div class="container-large"><div class="acc-default_wrapper"><div class="acc-default_flex-small"><ul role="list" class="breadcrumbs_component w-list-unstyled"><li class="breadcrumbs_item"><a li-object:href="routes.root_url" href="{{ routes.root_url }}" class="w-inline-block"><div li-object="'general.home' | t" class="text-size-regular">{{ 'general.home' | t }}</div></a><div class="breadcrumbs_icon w-embed"><svg width="15" height="15" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.55806 6.29544C2.46043 6.19781 2.46043 6.03952 2.55806 5.94189L3.44195 5.058C3.53958 4.96037 3.69787 4.96037 3.7955 5.058L8 9.26251L12.2045 5.058C12.3021 4.96037 12.4604 4.96037 12.5581 5.058L13.4419 5.94189C13.5396 6.03952 13.5396 6.19781 13.4419 6.29544L8.17678 11.5606C8.07915 11.6582 7.92086 11.6582 7.82323 11.5606L2.55806 6.29544Z" fill="currentColor" transform="rotate(-90 8 8)"></path></svg></div></li><li class="breadcrumbs_item"><div class="text-size-regular">
+{{ section.settings.text_aktueller_bereich }}
+</div></li></ul><div class="default-flex-tiny"><h1 class="heading-style-h2">
+{{ section.settings.text_heading_1 }}
+</h1><div class="text-size-medium max-width-large"> {{ section.settings.textarea_subheading_1 }} </div></div><div class="acc-double"><div class="acc-card"><div class="text-style-subline">
+{{ section.settings.text_linke_karte_subline }}
+</div>{% if section.settings.image_linke_karte_bild %}
+{{ section.settings.image_linke_karte_bild | image_url: width: 800 | image_tag: loading: 'lazy', class: 'acc-card_16-9-image' }}
+{% else %}
+<img src="{{ 'platzhalter.svg' | asset_url }}" loading="lazy" alt="" class="acc-card_16-9-image">
+{% endif %}<div class="acc-card_content"><div class="text-size-large">
+{{ section.settings.text_linke_karte_heading }}
+</div><div class="text-size-regular"> {{ section.settings.textarea_linke_karte_text }} </div></div><a href="{{ section.settings.url_linke_karte_button_link }}" class="button w-button"> <span>{{ section.settings.text_linke_karte_button_text }}</span> </a></div><div class="acc-card"><div class="text-style-subline">
+{{ section.settings.text_rechte_karte_subline }}
+</div><div class="acc_banner-item is-large">{% if section.settings.image_rechte_karte_bild %}
+{{ section.settings.image_rechte_karte_bild | image_url: width: 400 | image_tag: loading: 'lazy', class: 'acc_banner-image is-large' }}
+{% else %}
+<img src="{{ 'platzhalter.svg' | asset_url }}" loading="lazy" alt="" class="acc_banner-image is-large">
+{% endif %}<div class="acc_banner-content is-large"><div class="acc_tag-list"><div class="text-style-subline">Tag 1</div><div class="text-style-subline">·</div><div class="text-style-subline">Tag 2</div></div><h3 class="text-size-large">
+{{ section.settings.text_rechte_karte_heading }}
+</h3></div></div><a href="{{ section.settings.url_rechte_karte_button_link }}" class="button w-button"> <span>{{ section.settings.text_rechte_karte_button_text }}</span> </a></div></div><div class="acc-banner text-color-white">{% if section.settings.image_mittel_banner_bild %}
+{{ section.settings.image_mittel_banner_bild | image_url: width: 1200 | image_tag: loading: 'lazy', class: 'acc-banner_image' }}
+{% else %}
+<img src="{{ 'platzhalter.svg' | asset_url }}" loading="lazy" alt="" class="acc-banner_image">
+{% endif %}<div class="acc-banner_content"><h3 class="heading-style-h2">
+{{ section.settings.text_mittel_banner_heading }}
+</h3><div class="text-size-medium"> {{ section.settings.textarea_mittel_banner_text }} </div><div class="button-group margin-top margin-small"><a href="{{ section.settings.url_mittel_banner_button_link }}" class="button is-white w-button"> <span>{{ section.settings.text_mittel_banner_button_text }}</span> </a></div></div></div></div><div class="acc-default_flex-small"><div class="default-flex-tiny"><h2 class="heading-style-h2">
+{{ section.settings.text_heading_2 }}
+</h2><div class="text-size-medium max-width-large"> {{ section.settings.textarea_subheading_2 }} </div></div><div li-cf-theme-blocks="" class="acc-triple">
+{% content_for 'blocks' %}
+</div></div></div></div></div> {% schema %} {
+    "tag": "section",
+    "name": "B2B Hub",
+    "class": "section_acc-default",
+    "blocks": [
+        {
+            "type": "b2b-quicklink"
+        },
+        {
+            "type": "@app"
+        }
+    ],
+    "settings": [
+        {
+            "id": "text_aktueller_bereich",
+            "type": "text",
+            "label": "Aktueller Bereich",
+            "default": "Account"
+        },
+        {
+            "id": "text_heading_1",
+            "type": "text",
+            "label": "Heading 1",
+            "default": "Redeem points"
+        },
+        {
+            "id": "textarea_subheading_1",
+            "type": "textarea",
+            "label": "Subheading 1",
+            "default": "Here you'll find an overview of all the options available for redeeming your points."
+        },
+        {
+            "id": "text_linke_karte_subline",
+            "type": "text",
+            "label": "Linke Karte Subline",
+            "default": "Featured"
+        },
+        {
+            "id": "image_linke_karte_bild",
+            "type": "image_picker",
+            "label": "Linke Karte Bild"
+        },
+        {
+            "id": "text_linke_karte_heading",
+            "type": "text",
+            "label": "Linke Karte Heading",
+            "default": "Top reward of the month"
+        },
+        {
+            "id": "textarea_linke_karte_text",
+            "type": "textarea",
+            "label": "Linke Karte Text",
+            "default": "Grab this reward while stocks last."
+        },
+        {
+            "id": "url_linke_karte_button_link",
+            "type": "url",
+            "label": "Linke Karte Button Link"
+        },
+        {
+            "id": "text_linke_karte_button_text",
+            "type": "text",
+            "label": "Linke Karte Button Text",
+            "default": "Redeem now"
+        },
+        {
+            "id": "text_rechte_karte_subline",
+            "type": "text",
+            "label": "Rechte Karte Subline",
+            "default": "New"
+        },
+        {
+            "id": "image_rechte_karte_bild",
+            "type": "image_picker",
+            "label": "Rechte Karte Bild"
+        },
+        {
+            "id": "text_rechte_karte_heading",
+            "type": "text",
+            "label": "Rechte Karte Heading",
+            "default": "Premium-Bundle"
+        },
+        {
+            "id": "url_rechte_karte_button_link",
+            "type": "url",
+            "label": "Rechte Karte Button Link"
+        },
+        {
+            "id": "text_rechte_karte_button_text",
+            "type": "text",
+            "label": "Rechte Karte Button Text",
+            "default": "View details"
+        },
+        {
+            "id": "image_mittel_banner_bild",
+            "type": "image_picker",
+            "label": "Mittel-Banner Bild"
+        },
+        {
+            "id": "text_mittel_banner_heading",
+            "type": "text",
+            "label": "Mittel-Banner Heading",
+            "default": "Exclusive offer"
+        },
+        {
+            "id": "textarea_mittel_banner_text",
+            "type": "textarea",
+            "label": "Mittel-Banner Text",
+            "default": "This month only: double points on all physical rewards."
+        },
+        {
+            "id": "url_mittel_banner_button_link",
+            "type": "url",
+            "label": "Mittel-Banner Button Link"
+        },
+        {
+            "id": "text_mittel_banner_button_text",
+            "type": "text",
+            "label": "Mittel-Banner Button Text",
+            "default": "Learn more"
+        },
+        {
+            "id": "text_heading_2",
+            "type": "text",
+            "label": "Heading 2",
+            "default": "Quicklinks"
+        },
+        {
+            "id": "textarea_subheading_2",
+            "type": "textarea",
+            "label": "Subheading 2",
+            "default": "Quick access to the most important features."
+        },
+        {
+            "type": "header",
+            "content": "Abst\u00e4nde"
+        },
+        {
+            "type": "range",
+            "id": "padding_top",
+            "min": 0,
+            "max": 160,
+            "step": 4,
+            "unit": "px",
+            "label": "Abstand oben",
+            "default": 40
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom",
+            "min": 0,
+            "max": 160,
+            "step": 4,
+            "unit": "px",
+            "label": "Abstand unten",
+            "default": 80
+        }
+    ],
+    "presets": [
+        {
+            "name": "B2B Hub",
+            "category": "_B2B",
+            "blocks": [
+                {
+                    "type": "b2b-quicklink"
+                }
+            ]
+        }
+    ]
+} {% endschema %}

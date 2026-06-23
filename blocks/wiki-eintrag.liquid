@@ -1,0 +1,29 @@
+<div li-block="Wiki Eintrag" class="faq_item background-color-alternate" x-data="{open: false}" {{ block.shopify_attributes }}>
+                    <div tabindex="0" role="button" x-on:click="open=!open" x-bind:aria-expanded="open?'true':'false'" class="faq_header"><div class="text-size-medium text-weight-medium">
+{{ block.settings.text_frage }}
+</div><div class="faq_icon-outer"><div class="faq_icon-line"></div><div x-bind:class="open?'is-open':''" class="faq_icon-line is-rotating"></div></div></div>
+                    <div x-bind:class="open?'is-open':''" class="faq_body"><div class="faq_body-content"><div class="text-size-regular"> {{ block.settings.richtext_antwort }} </div></div></div>
+                </div> {% schema %} {
+    "name": "Wiki Eintrag",
+    "settings": [
+        {
+            "id": "text_frage",
+            "type": "text",
+            "label": "Frage",
+            "default": "How do I register a warranty claim?"
+        },
+        {
+            "id": "richtext_antwort",
+            "type": "richtext",
+            "label": "Antwort",
+            "default": "<p>Open the Warranty Claims service, enter the product SKU and follow the guided steps. You can link to related <a href=\"#\">product pages<\/a> or <a href=\"#\">blog articles<\/a> here.<\/p>"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Wiki Eintrag",
+            "blocks": []
+        }
+    ],
+    "tag": null
+} {% endschema %}

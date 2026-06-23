@@ -1,0 +1,36 @@
+<div class="padding-global"><div class="container-large"><div class="mkt-collection_card"><div class="mkt-collection_header"><h2 class="mkt-collection_title heading-style-h4">
+{{ section.settings.text_uberschrift }}
+</h2></div><div li-cf-theme-blocks="" class="mkt-video_grid">
+{% content_for 'blocks' %}
+</div></div></div></div> {% schema %} {
+    "tag": "section",
+    "name": "B2B Mkt Train Videos",
+    "class": "section_mkt-collection",
+    "blocks": [
+        {
+            "type": "b2b-mkt-video"
+        },
+        {
+            "type": "@app"
+        }
+    ],
+    "settings": [
+        {
+            "id": "text_uberschrift",
+            "type": "text",
+            "label": "\u00dcberschrift",
+            "default": "Videos"
+        }
+    ],
+    "presets": [
+        {
+            "name": "B2B Mkt Train Videos",
+            "category": "_B2B Mkt",
+            "blocks": [
+                {
+                    "type": "b2b-mkt-video"
+                }
+            ]
+        }
+    ]
+} {% endschema %}
