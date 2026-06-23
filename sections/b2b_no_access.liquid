@@ -1,0 +1,90 @@
+<div class="padding-global padding-section-large" style="padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px;"><div class="container-large"><div class="no-access_wrapper"><div class="no-access_icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg></div><div class="no-access_content"><div class="text-style-subline">
+{{ section.settings.text_subline }}
+</div><h1 class="heading-style-h2">
+{{ section.settings.text_uberschrift }}
+</h1><div class="text-size-medium max-width-medium"> {{ section.settings.textarea_text }} </div><div class="button-group margin-top margin-small"><a href="{{ section.settings.url_login_link }}" class="button w-button"> <span>{{ section.settings.text_login_text }}</span> </a><a href="{{ section.settings.url_sekundar_link }}" class="button is-secondary w-button"> <span>{{ section.settings.text_sekundar_text }}</span> </a></div></div></div></div></div> {% schema %} {
+    "tag": "section",
+    "name": "B2B No Access",
+    "class": "section_no-access",
+    "settings": [
+        {
+            "id": "text_subline",
+            "type": "text",
+            "label": "Subline",
+            "default": "B2B Area"
+        },
+        {
+            "id": "text_uberschrift",
+            "type": "text",
+            "label": "\u00dcberschrift",
+            "default": "Restricted access"
+        },
+        {
+            "id": "textarea_text",
+            "type": "textarea",
+            "label": "Text",
+            "default": "This page is reserved for registered DICOTA B2B partners. Please log in with your partner account to continue."
+        },
+        {
+            "id": "url_login_link",
+            "type": "url",
+            "label": "Login Link"
+        },
+        {
+            "id": "text_login_text",
+            "type": "text",
+            "label": "Login Text",
+            "default": "Log in"
+        },
+        {
+            "id": "url_sekundar_link",
+            "type": "url",
+            "label": "Sekund\u00e4r Link"
+        },
+        {
+            "id": "text_sekundar_text",
+            "type": "text",
+            "label": "Sekund\u00e4r Text",
+            "default": "Become a partner"
+        },
+        {
+            "type": "header",
+            "content": "Abst\u00e4nde"
+        },
+        {
+            "type": "range",
+            "id": "padding_top",
+            "min": 0,
+            "max": 200,
+            "step": 4,
+            "unit": "px",
+            "label": "Abstand oben",
+            "default": 100
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom",
+            "min": 0,
+            "max": 200,
+            "step": 4,
+            "unit": "px",
+            "label": "Abstand unten",
+            "default": 100
+        },
+        {
+            "type": "header",
+            "content": "Info"
+        },
+        {
+            "type": "paragraph",
+            "content": "Zugriffssperre f\u00fcr B2B-gesch\u00fctzte Seiten: Lock-Icon, \u00dcberschrift, Text und ein Login-CTA (plus optionaler Sekund\u00e4r-Link, z.B. Partner werden). Auf gesperrten Seiten als Inhalt platzieren bzw. per li-if\/li-unless an den Login-Status koppeln. Login-Link auf die B2B-Login-Seite zeigen lassen."
+        }
+    ],
+    "presets": [
+        {
+            "name": "B2B No Access",
+            "category": "_B2B",
+            "blocks": []
+        }
+    ]
+} {% endschema %}
