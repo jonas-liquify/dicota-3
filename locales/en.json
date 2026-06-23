@@ -28,6 +28,12 @@
   "certificates": {
     "intro": "All DICOTA products with a Letter of Conformity (CE) — filtered by SKU or product title."
   },
+  "data_sheets": {
+    "intro": "All DICOTA products with a data sheet — filtered by SKU or product title."
+  },
+  "manuals": {
+    "intro": "All DICOTA products with a product manual — filtered by SKU or product title."
+  },
   "collection": {
     "no_items": "No items found.",
     "no_matches": "There are no products matching these filters.",

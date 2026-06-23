@@ -1,0 +1,46 @@
+{
+  "sections": {
+    "b2b_subnav": {
+      "type": "b2b_subnav",
+      "settings": {}
+    },
+    "b2b_link_hub": {
+      "type": "b2b_link_hub",
+      "blocks": {
+        "b2b_hub_card_1": {
+          "type": "b2b-hub-card",
+          "settings": {}
+        },
+        "b2b_hub_card_2": {
+          "type": "b2b-hub-card",
+          "settings": {}
+        },
+        "b2b_hub_card_3": {
+          "type": "b2b-hub-card",
+          "settings": {}
+        },
+        "b2b_hub_card_4": {
+          "type": "b2b-hub-card",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "b2b_hub_card_1",
+        "b2b_hub_card_2",
+        "b2b_hub_card_3",
+        "b2b_hub_card_4"
+      ],
+      "settings": {
+        "text_breadcrumb": "Services",
+        "text_heading_1": "Everything you need to support your business",
+        "text_heading_2": "Browse our services"
+      }
+    }
+  },
+  "layout": "theme",
+  "wrapper": "main.main-wrapper",
+  "order": [
+    "b2b_subnav",
+    "b2b_link_hub"
+  ]
+}

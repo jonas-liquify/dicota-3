@@ -1,0 +1,21 @@
+{
+  "sections": {
+    "b2b_subnav": {
+      "type": "b2b_subnav",
+      "settings": {}
+    },
+    "b2b_produkt_download": {
+      "type": "b2b_produkt_download",
+      "settings": {
+        "text_heading": "EU declarations",
+        "download_source": "eu_declaration"
+      }
+    }
+  },
+  "layout": "theme",
+  "wrapper": "main.main-wrapper",
+  "order": [
+    "b2b_subnav",
+    "b2b_produkt_download"
+  ]
+}

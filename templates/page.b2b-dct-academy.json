@@ -1,0 +1,45 @@
+{
+  "sections": {
+    "b2b_subnav": {
+      "type": "b2b_subnav",
+      "settings": {}
+    },
+    "b2b_mkt_trainings": {
+      "type": "b2b_mkt_trainings",
+      "settings": {
+        "text_breadcrumb": "DCT Academy",
+        "text_heading": "DCT Academy"
+      }
+    },
+    "b2b_mkt_train_videos": {
+      "type": "b2b_mkt_train_videos",
+      "blocks": {
+        "b2b_mkt_video_1": {
+          "type": "b2b-mkt-video",
+          "settings": {}
+        },
+        "b2b_mkt_video_2": {
+          "type": "b2b-mkt-video",
+          "settings": {}
+        },
+        "b2b_mkt_video_3": {
+          "type": "b2b-mkt-video",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "b2b_mkt_video_1",
+        "b2b_mkt_video_2",
+        "b2b_mkt_video_3"
+      ],
+      "settings": {}
+    }
+  },
+  "layout": "theme",
+  "wrapper": "main.main-wrapper",
+  "order": [
+    "b2b_subnav",
+    "b2b_mkt_trainings",
+    "b2b_mkt_train_videos"
+  ]
+}

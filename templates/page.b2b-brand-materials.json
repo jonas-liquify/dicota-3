@@ -1,0 +1,21 @@
+{
+  "sections": {
+    "b2b_subnav": {
+      "type": "b2b_subnav",
+      "settings": {}
+    },
+    "b2b_mkt_documents": {
+      "type": "b2b_mkt_documents",
+      "settings": {
+        "text_breadcrumb": "Brand Materials",
+        "text_heading": "Brand materials & guidelines"
+      }
+    }
+  },
+  "layout": "theme",
+  "wrapper": "main.main-wrapper",
+  "order": [
+    "b2b_subnav",
+    "b2b_mkt_documents"
+  ]
+}

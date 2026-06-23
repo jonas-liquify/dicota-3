@@ -1,0 +1,35 @@
+{
+  "sections": {
+    "b2b_subnav": {
+      "type": "b2b_subnav",
+      "settings": {}
+    },
+    "b2b_mkt_product_imgs": {
+      "type": "b2b_mkt_product_imgs",
+      "blocks": {
+        "b2b_mkt_download_1": {
+          "type": "b2b-mkt-download",
+          "settings": {}
+        },
+        "b2b_mkt_download_2": {
+          "type": "b2b-mkt-download",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "b2b_mkt_download_1",
+        "b2b_mkt_download_2"
+      ],
+      "settings": {
+        "text_breadcrumb": "Product Images",
+        "text_heading_1": "Product images"
+      }
+    }
+  },
+  "layout": "theme",
+  "wrapper": "main.main-wrapper",
+  "order": [
+    "b2b_subnav",
+    "b2b_mkt_product_imgs"
+  ]
+}

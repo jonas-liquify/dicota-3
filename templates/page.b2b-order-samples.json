@@ -1,0 +1,21 @@
+{
+  "sections": {
+    "b2b_subnav": {
+      "type": "b2b_subnav",
+      "settings": {}
+    },
+    "b2b_order_samples": {
+      "type": "b2b_order_samples",
+      "settings": {
+        "text_breadcrumb": "Order samples",
+        "text_heading": "Order free samples"
+      }
+    }
+  },
+  "layout": "theme",
+  "wrapper": "main.main-wrapper",
+  "order": [
+    "b2b_subnav",
+    "b2b_order_samples"
+  ]
+}

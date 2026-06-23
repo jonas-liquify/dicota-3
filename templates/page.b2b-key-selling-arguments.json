@@ -1,0 +1,44 @@
+{
+  "sections": {
+    "b2b_subnav": {
+      "type": "b2b_subnav",
+      "settings": {}
+    },
+    "b2b_key_selling_argu": {
+      "type": "b2b_key_selling_argu",
+      "blocks": {
+        "argument_1": {
+          "type": "argument",
+          "settings": {}
+        },
+        "argument_2": {
+          "type": "argument",
+          "settings": {}
+        },
+        "argument_3": {
+          "type": "argument",
+          "settings": {}
+        },
+        "argument_4": {
+          "type": "argument",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "argument_1",
+        "argument_2",
+        "argument_3",
+        "argument_4"
+      ],
+      "settings": {
+        "text_heading": "Why DICOTA — key selling arguments"
+      }
+    }
+  },
+  "layout": "theme",
+  "wrapper": "main.main-wrapper",
+  "order": [
+    "b2b_subnav",
+    "b2b_key_selling_argu"
+  ]
+}

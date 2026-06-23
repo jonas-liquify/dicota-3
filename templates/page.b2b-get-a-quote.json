@@ -1,0 +1,20 @@
+{
+  "sections": {
+    "b2b_subnav": {
+      "type": "b2b_subnav",
+      "settings": {}
+    },
+    "b2b_sales_volume_pri": {
+      "type": "b2b_sales_volume_pri",
+      "settings": {
+        "text_heading": "Request volume pricing"
+      }
+    }
+  },
+  "layout": "theme",
+  "wrapper": "main.main-wrapper",
+  "order": [
+    "b2b_subnav",
+    "b2b_sales_volume_pri"
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "sections": {
+    "b2b_subnav": {
+      "type": "b2b_subnav",
+      "settings": {}
+    },
+    "b2b_hub": {
+      "type": "b2b_hub",
+      "blocks": {
+        "b2b_quicklink_1": {
+          "type": "b2b-quicklink",
+          "settings": {}
+        },
+        "b2b_quicklink_2": {
+          "type": "b2b-quicklink",
+          "settings": {}
+        },
+        "b2b_quicklink_3": {
+          "type": "b2b-quicklink",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "b2b_quicklink_1",
+        "b2b_quicklink_2",
+        "b2b_quicklink_3"
+      ],
+      "settings": {
+        "text_aktueller_bereich": "Project Request",
+        "text_heading_1": "Start your project request",
+        "text_heading_2": "Quick access"
+      }
+    }
+  },
+  "layout": "theme",
+  "wrapper": "main.main-wrapper",
+  "order": [
+    "b2b_subnav",
+    "b2b_hub"
+  ]
+}

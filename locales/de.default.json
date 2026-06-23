@@ -28,6 +28,12 @@
   "certificates": {
     "intro": "Alle DICOTA-Produkte mit Konformitätserklärung (CE) — gefiltert nach SKU oder Produkttitel."
   },
+  "data_sheets": {
+    "intro": "Alle DICOTA-Produkte mit Datenblatt — gefiltert nach SKU oder Produkttitel."
+  },
+  "manuals": {
+    "intro": "Alle DICOTA-Produkte mit Bedienungsanleitung — gefiltert nach SKU oder Produkttitel."
+  },
   "collection": {
     "no_items": "Keine Artikel gefunden.",
     "no_matches": "Es gibt keine Produkte, die diesen Filtern entsprechen.",

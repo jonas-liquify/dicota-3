@@ -1,0 +1,62 @@
+{
+  "sections": {
+    "b2b_subnav": {
+      "type": "b2b_subnav",
+      "settings": {}
+    },
+    "b2b_solution": {
+      "type": "b2b_solution",
+      "blocks": {
+        "b2b_sol_capability_1": {
+          "type": "b2b-sol-capability",
+          "settings": {}
+        },
+        "b2b_sol_capability_2": {
+          "type": "b2b-sol-capability",
+          "settings": {}
+        },
+        "b2b_sol_capability_3": {
+          "type": "b2b-sol-capability",
+          "settings": {}
+        },
+        "b2b_sol_referenz_1": {
+          "type": "b2b-sol-referenz",
+          "settings": {}
+        },
+        "b2b_sol_referenz_2": {
+          "type": "b2b-sol-referenz",
+          "settings": {}
+        },
+        "b2b_sol_referenz_3": {
+          "type": "b2b-sol-referenz",
+          "settings": {}
+        },
+        "b2b_sol_referenz_4": {
+          "type": "b2b-sol-referenz",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "b2b_sol_capability_1",
+        "b2b_sol_capability_2",
+        "b2b_sol_capability_3",
+        "b2b_sol_referenz_1",
+        "b2b_sol_referenz_2",
+        "b2b_sol_referenz_3",
+        "b2b_sol_referenz_4"
+      ],
+      "settings": {
+        "text_breadcrumb": "Tailored Solutions",
+        "text_heading_1": "Tailored Solutions",
+        "text_facts_heading": "What we can tailor",
+        "text_cta_heading": "Let's build it together"
+      }
+    }
+  },
+  "layout": "theme",
+  "wrapper": "main.main-wrapper",
+  "order": [
+    "b2b_subnav",
+    "b2b_solution"
+  ]
+}

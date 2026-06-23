@@ -1,0 +1,44 @@
+{
+  "sections": {
+    "b2b_subnav": {
+      "type": "b2b_subnav",
+      "settings": {}
+    },
+    "b2b_wiki": {
+      "type": "b2b_wiki",
+      "blocks": {
+        "wiki_eintrag_1": {
+          "type": "wiki-eintrag",
+          "settings": {}
+        },
+        "wiki_eintrag_2": {
+          "type": "wiki-eintrag",
+          "settings": {}
+        },
+        "wiki_eintrag_3": {
+          "type": "wiki-eintrag",
+          "settings": {}
+        },
+        "wiki_eintrag_4": {
+          "type": "wiki-eintrag",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "wiki_eintrag_1",
+        "wiki_eintrag_2",
+        "wiki_eintrag_3",
+        "wiki_eintrag_4"
+      ],
+      "settings": {
+        "text_heading": "DICOTA Wiki"
+      }
+    }
+  },
+  "layout": "theme",
+  "wrapper": "main.main-wrapper",
+  "order": [
+    "b2b_subnav",
+    "b2b_wiki"
+  ]
+}

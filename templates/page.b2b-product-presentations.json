@@ -1,0 +1,32 @@
+{
+  "sections": {
+    "b2b_subnav": {
+      "type": "b2b_subnav",
+      "settings": {}
+    },
+    "b2b_mkt_presentation": {
+      "type": "b2b_mkt_presentation",
+      "blocks": {
+        "produkt_kategorie_1": {
+          "type": "produkt-kategorie",
+          "settings": {}
+        },
+        "produkt_kategorie_2": {
+          "type": "produkt-kategorie",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "produkt_kategorie_1",
+        "produkt_kategorie_2"
+      ],
+      "settings": {}
+    }
+  },
+  "layout": "theme",
+  "wrapper": "main.main-wrapper",
+  "order": [
+    "b2b_subnav",
+    "b2b_mkt_presentation"
+  ]
+}
