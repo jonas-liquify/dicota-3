@@ -11,11 +11,20 @@
   "sections": {
     "two_column_hero": {
       "type": "two_column_hero",
-      "settings": {}
+      "settings": {
+        "text_heading": "About us",
+        "textarea_text": "We design products that make everyday life safer, simpler and more sustainable for mobile professionals — engineered in Switzerland for over 30 years.",
+        "url_button_link": "",
+        "text_button_text": "Learn more",
+        "padding_top": 80,
+        "padding_bottom": 40
+      }
     },
     "boxed_image": {
       "type": "boxed_image",
-      "settings": {}
+      "settings": {
+        "layout": "full"
+      }
     },
     "feature_card_grid": {
       "type": "feature_card_grid",
@@ -29,7 +38,13 @@
             "feature-karte": {
               "type": "feature-karte",
               "name": "Feature Karte",
-              "settings": {}
+              "settings": {
+                "text_heading": "Swiss quality",
+                "textarea_text": "Designed and tested in Switzerland to meet the highest standards.",
+                "url_button_link": "",
+                "text_button_text": "Learn more"
+              },
+              "blocks": {}
             }
           },
           "block_order": [
@@ -45,7 +60,11 @@
             "stats-block": {
               "type": "stats-block",
               "name": "Stats Block",
-              "settings": {}
+              "settings": {
+                "text_zahl": "14.2M",
+                "text_label": "Recycled PET bottles"
+              },
+              "blocks": {}
             }
           },
           "block_order": [
@@ -53,7 +72,15 @@
           ]
         }
       },
-      "settings": {}
+      "settings": {
+        "text_subline": "Why DICOTA",
+        "text_heading": "More than just products",
+        "textarea_text": "We combine Swiss quality, thoughtful design and sustainability in every detail.",
+        "url_button_link": "",
+        "text_button_text": "Our values",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
     },
     "history_timeline": {
       "type": "history_timeline",
@@ -61,13 +88,25 @@
         "meilenstein": {
           "type": "meilenstein",
           "name": "Meilenstein",
-          "settings": {}
+          "settings": {
+            "text_slide_heading": "Founding",
+            "textarea_slide_text": "Founded in Switzerland with a vision to better equip mobile professionals.",
+            "text_slide_year": "1992"
+          },
+          "blocks": {}
         }
       },
       "block_order": [
         "meilenstein"
       ],
-      "settings": {}
+      "settings": {
+        "text_subline": "Our history",
+        "text_heading": "From 1992 to today",
+        "text_start_year": "1992",
+        "text_end_year": "2026",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
     },
     "owner_spotlight": {
       "type": "owner_spotlight",
@@ -75,17 +114,31 @@
         "zitat": {
           "type": "zitat",
           "name": "Zitat",
-          "settings": {}
+          "settings": {
+            "text_block_heading": "\"We think in generations, not in quarters.\"",
+            "text_block_text": "— Management"
+          },
+          "blocks": {}
         }
       },
       "block_order": [
         "zitat"
       ],
-      "settings": {}
+      "settings": {
+        "text_heading": "Owner-led from day one",
+        "textarea_text": "Our ownership structure guarantees long-term decisions, accountability and a personal connection with our partners.",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
     },
     "discover_banner": {
       "type": "discover_banner",
-      "settings": {}
+      "settings": {
+        "text_heading": "One for all. All for you.",
+        "textarea_text": "People make the real difference. Top performance comes only from motivated and reliable colleagues. That's what we live by at DICOTA.",
+        "url_button_link": "",
+        "text_button_text": "Discover now"
+      }
     },
     "triple_cards": {
       "type": "triple_cards",
@@ -93,13 +146,24 @@
         "karte": {
           "type": "karte",
           "name": "Karte",
-          "settings": {}
+          "settings": {
+            "url_card_link": "",
+            "text_card_heading": "Sustainability",
+            "text_card_button_text": "Learn more"
+          },
+          "blocks": {}
         }
       },
       "block_order": [
         "karte"
       ],
-      "settings": {}
+      "settings": {
+        "text_heading": "Discover our world",
+        "url_button_link": "",
+        "text_button_text": "View all",
+        "padding_top": 120,
+        "padding_bottom": 120
+      }
     }
   },
   "layout": "theme",

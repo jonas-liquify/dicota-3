@@ -79,12 +79,51 @@
         "text_info_heading": "Folgende Informationen sind enthalten:",
         "richtext_info_text": "<p>Artikel-Nr. · Vorgängermodell · EAN-Code · Verfügbarkeit · Konstruktionstyp · Farbe</p>"
       }
+    },
+    "b2b_sales_product_li_9KbAi6": {
+      "type": "b2b_sales_product_li",
+      "blocks": {
+        "b2b_sales_download_UJHxwX": {
+          "type": "b2b-sales-download",
+          "name": "B2B Sales Download",
+          "settings": {
+            "url_download_link": "",
+            "text_heading": "Product Range Q2 2026",
+            "text_subheading": "XLSX · 1.2 MB"
+          },
+          "blocks": {}
+        },
+        "b2b_sales_download_CEM4tt": {
+          "type": "b2b-sales-download",
+          "settings": {
+            "url_download_link": "",
+            "text_heading": "Product Range Q2 2026",
+            "text_subheading": "CSV · 1.2 MB"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "b2b_sales_download_UJHxwX",
+        "b2b_sales_download_CEM4tt"
+      ],
+      "name": "B2B Sales Product Li",
+      "settings": {
+        "text_breadcrumb": "",
+        "text_heading": "Product List",
+        "textarea_subheading": "Current product range as a download — all items with prices and availability.",
+        "text_liste_heading": "Product range",
+        "text_liste_subheading": "Last updated: this morning.",
+        "text_info_heading": "The following information is included:",
+        "richtext_info_text": "<p>Item no. · Predecessor model · EAN code · Availability · Price tiers · Construction type · Color</p>"
+      }
     }
   },
   "layout": "theme",
   "wrapper": "main.main-wrapper",
   "order": [
     "b2b_subnav",
-    "b2b_mkt_product_imgs"
+    "b2b_mkt_product_imgs",
+    "b2b_sales_product_li_9KbAi6"
   ]
 }
