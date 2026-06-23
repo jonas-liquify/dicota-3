@@ -2,7 +2,7 @@
 {{ section.settings.text_breadcrumb }}
 </div></li></ul><div class="default-flex-tiny"><h1 class="heading-style-h2">
 {{ section.settings.text_heading }}
-</h1><div class="text-size-medium max-width-large"> {{ section.settings.textarea_subheading }} </div></div><div x-data="{step: 1}" class="multi-form_component"><div class="multi-form_block w-form"><form name="volumenpreise" data-name="Volumenpreise" method="get" class="multi-form_form"><div class="multi-form_step"><div class="multi-form_heading"><h2 class="heading-style-h4">
+</h1><div class="text-size-medium max-width-large"> {{ section.settings.textarea_subheading }} </div></div><div class="multi-form_component" x-data="{ step:1, submitted:false, loading:false, products:[], pq:'', pr:[], pl:false, next(){ if(this.step<4) this.step++ }, prev(){ if(this.step>1) this.step-- }, async search(){ var q=this.pq.trim(); if(q.length<2){ this.pr=[]; return } this.pl=true; try{ var r=await fetch('/search/suggest.json?q='+encodeURIComponent(q)+'&resources[type]=product&resources[limit]=6',{headers:{Accept:'application/json'}}); var d=await r.json(); this.pr=(((d.resources||{}).results)||{}).products||[] }catch(e){} this.pl=false }, add(p){ this.products.push({ title:p.title, sku:(p.sku||''), qty:1 }); this.pq=''; this.pr=[] }, rm(i){ this.products.splice(i,1) }, async submit(){ this.loading=true; var f=this.$root.querySelector('form'); var fd=new FormData(f); var data={}; fd.forEach(function(v,k){ data[k]=v }); data.products=this.products; data.account_email=this.$root.dataset.accountEmail; var hook=this.$root.dataset.hook; try{ if(hook){ var resp=await fetch(hook,{ method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(data) }); if(!resp.ok) throw new Error('bad response') } this.submitted=true }catch(e){ console.error('Quote submit error:', e) } this.loading=false }, reset(){ this.submitted=false; this.step=1; this.products=[]; this.pq=''; this.pr=[] } }" data-hook="{{ section.settings.url_request_hook }}" data-account-email="{{ customer.email }}"><div class="multi-form_block w-form"><form name="volumenpreise" data-name="Volumenpreise" method="post" class="multi-form_form" x-on:submit.prevent="submit()" x-show="!submitted"><div class="multi-form_step"><div class="multi-form_heading"><h2 class="heading-style-h4">
 {{ section.settings.text_form_heading }}
 </h2><div class="multi-form_progress-wrapper"><div class="multi-form_progress-item" x-bind:class="step >= 1 ? '' : 'multi-form_progress-disabled'"><div class="multi-form_progress" x-bind:class="step === 1 ? 'multi-form_progress-current' : step > 1 ? 'completed' : ''"><div>1</div></div><div>
 {{ section.settings.text_step_1_label }}
@@ -12,7 +12,65 @@
 {{ section.settings.text_step_3_label }}
 </div></div><div class="multi-form_progress-item" x-bind:class="step >= 4 ? '' : 'multi-form_progress-disabled'"><div class="multi-form_progress" x-bind:class="step === 4 ? 'multi-form_progress-current' : ''"><div>4</div></div><div>
 {{ section.settings.text_step_4_label }}
-</div></div></div></div><div class="multi-form_form-content"><div li-object="'reseller.form.heading' | t" class="text-size-medium text-weight-medium">{{ 'reseller.form.heading' | t }}</div><div class="multi-form_triple"><div class="form_field-wrapper"><input class="form_input w-input" maxlength="256" name="contact[name]" placeholder=" " type="text" id="ansprechpartner" required=""><label li-object="'reseller.form.contact_person' | t" for="ansprechpartner" class="form_label">{{ 'reseller.form.contact_person' | t }}</label></div><div class="form_field-wrapper"><input class="form_input w-input" maxlength="256" name="contact[email]" placeholder=" " type="email" id="email" required=""><label li-object="'reseller.form.email' | t" for="email" class="form_label">{{ 'reseller.form.email' | t }}</label></div><div class="form_field-wrapper"><input class="form_input w-input" maxlength="256" name="contact[phone]" placeholder=" " type="tel" id="telefon"><label li-object="'reseller.form.phone' | t" for="telefon" class="form_label">{{ 'reseller.form.phone' | t }}</label></div></div><div class="multi-form_button-group"><button li-object="'general.back' | t" type="button" x-on:click="step = step > 1 ? step - 1 : 1" x-show="step > 1" class="button is-secondary w-button">{{ 'general.back' | t }}</button><button li-object="'general.next' | t" type="button" x-on:click="step = step < 4 ? step + 1 : 4" x-show="step < 4" class="button w-button">{{ 'general.next' | t }}</button><button li-object="'general.submit' | t" type="submit" x-show="step === 4" class="button w-button">{{ 'general.submit' | t }}</button></div></div></div></form></div></div></div></div></div></div> {% schema %} {
+</div></div></div></div><div class="multi-form_form-content" x-show="step === 1"><div li-object="'reseller.form.heading' | t" class="text-size-medium text-weight-medium">{{ 'reseller.form.heading' | t }}</div><div class="multi-form_triple"><div class="form_field-wrapper"><input class="form_input w-input" maxlength="256" name="reseller_name" placeholder=" " type="text" id="reseller_name" required="" value="{{ customer.name | escape }}"><label li-object="'reseller.form.contact_person' | t" for="reseller_name" class="form_label">{{ 'reseller.form.contact_person' | t }}</label></div><div class="form_field-wrapper"><input class="form_input w-input" maxlength="256" name="reseller_email" placeholder=" " type="email" id="reseller_email" required="" value="{{ customer.email }}"><label li-object="'reseller.form.email' | t" for="reseller_email" class="form_label">{{ 'reseller.form.email' | t }}</label></div><div class="form_field-wrapper"><input class="form_input w-input" maxlength="256" name="reseller_phone" placeholder=" " type="tel" id="reseller_phone" value="{{ customer.default_address.phone | default: customer.phone | escape }}"><label li-object="'reseller.form.phone' | t" for="reseller_phone" class="form_label">{{ 'reseller.form.phone' | t }}</label></div></div></div><div class="multi-form_form-content" x-show="step === 2" x-cloak=""><div class="text-size-medium text-weight-medium">
+{{ section.settings.text_step_2_heading }}
+</div><div class="multi-form_triple"><div class="form_field-wrapper"><label for="offer_type" class="form_label is-static">
+{{ section.settings.text_offer_type_label }}
+</label><select name="offer_type" id="offer_type" class="form_input form_select w-select"><option value="">—</option><option value="public_tender">
+{{ section.settings.text_offer_type_option_1 }}
+</option><option value="project">
+{{ section.settings.text_offer_type_option_2 }}
+</option><option value="own_use">
+{{ section.settings.text_offer_type_option_3 }}
+</option></select></div><div class="form_field-wrapper"><input class="form_input w-input" maxlength="256" name="offer_value" placeholder=" " type="text" id="offer_value"><label for="offer_value" class="form_label">
+{{ section.settings.text_offer_value_label }}
+</label></div></div><div class="text-size-medium text-weight-medium multi-form_subheading">
+{{ section.settings.text_products_label }}
+</div><div class="multi-form_product-search"><div class="form_field-wrapper"><input class="form_input w-input" type="text" id="product_search" placeholder=" " autocomplete="off" x-model="pq" x-on:input.debounce.300ms="search()"><label for="product_search" class="form_label">
+{{ section.settings.text_product_search_label }}
+</label></div><ul role="list" class="multi-form_product-results w-list-unstyled" x-show="pr.length > 0" x-cloak=""><template x-for="p in pr" :key="p.id"></template></ul></div><ul role="list" class="multi-form_product-list w-list-unstyled"><template x-for="(item, i) in products" :key="i"></template><li class="multi-form_product-empty" x-show="products.length === 0">
+{{ section.settings.text_no_products_text }}
+</li></ul></div><div class="multi-form_form-content" x-show="step === 3" x-cloak=""><div class="text-size-medium text-weight-medium">
+{{ section.settings.text_step_3_heading }}
+</div><div class="multi-form_subheading text-weight-medium">
+{{ section.settings.text_billing_address_label }}
+</div><div class="multi-form_double"><div class="form_field-wrapper"><input class="form_input w-input" name="billing_company" placeholder=" " type="text" id="billing_company" value="{{ customer.default_address.company | escape }}"><label for="billing_company" class="form_label">
+{{ section.settings.text_company_label }}
+</label></div><div class="form_field-wrapper"><input class="form_input w-input" name="billing_name" placeholder=" " type="text" id="billing_name" value="{{ customer.default_address.name | escape }}"><label for="billing_name" class="form_label">
+{{ section.settings.text_name_label }}
+</label></div><div class="form_field-wrapper"><input class="form_input w-input" name="billing_street" placeholder=" " type="text" id="billing_street" value="{{ customer.default_address.address1 | escape }}"><label for="billing_street" class="form_label">
+{{ section.settings.text_street_label }}
+</label></div><div class="form_field-wrapper"><input class="form_input w-input" name="billing_zip" placeholder=" " type="text" id="billing_zip" value="{{ customer.default_address.zip | escape }}"><label for="billing_zip" class="form_label">
+{{ section.settings.text_zip_label }}
+</label></div><div class="form_field-wrapper"><input class="form_input w-input" name="billing_city" placeholder=" " type="text" id="billing_city" value="{{ customer.default_address.city | escape }}"><label for="billing_city" class="form_label">
+{{ section.settings.text_city_label }}
+</label></div><div class="form_field-wrapper"><input class="form_input w-input" name="billing_country" placeholder=" " type="text" id="billing_country" value="{{ customer.default_address.country | escape }}"><label for="billing_country" class="form_label">
+{{ section.settings.text_country_label }}
+</label></div></div><div class="multi-form_subheading text-weight-medium">
+{{ section.settings.text_shipping_address_label }}
+</div><div class="multi-form_double"><div class="form_field-wrapper"><input class="form_input w-input" name="shipping_company" placeholder=" " type="text" id="shipping_company"><label for="shipping_company" class="form_label">
+{{ section.settings.text_company_label }}
+</label></div><div class="form_field-wrapper"><input class="form_input w-input" name="shipping_name" placeholder=" " type="text" id="shipping_name"><label for="shipping_name" class="form_label">
+{{ section.settings.text_name_label }}
+</label></div><div class="form_field-wrapper"><input class="form_input w-input" name="shipping_street" placeholder=" " type="text" id="shipping_street"><label for="shipping_street" class="form_label">
+{{ section.settings.text_street_label }}
+</label></div><div class="form_field-wrapper"><input class="form_input w-input" name="shipping_zip" placeholder=" " type="text" id="shipping_zip"><label for="shipping_zip" class="form_label">
+{{ section.settings.text_zip_label }}
+</label></div><div class="form_field-wrapper"><input class="form_input w-input" name="shipping_city" placeholder=" " type="text" id="shipping_city"><label for="shipping_city" class="form_label">
+{{ section.settings.text_city_label }}
+</label></div><div class="form_field-wrapper"><input class="form_input w-input" name="shipping_country" placeholder=" " type="text" id="shipping_country"><label for="shipping_country" class="form_label">
+{{ section.settings.text_country_label }}
+</label></div></div></div><div class="multi-form_form-content" x-show="step === 4" x-cloak=""><div class="text-size-medium text-weight-medium">
+{{ section.settings.text_step_4_heading }}
+</div><div class="form_field-wrapper"><textarea name="notes" id="notes" class="form_input form_textarea w-input" maxlength="5000" placeholder=" "></textarea><label for="notes" class="form_label">
+{{ section.settings.text_notes_label }}
+</label></div></div><div class="multi-form_button-group"><button li-object="'general.back' | t" type="button" x-on:click="prev()" x-show="step > 1" class="button is-secondary w-button">{{ 'general.back' | t }}</button><button li-object="'general.next' | t" type="button" x-on:click="next()" x-show="step < 4" class="button w-button">{{ 'general.next' | t }}</button><button type="submit" x-show="step === 4" x-bind:disabled="loading" class="button w-button"><span x-show="!loading" li-object="'general.submit' | t">{{ 'general.submit' | t }}</span><span x-show="loading" x-cloak="">
+{{ section.settings.text_submitting_text }}
+</span></button></div></div></form><div class="multi-form_success" x-show="submitted" x-cloak=""><div class="multi-form_success-icon w-embed"><svg width="40" height="40" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="11" stroke="currentColor" stroke-width="1.5"></circle><path d="M7.5 12.5L10.5 15.5L16.5 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></div><h2 class="heading-style-h4">
+{{ section.settings.text_success_heading }}
+</h2><div class="text-size-medium max-width-medium"> {{ section.settings.textarea_success_text }} </div><button type="button" x-on:click="reset()" class="button w-button">
+{{ section.settings.text_restart_button }}
+</button></div></div></div></div></div></div></div> {% schema %} {
     "tag": "section",
     "name": "B2B Sales Volume Pri",
     "class": "section_acc-default",
@@ -21,19 +79,19 @@
             "id": "text_breadcrumb",
             "type": "text",
             "label": "Breadcrumb",
-            "default": "Volume Pricing"
+            "default": "Volume pricing"
         },
         {
             "id": "text_heading",
             "type": "text",
             "label": "Heading",
-            "default": "Request Volume Pricing"
+            "default": "Request volume pricing"
         },
         {
             "id": "textarea_subheading",
             "type": "textarea",
             "label": "Subheading",
-            "default": "Request an individual quote in four steps: reseller details, distributor, end customer and your notes."
+            "default": "Request a custom quote in four steps: reseller details, distributor, end customer and your notes."
         },
         {
             "id": "text_form_heading",
@@ -64,6 +122,159 @@
             "type": "text",
             "label": "Step 4 Label",
             "default": "Notes"
+        },
+        {
+            "id": "text_step_2_heading",
+            "type": "text",
+            "label": "Step 2 Heading",
+            "default": "Enter offer details"
+        },
+        {
+            "id": "text_offer_type_label",
+            "type": "text",
+            "label": "Offer Type Label",
+            "default": "Offer type"
+        },
+        {
+            "id": "text_offer_type_option_1",
+            "type": "text",
+            "label": "Offer Type Option 1",
+            "default": "Public tender"
+        },
+        {
+            "id": "text_offer_type_option_2",
+            "type": "text",
+            "label": "Offer Type Option 2",
+            "default": "Project business"
+        },
+        {
+            "id": "text_offer_type_option_3",
+            "type": "text",
+            "label": "Offer Type Option 3",
+            "default": "Own use"
+        },
+        {
+            "id": "text_offer_value_label",
+            "type": "text",
+            "label": "Offer Value Label",
+            "default": "Estimated order value"
+        },
+        {
+            "id": "text_products_label",
+            "type": "text",
+            "label": "Products Label",
+            "default": "Select products"
+        },
+        {
+            "id": "text_product_search_label",
+            "type": "text",
+            "label": "Product Search Label",
+            "default": "Search products to add"
+        },
+        {
+            "id": "text_no_products_text",
+            "type": "text",
+            "label": "No Products Text",
+            "default": "No products added yet."
+        },
+        {
+            "id": "text_step_3_heading",
+            "type": "text",
+            "label": "Step 3 Heading",
+            "default": "End customer (if available)"
+        },
+        {
+            "id": "text_billing_address_label",
+            "type": "text",
+            "label": "Billing Address Label",
+            "default": "Billing address"
+        },
+        {
+            "id": "text_company_label",
+            "type": "text",
+            "label": "Company Label",
+            "default": "Company"
+        },
+        {
+            "id": "text_name_label",
+            "type": "text",
+            "label": "Name Label",
+            "default": "Name"
+        },
+        {
+            "id": "text_street_label",
+            "type": "text",
+            "label": "Street Label",
+            "default": "Street"
+        },
+        {
+            "id": "text_zip_label",
+            "type": "text",
+            "label": "Zip Label",
+            "default": "Postal code"
+        },
+        {
+            "id": "text_city_label",
+            "type": "text",
+            "label": "City Label",
+            "default": "City"
+        },
+        {
+            "id": "text_country_label",
+            "type": "text",
+            "label": "Country Label",
+            "default": "Country"
+        },
+        {
+            "id": "text_shipping_address_label",
+            "type": "text",
+            "label": "Shipping Address Label",
+            "default": "Shipping address"
+        },
+        {
+            "id": "text_step_4_heading",
+            "type": "text",
+            "label": "Step 4 Heading",
+            "default": "Your notes"
+        },
+        {
+            "id": "text_notes_label",
+            "type": "text",
+            "label": "Notes Label",
+            "default": "Notes"
+        },
+        {
+            "id": "text_submitting_text",
+            "type": "text",
+            "label": "Submitting Text",
+            "default": "Submitting\u2026"
+        },
+        {
+            "id": "text_success_heading",
+            "type": "text",
+            "label": "Success Heading",
+            "default": "Your request has been submitted"
+        },
+        {
+            "id": "textarea_success_text",
+            "type": "textarea",
+            "label": "Success Text",
+            "default": "Thank you. Our sales team will get back to you shortly. You can review your requested quotes under \"My online orders\"."
+        },
+        {
+            "id": "text_restart_button",
+            "type": "text",
+            "label": "Restart Button",
+            "default": "Back to start"
+        },
+        {
+            "type": "header",
+            "content": "Anfrage"
+        },
+        {
+            "type": "url",
+            "id": "url_request_hook",
+            "label": "Anfrage-Webhook (Make) \u2013 Mail an insidesales + Sales Team"
         }
     ],
     "presets": [
