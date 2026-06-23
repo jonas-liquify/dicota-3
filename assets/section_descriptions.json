@@ -31,6 +31,7 @@
   "B2B Mkt Trainings": "Marketing: Trainings/Schulungen. (B2B-Portal)",
   "B2B News Highlight": "Hervorgehobene News. (B2B-Portal)",
   "B2B News Updates": "News-Updates-Liste. (B2B-Portal)",
+  "B2B No Access": "Zugriffssperre für B2B-geschützte Seiten: Lock-Icon, Überschrift, Text und ein Login-CTA (plus optionaler Sekundär-Link, z.B. Partner werden). Auf gesperrten Seiten als Inhalt platzieren bzw. per li-if/li-unless an den Login-Status koppeln. Login-Link auf die B2B-Login-Seite zeigen lassen.",
   "B2B Order Samples": "B2B: Muster-Bestellformular — Produktsuche, vorausgefüllte Lieferadresse aus customer.*, Webhook-Submit, keine Preise.",
   "B2B Produkt-Downloads": "B2B-Service: durchsuchbare Produktliste (SKU/Titel) mit Download je Produkt; Quelle wählbar (Datenblatt/Manual/CE) über Setting.",
   "B2B Sales Product List": "Sales: Produktliste/Sortiment (Download). (B2B-Portal)",
