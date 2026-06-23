@@ -1,0 +1,51 @@
+<div li-block="Acc D Banner" class="acc_banner-item" {{ block.shopify_attributes }}>
+                    {% if block.settings.image_bild %}
+{{ block.settings.image_bild | image_url: width: 400 | image_tag: loading: 'lazy', class: 'acc_banner-image is-medium' }}
+{% else %}
+<img src="{{ 'platzhalter.svg' | asset_url }}" loading="lazy" alt="" class="acc_banner-image is-medium">
+{% endif %}
+                    <div class="acc_banner-content"><div class="text-style-subline">
+{{ block.settings.text_tag }}
+</div><h3 class="text-size-large">
+{{ block.settings.text_heading }}
+</h3><a href="{{ block.settings.url_button_link }}" class="text-size-small text-weight-medium text-style-link"> <span>{{ block.settings.text_button_text }}</span> </a></div>
+                </div> {% schema %} {
+    "name": "Acc D Banner",
+    "settings": [
+        {
+            "id": "image_bild",
+            "type": "image_picker",
+            "label": "Bild"
+        },
+        {
+            "id": "text_tag",
+            "type": "text",
+            "label": "Tag",
+            "default": "Tag"
+        },
+        {
+            "id": "text_heading",
+            "type": "text",
+            "label": "Heading",
+            "default": "Double banner title"
+        },
+        {
+            "id": "url_button_link",
+            "type": "url",
+            "label": "Button Link"
+        },
+        {
+            "id": "text_button_text",
+            "type": "text",
+            "label": "Button Text",
+            "default": "Read more \u2192"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Acc D Banner",
+            "blocks": []
+        }
+    ],
+    "tag": null
+} {% endschema %}

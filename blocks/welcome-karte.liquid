@@ -1,0 +1,38 @@
+<div li-block="Welcome Karte" class="acc-card is-small" {{ block.shopify_attributes }}>
+                    {% if block.settings.image_bild %}
+{{ block.settings.image_bild | image_url: width: 800 | image_tag: loading: 'lazy', class: 'acc-card_16-9-image' }}
+{% else %}
+<img src="{{ 'platzhalter.svg' | asset_url }}" loading="lazy" alt="" class="acc-card_16-9-image">
+{% endif %}
+                    <div class="acc-card_content"><div class="text-size-large">
+{{ block.settings.text_heading }}
+</div><div class="text-size-regular"> {{ block.settings.textarea_text }} </div></div>
+                </div> {% schema %} {
+    "name": "Welcome Karte",
+    "settings": [
+        {
+            "id": "image_bild",
+            "type": "image_picker",
+            "label": "Bild"
+        },
+        {
+            "id": "text_heading",
+            "type": "text",
+            "label": "Heading",
+            "default": "Quick link"
+        },
+        {
+            "id": "textarea_text",
+            "type": "textarea",
+            "label": "Text",
+            "default": "Jump straight to the most important feature of your area."
+        }
+    ],
+    "presets": [
+        {
+            "name": "Welcome Karte",
+            "blocks": []
+        }
+    ],
+    "tag": null
+} {% endschema %}

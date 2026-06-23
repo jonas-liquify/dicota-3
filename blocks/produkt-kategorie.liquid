@@ -1,0 +1,37 @@
+<div li-block="Produkt Kategorie" class="presentations_category" {{ block.shopify_attributes }}>
+                    <h2 class="presentations_category-title heading-style-h5">
+{{ block.settings.text_kategorie_name }}
+</h2>
+                    <div li-cf-theme-blocks="" class="presentations_list">
+{% content_for 'blocks' %}
+</div>
+                </div> {% schema %} {
+    "name": "Produkt Kategorie",
+    "blocks": [
+        {
+            "type": "prasentation"
+        },
+        {
+            "type": "@app"
+        }
+    ],
+    "settings": [
+        {
+            "id": "text_kategorie_name",
+            "type": "text",
+            "label": "Kategorie Name",
+            "default": "Category"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Produkt Kategorie",
+            "blocks": [
+                {
+                    "type": "prasentation"
+                }
+            ]
+        }
+    ],
+    "tag": null
+} {% endschema %}

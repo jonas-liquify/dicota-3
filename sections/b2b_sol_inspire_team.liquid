@@ -1,0 +1,216 @@
+<div class="padding-global padding-section-small" style="padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px;"><div class="container-large"><div class="acc-default_wrapper"><div class="acc-default_flex-small"><ul role="list" class="breadcrumbs_component w-list-unstyled"><li class="breadcrumbs_item"><a li-object:href="routes.root_url" href="{{ routes.root_url }}" class="w-inline-block"><div li-object="'general.home' | t" class="text-size-regular">{{ 'general.home' | t }}</div></a><div class="breadcrumbs_icon w-embed"><svg width="15" height="15" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="1.5" fill="none"></path></svg></div></li>{% if section.settings.breadcrumb_parent_label != blank %}    <li li-if="section.settings.breadcrumb_parent_label != blank" class="breadcrumbs_item">
+    <a href="{{ section.settings.url_breadcrumb_parent_link }}" class="w-inline-block"> <div class="text-size-regular">{{ section.settings.text_breadcrumb_parent_label }}</div> </a><div class="breadcrumbs_icon w-embed"><svg width="15" height="15" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="1.5" fill="none"></path></svg></div>    </li>
+{% endif %}<li class="breadcrumbs_item"><div>
+{{ section.settings.text_breadcrumb }}
+</div></li></ul><div class="default-flex-tiny"><div class="text-style-subline">
+{{ section.settings.text_subline }}
+</div><h1 class="heading-style-h2">
+{{ section.settings.text_heading_1 }}
+</h1><div class="text-size-medium max-width-large"> {{ section.settings.textarea_subheading_1 }} </div></div><div class="button-group margin-top margin-small"><a href="{{ section.settings.url_hero_button_link }}" class="button w-button"> <span>{{ section.settings.text_hero_button_text }}</span> </a></div></div><div class="sol-feature"><div class="sol-feature_media">{% if section.settings.image_feature_bild %}
+{{ section.settings.image_feature_bild | image_url: width: 1200 | image_tag: loading: 'lazy', class: 'sol-feature_image' }}
+{% else %}
+<img src="{{ 'platzhalter.svg' | asset_url }}" loading="lazy" alt="" class="sol-feature_image">
+{% endif %}</div><div class="sol-feature_content"><div class="text-style-subline">
+{{ section.settings.text_feature_subline }}
+</div><h2 class="heading-style-h3">
+{{ section.settings.text_feature_heading }}
+</h2><div class="text-size-regular"> {{ section.settings.textarea_feature_text }} </div></div></div><div class="acc-default_flex-small"><div class="default-flex-tiny"><h2 class="heading-style-h4">
+{{ section.settings.text_facts_heading }}
+</h2></div><div li-cf-theme-blocks="" class="sol-facts_grid">
+{% content_for 'blocks' %}
+</div></div><div class="acc-default_flex-small"><div class="default-flex-tiny"><h2 class="heading-style-h4">
+{{ section.settings.text_referenzen_heading }}
+</h2></div>{% content_for "block", type: "b2b-sol-referenzen", id: "b2b-sol-referenzen" %}</div><div class="acc-banner text-color-white">{% if section.settings.image_cta_bild %}
+{{ section.settings.image_cta_bild | image_url: width: 1200 | image_tag: loading: 'lazy', class: 'acc-banner_image' }}
+{% else %}
+<img src="{{ 'platzhalter.svg' | asset_url }}" loading="lazy" alt="" class="acc-banner_image">
+{% endif %}<div class="acc-banner_content"><h3 class="heading-style-h2">
+{{ section.settings.text_cta_heading }}
+</h3><div class="text-size-medium"> {{ section.settings.textarea_cta_text }} </div><div class="button-group margin-top margin-small"><a href="{{ section.settings.url_cta_button_link }}" class="button is-white w-button"> <span>{{ section.settings.text_cta_button_text }}</span> </a></div></div></div></div></div></div> {% schema %} {
+    "tag": "section",
+    "name": "B2B Sol Inspire Team",
+    "class": "section_acc-default",
+    "blocks": [
+        {
+            "type": "b2b-sol-fact"
+        },
+        {
+            "type": "b2b-sol-referenz"
+        },
+        {
+            "type": "@app"
+        }
+    ],
+    "settings": [
+        {
+            "id": "url_breadcrumb_parent_link",
+            "type": "url",
+            "label": "Breadcrumb Parent Link"
+        },
+        {
+            "id": "text_breadcrumb_parent_label",
+            "type": "text",
+            "label": "Breadcrumb Parent Label",
+            "default": "Solutions"
+        },
+        {
+            "id": "text_breadcrumb",
+            "type": "text",
+            "label": "Breadcrumb",
+            "default": "Inspire your Team"
+        },
+        {
+            "id": "text_subline",
+            "type": "text",
+            "label": "Subline",
+            "default": "B2B Solutions"
+        },
+        {
+            "id": "text_heading_1",
+            "type": "text",
+            "label": "Heading 1",
+            "default": "Inspire your Team"
+        },
+        {
+            "id": "textarea_subheading_1",
+            "type": "textarea",
+            "label": "Subheading 1",
+            "default": "DICOTA's services, expertise, and portfolio through clear B2B-focused storytelling \u2014 supported by facts, references, and concrete product offerings."
+        },
+        {
+            "id": "url_hero_button_link",
+            "type": "url",
+            "label": "Hero Button Link"
+        },
+        {
+            "id": "text_hero_button_text",
+            "type": "text",
+            "label": "Hero Button Text",
+            "default": "Plan a program"
+        },
+        {
+            "id": "image_feature_bild",
+            "type": "image_picker",
+            "label": "Feature Bild"
+        },
+        {
+            "id": "text_feature_subline",
+            "type": "text",
+            "label": "Feature Subline",
+            "default": "Corporate Employees"
+        },
+        {
+            "id": "text_feature_heading",
+            "type": "text",
+            "label": "Feature Heading",
+            "default": "Equip and engage your people"
+        },
+        {
+            "id": "textarea_feature_text",
+            "type": "textarea",
+            "label": "Feature Text",
+            "default": "Reliable partner for employee IT &amp; benefit programs, corporate equipment, partner shops and employee campaigns. Wide bag portfolio from entry-level to premium, plus accessories for modern workplaces, mobile working and commuting."
+        },
+        {
+            "id": "text_facts_heading",
+            "type": "text",
+            "label": "Facts Heading",
+            "default": "Key facts"
+        },
+        {
+            "id": "text_referenzen_heading",
+            "type": "text",
+            "label": "Referenzen Heading",
+            "default": "Trusted by"
+        },
+        {
+            "id": "image_cta_bild",
+            "type": "image_picker",
+            "label": "CTA Bild"
+        },
+        {
+            "id": "text_cta_heading",
+            "type": "text",
+            "label": "CTA Heading",
+            "default": "Build your employee program"
+        },
+        {
+            "id": "textarea_cta_text",
+            "type": "textarea",
+            "label": "CTA Text",
+            "default": "From benefit shops to onboarding kits \u2014 let's design a program your team will love."
+        },
+        {
+            "id": "url_cta_button_link",
+            "type": "url",
+            "label": "CTA Button Link"
+        },
+        {
+            "id": "text_cta_button_text",
+            "type": "text",
+            "label": "CTA Button Text",
+            "default": "Get in touch"
+        },
+        {
+            "type": "header",
+            "content": "Kopfbereich"
+        },
+        {
+            "type": "text",
+            "id": "breadcrumb_parent_label",
+            "label": "Breadcrumb Parent Label",
+            "info": "Optional. Falls leer wird die Ebene \u00fcbersprungen.",
+            "default": "Solutions"
+        },
+        {
+            "type": "url",
+            "id": "breadcrumb_parent_link",
+            "label": "Breadcrumb Parent Link"
+        },
+        {
+            "type": "header",
+            "content": "Abst\u00e4nde"
+        },
+        {
+            "type": "range",
+            "id": "padding_top",
+            "min": 0,
+            "max": 160,
+            "step": 4,
+            "unit": "px",
+            "label": "Abstand oben",
+            "default": 60
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom",
+            "min": 0,
+            "max": 160,
+            "step": 4,
+            "unit": "px",
+            "label": "Abstand unten",
+            "default": 60
+        }
+    ],
+    "presets": [
+        {
+            "name": "B2B Sol Inspire Team",
+            "category": "_B2B",
+            "blocks": [
+                {
+                    "type": "b2b-sol-fact"
+                },
+                {
+                    "type": "b2b-sol-referenzen",
+                    "static": true,
+                    "id": "b2b-sol-referenzen",
+                    "blocks": [
+                        {
+                            "type": "b2b-sol-referenz"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+} {% endschema %}

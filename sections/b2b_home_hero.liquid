@@ -1,0 +1,45 @@
+<div class="padding-global padding-section-medium"><div class="container-large"><div class="split-hero_grid"><div class="split-hero_content"><h1 class="heading-style-h1"><span>
+{{ section.settings.text_begrussung }}
+</span><span li-object="customer.first_name | default: 'Gast'">{{ customer.first_name | default: 'Gast' }}</span>! <span>
+{{ section.settings.text_untertitel }}
+</span></h1><div class="text-size-medium"> {{ section.settings.textarea_text }} </div></div></div></div></div><div class="split-hero_bg-wrapper">{% if section.settings.image_hintergrundbild %}
+{{ section.settings.image_hintergrundbild | image_url: width: 1200 | image_tag: loading: 'lazy', class: 'split-hero_bg-image' }}
+{% else %}
+<img src="{{ 'platzhalter.svg' | asset_url }}" loading="lazy" alt="" class="split-hero_bg-image">
+{% endif %}</div> {% schema %} {
+    "tag": "section",
+    "name": "B2B Home Hero",
+    "class": "section_split-hero background-color-primary",
+    "settings": [
+        {
+            "id": "text_begrussung",
+            "type": "text",
+            "label": "Begr\u00fc\u00dfung",
+            "default": "Hello"
+        },
+        {
+            "id": "text_untertitel",
+            "type": "text",
+            "label": "Untertitel",
+            "default": "Great to have you here."
+        },
+        {
+            "id": "textarea_text",
+            "type": "textarea",
+            "label": "Text",
+            "default": "Here you'll find all your benefits, points and exclusive content as a DICOTA partner."
+        },
+        {
+            "id": "image_hintergrundbild",
+            "type": "image_picker",
+            "label": "Hintergrundbild"
+        }
+    ],
+    "presets": [
+        {
+            "name": "B2B Home Hero",
+            "category": "_B2B",
+            "blocks": []
+        }
+    ]
+} {% endschema %}

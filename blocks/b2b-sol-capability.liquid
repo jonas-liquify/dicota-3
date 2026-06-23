@@ -1,0 +1,38 @@
+<div li-block="B2B Sol Capability" class="acc-card sol-cap-card" {{ block.shopify_attributes }}>
+                    {% if block.settings.image_icon %}
+{{ block.settings.image_icon | image_url: width: 80 | image_tag: loading: 'lazy', class: 'acc_cta-icon' }}
+{% else %}
+<img src="{{ 'platzhalter.svg' | asset_url }}" loading="lazy" alt="" class="acc_cta-icon">
+{% endif %}
+                    <div class="acc-card_content"><div class="text-size-large">
+{{ block.settings.text_heading }}
+</div><div class="text-size-regular"> {{ block.settings.textarea_text }} </div></div>
+                </div> {% schema %} {
+    "name": "B2B Sol Capability",
+    "settings": [
+        {
+            "id": "image_icon",
+            "type": "image_picker",
+            "label": "Icon"
+        },
+        {
+            "id": "text_heading",
+            "type": "text",
+            "label": "Heading",
+            "default": "Branding &amp; doming"
+        },
+        {
+            "id": "textarea_text",
+            "type": "textarea",
+            "label": "Text",
+            "default": "Logo print, embroidery and doming to put your brand front and center."
+        }
+    ],
+    "presets": [
+        {
+            "name": "B2B Sol Capability",
+            "blocks": []
+        }
+    ],
+    "tag": null
+} {% endschema %}

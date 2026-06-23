@@ -1,0 +1,55 @@
+<div class="padding-global padding-section-medium"><div class="container-large"><div class="default-small-component"><div class="default-flex-tiny"><h2 class="heading-style-h2">
+{{ section.settings.text_heading }}
+</h2><div class="text-size-medium"> {{ section.settings.textarea_text }} </div></div><div x-data="{tab: 1}" role="tablist" class="acc-dis_tab-component"><div li-cf-theme-blocks="" class="acc-dis_tab-menu">
+{% content_for 'blocks' %}
+</div>{% content_for "block", type: "acc-dis-panes", id: "acc-dis-panes" %}</div></div></div></div> {% schema %} {
+    "tag": "section",
+    "name": "B2B Home Dis",
+    "class": "section_acc-dis",
+    "blocks": [
+        {
+            "type": "acc-home-tab"
+        },
+        {
+            "type": "tab-pane"
+        },
+        {
+            "type": "@app"
+        }
+    ],
+    "settings": [
+        {
+            "id": "text_heading",
+            "type": "text",
+            "label": "Heading",
+            "default": "Distributors"
+        },
+        {
+            "id": "textarea_text",
+            "type": "textarea",
+            "label": "Text",
+            "default": "Our authorized distribution partners worldwide."
+        }
+    ],
+    "presets": [
+        {
+            "name": "B2B Home Dis",
+            "category": "_B2B",
+            "blocks": [
+                {
+                    "type": "acc-home-tab"
+                },
+                {
+                    "type": "acc-dis-panes",
+                    "static": true,
+                    "id": "acc-dis-panes",
+                    "blocks": [
+                        {
+                            "type": "tab-pane"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+} {% endschema %}

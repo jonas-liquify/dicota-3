@@ -1,0 +1,31 @@
+<div li-block="B2B Sol Fact" class="sol-facts_item" {{ block.shopify_attributes }}>
+                    <div class="sol-facts_value">
+{{ block.settings.text_zahl }}
+</div>
+                    <div class="text-size-medium">
+{{ block.settings.text_label }}
+</div>
+                </div> {% schema %} {
+    "name": "B2B Sol Fact",
+    "settings": [
+        {
+            "id": "text_zahl",
+            "type": "text",
+            "label": "Zahl",
+            "default": "1,000+"
+        },
+        {
+            "id": "text_label",
+            "type": "text",
+            "label": "Label",
+            "default": "Products available"
+        }
+    ],
+    "presets": [
+        {
+            "name": "B2B Sol Fact",
+            "blocks": []
+        }
+    ],
+    "tag": null
+} {% endschema %}

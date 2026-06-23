@@ -1,0 +1,45 @@
+<div li-block="B2B Mkt Video" class="mkt-video_card" {{ block.shopify_attributes }}>
+                    <a href="{{ block.settings.url_video_link }}" target="_blank" rel="noopener" aria-label="Open video" class="mkt-video_thumb-link w-inline-block"> {% if block.settings.image_thumbnail %} {{ block.settings.image_thumbnail | image_url: width: 1000 | image_tag: loading: 'lazy', class: 'mkt-video_thumb-img' }} {% else %} <img src="{{ 'platzhalter.svg' | asset_url }}" loading="lazy" alt="" class="mkt-video_thumb-img"> {% endif %}<div class="mkt-video_play" aria-hidden="true"><div class="mkt-video_play-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="#0F0F0F"><path d="M8 5v14l11-7z"></path></svg></div></div><div class="mkt-video_share" aria-label="Share"><div class="mkt-video_share-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></div><span class="text-size-tiny">{{ block.settings.text_share_text }}</span></div> </a>
+                    <div class="mkt-video_text"><div class="mkt-video_title text-size-regular text-weight-medium">
+{{ block.settings.text_titel }}
+</div><div class="mkt-video_desc text-size-small text-style-muted"> {{ block.settings.textarea_beschreibung }} </div></div>
+                </div> {% schema %} {
+    "name": "B2B Mkt Video",
+    "settings": [
+        {
+            "id": "url_video_link",
+            "type": "url",
+            "label": "Video Link"
+        },
+        {
+            "id": "image_thumbnail",
+            "type": "image_picker",
+            "label": "Thumbnail"
+        },
+        {
+            "id": "text_share_text",
+            "type": "text",
+            "label": "Share Text",
+            "default": "Share"
+        },
+        {
+            "id": "text_titel",
+            "type": "text",
+            "label": "Titel",
+            "default": "Product training"
+        },
+        {
+            "id": "textarea_beschreibung",
+            "type": "textarea",
+            "label": "Beschreibung",
+            "default": "Mauris ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torq."
+        }
+    ],
+    "presets": [
+        {
+            "name": "B2B Mkt Video",
+            "blocks": []
+        }
+    ],
+    "tag": null
+} {% endschema %}
