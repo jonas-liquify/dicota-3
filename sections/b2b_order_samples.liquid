@@ -1,0 +1,237 @@
+<div class="padding-global padding-section-small" style="padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px;"><div class="container-large"><div class="acc-default_wrapper"><div class="acc-default_flex-small"><ul role="list" class="breadcrumbs_component w-list-unstyled"><li class="breadcrumbs_item"><a li-object:href="routes.root_url" href="{{ routes.root_url }}" class="w-inline-block"><div li-object="'general.home' | t" class="text-size-regular">{{ 'general.home' | t }}</div></a><div class="breadcrumbs_icon w-embed"><svg width="15" height="15" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="1.5" fill="none"></path></svg></div></li><li class="breadcrumbs_item"><div>
+{{ section.settings.text_breadcrumb }}
+</div></li></ul><div class="default-flex-tiny"><h1 class="heading-style-h2">
+{{ section.settings.text_heading }}
+</h1><div class="text-size-medium max-width-large"> {{ section.settings.textarea_subheading }} </div></div><div class="multi-form_component" x-data="{ submitted:false, loading:false, products:[], pq:'', pr:[], pl:false, async search(){ var q=this.pq.trim(); if(q.length<2){ this.pr=[]; return } this.pl=true; try{ var r=await fetch('/search/suggest.json?q='+encodeURIComponent(q)+'&resources[type]=product&resources[limit]=6',{headers:{Accept:'application/json'}}); var d=await r.json(); this.pr=(((d.resources||{}).results)||{}).products||[] }catch(e){} this.pl=false }, add(p){ this.products.push({ title:p.title, sku:(p.sku||''), qty:1 }); this.pq=''; this.pr=[] }, rm(i){ this.products.splice(i,1) }, async submit(){ this.loading=true; var f=this.$root.querySelector('form'); var fd=new FormData(f); var data={}; fd.forEach(function(v,k){ data[k]=v }); data.products=this.products; data.account_email=this.$root.dataset.accountEmail; data.account_name=this.$root.dataset.accountName; var hook=this.$root.dataset.hook; try{ if(hook){ var resp=await fetch(hook,{ method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(data) }); if(!resp.ok) throw new Error('bad response') } this.submitted=true }catch(e){ console.error('Sample order submit error:', e) } this.loading=false }, reset(){ this.submitted=false; this.products=[]; this.pq=''; this.pr=[] } }" data-hook="{{ section.settings.url_sample_hook }}" data-account-email="{{ customer.email }}" data-account-name="{{ customer.name | escape }}"><div class="multi-form_block w-form"><form name="sample-order" data-name="Sample Order" method="post" class="multi-form_form" x-on:submit.prevent="submit()" x-show="!submitted"><div class="multi-form_step"><div class="multi-form_heading"><h2 class="heading-style-h4">
+{{ section.settings.text_form_heading }}
+</h2></div><div class="multi-form_form-content"><div class="text-size-medium text-weight-medium">
+{{ section.settings.text_products_label }}
+</div><div class="multi-form_product-search"><div class="form_field-wrapper"><input class="form_input w-input" type="text" id="sample_product_search" placeholder=" " autocomplete="off" x-model="pq" x-on:input.debounce.300ms="search()"><label for="sample_product_search" class="form_label">
+{{ section.settings.text_product_search_label }}
+</label></div><ul role="list" class="multi-form_product-results w-list-unstyled" x-show="pr.length > 0" x-cloak=""><template x-for="p in pr" :key="p.id"></template></ul></div><ul role="list" class="multi-form_product-list w-list-unstyled"><template x-for="(item, i) in products" :key="i"></template><li class="multi-form_product-empty" x-show="products.length === 0">
+{{ section.settings.text_no_products_text }}
+</li></ul></div><div class="multi-form_form-content"><div class="text-size-medium text-weight-medium">
+{{ section.settings.text_contact_heading }}
+</div><div class="multi-form_double"><div class="form_field-wrapper"><input class="form_input w-input" maxlength="256" name="contact_name" placeholder=" " type="text" id="contact_name" required="" value="{{ customer.name | escape }}"><label for="contact_name" class="form_label">
+{{ section.settings.text_name_label }}
+</label></div><div class="form_field-wrapper"><input class="form_input w-input" maxlength="256" name="contact_email" placeholder=" " type="email" id="contact_email" required="" value="{{ customer.email }}"><label for="contact_email" class="form_label">
+{{ section.settings.text_email_label }}
+</label></div></div></div><div class="multi-form_form-content"><div class="text-size-medium text-weight-medium">
+{{ section.settings.text_shipping_heading }}
+</div><div class="text-size-regular multi-form_subheading">
+{{ section.settings.text_shipping_hint }}
+</div><div class="multi-form_double"><div class="form_field-wrapper"><input class="form_input w-input" name="shipping_company" placeholder=" " type="text" id="sample_shipping_company" value="{{ customer.default_address.company | escape }}"><label for="sample_shipping_company" class="form_label">
+{{ section.settings.text_company_label }}
+</label></div><div class="form_field-wrapper"><input class="form_input w-input" name="shipping_name" placeholder=" " type="text" id="sample_shipping_name" value="{{ customer.default_address.name | escape }}"><label for="sample_shipping_name" class="form_label">
+{{ section.settings.text_name_label }}
+</label></div><div class="form_field-wrapper"><input class="form_input w-input" name="shipping_street" placeholder=" " type="text" id="sample_shipping_street" value="{{ customer.default_address.address1 | escape }}"><label for="sample_shipping_street" class="form_label">
+{{ section.settings.text_street_label }}
+</label></div><div class="form_field-wrapper"><input class="form_input w-input" name="shipping_zip" placeholder=" " type="text" id="sample_shipping_zip" value="{{ customer.default_address.zip | escape }}"><label for="sample_shipping_zip" class="form_label">
+{{ section.settings.text_zip_label }}
+</label></div><div class="form_field-wrapper"><input class="form_input w-input" name="shipping_city" placeholder=" " type="text" id="sample_shipping_city" value="{{ customer.default_address.city | escape }}"><label for="sample_shipping_city" class="form_label">
+{{ section.settings.text_city_label }}
+</label></div><div class="form_field-wrapper"><input class="form_input w-input" name="shipping_country" placeholder=" " type="text" id="sample_shipping_country" value="{{ customer.default_address.country | escape }}"><label for="sample_shipping_country" class="form_label">
+{{ section.settings.text_country_label }}
+</label></div><div class="form_field-wrapper"><input class="form_input w-input" name="shipping_phone" placeholder=" " type="tel" id="sample_shipping_phone" value="{{ customer.default_address.phone | default: customer.phone | escape }}"><label for="sample_shipping_phone" class="form_label">
+{{ section.settings.text_phone_label }}
+</label></div></div></div><div class="multi-form_form-content"><div class="form_field-wrapper"><textarea name="notes" id="sample_notes" class="form_input form_textarea w-input" maxlength="5000" placeholder=" "></textarea><label for="sample_notes" class="form_label">
+{{ section.settings.text_notes_label }}
+</label></div></div><div class="multi-form_button-group"><button type="submit" x-bind:disabled="loading" class="button w-button"><span x-show="!loading">
+{{ section.settings.text_submit_button }}
+</span><span x-show="loading" x-cloak="">
+{{ section.settings.text_submitting_text }}
+</span></button></div></div></form><div class="multi-form_success" x-show="submitted" x-cloak=""><div class="multi-form_success-icon w-embed"><svg width="40" height="40" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="11" stroke="currentColor" stroke-width="1.5"></circle><path d="M7.5 12.5L10.5 15.5L16.5 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></div><h2 class="heading-style-h4">
+{{ section.settings.text_success_heading }}
+</h2><div class="text-size-medium max-width-medium"> {{ section.settings.textarea_success_text }} </div><button type="button" x-on:click="reset()" class="button w-button">
+{{ section.settings.text_restart_button }}
+</button></div></div></div></div></div></div></div> {% schema %} {
+    "tag": "section",
+    "name": "B2B Order Samples",
+    "class": "section_acc-default",
+    "settings": [
+        {
+            "id": "text_breadcrumb",
+            "type": "text",
+            "label": "Breadcrumb",
+            "default": "Order samples"
+        },
+        {
+            "id": "text_heading",
+            "type": "text",
+            "label": "Heading",
+            "default": "Order free samples"
+        },
+        {
+            "id": "textarea_subheading",
+            "type": "textarea",
+            "label": "Subheading",
+            "default": "Pick the products you would like to evaluate. Samples are always free of charge. Your request is sent to our inside sales team for processing."
+        },
+        {
+            "id": "text_form_heading",
+            "type": "text",
+            "label": "Form Heading",
+            "default": "Your sample request"
+        },
+        {
+            "id": "text_products_label",
+            "type": "text",
+            "label": "Products Label",
+            "default": "Select products"
+        },
+        {
+            "id": "text_product_search_label",
+            "type": "text",
+            "label": "Product Search Label",
+            "default": "Search products to add"
+        },
+        {
+            "id": "text_no_products_text",
+            "type": "text",
+            "label": "No Products Text",
+            "default": "No products added yet."
+        },
+        {
+            "id": "text_contact_heading",
+            "type": "text",
+            "label": "Contact Heading",
+            "default": "Your contact details"
+        },
+        {
+            "id": "text_name_label",
+            "type": "text",
+            "label": "Name Label",
+            "default": "Contact person*"
+        },
+        {
+            "id": "text_email_label",
+            "type": "text",
+            "label": "Email Label",
+            "default": "Email address*"
+        },
+        {
+            "id": "text_shipping_heading",
+            "type": "text",
+            "label": "Shipping Heading",
+            "default": "Delivery address"
+        },
+        {
+            "id": "text_shipping_hint",
+            "type": "text",
+            "label": "Shipping Hint",
+            "default": "Prefilled from your account \u2014 you can change it for this delivery."
+        },
+        {
+            "id": "text_company_label",
+            "type": "text",
+            "label": "Company Label",
+            "default": "Company"
+        },
+        {
+            "id": "text_street_label",
+            "type": "text",
+            "label": "Street Label",
+            "default": "Street"
+        },
+        {
+            "id": "text_zip_label",
+            "type": "text",
+            "label": "Zip Label",
+            "default": "Postal code"
+        },
+        {
+            "id": "text_city_label",
+            "type": "text",
+            "label": "City Label",
+            "default": "City"
+        },
+        {
+            "id": "text_country_label",
+            "type": "text",
+            "label": "Country Label",
+            "default": "Country"
+        },
+        {
+            "id": "text_phone_label",
+            "type": "text",
+            "label": "Phone Label",
+            "default": "Phone"
+        },
+        {
+            "id": "text_notes_label",
+            "type": "text",
+            "label": "Notes Label",
+            "default": "Notes"
+        },
+        {
+            "id": "text_submit_button",
+            "type": "text",
+            "label": "Submit Button",
+            "default": "Send sample request"
+        },
+        {
+            "id": "text_submitting_text",
+            "type": "text",
+            "label": "Submitting Text",
+            "default": "Submitting\u2026"
+        },
+        {
+            "id": "text_success_heading",
+            "type": "text",
+            "label": "Success Heading",
+            "default": "Your sample request has been sent"
+        },
+        {
+            "id": "textarea_success_text",
+            "type": "textarea",
+            "label": "Success Text",
+            "default": "Thank you. Our inside sales team will process your free sample request and get back to you shortly."
+        },
+        {
+            "id": "text_restart_button",
+            "type": "text",
+            "label": "Restart Button",
+            "default": "Order more samples"
+        },
+        {
+            "type": "header",
+            "content": "Sample-Bestellung"
+        },
+        {
+            "type": "url",
+            "id": "url_sample_hook",
+            "label": "Sample-Order Webhook (Make)"
+        },
+        {
+            "type": "header",
+            "content": "Abst\u00e4nde"
+        },
+        {
+            "type": "range",
+            "id": "padding_top",
+            "min": 0,
+            "max": 160,
+            "step": 4,
+            "unit": "px",
+            "label": "Abstand oben",
+            "default": 60
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom",
+            "min": 0,
+            "max": 160,
+            "step": 4,
+            "unit": "px",
+            "label": "Abstand unten",
+            "default": 60
+        }
+    ],
+    "presets": [
+        {
+            "name": "B2B Order Samples",
+            "category": "_B2B",
+            "blocks": []
+        }
+    ]
+} {% endschema %}

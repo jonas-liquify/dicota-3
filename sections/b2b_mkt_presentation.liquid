@@ -1,0 +1,55 @@
+<div class="padding-global"><div class="container-large"><div class="presentations_wrapper"><div class="default-flex-tiny"><h1 class="heading-style-h2">
+{{ section.settings.text_uberschrift }}
+</h1><div class="text-size-medium max-width-large"> {{ section.settings.textarea_einleitung }} </div></div><div li-cf-theme-blocks="" class="presentations_categories">
+{% content_for 'blocks' %}
+</div></div></div></div> {% schema %} {
+    "tag": "section",
+    "name": "B2B Mkt Presentation",
+    "class": "section_presentations",
+    "blocks": [
+        {
+            "type": "produkt-kategorie"
+        },
+        {
+            "type": "@app"
+        }
+    ],
+    "settings": [
+        {
+            "id": "text_uberschrift",
+            "type": "text",
+            "label": "\u00dcberschrift",
+            "default": "Product Presentations"
+        },
+        {
+            "id": "textarea_einleitung",
+            "type": "textarea",
+            "label": "Einleitung",
+            "default": "Download our product presentations as PDF or PPT \u2014 available in German, English and French."
+        },
+        {
+            "type": "header",
+            "content": "Info"
+        },
+        {
+            "type": "paragraph",
+            "content": "Produkt-Pr\u00e4sentationen, gruppiert nach Kategorie. Lege je Kategorie einen Block 'Produkt Kategorie' an (mit Namen) und darin pro Dokument einen Block 'Pr\u00e4sentation' mit Titel, Datei-Info und den Datei-Links f\u00fcr DE\/EN\/FR."
+        }
+    ],
+    "presets": [
+        {
+            "name": "B2B Mkt Presentation",
+            "category": "_B2B Mkt",
+            "blocks": [
+                {
+                    "type": "produkt-kategorie",
+                    "blocks": [
+                        {
+                            "type": "prasentation"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+} {% endschema %}

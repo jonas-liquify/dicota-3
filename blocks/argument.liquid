@@ -1,0 +1,38 @@
+<div li-block="Argument" class="benefits_item" {{ block.shopify_attributes }}>
+                    {% if block.settings.image_icon %}
+{{ block.settings.image_icon | image_url: width: 48 | image_tag: loading: 'lazy', class: 'icon-1x1-small' }}
+{% else %}
+<img src="{{ 'platzhalter.svg' | asset_url }}" loading="lazy" alt="" class="icon-1x1-small">
+{% endif %}
+                    <div class="benefits_text-wrapper"><h3 class="text-size-large">
+{{ block.settings.text_heading }}
+</h3><div class="text-size-medium"> {{ block.settings.textarea_text }} </div></div>
+                </div> {% schema %} {
+    "name": "Argument",
+    "settings": [
+        {
+            "id": "image_icon",
+            "type": "image_picker",
+            "label": "Icon"
+        },
+        {
+            "id": "text_heading",
+            "type": "text",
+            "label": "Heading",
+            "default": "1,000+ products in stock"
+        },
+        {
+            "id": "textarea_text",
+            "type": "textarea",
+            "label": "Text",
+            "default": "A broad portfolio with fast availability and strong reseller margins."
+        }
+    ],
+    "presets": [
+        {
+            "name": "Argument",
+            "blocks": []
+        }
+    ],
+    "tag": null
+} {% endschema %}
