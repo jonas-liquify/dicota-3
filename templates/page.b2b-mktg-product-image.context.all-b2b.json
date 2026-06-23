@@ -12,5 +12,16 @@
     "market": "all-b2b"
   },
   "parent": "page.b2b-mktg-product-image.json",
-  "sections": {}
+  "sections": {
+    "b2b_mkt_product_imgs": {
+      "settings": {},
+      "blocks": {
+        "b2b_mkt_download_NcHJ8B": {
+          "settings": {
+            "text_subheading": "All our current cut & sew products (48 folders · 121 MB)"
+          }
+        }
+      }
+    }
+  }
 }
