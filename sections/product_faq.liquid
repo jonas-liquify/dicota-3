@@ -1,8 +1,8 @@
-<div class="padding-global" style="padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px; background-color: {{ section.settings.bg_color }}; color: {{ section.settings.text_color }};"><div class="container-large">{% if product.metafields.custom.faqs_category != blank %}    <div li-if="product.metafields.custom.faqs_category != blank">
+<div class="padding-global" style="padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px; background-color: {{ section.settings.bg_color }}; color: {{ section.settings.text_color }};"><div class="container-large"><div class="hide w-embed">{% liquid assign faq_items = section.settings.faq_entries if section.settings.faq_set != blank assign faq_items = section.settings.faq_set.wich_faq.value endif %}</div>{% if faq_items != blank %}    <div li-if="faq_items != blank">
     <h2 class="product-faq_headline heading-style-h2">
 {{ section.settings.text_titel }}
-</h2><div class="product-faq_list"><div class="product-faq_items" li-for:inside="faq in product.metafields.custom.faqs_category.value.faq.value">
-        {% for faq in product.metafields.custom.faqs_category.value.faq.value %}                            <div class="product-faq_item" x-data="{open:false}"><button class="product-faq_question" x-on:click="open=!open" x-bind:aria-expanded="open"><span li-object="faq.frage" class="product-faq_question-text">{{ faq.frage }}</span><span class="product-faq_icon" x-bind:class="{'is-open':open}">{% render 'icon_chevron_down' %}</span></button><div class="product-faq_answer" x-show="open" x-collapse=""><div li-object="faq.antwort" class="product-faq_answer-text text-rich-text w-richtext">{{ faq.antwort }}</div></div></div>
+</h2><div class="product-faq_list"><div class="product-faq_items" li-for:inside="faq in faq_items">
+        {% for faq in faq_items %}                            <div class="product-faq_item" x-data="{open:false}"><button class="product-faq_question" x-on:click="open=!open" x-bind:aria-expanded="open"><span li-object="faq.question" class="product-faq_question-text">{{ faq.question }}</span><span class="product-faq_icon" x-bind:class="{'is-open':open}">{% render 'icon_chevron_down' %}</span></button><div class="product-faq_answer" x-show="open" x-collapse=""><div li-object="faq.faq_answer" class="product-faq_answer-text text-rich-text w-richtext">{{ faq.faq_answer }}</div></div></div>
                     {% endfor %}    </div></div>    </div>
 {% endif %}</div></div> {% schema %} {
     "tag": "section",
@@ -14,6 +14,24 @@
             "type": "text",
             "label": "Titel",
             "default": "FAQ"
+        },
+        {
+            "type": "header",
+            "content": "FAQ-Quelle"
+        },
+        {
+            "type": "metaobject",
+            "id": "faq_set",
+            "label": "FAQ-Set (Kategorie)",
+            "metaobject_type": "faqs_category",
+            "info": "Entweder ein FAQ-Set waehlen ODER unten einzelne FAQs. Ist ein Set gewaehlt, hat es Vorrang."
+        },
+        {
+            "type": "metaobject_list",
+            "id": "faq_entries",
+            "label": "Einzelne FAQs",
+            "metaobject_type": "faqs_filters",
+            "limit": 50
         },
         {
             "type": "header",
@@ -54,10 +72,6 @@
             "id": "text_color",
             "label": "Textfarbe",
             "default": "#000000"
-        },
-        {
-            "type": "paragraph",
-            "content": "Die FAQs werden automatisch aus dem Produkt-Metafeld custom.faqs_category geladen (Referenz auf ein Metaobjekt vom Typ faqs_category). Dessen Feld faq (Liste von faqs-Eintraegen mit den Feldern frage + antwort) liefert Fragen und Antworten."
         }
     ],
     "presets": [
