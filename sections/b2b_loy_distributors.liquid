@@ -2,67 +2,93 @@
 {{ section.settings.text_breadcrumb }}
 </div></li></ul><div class="default-flex-tiny"><h1 class="heading-style-h2">
 {{ section.settings.text_heading }}
-</h1><div class="text-size-medium max-width-large"> {{ section.settings.textarea_subheading }} </div></div><div x-data="{tab: 1}" role="tablist" class="acc-dis_tab-component">{% content_for "block", type: "b2b-loy-menu", id: "b2b-loy-menu" %}{% content_for "block", type: "b2b-loy-panes", id: "b2b-loy-panes" %}</div></div></div></div></div> {% schema %} {
-    "tag": "section",
-    "name": "B2B Loy Distributors",
-    "class": "section_acc-default",
-    "blocks": [
+</h1><div class="text-size-medium max-width-large"> {{ section.settings.textarea_subheading }} </div></div><div x-data="{tab: 1}" role="tablist" class="acc-dis_tab-component">{% content_for "block", type: "b2b-loy-menu", id: "b2b-loy-menu" %}{% content_for "block", type: "b2b-loy-panes", id: "b2b-loy-panes" %}</div></div></div></div></div> {% schema %}
+{
+  "tag": "section",
+  "name": "B2B Loy Distributors",
+  "class": "section_acc-default",
+  "blocks": [
+    {
+      "type": "b2b-loy-panes",
+      "name": "B2B Loy Panes",
+      "blocks": [
         {
-            "type": "b2b-loy-region"
+          "type": "b2b-loy-region"
         },
         {
-            "type": "b2b-loy-region-pane"
-        },
-        {
-            "type": "@app"
+          "type": "b2b-loy-region-pane"
         }
-    ],
-    "settings": [
+      ]
+    },
+    {
+      "type": "b2b-loy-menu",
+      "name": "B2B Loy Menu",
+      "blocks": [
         {
-            "id": "text_breadcrumb",
-            "type": "text",
-            "label": "Breadcrumb",
-            "default": "Distributors"
+          "type": "b2b-loy-region"
         },
         {
-            "id": "text_heading",
-            "type": "text",
-            "label": "Heading",
-            "default": "Our distributors"
+          "type": "b2b-loy-region-pane"
+        }
+      ]
+    },
+    {
+      "type": "b2b-loy-region"
+    },
+    {
+      "type": "b2b-loy-region-pane"
+    },
+    {
+      "type": "@app"
+    }
+  ],
+  "settings": [
+    {
+      "id": "text_breadcrumb",
+      "type": "text",
+      "label": "Breadcrumb",
+      "default": "Distributors"
+    },
+    {
+      "id": "text_heading",
+      "type": "text",
+      "label": "Heading",
+      "default": "Our distributors"
+    },
+    {
+      "id": "textarea_subheading",
+      "type": "textarea",
+      "label": "Subheading",
+      "default": "Here you'll find all authorized DICOTA distributors in your region."
+    }
+  ],
+  "presets": [
+    {
+      "name": "B2B Loy Distributors",
+      "category": "_B2B",
+      "blocks": [
+        {
+          "type": "b2b-loy-menu",
+          "static": true,
+          "id": "b2b-loy-menu",
+          "blocks": [
+            {
+              "type": "b2b-loy-region"
+            }
+          ]
         },
         {
-            "id": "textarea_subheading",
-            "type": "textarea",
-            "label": "Subheading",
-            "default": "Here you'll find all authorized DICOTA distributors in your region."
+          "type": "b2b-loy-panes",
+          "static": true,
+          "id": "b2b-loy-panes",
+          "blocks": [
+            {
+              "type": "b2b-loy-region-pane"
+            }
+          ]
         }
-    ],
-    "presets": [
-        {
-            "name": "B2B Loy Distributors",
-            "category": "_B2B",
-            "blocks": [
-                {
-                    "type": "b2b-loy-menu",
-                    "static": true,
-                    "id": "b2b-loy-menu",
-                    "blocks": [
-                        {
-                            "type": "b2b-loy-region"
-                        }
-                    ]
-                },
-                {
-                    "type": "b2b-loy-panes",
-                    "static": true,
-                    "id": "b2b-loy-panes",
-                    "blocks": [
-                        {
-                            "type": "b2b-loy-region-pane"
-                        }
-                    ]
-                }
-            ]
-        }
-    ]
-} {% endschema %}
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -87,7 +87,7 @@
       "type": "b2b_mkt_giveaways",
       "blocks": {
         "b2b-giveaway": {
-          "type": "b2b-giveaway",
+          "type": "b2b-bestell-artikel",
           "name": "B2B Giveaway",
           "settings": {}
         }

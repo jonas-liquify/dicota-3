@@ -1,0 +1,120 @@
+{
+  "sections": {
+    "two_column_hero": {
+      "type": "two_column_hero",
+      "settings": {
+        "text_heading": "Our promise to you — we don’t compromise on quality.",
+        "textarea_text": "At DICOTA, quality goes beyond design and materials. We work with suppliers who meet our strict standards and uphold social and ecological practices. Our products undergo rigorous mechanical and safety tests, both in-house and by independent institutes, ensuring they meet all requirements before reaching you."
+      }
+    },
+    "feature_card_grid": {
+      "type": "feature_card_grid",
+      "settings": {
+        "text_subline": "Built to last",
+        "text_heading": "Built to last, designed for comfort",
+        "textarea_text": "At DICOTA, every product begins with a focus on durability and functionality. From the initial design phase, load requirements are carefully defined and implemented with precision. High-quality materials, tear-resistant seams, robust zippers and sturdy metal components ensure our solutions stand the test of time."
+      },
+      "blocks": {
+        "feature-cards": {
+          "type": "feature-cards",
+          "static": true,
+          "settings": {},
+          "blocks": {
+            "c1": {
+              "type": "feature-karte",
+              "settings": {
+                "text_heading": "30 Years of Expertise",
+                "textarea_text": "In creating innovative, high-quality carrying solutions tailored to your needs."
+              }
+            },
+            "c2": {
+              "type": "feature-karte",
+              "settings": {
+                "text_heading": "Tested durability",
+                "textarea_text": "Our bags endure 1,000-cycle lab tests with up to 25 kg drops every 4 seconds, proving their durability and reliability."
+              }
+            },
+            "c3": {
+              "type": "feature-karte",
+              "settings": {
+                "text_heading": "Lifetime Warranty",
+                "textarea_text": "For material and processing defects on laptop bags."
+              }
+            }
+          },
+          "block_order": [
+            "c1",
+            "c2",
+            "c3"
+          ]
+        },
+        "stats-row": {
+          "type": "stats-row",
+          "static": true,
+          "settings": {},
+          "blocks": {
+            "s1": {
+              "type": "stats-block",
+              "settings": {
+                "text_zahl": "14.2 Mio",
+                "text_label": "PET bottles recycled"
+              }
+            }
+          },
+          "block_order": [
+            "s1"
+          ]
+        }
+      }
+    },
+    "image_text": {
+      "type": "image_text",
+      "settings": {
+        "text_heading": "Protection meets innovation",
+        "textarea_text": "Notebook bags are more than practical — they safeguard your devices and digital life. With 30 years of expertise, DICOTA combines first-class design and reliable protection for your essential tech. As devices grow slimmer and more powerful, we meet the challenge with solutions designed for functionality and protection."
+      }
+    },
+    "triple_cards": {
+      "type": "triple_cards",
+      "settings": {
+        "text_heading": "The World of DICOTA"
+      },
+      "blocks": {
+        "k1": {
+          "type": "karte",
+          "settings": {
+            "text_card_heading": "Responsible. Socially and ecologically.",
+            "text_card_button_text": "Read more"
+          }
+        },
+        "k2": {
+          "type": "karte",
+          "settings": {
+            "text_card_heading": "Our promise to you.",
+            "text_card_button_text": "Read more"
+          }
+        },
+        "k3": {
+          "type": "karte",
+          "settings": {
+            "text_card_heading": "The DICOTA Blog",
+            "text_card_button_text": "Read more"
+          }
+        }
+      },
+      "block_order": [
+        "k1",
+        "k2",
+        "k3"
+      ]
+    }
+  },
+  "order": [
+    "two_column_hero",
+    "feature_card_grid",
+    "image_text",
+    "triple_cards"
+  ],
+  "layout": "theme",
+  "wrapper": "main.main-wrapper"
+}

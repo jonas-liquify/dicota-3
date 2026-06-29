@@ -4,102 +4,128 @@
 {{ section.settings.text_heading }}
 </h2><div class="text-size-medium"> {{ section.settings.textarea_text }} </div>{% if section.settings.text_button_text != blank %}    <div li-if="section.settings.text_button_text != blank" class="button-wrapper">
     <a href="{{ section.settings.url_button_link }}" class="button w-button"> <span>{{ section.settings.text_button_text }}</span> </a>    </div>
-{% endif %}</div>{% content_for "block", type: "feature-cards", id: "feature-cards" %}</div>{% content_for "block", type: "stats-row", id: "stats-row" %}</div></div></div> {% schema %} {
-    "tag": "section",
-    "name": "Feature Card Grid",
-    "class": "section_why-us",
-    "blocks": [
+{% endif %}</div>{% content_for "block", type: "feature-cards", id: "feature-cards" %}</div>{% content_for "block", type: "stats-row", id: "stats-row" %}</div></div></div> {% schema %}
+{
+  "tag": "section",
+  "name": "Feature Card Grid",
+  "class": "section_why-us",
+  "blocks": [
+    {
+      "type": "stats-row",
+      "name": "Stats Row",
+      "blocks": [
         {
-            "type": "feature-karte"
+          "type": "feature-karte"
         },
         {
-            "type": "stats-block"
-        },
-        {
-            "type": "@app"
+          "type": "stats-block"
         }
-    ],
-    "settings": [
+      ]
+    },
+    {
+      "type": "feature-cards",
+      "name": "Feature Cards",
+      "blocks": [
         {
-            "id": "text_subline",
-            "type": "text",
-            "label": "Subline",
-            "default": "Why DICOTA"
+          "type": "feature-karte"
         },
         {
-            "id": "text_heading",
-            "type": "text",
-            "label": "Heading",
-            "default": "More than just products"
-        },
-        {
-            "id": "textarea_text",
-            "type": "textarea",
-            "label": "Text",
-            "default": "We combine Swiss quality, thoughtful design and sustainability in every detail."
-        },
-        {
-            "id": "url_button_link",
-            "type": "url",
-            "label": "Button Link"
-        },
-        {
-            "id": "text_button_text",
-            "type": "text",
-            "label": "Button Text",
-            "default": "Our values"
-        },
-        {
-            "type": "header",
-            "content": "Abst\u00e4nde"
-        },
-        {
-            "type": "range",
-            "id": "padding_top",
-            "min": 0,
-            "max": 160,
-            "step": 4,
-            "unit": "px",
-            "label": "Abstand oben",
-            "default": 80
-        },
-        {
-            "type": "range",
-            "id": "padding_bottom",
-            "min": 0,
-            "max": 160,
-            "step": 4,
-            "unit": "px",
-            "label": "Abstand unten",
-            "default": 80
+          "type": "stats-block"
         }
-    ],
-    "presets": [
+      ]
+    },
+    {
+      "type": "feature-karte"
+    },
+    {
+      "type": "stats-block"
+    },
+    {
+      "type": "@app"
+    }
+  ],
+  "settings": [
+    {
+      "id": "text_subline",
+      "type": "text",
+      "label": "Subline",
+      "default": "Why DICOTA"
+    },
+    {
+      "id": "text_heading",
+      "type": "text",
+      "label": "Heading",
+      "default": "More than just products"
+    },
+    {
+      "id": "textarea_text",
+      "type": "textarea",
+      "label": "Text",
+      "default": "We combine Swiss quality, thoughtful design and sustainability in every detail."
+    },
+    {
+      "id": "url_button_link",
+      "type": "url",
+      "label": "Button Link"
+    },
+    {
+      "id": "text_button_text",
+      "type": "text",
+      "label": "Button Text",
+      "default": "Our values"
+    },
+    {
+      "type": "header",
+      "content": "Abstände"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 160,
+      "step": 4,
+      "unit": "px",
+      "label": "Abstand oben",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 160,
+      "step": 4,
+      "unit": "px",
+      "label": "Abstand unten",
+      "default": 80
+    }
+  ],
+  "presets": [
+    {
+      "name": "Feature Card Grid",
+      "category": "Listing",
+      "blocks": [
         {
-            "name": "Feature Card Grid",
-            "category": "Listing",
-            "blocks": [
-                {
-                    "type": "feature-cards",
-                    "static": true,
-                    "id": "feature-cards",
-                    "blocks": [
-                        {
-                            "type": "feature-karte"
-                        }
-                    ]
-                },
-                {
-                    "type": "stats-row",
-                    "static": true,
-                    "id": "stats-row",
-                    "blocks": [
-                        {
-                            "type": "stats-block"
-                        }
-                    ]
-                }
-            ]
+          "type": "feature-cards",
+          "static": true,
+          "id": "feature-cards",
+          "blocks": [
+            {
+              "type": "feature-karte"
+            }
+          ]
+        },
+        {
+          "type": "stats-row",
+          "static": true,
+          "id": "stats-row",
+          "blocks": [
+            {
+              "type": "stats-block"
+            }
+          ]
         }
-    ]
-} {% endschema %}
+      ]
+    }
+  ]
+}
+{% endschema %}

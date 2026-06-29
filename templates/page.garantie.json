@@ -1,0 +1,70 @@
+{
+  "sections": {
+    "two_column_hero": {
+      "type": "two_column_hero",
+      "settings": {
+        "text_heading": "Warranty — trust you can build on, three decades of experience",
+        "textarea_text": "Quality is our priority and the foundation of your trust in DICOTA. While rare, defects can occur despite strict testing. As a DICOTA customer, you can rely on our comprehensive warranty services for support."
+      }
+    },
+    "feature_card_grid": {
+      "type": "feature_card_grid",
+      "settings": {
+        "text_subline": "You never work alone.",
+        "text_heading": "At DICOTA, we attach great importance to long-lasting materials and careful processing.",
+        "textarea_text": "Extensive test procedures and continuous development result in long-lasting solutions, backed up by a lifetime* warranty for any possible material and processing defects with notebook bags. *Due to legal restrictions in Germany, only for a period of 30 years. No time restrictions in other countries."
+      },
+      "blocks": {
+        "feature-cards": {
+          "type": "feature-cards",
+          "static": true,
+          "settings": {},
+          "blocks": {
+            "c1": {
+              "type": "feature-karte",
+              "settings": {
+                "text_heading": "24-month warranty",
+                "textarea_text": "For DICOTA accessories, tablet cases, wheeled notebook bags, electronic components, hard-shell products and custom solutions."
+              }
+            },
+            "c2": {
+              "type": "feature-karte",
+              "settings": {
+                "text_heading": "Register your warranty",
+                "textarea_text": "Life is too short to be complicated — register your case online.",
+                "url_button_link": "https://rma.dicota.com/",
+                "text_button_text": "DICOTA RMA Service"
+              }
+            },
+            "c3": {
+              "type": "feature-karte",
+              "settings": {
+                "text_heading": "Extended 36/48-month warranty",
+                "textarea_text": "You can extend your warranty to 36 or 48 months when you buy mobile office solutions, ensuring longer protection for valuable equipment."
+              }
+            },
+            "c4": {
+              "type": "feature-karte",
+              "settings": {
+                "text_heading": "Disclaimer",
+                "textarea_text": "DICOTA does not accept liability for third-party products, meaning DICOTA does not cover damage to equipment used with DICOTA products."
+              }
+            }
+          },
+          "block_order": [
+            "c1",
+            "c2",
+            "c3",
+            "c4"
+          ]
+        }
+      }
+    }
+  },
+  "order": [
+    "two_column_hero",
+    "feature_card_grid"
+  ],
+  "layout": "theme",
+  "wrapper": "main.main-wrapper"
+}

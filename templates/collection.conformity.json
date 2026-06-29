@@ -1,0 +1,16 @@
+{
+  "sections": {
+    "certificates_list": {
+      "type": "certificates_list",
+      "settings": {
+        "text_heading": "EU Declarations of Conformity",
+        "richtext_text": "<p>All DICOTA products with an EU Declaration of Conformity (CE) — filter by SKU or product title.</p>"
+      }
+    }
+  },
+  "order": [
+    "certificates_list"
+  ],
+  "layout": "theme",
+  "wrapper": "main.main-wrapper"
+}

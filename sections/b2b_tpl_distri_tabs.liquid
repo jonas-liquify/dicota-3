@@ -2,54 +2,68 @@
 {{ section.settings.text_heading }}
 </h2><div class="text-size-medium"> {{ section.settings.textarea_text }} </div></div><div x-data="{tab: 1}" role="tablist" class="acc-dis_tab-component"><div li-cf-theme-blocks="" class="acc-dis_tab-menu">
 {% content_for 'blocks' %}
-</div></div>{% content_for "block", type: "b2b-tpl-panes", id: "b2b-tpl-panes" %}</div></div></div> {% schema %} {
-    "tag": "section",
-    "name": "B2B Tpl Distri Tabs",
-    "class": "section_acc-dis",
-    "blocks": [
+</div></div>{% content_for "block", type: "b2b-tpl-panes", id: "b2b-tpl-panes" %}</div></div></div> {% schema %}
+{
+  "tag": "section",
+  "name": "B2B Tpl Distri Tabs",
+  "class": "section_acc-dis",
+  "blocks": [
+    {
+      "type": "b2b-tpl-panes",
+      "name": "B2B Tpl Panes",
+      "blocks": [
         {
-            "type": "b2b-tpl-tab"
+          "type": "b2b-tpl-tab"
         },
         {
-            "type": "b2b-tpl-tab-pane"
+          "type": "b2b-tpl-tab-pane"
+        }
+      ]
+    },
+    {
+      "type": "b2b-tpl-tab"
+    },
+    {
+      "type": "b2b-tpl-tab-pane"
+    },
+    {
+      "type": "@app"
+    }
+  ],
+  "settings": [
+    {
+      "id": "text_heading",
+      "type": "text",
+      "label": "Heading",
+      "default": "Distributors"
+    },
+    {
+      "id": "textarea_text",
+      "type": "textarea",
+      "label": "Text",
+      "default": "Our authorized distribution partners worldwide."
+    }
+  ],
+  "presets": [
+    {
+      "name": "B2B Tpl Distri Tabs",
+      "category": "_B2B",
+      "blocks": [
+        {
+          "type": "b2b-tpl-tab"
         },
         {
-            "type": "@app"
+          "type": "b2b-tpl-panes",
+          "static": true,
+          "id": "b2b-tpl-panes",
+          "blocks": [
+            {
+              "type": "b2b-tpl-tab-pane"
+            }
+          ]
         }
-    ],
-    "settings": [
-        {
-            "id": "text_heading",
-            "type": "text",
-            "label": "Heading",
-            "default": "Distributors"
-        },
-        {
-            "id": "textarea_text",
-            "type": "textarea",
-            "label": "Text",
-            "default": "Our authorized distribution partners worldwide."
-        }
-    ],
-    "presets": [
-        {
-            "name": "B2B Tpl Distri Tabs",
-            "category": "_B2B",
-            "blocks": [
-                {
-                    "type": "b2b-tpl-tab"
-                },
-                {
-                    "type": "b2b-tpl-panes",
-                    "static": true,
-                    "id": "b2b-tpl-panes",
-                    "blocks": [
-                        {
-                            "type": "b2b-tpl-tab-pane"
-                        }
-                    ]
-                }
-            ]
-        }
-    ]
-} {% endschema %}
+      ]
+    }
+  ]
+}
+{% endschema %}
