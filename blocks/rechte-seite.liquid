@@ -1,13 +1,6 @@
 <div li-static-block="Rechte Seite" class="announcement-bar_right"><div li-cf-theme-blocks="" class="announcement-bar_links">
 {% content_for 'blocks' %}
-</div>{% if localization.available_languages.size > 1 %}    <localization-form li-if="localization.available_languages.size > 1" class="li-lang_wrapper">
-    {% form 'localization', class: 'li-lang_form' %}
-<div data-hover="true" data-delay="200" class="li-lang_dropdown w-dropdown"><div lang="{{ localization.language.iso_code }}" class="li-lang_dd-toggle announcement-bar_lang w-dropdown-toggle"><div class="announcement-bar_lang-flag"></div><div li-object="localization.language.endonym_name | upcase">{{ localization.language.endonym_name | upcase }}</div><div class="dropdown-icon w-embed">{% render 'icon_chevron_down' %}</div></div><nav li-for:inside="language in localization.available_languages" class="li-lang_dd-list w-dropdown-list">
-        {% for language in localization.available_languages %}                            {% unless localization.language.iso_code == language.iso_code %}    <div li-unless="localization.language.iso_code == language.iso_code" class="li-lang_dd-list-item">
-    <a href="#" li-object="language.endonym_name | upcase" lang="{{ language.iso_code }}" data-value="{{ language.iso_code }}" class="li-lang_dd-link w-dropdown-link">{{ language.endonym_name | upcase }}</a>    </div>
-{% endunless %}
-                    {% endfor %}    </nav></div><input type="hidden" name="language_code" class="li-lang_hidden-input" value="{{ localization.language.iso_code }}">{% endform %}    </localization-form>
-{% endif %}</div> {% schema %} {
+</div>{% render 'localization_picker' %}</div> {% schema %} {
     "name": "Rechte Seite",
     "blocks": [
         {
