@@ -45,6 +45,7 @@
             "text_label_produktfamilie": "Product family",
             "text_label_segment": "Segment",
             "text_verfugbar_text": "In stock",
+            "text_limitiert_text": "Limited stock",
             "text_nicht_verfugbar_text": "Out of stock",
             "url_angebot_link": "",
             "text_angebot_text": "Request a quote",
@@ -87,6 +88,7 @@
             "url_download_1_link": "",
             "text_download_2_titel": "Letter of Conformity",
             "text_download_3_titel": "User Manual",
+            "text_download_leaflet_titel": "Product Leaflet",
             "text_download_4_titel": "Product Images"
           },
           "blocks": {}
@@ -219,16 +221,25 @@
     "add_to_your_kit": {
       "type": "add_to_your_kit",
       "blocks": {
-        "produkt": {
+        "produkt_LMTqbg": {
           "type": "produkt",
           "name": "Produkt",
           "settings": {
             "product": ""
           },
           "blocks": {}
+        },
+        "produkt": {
+          "type": "produkt",
+          "name": "Produkt",
+          "settings": {
+            "product": "10-in-1-docking-station-8k-tb4-hdmi-pd-96w-ch"
+          },
+          "blocks": {}
         }
       },
       "block_order": [
+        "produkt_LMTqbg",
         "produkt"
       ],
       "settings": {
@@ -267,6 +278,8 @@
       "type": "product_faq",
       "settings": {
         "text_titel": "FAQ",
+        "faq_set": "",
+        "faq_entries": [],
         "padding_top": 80,
         "padding_bottom": 80,
         "bg_color": "#ffffff",
