@@ -2099,8 +2099,12 @@ figcaption {
   width: auto;
   padding-top: .5rem;
   padding-bottom: .5rem;
-  top: auto;
-  bottom: 100%;
+  top: 100%;
+  bottom: auto;
+  min-width: 13rem;
+  max-height: 60vh;
+  overflow-y: auto;
+  z-index: 1000;
 }
 
 .li-lang_dd-link {
@@ -4737,6 +4741,21 @@ figcaption {
     flex-wrap: wrap;
     gap: .75rem 1rem;
   }
+  .ph_gallery-more {
+    display: none;
+  }
+  .sol-feature {
+    grid-template-columns: 1fr;
+  }
+  .sol-feature_content {
+    padding: 2.5rem;
+  }
+  .sol-facts_grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .sol-refs_grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -5398,6 +5417,28 @@ figcaption {
   .nav_search-empty-grid, .nav_search-results-grid { grid-template-columns: 1fr; gap: 2rem; }
   .article_title, .article_body h2, .article_body h3, .article_body blockquote { font-size: 1.6rem; }
   .value-tabs_link, .value-tabs_pane { grid-column: 1; }
+  .product-card .product-card_image-link {
+    height: auto;
+    aspect-ratio: 3 / 4;
+  }
+  .multi-form_product-row {
+    flex-wrap: wrap;
+  }
+  .presentations_row {
+    flex-wrap: wrap;
+  }
+  .sol-feature_content {
+    padding: 2rem 1.5rem;
+  }
+  .sol-facts_grid {
+    grid-template-columns: 1fr;
+  }
+  .sol-facts_value {
+    font-size: 1.875rem;
+  }
+  .sol-refs_grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media screen and (max-width: 479px) {
@@ -6009,6 +6050,21 @@ figcaption {
   .nav_shop-icons .nav_wishlist {
     display: none;
   }
+  .ph-dim-modal_panel {
+    width: 100%;
+  }
+  .multi-form_button-group {
+    flex-direction: column-reverse;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+  .multi-form_button-group .button {
+    width: 100%;
+    min-width: 0;
+  }
+  .multi-form_button-group .button.is-secondary {
+    margin-right: 0;
+  }
 }
 
 #w-node-_5eccf730-c887-5204-0e0c-693f99a7329a-99a7328f {
@@ -6343,7 +6399,11 @@ figcaption {
   width: 100%;
   font-size: .75rem;
   line-height: 1.5;
-  z-index: 10;
+  position: relative;
+  /* Über der Navbar (sticky, z-index 1000), damit das Sprach-/Währungs-
+     Dropdown nach unten über die Navigation klappt statt dahinter zu
+     verschwinden. Die Bar selbst überlappt die Navbar nie (liegt darüber). */
+  z-index: 1001;
 }
 /* Defensive: explicit white on all common text children in case
    CSS-variable inheritance doesn't resolve (Liquiflow Builder timing). */
@@ -6599,6 +6659,10 @@ figcaption {
 
 .hero_headline-line {
   margin: 0;
+  justify-content: flex-start;
+  align-items: stretch;
+  display: flex;
+  flex-direction: row;
 }
 
 .hero_subtext {
@@ -8830,6 +8894,118 @@ figcaption {
   flex: none;
 }
 
+/* =============================================================
+   DICOTA — Localization Picker (Sprache + Region/Währung)
+   Ein Snippet, überall gerendert. Sprache + Markt/Währung via
+   nativen <button> (name=language_code / country_code) → kein JS nötig.
+   ============================================================= */
+.li-lang_wrapper {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Trenner "DE | €" im Toggle */
+.li-lang_sep {
+  opacity: .4;
+  margin: 0 .1rem;
+}
+
+/* Gruppen (Sprache / Region) untereinander, Trennlinie dazwischen */
+.li-lang_form {
+  width: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.li-lang_dd-group {
+  width: 100%;
+}
+
+.li-lang_dd-group + .li-lang_dd-group {
+  margin-top: .4rem;
+  padding-top: .4rem;
+  border-top: 1px solid #ffffff26;
+}
+
+.li-lang_dd-items {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Buttons sehen aus wie die alten Link-Items (Button-Reset) */
+button.li-lang_dd-link {
+  grid-column-gap: .75rem;
+  width: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font: inherit;
+  color: #fff;
+  text-transform: inherit;
+  white-space: nowrap;
+  padding: .35rem 1rem;
+}
+
+.li-lang_dd-link.is-active {
+  font-weight: 600;
+}
+
+.li-lang_dd-link.is-active:before {
+  content: "✓";
+  margin-right: .4rem;
+}
+
+/* Währung rechts neben dem Ländernamen */
+.li-lang_dd-currency {
+  opacity: .55;
+  margin-left: auto;
+  padding-left: 1rem;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Liste breit genug für "GERMANY  € EUR", scrollbar bei vielen Märkten */
+
+/* Footer: Dropdown öffnet nach oben, Chevron zeigt entsprechend */
+.footer-bottom_lang .li-lang_dd-list.w--open {
+  top: auto;
+  bottom: 100%;
+}
+
+.footer-bottom_lang .dropdown-icon {
+  transform: rotate(180deg);
+}
+
+/* "Für Reseller"-Button in der Announcement-Bar (DICOTA-Blau),
+   rechts neben dem Sprach-/Währungs-Switch. Text + Link variabel. */
+.announcement-bar_reseller-btn {
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--base-color-brand--blue);
+  color: #fff;
+  padding: .3rem .85rem;
+  margin-left: .35rem;
+  border-radius: var(--border-radius--small);
+  font-weight: 500;
+  line-height: 1.2;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color .2s;
+}
+
+.announcement-bar_reseller-btn:hover {
+  background-color: #1f4fe6;
+  color: #fff;
+}
+
+@media screen and (max-width: 767px) {
+  .announcement-bar_reseller-btn {
+    padding: .25rem .6rem;
+    font-size: .8rem;
+  }
+}
+
 /* Responsive */
 
 /* =============================================================
@@ -10007,8 +10183,13 @@ figcaption {
 }
 .ph_upsell-btn:hover { background: #333; }
 /* Form-Wrapper transparent halten, damit der Button im Flow bleibt wie zuvor */
-.ph_upsell-form { display: contents; }
-.ph_upsell-name-link { text-decoration: none; color: inherit; }
+.ph_upsell-form {
+  display: contents;
+}
+.ph_upsell-name-link {
+  text-decoration: none;
+  color: inherit;
+}
 .ph_upsell-name-link:hover .ph_upsell-name { text-decoration: underline; }
 
 /* ── Responsive ────────────────────────────────────────────── */
@@ -12620,10 +12801,20 @@ figcaption {
 }
 .multi-form_button-group {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
+  justify-content: flex-end;
   gap: 1rem;
-  margin-top: 1.75rem;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #ebebeb;
+}
+.multi-form_button-group .button {
+  min-width: 8rem;
+  justify-content: center;
+  text-align: center;
+}
+.multi-form_button-group .button.is-secondary {
+  margin-right: auto;
 }
 
 /* Standard form_input + form_label (floating label, used in multi-step form) */
@@ -15908,14 +16099,9 @@ figcaption {
    Mobile: alle Bilder im Swiper, keine Kachel.
    ============================================================= */
 @media screen and (min-width: 992px) {
-  /* Versteckte Extra-Bilder (ab dem 5.) — per JS-Klasse, nicht nth-child,
-     damit der "More Images"-Button die Zählung nicht verschiebt. */
   .swiper-slide.is-product-gallery.is-extra {
     display: none;
   }
-  /* "More Images" sitzt direkt UNTER dem Hauptbild (linke Spalte ~63,6%),
-     nicht ganz unten neben den rechten Thumbs. clear+float setzt ihn unter
-     das gefloatete Hauptbild; eingefügt direkt nach dem ersten Slide. */
   .ph_gallery-more {
     clear: left;
     float: left;
@@ -15938,9 +16124,6 @@ figcaption {
     opacity: .65;
   }
 }
-@media screen and (max-width: 991px) {
-  .ph_gallery-more { display: none !important; }
-}
 
 /* =============================================================
    DICOTA PDP — Reviews (Judge.me-Daten, Figma-Design)
@@ -15961,12 +16144,6 @@ figcaption {
    Höhere Spezifität + Datei-Ende, damit es die Basis-Fixhöhe
    (.product-card_image-link height) zuverlässig überschreibt.
    ============================================================= */
-@media screen and (max-width: 767px) {
-  .product-card .product-card_image-link {
-    height: auto;
-    aspect-ratio: 3 / 4;
-  }
-}
 
 /* =============================================================
    DICOTA PDP — Review-Schreiben Slide-in Panel (Judge.me Submit)
@@ -15977,7 +16154,9 @@ figcaption {
   z-index: 1200;
   display: none;
 }
-.jm-review-modal.is-open { display: block; }
+.jm-review-modal.is-open {
+  display: block;
+}
 .jm-review-modal_overlay {
   position: absolute;
   inset: 0;
@@ -15985,7 +16164,9 @@ figcaption {
   opacity: 0;
   transition: opacity .3s ease;
 }
-.jm-review-modal.is-open .jm-review-modal_overlay { opacity: 1; }
+.jm-review-modal.is-open .jm-review-modal_overlay {
+  opacity: 1;
+}
 .jm-review-modal_panel {
   position: absolute;
   top: 0;
@@ -16001,7 +16182,9 @@ figcaption {
   flex-direction: column;
   overflow-y: auto;
 }
-.jm-review-modal.is-open .jm-review-modal_panel { transform: translateX(0); }
+.jm-review-modal.is-open .jm-review-modal_panel {
+  transform: translateX(0);
+}
 .jm-review-modal_header {
   display: flex;
   align-items: center;
@@ -16009,7 +16192,11 @@ figcaption {
   padding: 1.5rem;
   border-bottom: 1px solid var(--base-color-neutral--neutral-lightest, #eee);
 }
-.jm-review-modal_title { margin: 0; font-size: 1.25rem; font-weight: 600; }
+.jm-review-modal_title {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
 .jm-review-modal_close {
   background: none;
   border: 0;
@@ -16022,8 +16209,17 @@ figcaption {
   justify-content: center;
   flex: none;
 }
-.jm-review-form { padding: 1.5rem; display: flex; flex-direction: column; gap: 1rem; }
-.jm-review-form_field { display: flex; flex-direction: column; gap: .375rem; }
+.jm-review-form {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.jm-review-form_field {
+  display: flex;
+  flex-direction: column;
+  gap: .375rem;
+}
 .jm-review-form_field label { font-size: .8125rem; font-weight: 600; color: #0f0f0f; }
 .jm-review-form_field input,
 .jm-review-form_field textarea {
@@ -16037,7 +16233,10 @@ figcaption {
 .jm-review-form_field input:focus,
 .jm-review-form_field textarea:focus { outline: none; border-color: #0f0f0f; }
 .jm-review-form_field textarea { resize: vertical; min-height: 6rem; }
-.jm-review-stars-input { display: flex; gap: .25rem; }
+.jm-review-stars-input {
+  display: flex;
+  gap: .25rem;
+}
 .jm-review-stars-input button {
   background: none;
   border: 0;
@@ -16049,10 +16248,21 @@ figcaption {
   transition: color .12s ease;
 }
 .jm-review-stars-input button.is-active { color: #0f0f0f; }
-.jm-review-form_submit { margin-top: .25rem; width: 100%; justify-content: center; }
-.jm-review-form_msg { margin: 0; font-size: .875rem; }
-.jm-review-form_msg.is-error { color: #e3342f; }
-.jm-review-form_msg.is-success { color: #149534; }
+.jm-review-form_submit {
+  margin-top: .25rem;
+  width: 100%;
+  justify-content: center;
+}
+.jm-review-form_msg {
+  margin: 0;
+  font-size: .875rem;
+}
+.jm-review-form_msg.is-error {
+  color: #e3342f;
+}
+.jm-review-form_msg.is-success {
+  color: #149534;
+}
 
 /* Live predictive-search status (loading / empty) */
 .nav_search-product-status {
@@ -16130,7 +16340,9 @@ figcaption {
   z-index: 1200;
   display: none;
 }
-.ph-dim-modal.is-open { display: block; }
+.ph-dim-modal.is-open {
+  display: block;
+}
 .ph-dim-modal_overlay {
   position: absolute;
   inset: 0;
@@ -16151,7 +16363,9 @@ figcaption {
   transform: translateX(100%);
   transition: transform .35s ease;
 }
-.ph-dim-modal.is-open .ph-dim-modal_panel { transform: translateX(0); }
+.ph-dim-modal.is-open .ph-dim-modal_panel {
+  transform: translateX(0);
+}
 .ph-dim-modal_close {
   position: absolute;
   top: 1.25rem;
@@ -16245,9 +16459,6 @@ figcaption {
   height: 1rem;
 }
 .ph-dim-modal_downloads-icon svg { width: 100%; height: 100%; }
-@media screen and (max-width: 479px) {
-  .ph-dim-modal_panel { width: 100%; }
-}
 
 /* =============================================================
    DICOTA PDP — Produkt-Shots auf grauem Hintergrund
@@ -16299,7 +16510,10 @@ img.product-header_gallery-image {
   margin-top: 1.5rem;
   margin-bottom: .5rem;
 }
-.multi-form_product-search { position: relative; margin-top: .5rem; }
+.multi-form_product-search {
+  position: relative;
+  margin-top: .5rem;
+}
 .multi-form_product-results {
   position: absolute;
   left: 0;
@@ -16332,8 +16546,16 @@ img.product-header_gallery-image {
   flex-shrink: 0;
   background: #f4f4f4;
 }
-.multi-form_product-result-title { font-size: .875rem; line-height: 1.3; }
-.multi-form_product-list { display: flex; flex-direction: column; gap: .5rem; margin-top: 1rem; }
+.multi-form_product-result-title {
+  font-size: .875rem;
+  line-height: 1.3;
+}
+.multi-form_product-list {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  margin-top: 1rem;
+}
 .multi-form_product-row {
   display: flex;
   align-items: center;
@@ -16341,10 +16563,25 @@ img.product-header_gallery-image {
   padding: .625rem .875rem;
   border: 1px solid var(--base-color-neutral--neutral-lightest, #e8e8e8);
 }
-.multi-form_product-row-title { flex: 1 1 auto; min-width: 0; font-size: .875rem; }
-.multi-form_product-row-qty { display: flex; align-items: center; gap: .5rem; flex-shrink: 0; }
-.multi-form_product-row-qty .form_label { margin-bottom: 0; }
-.form_input-qty { width: 4.5rem; min-height: 2.5rem; text-align: center; }
+.multi-form_product-row-title {
+  flex: 1 1 auto;
+  min-width: 0;
+  font-size: .875rem;
+}
+.multi-form_product-row-qty {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  flex-shrink: 0;
+}
+.multi-form_product-row-qty .form_label {
+  margin-bottom: 0;
+}
+.form_input-qty {
+  width: 4.5rem;
+  min-height: 2.5rem;
+  text-align: center;
+}
 .multi-form_product-row-remove {
   background: none;
   border: 0;
@@ -16354,7 +16591,11 @@ img.product-header_gallery-image {
   padding: .25rem;
 }
 .multi-form_product-row-remove:hover { color: #0f0f0f; }
-.multi-form_product-empty { color: #9a9a9a; font-size: .875rem; padding: .75rem 0; }
+.multi-form_product-empty {
+  color: #9a9a9a;
+  font-size: .875rem;
+  padding: .75rem 0;
+}
 .multi-form_success {
   display: flex;
   flex-direction: column;
@@ -16362,9 +16603,9 @@ img.product-header_gallery-image {
   gap: 1rem;
   padding: 1.5rem 0;
 }
-.multi-form_success-icon { color: #22c55e; line-height: 0; }
-@media screen and (max-width: 767px) {
-  .multi-form_product-row { flex-wrap: wrap; }
+.multi-form_success-icon {
+  color: #22c55e;
+  line-height: 0;
 }
 
 /* =============================================================
@@ -16372,12 +16613,30 @@ img.product-header_gallery-image {
    Kategorie-Gruppen (nested theme blocks) mit Präsentations-Zeilen
    (Datei-Icon + Titel + Info + DE/EN/FR-Links). Figma 2323-24050.
    ============================================================= */
-.section_presentations { width: 100%; }
-.presentations_wrapper { display: flex; flex-direction: column; gap: 2.5rem; }
-.presentations_categories { display: flex; flex-direction: column; gap: 2rem; }
-.presentations_category { display: flex; flex-direction: column; gap: .75rem; }
-.presentations_category-title { margin: 0; }
-.presentations_list { background: #f4f4f4; }
+.section_presentations {
+  width: 100%;
+}
+.presentations_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+.presentations_categories {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.presentations_category {
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+}
+.presentations_category-title {
+  margin: 0;
+}
+.presentations_list {
+  background: #f4f4f4;
+}
 .presentations_row {
   display: flex;
   align-items: center;
@@ -16387,11 +16646,29 @@ img.product-header_gallery-image {
   border-bottom: 2px solid #fff;
 }
 .presentations_row:last-child { border-bottom: 0; }
-.presentations_row-left { display: flex; align-items: center; gap: 1rem; min-width: 0; }
-.presentations_icon { width: 1.25rem; height: 1.25rem; flex-shrink: 0; color: #0f0f0f; }
-.presentations_row-text { min-width: 0; }
-.presentations_row-meta { margin-top: .125rem; }
-.presentations_row-langs { display: flex; gap: 1rem; flex-shrink: 0; }
+.presentations_row-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  min-width: 0;
+}
+.presentations_icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  flex-shrink: 0;
+  color: #0f0f0f;
+}
+.presentations_row-text {
+  min-width: 0;
+}
+.presentations_row-meta {
+  margin-top: .125rem;
+}
+.presentations_row-langs {
+  display: flex;
+  gap: 1rem;
+  flex-shrink: 0;
+}
 .presentations_lang {
   font-size: .8125rem;
   font-weight: 500;
@@ -16400,9 +16677,6 @@ img.product-header_gallery-image {
   color: #0f0f0f;
 }
 .presentations_lang:hover { opacity: .6; }
-@media screen and (max-width: 767px) {
-  .presentations_row { flex-wrap: wrap; }
-}
 
 /* =============================================================
    DICOTA — Collection: ZIP-Download aller Produktbilder
@@ -16431,8 +16705,14 @@ img.product-header_gallery-image {
   margin-bottom: 1rem;
 }
 @keyframes coll-dl-spin { to { transform: rotate(360deg); } }
-.coll-dl-title { margin: 0 0 .25rem; font-size: 1rem; }
-.coll-dl-progress { margin: 0; font-size: .875rem; }
+.coll-dl-title {
+  margin: 0 0 .25rem;
+  font-size: 1rem;
+}
+.coll-dl-progress {
+  margin: 0;
+  font-size: .875rem;
+}
 
 /* ==========================================================================
    B2B Solutions sections (_B2B)
@@ -16531,40 +16811,12 @@ img.product-header_gallery-image {
   display: block;
 }
 
-@media screen and (max-width: 991px) {
-  .sol-feature {
-    grid-template-columns: 1fr;
-  }
-  .sol-feature_content {
-    padding: 2.5rem;
-  }
-  .sol-facts_grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .sol-refs_grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .sol-feature_content {
-    padding: 2rem 1.5rem;
-  }
-  .sol-facts_grid {
-    grid-template-columns: 1fr;
-  }
-  .sol-facts_value {
-    font-size: 1.875rem;
-  }
-  .sol-refs_grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
 /* =============================================================
    DICOTA — B2B No Access (Zugriffssperre + Login-CTA)
    ============================================================= */
-.section_no-access { width: 100%; }
+.section_no-access {
+  width: 100%;
+}
 .no-access_wrapper {
   display: flex;
   flex-direction: column;
