@@ -550,6 +550,23 @@
         "padding_bottom": 80,
         "show_rating": true
       }
+    },
+    "faq_accordion_6xnCFe": {
+      "type": "faq_accordion",
+      "name": "FAQ Accordion",
+      "settings": {
+        "text_heading": "Frequently asked questions",
+        "textarea_text": "If you have questions about applying, the selection process or getting started — we have answers.",
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "faq_set": "shipping",
+        "faq_entries": [
+          "can-i-remove-the-privacy-filter-when-i-dont-need-it",
+          "are-dicota-privacy-filters-compatible-with-my-laptop-or-monitor",
+          "does_the_privacy_filter_support_touchscreen_devices",
+          "how-does-a-dicota-privacy-filter-protect-my-screen-1"
+        ]
+      }
     }
   },
   "layout": "theme",
@@ -567,6 +584,7 @@
     "image_link_list",
     "loved_by_customers",
     "sustainability_banne",
-    "testimonials"
+    "testimonials",
+    "faq_accordion_6xnCFe"
   ]
 }
