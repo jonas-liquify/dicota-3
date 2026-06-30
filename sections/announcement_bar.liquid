@@ -1,58 +1,57 @@
 <div class="announcement-bar_container"><div li-cf-theme-blocks="" class="announcement-bar_items">
 {% content_for 'blocks' %}
-</div>{% content_for "block", type: "rechte-seite", id: "rechte-seite" %}</div> {% schema %}
-{
-  "tag": "section",
-  "name": "Announcement Bar",
-  "class": "section_announcement-bar",
-  "blocks": [
-    {
-      "type": "rechte-seite",
-      "name": "Rechte Seite",
-      "blocks": [
+</div>{% content_for "block", type: "rechte-seite", id: "rechte-seite" %}</div> {% schema %} {
+    "tag": "section",
+    "name": "Announcement Bar",
+    "class": "section_announcement-bar",
+    "blocks": [
         {
-          "type": "usp"
+            "type": "usp"
         },
         {
-          "type": "link"
-        }
-      ]
-    },
-    {
-      "type": "usp"
-    },
-    {
-      "type": "link"
-    },
-    {
-      "type": "@app"
-    }
-  ],
-  "presets": [
-    {
-      "name": "Announcement Bar",
-      "category": "Global",
-      "blocks": [
-        {
-          "type": "usp"
+            "type": "link"
         },
         {
-          "type": "rechte-seite",
-          "static": true,
-          "id": "rechte-seite",
-          "blocks": [
-            {
-              "type": "link"
-            }
-          ]
+            "type": "@app"
         }
-      ]
+    ],
+    "settings": [
+        {
+            "id": "url_reseller_button_link",
+            "type": "url",
+            "label": "Reseller Button Link"
+        },
+        {
+            "id": "text_reseller_button_text",
+            "type": "text",
+            "label": "Reseller Button Text",
+            "default": "F\u00fcr Reseller"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Announcement Bar",
+            "category": "Global",
+            "blocks": [
+                {
+                    "type": "usp"
+                },
+                {
+                    "type": "rechte-seite",
+                    "static": true,
+                    "id": "rechte-seite",
+                    "blocks": [
+                        {
+                            "type": "link"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "enabled_on": {
+        "groups": [
+            "*"
+        ]
     }
-  ],
-  "enabled_on": {
-    "groups": [
-      "*"
-    ]
-  }
-}
-{% endschema %}
+} {% endschema %}
