@@ -19,14 +19,26 @@
       "settings": {
         "text_uberschrift": "Product Presentations",
         "textarea_einleitung": "Download our product presentations as PDF or PPT — available in German, English and French.",
-        "header-23e1f1fe761bb19fd8ee48ee913dfba4": null,
-        "paragraph-25e2c1d4f71a2cd3c1cd95cfab19f179": null
+        "header-77b953bf07a1e57e8d984b879e57a331": null,
+        "paragraph-94d7933bc26575ae07fa4750cf5324bb": null
       },
       "blocks": {
         "produkt_kategorie_87Cdi": {
           "type": "produkt-kategorie",
           "disabled": false,
           "blocks": {
+            "prasentation_kWTJH": {
+              "type": "prasentation",
+              "name": "Präsentation",
+              "disabled": false,
+              "settings": {
+                "text_titel": "Product Presentation PDF",
+                "text_datei_info": "PDF · 25 MB",
+                "url_de_datei": "",
+                "url_en_datei": "",
+                "url_fr_datei": ""
+              }
+            },
             "prasentation_R3Kei": {
               "type": "prasentation",
               "disabled": false,
@@ -40,6 +52,7 @@
             }
           },
           "block_order": [
+            "prasentation_kWTJH",
             "prasentation_R3Kei"
           ],
           "settings": {
