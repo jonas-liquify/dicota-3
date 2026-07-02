@@ -19,8 +19,8 @@
       "settings": {
         "text_uberschrift": "Product Presentations",
         "textarea_einleitung": "Download our product presentations as PDF or PPT — available in German, English and French.",
-        "header-77b953bf07a1e57e8d984b879e57a331": null,
-        "paragraph-94d7933bc26575ae07fa4750cf5324bb": null
+        "header-daf3acb083ea41533425a04fd77c27a4": null,
+        "paragraph-fcbf7bfccbd5d988907806a0c49a558a": null
       },
       "blocks": {
         "produkt_kategorie_87Cdi": {
@@ -43,8 +43,8 @@
               "type": "prasentation",
               "disabled": false,
               "settings": {
-                "text_titel": "FIVE family",
-                "text_datei_info": "PDF · 25 MB",
+                "text_titel": "PPT-Download",
+                "text_datei_info": "PPT · 25 MB",
                 "url_de_datei": "",
                 "url_en_datei": "",
                 "url_fr_datei": ""
