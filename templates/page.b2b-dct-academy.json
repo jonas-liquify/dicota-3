@@ -35,7 +35,7 @@
       "settings": {}
     }
   },
-  "layout": "theme",
+  "layout": "b2b",
   "wrapper": "main.main-wrapper",
   "order": [
     "b2b_subnav",
