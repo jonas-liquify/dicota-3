@@ -1,26 +1,64 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "b2b_subnav": {
       "type": "b2b_subnav",
-      "settings": {}
+      "settings": {
+        "text_dummy_description": "Short description",
+        "text_punkte_label": "Current point balance:",
+        "account_menu": ""
+      }
     },
     "b2b_mkt_presentation": {
       "type": "b2b_mkt_presentation",
       "blocks": {
         "produkt_kategorie_1": {
           "type": "produkt-kategorie",
-          "settings": {}
+          "settings": {
+            "text_kategorie_name": "Category"
+          },
+          "blocks": {
+            "prasentation_fCapHk": {
+              "type": "prasentation",
+              "name": "Präsentation",
+              "settings": {
+                "text_titel": "Product Presentation PDF",
+                "text_datei_info": "PDF · 25 MB",
+                "url_de_datei": "",
+                "url_en_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/FIVE_Product_Presentation_EN.pdf?v=1783026218",
+                "url_fr_datei": ""
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "prasentation_fCapHk"
+          ]
         },
         "produkt_kategorie_2": {
           "type": "produkt-kategorie",
-          "settings": {}
+          "settings": {
+            "text_kategorie_name": "Category"
+          },
+          "blocks": {}
         }
       },
       "block_order": [
         "produkt_kategorie_1",
         "produkt_kategorie_2"
       ],
-      "settings": {}
+      "settings": {
+        "text_uberschrift": "Product Presentations",
+        "textarea_einleitung": "Download our product presentations as PDF or PPT — available in German, English and French."
+      }
     }
   },
   "layout": "b2b",
