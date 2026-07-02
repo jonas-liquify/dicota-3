@@ -12,5 +12,51 @@
     "market": "all-b2b"
   },
   "parent": "header_group.json",
-  "sections": {}
+  "sections": {
+    "b2b_mkt_presentation_e4ipG": {
+      "type": "b2b_mkt_presentation",
+      "disabled": false,
+      "settings": {
+        "text_uberschrift": "Product Presentations",
+        "textarea_einleitung": "Download our product presentations as PDF or PPT — available in German, English and French.",
+        "header-23e1f1fe761bb19fd8ee48ee913dfba4": null,
+        "paragraph-25e2c1d4f71a2cd3c1cd95cfab19f179": null
+      },
+      "blocks": {
+        "produkt_kategorie_87Cdi": {
+          "type": "produkt-kategorie",
+          "disabled": false,
+          "blocks": {
+            "prasentation_R3Kei": {
+              "type": "prasentation",
+              "disabled": false,
+              "settings": {
+                "text_titel": "FIVE family",
+                "text_datei_info": "PDF · 25 MB",
+                "url_de_datei": "",
+                "url_en_datei": "",
+                "url_fr_datei": ""
+              }
+            }
+          },
+          "block_order": [
+            "prasentation_R3Kei"
+          ],
+          "settings": {
+            "text_kategorie_name": "Category"
+          }
+        }
+      },
+      "block_order": [
+        "produkt_kategorie_87Cdi"
+      ],
+      "name": "B2B Mkt Presentation"
+    }
+  },
+  "order": [
+    "announcement_bar_YPJcxP",
+    "reseller_header_UNKmKg",
+    "header_a83nJp",
+    "b2b_mkt_presentation_e4ipG"
+  ]
 }
