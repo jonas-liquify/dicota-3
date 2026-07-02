@@ -9006,6 +9006,48 @@ button.li-lang_dd-link {
   }
 }
 
+/* =============================================================
+   DICOTA — Navbar Mittelbreite-Fix (Overflow / Überlappung Suche)
+   8 Top-Level-Menüpunkte + 14rem-Suchpille brauchen ~1500px; auf
+   Laptops überlappen die Links sonst die Suche. Lösung ohne Burger-
+   Hack (Webflow data-collapse kennt nur 991/767/479): Such-Pille bei
+   Laptop-Breite auf reines Icon reduzieren (öffnet weiterhin das
+   Vollbild-Suchpanel) + Schrift/Abstände im mittleren Bereich straffen.
+   <992px greift das native Burger-Menü.
+   ============================================================= */
+@media (min-width: 992px) and (max-width: 1400px) {
+  .nav_search-pill {
+    width: auto;
+    background-color: transparent;
+    padding-left: .35rem;
+    padding-right: .35rem;
+  }
+  .nav_search-pill:hover {
+    background-color: #ffffff1a;
+  }
+  .nav_search-pill .nav_search-placeholder {
+    display: none;
+  }
+  .nav_container {
+    gap: 1rem;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1240px) {
+  .nav_menu .nav_dropdown-toggle {
+    font-size: .875rem;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1080px) {
+  .nav_menu .nav_dropdown-toggle {
+    font-size: .8rem;
+  }
+  .nav_container {
+    gap: .65rem;
+  }
+}
+
 /* Responsive */
 
 /* =============================================================
