@@ -1,0 +1,17 @@
+# Cloudflare Worker Konfiguration für den Judge.me Reviews-Proxy.
+# Deploy:  cd tools/judgeme-proxy && wrangler deploy
+# (einmalig vorher:  npm i -g wrangler  &&  wrangler login)
+
+name = "dicota-reviews"
+main = "worker.js"
+compatibility_date = "2024-11-01"
+account_id = "3d4c4c4eea68ecd4cd31e3509d481839"   # Jonas@halbstark.de's Account
+
+# Öffentliche (nicht-geheime) Variablen — hier anpassen:
+[vars]
+JUDGEME_SHOP_DOMAIN = "dicotaestore.myshopify.com"
+ALLOWED_ORIGIN = "https://www.dicota.com,https://dicota.com,https://dicotaestore.myshopify.com"   # Live-Domain(s) + Theme-Preview; kommagetrennt. Echte Live-Domain ggf. anpassen.
+
+# Der PRIVATE Judge.me-Token gehört NICHT hierher (wäre im Repo sichtbar).
+# Einmalig als verschlüsseltes Secret setzen:
+#   wrangler secret put JUDGEME_API_TOKEN

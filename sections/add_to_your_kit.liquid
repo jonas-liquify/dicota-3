@@ -1,27 +1,14 @@
-<div class="padding-global" style="padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px; background-color: {{ section.settings.bg_color }}; color: {{ section.settings.text_color }};"><div class="container-large"><div class="product-add-to-kit_header"><h2 class="product-add-to-kit_headline heading-style-h3">
+<div class="padding-global" style="padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px; background-color: {{ section.settings.bg_color }}; color: {{ section.settings.text_color }};">{% if product.metafields.shopify--discovery--product_recommendation.complementary_products != blank %}    <div class="container-large" li-if="product.metafields.shopify--discovery--product_recommendation.complementary_products != blank">
+    <div class="product-add-to-kit_header"><h2 class="product-add-to-kit_headline heading-style-h3">
 {{ section.settings.text_uberschrift }}
-</h2><div class="product-add-to-kit_tabs"><button class="product-add-to-kit_tab is-active" data-tab="0">
-{{ section.settings.text_tab_1_label }}
-</button><button class="product-add-to-kit_tab" data-tab="1">
-{{ section.settings.text_tab_2_label }}
-</button><button class="product-add-to-kit_tab" data-tab="2">
-{{ section.settings.text_tab_3_label }}
-</button><button class="product-add-to-kit_tab" data-tab="3">
-{{ section.settings.text_tab_4_label }}
-</button></div></div><div class="swiper is-add-to-kit"><div li-cf-theme-blocks="" class="swiper-wrapper is-add-to-kit">
-{% content_for 'blocks' %}
-</div></div></div></div><div class="hide w-embed w-script"><script>document.addEventListener("DOMContentLoaded", function() { var ensure = function(cb) { if (typeof Swiper !== "undefined") return cb(); if (window.__swiperLoading) return window.__swiperLoading.then(cb); var s = document.createElement("script"); s.src = "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"; var link = document.createElement("link"); link.rel = "stylesheet"; link.href = "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"; document.head.appendChild(link); window.__swiperLoading = new Promise(function(res) { s.onload = res; }); document.head.appendChild(s); window.__swiperLoading.then(cb); }; ensure(function() { document.querySelectorAll(".swiper.is-add-to-kit").forEach(function(el) { if (el.swiper) return; new Swiper(el, { slidesPerView: "auto", spaceBetween: 24, grabCursor: true, breakpoints: { 0: { spaceBetween: 16 }, 768: { spaceBetween: 24 } } }); }); var tabs = document.querySelectorAll(".product-add-to-kit_tab"); tabs.forEach(function(tab) { tab.addEventListener("click", function() { tabs.forEach(function(t) { t.classList.remove("is-active"); }); this.classList.add("is-active"); }); }); });</script></div> {% schema %} {
+</h2></div><div class="swiper is-add-to-kit"><div class="swiper-wrapper is-add-to-kit">{% for kit_product in product.metafields.shopify--discovery--product_recommendation.complementary_products.value %}    <div class="swiper-slide is-add-to-kit" li-for="kit_product in product.metafields.shopify--discovery--product_recommendation.complementary_products.value">
+                                    {% render 'product_card', product: kit_product %}
+                        </div>
+{% endfor %}</div></div>    </div>
+{% endif %}</div><div class="hide w-embed w-script"><script>document.addEventListener("DOMContentLoaded", function() { var ensure = function(cb) { if (typeof Swiper !== "undefined") return cb(); if (window.__swiperLoading) return window.__swiperLoading.then(cb); var s = document.createElement("script"); s.src = "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"; var link = document.createElement("link"); link.rel = "stylesheet"; link.href = "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"; document.head.appendChild(link); window.__swiperLoading = new Promise(function(res) { s.onload = res; }); document.head.appendChild(s); window.__swiperLoading.then(cb); }; ensure(function() { document.querySelectorAll(".swiper.is-add-to-kit").forEach(function(el) { if (el.swiper) return; new Swiper(el, { slidesPerView: "auto", spaceBetween: 24, grabCursor: true, breakpoints: { 0: { spaceBetween: 16 }, 768: { spaceBetween: 24 } } }); }); });</script></div> {% schema %} {
     "tag": "section",
     "name": "Add to Your Kit",
     "class": "section_product-add-to-kit",
-    "blocks": [
-        {
-            "type": "produkt"
-        },
-        {
-            "type": "@app"
-        }
-    ],
     "settings": [
         {
             "id": "text_uberschrift",
@@ -30,32 +17,8 @@
             "default": "Add to Your Kit"
         },
         {
-            "id": "text_tab_1_label",
-            "type": "text",
-            "label": "Tab 1 Label",
-            "default": "Screen Filters"
-        },
-        {
-            "id": "text_tab_2_label",
-            "type": "text",
-            "label": "Tab 2 Label",
-            "default": "Locks"
-        },
-        {
-            "id": "text_tab_3_label",
-            "type": "text",
-            "label": "Tab 3 Label",
-            "default": "Hub Chargers"
-        },
-        {
-            "id": "text_tab_4_label",
-            "type": "text",
-            "label": "Tab 4 Label",
-            "default": "Input Devices"
-        },
-        {
             "type": "paragraph",
-            "content": "Pro Block w\u00e4hlst du ein Shopify-Produkt aus \u2014 es wird im standard Product-Card-Format gerendert (gleich wie in Featured Products etc.). Die Tab-Buttons sind aktuell rein visuell (Klick toggelt nur den aktiven State)."
+            "content": "Die Produkte kommen automatisch aus den Complementary Products (Shopify Search &amp; Discovery) des aktuellen Produkts \u2014 Metafeld shopify--discovery--product_recommendation.complementary_products. Ohne gepflegte Complementary-Produkte wird die Section ausgeblendet. Nur die \u00dcberschrift ist editierbar."
         },
         {
             "type": "header",
@@ -102,11 +65,7 @@
         {
             "name": "Add to Your Kit",
             "category": "Product",
-            "blocks": [
-                {
-                    "type": "produkt"
-                }
-            ]
+            "blocks": []
         }
     ],
     "enabled_on": {
