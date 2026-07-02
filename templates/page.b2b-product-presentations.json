@@ -26,12 +26,24 @@
             "text_kategorie_name": "Category"
           },
           "blocks": {
-            "prasentation_fCapHk": {
+            "prasentation_FVaDmK": {
               "type": "prasentation",
               "name": "Präsentation",
               "settings": {
                 "text_titel": "Product Presentation PDF",
                 "text_datei_info": "PDF · 25 MB",
+                "url_de_datei": "",
+                "url_en_datei": "",
+                "url_fr_datei": ""
+              },
+              "blocks": {}
+            },
+            "prasentation_fCapHk": {
+              "type": "prasentation",
+              "name": "Präsentation",
+              "settings": {
+                "text_titel": "Product Presentation PPT",
+                "text_datei_info": "PPT · 25 MB",
                 "url_de_datei": "",
                 "url_en_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/FIVE_Product_Presentation_EN.pdf?v=1783026218",
                 "url_fr_datei": ""
@@ -40,6 +52,7 @@
             }
           },
           "block_order": [
+            "prasentation_FVaDmK",
             "prasentation_fCapHk"
           ]
         },
