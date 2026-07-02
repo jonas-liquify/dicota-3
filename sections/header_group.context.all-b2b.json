@@ -23,30 +23,6 @@
         "paragraph-fcbf7bfccbd5d988907806a0c49a558a": null
       },
       "blocks": {
-        "produkt_kategorie_mBXNq": {
-          "type": "produkt-kategorie",
-          "name": "Produkt Kategorie",
-          "disabled": false,
-          "blocks": {
-            "prasentation_A4WFM": {
-              "type": "prasentation",
-              "disabled": false,
-              "settings": {
-                "text_titel": "Product Presentation PDF",
-                "text_datei_info": "PDF · 25 MB",
-                "url_de_datei": "",
-                "url_en_datei": "",
-                "url_fr_datei": ""
-              }
-            }
-          },
-          "block_order": [
-            "prasentation_A4WFM"
-          ],
-          "settings": {
-            "text_kategorie_name": "Category"
-          }
-        },
         "produkt_kategorie_87Cdi": {
           "type": "produkt-kategorie",
           "name": "FIVE",
@@ -82,6 +58,30 @@
           ],
           "settings": {
             "text_kategorie_name": "FIVE family"
+          }
+        },
+        "produkt_kategorie_mBXNq": {
+          "type": "produkt-kategorie",
+          "name": "Produkt Kategorie",
+          "disabled": false,
+          "blocks": {
+            "prasentation_A4WFM": {
+              "type": "prasentation",
+              "disabled": false,
+              "settings": {
+                "text_titel": "Product Presentation PDF",
+                "text_datei_info": "PDF · 25 MB",
+                "url_de_datei": "",
+                "url_en_datei": "",
+                "url_fr_datei": ""
+              }
+            }
+          },
+          "block_order": [
+            "prasentation_A4WFM"
+          ],
+          "settings": {
+            "text_kategorie_name": "Category"
           }
         },
         "produkt_kategorie_bwGbq": {
@@ -134,8 +134,8 @@
         }
       },
       "block_order": [
-        "produkt_kategorie_mBXNq",
         "produkt_kategorie_87Cdi",
+        "produkt_kategorie_mBXNq",
         "produkt_kategorie_bwGbq",
         "produkt_kategorie_6RPbD"
       ],
