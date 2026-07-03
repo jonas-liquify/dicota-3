@@ -22,11 +22,11 @@
       "blocks": {
         "b2b_mkt_dokument_ApQcqA": {
           "type": "b2b-mkt-dokument",
-          "name": "B2B Mkt Dokument",
+          "name": "Key Visual",
           "settings": {
             "url_datei_link": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/SEVEN_key_visual_scaled.jpg?v=1783090492",
             "text_titel": "Key Visual",
-            "text_datei_info": "PDF · 193 KB"
+            "text_datei_info": "JPG · 193 KB"
           },
           "blocks": {}
         },
