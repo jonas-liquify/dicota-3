@@ -59,6 +59,18 @@
             "text_kategorie_name": "Transition from PRO to SEVEN"
           },
           "blocks": {
+            "prasentation_BH4WbR": {
+              "type": "prasentation",
+              "name": "Print",
+              "settings": {
+                "text_titel": "Transition Sheet for Print",
+                "text_datei_info": "PDF · 4 MB",
+                "url_de_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/SEVEN_transition_sheet_DE_print.pdf?v=1783090517",
+                "url_en_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/SEVEN_transition_sheet_EN_print.pdf?v=1783090515",
+                "url_fr_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/SEVEN_transition_sheet_FR_print.pdf?v=1783090515"
+              },
+              "blocks": {}
+            },
             "prasentation_LAPDG9": {
               "type": "prasentation",
               "name": "Online",
@@ -73,6 +85,7 @@
             }
           },
           "block_order": [
+            "prasentation_BH4WbR",
             "prasentation_LAPDG9"
           ]
         }
