@@ -61,8 +61,9 @@
           "blocks": {
             "prasentation_LAPDG9": {
               "type": "prasentation",
+              "name": "Online",
               "settings": {
-                "text_titel": "Product Presentation PDF",
+                "text_titel": "Transition Sheet for Online",
                 "text_datei_info": "PDF · 25 MB",
                 "url_de_datei": "",
                 "url_en_datei": "",
