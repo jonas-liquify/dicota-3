@@ -20,43 +20,6 @@
     "b2b_mkt_presentation": {
       "type": "b2b_mkt_presentation",
       "blocks": {
-        "produkt_kategorie_BA9mqe": {
-          "type": "produkt-kategorie",
-          "name": "TWO",
-          "settings": {
-            "text_kategorie_name": "TWO family"
-          },
-          "blocks": {
-            "prasentation_GU6Rgw": {
-              "type": "prasentation",
-              "name": "PDF",
-              "settings": {
-                "text_titel": "Product Presentation PDF",
-                "text_datei_info": "PDF · 1.3 MB",
-                "url_de_datei": "",
-                "url_en_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/TWO_Product_Presentation_EN.pdf?v=1783068533",
-                "url_fr_datei": ""
-              },
-              "blocks": {}
-            },
-            "prasentation_G8VxqX": {
-              "type": "prasentation",
-              "name": "PPT",
-              "settings": {
-                "text_titel": "Product Presentation PPT",
-                "text_datei_info": "PPT · 2.9 MB",
-                "url_de_datei": "",
-                "url_en_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/TWO_Product_Presentation_EN.pptx?v=1783068533",
-                "url_fr_datei": ""
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "prasentation_GU6Rgw",
-            "prasentation_G8VxqX"
-          ]
-        },
         "produkt_kategorie_pM4YmD": {
           "type": "produkt-kategorie",
           "name": "SEVEN",
@@ -129,6 +92,43 @@
           "block_order": [
             "prasentation_FVaDmK",
             "prasentation_fCapHk"
+          ]
+        },
+        "produkt_kategorie_BA9mqe": {
+          "type": "produkt-kategorie",
+          "name": "TWO",
+          "settings": {
+            "text_kategorie_name": "TWO family"
+          },
+          "blocks": {
+            "prasentation_GU6Rgw": {
+              "type": "prasentation",
+              "name": "PDF",
+              "settings": {
+                "text_titel": "Product Presentation PDF",
+                "text_datei_info": "PDF · 1.3 MB",
+                "url_de_datei": "",
+                "url_en_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/TWO_Product_Presentation_EN.pdf?v=1783068533",
+                "url_fr_datei": ""
+              },
+              "blocks": {}
+            },
+            "prasentation_G8VxqX": {
+              "type": "prasentation",
+              "name": "PPT",
+              "settings": {
+                "text_titel": "Product Presentation PPT",
+                "text_datei_info": "PPT · 2.9 MB",
+                "url_de_datei": "",
+                "url_en_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/TWO_Product_Presentation_EN.pptx?v=1783068533",
+                "url_fr_datei": ""
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "prasentation_GU6Rgw",
+            "prasentation_G8VxqX"
           ]
         },
         "produkt_kategorie_zxBK8j": {
@@ -244,9 +244,9 @@
         }
       },
       "block_order": [
-        "produkt_kategorie_BA9mqe",
         "produkt_kategorie_pM4YmD",
         "produkt_kategorie_1",
+        "produkt_kategorie_BA9mqe",
         "produkt_kategorie_zxBK8j",
         "produkt_kategorie_2",
         "produkt_kategorie_BjUTrf"
