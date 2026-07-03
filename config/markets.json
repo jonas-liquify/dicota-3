@@ -11,9 +11,6 @@
   "markets": {
     "all-b2b": {
       "parent": "@default"
-    },
-    "reseller-euro": {
-      "parent": "all-b2b"
     }
   }
 }
