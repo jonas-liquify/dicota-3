@@ -17,6 +17,20 @@
         "account_menu": ""
       }
     },
+    "section_headline_4mzKWN": {
+      "type": "section_headline",
+      "name": "Section Headline",
+      "settings": {
+        "text_vortitel": "BRAND MATERIAL",
+        "text_uberschrift": "",
+        "textarea_beschreibung": "Bags are everywhere. Bags with a laptop compartment too. But true computer bags? Those you'll only find at Dicota.",
+        "padding_top": 80,
+        "padding_bottom": 40,
+        "text_align": "left",
+        "bg_color": "#ffffff",
+        "text_color": "#0f0f0f"
+      }
+    },
     "b2b_mkt_documents": {
       "type": "b2b_mkt_documents",
       "blocks": {
@@ -65,6 +79,7 @@
   "wrapper": "main.main-wrapper",
   "order": [
     "b2b_subnav",
+    "section_headline_4mzKWN",
     "b2b_mkt_documents"
   ]
 }
