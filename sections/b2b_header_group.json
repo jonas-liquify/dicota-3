@@ -31,6 +31,18 @@
     },
     "header": {
       "type": "header",
+      "blocks": {
+        "nav_search_suggestion_3ek4RH": {
+          "type": "nav-search-suggestion",
+          "settings": {
+            "url_link": "",
+            "text_text": "Backpacks"
+          }
+        }
+      },
+      "block_order": [
+        "nav_search_suggestion_3ek4RH"
+      ],
       "settings": {
         "image_logo": "shopify://shop_images/DICOTA_Logo_Black.png",
         "url_promo_link": "",

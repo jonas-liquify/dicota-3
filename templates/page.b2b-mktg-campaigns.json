@@ -23,7 +23,7 @@
         "produkt_kategorie_94R3xy": {
           "type": "produkt-kategorie",
           "settings": {
-            "text_kategorie_name": "Transition from PRO to SEVEN"
+            "text_kategorie_name": "SEVEN family"
           },
           "blocks": {
             "prasentation_BH4WbR": {
@@ -60,9 +60,9 @@
       "block_order": [
         "produkt_kategorie_94R3xy"
       ],
-      "name": "B2B Mkt Presentation",
+      "name": "B2B Mkt Campaigns",
       "settings": {
-        "text_uberschrift": "Product Presentations",
+        "text_uberschrift": "Product Campaigns",
         "textarea_einleitung": "Download our product presentations as PDF or PPT — available in German, English and French."
       }
     },
