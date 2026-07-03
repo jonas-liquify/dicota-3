@@ -29,6 +29,7 @@
           "blocks": {
             "prasentation_3KpLeA": {
               "type": "prasentation",
+              "name": "PDF",
               "settings": {
                 "text_titel": "Product Presentation PDF",
                 "text_datei_info": "PDF · 1.7 MB",
