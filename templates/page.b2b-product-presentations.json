@@ -139,7 +139,7 @@
           "blocks": {
             "prasentation_DBXfTq": {
               "type": "prasentation",
-              "name": "Präsentation",
+              "name": "PDF",
               "settings": {
                 "text_titel": "Product Presentation PDF",
                 "text_datei_info": "PDF · 25 MB",
@@ -151,8 +151,9 @@
             },
             "prasentation_bVkXMP": {
               "type": "prasentation",
+              "name": "PPT",
               "settings": {
-                "text_titel": "Product Presentation PDF",
+                "text_titel": "Product Presentation PPT",
                 "text_datei_info": "PDF · 25 MB",
                 "url_de_datei": "",
                 "url_en_datei": "",
