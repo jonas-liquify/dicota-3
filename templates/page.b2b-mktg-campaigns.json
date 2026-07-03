@@ -34,27 +34,16 @@
           "type": "b2b-mkt-dokument",
           "name": "B2B Mkt Dokument",
           "settings": {
-            "url_datei_link": "",
-            "text_titel": "Thumbnails",
-            "text_datei_info": "ZIP · 25 MB"
-          },
-          "blocks": {}
-        },
-        "b2b_mkt_dokument_KG3FUi": {
-          "type": "b2b-mkt-dokument",
-          "name": "B2B Mkt Dokument",
-          "settings": {
-            "url_datei_link": "",
-            "text_titel": "Thumbnails",
-            "text_datei_info": "ZIP · 25 MB"
+            "url_datei_link": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/SEVEN_Bento_scaled.png?v=1783090494",
+            "text_titel": "Bento Graphic",
+            "text_datei_info": "PNG · 710 KB"
           },
           "blocks": {}
         }
       },
       "block_order": [
         "b2b_mkt_dokument_ApQcqA",
-        "b2b_mkt_dokument_VqpRee",
-        "b2b_mkt_dokument_KG3FUi"
+        "b2b_mkt_dokument_VqpRee"
       ],
       "name": "SEVEN family",
       "settings": {
