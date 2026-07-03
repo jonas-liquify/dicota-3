@@ -22,6 +22,7 @@
       "blocks": {
         "produkt_kategorie_1": {
           "type": "produkt-kategorie",
+          "name": "FIVE",
           "settings": {
             "text_kategorie_name": "FIVE family"
           },
