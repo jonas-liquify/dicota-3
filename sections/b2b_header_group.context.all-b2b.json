@@ -12,5 +12,12 @@
     "market": "all-b2b"
   },
   "parent": "b2b_header_group.json",
-  "sections": {}
+  "sections": {
+    "header": {
+      "settings": {
+        "menu": "main-menu-reseller"
+      },
+      "blocks": {}
+    }
+  }
 }
