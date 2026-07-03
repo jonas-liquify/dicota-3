@@ -50,9 +50,21 @@
           "type": "produkt-kategorie",
           "name": "Produkt Kategorie",
           "settings": {
-            "text_kategorie_name": "Category"
+            "text_kategorie_name": "for B2B Customers"
           },
           "blocks": {
+            "prasentation_ey4TGj": {
+              "type": "prasentation",
+              "name": "Präsentation",
+              "settings": {
+                "text_titel": "Product Presentation PDF",
+                "text_datei_info": "PDF · 25 MB",
+                "url_de_datei": "",
+                "url_en_datei": "",
+                "url_fr_datei": ""
+              },
+              "blocks": {}
+            },
             "prasentation_ccN89E": {
               "type": "prasentation",
               "settings": {
@@ -66,13 +78,14 @@
             }
           },
           "block_order": [
+            "prasentation_ey4TGj",
             "prasentation_ccN89E"
           ]
         },
         "produkt_kategorie_eeLrHT": {
           "type": "produkt-kategorie",
           "settings": {
-            "text_kategorie_name": "DICOTA Company Presentation"
+            "text_kategorie_name": "for Distributors"
           },
           "blocks": {
             "prasentation_neATCa": {
