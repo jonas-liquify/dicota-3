@@ -20,6 +20,29 @@
     "b2b_mkt_presentation": {
       "type": "b2b_mkt_presentation",
       "blocks": {
+        "produkt_kategorie_BA9mqe": {
+          "type": "produkt-kategorie",
+          "name": "TWO",
+          "settings": {
+            "text_kategorie_name": "TWO family"
+          },
+          "blocks": {
+            "prasentation_G8VxqX": {
+              "type": "prasentation",
+              "settings": {
+                "text_titel": "Product Presentation PDF",
+                "text_datei_info": "PDF · 25 MB",
+                "url_de_datei": "",
+                "url_en_datei": "",
+                "url_fr_datei": ""
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "prasentation_G8VxqX"
+          ]
+        },
         "produkt_kategorie_pM4YmD": {
           "type": "produkt-kategorie",
           "name": "SEVEN",
@@ -94,43 +117,6 @@
             "prasentation_fCapHk"
           ]
         },
-        "produkt_kategorie_2": {
-          "type": "produkt-kategorie",
-          "name": "New Backpacks",
-          "settings": {
-            "text_kategorie_name": "New Backpacks"
-          },
-          "blocks": {
-            "prasentation_ggYPTR": {
-              "type": "prasentation",
-              "name": "PDF",
-              "settings": {
-                "text_titel": "Product Presentation PDF",
-                "text_datei_info": "PDF · 3.4 MB",
-                "url_de_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/New_Backpacks_Product_Presentation_DE.pdf?v=1783026375",
-                "url_en_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/New_Backpacks_Product_Presentation_EN.pdf?v=1783026376",
-                "url_fr_datei": ""
-              },
-              "blocks": {}
-            },
-            "prasentation_A637E8": {
-              "type": "prasentation",
-              "name": "PPT",
-              "settings": {
-                "text_titel": "Product Presentation PPT",
-                "text_datei_info": "PPT · 7.5 MB",
-                "url_de_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/New_Backpacks_Product_Presentation_DE.pptx?v=1783026524",
-                "url_en_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/New_Backpacks_Product_Presentation_EN.pptx?v=1783026532",
-                "url_fr_datei": ""
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "prasentation_ggYPTR",
-            "prasentation_A637E8"
-          ]
-        },
         "produkt_kategorie_zxBK8j": {
           "type": "produkt-kategorie",
           "name": "ONE",
@@ -166,6 +152,43 @@
           "block_order": [
             "prasentation_i8WEVt",
             "prasentation_9ijMtj"
+          ]
+        },
+        "produkt_kategorie_2": {
+          "type": "produkt-kategorie",
+          "name": "New Backpacks",
+          "settings": {
+            "text_kategorie_name": "New Backpacks"
+          },
+          "blocks": {
+            "prasentation_ggYPTR": {
+              "type": "prasentation",
+              "name": "PDF",
+              "settings": {
+                "text_titel": "Product Presentation PDF",
+                "text_datei_info": "PDF · 3.4 MB",
+                "url_de_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/New_Backpacks_Product_Presentation_DE.pdf?v=1783026375",
+                "url_en_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/New_Backpacks_Product_Presentation_EN.pdf?v=1783026376",
+                "url_fr_datei": ""
+              },
+              "blocks": {}
+            },
+            "prasentation_A637E8": {
+              "type": "prasentation",
+              "name": "PPT",
+              "settings": {
+                "text_titel": "Product Presentation PPT",
+                "text_datei_info": "PPT · 7.5 MB",
+                "url_de_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/New_Backpacks_Product_Presentation_DE.pptx?v=1783026524",
+                "url_en_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/New_Backpacks_Product_Presentation_EN.pptx?v=1783026532",
+                "url_fr_datei": ""
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "prasentation_ggYPTR",
+            "prasentation_A637E8"
           ]
         },
         "produkt_kategorie_BjUTrf": {
@@ -207,10 +230,11 @@
         }
       },
       "block_order": [
+        "produkt_kategorie_BA9mqe",
         "produkt_kategorie_pM4YmD",
         "produkt_kategorie_1",
-        "produkt_kategorie_2",
         "produkt_kategorie_zxBK8j",
+        "produkt_kategorie_2",
         "produkt_kategorie_BjUTrf"
       ],
       "settings": {
