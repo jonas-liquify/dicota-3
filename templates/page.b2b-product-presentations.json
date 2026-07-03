@@ -132,9 +132,9 @@
         },
         "produkt_kategorie_BjUTrf": {
           "type": "produkt-kategorie",
-          "name": "Produkt Kategorie",
+          "name": "Accessories",
           "settings": {
-            "text_kategorie_name": "Category"
+            "text_kategorie_name": "Accessories"
           },
           "blocks": {
             "prasentation_DBXfTq": {
