@@ -20,6 +20,29 @@
     "b2b_mkt_presentation": {
       "type": "b2b_mkt_presentation",
       "blocks": {
+        "produkt_kategorie_pM4YmD": {
+          "type": "produkt-kategorie",
+          "name": "SEVEN",
+          "settings": {
+            "text_kategorie_name": "SEVEN family"
+          },
+          "blocks": {
+            "prasentation_3KpLeA": {
+              "type": "prasentation",
+              "settings": {
+                "text_titel": "Product Presentation PDF",
+                "text_datei_info": "PDF · 25 MB",
+                "url_de_datei": "",
+                "url_en_datei": "",
+                "url_fr_datei": ""
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "prasentation_3KpLeA"
+          ]
+        },
         "produkt_kategorie_1": {
           "type": "produkt-kategorie",
           "name": "FIVE",
@@ -170,6 +193,7 @@
         }
       },
       "block_order": [
+        "produkt_kategorie_pM4YmD",
         "produkt_kategorie_1",
         "produkt_kategorie_2",
         "produkt_kategorie_zxBK8j",
