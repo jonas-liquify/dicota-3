@@ -1,0 +1,70 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "b2b_subnav": {
+      "type": "b2b_subnav",
+      "settings": {
+        "text_dummy_description": "Short description",
+        "text_punkte_label": "Current point balance:",
+        "account_menu": ""
+      }
+    },
+    "b2b_mkt_documents": {
+      "type": "b2b_mkt_documents",
+      "blocks": {
+        "b2b_mkt_dokument_ApQcqA": {
+          "type": "b2b-mkt-dokument",
+          "name": "B2B Mkt Dokument",
+          "settings": {
+            "url_datei_link": "",
+            "text_titel": "Thumbnails",
+            "text_datei_info": "ZIP · 25 MB"
+          },
+          "blocks": {}
+        },
+        "b2b_mkt_dokument_VqpRee": {
+          "type": "b2b-mkt-dokument",
+          "name": "B2B Mkt Dokument",
+          "settings": {
+            "url_datei_link": "",
+            "text_titel": "Thumbnails",
+            "text_datei_info": "ZIP · 25 MB"
+          },
+          "blocks": {}
+        },
+        "b2b_mkt_dokument_KG3FUi": {
+          "type": "b2b-mkt-dokument",
+          "name": "B2B Mkt Dokument",
+          "settings": {
+            "url_datei_link": "",
+            "text_titel": "Thumbnails",
+            "text_datei_info": "ZIP · 25 MB"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "b2b_mkt_dokument_ApQcqA",
+        "b2b_mkt_dokument_VqpRee",
+        "b2b_mkt_dokument_KG3FUi"
+      ],
+      "settings": {
+        "text_uberschrift": "Documents"
+      }
+    }
+  },
+  "layout": "b2b",
+  "wrapper": "main.main-wrapper",
+  "order": [
+    "b2b_subnav",
+    "b2b_mkt_documents"
+  ]
+}
