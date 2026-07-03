@@ -94,7 +94,7 @@
           "type": "karte",
           "name": "Karte",
           "settings": {
-            "url_card_link": "",
+            "url_card_link": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/DICOTA_Magazine_4.0_FR_compressed.pdf?v=1783069623",
             "text_card_heading": "in French",
             "text_card_button_text": "Learn more",
             "image_card_bg_image": "shopify://shop_images/DICOTA_magazine4.png"
