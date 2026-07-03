@@ -76,10 +76,10 @@
               "name": "Online",
               "settings": {
                 "text_titel": "Transition Sheet for Online",
-                "text_datei_info": "PDF · 25 MB",
-                "url_de_datei": "",
-                "url_en_datei": "",
-                "url_fr_datei": ""
+                "text_datei_info": "PDF · 245 KB",
+                "url_de_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/SEVEN_transition_sheet_DE.pdf?v=1783090498",
+                "url_en_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/SEVEN_transition_sheet_EN.pdf?v=1783090493",
+                "url_fr_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/SEVEN_transition_sheet_FR.pdf?v=1783090492"
               },
               "blocks": {}
             }
