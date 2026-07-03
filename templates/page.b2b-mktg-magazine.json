@@ -58,55 +58,11 @@
     },
     "b2b_mkt_campaigns": {
       "type": "b2b_mkt_campaigns",
-      "blocks": {
-        "b2b_kampagne_3dEabw": {
-          "type": "b2b-kampagne",
-          "name": "B2B Kampagne",
-          "settings": {
-            "image_bild": "shopify://shop_images/DICOTA_magazine4.png",
-            "text_status": "Live",
-            "text_heading": "Campaign title",
-            "textarea_text": "Short description of the campaign and target audience.",
-            "url_button_link": "",
-            "text_button_text": "View assets"
-          },
-          "blocks": {}
-        },
-        "b2b_kampagne_RTX3FU": {
-          "type": "b2b-kampagne",
-          "name": "B2B Kampagne",
-          "settings": {
-            "text_status": "Live",
-            "text_heading": "Campaign title",
-            "textarea_text": "Short description of the campaign and target audience.",
-            "url_button_link": "",
-            "text_button_text": "View assets"
-          },
-          "blocks": {}
-        },
-        "b2b_kampagne_dYbzUg": {
-          "type": "b2b-kampagne",
-          "name": "B2B Kampagne",
-          "settings": {
-            "text_status": "Live",
-            "text_heading": "Campaign title",
-            "textarea_text": "Short description of the campaign and target audience.",
-            "url_button_link": "",
-            "text_button_text": "View assets"
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "b2b_kampagne_3dEabw",
-        "b2b_kampagne_RTX3FU",
-        "b2b_kampagne_dYbzUg"
-      ],
       "name": "Magazine",
       "settings": {
         "text_breadcrumb": "DICOTA Magazine",
         "text_heading": "DICOTA Magazine",
-        "textarea_subheading": "Current and past marketing campaigns with all assets and copy."
+        "textarea_subheading": "Explore the DICOTA Magazine in your preferred language and download the latest edition with just one click."
       }
     },
     "triple_cards_HEViiP": {
@@ -114,8 +70,9 @@
       "blocks": {
         "karte_GbdWK9": {
           "type": "karte",
+          "name": "in English",
           "settings": {
-            "url_card_link": "",
+            "url_card_link": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/DICOTA-Magazine-4.0_EN-compressed.pdf?v=1783066482",
             "text_card_heading": "in English",
             "text_card_button_text": "Learn more",
             "image_card_bg_image": "shopify://shop_images/DICOTA_magazine4.png"
@@ -150,9 +107,9 @@
       ],
       "name": "Triple Cards",
       "settings": {
-        "text_heading": "Discover our world",
+        "text_heading": "Download as PDF",
         "url_button_link": "",
-        "text_button_text": "View all",
+        "text_button_text": "",
         "padding_top": 120,
         "padding_bottom": 120
       }
