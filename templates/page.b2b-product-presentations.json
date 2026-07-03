@@ -29,7 +29,6 @@
           "blocks": {
             "prasentation_3KpLeA": {
               "type": "prasentation",
-              "name": "PDF",
               "settings": {
                 "text_titel": "Product Presentation PDF",
                 "text_datei_info": "PDF · 1.7 MB",
@@ -118,7 +117,7 @@
               "name": "PPT",
               "settings": {
                 "text_titel": "Product Presentation PPT",
-                "text_datei_info": "PPT · 7.5 MB",
+                "text_datei_info": "PDF · 7.5 MB",
                 "url_de_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/New_Backpacks_Product_Presentation_DE.pptx?v=1783026524",
                 "url_en_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/New_Backpacks_Product_Presentation_EN.pptx?v=1783026532",
                 "url_fr_datei": ""
