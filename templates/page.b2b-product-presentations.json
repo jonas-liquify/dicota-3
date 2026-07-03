@@ -28,7 +28,7 @@
           "blocks": {
             "prasentation_FVaDmK": {
               "type": "prasentation",
-              "name": "Präsentation",
+              "name": "PDF",
               "settings": {
                 "text_titel": "Product Presentation PDF",
                 "text_datei_info": "PDF · 4.8 MB",
@@ -40,7 +40,7 @@
             },
             "prasentation_fCapHk": {
               "type": "prasentation",
-              "name": "Präsentation",
+              "name": "PPT",
               "settings": {
                 "text_titel": "Product Presentation PPT",
                 "text_datei_info": "PPT · 14 MB",
@@ -65,7 +65,7 @@
           "blocks": {
             "prasentation_ggYPTR": {
               "type": "prasentation",
-              "name": "Präsentation",
+              "name": "PDF",
               "settings": {
                 "text_titel": "Product Presentation PDF",
                 "text_datei_info": "PDF · 3.4 MB",
@@ -77,7 +77,7 @@
             },
             "prasentation_A637E8": {
               "type": "prasentation",
-              "name": "Präsentation",
+              "name": "PPT",
               "settings": {
                 "text_titel": "Product Presentation PPT",
                 "text_datei_info": "PDF · 7.5 MB",
