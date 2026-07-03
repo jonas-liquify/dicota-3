@@ -92,11 +92,85 @@
             "prasentation_ggYPTR",
             "prasentation_A637E8"
           ]
+        },
+        "produkt_kategorie_zxBK8j": {
+          "type": "produkt-kategorie",
+          "name": "Produkt Kategorie",
+          "settings": {
+            "text_kategorie_name": "ONE family"
+          },
+          "blocks": {
+            "prasentation_i8WEVt": {
+              "type": "prasentation",
+              "name": "Präsentation",
+              "settings": {
+                "text_titel": "Product Presentation PDF",
+                "text_datei_info": "PDF · 25 MB",
+                "url_de_datei": "",
+                "url_en_datei": "",
+                "url_fr_datei": ""
+              },
+              "blocks": {}
+            },
+            "prasentation_9ijMtj": {
+              "type": "prasentation",
+              "settings": {
+                "text_titel": "Product Presentation PDF",
+                "text_datei_info": "PDF · 25 MB",
+                "url_de_datei": "",
+                "url_en_datei": "",
+                "url_fr_datei": ""
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "prasentation_i8WEVt",
+            "prasentation_9ijMtj"
+          ]
+        },
+        "produkt_kategorie_BjUTrf": {
+          "type": "produkt-kategorie",
+          "name": "Produkt Kategorie",
+          "settings": {
+            "text_kategorie_name": "Category"
+          },
+          "blocks": {
+            "prasentation_DBXfTq": {
+              "type": "prasentation",
+              "name": "Präsentation",
+              "settings": {
+                "text_titel": "Product Presentation PDF",
+                "text_datei_info": "PDF · 25 MB",
+                "url_de_datei": "",
+                "url_en_datei": "",
+                "url_fr_datei": ""
+              },
+              "blocks": {}
+            },
+            "prasentation_bVkXMP": {
+              "type": "prasentation",
+              "settings": {
+                "text_titel": "Product Presentation PDF",
+                "text_datei_info": "PDF · 25 MB",
+                "url_de_datei": "",
+                "url_en_datei": "",
+                "url_fr_datei": ""
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "prasentation_DBXfTq",
+            "prasentation_bVkXMP"
+          ]
         }
       },
       "block_order": [
         "produkt_kategorie_1",
-        "produkt_kategorie_2"
+        "produkt_kategorie_2",
+        "produkt_kategorie_zxBK8j",
+        "produkt_kategorie_BjUTrf"
       ],
       "settings": {
         "text_uberschrift": "Product Presentations",
