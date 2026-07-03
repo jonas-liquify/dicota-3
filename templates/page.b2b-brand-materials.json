@@ -43,6 +43,78 @@
         "text_button_text": "Download"
       }
     },
+    "b2b_mkt_presentation_fFaWf4": {
+      "type": "b2b_mkt_presentation",
+      "blocks": {
+        "produkt_kategorie_DhqyGL": {
+          "type": "produkt-kategorie",
+          "name": "Produkt Kategorie",
+          "settings": {
+            "text_kategorie_name": "Category"
+          },
+          "blocks": {
+            "prasentation_ccN89E": {
+              "type": "prasentation",
+              "settings": {
+                "text_titel": "Product Presentation PDF",
+                "text_datei_info": "PDF · 25 MB",
+                "url_de_datei": "",
+                "url_en_datei": "",
+                "url_fr_datei": ""
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "prasentation_ccN89E"
+          ]
+        },
+        "produkt_kategorie_eeLrHT": {
+          "type": "produkt-kategorie",
+          "settings": {
+            "text_kategorie_name": "DICOTA Company Presentation"
+          },
+          "blocks": {
+            "prasentation_neATCa": {
+              "type": "prasentation",
+              "name": "Präsentation",
+              "settings": {
+                "text_titel": "Presentation for B2B Customers",
+                "text_datei_info": "PDF · 25 MB",
+                "url_de_datei": "",
+                "url_en_datei": "",
+                "url_fr_datei": ""
+              },
+              "blocks": {}
+            },
+            "prasentation_KXiMTM": {
+              "type": "prasentation",
+              "settings": {
+                "text_titel": "Presentation for B2B Customers",
+                "text_datei_info": "PDF · 25 MB",
+                "url_de_datei": "",
+                "url_en_datei": "",
+                "url_fr_datei": ""
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "prasentation_neATCa",
+            "prasentation_KXiMTM"
+          ]
+        }
+      },
+      "block_order": [
+        "produkt_kategorie_DhqyGL",
+        "produkt_kategorie_eeLrHT"
+      ],
+      "name": "B2B Mkt Presentation",
+      "settings": {
+        "text_uberschrift": "DICOTA Company Presentation",
+        "textarea_einleitung": "Download our DICOTA Company Presentation tailored to your key segment. Choose from ready-to-share PDF versions or editable PowerPoint files, available in English, German, and French."
+      }
+    },
     "b2b_mkt_documents": {
       "type": "b2b_mkt_documents",
       "blocks": {
@@ -83,7 +155,7 @@
         "b2b_mkt_dokument_KG3FUi"
       ],
       "settings": {
-        "text_uberschrift": "Documents"
+        "text_uberschrift": "DICOTA Company presentation"
       }
     },
     "b2b_mkt_campaigns_FGYxfM": {
@@ -141,6 +213,7 @@
     "b2b_subnav",
     "section_headline_4mzKWN",
     "b2b_tpl_banner_1x_J9FinR",
+    "b2b_mkt_presentation_fFaWf4",
     "b2b_mkt_documents",
     "b2b_mkt_campaigns_FGYxfM",
     "b2b_tpl_card_grid_LR9WJW"
