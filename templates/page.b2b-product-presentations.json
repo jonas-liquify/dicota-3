@@ -27,6 +27,18 @@
             "text_kategorie_name": "TWO family"
           },
           "blocks": {
+            "prasentation_GU6Rgw": {
+              "type": "prasentation",
+              "name": "PDF",
+              "settings": {
+                "text_titel": "Product Presentation PDF",
+                "text_datei_info": "PDF · 25 MB",
+                "url_de_datei": "",
+                "url_en_datei": "",
+                "url_fr_datei": ""
+              },
+              "blocks": {}
+            },
             "prasentation_G8VxqX": {
               "type": "prasentation",
               "settings": {
@@ -40,6 +52,7 @@
             }
           },
           "block_order": [
+            "prasentation_GU6Rgw",
             "prasentation_G8VxqX"
           ]
         },
