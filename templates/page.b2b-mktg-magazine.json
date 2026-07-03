@@ -131,11 +131,22 @@
             "text_card_button_text": "Learn more"
           },
           "blocks": {}
+        },
+        "karte_Vqt49F": {
+          "type": "karte",
+          "name": "Karte",
+          "settings": {
+            "url_card_link": "",
+            "text_card_heading": "in French",
+            "text_card_button_text": "Learn more"
+          },
+          "blocks": {}
         }
       },
       "block_order": [
         "karte_GbdWK9",
-        "karte_pWQixU"
+        "karte_pWQixU",
+        "karte_Vqt49F"
       ],
       "name": "Triple Cards",
       "settings": {
