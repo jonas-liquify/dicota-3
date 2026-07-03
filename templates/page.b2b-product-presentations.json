@@ -142,10 +142,10 @@
               "name": "PDF",
               "settings": {
                 "text_titel": "Product Presentation PDF",
-                "text_datei_info": "PDF · 25 MB",
-                "url_de_datei": "",
-                "url_en_datei": "",
-                "url_fr_datei": ""
+                "text_datei_info": "PDF · 4.2 MB",
+                "url_de_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/Accessory_Accessory-Product_Presentation_DE.pdf?v=1783061879",
+                "url_en_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/Accessory_Accessory-Product_Presentation_EN.pdf?v=1783061811",
+                "url_fr_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/Accessory_Accessory-Product_Presentation_FR.pdf?v=1783061865"
               },
               "blocks": {}
             },
