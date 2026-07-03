@@ -82,6 +82,29 @@
             "prasentation_ccN89E"
           ]
         },
+        "produkt_kategorie_RExUqd": {
+          "type": "produkt-kategorie",
+          "name": "Produkt Kategorie",
+          "settings": {
+            "text_kategorie_name": "for e-Tail Customers"
+          },
+          "blocks": {
+            "prasentation_rwmfwA": {
+              "type": "prasentation",
+              "settings": {
+                "text_titel": "Product Presentation PDF",
+                "text_datei_info": "PDF · 25 MB",
+                "url_de_datei": "",
+                "url_en_datei": "",
+                "url_fr_datei": ""
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "prasentation_rwmfwA"
+          ]
+        },
         "produkt_kategorie_eeLrHT": {
           "type": "produkt-kategorie",
           "settings": {
@@ -120,6 +143,7 @@
       },
       "block_order": [
         "produkt_kategorie_DhqyGL",
+        "produkt_kategorie_RExUqd",
         "produkt_kategorie_eeLrHT"
       ],
       "name": "B2B Mkt Presentation",
