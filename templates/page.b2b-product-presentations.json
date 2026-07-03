@@ -58,6 +58,7 @@
         },
         "produkt_kategorie_2": {
           "type": "produkt-kategorie",
+          "name": "New Backpacks",
           "settings": {
             "text_kategorie_name": "New Backpacks"
           },
