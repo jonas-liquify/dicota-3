@@ -198,9 +198,10 @@
             },
             "prasentation_Mz4nLA": {
               "type": "prasentation",
+              "name": "PPT",
               "settings": {
-                "text_titel": "Product Presentation PDF",
-                "text_datei_info": "PDF · 25 MB",
+                "text_titel": "Product Presentation PPT",
+                "text_datei_info": "PPT · 25 MB",
                 "url_de_datei": "",
                 "url_en_datei": "",
                 "url_fr_datei": ""
