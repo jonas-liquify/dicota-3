@@ -78,7 +78,7 @@
           "blocks": {
             "prasentation_neATCa": {
               "type": "prasentation",
-              "name": "B2B",
+              "name": "PDF",
               "settings": {
                 "text_titel": "Distrbutors Company Presentation PDF",
                 "text_datei_info": "PDF · 2.6 MB",
@@ -90,6 +90,7 @@
             },
             "prasentation_KXiMTM": {
               "type": "prasentation",
+              "name": "PPT",
               "settings": {
                 "text_titel": "Distrbutors Company Presentation PPT",
                 "text_datei_info": "PPT · 6.5 MB",
