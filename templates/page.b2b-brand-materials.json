@@ -176,13 +176,37 @@
             "prasentation_gbgUYP",
             "prasentation_UYQ9xe"
           ]
+        },
+        "produkt_kategorie_QHniBr": {
+          "type": "produkt-kategorie",
+          "name": "VARs",
+          "settings": {
+            "text_kategorie_name": "for Value Added Resellers"
+          },
+          "blocks": {
+            "prasentation_Mz4nLA": {
+              "type": "prasentation",
+              "settings": {
+                "text_titel": "Product Presentation PDF",
+                "text_datei_info": "PDF · 25 MB",
+                "url_de_datei": "",
+                "url_en_datei": "",
+                "url_fr_datei": ""
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "prasentation_Mz4nLA"
+          ]
         }
       },
       "block_order": [
         "produkt_kategorie_DhqyGL",
         "produkt_kategorie_eeLrHT",
         "produkt_kategorie_RExUqd",
-        "produkt_kategorie_UNMhrH"
+        "produkt_kategorie_UNMhrH",
+        "produkt_kategorie_QHniBr"
       ],
       "name": "DICOTA Company Presentation",
       "settings": {
