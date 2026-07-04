@@ -245,6 +245,54 @@
         "text_button_text": "Download"
       }
     },
+    "b2b_mkt_presentation_bPPeAP": {
+      "type": "b2b_mkt_presentation",
+      "blocks": {
+        "produkt_kategorie_aYYxnt": {
+          "type": "produkt-kategorie",
+          "settings": {
+            "text_kategorie_name": "Category"
+          },
+          "blocks": {
+            "prasentation_C4zhy9": {
+              "type": "prasentation",
+              "name": "Präsentation",
+              "settings": {
+                "text_titel": "RGB Online Template",
+                "text_datei_info": "PDF · 25 MB",
+                "url_de_datei": "",
+                "url_en_datei": "",
+                "url_fr_datei": ""
+              },
+              "blocks": {}
+            },
+            "prasentation_qq9NtA": {
+              "type": "prasentation",
+              "settings": {
+                "text_titel": "CMYK Print Template",
+                "text_datei_info": "PDF · 25 MB",
+                "url_de_datei": "",
+                "url_en_datei": "",
+                "url_fr_datei": ""
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "prasentation_C4zhy9",
+            "prasentation_qq9NtA"
+          ]
+        }
+      },
+      "block_order": [
+        "produkt_kategorie_aYYxnt"
+      ],
+      "name": "B2B Mkt Presentation",
+      "settings": {
+        "text_uberschrift": "DICOTA Advertorials",
+        "textarea_einleitung": "Download our product presentations as PDF or PPT — available in German, English and French."
+      }
+    },
     "b2b_mkt_documents": {
       "type": "b2b_mkt_documents",
       "blocks": {
@@ -344,6 +392,7 @@
     "section_headline_4mzKWN",
     "b2b_mkt_presentation_fFaWf4",
     "b2b_tpl_banner_1x_J9FinR",
+    "b2b_mkt_presentation_bPPeAP",
     "b2b_mkt_documents",
     "b2b_mkt_campaigns_FGYxfM",
     "b2b_tpl_card_grid_LR9WJW"
