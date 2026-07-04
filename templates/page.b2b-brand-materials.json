@@ -252,7 +252,7 @@
           "type": "produkt-kategorie",
           "name": "Advertorial",
           "settings": {
-            "text_kategorie_name": "Ready-to-use Templates"
+            "text_kategorie_name": "Advertorial Templates"
           },
           "blocks": {
             "prasentation_C4zhy9": {
@@ -289,10 +289,10 @@
       "block_order": [
         "produkt_kategorie_aYYxnt"
       ],
-      "name": "DICOTA Advertorials",
+      "name": "B2B Mkt Presentation",
       "settings": {
         "text_uberschrift": "DICOTA Advertorials",
-        "textarea_einleitung": "Download the latest DICOTA advertorial: “FOR AMBITIOUS PROFESSIONALS – The new SEVEN for maximum protection.” Available now as a ready-to-use file."
+        "textarea_einleitung": "Download the latest DICOTA advertorial: “FOR AMBITIOUS PROFESSIONALS – The new SEVEN for maximum protection.” Available now as a ready-to-share file."
       }
     },
     "b2b_mkt_documents": {
