@@ -289,58 +289,10 @@
       "block_order": [
         "produkt_kategorie_aYYxnt"
       ],
-      "name": "B2B Mkt Presentation",
+      "name": "Advertorials",
       "settings": {
         "text_uberschrift": "DICOTA Advertorials",
         "textarea_einleitung": "Download the latest DICOTA advertorial: “FOR AMBITIOUS PROFESSIONALS – The new SEVEN for maximum protection.” Available now as a ready-to-share file."
-      }
-    },
-    "b2b_mkt_campaigns_FGYxfM": {
-      "type": "b2b_mkt_campaigns",
-      "blocks": {
-        "b2b_kampagne_M4ycc8": {
-          "type": "b2b-kampagne",
-          "settings": {
-            "text_status": "Live",
-            "text_heading": "Campaign title",
-            "textarea_text": "Short description of the campaign and target audience.",
-            "url_button_link": "",
-            "text_button_text": "View assets"
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "b2b_kampagne_M4ycc8"
-      ],
-      "name": "B2B Mkt Campaigns",
-      "settings": {
-        "text_breadcrumb": "Campaigns",
-        "text_heading": "Campaigns",
-        "textarea_subheading": "Current and past marketing campaigns with all assets and copy."
-      }
-    },
-    "b2b_tpl_card_grid_LR9WJW": {
-      "type": "b2b_tpl_card_grid",
-      "blocks": {
-        "b2b_tpl_karte_BYW3Bg": {
-          "type": "b2b-tpl-karte",
-          "settings": {
-            "text_heading": "Redeem points",
-            "textarea_text": "Turn points into vouchers or physical rewards."
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "b2b_tpl_karte_BYW3Bg"
-      ],
-      "name": "B2B Tpl Card Grid",
-      "settings": {
-        "text_heading": "What would you like to achieve?",
-        "textarea_text": "Pick an area and put your DICOTA points to good use.",
-        "padding_top": 80,
-        "padding_bottom": 80
       }
     },
     "b2b_tpl_banner_1x_6GCTj8": {
@@ -407,8 +359,6 @@
     "b2b_mkt_presentation_fFaWf4",
     "b2b_tpl_banner_1x_J9FinR",
     "b2b_mkt_presentation_bPPeAP",
-    "b2b_mkt_campaigns_FGYxfM",
-    "b2b_tpl_card_grid_LR9WJW",
     "b2b_tpl_banner_1x_6GCTj8",
     "b2b_mkt_documents"
   ]
