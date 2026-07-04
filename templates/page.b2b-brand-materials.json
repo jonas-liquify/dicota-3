@@ -81,10 +81,10 @@
               "name": "B2B",
               "settings": {
                 "text_titel": "Distrbutors Company Presentation PDF",
-                "text_datei_info": "PDF · 25 MB",
-                "url_de_datei": "",
-                "url_en_datei": "",
-                "url_fr_datei": ""
+                "text_datei_info": "PDF · 2.6 MB",
+                "url_de_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/DICOTA_Company_Presentation_Distributors_DE_2026.pdf?v=1783155456",
+                "url_en_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/DICOTA_Company_Presentation_Distributors_EN_2026.pdf?v=1783155451",
+                "url_fr_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/DICOTA_Company_Presentation_Distributors_FR_2026.pdf?v=1783155450"
               },
               "blocks": {}
             },
