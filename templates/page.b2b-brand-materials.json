@@ -72,6 +72,7 @@
         },
         "produkt_kategorie_eeLrHT": {
           "type": "produkt-kategorie",
+          "name": "Distributors",
           "settings": {
             "text_kategorie_name": "for Distributors"
           },
