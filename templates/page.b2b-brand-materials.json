@@ -184,6 +184,18 @@
             "text_kategorie_name": "for Value Added Resellers"
           },
           "blocks": {
+            "prasentation_TNaKJw": {
+              "type": "prasentation",
+              "name": "PDF",
+              "settings": {
+                "text_titel": "Product Presentation PDF",
+                "text_datei_info": "PDF · 25 MB",
+                "url_de_datei": "",
+                "url_en_datei": "",
+                "url_fr_datei": ""
+              },
+              "blocks": {}
+            },
             "prasentation_Mz4nLA": {
               "type": "prasentation",
               "settings": {
@@ -197,6 +209,7 @@
             }
           },
           "block_order": [
+            "prasentation_TNaKJw",
             "prasentation_Mz4nLA"
           ]
         }
