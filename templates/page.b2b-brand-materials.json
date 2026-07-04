@@ -269,6 +269,7 @@
             },
             "prasentation_qq9NtA": {
               "type": "prasentation",
+              "name": "CMYK",
               "settings": {
                 "text_titel": "CMYK Print Template",
                 "text_datei_info": "PDF · 25 MB",
