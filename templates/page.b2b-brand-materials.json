@@ -250,8 +250,9 @@
       "blocks": {
         "produkt_kategorie_aYYxnt": {
           "type": "produkt-kategorie",
+          "name": "Advertorial",
           "settings": {
-            "text_kategorie_name": "Category"
+            "text_kategorie_name": "Advertorial Templates"
           },
           "blocks": {
             "prasentation_C4zhy9": {
