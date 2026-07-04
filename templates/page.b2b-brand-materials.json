@@ -43,7 +43,7 @@
           "blocks": {
             "prasentation_ey4TGj": {
               "type": "prasentation",
-              "name": "Präsentation",
+              "name": "PDF",
               "settings": {
                 "text_titel": "B2B Company Presentation PDF",
                 "text_datei_info": "PDF · 2.6 MB",
@@ -55,6 +55,7 @@
             },
             "prasentation_ccN89E": {
               "type": "prasentation",
+              "name": "PPT",
               "settings": {
                 "text_titel": "B2B Company Presentation PPT",
                 "text_datei_info": "PPT · 6.5 MB",
