@@ -391,7 +391,7 @@
       "name": "B2B Tpl Banner 1x",
       "settings": {
         "image_banner_bild": "shopify://shop_images/DICOTA_Brandpage_Scroll_Animation.gif",
-        "text_tag": "DOWNLOAD",
+        "text_tag": "brand introduction",
         "text_heading": "DICOTA Brand Page",
         "textarea_text": "Download a ready-to-use DICOTA brand page for use on third-party websites and portals to introduce DICOTA.",
         "url_button_link": "",
