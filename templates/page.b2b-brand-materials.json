@@ -126,6 +126,7 @@
             },
             "prasentation_rwmfwA": {
               "type": "prasentation",
+              "name": "PPT",
               "settings": {
                 "text_titel": "e-Tail Company Presentation PPT",
                 "text_datei_info": "PPT · 25 MB",
