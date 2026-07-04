@@ -31,18 +31,6 @@
         "text_color": "#0f0f0f"
       }
     },
-    "b2b_tpl_banner_1x_J9FinR": {
-      "type": "b2b_tpl_banner_1x",
-      "name": "B2B Tpl Banner 1x",
-      "settings": {
-        "image_banner_bild": "shopify://shop_images/LinkedIn_image.png",
-        "text_tag": "Download",
-        "text_heading": "LINKEDIN Header",
-        "textarea_text": "The latest LinkedIn Header for your personal profile page.",
-        "url_button_link": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/Linkedin_Head_2026_FINAL.jpg?v=1783095226",
-        "text_button_text": "Download"
-      }
-    },
     "b2b_mkt_presentation_fFaWf4": {
       "type": "b2b_mkt_presentation",
       "blocks": {
@@ -58,10 +46,10 @@
               "name": "Präsentation",
               "settings": {
                 "text_titel": "B2B Company Presentation PDF",
-                "text_datei_info": "PDF · 25 MB",
-                "url_de_datei": "",
-                "url_en_datei": "",
-                "url_fr_datei": ""
+                "text_datei_info": "PDF · 2.6 MB",
+                "url_de_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/DICOTA_Company_Presentation_B2B_DE_2026.pdf?v=1783155369",
+                "url_en_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/DICOTA_Company_Presentation_B2B_EN_2026.pdf?v=1783155363",
+                "url_fr_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/DICOTA_Company_Presentation_B2B_FR_2026.pdf?v=1783155364"
               },
               "blocks": {}
             },
@@ -202,6 +190,18 @@
         "textarea_einleitung": "Download our DICOTA Company Presentation tailored to your key segment. Choose from ready-to-share PDF versions or editable PowerPoint files, available in English, German, and French."
       }
     },
+    "b2b_tpl_banner_1x_J9FinR": {
+      "type": "b2b_tpl_banner_1x",
+      "name": "B2B Tpl Banner 1x",
+      "settings": {
+        "image_banner_bild": "shopify://shop_images/LinkedIn_image.png",
+        "text_tag": "Download",
+        "text_heading": "LINKEDIN Header",
+        "textarea_text": "The latest LinkedIn Header for your personal profile page.",
+        "url_button_link": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/Linkedin_Head_2026_FINAL.jpg?v=1783095226",
+        "text_button_text": "Download"
+      }
+    },
     "b2b_mkt_documents": {
       "type": "b2b_mkt_documents",
       "blocks": {
@@ -299,8 +299,8 @@
   "order": [
     "b2b_subnav",
     "section_headline_4mzKWN",
-    "b2b_tpl_banner_1x_J9FinR",
     "b2b_mkt_presentation_fFaWf4",
+    "b2b_tpl_banner_1x_J9FinR",
     "b2b_mkt_documents",
     "b2b_mkt_campaigns_FGYxfM",
     "b2b_tpl_card_grid_LR9WJW"
