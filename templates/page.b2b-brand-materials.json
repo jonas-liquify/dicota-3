@@ -312,11 +312,11 @@
       "blocks": {
         "b2b_mkt_dokument_ApQcqA": {
           "type": "b2b-mkt-dokument",
-          "name": "SEVEN family",
+          "name": "CD Guidelines",
           "settings": {
-            "url_datei_link": "",
+            "url_datei_link": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/DICOTA_CD_Guidelines.pdf?v=1783181378",
             "text_titel": "DICOTA Corporate Design Guidelines",
-            "text_datei_info": "PDF · 25 MB"
+            "text_datei_info": "PDF · 42 KB"
           },
           "blocks": {}
         },
