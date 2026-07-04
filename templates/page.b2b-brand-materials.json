@@ -164,7 +164,7 @@
               "type": "prasentation",
               "name": "Präsentation",
               "settings": {
-                "text_titel": "Product Presentation PDF",
+                "text_titel": "Retail Company Presentation PDF",
                 "text_datei_info": "PDF · 25 MB",
                 "url_de_datei": "",
                 "url_en_datei": "",
@@ -196,7 +196,7 @@
         "produkt_kategorie_RExUqd",
         "produkt_kategorie_UNMhrH"
       ],
-      "name": "B2B Mkt Presentation",
+      "name": "DICOTA Company Presentation",
       "settings": {
         "text_uberschrift": "DICOTA Company Presentation",
         "textarea_einleitung": "Download our DICOTA Company Presentation tailored to your key segment. Choose from ready-to-share PDF versions or editable PowerPoint files, available in English, German, and French."
