@@ -385,6 +385,17 @@
         "padding_top": 80,
         "padding_bottom": 80
       }
+    },
+    "b2b_tpl_banner_1x_6GCTj8": {
+      "type": "b2b_tpl_banner_1x",
+      "name": "B2B Tpl Banner 1x",
+      "settings": {
+        "text_tag": "Promotion",
+        "text_heading": "Banner title",
+        "textarea_text": "A short descriptive text for this banner.",
+        "url_button_link": "",
+        "text_button_text": "Discover now"
+      }
     }
   },
   "layout": "b2b",
@@ -397,6 +408,7 @@
     "b2b_mkt_presentation_bPPeAP",
     "b2b_mkt_documents",
     "b2b_mkt_campaigns_FGYxfM",
-    "b2b_tpl_card_grid_LR9WJW"
+    "b2b_tpl_card_grid_LR9WJW",
+    "b2b_tpl_banner_1x_6GCTj8"
   ]
 }
