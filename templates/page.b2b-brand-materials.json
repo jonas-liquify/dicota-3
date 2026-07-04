@@ -107,14 +107,14 @@
         },
         "produkt_kategorie_RExUqd": {
           "type": "produkt-kategorie",
-          "name": "Produkt Kategorie",
+          "name": "e-Tail",
           "settings": {
             "text_kategorie_name": "for e-Tail Customers"
           },
           "blocks": {
             "prasentation_frwwHb": {
               "type": "prasentation",
-              "name": "Präsentation",
+              "name": "PDF",
               "settings": {
                 "text_titel": "e-Tail Company Presentation PDF",
                 "text_datei_info": "PDF · 25 MB",
