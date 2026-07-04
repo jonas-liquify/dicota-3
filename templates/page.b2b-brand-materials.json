@@ -150,7 +150,7 @@
           "blocks": {
             "prasentation_gbgUYP": {
               "type": "prasentation",
-              "name": "Präsentation",
+              "name": "PDF",
               "settings": {
                 "text_titel": "Retail Company Presentation PDF",
                 "text_datei_info": "PDF · 25 MB",
@@ -162,6 +162,7 @@
             },
             "prasentation_UYQ9xe": {
               "type": "prasentation",
+              "name": "PPT",
               "settings": {
                 "text_titel": "Product Presentation PDF",
                 "text_datei_info": "PDF · 25 MB",
