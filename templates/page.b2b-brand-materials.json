@@ -144,7 +144,7 @@
         },
         "produkt_kategorie_UNMhrH": {
           "type": "produkt-kategorie",
-          "name": "Produkt Kategorie",
+          "name": "Retail",
           "settings": {
             "text_kategorie_name": "for Retail Customers"
           },
