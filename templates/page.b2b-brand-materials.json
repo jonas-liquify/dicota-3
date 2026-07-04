@@ -238,8 +238,8 @@
       "name": "B2B Tpl Banner 1x",
       "settings": {
         "image_banner_bild": "shopify://shop_images/LinkedIn_image.png",
-        "text_tag": "Download",
-        "text_heading": "LINKEDIN Header",
+        "text_tag": "social media",
+        "text_heading": "LINKEDIN DICOTA Header",
         "textarea_text": "The latest LinkedIn Header for your personal profile page.",
         "url_button_link": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/Linkedin_Head_2026_FINAL.jpg?v=1783095226",
         "text_button_text": "Download"
