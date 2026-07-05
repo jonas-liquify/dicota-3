@@ -115,6 +115,41 @@
         "padding_top": 120,
         "padding_bottom": 120
       }
+    },
+    "b2b_mkt_presentation_9ttTMF": {
+      "type": "b2b_mkt_presentation",
+      "blocks": {
+        "produkt_kategorie_DKq9ND": {
+          "type": "produkt-kategorie",
+          "settings": {
+            "text_kategorie_name": "Category"
+          },
+          "blocks": {
+            "prasentation_hgYTQ3": {
+              "type": "prasentation",
+              "settings": {
+                "text_titel": "Product Presentation PDF",
+                "text_datei_info": "PDF · 25 MB",
+                "url_de_datei": "",
+                "url_en_datei": "",
+                "url_fr_datei": ""
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "prasentation_hgYTQ3"
+          ]
+        }
+      },
+      "block_order": [
+        "produkt_kategorie_DKq9ND"
+      ],
+      "name": "B2B Mkt Presentation",
+      "settings": {
+        "text_uberschrift": "Product Family Bulletins",
+        "textarea_einleitung": "Discover our dedicated product family bulletins, featuring all key information, highlights, and insights from the latest DICOTA Magazine — available for download."
+      }
     }
   },
   "layout": "b2b",
@@ -123,6 +158,7 @@
     "b2b_subnav",
     "b2b_mkt_overview",
     "b2b_mkt_campaigns",
-    "triple_cards_HEViiP"
+    "triple_cards_HEViiP",
+    "b2b_mkt_presentation_9ttTMF"
   ]
 }
