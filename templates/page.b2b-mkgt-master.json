@@ -1,0 +1,117 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "b2b_subnav": {
+      "type": "b2b_subnav",
+      "settings": {}
+    },
+    "b2b_mkt_overview": {
+      "type": "b2b_mkt_overview",
+      "blocks": {
+        "b2b-mkt-quicklink": {
+          "type": "b2b-mkt-quicklink",
+          "name": "B2B Mkt Quicklink",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "b2b-mkt-quicklink"
+      ],
+      "settings": {}
+    },
+    "b2b_mkt_product_imgs": {
+      "type": "b2b_mkt_product_imgs",
+      "blocks": {
+        "b2b-mkt-download": {
+          "type": "b2b-mkt-download",
+          "name": "B2B Mkt Download",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "b2b-mkt-download"
+      ],
+      "settings": {}
+    },
+    "b2b_mkt_campaigns": {
+      "type": "b2b_mkt_campaigns",
+      "blocks": {
+        "b2b-kampagne": {
+          "type": "b2b-kampagne",
+          "name": "B2B Kampagne",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "b2b-kampagne"
+      ],
+      "settings": {}
+    },
+    "b2b_mkt_press": {
+      "type": "b2b_mkt_press",
+      "blocks": {
+        "b2b-presse": {
+          "type": "b2b-presse",
+          "name": "B2B Presse",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "b2b-presse"
+      ],
+      "settings": {}
+    },
+    "b2b_mkt_events": {
+      "type": "b2b_mkt_events",
+      "blocks": {
+        "b2b-event": {
+          "type": "b2b-event",
+          "name": "B2B Event",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "b2b-event"
+      ],
+      "settings": {}
+    },
+    "b2b_mkt_giveaways": {
+      "type": "b2b_mkt_giveaways",
+      "blocks": {
+        "b2b-giveaway": {
+          "type": "b2b-bestell-artikel",
+          "name": "B2B Giveaway",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "b2b-giveaway"
+      ],
+      "settings": {}
+    },
+    "b2b_mkt_event_kit": {
+      "type": "b2b_mkt_event_kit",
+      "settings": {}
+    }
+  },
+  "layout": "b2b",
+  "wrapper": "main.main-wrapper",
+  "order": [
+    "b2b_subnav",
+    "b2b_mkt_overview",
+    "b2b_mkt_product_imgs",
+    "b2b_mkt_campaigns",
+    "b2b_mkt_press",
+    "b2b_mkt_events",
+    "b2b_mkt_giveaways",
+    "b2b_mkt_event_kit"
+  ]
+}
