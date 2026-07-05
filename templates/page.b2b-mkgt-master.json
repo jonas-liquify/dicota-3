@@ -11,7 +11,11 @@
   "sections": {
     "b2b_subnav": {
       "type": "b2b_subnav",
-      "settings": {}
+      "settings": {
+        "text_dummy_description": "Short description",
+        "text_punkte_label": "Current point balance:",
+        "account_menu": ""
+      }
     },
     "b2b_mkt_overview": {
       "type": "b2b_mkt_overview",
@@ -19,13 +23,37 @@
         "b2b-mkt-quicklink": {
           "type": "b2b-mkt-quicklink",
           "name": "B2B Mkt Quicklink",
-          "settings": {}
+          "settings": {
+            "text_heading": "Product images",
+            "richtext_text": "<p>All product images in high resolution as a ZIP.</p>",
+            "url_button_link": "",
+            "text_button_text": "Open"
+          },
+          "blocks": {}
         }
       },
       "block_order": [
         "b2b-mkt-quicklink"
       ],
-      "settings": {}
+      "settings": {
+        "text_breadcrumb": "Marketing",
+        "text_heading_1": "Marketing overview",
+        "textarea_subheading_1": "Everything for your campaign work — product images, press copy, event material and more.",
+        "text_linke_karte_subline": "Highlight",
+        "text_linke_karte_heading": "Current campaign",
+        "textarea_linke_karte_text": "All materials for the ongoing main campaign — print, social and web.",
+        "url_linke_karte_button_link": "",
+        "text_linke_karte_button_text": "View material",
+        "text_rechte_karte_subline": "New",
+        "text_rechte_karte_heading": "Latest press release",
+        "url_rechte_karte_button_link": "",
+        "text_rechte_karte_button_text": "Read",
+        "text_banner_heading": "Trade Show Season",
+        "textarea_banner_text": "Order your event kit for the upcoming trade fairs. Delivery in 5-7 business days.",
+        "url_banner_button_link": "",
+        "text_banner_button_text": "Order event kit",
+        "text_heading_2": "Quick access"
+      }
     },
     "b2b_mkt_product_imgs": {
       "type": "b2b_mkt_product_imgs",
@@ -33,13 +61,29 @@
         "b2b-mkt-download": {
           "type": "b2b-mkt-download",
           "name": "B2B Mkt Download",
-          "settings": {}
+          "settings": {
+            "url_download_link": "",
+            "text_heading": "Backpacks Q2",
+            "text_subheading": "23 files · 142 MB"
+          },
+          "blocks": {}
         }
       },
       "block_order": [
         "b2b-mkt-download"
       ],
-      "settings": {}
+      "settings": {
+        "text_breadcrumb": "Product images",
+        "text_heading_1": "Product images",
+        "textarea_subheading_1": "Search, find and download DICOTA product images in various resolutions.",
+        "text_heading_2": "Search",
+        "text_subheading_2": "SKU, EAN or product name.",
+        "text_downloads_heading": "Product images (ZIP)",
+        "text_liste_heading": "Product range list",
+        "text_liste_subheading": "Tabular overview of all available items.",
+        "text_info_heading": "The following information is included:",
+        "richtext_info_text": "<p>Item no. · Predecessor model · EAN code · Availability · Construction type · Color</p>"
+      }
     },
     "b2b_mkt_campaigns": {
       "type": "b2b_mkt_campaigns",
@@ -47,13 +91,24 @@
         "b2b-kampagne": {
           "type": "b2b-kampagne",
           "name": "B2B Kampagne",
-          "settings": {}
+          "settings": {
+            "text_status": "Live",
+            "text_heading": "Campaign title",
+            "textarea_text": "Short description of the campaign and target audience.",
+            "url_button_link": "",
+            "text_button_text": "View assets"
+          },
+          "blocks": {}
         }
       },
       "block_order": [
         "b2b-kampagne"
       ],
-      "settings": {}
+      "settings": {
+        "text_breadcrumb": "Campaigns",
+        "text_heading": "Campaigns",
+        "textarea_subheading": "Current and past marketing campaigns with all assets and copy."
+      }
     },
     "b2b_mkt_press": {
       "type": "b2b_mkt_press",
@@ -61,13 +116,24 @@
         "b2b-presse": {
           "type": "b2b-presse",
           "name": "B2B Presse",
-          "settings": {}
+          "settings": {
+            "text_datum": "2026-Q2",
+            "text_heading": "Press release title",
+            "textarea_text": "Short summary of the content.",
+            "url_download_link": "",
+            "text_button_text": "Download"
+          },
+          "blocks": {}
         }
       },
       "block_order": [
         "b2b-presse"
       ],
-      "settings": {}
+      "settings": {
+        "text_breadcrumb": "Press",
+        "text_heading": "Press area",
+        "textarea_subheading": "Press releases, logos, boilerplate copy and press contacts."
+      }
     },
     "b2b_mkt_events": {
       "type": "b2b_mkt_events",
@@ -75,13 +141,24 @@
         "b2b-event": {
           "type": "b2b-event",
           "name": "B2B Event",
-          "settings": {}
+          "settings": {
+            "text_datum_ort": "15.06.2026 · Berlin",
+            "text_heading": "Event title",
+            "textarea_text": "Description of the event and the DICOTA presence.",
+            "url_button_link": "",
+            "text_button_text": "Details"
+          },
+          "blocks": {}
         }
       },
       "block_order": [
         "b2b-event"
       ],
-      "settings": {}
+      "settings": {
+        "text_breadcrumb": "Events",
+        "text_heading": "Events",
+        "textarea_subheading": "Trade fairs, trade shows and exclusive events — all at a glance."
+      }
     },
     "b2b_mkt_giveaways": {
       "type": "b2b_mkt_giveaways",
@@ -89,17 +166,620 @@
         "b2b-giveaway": {
           "type": "b2b-bestell-artikel",
           "name": "B2B Giveaway",
-          "settings": {}
+          "settings": {
+            "text_bezeichnung": "Laptop Backpack Slim Eco MOTION 13-15.6\"",
+            "text_art_nr": "MO223",
+            "text_preis": "Free*"
+          },
+          "blocks": {}
         }
       },
       "block_order": [
         "b2b-giveaway"
       ],
-      "settings": {}
+      "settings": {
+        "url_breadcrumb_parent_link": "",
+        "text_breadcrumb_parent_label": "Marketing",
+        "text_breadcrumb": "Giveaways",
+        "text_heading": "Order Marketing Material",
+        "textarea_subheading": "Order promotional materials, flyers and giveaways for your next activity. Choose quantities and let us know your delivery date and occasion.",
+        "text_spalte_article": "Article",
+        "text_spalte_beschreibung": "Description",
+        "text_spalte_art_nr": "Art. No.",
+        "text_spalte_preis": "Price",
+        "text_spalte_menge": "Amount",
+        "textarea_datum_hinweistext": "Express delivery is charged separately.",
+        "textarea_event_hinweistext": "What do you need the promotional material for?",
+        "text_submit_button": "Submit now",
+        "breadcrumb_parent_label": "Marketing",
+        "breadcrumb_parent_link": "",
+        "field_date_label": "Bevorzugtes Lieferdatum:",
+        "field_event_label": "Event/Aktivität:"
+      }
     },
     "b2b_mkt_event_kit": {
       "type": "b2b_mkt_event_kit",
+      "settings": {
+        "text_breadcrumb": "Event Kit",
+        "text_heading": "Event Kit",
+        "textarea_subheading": "Complete trade show package: roll-ups, table covers, brochures and product samples.",
+        "text_tag": "Standard Kit",
+        "text_banner_heading": "Trade Show Starter",
+        "textarea_banner_text": "Contents: 2 roll-ups, table cover, 100× A4 brochures, 50× product samples.",
+        "url_banner_button_link": "",
+        "text_banner_button_text": "Order kit"
+      }
+    },
+    "b2b_news_highlight_HdAKGN": {
+      "type": "b2b_news_highlight",
+      "name": "B2B News Highlight",
+      "settings": {
+        "text_badge": "NEW",
+        "text_kategorie": "Company News",
+        "text_datum": "May 5, 2026",
+        "text_uberschrift": "Dicota is opening another Office-Complex in Dubai",
+        "textarea_text": "(Placeholder) Since 1992, more than 12 million PET bottles have been processed to minimize waste - DCT (DICOTA Cushion Technology) is a structured cushioning system that absorbs impacts, knocks and pressure from various angles.",
+        "url_button_link": "",
+        "text_button_text": "Learn more",
+        "padding_top": 40,
+        "padding_bottom": 60,
+        "bg_color": "#f6f6f6"
+      }
+    },
+    "b2b_news_updates_VnKUtn": {
+      "type": "b2b_news_updates",
+      "blocks": {
+        "updates_card_3eGLwT": {
+          "type": "updates-card",
+          "name": "Updates Card",
+          "settings": {
+            "text_titel": "Since your last login:",
+            "url_button_link": "",
+            "text_button_text": "All updates"
+          },
+          "blocks": {
+            "update_XQHV7k": {
+              "type": "update",
+              "settings": {
+                "url_link": "",
+                "text_titel": "New price list",
+                "text_untertitel": "Everyting you need to advertise"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "update_XQHV7k"
+          ]
+        },
+        "news_card_HJnaAa": {
+          "type": "news-card",
+          "name": "News Card",
+          "settings": {
+            "url_link": "",
+            "text_badge": "NEW",
+            "text_titel": "Seven",
+            "textarea_text": "(Placeholder) Since 1992, more than 12 million PET bottles have been processed to minimize waste -"
+          },
+          "blocks": {}
+        },
+        "updates_card_AKm93e": {
+          "type": "updates-card",
+          "settings": {
+            "text_titel": "Since your last login:",
+            "url_button_link": "",
+            "text_button_text": "All updates"
+          },
+          "blocks": {
+            "update_mHtjG6": {
+              "type": "update",
+              "settings": {
+                "url_link": "",
+                "text_titel": "New price list",
+                "text_untertitel": "Everyting you need to advertise"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "update_mHtjG6"
+          ]
+        },
+        "news_card_tr6QUT": {
+          "type": "news-card",
+          "settings": {
+            "url_link": "",
+            "text_badge": "NEW",
+            "text_titel": "Seven",
+            "textarea_text": "(Placeholder) Since 1992, more than 12 million PET bottles have been processed to minimize waste -"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "updates_card_3eGLwT",
+        "news_card_HJnaAa",
+        "updates_card_AKm93e",
+        "news_card_tr6QUT"
+      ],
+      "name": "B2B News Updates",
+      "settings": {
+        "text_titel_fett": "Not enough yet?",
+        "text_titel_normal": "More news hot off the press",
+        "padding_top": 40,
+        "padding_bottom": 60,
+        "bg_color": "#f6f6f6"
+      }
+    },
+    "b2b_order_samples_PWBFgg": {
+      "type": "b2b_order_samples",
+      "name": "B2B Order Samples",
+      "settings": {
+        "text_breadcrumb": "Order samples",
+        "text_heading": "Order free samples",
+        "textarea_subheading": "Pick the products you would like to evaluate. Samples are always free of charge. Your request is sent to our inside sales team for processing.",
+        "text_form_heading": "Your sample request",
+        "text_products_label": "Select products",
+        "text_product_search_label": "Search products to add",
+        "text_no_products_text": "No products added yet.",
+        "text_contact_heading": "Your contact details",
+        "text_name_label": "Contact person*",
+        "text_email_label": "Email address*",
+        "text_shipping_heading": "Delivery address",
+        "text_shipping_hint": "Prefilled from your account — you can change it for this delivery.",
+        "text_company_label": "Company",
+        "text_street_label": "Street",
+        "text_zip_label": "Postal code",
+        "text_city_label": "City",
+        "text_country_label": "Country",
+        "text_phone_label": "Phone",
+        "text_notes_label": "Notes",
+        "text_submit_button": "Send sample request",
+        "text_submitting_text": "Submitting…",
+        "text_success_heading": "Your sample request has been sent",
+        "textarea_success_text": "Thank you. Our inside sales team will process your free sample request and get back to you shortly.",
+        "text_restart_button": "Order more samples",
+        "url_sample_hook": "",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "b2b_produkt_download_CQ4mYY": {
+      "type": "b2b_produkt_download",
+      "name": "B2B Produkt-Download",
+      "settings": {
+        "text_heading": "Product downloads",
+        "richtext_text": "<p>Search any DICOTA product by SKU or product title and download the document directly.</p>",
+        "download_source": "product_leaflet",
+        "padding_top": 40,
+        "padding_bottom": 80
+      }
+    },
+    "b2b_sales_distributo_cVrGJF": {
+      "type": "b2b_sales_distributo",
+      "blocks": {
+        "b2b-sales-menu": {
+          "type": "b2b-sales-menu",
+          "static": true,
+          "settings": {},
+          "blocks": {
+            "b2b_sales_region_wLGVBc": {
+              "type": "b2b-sales-region",
+              "settings": {
+                "text_region_name": "DACH"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "b2b_sales_region_wLGVBc"
+          ]
+        },
+        "b2b-sales-panes": {
+          "type": "b2b-sales-panes",
+          "static": true,
+          "settings": {},
+          "blocks": {
+            "b2b_sales_region_pane_a6WCYT": {
+              "type": "b2b-sales-region-pane",
+              "settings": {},
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "b2b_sales_region_pane_a6WCYT"
+          ]
+        }
+      },
+      "name": "B2B Sales Distributo",
+      "settings": {
+        "text_breadcrumb": "Distributors",
+        "text_heading": "Distributor Overview",
+        "textarea_subheading": "Authorized DICOTA distribution partners by region — contacts and details at a glance."
+      }
+    },
+    "b2b_sales_overview_3LfMRK": {
+      "type": "b2b_sales_overview",
+      "blocks": {
+        "b2b_sales_quicklink_diP438": {
+          "type": "b2b-sales-quicklink",
+          "settings": {
+            "text_heading": "Product list",
+            "richtext_text": "<p>Current product range with all items, EANs and availability.</p>",
+            "url_button_link": "",
+            "text_button_text": "Open"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "b2b_sales_quicklink_diP438"
+      ],
+      "name": "B2B Sales Overview",
+      "settings": {
+        "text_breadcrumb": "Service & Sales",
+        "text_heading_1": "Service & Sales",
+        "textarea_subheading_1": "Volume pricing, product lists, promotions and distributors — everything for your sales work.",
+        "text_linke_karte_subline": "Quick Action",
+        "text_linke_karte_heading": "Request a quote",
+        "textarea_linke_karte_text": "Request volume pricing for your next order in four quick steps.",
+        "url_linke_karte_button_link": "",
+        "text_linke_karte_button_text": "Start request",
+        "text_rechte_karte_subline": "Promo",
+        "text_rechte_karte_heading": "Current promotion",
+        "url_rechte_karte_button_link": "",
+        "text_rechte_karte_button_text": "View promo",
+        "text_heading_2": "Quick access"
+      }
+    },
+    "b2b_sales_product_li_JnHBD9": {
+      "type": "b2b_sales_product_li",
+      "blocks": {
+        "b2b_sales_download_LwFkwF": {
+          "type": "b2b-sales-download",
+          "settings": {
+            "url_download_link": "",
+            "text_heading": "Product Range Q2 2026",
+            "text_subheading": "XLSX · 1.2 MB"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "b2b_sales_download_LwFkwF"
+      ],
+      "name": "B2B Sales Product Li",
+      "settings": {
+        "text_breadcrumb": "Product List",
+        "text_heading": "Product List",
+        "textarea_subheading": "Current product range as a download — all items with prices and availability.",
+        "text_liste_heading": "Product range",
+        "text_liste_subheading": "Last updated: this morning.",
+        "text_info_heading": "The following information is included:",
+        "richtext_info_text": "<p>Item no. · Predecessor model · EAN code · Availability · Price tiers · Construction type · Color</p>"
+      }
+    },
+    "b2b_sales_promotions_xLFdcQ": {
+      "type": "b2b_sales_promotions",
+      "blocks": {
+        "b2b_promo_6jPkrR": {
+          "type": "b2b-promo",
+          "settings": {
+            "text_tag": "Bundle",
+            "text_heading": "Promotion title",
+            "textarea_text": "Description of the promotion with target audience and validity period.",
+            "url_button_link": "",
+            "text_button_text": "Details"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "b2b_promo_6jPkrR"
+      ],
+      "name": "B2B Sales Promotions",
+      "settings": {
+        "text_breadcrumb": "Promotions",
+        "text_heading_1": "Current Promotions",
+        "textarea_subheading": "Special conditions, bundle prices and quarterly promotions for resellers and distributors.",
+        "text_tag": "Active until 30.06.",
+        "text_banner_heading": "Q2 Quarterly Promotion",
+        "textarea_banner_text": "15% special discount on the Backpack Eco line with a minimum order of 50 units.",
+        "url_banner_button_link": "",
+        "text_banner_button_text": "View conditions",
+        "text_heading_2": "More Promotions"
+      }
+    },
+    "b2b_sales_support_UQM4N4": {
+      "type": "b2b_sales_support",
+      "blocks": {
+        "b2b_sales_kontakt_4xR6QV": {
+          "type": "b2b-sales-kontakt",
+          "settings": {
+            "text_name": "First Last",
+            "text_e_mail": "sales@dicota.com",
+            "text_telefon": "+41 00 000 00 00",
+            "url_linkedin_link": ""
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "b2b_sales_kontakt_4xR6QV"
+      ],
+      "name": "B2B Sales Support",
+      "settings": {
+        "text_breadcrumb": "Support",
+        "text_heading_1": "Sales Support",
+        "textarea_subheading": "Your direct line to the DICOTA sales team for individual requests.",
+        "text_heading_2": "DICOTA Schweiz AG"
+      }
+    },
+    "b2b_sales_volume_pri_E3zpqK": {
+      "type": "b2b_sales_volume_pri",
+      "name": "B2B Sales Volume Pri",
+      "settings": {
+        "text_breadcrumb": "Volume pricing",
+        "text_heading": "Request volume pricing",
+        "textarea_subheading": "Request a custom quote in four steps: reseller details, distributor, end customer and your notes.",
+        "text_form_heading": "Request a quote",
+        "text_step_1_label": "Reseller",
+        "text_step_2_label": "Distributor",
+        "text_step_3_label": "End customer",
+        "text_step_4_label": "Notes",
+        "text_step_2_heading": "Enter offer details",
+        "text_offer_type_label": "Offer type",
+        "text_offer_type_option_1": "Public tender",
+        "text_offer_type_option_2": "Project business",
+        "text_offer_type_option_3": "Own use",
+        "text_offer_value_label": "Estimated order value",
+        "text_products_label": "Select products",
+        "text_product_search_label": "Search products to add",
+        "text_no_products_text": "No products added yet.",
+        "text_step_3_heading": "End customer (if available)",
+        "text_billing_address_label": "Billing address",
+        "text_company_label": "Company",
+        "text_name_label": "Name",
+        "text_street_label": "Street",
+        "text_zip_label": "Postal code",
+        "text_city_label": "City",
+        "text_country_label": "Country",
+        "text_shipping_address_label": "Shipping address",
+        "text_step_4_heading": "Your notes",
+        "text_notes_label": "Notes",
+        "text_submitting_text": "Submitting…",
+        "text_success_heading": "Your request has been submitted",
+        "textarea_success_text": "Thank you. Our sales team will get back to you shortly. You can review your requested quotes under \"My online orders\".",
+        "text_restart_button": "Back to start",
+        "url_request_hook": ""
+      }
+    },
+    "b2b_solution_LghQ3C": {
+      "type": "b2b_solution",
+      "blocks": {
+        "b2b_sol_fact_g7dMQG": {
+          "type": "b2b-sol-fact",
+          "settings": {
+            "text_zahl": "1,000+",
+            "text_label": "Products available"
+          },
+          "blocks": {}
+        },
+        "b2b_sol_capability_iXRRfN": {
+          "type": "b2b-sol-capability",
+          "settings": {
+            "text_heading": "Capability title",
+            "textarea_text": "Describe the capability — e.g. branding, doming, custom configuration or bundle."
+          },
+          "blocks": {}
+        },
+        "b2b-sol-referenzen": {
+          "type": "b2b-sol-referenzen",
+          "static": true,
+          "settings": {},
+          "blocks": {
+            "b2b_sol_referenz_gxbN4k": {
+              "type": "b2b-sol-referenz",
+              "settings": {},
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "b2b_sol_referenz_gxbN4k"
+          ]
+        }
+      },
+      "block_order": [
+        "b2b_sol_fact_g7dMQG",
+        "b2b_sol_capability_iXRRfN"
+      ],
+      "name": "B2B Solution",
+      "settings": {
+        "url_breadcrumb_parent_link": "",
+        "text_breadcrumb_parent_label": "Solutions",
+        "text_breadcrumb": "Solution",
+        "text_subline": "B2B Solutions",
+        "text_heading_1": "Solution name",
+        "textarea_subheading_1": "Describe this B2B solution: the service, the value for the reseller, and what makes it work — supported by facts, references and concrete offerings.",
+        "url_hero_button_link": "",
+        "text_hero_button_text": "Become a reseller",
+        "text_feature_subline": "Why DICOTA",
+        "text_feature_heading": "Your everyday IT accessory partner",
+        "textarea_feature_text": "Ideal partner for daily IT accessory business: 1,000+ products, fast availability from a European warehouse, 2–3 day delivery, no MOQ, strong reseller margins, high product quality, online ordering and dedicated customer support.",
+        "text_facts_heading": "Key facts",
+        "text_referenzen_heading": "Trusted by",
+        "text_cta_heading": "Ready to get started?",
+        "textarea_cta_text": "Order online with fast availability and no minimum order quantity — backed by dedicated customer support.",
+        "url_cta_button_link": "",
+        "text_cta_button_text": "Start ordering",
+        "breadcrumb_parent_label": "Solutions",
+        "breadcrumb_parent_link": "",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "b2b_tpl_banner_1x_QimzAt": {
+      "type": "b2b_tpl_banner_1x",
+      "name": "B2B Tpl Banner 1x",
+      "settings": {
+        "text_tag": "Promotion",
+        "text_heading": "Banner title",
+        "textarea_text": "A short descriptive text for this banner.",
+        "url_button_link": "",
+        "text_button_text": "Discover now"
+      }
+    },
+    "b2b_tpl_banner_2x_bgt3Pf": {
+      "type": "b2b_tpl_banner_2x",
+      "blocks": {
+        "b2b_tpl_banner_H3Xxyg": {
+          "type": "b2b-tpl-banner",
+          "name": "B2B Tpl Banner",
+          "settings": {
+            "text_tag": "Tag",
+            "text_heading": "Double banner title",
+            "url_button_link": "",
+            "text_button_text": "Read more →"
+          },
+          "blocks": {}
+        },
+        "b2b_tpl_banner_7Krmyn": {
+          "type": "b2b-tpl-banner",
+          "settings": {
+            "text_tag": "Tag",
+            "text_heading": "Double banner title",
+            "url_button_link": "",
+            "text_button_text": "Read more →"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "b2b_tpl_banner_H3Xxyg",
+        "b2b_tpl_banner_7Krmyn"
+      ],
+      "name": "B2B Tpl Banner 2x",
       "settings": {}
+    },
+    "b2b_tpl_banner_wide_XX7ww9": {
+      "type": "b2b_tpl_banner_wide",
+      "name": "B2B Tpl Banner Wide",
+      "settings": {
+        "text_heading": "Long banner title",
+        "textarea_text": "More room for a detailed description of this banner.",
+        "url_button_link": "",
+        "text_button_text": "Learn more"
+      }
+    },
+    "b2b_tpl_card_grid_XRdQ8e": {
+      "type": "b2b_tpl_card_grid",
+      "blocks": {
+        "b2b_tpl_karte_GwXzRQ": {
+          "type": "b2b-tpl-karte",
+          "name": "B2B Tpl Karte",
+          "settings": {
+            "text_heading": "Redeem points",
+            "textarea_text": "Turn points into vouchers or physical rewards."
+          },
+          "blocks": {}
+        },
+        "b2b_tpl_karte_X4hntr": {
+          "type": "b2b-tpl-karte",
+          "name": "B2B Tpl Karte",
+          "settings": {
+            "text_heading": "Redeem points",
+            "textarea_text": "Turn points into vouchers or physical rewards."
+          },
+          "blocks": {}
+        },
+        "b2b_tpl_karte_CTXRyV": {
+          "type": "b2b-tpl-karte",
+          "settings": {
+            "text_heading": "Redeem points",
+            "textarea_text": "Turn points into vouchers or physical rewards."
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "b2b_tpl_karte_GwXzRQ",
+        "b2b_tpl_karte_X4hntr",
+        "b2b_tpl_karte_CTXRyV"
+      ],
+      "name": "B2B Tpl Card Grid",
+      "settings": {
+        "text_heading": "What would you like to achieve?",
+        "textarea_text": "Pick an area and put your DICOTA points to good use.",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "b2b_tpl_distri_tabs_TDyD7Y": {
+      "type": "b2b_tpl_distri_tabs",
+      "blocks": {
+        "b2b_tpl_tab_WUUyPD": {
+          "type": "b2b-tpl-tab",
+          "name": "B2B Tpl Tab",
+          "settings": {
+            "text_tab_label": "Region"
+          },
+          "blocks": {}
+        },
+        "b2b_tpl_tab_bxXfAE": {
+          "type": "b2b-tpl-tab",
+          "settings": {
+            "text_tab_label": "Region"
+          },
+          "blocks": {}
+        },
+        "b2b-tpl-panes": {
+          "type": "b2b-tpl-panes",
+          "static": true,
+          "settings": {},
+          "blocks": {
+            "b2b_tpl_tab_pane_9hgMpN": {
+              "type": "b2b-tpl-tab-pane",
+              "name": "B2B Tpl Tab Pane",
+              "settings": {},
+              "blocks": {}
+            },
+            "b2b_tpl_tab_pane_ttFQdD": {
+              "type": "b2b-tpl-tab-pane",
+              "settings": {},
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "b2b_tpl_tab_pane_9hgMpN",
+            "b2b_tpl_tab_pane_ttFQdD"
+          ]
+        }
+      },
+      "block_order": [
+        "b2b_tpl_tab_WUUyPD",
+        "b2b_tpl_tab_bxXfAE"
+      ],
+      "name": "B2B Tpl Distri Tabs",
+      "settings": {
+        "text_heading": "Distributors",
+        "textarea_text": "Our authorized distribution partners worldwide."
+      }
+    },
+    "rating_bar_EJmyAX": {
+      "type": "rating_bar",
+      "name": "Rating Bar",
+      "settings": {
+        "text_bewertung_zahl": "4.83",
+        "text_bewertung_label": "Excellent",
+        "text_anzahl_bewertungen": "17,982 reviews",
+        "url_provider_link": "",
+        "alignment": "center",
+        "padding_top": 24,
+        "padding_bottom": 24,
+        "bg_color": "#ffffff",
+        "text_color": "#0f0f0f",
+        "stars_color": "#fd6612"
+      }
     }
   },
   "layout": "b2b",
@@ -112,6 +792,23 @@
     "b2b_mkt_press",
     "b2b_mkt_events",
     "b2b_mkt_giveaways",
-    "b2b_mkt_event_kit"
+    "b2b_mkt_event_kit",
+    "b2b_news_highlight_HdAKGN",
+    "b2b_news_updates_VnKUtn",
+    "b2b_order_samples_PWBFgg",
+    "b2b_produkt_download_CQ4mYY",
+    "b2b_sales_distributo_cVrGJF",
+    "b2b_sales_overview_3LfMRK",
+    "b2b_sales_product_li_JnHBD9",
+    "b2b_sales_promotions_xLFdcQ",
+    "b2b_sales_support_UQM4N4",
+    "b2b_sales_volume_pri_E3zpqK",
+    "b2b_solution_LghQ3C",
+    "b2b_tpl_banner_1x_QimzAt",
+    "b2b_tpl_banner_2x_bgt3Pf",
+    "b2b_tpl_banner_wide_XX7ww9",
+    "b2b_tpl_card_grid_XRdQ8e",
+    "b2b_tpl_distri_tabs_TDyD7Y",
+    "rating_bar_EJmyAX"
   ]
 }
