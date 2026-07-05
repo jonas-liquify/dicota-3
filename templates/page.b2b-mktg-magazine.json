@@ -126,6 +126,30 @@
             "text_kategorie_name": "SEVEN family"
           },
           "blocks": {
+            "prasentation_fUmTDn": {
+              "type": "prasentation",
+              "name": "Präsentation",
+              "settings": {
+                "text_titel": "Product Presentation PDF",
+                "text_datei_info": "PDF · 25 MB",
+                "url_de_datei": "",
+                "url_en_datei": "",
+                "url_fr_datei": ""
+              },
+              "blocks": {}
+            },
+            "prasentation_CRDBRi": {
+              "type": "prasentation",
+              "name": "Präsentation",
+              "settings": {
+                "text_titel": "Product Presentation PDF",
+                "text_datei_info": "PDF · 25 MB",
+                "url_de_datei": "",
+                "url_en_datei": "",
+                "url_fr_datei": ""
+              },
+              "blocks": {}
+            },
             "prasentation_hgYTQ3": {
               "type": "prasentation",
               "settings": {
@@ -139,6 +163,8 @@
             }
           },
           "block_order": [
+            "prasentation_fUmTDn",
+            "prasentation_CRDBRi",
             "prasentation_hgYTQ3"
           ]
         }
@@ -151,6 +177,19 @@
         "text_uberschrift": "Product Family Bulletins",
         "textarea_einleitung": "Discover our dedicated product family bulletins, featuring all key information, highlights, and insights from the latest DICOTA Magazine — available for download."
       }
+    },
+    "b2b_tpl_banner_1x_x3qWc4": {
+      "type": "b2b_tpl_banner_1x",
+      "disabled": true,
+      "name": "B2B Tpl Banner 1x",
+      "settings": {
+        "image_banner_bild": "shopify://shop_images/Background_Teams_2026.jpg",
+        "text_tag": "Download",
+        "text_heading": "TEAMS Background",
+        "textarea_text": "Download our new standardized DICOTA brand background for Microsoft Teams and use it for all external Teams meetings.",
+        "url_button_link": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/Background_Teams_2026.jpg?v=1783272705",
+        "text_button_text": "Discover now"
+      }
     }
   },
   "layout": "b2b",
@@ -160,6 +199,7 @@
     "b2b_mkt_overview",
     "b2b_mkt_campaigns",
     "triple_cards_HEViiP",
-    "b2b_mkt_presentation_9ttTMF"
+    "b2b_mkt_presentation_9ttTMF",
+    "b2b_tpl_banner_1x_x3qWc4"
   ]
 }
