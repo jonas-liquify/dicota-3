@@ -377,11 +377,12 @@
       "type": "b2b_tpl_banner_1x",
       "name": "PPT Master",
       "settings": {
+        "image_banner_bild": "shopify://shop_images/DICOTA_Master_Template.gif",
         "text_tag": "DONWLOAD",
         "text_heading": "DICOTA PPT Master",
-        "textarea_text": "A short descriptive text for this banner.",
-        "url_button_link": "",
-        "text_button_text": "Discover now"
+        "textarea_text": "Download the official DICOTA PowerPoint template, featuring a range of design options and ready-to-use slide layouts.",
+        "url_button_link": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/DICOTA_Master_Template.pptx?v=1783237693",
+        "text_button_text": "Download"
       }
     }
   },
