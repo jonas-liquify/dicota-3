@@ -372,6 +372,17 @@
       "settings": {
         "text_uberschrift": "DICOTA Corporate design"
       }
+    },
+    "b2b_tpl_banner_1x_XVeFWX": {
+      "type": "b2b_tpl_banner_1x",
+      "name": "PPT Master",
+      "settings": {
+        "text_tag": "DONWLOAD",
+        "text_heading": "DICOTA PPT Master",
+        "textarea_text": "A short descriptive text for this banner.",
+        "url_button_link": "",
+        "text_button_text": "Discover now"
+      }
     }
   },
   "layout": "b2b",
@@ -383,6 +394,7 @@
     "b2b_tpl_banner_1x_J9FinR",
     "b2b_mkt_presentation_bPPeAP",
     "b2b_tpl_banner_1x_6GCTj8",
-    "b2b_mkt_documents"
+    "b2b_mkt_documents",
+    "b2b_tpl_banner_1x_XVeFWX"
   ]
 }
