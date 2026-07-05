@@ -385,38 +385,6 @@
         "text_button_text": "Download"
       }
     },
-    "b2b_tpl_banner_2x_VJCiGw": {
-      "type": "b2b_tpl_banner_2x",
-      "blocks": {
-        "b2b_tpl_banner_yPKqhP": {
-          "type": "b2b-tpl-banner",
-          "name": "B2B Tpl Banner",
-          "settings": {
-            "text_tag": "Tag",
-            "text_heading": "Double banner title",
-            "url_button_link": "",
-            "text_button_text": "Read more →"
-          },
-          "blocks": {}
-        },
-        "b2b_tpl_banner_zN8zLL": {
-          "type": "b2b-tpl-banner",
-          "settings": {
-            "text_tag": "Tag",
-            "text_heading": "Double banner title",
-            "url_button_link": "",
-            "text_button_text": "Read more →"
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "b2b_tpl_banner_yPKqhP",
-        "b2b_tpl_banner_zN8zLL"
-      ],
-      "name": "B2B Tpl Banner 2x",
-      "settings": {}
-    },
     "b2b_tpl_banner_1x_WLyWz7": {
       "type": "b2b_tpl_banner_1x",
       "name": "TEAMS Background",
@@ -441,7 +409,6 @@
     "b2b_tpl_banner_1x_6GCTj8",
     "b2b_mkt_documents",
     "b2b_tpl_banner_1x_XVeFWX",
-    "b2b_tpl_banner_2x_VJCiGw",
     "b2b_tpl_banner_1x_WLyWz7"
   ]
 }
