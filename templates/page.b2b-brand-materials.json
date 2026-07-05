@@ -352,11 +352,11 @@
         },
         "b2b_mkt_dokument_MpXrbg": {
           "type": "b2b-mkt-dokument",
-          "name": "B2B Mkt Dokument",
+          "name": " Futura PT Demi",
           "settings": {
-            "url_datei_link": "",
-            "text_titel": "Thumbnails",
-            "text_datei_info": "ZIP · 25 MB"
+            "url_datei_link": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/Futura-PT-Demi.otf.zip?v=1783181529",
+            "text_titel": "DICOTA Futura PT Demi (font)",
+            "text_datei_info": "ZIP · 56 KB"
           },
           "blocks": {}
         }
