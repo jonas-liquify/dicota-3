@@ -111,6 +111,7 @@
           "name": "B2B Mkt Video",
           "settings": {
             "url_video_link": "https://cdn.shopify.com/videos/c/o/v/7d4b49b7f67943649808d2dedaf074df.mp4",
+            "image_thumbnail": "shopify://shop_images/Teaser_Image_Academy_Filter_magnetic.png",
             "text_share_text": "Watch",
             "text_titel": "Magnetic Screen Filters",
             "textarea_beschreibung": "Mauris ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torq."
@@ -122,8 +123,9 @@
           "name": "B2B Mkt Video",
           "settings": {
             "url_video_link": "",
-            "text_share_text": "Share",
-            "text_titel": "Product training",
+            "image_thumbnail": "shopify://shop_images/Teaser_Image_Academy_Filter_side-mounted.png",
+            "text_share_text": "Watch",
+            "text_titel": "Side-mounted Screen Filters",
             "textarea_beschreibung": "Mauris ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torq."
           },
           "blocks": {}
