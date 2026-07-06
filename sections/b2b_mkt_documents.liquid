@@ -1,4 +1,4 @@
-<div class="padding-global"><div class="container-large"><div class="mkt-collection_card"><div class="mkt-collection_header"><h2 class="mkt-collection_title heading-style-h4">
+<div class="padding-global" style="padding-top: {{ section.settings.padding_top }}rem; padding-bottom: {{ section.settings.padding_bottom }}rem"><div class="container-large"><div class="mkt-collection_card"><div class="mkt-collection_header"><h2 class="mkt-collection_title heading-style-h4">
 {{ section.settings.text_uberschrift }}
 </h2></div><div li-cf-theme-blocks="" class="mkt-doc_grid">
 {% content_for 'blocks' %}
@@ -20,6 +20,30 @@
             "type": "text",
             "label": "\u00dcberschrift",
             "default": "Documents"
+        },
+        {
+            "type": "header",
+            "content": "Abst\u00e4nde"
+        },
+        {
+            "type": "range",
+            "id": "padding_top",
+            "min": 0,
+            "max": 12,
+            "step": 0.5,
+            "unit": "rem",
+            "label": "Abstand oben",
+            "default": 4
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom",
+            "min": 0,
+            "max": 12,
+            "step": 0.5,
+            "unit": "rem",
+            "label": "Abstand unten",
+            "default": 4
         }
     ],
     "presets": [

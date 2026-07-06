@@ -1,9 +1,11 @@
 <div li-block="USP Item" class="product-usp-bar_item" {{ block.shopify_attributes }}>
-                    <div class="product-usp-bar_icon-wrap">{% if block.settings.image_icon %}
+                    {% if block.settings.image_icon != blank %}    <div li-if="block.settings.image_icon != blank" class="product-usp-bar_icon-wrap">
+    {% if block.settings.image_icon %}
 {{ block.settings.image_icon | image_url: width: 48 | image_tag: loading: 'lazy', class: 'product-usp-bar_icon' }}
 {% else %}
 <img src="{{ 'placeholder.svg' | asset_url }}" loading="lazy" alt="" class="product-usp-bar_icon">
-{% endif %}</div>
+{% endif %}    </div>
+{% endif %}
                     <div class="product-usp-bar_content"><p class="product-usp-bar_title">
 {{ block.settings.text_titel }}
 </p><p class="product-usp-bar_desc"> {{ block.settings.textarea_beschreibung }} </p></div>

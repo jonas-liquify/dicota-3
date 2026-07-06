@@ -1,16 +1,24 @@
-<div class="padding-global padding-section-small"><div class="container-large"><div class="acc-default_wrapper"><div class="acc-default_flex-small"><ul role="list" class="breadcrumbs_component w-list-unstyled"><li class="breadcrumbs_item"><a li-object:href="routes.root_url" href="{{ routes.root_url }}" class="w-inline-block"><div class="text-size-regular">Home</div></a><div class="breadcrumbs_icon w-embed"><svg width="15" height="15" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="1.5" fill="none"></path></svg></div></li><li class="breadcrumbs_item"><div>
+<div class="padding-global padding-section-small" style="padding-top: {{ section.settings.padding_top }}rem; padding-bottom: {{ section.settings.padding_bottom }}rem"><div class="container-large"><div class="acc-default_wrapper"><div class="acc-default_flex-small"><ul role="list" class="breadcrumbs_component w-list-unstyled"><li class="breadcrumbs_item"><a li-object:href="routes.root_url" href="{{ routes.root_url }}" class="w-inline-block"><div class="text-size-regular">Home</div></a><div class="breadcrumbs_icon w-embed"><svg width="15" height="15" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="1.5" fill="none"></path></svg></div></li><li class="breadcrumbs_item"><div>
 {{ section.settings.text_breadcrumb }}
 </div></li></ul><div class="default-flex-tiny"><h1 class="heading-style-h2">
 {{ section.settings.text_heading }}
-</h1><div class="text-size-medium max-width-large"> {{ section.settings.textarea_subheading }} </div></div><div class="acc-banner text-color-white">{% if section.settings.image_banner_bild %}
+</h1>{% if section.settings.textarea_subheading != blank %}    <div class="li-guard" li-if="section.settings.textarea_subheading != blank">
+    <div class="text-size-medium max-width-large"> {{ section.settings.textarea_subheading }} </div>    </div>
+{% endif %}</div><div class="acc-banner text-color-white">{% if section.settings.image_banner_bild != blank %}    <span class="li-guard" li-if="section.settings.image_banner_bild != blank">
+    {% if section.settings.image_banner_bild %}
 {{ section.settings.image_banner_bild | image_url: width: 1200 | image_tag: loading: 'lazy', class: 'acc-banner_image' }}
 {% else %}
 <img src="{{ 'platzhalter.svg' | asset_url }}" loading="lazy" alt="" class="acc-banner_image">
-{% endif %}<div class="acc-banner_content"><div class="acc-banner_heading"><div class="acc-banner_tag-row"><div class="acc-banner_tag"><div class="text-style-subline">
+{% endif %}    </span>
+{% endif %}<div class="acc-banner_content"><div class="acc-banner_heading"><div class="acc-banner_tag-row">{% if section.settings.text_tag != blank %}    <div li-if="section.settings.text_tag != blank" class="acc-banner_tag">
+    <div class="text-style-subline">
 {{ section.settings.text_tag }}
-</div></div></div><h3 class="heading-style-h2">
+</div>    </div>
+{% endif %}</div><h3 class="heading-style-h2">
 {{ section.settings.text_banner_heading }}
-</h3></div><div class="text-size-medium"> {{ section.settings.textarea_banner_text }} </div><div class="acc-banner_button-wrapper"><a href="{{ section.settings.url_banner_button_link }}" class="button is-white w-button"> <span>{{ section.settings.text_banner_button_text }}</span> </a></div></div></div></div></div></div></div> {% schema %} {
+</h3></div><div class="text-size-medium"> {{ section.settings.textarea_banner_text }} </div><div class="acc-banner_button-wrapper">{% if section.settings.text_banner_button_text != blank %}    <span class="li-guard" li-if="section.settings.text_banner_button_text != blank">
+    <a href="{{ section.settings.url_banner_button_link }}" class="button is-white w-button"> <span>{{ section.settings.text_banner_button_text }}</span> </a>    </span>
+{% endif %}</div></div></div></div></div></div></div> {% schema %} {
     "tag": "section",
     "name": "B2B Mkt Event Kit",
     "class": "section_acc-default",
@@ -66,6 +74,30 @@
             "type": "text",
             "label": "Banner Button Text",
             "default": "Order kit"
+        },
+        {
+            "type": "header",
+            "content": "Abst\u00e4nde"
+        },
+        {
+            "type": "range",
+            "id": "padding_top",
+            "min": 0,
+            "max": 12,
+            "step": 0.5,
+            "unit": "rem",
+            "label": "Abstand oben",
+            "default": 4
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom",
+            "min": 0,
+            "max": 12,
+            "step": 0.5,
+            "unit": "rem",
+            "label": "Abstand unten",
+            "default": 4
         }
     ],
     "presets": [

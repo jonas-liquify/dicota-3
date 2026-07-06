@@ -1,8 +1,10 @@
 <div li-block="B2B Gutschein" class="acc-card" {{ block.shopify_attributes }}>
-                    {% if block.settings.image_bild %}
+                    {% if block.settings.image_bild != blank %}    <span class="li-guard" li-if="block.settings.image_bild != blank">
+    {% if block.settings.image_bild %}
 {{ block.settings.image_bild | image_url: width: 600 | image_tag: loading: 'lazy', class: 'acc-card_16-9-image' }}
 {% else %}
 <img src="{{ 'platzhalter.svg' | asset_url }}" loading="lazy" alt="" class="acc-card_16-9-image">
+{% endif %}    </span>
 {% endif %}
                     <div class="acc-card_content"><div class="text-style-subline">
 {{ block.settings.text_partner }}

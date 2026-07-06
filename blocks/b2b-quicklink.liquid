@@ -1,13 +1,17 @@
 <div li-block="B2B Quicklink" class="acc-card" {{ block.shopify_attributes }}>
-                    {% if block.settings.image_icon %}
+                    {% if block.settings.image_icon != blank %}    <span class="li-guard" li-if="block.settings.image_icon != blank">
+    {% if block.settings.image_icon %}
 {{ block.settings.image_icon | image_url: width: 80 | image_tag: loading: 'lazy', class: 'acc_cta-icon' }}
 {% else %}
 <img src="{{ 'platzhalter.svg' | asset_url }}" loading="lazy" alt="" class="acc_cta-icon">
+{% endif %}    </span>
 {% endif %}
                     <div class="acc-card_content"><div class="heading-style-h4">
 {{ block.settings.text_heading }}
 </div><div class="text-rich-text w-richtext"> {{ block.settings.richtext_text }} </div></div>
-                    <a href="{{ block.settings.url_button_link }}" class="button w-button"> <span>{{ block.settings.text_button_text }}</span> </a>
+                    {% if block.settings.text_button_text != blank %}    <span class="li-guard" li-if="block.settings.text_button_text != blank">
+    <a href="{{ block.settings.url_button_link }}" class="button w-button"> <span>{{ block.settings.text_button_text }}</span> </a>    </span>
+{% endif %}
                 </div> {% schema %} {
     "name": "B2B Quicklink",
     "settings": [

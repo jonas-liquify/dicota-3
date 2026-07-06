@@ -1,7 +1,9 @@
-<div class="reseller-hero_bg">{% if section.settings.image_hintergrundbild %}
+<div class="reseller-hero_bg">{% if section.settings.image_hintergrundbild != blank %}    <span class="li-guard" li-if="section.settings.image_hintergrundbild != blank">
+    {% if section.settings.image_hintergrundbild %}
 {{ section.settings.image_hintergrundbild | image_url: width: 2400 | image_tag: loading: 'eager', class: 'reseller-hero_bg-image' }}
 {% else %}
 <img src="{{ 'hero-apparel-1.svg' | asset_url }}" loading="eager" alt="" class="reseller-hero_bg-image">
+{% endif %}    </span>
 {% endif %}<div class="reseller-hero_overlay"></div></div><div class="padding-global reseller-hero_padding" style="--reseller-hero-min-height: {{ section.settings.min_height }}vh; color: {{ section.settings.text_color }};"><div class="container-large reseller-hero_inner"><div class="reseller-hero_content"><h1 class="reseller-hero_title heading-style-h1">
 {{ section.settings.text_headline }}
 </h1><p class="reseller-hero_subtext text-size-medium"> {{ section.settings.textarea_subtext }} </p><form action="/search" method="get" role="search" class="reseller-hero_search"><div class="reseller-hero_search-cat"><span>

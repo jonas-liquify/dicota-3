@@ -1,16 +1,22 @@
-<div class="padding-global b2b-news_padding" style="padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px; background-color: {{ section.settings.bg_color }};"><div class="container-large"><div class="b2b-news_panel"><div class="b2b-news_media">{% if section.settings.image_bild %}
+<div class="padding-global b2b-news_padding" style="padding-top: {{ section.settings.padding_top }}rem; padding-bottom: {{ section.settings.padding_bottom }}rem; background-color: {{ section.settings.bg_color }};"><div class="container-large"><div class="b2b-news_panel">{% if section.settings.image_bild != blank %}    <div li-if="section.settings.image_bild != blank" class="b2b-news_media">
+    {% if section.settings.image_bild %}
 {{ section.settings.image_bild | image_url: width: 1400 | image_tag: loading: 'lazy', class: 'b2b-news_image' }}
 {% else %}
 <img src="{{ 'hero-apparel-3.svg' | asset_url }}" loading="lazy" alt="" class="b2b-news_image">
-{% endif %}</div><div class="b2b-news_content"><div class="b2b-news_head"><div class="b2b-news_meta"><span li-unless="section.settings.badge == blank" class="b2b-news_badge">
+{% endif %}    </div>
+{% endif %}<div class="b2b-news_content"><div class="b2b-news_head"><div class="b2b-news_meta">{% unless section.settings.badge == blank %}    <span class="li-guard" li-unless="section.settings.badge == blank">
+    <span class="b2b-news_badge">
 {{ section.settings.text_badge }}
-</span><span class="b2b-news_divider"></span><span class="b2b-news_cat">
+</span>    </span>
+{% endunless %}<span class="b2b-news_divider"></span><span class="b2b-news_cat">
 {{ section.settings.text_kategorie }}
 </span><span class="b2b-news_divider"></span><span class="b2b-news_date">
 {{ section.settings.text_datum }}
 </span></div><h2 class="b2b-news_title">
 {{ section.settings.text_uberschrift }}
-</h2></div><p class="b2b-news_text text-size-medium"> {{ section.settings.textarea_text }} </p><a href="{{ section.settings.url_button_link }}" class="button is-on-dark b2b-news_btn w-button"> <span>{{ section.settings.text_button_text }}</span> </a></div></div></div></div> {% schema %} {
+</h2></div><p class="b2b-news_text text-size-medium"> {{ section.settings.textarea_text }} </p>{% if section.settings.text_button_text != blank %}    <span class="li-guard" li-if="section.settings.text_button_text != blank">
+    <a href="{{ section.settings.url_button_link }}" class="button is-on-dark b2b-news_btn w-button"> <span>{{ section.settings.text_button_text }}</span> </a>    </span>
+{% endif %}</div></div></div></div> {% schema %} {
     "tag": "section",
     "name": "B2B News Highlight",
     "class": "section_b2b-news",
@@ -69,21 +75,21 @@
             "type": "range",
             "id": "padding_top",
             "min": 0,
-            "max": 160,
-            "step": 4,
-            "unit": "px",
+            "max": 12,
+            "step": 0.5,
+            "unit": "rem",
             "label": "Abstand oben",
-            "default": 40
+            "default": 4
         },
         {
             "type": "range",
             "id": "padding_bottom",
             "min": 0,
-            "max": 160,
-            "step": 4,
-            "unit": "px",
+            "max": 12,
+            "step": 0.5,
+            "unit": "rem",
             "label": "Abstand unten",
-            "default": 60
+            "default": 4
         },
         {
             "type": "header",

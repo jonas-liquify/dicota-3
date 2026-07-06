@@ -2,9 +2,11 @@
                     <div class="text-size-large">
 {{ block.settings.text_block_heading }}
 </div>
-                    <div class="text-size-small">
+                    {% if block.settings.text_block_text != blank %}    <div class="li-guard" li-if="block.settings.text_block_text != blank">
+    <div class="text-size-small">
 {{ block.settings.text_block_text }}
-</div>
+</div>    </div>
+{% endif %}
                 </div> {% schema %} {
     "name": "Zitat",
     "settings": [

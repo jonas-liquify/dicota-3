@@ -1,8 +1,10 @@
 <div li-block="Meilenstein" class="swiper-slide is-history-swiper" {{ block.shopify_attributes }}>
-                    <div class="history_slide-content">{% if block.settings.image_slide_image %}
+                    <div class="history_slide-content">{% if block.settings.image_slide_image != blank %}    <span class="li-guard" li-if="block.settings.image_slide_image != blank">
+    {% if block.settings.image_slide_image %}
 {{ block.settings.image_slide_image | image_url: width: 600 | image_tag: loading: 'lazy', class: 'history_slide-image' }}
 {% else %}
 <img src="{{ 'platzhalter.svg' | asset_url }}" loading="lazy" alt="" class="history_slide-image">
+{% endif %}    </span>
 {% endif %}<div class="history_slide-text"><h3 class="heading-style-h4">
 {{ block.settings.text_slide_heading }}
 </h3><div class="text-size-regular"> {{ block.settings.textarea_slide_text }} </div></div></div>

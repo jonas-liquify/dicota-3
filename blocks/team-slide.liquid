@@ -1,8 +1,10 @@
 <div li-block="Team Slide" class="swiper-slide is-team-swiper" {{ block.shopify_attributes }}>
-                    {% if block.settings.image_slide_image %}
+                    {% if block.settings.image_slide_image != blank %}    <span class="li-guard" li-if="block.settings.image_slide_image != blank">
+    {% if block.settings.image_slide_image %}
 {{ block.settings.image_slide_image | image_url: width: 900 | image_tag: loading: 'lazy', class: 'team_slide-image' }}
 {% else %}
 <img src="{{ 'platzhalter.svg' | asset_url }}" loading="lazy" alt="" class="team_slide-image">
+{% endif %}    </span>
 {% endif %}
                     <div class="team_slide-overlay"></div>
                 </div> {% schema %} {

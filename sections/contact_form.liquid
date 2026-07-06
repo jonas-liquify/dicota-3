@@ -1,8 +1,10 @@
 <div class="padding-global padding-section-medium"><div class="container-large"><div class="w-layout-grid contact_component"><div class="contact_content"><div class="margin-bottom margin-small"><h1 class="heading-style-h2">
 {{ section.settings.text_heading }}
-</h1></div><p class="text-size-medium">
+</h1></div>{% if section.settings.text_paragraph != blank %}    <div class="li-guard" li-if="section.settings.text_paragraph != blank">
+    <p class="text-size-medium">
 {{ section.settings.text_paragraph }}
-</p></div><div class="contact_form-block w-form">{% form 'contact', return_to: '/', class: 'contact_form' %}
+</p>    </div>
+{% endif %}</div><div class="contact_form-block w-form">{% form 'contact', return_to: '/', class: 'contact_form' %}
 <div class="form_field-wrapper"><label for="First-Name-2" class="form_field-label">
 {{ section.settings.text_first_name }}
 </label><input class="form_input w-input" maxlength="256" name="contact[first_name]" data-name="First Name 2" placeholder="" type="text" id="First-Name-2" required=""></div><div class="form_field-wrapper"><label for="Last-Name-2" class="form_field-label">

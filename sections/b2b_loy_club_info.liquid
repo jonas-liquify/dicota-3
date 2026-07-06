@@ -1,8 +1,12 @@
-<div class="padding-global padding-section-small"><div class="container-large"><div class="acc-default_wrapper"><div class="acc-default_flex-small"><ul role="list" class="breadcrumbs_component w-list-unstyled"><li class="breadcrumbs_item"><a li-object:href="routes.root_url" href="{{ routes.root_url }}" class="w-inline-block"><div class="text-size-regular">Home</div></a><div class="breadcrumbs_icon w-embed"><svg width="15" height="15" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="1.5" fill="none"></path></svg></div></li><li class="breadcrumbs_item"><div>
+<div class="padding-global padding-section-small" style="padding-top: {{ section.settings.padding_top }}rem; padding-bottom: {{ section.settings.padding_bottom }}rem"><div class="container-large"><div class="acc-default_wrapper"><div class="acc-default_flex-small"><ul role="list" class="breadcrumbs_component w-list-unstyled"><li class="breadcrumbs_item"><a li-object:href="routes.root_url" href="{{ routes.root_url }}" class="w-inline-block"><div class="text-size-regular">Home</div></a><div class="breadcrumbs_icon w-embed"><svg width="15" height="15" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="1.5" fill="none"></path></svg></div></li><li class="breadcrumbs_item">{% if section.settings.text_breadcrumb != blank %}    <div class="li-guard" li-if="section.settings.text_breadcrumb != blank">
+    <div>
 {{ section.settings.text_breadcrumb }}
-</div></li></ul><div class="default-flex-tiny"><h1 class="heading-style-h2">
+</div>    </div>
+{% endif %}</li></ul><div class="default-flex-tiny"><h1 class="heading-style-h2">
 {{ section.settings.text_heading_1 }}
-</h1><div class="text-size-medium max-width-large"> {{ section.settings.textarea_subheading_1 }} </div></div><div class="acc-card"><h2 class="heading-style-h4">
+</h1>{% if section.settings.textarea_subheading_1 != blank %}    <div class="li-guard" li-if="section.settings.textarea_subheading_1 != blank">
+    <div class="text-size-medium max-width-large"> {{ section.settings.textarea_subheading_1 }} </div>    </div>
+{% endif %}</div><div class="acc-card"><h2 class="heading-style-h4">
 {{ section.settings.text_heading_2 }}
 </h2><div class="text-rich-text w-richtext"> {{ section.settings.richtext_info_text }} </div></div></div></div></div></div> {% schema %} {
     "tag": "section",
@@ -38,6 +42,30 @@
             "type": "richtext",
             "label": "Info Text",
             "default": "<p>Earn points with every purchaseExclusive rewards and bundlesCashback from 10,000 pointsPersonal club supportEarly access to new products<\/p>"
+        },
+        {
+            "type": "header",
+            "content": "Abst\u00e4nde"
+        },
+        {
+            "type": "range",
+            "id": "padding_top",
+            "min": 0,
+            "max": 12,
+            "step": 0.5,
+            "unit": "rem",
+            "label": "Abstand oben",
+            "default": 4
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom",
+            "min": 0,
+            "max": 12,
+            "step": 0.5,
+            "unit": "rem",
+            "label": "Abstand unten",
+            "default": 4
         }
     ],
     "presets": [

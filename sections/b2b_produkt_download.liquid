@@ -1,4 +1,4 @@
-<div class="padding-global padding-section-small" style="padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px;"><div class="container-large"><div class="acc-default_wrapper"><div class="acc-default_flex-small"><div class="default-flex-tiny"><h1 class="heading-style-h2">
+<div class="padding-global padding-section-small" style="padding-top: {{ section.settings.padding_top }}rem; padding-bottom: {{ section.settings.padding_bottom }}rem;"><div class="container-large"><div class="acc-default_wrapper"><div class="acc-default_flex-small"><div class="default-flex-tiny"><h1 class="heading-style-h2">
 {{ section.settings.text_heading }}
 </h1><div class="text-size-medium max-width-large"> {{ section.settings.richtext_text }} </div></div></div><div class="zertifikate_search"><div class="zertifikate_form w-form"><form name="pd-search-form" data-name="Product Download Search" method="get" class="zertifikate_form-inner"><div class="filter_input-wrapper"><div class="filter_left-icon w-embed"><svg width="16" height="16" viewbox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18.29 18.33L12.6 12.98C12.15 13.33 11.62 13.6 11.04 13.8C10.45 14 9.84 14.1 9.21 14.1C7.66 14.1 6.35 13.6 5.27 12.59C4.2 11.58 3.66 10.34 3.66 8.88C3.66 7.43 4.2 6.19 5.27 5.18C6.35 4.17 7.66 3.67 9.21 3.67C10.75 3.67 12.07 4.17 13.14 5.18C14.21 6.19 14.75 7.43 14.75 8.88C14.75 9.49 14.64 10.07 14.42 10.63C14.21 11.18 13.92 11.67 13.55 12.08L19.25 17.43L18.29 18.33Z" fill="currentColor"></path></svg></div><label li-object="'general.search' | t" for="pd-search" class="form_hidden-label">{{ 'general.search' | t }}</label><input class="filter_input is-white-bg w-input" maxlength="256" name="search" placeholder="Search by SKU or product name…" type="text" id="pd-search" autocomplete="off"></div></form></div></div>{% paginate collections['all-products'].products by 1500 %}
     <div li-paginate="collections['all-products'].products" li-paginate:by="1500" by="1500"><div role="list" class="zertifikate_list w-dyn-items">{% for product in collection.products %}    <div li-for="product in collection.products" role="listitem" class="w-dyn-item">
@@ -53,21 +53,21 @@
             "type": "range",
             "id": "padding_top",
             "min": 0,
-            "max": 160,
-            "step": 4,
-            "unit": "px",
+            "max": 12,
+            "step": 0.5,
+            "unit": "rem",
             "label": "Abstand oben",
-            "default": 40
+            "default": 4
         },
         {
             "type": "range",
             "id": "padding_bottom",
             "min": 0,
-            "max": 160,
-            "step": 4,
-            "unit": "px",
+            "max": 12,
+            "step": 0.5,
+            "unit": "rem",
             "label": "Abstand unten",
-            "default": 80
+            "default": 4
         }
     ],
     "presets": [
