@@ -620,6 +620,11 @@
         "padding_top": 80,
         "padding_bottom": 80
       }
+    },
+    "default_NzcGgK": {
+      "type": "default",
+      "name": "Default",
+      "settings": {}
     }
   },
   "order": [
@@ -641,7 +646,8 @@
     "quote2",
     "cta",
     "owner_spotlight_idR8mL",
-    "benefits_grid_r4nLgh"
+    "benefits_grid_r4nLgh",
+    "default_NzcGgK"
   ],
   "layout": "b2b",
   "wrapper": "main.main-wrapper"
