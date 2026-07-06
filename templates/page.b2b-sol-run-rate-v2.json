@@ -426,6 +426,60 @@
         "padding_top": 80,
         "padding_bottom": 80
       }
+    },
+    "b2b_key_selling_argu_e83Mdk": {
+      "type": "b2b_key_selling_argu",
+      "blocks": {
+        "argument_mxwkRG": {
+          "type": "argument",
+          "settings": {
+            "text_heading": "Prozessreduktion",
+            "textarea_text": "Ein Lieferant, eine Bestellung, eine Rechnung statt zehn verschiedene Quellen."
+          },
+          "blocks": {}
+        },
+        "argument_UPepzU": {
+          "type": "argument",
+          "name": "Argument",
+          "settings": {
+            "text_heading": "Kostentransparenz",
+            "textarea_text": "Feste Preise im Rahmenvertrag machen das Jahresbudget kalkulierbar."
+          },
+          "blocks": {}
+        },
+        "argument_gkAUim": {
+          "type": "argument",
+          "name": "Argument",
+          "settings": {
+            "text_heading": "Liefersicherheit",
+            "textarea_text": "Topseller dauerhaft verfügbar – kein Engpass beim nächsten Rollout."
+          },
+          "blocks": {}
+        },
+        "argument_tUg3Jf": {
+          "type": "argument",
+          "name": "Argument",
+          "settings": {
+            "text_heading": "Compliance",
+            "textarea_text": "Alle DICOTA-Produkte mit vollständiger Dokumentation – kein Aufwand bei internen Audits."
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "argument_mxwkRG",
+        "argument_UPepzU",
+        "argument_gkAUim",
+        "argument_tUg3Jf"
+      ],
+      "name": "B2B Key Selling Argu",
+      "settings": {
+        "text_subline": "Why DICOTA for B2B",
+        "text_heading": "Kernargumente für den IT-Einkäufer",
+        "textarea_text": "The most compelling reasons for resellers and end customers to choose DICOTA — ready to use in your sales conversations.",
+        "padding_top": 4,
+        "padding_bottom": 4
+      }
     }
   },
   "order": [
@@ -442,7 +496,8 @@
     "conversation",
     "quote2",
     "cta",
-    "owner_spotlight_idR8mL"
+    "owner_spotlight_idR8mL",
+    "b2b_key_selling_argu_e83Mdk"
   ],
   "layout": "b2b",
   "wrapper": "main.main-wrapper"
