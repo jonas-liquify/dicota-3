@@ -102,6 +102,54 @@
         "padding_top": 4,
         "padding_bottom": 4
       }
+    },
+    "b2b_mkt_train_videos_hnWy9N": {
+      "type": "b2b_mkt_train_videos",
+      "blocks": {
+        "b2b_mkt_video_ajaNqn": {
+          "type": "b2b-mkt-video",
+          "name": "B2B Mkt Video",
+          "settings": {
+            "url_video_link": "https://cdn.shopify.com/videos/c/o/v/7d4b49b7f67943649808d2dedaf074df.mp4",
+            "text_share_text": "Watch",
+            "text_titel": "Magnetic Screen Filters",
+            "textarea_beschreibung": "Mauris ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torq."
+          },
+          "blocks": {}
+        },
+        "b2b_mkt_video_icKccb": {
+          "type": "b2b-mkt-video",
+          "name": "B2B Mkt Video",
+          "settings": {
+            "url_video_link": "",
+            "text_share_text": "Share",
+            "text_titel": "Product training",
+            "textarea_beschreibung": "Mauris ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torq."
+          },
+          "blocks": {}
+        },
+        "b2b_mkt_video_LCEejp": {
+          "type": "b2b-mkt-video",
+          "settings": {
+            "url_video_link": "",
+            "text_share_text": "Share",
+            "text_titel": "Product training",
+            "textarea_beschreibung": "Mauris ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torq."
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "b2b_mkt_video_ajaNqn",
+        "b2b_mkt_video_icKccb",
+        "b2b_mkt_video_LCEejp"
+      ],
+      "name": "B2B Mkt Train Videos",
+      "settings": {
+        "text_uberschrift": "Videos",
+        "padding_top": 4,
+        "padding_bottom": 4
+      }
     }
   },
   "layout": "b2b",
@@ -109,6 +157,7 @@
   "order": [
     "b2b_subnav",
     "b2b_mkt_trainings",
-    "b2b_mkt_train_videos"
+    "b2b_mkt_train_videos",
+    "b2b_mkt_train_videos_hnWy9N"
   ]
 }
