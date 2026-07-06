@@ -170,8 +170,8 @@
           "type": "tab",
           "name": "Simple processing",
           "settings": {
-            "text_tab_label": "Simple processing",
-            "text_tab_heading": "Simple processing – no administrative overhead",
+            "text_tab_label": "Simple Processing",
+            "text_tab_heading": "Simple Processing – no administrative overhead",
             "textarea_tab_text": "Many retailers underestimate the amount of internal effort involved in managing an unstructured range of accessories: different suppliers, varying ordering processes, inconsistent documentation. DICOTA simplifies this radically. A small number of clearly defined SKUs, a well-organised price list and a well-established ordering process reduce the administrative burden to a minimum."
           },
           "blocks": {}
