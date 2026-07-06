@@ -133,8 +133,8 @@
         "b2b_mkt_video_LCEejp": {
           "type": "b2b-mkt-video",
           "settings": {
-            "url_video_link": "",
-            "text_share_text": "Share",
+            "url_video_link": "https://cdn.shopify.com/videos/c/o/v/ef2a286d4a8542ce9fd6a131737cd0ae.mp4",
+            "text_share_text": "Watch",
             "text_titel": "Self-Adhesive Screen Filters",
             "textarea_beschreibung": "Mauris ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torq."
           },
