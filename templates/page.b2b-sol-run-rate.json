@@ -44,41 +44,28 @@
           },
           "blocks": {}
         },
-        "b2b_sol_referenz_1": {
-          "type": "b2b-sol-referenz",
-          "settings": {},
-          "blocks": {}
-        },
-        "b2b_sol_referenz_2": {
-          "type": "b2b-sol-referenz",
-          "settings": {},
-          "blocks": {}
-        },
-        "b2b_sol_referenz_3": {
-          "type": "b2b-sol-referenz",
-          "settings": {},
-          "blocks": {}
-        },
-        "b2b_sol_referenz_4": {
-          "type": "b2b-sol-referenz",
-          "settings": {},
-          "blocks": {}
-        },
         "b2b-sol-referenzen": {
           "type": "b2b-sol-referenzen",
+          "disabled": true,
           "static": true,
           "settings": {},
-          "blocks": {}
+          "blocks": {
+            "b2b_sol_referenz_TMwXD8": {
+              "type": "b2b-sol-referenz",
+              "name": "B2B Sol Referenz",
+              "settings": {},
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "b2b_sol_referenz_TMwXD8"
+          ]
         }
       },
       "block_order": [
         "b2b_sol_fact_1",
         "b2b_sol_fact_2",
-        "b2b_sol_fact_3",
-        "b2b_sol_referenz_1",
-        "b2b_sol_referenz_2",
-        "b2b_sol_referenz_3",
-        "b2b_sol_referenz_4"
+        "b2b_sol_fact_3"
       ],
       "settings": {
         "url_breadcrumb_parent_link": "",
@@ -129,6 +116,7 @@
         "argument_kxMEdq",
         "argument_tenWfM"
       ],
+      "disabled": true,
       "name": "B2B Key Selling Argu",
       "settings": {
         "text_subline": "Why DICOTA for B2B",
@@ -148,6 +136,79 @@
         "text_heading": "Trainings",
         "textarea_subheading": "When you're on the move, there are many situations where you can't keep your laptop on you at all times. Whether it's a trip to the restroom on the train or a quick coffee break in the shared kitchen of a coworking space. Even in just a few minutes, opportunists could strike."
       }
+    },
+    "page_content_PrgJLK": {
+      "type": "page_content",
+      "disabled": true,
+      "name": "Page Content",
+      "settings": {}
+    },
+    "value_tabs_qtUxcQ": {
+      "type": "value_tabs",
+      "blocks": {
+        "tab_gPKXpe": {
+          "type": "tab",
+          "name": "Tab",
+          "settings": {
+            "text_tab_label": "Availability",
+            "text_tab_heading": "Availability as a Promise",
+            "textarea_tab_text": "In the key account business, the ability to deliver is not an option, but a fundamental requirement. If an IT manager rolls out 200 laptops and realises three days later that the cases are not available, this is not just a logistical problem – it undermines trust in the entire supply chain. DICOTA keeps its 50 top-selling products in stock at all times and guarantees short delivery times, even for larger quantities.\nFor retailers, this means they can make binding commitments to their major clients – and actually keep them. That is the difference between a supplier and a partner."
+          },
+          "blocks": {}
+        },
+        "tab_aLRV7h": {
+          "type": "tab",
+          "name": "Tab",
+          "settings": {
+            "text_tab_label": "Trust",
+            "text_tab_heading": "Trust",
+            "textarea_tab_text": "We build on long-term relationships — with customers, partners and colleagues alike."
+          },
+          "blocks": {}
+        },
+        "tab_J9TKUW": {
+          "type": "tab",
+          "name": "Tab",
+          "settings": {
+            "text_tab_label": "Trust",
+            "text_tab_heading": "Trust",
+            "textarea_tab_text": "We build on long-term relationships — with customers, partners and colleagues alike."
+          },
+          "blocks": {}
+        },
+        "tab_BtRXig": {
+          "type": "tab",
+          "name": "Tab",
+          "settings": {
+            "text_tab_label": "Trust",
+            "text_tab_heading": "Trust",
+            "textarea_tab_text": "We build on long-term relationships — with customers, partners and colleagues alike."
+          },
+          "blocks": {}
+        },
+        "tab_JAxLww": {
+          "type": "tab",
+          "settings": {
+            "text_tab_label": "Trust",
+            "text_tab_heading": "Trust",
+            "textarea_tab_text": "We build on long-term relationships — with customers, partners and colleagues alike."
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "tab_gPKXpe",
+        "tab_aLRV7h",
+        "tab_J9TKUW",
+        "tab_BtRXig",
+        "tab_JAxLww"
+      ],
+      "name": "Value Tabs",
+      "settings": {
+        "text_heading": "What defines the business model",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
     }
   },
   "layout": "b2b",
@@ -156,6 +217,8 @@
     "b2b_subnav",
     "b2b_solution",
     "b2b_key_selling_argu_zHN3nH",
-    "b2b_mkt_trainings_dXHC8A"
+    "b2b_mkt_trainings_dXHC8A",
+    "page_content_PrgJLK",
+    "value_tabs_qtUxcQ"
   ]
 }
