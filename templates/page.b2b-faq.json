@@ -11,11 +11,22 @@
   "sections": {
     "b2b_subnav": {
       "type": "b2b_subnav",
-      "settings": {}
+      "settings": {
+        "text_dummy_description": "Short description",
+        "text_punkte_label": "Current point balance:",
+        "account_menu": ""
+      }
     },
     "faq_accordion": {
       "type": "faq_accordion",
-      "settings": {}
+      "settings": {
+        "text_heading": "Frequently asked questions",
+        "textarea_text": "If you have questions about applying, the selection process or getting started — we have answers.",
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "faq_set": "shipping",
+        "faq_entries": []
+      }
     }
   },
   "layout": "b2b",
