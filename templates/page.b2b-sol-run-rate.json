@@ -214,16 +214,46 @@
     "benefits_grid_Rgyjmf": {
       "type": "benefits_grid",
       "blocks": {
+        "benefit_N9aUeg": {
+          "type": "benefit",
+          "name": "Benefit",
+          "settings": {
+            "text_heading": "Sleeves & Cases",
+            "textarea_text": "Flexitime, home office and trust instead of a time clock."
+          },
+          "blocks": {}
+        },
+        "benefit_kKC8eQ": {
+          "type": "benefit",
+          "name": "Benefit",
+          "settings": {
+            "text_heading": "Locks & Security",
+            "textarea_text": "Flexitime, home office and trust instead of a time clock."
+          },
+          "blocks": {}
+        },
+        "benefit_UdRpMx": {
+          "type": "benefit",
+          "name": "Benefit",
+          "settings": {
+            "text_heading": "Adapter & Connectivity",
+            "textarea_text": "Flexitime, home office and trust instead of a time clock."
+          },
+          "blocks": {}
+        },
         "benefit_VAPrGa": {
           "type": "benefit",
           "settings": {
-            "text_heading": "",
+            "text_heading": "Backpacks & Bags",
             "textarea_text": "The real margin potential in run-rate business does not lie in the top-seller itself – it lies in the attach. Every laptop sold is a gateway to several accessories that are regularly reordered. The trick lies in integrating these add-on products into the ordering process in such a way that they are automatically included – without having to be renegotiated each time."
           },
           "blocks": {}
         }
       },
       "block_order": [
+        "benefit_N9aUeg",
+        "benefit_kKC8eQ",
+        "benefit_UdRpMx",
         "benefit_VAPrGa"
       ],
       "name": "Benefits Grid",
