@@ -92,7 +92,7 @@
         "text_feature_subline": "Why DICOTA",
         "text_feature_heading": "Your everyday IT accessory partner",
         "textarea_feature_text": "Ideal partner for daily IT accessory business: 1,000+ products, fast availability from a European warehouse, 2–3 day delivery, no MOQ, strong reseller margins, high product quality, online ordering and dedicated customer support.",
-        "text_facts_heading": "Key facts",
+        "text_facts_heading": "Key figures at a glance",
         "text_referenzen_heading": "Trusted by",
         "text_cta_heading": "Ready to stock up?",
         "textarea_cta_text": "Order online with fast availability and no minimum order quantity — backed by dedicated customer support.",
@@ -103,12 +103,59 @@
         "padding_top": 60,
         "padding_bottom": 60
       }
+    },
+    "b2b_key_selling_argu_zHN3nH": {
+      "type": "b2b_key_selling_argu",
+      "blocks": {
+        "argument_kxMEdq": {
+          "type": "argument",
+          "name": "Argument",
+          "settings": {
+            "text_heading": "1,000+ products in stock",
+            "textarea_text": "A broad portfolio with fast availability and strong reseller margins."
+          },
+          "blocks": {}
+        },
+        "argument_tenWfM": {
+          "type": "argument",
+          "settings": {
+            "text_heading": "1,000+ products in stock",
+            "textarea_text": "A broad portfolio with fast availability and strong reseller margins."
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "argument_kxMEdq",
+        "argument_tenWfM"
+      ],
+      "name": "B2B Key Selling Argu",
+      "settings": {
+        "text_subline": "Why DICOTA for B2B",
+        "text_heading": "Key selling arguments",
+        "textarea_text": "The most compelling reasons for resellers and end customers to choose DICOTA — ready to use in your sales conversations.",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "b2b_mkt_trainings_dXHC8A": {
+      "type": "b2b_mkt_trainings",
+      "name": "B2B Mkt Trainings",
+      "settings": {
+        "url_breadcrumb_parent_link": "",
+        "text_breadcrumb_parent_label": "Marketing",
+        "text_breadcrumb": "Trainings",
+        "text_heading": "Trainings",
+        "textarea_subheading": "When you're on the move, there are many situations where you can't keep your laptop on you at all times. Whether it's a trip to the restroom on the train or a quick coffee break in the shared kitchen of a coworking space. Even in just a few minutes, opportunists could strike."
+      }
     }
   },
   "layout": "b2b",
   "wrapper": "main.main-wrapper",
   "order": [
     "b2b_subnav",
-    "b2b_solution"
+    "b2b_solution",
+    "b2b_key_selling_argu_zHN3nH",
+    "b2b_mkt_trainings_dXHC8A"
   ]
 }
