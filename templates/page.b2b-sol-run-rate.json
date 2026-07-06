@@ -148,7 +148,7 @@
       "blocks": {
         "tab_gPKXpe": {
           "type": "tab",
-          "name": "Tab",
+          "name": "Availability",
           "settings": {
             "text_tab_label": "Availability",
             "text_tab_heading": "Availability as a Promise",
