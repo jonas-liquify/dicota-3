@@ -23,8 +23,8 @@
         "b2b_sol_fact_1": {
           "type": "b2b-sol-fact",
           "settings": {
-            "text_zahl": "1,000+",
-            "text_label": "Products available"
+            "text_zahl": "Top 50",
+            "text_label": "Top sellers always in stock"
           },
           "blocks": {}
         },
@@ -86,7 +86,7 @@
         "text_breadcrumb": "Run Rate Product Supply",
         "text_subline": "B2B Solutions",
         "text_heading_1": "Run Rate Product Supply",
-        "textarea_subheading_1": "Das Rückgrat jedes erfolgreichen Reseller-Geschäfts ist das wiederkehrende Geschäft mit Grosskunden. Projekte kommen und gehen – aber der laufende Bedarf an Schutz, Connectivity und Zubehör bleibt konstant. Genau hier liegt die grösste Umsatzchance für Händler: Wer im Run-Rate-Geschäft als zuverlässiger Lieferant positioniert ist, profitiert von planbaren Umsätzen, niedrigen Akquisekosten und hoher Kundenbindung.\n\nDICOTA ist als Zubehöranbieter optimal für dieses Segment positioniert: breites Topseller-Portfolio, dauerhaft hohe Lagerverfügbarkeit und eine klare SKU-Struktur, die sich einfach in bestehende ERP- und Einkaufssysteme integrieren lässt. Für Händler bedeutet das: weniger Aufwand in der Abwicklung, mehr Zeit für den Kundenaufbau.",
+        "textarea_subheading_1": "Das Rückgrat jedes erfolgreichen Reseller-Geschäfts ist das wiederkehrende Geschäft mit Grosskunden. Projekte kommen und gehen – aber der laufende Bedarf an Schutz, Connectivity und Zubehör bleibt konstant. Genau hier liegt die grösste Umsatzchance für Händler: Wer im Run-Rate-Geschäft als zuverlässiger Lieferant positioniert ist, profitiert von planbaren Umsätzen, niedrigen Akquisekosten und hoher Kundenbindung.\n<br><br>\nDICOTA ist als Zubehöranbieter optimal für dieses Segment positioniert: breites Topseller-Portfolio, dauerhaft hohe Lagerverfügbarkeit und eine klare SKU-Struktur, die sich einfach in bestehende ERP- und Einkaufssysteme integrieren lässt. Für Händler bedeutet das: weniger Aufwand in der Abwicklung, mehr Zeit für den Kundenaufbau.",
         "url_hero_button_link": "",
         "text_hero_button_text": "Become a reseller",
         "text_feature_subline": "Why DICOTA",
