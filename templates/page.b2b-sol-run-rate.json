@@ -128,6 +128,7 @@
     },
     "b2b_mkt_trainings_dXHC8A": {
       "type": "b2b_mkt_trainings",
+      "disabled": true,
       "name": "B2B Mkt Trainings",
       "settings": {
         "url_breadcrumb_parent_link": "",
@@ -209,6 +210,31 @@
         "padding_top": 80,
         "padding_bottom": 80
       }
+    },
+    "benefits_grid_Rgyjmf": {
+      "type": "benefits_grid",
+      "blocks": {
+        "benefit_VAPrGa": {
+          "type": "benefit",
+          "settings": {
+            "text_heading": "Flexible working hours",
+            "textarea_text": "Flexitime, home office and trust instead of a time clock."
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "benefit_VAPrGa"
+      ],
+      "name": "Benefits Grid",
+      "settings": {
+        "text_subline": "Attach Portfolio",
+        "text_heading": "Margin without extra effort",
+        "url_button_link": "",
+        "text_button_text": "",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
     }
   },
   "layout": "b2b",
@@ -219,6 +245,7 @@
     "b2b_key_selling_argu_zHN3nH",
     "b2b_mkt_trainings_dXHC8A",
     "page_content_PrgJLK",
-    "value_tabs_qtUxcQ"
+    "value_tabs_qtUxcQ",
+    "benefits_grid_Rgyjmf"
   ]
 }
