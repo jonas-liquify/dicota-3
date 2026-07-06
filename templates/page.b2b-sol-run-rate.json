@@ -31,8 +31,8 @@
         "b2b_sol_fact_2": {
           "type": "b2b-sol-fact",
           "settings": {
-            "text_zahl": "1,000+",
-            "text_label": "Products available"
+            "text_zahl": "+20 to 30%",
+            "text_label": "higher basket value thanks to add-on products"
           },
           "blocks": {}
         },
