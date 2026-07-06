@@ -54,10 +54,20 @@
       "name": "B2B Key Selling Argu",
       "settings": {
         "text_subline": "",
-        "text_heading": "Ausgangslage & Marktchance",
+        "text_heading": "Ausgangslage<br>& Marktchance",
         "textarea_text": "Das Rückgrat jedes erfolgreichen Reseller-Geschäfts ist das wiederkehrende Geschäft mit Grosskunden. Projekte kommen und gehen – aber der laufende Bedarf an Schutz, Connectivity und Zubehör bleibt konstant. Genau hier liegt die grösste Umsatzchance für Händler: Wer im Run-Rate-Geschäft als zuverlässiger Lieferant positioniert ist, profitiert von planbaren Umsätzen, niedrigen Akquisekosten und hoher Kundenbindung.\nDICOTA ist als Zubehöranbieter optimal für dieses Segment positioniert: breites Topseller-Portfolio, dauerhaft hohe Lagerverfügbarkeit und eine klare SKU-Struktur, die sich einfach in bestehende ERP- und Einkaufssysteme integrieren lässt. Für Händler bedeutet das: weniger Aufwand in der Abwicklung, mehr Zeit für den Kundenaufbau.",
         "padding_top": 4,
         "padding_bottom": 4
+      }
+    },
+    "backbone": {
+      "type": "image_text",
+      "settings": {
+        "text_heading": "Das Rückgrat Ihres Reseller-Geschäfts",
+        "textarea_text": "Das Rückgrat jedes erfolgreichen Reseller-Geschäfts ist das wiederkehrende Geschäft mit Grosskunden. Projekte kommen und gehen – aber der laufende Bedarf an Schutz, Connectivity und Zubehör bleibt konstant. Wer hier als zuverlässiger Lieferant positioniert ist, profitiert von planbaren Umsätzen, niedrigen Akquisekosten und hoher Kundenbindung.<br><br>DICOTA ist als Zubehöranbieter optimal für dieses Segment positioniert: breites Topseller-Portfolio, dauerhaft hohe Lagerverfügbarkeit und eine klare SKU-Struktur, die sich einfach in bestehende ERP- und Einkaufssysteme integrieren lässt.",
+        "url_button_link": "",
+        "text_button_text": "Learn more",
+        "image_position": "left"
       }
     },
     "b2b_solution_fQqwVw": {
@@ -137,24 +147,14 @@
         "textarea_feature_text": "",
         "text_facts_heading": "Key facts",
         "text_referenzen_heading": "",
-        "text_cta_heading": "Ausgangslage & Marktchance",
-        "textarea_cta_text": "Das Rückgrat jedes erfolgreichen Reseller-Geschäfts ist das wiederkehrende Geschäft mit Grosskunden. Projekte kommen und gehen – aber der laufende Bedarf an Schutz, Connectivity und Zubehör bleibt konstant. Wer hier als zuverlässiger Lieferant positioniert ist, profitiert von planbaren Umsätzen, niedrigen Akquisekosten und hoher Kundenbindung.<br><br>DICOTA ist als Zubehöranbieter optimal für dieses Segment positioniert: breites Topseller-Portfolio, dauerhaft hohe Lagerverfügbarkeit und eine klare SKU-Struktur, die sich einfach in bestehende ERP- und Einkaufssysteme integrieren lässt.",
+        "text_cta_heading": "",
+        "textarea_cta_text": "",
         "url_cta_button_link": "",
         "text_cta_button_text": "",
         "breadcrumb_parent_label": "",
         "breadcrumb_parent_link": "",
         "padding_top": 4,
         "padding_bottom": 4
-      }
-    },
-    "backbone": {
-      "type": "image_text",
-      "settings": {
-        "text_heading": "Das Rückgrat Ihres Reseller-Geschäfts",
-        "textarea_text": "Das Rückgrat jedes erfolgreichen Reseller-Geschäfts ist das wiederkehrende Geschäft mit Grosskunden. Projekte kommen und gehen – aber der laufende Bedarf an Schutz, Connectivity und Zubehör bleibt konstant. Wer hier als zuverlässiger Lieferant positioniert ist, profitiert von planbaren Umsätzen, niedrigen Akquisekosten und hoher Kundenbindung.<br><br>DICOTA ist als Zubehöranbieter optimal für dieses Segment positioniert: breites Topseller-Portfolio, dauerhaft hohe Lagerverfügbarkeit und eine klare SKU-Struktur, die sich einfach in bestehende ERP- und Einkaufssysteme integrieren lässt.",
-        "url_button_link": "",
-        "text_button_text": "Learn more",
-        "image_position": "left"
       }
     },
     "quote1": {
@@ -512,8 +512,8 @@
     "hero",
     "hero_image",
     "b2b_key_selling_argu_hWeGLL",
-    "b2b_solution_fQqwVw",
     "backbone",
+    "b2b_solution_fQqwVw",
     "quote1",
     "advantages",
     "target_groups",
