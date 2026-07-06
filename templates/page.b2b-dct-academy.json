@@ -122,7 +122,7 @@
           "type": "b2b-mkt-video",
           "name": "B2B Mkt Video",
           "settings": {
-            "url_video_link": "",
+            "url_video_link": "https://cdn.shopify.com/videos/c/o/v/75e5cc6b17654929a1b6a05b3f9c5c34.mp4",
             "image_thumbnail": "shopify://shop_images/Teaser_Image_Academy_Filter_side-mounted.png",
             "text_share_text": "Watch",
             "text_titel": "Side-Mounted Screen Filters",
