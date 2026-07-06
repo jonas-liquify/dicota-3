@@ -183,9 +183,9 @@
         "tab_DpVWWY": {
           "type": "tab",
           "settings": {
-            "text_tab_label": "Trust",
-            "text_tab_heading": "Trust",
-            "textarea_tab_text": "We build on long-term relationships — with customers, partners and colleagues alike."
+            "text_tab_label": "Simple Processing",
+            "text_tab_heading": "Simple processing – no overhead",
+            "textarea_tab_text": "Many retailers underestimate the amount of internal effort involved in managing an unstructured range of accessories: different suppliers, varying ordering processes, and inconsistent documentation. DICOTA simplifies this radically. A small number of clearly defined SKUs, a well-organised price list and a well-established ordering process reduce the administrative burden to a minimum."
           },
           "blocks": {}
         }
