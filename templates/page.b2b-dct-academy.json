@@ -36,7 +36,7 @@
             "url_video_link": "https://cdn.shopify.com/videos/c/o/v/84f9a383cc7545ff8031348031e2473e.mp4",
             "image_thumbnail": "shopify://shop_images/Teaser_Image_Academy_RFID_Protection.png",
             "text_share_text": "Watch",
-            "text_titel": "RFIT Protection",
+            "text_titel": "RFID Protection",
             "textarea_beschreibung": "Mauris ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torq."
           },
           "blocks": {}
@@ -44,10 +44,10 @@
         "b2b_mkt_video_2": {
           "type": "b2b-mkt-video",
           "settings": {
-            "url_video_link": "",
+            "url_video_link": "https://cdn.shopify.com/videos/c/o/v/07f5ad1ff9e34487b65cc04be387c629.mp4",
             "image_thumbnail": "shopify://shop_images/Teaser_Image_Academy_GPS_Tracker.png",
-            "text_share_text": "Share",
-            "text_titel": "Product training",
+            "text_share_text": "Watch",
+            "text_titel": "GPS Tracking",
             "textarea_beschreibung": "Mauris ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torq."
           },
           "blocks": {}
