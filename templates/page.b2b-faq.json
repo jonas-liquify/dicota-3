@@ -24,8 +24,12 @@
         "textarea_text": "If you have questions about applying, the selection process or getting started — we have answers.",
         "padding_top": 80,
         "padding_bottom": 80,
-        "faq_set": "shipping",
-        "faq_entries": []
+        "faq_set": "privacy-filters-magnatic",
+        "faq_entries": [
+          "can-i-remove-the-privacy-filter-when-i-dont-need-it",
+          "does_the_privacy_filter_support_touchscreen_devices",
+          "are-dicota-privacy-filters-compatible-with-my-laptop-or-monitor"
+        ]
       }
     }
   },
