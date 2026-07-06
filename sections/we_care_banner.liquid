@@ -1,16 +1,18 @@
 <div class="padding-global" style="background-color: {{ section.settings.bg_color }};"><div class="we-care-banner_inner"><div class="we-care-banner_bg-wrap">{% if section.settings.image_hintergrundbild %}
-{{ section.settings.image_hintergrundbild | image_url: width: 1440 | image_tag: loading: 'lazy', class: 'we-care-banner_bg-img' }}
+{{ section.settings.image_hintergrundbild | image_url: width: 1440 | image_tag: li-if: 'section.settings.image_hintergrundbild != blank', loading: 'lazy', class: 'we-care-banner_bg-img' }}
 {% else %}
-<img src="{{ 'placeholder.svg' | asset_url }}" loading="lazy" alt="" class="we-care-banner_bg-img">
-{% endif %}<div class="we-care-banner_overlay"></div></div><div class="we-care-banner_content"><span class="we-care-banner_counter-num">
+<img li-if="section.settings.image_hintergrundbild != blank" src="{{ 'placeholder.svg' | asset_url }}" loading="lazy" alt="" class="we-care-banner_bg-img">
+{% endif %}<div class="we-care-banner_overlay"></div></div><div class="we-care-banner_content"><span li-if="section.settings.text_zahler != blank" class="we-care-banner_counter-num">
 {{ section.settings.text_zahler }}
 </span><h2 class="we-care-banner_headline">
 {{ section.settings.text_headline }}
-</h2><p class="we-care-banner_desc"> {{ section.settings.textarea_beschreibung }} </p><a href="{{ section.settings.url_cta_link }}" class="we-care-banner_cta w-button"> <span>{{ section.settings.text_cta_text }}</span> </a></div><div class="we-care-banner_badge">{% if section.settings.image_we_care_badge %}
+</h2><p class="we-care-banner_desc"> {{ section.settings.textarea_beschreibung }} </p><a li-if="section.settings.text_cta_text != blank" href="{{ section.settings.url_cta_link }}" class="we-care-banner_cta w-button"> <span>{{ section.settings.text_cta_text }}</span> </a></div>{% if section.settings.image_we_care_badge != blank %}    <div li-if="section.settings.image_we_care_badge != blank" class="we-care-banner_badge">
+    {% if section.settings.image_we_care_badge %}
 {{ section.settings.image_we_care_badge | image_url: width: 300 | image_tag: loading: 'lazy', class: 'we-care-banner_badge-img' }}
 {% else %}
 <img src="{{ 'placeholder.svg' | asset_url }}" loading="lazy" alt="" class="we-care-banner_badge-img">
-{% endif %}</div></div></div> {% schema %} {
+{% endif %}    </div>
+{% endif %}</div></div> {% schema %} {
     "tag": "section",
     "name": "We Care Banner",
     "class": "section_we-care-banner",

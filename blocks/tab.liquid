@@ -3,9 +3,9 @@
 {{ block.settings.text_tab_label }}
 </span></button>
                     <div role="tabpanel" x-show="tab === idx" x-cloak="" class="value-tabs_pane">{% if block.settings.image_tab_bild %}
-{{ block.settings.image_tab_bild | image_url: width: 1200 | image_tag: loading: 'lazy', class: 'value-tabs_image' }}
+{{ block.settings.image_tab_bild | image_url: width: 1200 | image_tag: li-if: 'block.settings.image_tab_bild != blank', loading: 'lazy', class: 'value-tabs_image' }}
 {% else %}
-<img src="{{ 'platzhalter.svg' | asset_url }}" loading="lazy" alt="" class="value-tabs_image">
+<img li-if="block.settings.image_tab_bild != blank" src="{{ 'platzhalter.svg' | asset_url }}" loading="lazy" alt="" class="value-tabs_image">
 {% endif %}<div class="value-tabs_content"><h3 class="heading-style-h3">
 {{ block.settings.text_tab_heading }}
 </h3><div class="text-size-medium"> {{ block.settings.textarea_tab_text }} </div></div></div>

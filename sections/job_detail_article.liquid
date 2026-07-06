@@ -2,7 +2,7 @@
 {{ section.settings.text_heading }}
 </h1><div class="blog-hero_top-row"><div class="blog_tag is-large is-dark"><div>
 {{ section.settings.text_tag_1 }}
-</div></div><div class="text-size-tiny">
+</div></div><div li-if="section.settings.text_tag_2 != blank" class="text-size-tiny">
 {{ section.settings.text_tag_2 }}
 </div></div></div><div class="text-rich-text w-richtext"> {{ section.settings.richtext_beschreibung }} </div></div></div></div></div> {% schema %} {
     "tag": "section",

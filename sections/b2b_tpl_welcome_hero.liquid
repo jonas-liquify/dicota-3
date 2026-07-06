@@ -1,12 +1,14 @@
-<div class="padding-global padding-section-medium"><div class="container-large"><div class="split-hero_grid"><div class="split-hero_content"><h1 class="heading-style-h1"><span>
+<div class="padding-global padding-section-medium" style="padding-top: {{ section.settings.padding_top }}rem; padding-bottom: {{ section.settings.padding_bottom }}rem"><div class="container-large"><div class="split-hero_grid"><div class="split-hero_content"><h1 class="heading-style-h1"><span>
 {{ section.settings.text_begrussung }}
-</span><span li-object="customer.first_name | default: 'Gast'">{{ customer.first_name | default: 'Gast' }}</span>! <span>
+</span><span li-object="customer.first_name | default: 'Gast'">{{ customer.first_name | default: 'Gast' }}</span>! <span li-if="section.settings.text_untertitel != blank">
 {{ section.settings.text_untertitel }}
-</span></h1><div class="text-size-medium"> {{ section.settings.textarea_text }} </div></div></div></div></div><div class="split-hero_bg-wrapper">{% if section.settings.image_hintergrundbild %}
+</span></h1><div class="text-size-medium"> {{ section.settings.textarea_text }} </div></div></div></div></div>{% if section.settings.image_hintergrundbild != blank %}    <div li-if="section.settings.image_hintergrundbild != blank" class="split-hero_bg-wrapper">
+    {% if section.settings.image_hintergrundbild %}
 {{ section.settings.image_hintergrundbild | image_url: width: 1200 | image_tag: loading: 'lazy', class: 'split-hero_bg-image' }}
 {% else %}
 <img src="{{ 'platzhalter.svg' | asset_url }}" loading="lazy" alt="" class="split-hero_bg-image">
-{% endif %}</div> {% schema %} {
+{% endif %}    </div>
+{% endif %} {% schema %} {
     "tag": "section",
     "name": "B2B Tpl Welcome Hero",
     "class": "section_split-hero background-color-primary",
@@ -33,6 +35,30 @@
             "id": "image_hintergrundbild",
             "type": "image_picker",
             "label": "Hintergrundbild"
+        },
+        {
+            "type": "header",
+            "content": "Abst\u00e4nde"
+        },
+        {
+            "type": "range",
+            "id": "padding_top",
+            "min": 0,
+            "max": 12,
+            "step": 0.5,
+            "unit": "rem",
+            "label": "Abstand oben",
+            "default": 4
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom",
+            "min": 0,
+            "max": 12,
+            "step": 0.5,
+            "unit": "rem",
+            "label": "Abstand unten",
+            "default": 4
         }
     ],
     "presets": [

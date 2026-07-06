@@ -1,10 +1,10 @@
-<div class="padding-global padding-section-small"><div class="container-large"><div class="acc-default_wrapper"><div class="acc-default_flex-small"><ul role="list" class="breadcrumbs_component w-list-unstyled"><li class="breadcrumbs_item"><a li-object:href="routes.root_url" href="{{ routes.root_url }}" class="w-inline-block"><div class="text-size-regular">Home</div></a><div class="breadcrumbs_icon w-embed"><svg width="15" height="15" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="1.5" fill="none"></path></svg></div></li><li class="breadcrumbs_item"><div>
+<div class="padding-global padding-section-small" style="padding-top: {{ section.settings.padding_top }}rem; padding-bottom: {{ section.settings.padding_bottom }}rem"><div class="container-large"><div class="acc-default_wrapper"><div class="acc-default_flex-small"><ul role="list" class="breadcrumbs_component w-list-unstyled"><li class="breadcrumbs_item"><a li-object:href="routes.root_url" href="{{ routes.root_url }}" class="w-inline-block"><div class="text-size-regular">Home</div></a><div class="breadcrumbs_icon w-embed"><svg width="15" height="15" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="1.5" fill="none"></path></svg></div></li><li class="breadcrumbs_item"><div li-if="section.settings.text_breadcrumb != blank">
 {{ section.settings.text_breadcrumb }}
 </div></li></ul><div class="default-flex-tiny"><h1 class="heading-style-h2">
 {{ section.settings.text_heading_1 }}
-</h1><div class="text-size-medium max-width-large"> {{ section.settings.textarea_subheading_1 }} </div></div><div class="acc-card"><div class="default-flex-tiny"><h2 class="heading-style-h4">
+</h1><div li-if="section.settings.textarea_subheading_1 != blank" class="text-size-medium max-width-large"> {{ section.settings.textarea_subheading_1 }} </div></div><div class="acc-card"><div class="default-flex-tiny"><h2 class="heading-style-h4">
 {{ section.settings.text_heading_2 }}
-</h2><div class="text-size-regular">
+</h2><div li-if="section.settings.text_subheading_2 != blank" class="text-size-regular">
 {{ section.settings.text_subheading_2 }}
 </div></div><div class="acc_form-block w-form"><form name="acc-search" data-name="Acc Search" method="get" class="acc_form"><div class="filter_input-wrapper"><div class="filter_left-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16" fill="none"><path d="M13.0667 14L8.86667 9.8C8.53333 10.0667 8.15 10.2778 7.71667 10.4333C7.28333 10.5889 6.82222 10.6667 6.33333 10.6667C5.12222 10.6667 4.09722 10.2472 3.25833 9.40833C2.41944 8.56944 2 7.54444 2 6.33333C2 5.12222 2.41944 4.09722 3.25833 3.25833C4.09722 2.41944 5.12222 2 6.33333 2C7.54444 2 8.56944 2.41944 9.40833 3.25833C10.2472 4.09722 10.6667 5.12222 10.6667 6.33333C10.6667 6.82222 10.5889 7.28333 10.4333 7.71667C10.2778 8.15 10.0667 8.53333 9.8 8.86667L14 13.0667L13.0667 14Z" fill="currentColor"></path></svg></div><input class="filter_input is-white-bg w-input" maxlength="256" name="q" placeholder="Search by SKU, EAN..." type="text" required=""></div></form></div></div><div class="acc-card"><div class="default-flex-tiny"><h2 class="heading-style-h4">
 {{ section.settings.text_downloads_heading }}
@@ -12,7 +12,7 @@
 {% content_for 'blocks' %}
 </div></div><div class="acc-card"><div class="default-flex-tiny"><h2 class="heading-style-h4">
 {{ section.settings.text_liste_heading }}
-</h2><div class="text-size-regular">
+</h2><div li-if="section.settings.text_liste_subheading != blank" class="text-size-regular">
 {{ section.settings.text_liste_subheading }}
 </div></div><div class="acc_download-item background-color-secondary max-width-full"><div class="acc_download-banner"><div class="acc_download-banner-content"><div class="acc_download-banner-heading"><div class="icon-1x1-large w-embed"><svg width="100%" height="100%" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6" fill="none"></circle><path d="M12 8v5m0 3h.01" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path></svg></div><div class="text-size-large">
 {{ section.settings.text_info_heading }}
@@ -88,6 +88,30 @@
             "type": "richtext",
             "label": "Info Text",
             "default": "<p>Item no. \u00b7 Predecessor model \u00b7 EAN code \u00b7 Availability \u00b7 Construction type \u00b7 Color<\/p>"
+        },
+        {
+            "type": "header",
+            "content": "Abst\u00e4nde"
+        },
+        {
+            "type": "range",
+            "id": "padding_top",
+            "min": 0,
+            "max": 12,
+            "step": 0.5,
+            "unit": "rem",
+            "label": "Abstand oben",
+            "default": 4
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom",
+            "min": 0,
+            "max": 12,
+            "step": 0.5,
+            "unit": "rem",
+            "label": "Abstand unten",
+            "default": 4
         }
     ],
     "presets": [

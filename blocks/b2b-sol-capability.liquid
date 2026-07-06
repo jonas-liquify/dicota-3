@@ -1,8 +1,8 @@
 <div li-block="B2B Sol Capability" class="acc-card sol-cap-card" {{ block.shopify_attributes }}>
                     {% if block.settings.image_icon %}
-{{ block.settings.image_icon | image_url: width: 80 | image_tag: loading: 'lazy', class: 'acc_cta-icon' }}
+{{ block.settings.image_icon | image_url: width: 80 | image_tag: li-if: 'block.settings.image_icon != blank', loading: 'lazy', class: 'acc_cta-icon' }}
 {% else %}
-<img src="{{ 'platzhalter.svg' | asset_url }}" loading="lazy" alt="" class="acc_cta-icon">
+<img li-if="block.settings.image_icon != blank" src="{{ 'platzhalter.svg' | asset_url }}" loading="lazy" alt="" class="acc_cta-icon">
 {% endif %}
                     <div class="acc-card_content"><div class="text-size-large">
 {{ block.settings.text_heading }}

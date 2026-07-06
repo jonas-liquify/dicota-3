@@ -1,30 +1,30 @@
-<div class="padding-global padding-section-small"><div class="container-large"><div class="acc-default_wrapper"><div class="acc-default_flex-small"><ul role="list" class="breadcrumbs_component w-list-unstyled"><li class="breadcrumbs_item"><a li-object:href="routes.root_url" href="{{ routes.root_url }}" class="w-inline-block"><div class="text-size-regular">Home</div></a><div class="breadcrumbs_icon w-embed"><svg width="15" height="15" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="1.5" fill="none"></path></svg></div></li><li class="breadcrumbs_item"><div>
+<div class="padding-global padding-section-small" style="padding-top: {{ section.settings.padding_top }}rem; padding-bottom: {{ section.settings.padding_bottom }}rem"><div class="container-large"><div class="acc-default_wrapper"><div class="acc-default_flex-small"><ul role="list" class="breadcrumbs_component w-list-unstyled"><li class="breadcrumbs_item"><a li-object:href="routes.root_url" href="{{ routes.root_url }}" class="w-inline-block"><div class="text-size-regular">Home</div></a><div class="breadcrumbs_icon w-embed"><svg width="15" height="15" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="1.5" fill="none"></path></svg></div></li><li class="breadcrumbs_item"><div>
 {{ section.settings.text_breadcrumb }}
 </div></li></ul><div class="default-flex-tiny"><h1 class="heading-style-h2">
 {{ section.settings.text_heading_1 }}
-</h1><div class="text-size-medium max-width-large"> {{ section.settings.textarea_subheading_1 }} </div></div><div class="acc-double"><div class="acc-card"><div class="text-style-subline">
+</h1><div class="text-size-medium max-width-large"> {{ section.settings.textarea_subheading_1 }} </div></div><div class="acc-double"><div class="acc-card"><div li-if="section.settings.text_linke_karte_subline != blank" class="text-style-subline">
 {{ section.settings.text_linke_karte_subline }}
 </div>{% if section.settings.image_linke_karte_bild %}
-{{ section.settings.image_linke_karte_bild | image_url: width: 800 | image_tag: loading: 'lazy', class: 'acc-card_16-9-image' }}
+{{ section.settings.image_linke_karte_bild | image_url: width: 800 | image_tag: li-if: 'section.settings.image_linke_karte_bild != blank', loading: 'lazy', class: 'acc-card_16-9-image' }}
 {% else %}
-<img src="{{ 'platzhalter.svg' | asset_url }}" loading="lazy" alt="" class="acc-card_16-9-image">
+<img li-if="section.settings.image_linke_karte_bild != blank" src="{{ 'platzhalter.svg' | asset_url }}" loading="lazy" alt="" class="acc-card_16-9-image">
 {% endif %}<div class="acc-card_content"><div class="text-size-large">
 {{ section.settings.text_linke_karte_heading }}
-</div><div class="text-size-regular"> {{ section.settings.textarea_linke_karte_text }} </div></div><a href="{{ section.settings.url_linke_karte_button_link }}" class="button w-button"> <span>{{ section.settings.text_linke_karte_button_text }}</span> </a></div><div class="acc-card"><div class="text-style-subline">
+</div><div class="text-size-regular"> {{ section.settings.textarea_linke_karte_text }} </div></div><a li-if="section.settings.text_linke_karte_button_text != blank" href="{{ section.settings.url_linke_karte_button_link }}" class="button w-button"> <span>{{ section.settings.text_linke_karte_button_text }}</span> </a></div><div class="acc-card"><div li-if="section.settings.text_rechte_karte_subline != blank" class="text-style-subline">
 {{ section.settings.text_rechte_karte_subline }}
 </div><div class="acc_banner-item is-large">{% if section.settings.image_rechte_karte_bild %}
-{{ section.settings.image_rechte_karte_bild | image_url: width: 400 | image_tag: loading: 'lazy', class: 'acc_banner-image is-large' }}
+{{ section.settings.image_rechte_karte_bild | image_url: width: 400 | image_tag: li-if: 'section.settings.image_rechte_karte_bild != blank', loading: 'lazy', class: 'acc_banner-image is-large' }}
 {% else %}
-<img src="{{ 'platzhalter.svg' | asset_url }}" loading="lazy" alt="" class="acc_banner-image is-large">
+<img li-if="section.settings.image_rechte_karte_bild != blank" src="{{ 'platzhalter.svg' | asset_url }}" loading="lazy" alt="" class="acc_banner-image is-large">
 {% endif %}<div class="acc_banner-content is-large"><div class="acc_tag-list"><div class="text-style-subline">Reward</div></div><h3 class="text-size-large">
 {{ section.settings.text_rechte_karte_heading }}
-</h3></div></div><a href="{{ section.settings.url_rechte_karte_button_link }}" class="button w-button"> <span>{{ section.settings.text_rechte_karte_button_text }}</span> </a></div></div><div class="acc-banner text-color-white">{% if section.settings.image_banner_bild %}
-{{ section.settings.image_banner_bild | image_url: width: 1200 | image_tag: loading: 'lazy', class: 'acc-banner_image' }}
+</h3></div></div><a li-if="section.settings.text_rechte_karte_button_text != blank" href="{{ section.settings.url_rechte_karte_button_link }}" class="button w-button"> <span>{{ section.settings.text_rechte_karte_button_text }}</span> </a></div></div><div class="acc-banner text-color-white">{% if section.settings.image_banner_bild %}
+{{ section.settings.image_banner_bild | image_url: width: 1200 | image_tag: li-if: 'section.settings.image_banner_bild != blank', loading: 'lazy', class: 'acc-banner_image' }}
 {% else %}
-<img src="{{ 'platzhalter.svg' | asset_url }}" loading="lazy" alt="" class="acc-banner_image">
+<img li-if="section.settings.image_banner_bild != blank" src="{{ 'platzhalter.svg' | asset_url }}" loading="lazy" alt="" class="acc-banner_image">
 {% endif %}<div class="acc-banner_content"><h3 class="heading-style-h2">
 {{ section.settings.text_banner_heading }}
-</h3><div class="text-size-medium"> {{ section.settings.textarea_banner_text }} </div><div class="button-group margin-top margin-small"><a href="{{ section.settings.url_banner_button_link }}" class="button is-white w-button"> <span>{{ section.settings.text_banner_button_text }}</span> </a></div></div></div></div><div class="acc-default_flex-small"><div class="default-flex-tiny"><h2 class="heading-style-h2">
+</h3><div class="text-size-medium"> {{ section.settings.textarea_banner_text }} </div><div class="button-group margin-top margin-small"><a li-if="section.settings.text_banner_button_text != blank" href="{{ section.settings.url_banner_button_link }}" class="button is-white w-button"> <span>{{ section.settings.text_banner_button_text }}</span> </a></div></div></div></div><div class="acc-default_flex-small"><div class="default-flex-tiny"><h2 class="heading-style-h2">
 {{ section.settings.text_heading_2 }}
 </h2></div><div li-cf-theme-blocks="" class="acc-triple">
 {% content_for 'blocks' %}
@@ -154,6 +154,30 @@
             "type": "text",
             "label": "Heading 2",
             "default": "News from DICOTA"
+        },
+        {
+            "type": "header",
+            "content": "Abst\u00e4nde"
+        },
+        {
+            "type": "range",
+            "id": "padding_top",
+            "min": 0,
+            "max": 12,
+            "step": 0.5,
+            "unit": "rem",
+            "label": "Abstand oben",
+            "default": 4
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom",
+            "min": 0,
+            "max": 12,
+            "step": 0.5,
+            "unit": "rem",
+            "label": "Abstand unten",
+            "default": 4
         }
     ],
     "presets": [

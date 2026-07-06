@@ -1,12 +1,12 @@
 <div li-block="We Care Item" class="swiper-slide ph_we-care-slide" {{ block.shopify_attributes }}>
                     {% if block.settings.image_badge %}
-{{ block.settings.image_badge | image_url: width: 64 | image_tag: loading: 'lazy', class: 'ph_we-care-badge' }}
+{{ block.settings.image_badge | image_url: width: 64 | image_tag: li-if: 'block.settings.image_badge != blank', loading: 'lazy', class: 'ph_we-care-badge' }}
 {% else %}
-<img src="{{ 'placeholder.svg' | asset_url }}" loading="lazy" alt="" class="ph_we-care-badge">
+<img li-if="block.settings.image_badge != blank" src="{{ 'placeholder.svg' | asset_url }}" loading="lazy" alt="" class="ph_we-care-badge">
 {% endif %}
                     <div class="ph_we-care-text"><p class="ph_we-care-hl">
 {{ block.settings.text_headline }}
-</p><a href="{{ block.settings.url_link }}" class="ph_we-care-link"> <span>{{ block.settings.text_linktext }}</span> </a></div>
+</p><a li-if="block.settings.text_linktext != blank" href="{{ block.settings.url_link }}" class="ph_we-care-link"> <span>{{ block.settings.text_linktext }}</span> </a></div>
                 </div> {% schema %} {
     "name": "We Care Item",
     "settings": [

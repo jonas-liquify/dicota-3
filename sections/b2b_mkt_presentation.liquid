@@ -1,4 +1,4 @@
-<div class="padding-global"><div class="container-large"><div class="presentations_wrapper"><div class="default-flex-tiny"><h1 class="heading-style-h2">
+<div class="padding-global" style="padding-top: {{ section.settings.padding_top }}rem; padding-bottom: {{ section.settings.padding_bottom }}rem"><div class="container-large"><div class="presentations_wrapper"><div class="default-flex-tiny"><h1 class="heading-style-h2">
 {{ section.settings.text_uberschrift }}
 </h1><div class="text-size-medium max-width-large"> {{ section.settings.textarea_einleitung }} </div></div><div li-cf-theme-blocks="" class="presentations_categories">
 {% content_for 'blocks' %}
@@ -34,6 +34,30 @@
         {
             "type": "paragraph",
             "content": "Produkt-Pr\u00e4sentationen, gruppiert nach Kategorie. Lege je Kategorie einen Block 'Produkt Kategorie' an (mit Namen) und darin pro Dokument einen Block 'Pr\u00e4sentation' mit Titel, Datei-Info und den Datei-Links f\u00fcr DE\/EN\/FR."
+        },
+        {
+            "type": "header",
+            "content": "Abst\u00e4nde"
+        },
+        {
+            "type": "range",
+            "id": "padding_top",
+            "min": 0,
+            "max": 12,
+            "step": 0.5,
+            "unit": "rem",
+            "label": "Abstand oben",
+            "default": 4
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom",
+            "min": 0,
+            "max": 12,
+            "step": 0.5,
+            "unit": "rem",
+            "label": "Abstand unten",
+            "default": 4
         }
     ],
     "presets": [

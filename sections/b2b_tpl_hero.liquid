@@ -1,11 +1,11 @@
-<div class="padding-global padding-section-medium"><div class="container-large"><div class="account-hero_wrapper"><div class="text-style-subline">
+<div class="padding-global padding-section-medium" style="padding-top: {{ section.settings.padding_top }}rem; padding-bottom: {{ section.settings.padding_bottom }}rem"><div class="container-large"><div class="account-hero_wrapper"><div li-if="section.settings.text_subline != blank" class="text-style-subline">
 {{ section.settings.text_subline }}
 </div><h1 class="heading-style-h1">
 {{ section.settings.text_heading }}
-</h1><div class="button-group margin-top margin-small"><a href="{{ section.settings.url_button_1_link }}" class="button w-button"> <span>{{ section.settings.text_button_1_text }}</span> </a><a href="{{ section.settings.url_button_2_link }}" class="text-size-regular text-weight-medium"> <span>{{ section.settings.text_button_2_text }}</span> </a></div></div></div></div><div class="acc-hero_bg-wrapper"><div class="acc-hero_bg-container">{% if section.settings.image_hintergrundbild %}
-{{ section.settings.image_hintergrundbild | image_url: width: 1200 | image_tag: loading: 'lazy', class: 'acc-hero_bg-image' }}
+</h1><div class="button-group margin-top margin-small"><a li-if="section.settings.text_button_1_text != blank" href="{{ section.settings.url_button_1_link }}" class="button w-button"> <span>{{ section.settings.text_button_1_text }}</span> </a><a li-if="section.settings.text_button_2_text != blank" href="{{ section.settings.url_button_2_link }}" class="text-size-regular text-weight-medium"> <span>{{ section.settings.text_button_2_text }}</span> </a></div></div></div></div><div class="acc-hero_bg-wrapper"><div class="acc-hero_bg-container">{% if section.settings.image_hintergrundbild %}
+{{ section.settings.image_hintergrundbild | image_url: width: 1200 | image_tag: li-if: 'section.settings.image_hintergrundbild != blank', loading: 'lazy', class: 'acc-hero_bg-image' }}
 {% else %}
-<img src="{{ 'platzhalter.svg' | asset_url }}" loading="lazy" alt="" class="acc-hero_bg-image">
+<img li-if="section.settings.image_hintergrundbild != blank" src="{{ 'platzhalter.svg' | asset_url }}" loading="lazy" alt="" class="acc-hero_bg-image">
 {% endif %}</div></div> {% schema %} {
     "tag": "section",
     "name": "B2B Tpl Hero",
@@ -58,21 +58,21 @@
             "type": "range",
             "id": "padding_top",
             "min": 0,
-            "max": 200,
-            "step": 4,
-            "unit": "px",
+            "max": 12,
+            "step": 0.5,
+            "unit": "rem",
             "label": "Abstand oben",
-            "default": 80
+            "default": 4
         },
         {
             "type": "range",
             "id": "padding_bottom",
             "min": 0,
-            "max": 200,
-            "step": 4,
-            "unit": "px",
+            "max": 12,
+            "step": 0.5,
+            "unit": "rem",
             "label": "Abstand unten",
-            "default": 80
+            "default": 4
         }
     ],
     "presets": [

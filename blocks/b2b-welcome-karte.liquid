@@ -1,8 +1,8 @@
 <div li-block="B2B Welcome Karte" class="acc-card is-small" {{ block.shopify_attributes }}>
                     {% if block.settings.image_bild %}
-{{ block.settings.image_bild | image_url: width: 800 | image_tag: loading: 'lazy', class: 'acc-card_16-9-image' }}
+{{ block.settings.image_bild | image_url: width: 800 | image_tag: li-if: 'block.settings.image_bild != blank', loading: 'lazy', class: 'acc-card_16-9-image' }}
 {% else %}
-<img src="{{ 'platzhalter.svg' | asset_url }}" loading="lazy" alt="" class="acc-card_16-9-image">
+<img li-if="block.settings.image_bild != blank" src="{{ 'platzhalter.svg' | asset_url }}" loading="lazy" alt="" class="acc-card_16-9-image">
 {% endif %}
                     <div class="acc-card_content"><div class="text-size-large">
 {{ block.settings.text_heading }}

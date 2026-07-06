@@ -2,7 +2,7 @@
                     <div class="text-size-large">
 {{ block.settings.text_block_heading }}
 </div>
-                    <div class="text-size-small">
+                    <div li-if="block.settings.text_block_text != blank" class="text-size-small">
 {{ block.settings.text_block_text }}
 </div>
                 </div> {% schema %} {

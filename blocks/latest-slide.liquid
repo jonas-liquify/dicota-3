@@ -1,8 +1,8 @@
 <article li-block="Latest Slide" class="swiper-slide the-latest_card" {{ block.shopify_attributes }}>
                     {% if block.settings.image_hintergrundbild %}
-{{ block.settings.image_hintergrundbild | image_url: width: 900 | image_tag: loading: 'lazy', class: 'the-latest_card-image' }}
+{{ block.settings.image_hintergrundbild | image_url: width: 900 | image_tag: li-if: 'block.settings.image_hintergrundbild != blank', loading: 'lazy', class: 'the-latest_card-image' }}
 {% else %}
-<img src="{{ 'hero-apparel-3.svg' | asset_url }}" loading="lazy" alt="" class="the-latest_card-image">
+<img li-if="block.settings.image_hintergrundbild != blank" src="{{ 'hero-apparel-3.svg' | asset_url }}" loading="lazy" alt="" class="the-latest_card-image">
 {% endif %}
                     <div class="the-latest_card-overlay"></div>
                     <a href="{{ block.settings.url_link }}" class="the-latest_card-link w-inline-block"> <div class="the-latest_card-content"><span li-unless="block.settings.badge == blank" class="the-latest_card-badge">{{ block.settings.text_badge }}</span><h3 class="the-latest_card-title heading-style-h4">{{ block.settings.text_titel }}</h3><p class="the-latest_card-text text-size-small"> {{ block.settings.textarea_text }} </p></div> </a>

@@ -1,17 +1,17 @@
 <div li-block="Slide" class="swiper-slide hero_slide" {{ block.shopify_attributes }}>
                     <picture class="hero_bg-picture">{% if block.settings.image_hintergrundbild %}
-{{ block.settings.image_hintergrundbild | image_url: width: 2400 | image_tag: loading: 'eager', class: 'hero_bg-image' }}
+{{ block.settings.image_hintergrundbild | image_url: width: 2400 | image_tag: li-if: 'block.settings.image_hintergrundbild != blank', loading: 'eager', class: 'hero_bg-image' }}
 {% else %}
-<img src="{{ 'hero-apparel-1.svg' | asset_url }}" loading="eager" alt="" class="hero_bg-image">
+<img src="{{ 'hero-apparel-1.svg' | asset_url }}" li-if="block.settings.image_hintergrundbild != blank" loading="eager" alt="" class="hero_bg-image">
 {% endif %}</picture>
                     <div class="hero_overlay"></div>
                     <div class="hero_content"><div class="hero_text"><div class="hero_headline"><p class="hero_headline-line">
 {{ block.settings.text_headline_zeile_1 }}
-</p><p class="hero_headline-line">
+</p><p li-if="block.settings.text_headline_zeile_2 != blank" class="hero_headline-line">
 {{ block.settings.text_headline_zeile_2 }}
-</p></div><p class="hero_subtext text-size-regular">
+</p></div><p li-if="block.settings.text_subtext != blank" class="hero_subtext text-size-regular">
 {{ block.settings.text_subtext }}
-</p></div><div class="hero_actions"><a href="{{ block.settings.url_button_link }}" class="button hero_button w-button"> <span>{{ block.settings.text_button_text }}</span> </a></div></div>
+</p></div><div class="hero_actions"><a li-if="block.settings.text_button_text != blank" href="{{ block.settings.url_button_link }}" class="button hero_button w-button"> <span>{{ block.settings.text_button_text }}</span> </a></div></div>
                 </div> {% schema %} {
     "name": "Slide",
     "settings": [

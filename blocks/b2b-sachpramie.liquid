@@ -1,17 +1,17 @@
 <div li-block="B2B Sachprämie" class="acc-card" {{ block.shopify_attributes }}>
                     {% if block.settings.image_bild %}
-{{ block.settings.image_bild | image_url: width: 600 | image_tag: loading: 'lazy', class: 'acc-card_16-9-image' }}
+{{ block.settings.image_bild | image_url: width: 600 | image_tag: li-if: 'block.settings.image_bild != blank', loading: 'lazy', class: 'acc-card_16-9-image' }}
 {% else %}
-<img src="{{ 'platzhalter.svg' | asset_url }}" loading="lazy" alt="" class="acc-card_16-9-image">
+<img li-if="block.settings.image_bild != blank" src="{{ 'platzhalter.svg' | asset_url }}" loading="lazy" alt="" class="acc-card_16-9-image">
 {% endif %}
-                    <div class="acc-card_content"><div class="text-style-subline">
+                    <div class="acc-card_content"><div li-if="block.settings.text_kategorie != blank" class="text-style-subline">
 {{ block.settings.text_kategorie }}
 </div><div class="text-size-large">
 {{ block.settings.text_heading }}
-</div><div class="text-size-regular">
+</div><div li-if="block.settings.text_punkte != blank" class="text-size-regular">
 {{ block.settings.text_punkte }}
 </div></div>
-                    <a href="{{ block.settings.url_button_link }}" class="button w-button"> <span>{{ block.settings.text_button_text }}</span> </a>
+                    <a li-if="block.settings.text_button_text != blank" href="{{ block.settings.url_button_link }}" class="button w-button"> <span>{{ block.settings.text_button_text }}</span> </a>
                 </div> {% schema %} {
     "name": "B2B Sachpr\u00e4mie",
     "settings": [

@@ -1,9 +1,9 @@
 <div li-block="B2B Tpl List Eintr" class="acc-card is-small" {{ block.shopify_attributes }}>
-                    <div class="acc-card_download-content"><div class="default-flex-tiny"><div class="text-style-subline">
+                    <div class="acc-card_download-content"><div class="default-flex-tiny"><div li-if="block.settings.text_datum != blank" class="text-style-subline">
 {{ block.settings.text_datum }}
 </div><div class="text-size-large">
 {{ block.settings.text_heading }}
-</div><div class="text-size-regular"> {{ block.settings.textarea_text }} </div></div><a href="{{ block.settings.url_button_link }}" class="button is-secondary w-button"> <span>{{ block.settings.text_button_text }}</span> </a></div>
+</div><div class="text-size-regular"> {{ block.settings.textarea_text }} </div></div><a li-if="block.settings.text_button_text != blank" href="{{ block.settings.url_button_link }}" class="button is-secondary w-button"> <span>{{ block.settings.text_button_text }}</span> </a></div>
                 </div> {% schema %} {
     "name": "B2B Tpl List Eintr",
     "settings": [

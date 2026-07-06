@@ -8,9 +8,9 @@
 </span><span class="testimonials_rating-count">
 {{ section.settings.text_anzahl_bewertungen }}
 </span>{% if section.settings.image_provider_logo %}
-{{ section.settings.image_provider_logo | image_url: width: 60 | image_tag: loading: 'lazy', class: 'testimonials_rating-logo' }}
+{{ section.settings.image_provider_logo | image_url: width: 60 | image_tag: li-if: 'section.settings.image_provider_logo != blank', loading: 'lazy', class: 'testimonials_rating-logo' }}
 {% else %}
-<img src="{{ 'placeholder.svg' | asset_url }}" loading="lazy" alt="" class="testimonials_rating-logo">
+<img li-if="section.settings.image_provider_logo != blank" src="{{ 'placeholder.svg' | asset_url }}" loading="lazy" alt="" class="testimonials_rating-logo">
 {% endif %}    </div>
 {% endif %}</header><div class="testimonials_slider-wrapper"><div class="testimonials_swiper swiper"><div li-cf-theme-blocks="" class="swiper-wrapper testimonials_list">
 {% content_for 'blocks' %}

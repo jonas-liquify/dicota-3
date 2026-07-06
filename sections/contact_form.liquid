@@ -1,6 +1,6 @@
 <div class="padding-global padding-section-medium"><div class="container-large"><div class="w-layout-grid contact_component"><div class="contact_content"><div class="margin-bottom margin-small"><h1 class="heading-style-h2">
 {{ section.settings.text_heading }}
-</h1></div><p class="text-size-medium">
+</h1></div><p li-if="section.settings.text_paragraph != blank" class="text-size-medium">
 {{ section.settings.text_paragraph }}
 </p></div><div class="contact_form-block w-form">{% form 'contact', return_to: '/', class: 'contact_form' %}
 <div class="form_field-wrapper"><label for="First-Name-2" class="form_field-label">

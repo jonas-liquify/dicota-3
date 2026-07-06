@@ -1,8 +1,8 @@
 <div li-block="Feature Karte" class="icon-cards_card is-line-right" {{ block.shopify_attributes }}>
                     {% if block.settings.image_icon %}
-{{ block.settings.image_icon | image_url: width: 96 | image_tag: loading: 'lazy', class: 'icon-1x1-xlarge' }}
+{{ block.settings.image_icon | image_url: width: 96 | image_tag: li-if: 'block.settings.image_icon != blank', loading: 'lazy', class: 'icon-1x1-xlarge' }}
 {% else %}
-<img src="{{ 'platzhalter.svg' | asset_url }}" loading="lazy" alt="" class="icon-1x1-xlarge">
+<img li-if="block.settings.image_icon != blank" src="{{ 'platzhalter.svg' | asset_url }}" loading="lazy" alt="" class="icon-1x1-xlarge">
 {% endif %}
                     <div class="default-flex-tiny"><h3 class="text-size-large">
 {{ block.settings.text_heading }}

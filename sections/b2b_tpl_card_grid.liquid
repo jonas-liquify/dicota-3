@@ -1,4 +1,4 @@
-<div class="padding-global padding-section-medium"><div class="container-large"><div class="default-medium-component"><div class="acc-cards_heading"><h2 class="heading-style-h2">
+<div class="padding-global padding-section-medium" style="padding-top: {{ section.settings.padding_top }}rem; padding-bottom: {{ section.settings.padding_bottom }}rem"><div class="container-large"><div class="default-medium-component"><div class="acc-cards_heading"><h2 class="heading-style-h2">
 {{ section.settings.text_heading }}
 </h2><div class="text-size-medium"> {{ section.settings.textarea_text }} </div></div><div li-cf-theme-blocks="" class="acc-cards_grid">
 {% content_for 'blocks' %}
@@ -35,21 +35,21 @@
             "type": "range",
             "id": "padding_top",
             "min": 0,
-            "max": 160,
-            "step": 4,
-            "unit": "px",
+            "max": 12,
+            "step": 0.5,
+            "unit": "rem",
             "label": "Abstand oben",
-            "default": 80
+            "default": 4
         },
         {
             "type": "range",
             "id": "padding_bottom",
             "min": 0,
-            "max": 160,
-            "step": 4,
-            "unit": "px",
+            "max": 12,
+            "step": 0.5,
+            "unit": "rem",
             "label": "Abstand unten",
-            "default": 80
+            "default": 4
         }
     ],
     "presets": [

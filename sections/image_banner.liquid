@@ -1,15 +1,19 @@
-<picture class="image-banner_bg-picture">{% if section.settings.image_hintergrundbild %}
+{% if section.settings.image_hintergrundbild != blank %}    <picture li-if="section.settings.image_hintergrundbild != blank" class="image-banner_bg-picture">
+    {% if section.settings.image_hintergrundbild %}
 {{ section.settings.image_hintergrundbild | image_url: width: 2400 | image_tag: loading: 'lazy', class: 'image-banner_bg-image' }}
 {% else %}
 <img src="{{ 'hero-apparel-2.svg' | asset_url }}" loading="lazy" alt="" class="image-banner_bg-image">
-{% endif %}</picture><div li-if:inside="section.settings.overlay_strength > 0" style="display:contents" inside="1">
+{% endif %}    </picture>
+{% endif %}<div li-if:inside="section.settings.overlay_strength > 0" style="display:contents" inside="1">
         {% if section.settings.overlay_strength > 0 %}
             <div class="image-banner_overlay" style="background-color: rgba(0,0,0,{{ section.settings.overlay_strength | divided_by: 100.0 }});"></div>        {% endif %}
     </div><div class="image-banner_container{% if section.settings.full_bleed %} is-full-bleed{% endif %}" style="--banner-min-height: {{ section.settings.min_height }}vh; color: {{ section.settings.text_color }}; text-align: {{ section.settings.text_align }}; justify-content: {{ section.settings.content_vertical }}; align-items: {{ section.settings.content_horizontal }};"><div class="image-banner_content"><div class="image-banner_headline"><p class="image-banner_headline-line">
 {{ section.settings.text_headline_zeile_1 }}
-</p><p class="image-banner_headline-line">
+</p><p li-if="section.settings.text_headline_zeile_2 != blank" class="image-banner_headline-line">
 {{ section.settings.text_headline_zeile_2 }}
-</p></div><p class="image-banner_subtext"> {{ section.settings.textarea_subtext }} </p><div class="image-banner_actions"><a href="{{ section.settings.url_button_link }}" class="button image-banner_button w-button"> <span>{{ section.settings.text_button_text }}</span> </a></div></div></div> {% schema %} {
+</p></div><p class="image-banner_subtext"> {{ section.settings.textarea_subtext }} </p>{% if section.settings.text_button_text != blank %}    <div li-if="section.settings.text_button_text != blank" class="image-banner_actions">
+    <a href="{{ section.settings.url_button_link }}" class="button image-banner_button w-button"> <span>{{ section.settings.text_button_text }}</span> </a>    </div>
+{% endif %}</div></div> {% schema %} {
     "tag": "section",
     "name": "Image Banner",
     "class": "section_image-banner",

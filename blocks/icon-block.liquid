@@ -1,12 +1,12 @@
 <div li-block="Icon Block" class="company_icon-block" {{ block.shopify_attributes }}>
                     {% if block.settings.image_icon %}
-{{ block.settings.image_icon | image_url: width: 80 | image_tag: loading: 'lazy', class: 'company_icon' }}
+{{ block.settings.image_icon | image_url: width: 80 | image_tag: li-if: 'block.settings.image_icon != blank', loading: 'lazy', class: 'company_icon' }}
 {% else %}
-<img src="{{ 'platzhalter.svg' | asset_url }}" loading="lazy" alt="" class="company_icon">
+<img li-if="block.settings.image_icon != blank" src="{{ 'platzhalter.svg' | asset_url }}" loading="lazy" alt="" class="company_icon">
 {% endif %}
                     <div class="company_icon-text"><div class="text-size-large">
 {{ block.settings.text_zahl }}
-</div><div class="text-size-medium">
+</div><div li-if="block.settings.text_label != blank" class="text-size-medium">
 {{ block.settings.text_label }}
 </div></div>
                 </div> {% schema %} {

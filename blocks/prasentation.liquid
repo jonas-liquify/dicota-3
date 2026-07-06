@@ -4,7 +4,7 @@
 </div><div class="presentations_row-meta text-size-tiny text-style-muted">
 {{ block.settings.text_datei_info }}
 </div></div></div>
-                    <div class="presentations_row-langs"><a href="{{ block.settings.url_de_datei }}" target="_blank" rel="noopener" class="presentations_lang"> DE </a><a href="{{ block.settings.url_en_datei }}" target="_blank" rel="noopener" class="presentations_lang"> EN </a><a href="{{ block.settings.url_fr_datei }}" target="_blank" rel="noopener" class="presentations_lang"> FR </a></div>
+                    <div class="presentations_row-langs"><a li-if="block.settings.url_de_datei != blank" href="{{ block.settings.url_de_datei }}" target="_blank" rel="noopener" class="presentations_lang"> DE </a><a li-if="block.settings.url_en_datei != blank" href="{{ block.settings.url_en_datei }}" target="_blank" rel="noopener" class="presentations_lang"> EN </a><a li-if="block.settings.url_fr_datei != blank" href="{{ block.settings.url_fr_datei }}" target="_blank" rel="noopener" class="presentations_lang"> FR </a></div>
                 </div> {% schema %} {
     "name": "Pr\u00e4sentation",
     "settings": [
