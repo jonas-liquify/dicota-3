@@ -207,8 +207,8 @@
       "name": "Value Tabs",
       "settings": {
         "text_heading": "What defines the business model",
-        "padding_top": 80,
-        "padding_bottom": 80
+        "padding_top": 5,
+        "padding_bottom": 5
       }
     },
     "benefits_grid_Rgyjmf": {
@@ -262,8 +262,8 @@
         "text_heading": "Margin without extra effort",
         "url_button_link": "",
         "text_button_text": "",
-        "padding_top": 80,
-        "padding_bottom": 80
+        "padding_top": 5,
+        "padding_bottom": 5
       }
     }
   },

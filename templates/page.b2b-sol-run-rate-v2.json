@@ -24,8 +24,8 @@
         "textarea_text": "DICOTA ist der ideale Partner für das wiederkehrende Grosskundengeschäft: breites Topseller-Portfolio, dauerhaft hohe Verfügbarkeit und eine klare SKU-Struktur schaffen planbare Umsätze und hohe Kundenbindung.",
         "url_button_link": "shopify://pages/contact",
         "text_button_text": "Gespräch vereinbaren",
-        "padding_top": 80,
-        "padding_bottom": 40
+        "padding_top": 5,
+        "padding_bottom": 2.5
       }
     },
     "hero_image": {
@@ -80,8 +80,8 @@
         "s3"
       ],
       "settings": {
-        "padding_top": 40,
-        "padding_bottom": 40
+        "padding_top": 2.5,
+        "padding_bottom": 2.5
       }
     },
     "quote1": {
@@ -111,8 +111,8 @@
         "text_bewertung_zahl": "4,83",
         "text_bewertung_label": "Excellent",
         "text_anzahl_bewertungen": "17,982 reviews",
-        "padding_top": 60,
-        "padding_bottom": 60,
+        "padding_top": 4,
+        "padding_bottom": 4,
         "show_rating": false
       }
     },
@@ -185,8 +185,8 @@
         "textarea_text": "We combine Swiss quality, thoughtful design and sustainability in every detail.",
         "url_button_link": "",
         "text_button_text": "",
-        "padding_top": 80,
-        "padding_bottom": 80
+        "padding_top": 5,
+        "padding_bottom": 5
       }
     },
     "target_groups": {
@@ -239,8 +239,8 @@
         "text_heading": "Grosskunden. Grosse Wirkung.",
         "url_button_link": "",
         "text_button_text": "View all",
-        "padding_top": 120,
-        "padding_bottom": 120
+        "padding_top": 7.5,
+        "padding_bottom": 7.5
       }
     },
     "attach_headline": {
@@ -249,8 +249,8 @@
         "text_vortitel": "Attach-Portfolio",
         "text_uberschrift": "Mehrwert im Warenkorb",
         "textarea_beschreibung": "Jeder verkaufte Laptop ist ein Einstiegspunkt für Zubehör, das regelmässig nachbestellt wird.",
-        "padding_top": 80,
-        "padding_bottom": 40,
+        "padding_top": 5,
+        "padding_bottom": 2.5,
         "text_align": "center",
         "bg_color": "#ffffff",
         "text_color": "#0f0f0f"
@@ -351,8 +351,8 @@
         "u4"
       ],
       "settings": {
-        "padding_top": 60,
-        "padding_bottom": 120,
+        "padding_top": 4,
+        "padding_bottom": 7.5,
         "bg_color": "#ffffff",
         "text_color": "#0f0f0f"
       }
@@ -393,8 +393,8 @@
         "text_bewertung_zahl": "4,83",
         "text_bewertung_label": "Excellent",
         "text_anzahl_bewertungen": "17,982 reviews",
-        "padding_top": 60,
-        "padding_bottom": 60,
+        "padding_top": 4,
+        "padding_bottom": 4,
         "show_rating": false
       }
     },
@@ -467,8 +467,8 @@
         "textarea_text": "We combine Swiss quality, thoughtful design and sustainability in every detail.",
         "url_button_link": "",
         "text_button_text": "Our values",
-        "padding_top": 80,
-        "padding_bottom": 80
+        "padding_top": 5,
+        "padding_bottom": 5
       }
     },
     "cta": {

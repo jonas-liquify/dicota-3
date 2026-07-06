@@ -17,8 +17,8 @@
         "textarea_beschreibung": "Der DICOTA 2-Wege-Blickschutzfilter ist ideal für die Arbeit in öffentlichen Umgebungen wie Bibliotheken, Großraumbüros, Flughäfen und Zügen. Er schützt persönliche und vertrauliche Daten, indem er die rechte und linke Seite des Bildschirms in einem Winkel von +/- 30 Grad abdunkelt.",
         "url_button_link": "",
         "text_button_text": "Mehr erfahren",
-        "padding_top": 60,
-        "padding_bottom": 100,
+        "padding_top": 4,
+        "padding_bottom": 6,
         "bg_color": "#ffffff",
         "text_color": "#0f0f0f",
         "card_bg": "#f6f6f6"
@@ -64,8 +64,8 @@
         "kategorie-bild"
       ],
       "settings": {
-        "padding_top": 40,
-        "padding_bottom": 40,
+        "padding_top": 2.5,
+        "padding_bottom": 2.5,
         "bg_color": "#ffffff",
         "text_color": "#0f0f0f"
       }
@@ -86,7 +86,7 @@
         "promo2_position": 22,
         "promo2_bg": "#162040",
         "padding_top": 0,
-        "padding_bottom": 80
+        "padding_bottom": 5
       }
     },
     "testimonials": {
@@ -116,8 +116,8 @@
         "text_bewertung_zahl": "4,83",
         "text_bewertung_label": "Hervorragend",
         "text_anzahl_bewertungen": "17 982 Bewertungen",
-        "padding_top": 60,
-        "padding_bottom": 60,
+        "padding_top": 4,
+        "padding_bottom": 4,
         "show_rating": true
       }
     },

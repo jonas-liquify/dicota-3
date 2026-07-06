@@ -16,8 +16,8 @@
         "textarea_text": "We design products that make everyday life safer, simpler and more sustainable for mobile professionals — engineered in Switzerland for over 30 years.",
         "url_button_link": "",
         "text_button_text": "Learn more",
-        "padding_top": 80,
-        "padding_bottom": 40
+        "padding_top": 5,
+        "padding_bottom": 2.5
       }
     },
     "boxed_image": {
@@ -78,8 +78,8 @@
         "textarea_text": "We combine Swiss quality, thoughtful design and sustainability in every detail.",
         "url_button_link": "",
         "text_button_text": "Our values",
-        "padding_top": 80,
-        "padding_bottom": 80
+        "padding_top": 5,
+        "padding_bottom": 5
       }
     },
     "history_timeline": {
@@ -104,8 +104,8 @@
         "text_heading": "From 1992 to today",
         "text_start_year": "1992",
         "text_end_year": "2026",
-        "padding_top": 80,
-        "padding_bottom": 80
+        "padding_top": 5,
+        "padding_bottom": 5
       }
     },
     "owner_spotlight": {
@@ -127,8 +127,8 @@
       "settings": {
         "text_heading": "Owner-led from day one",
         "textarea_text": "Our ownership structure guarantees long-term decisions, accountability and a personal connection with our partners.",
-        "padding_top": 80,
-        "padding_bottom": 80
+        "padding_top": 5,
+        "padding_bottom": 5
       }
     },
     "discover_banner": {
@@ -161,8 +161,8 @@
         "text_heading": "Discover our world",
         "url_button_link": "",
         "text_button_text": "View all",
-        "padding_top": 120,
-        "padding_bottom": 120
+        "padding_top": 7.5,
+        "padding_bottom": 7.5
       }
     }
   },

@@ -24,8 +24,8 @@
         "text_vortitel": "BRAND MATERIAL",
         "text_uberschrift": "",
         "textarea_beschreibung": "Bags are everywhere. Bags with a laptop compartment too. But true computer bags? Those you'll only find at Dicota.",
-        "padding_top": 80,
-        "padding_bottom": 40,
+        "padding_top": 5,
+        "padding_bottom": 2.5,
         "text_align": "center",
         "bg_color": "#ffffff",
         "text_color": "#0f0f0f"
@@ -406,8 +406,8 @@
         "text_suche_label": "Search",
         "text_warenkorb_label": "Cart",
         "text_404_label": "Page not found",
-        "padding_top": 8,
-        "padding_bottom": 8,
+        "padding_top": 0.5,
+        "padding_bottom": 0.5,
         "bg_color": "#ffffff",
         "text_color": "#0f0f0f"
       }

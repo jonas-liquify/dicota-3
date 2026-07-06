@@ -774,8 +774,8 @@
         "text_anzahl_bewertungen": "17,982 reviews",
         "url_provider_link": "",
         "alignment": "center",
-        "padding_top": 24,
-        "padding_bottom": 24,
+        "padding_top": 1.5,
+        "padding_bottom": 1.5,
         "bg_color": "#ffffff",
         "text_color": "#0f0f0f",
         "stars_color": "#fd6612"

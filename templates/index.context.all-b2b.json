@@ -40,8 +40,8 @@
         "image_bild": null,
         "text_titel": "Backpacks",
         "header-ca3e6ef08f09e4fcea45300e0f5abcd8": null,
-        "padding_top": 60,
-        "padding_bottom": 60
+        "padding_top": 4,
+        "padding_bottom": 4
       },
       "blocks": {},
       "block_order": [],
@@ -72,8 +72,8 @@
         "url_button_2_link": "",
         "text_button_2_text": "Registrieren",
         "header-1b0a6d73820bb000e7e09e4eb6bfd72c": null,
-        "padding_top": 80,
-        "padding_bottom": 80,
+        "padding_top": 5,
+        "padding_bottom": 5,
         "header-ce37ceb3736315638f4c05251a27c7e6": null,
         "bg_color": "#f4f4f4"
       },

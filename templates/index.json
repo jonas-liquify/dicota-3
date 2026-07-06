@@ -101,8 +101,8 @@
         "text_anzahl_bewertungen": "17,982 reviews",
         "url_provider_link": "",
         "alignment": "center",
-        "padding_top": 24,
-        "padding_bottom": 24,
+        "padding_top": 1.5,
+        "padding_bottom": 1.5,
         "bg_color": "#ffffff",
         "text_color": "#0f0f0f",
         "stars_color": "#fd6612"
@@ -114,8 +114,8 @@
         "text_vortitel": "[DI:CO:TA]",
         "text_uberschrift": "Die Computer Tasche",
         "textarea_beschreibung": "Taschen gibt es wie Sand am Meer. Taschen mit Laptopfach ebenso. Aber wirkliche Computer Taschen, die gibt es nur bei Dicota.",
-        "padding_top": 80,
-        "padding_bottom": 40,
+        "padding_top": 5,
+        "padding_bottom": 2.5,
         "text_align": "center",
         "bg_color": "#ffffff",
         "text_color": "#0f0f0f"
@@ -130,8 +130,8 @@
         "collection_kollektion": "backpacks",
         "collection_kollektion_limit": 6,
         "show_view_all": true,
-        "padding_top": 40,
-        "padding_bottom": 80,
+        "padding_top": 2.5,
+        "padding_bottom": 5,
         "bg_color": "#ffffff",
         "text_color": "#0f0f0f"
       }
@@ -183,8 +183,8 @@
         "usp_block_cziYXN"
       ],
       "settings": {
-        "padding_top": 60,
-        "padding_bottom": 120,
+        "padding_top": 4,
+        "padding_bottom": 7.5,
         "bg_color": "#ffffff",
         "text_color": "#0f0f0f"
       }
@@ -280,8 +280,8 @@
       ],
       "settings": {
         "text_uberschrift": "Shop by Category",
-        "padding_top": 60,
-        "padding_bottom": 60,
+        "padding_top": 4,
+        "padding_bottom": 4,
         "bg_color": "#ffffff",
         "text_color": "#0f0f0f"
       }
@@ -353,8 +353,8 @@
       ],
       "settings": {
         "text_uberschrift": "Zubehör & Accessories",
-        "padding_top": 60,
-        "padding_bottom": 60,
+        "padding_top": 4,
+        "padding_bottom": 4,
         "bg_color": "#ffffff",
         "text_color": "#0f0f0f"
       }
@@ -485,8 +485,8 @@
         "image_header_bild": "shopify://shop_images/3_MT_Urban.webp",
         "text_uberschrift": "Loved by 350.000 Customers DACH",
         "text_bewertungstext": "4,9/5.0 Sterne bei 80.000+ Bewertungen",
-        "padding_top": 60,
-        "padding_bottom": 60,
+        "padding_top": 4,
+        "padding_bottom": 4,
         "bg_color": "#ffffff"
       }
     },
@@ -547,8 +547,8 @@
         "text_bewertung_zahl": "4,83",
         "text_bewertung_label": "Hervorragend",
         "text_anzahl_bewertungen": "17 982 Bewertungen",
-        "padding_top": 80,
-        "padding_bottom": 80,
+        "padding_top": 5,
+        "padding_bottom": 5,
         "show_rating": true
       }
     },
@@ -558,8 +558,8 @@
       "settings": {
         "text_heading": "Frequently asked questions",
         "textarea_text": "If you have questions about applying, the selection process or getting started — we have answers.",
-        "padding_top": 80,
-        "padding_bottom": 80,
+        "padding_top": 5,
+        "padding_bottom": 5,
         "faq_set": "",
         "faq_entries": [
           "can-i-remove-the-privacy-filter-when-i-dont-need-it",
