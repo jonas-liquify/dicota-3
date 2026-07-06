@@ -25,11 +25,7 @@
         "padding_top": 80,
         "padding_bottom": 80,
         "faq_set": "privacy-filters-magnatic",
-        "faq_entries": [
-          "can-i-remove-the-privacy-filter-when-i-dont-need-it",
-          "does_the_privacy_filter_support_touchscreen_devices",
-          "are-dicota-privacy-filters-compatible-with-my-laptop-or-monitor"
-        ]
+        "faq_entries": []
       }
     }
   },
