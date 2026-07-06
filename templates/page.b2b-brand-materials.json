@@ -396,12 +396,28 @@
         "url_button_link": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/Background_Teams_2026.jpg?v=1783272705",
         "text_button_text": "Download"
       }
+    },
+    "product_breadcrumb_yTFBNe": {
+      "type": "product_breadcrumb",
+      "name": "Product Breadcrumb",
+      "settings": {
+        "text_home_label": "Home",
+        "text_kollektionen_label": "Collections",
+        "text_suche_label": "Search",
+        "text_warenkorb_label": "Cart",
+        "text_404_label": "Page not found",
+        "padding_top": 8,
+        "padding_bottom": 8,
+        "bg_color": "#ffffff",
+        "text_color": "#0f0f0f"
+      }
     }
   },
   "layout": "b2b",
   "wrapper": "main.main-wrapper",
   "order": [
     "b2b_subnav",
+    "product_breadcrumb_yTFBNe",
     "section_headline_4mzKWN",
     "b2b_mkt_presentation_fFaWf4",
     "b2b_tpl_banner_1x_J9FinR",
