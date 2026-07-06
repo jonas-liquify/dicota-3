@@ -39,8 +39,8 @@
         "b2b_sol_fact_3": {
           "type": "b2b-sol-fact",
           "settings": {
-            "text_zahl": "1,000+",
-            "text_label": "Products available"
+            "text_zahl": "1 Source",
+            "text_label": "for bestsellers and accessories – fewer suppliers"
           },
           "blocks": {}
         },
