@@ -24,8 +24,8 @@
         "textarea_text": "DICOTA ist der ideale Partner für das wiederkehrende Grosskundengeschäft: breites Topseller-Portfolio, dauerhaft hohe Verfügbarkeit und eine klare SKU-Struktur schaffen planbare Umsätze und hohe Kundenbindung.",
         "url_button_link": "shopify://pages/contact",
         "text_button_text": "Gespräch vereinbaren",
-        "padding_top": 5,
-        "padding_bottom": 2.5
+        "padding_top": 80,
+        "padding_bottom": 40
       }
     },
     "hero_image": {
@@ -184,8 +184,8 @@
         "text_bewertung_zahl": "4,83",
         "text_bewertung_label": "Excellent",
         "text_anzahl_bewertungen": "17,982 reviews",
-        "padding_top": 4,
-        "padding_bottom": 4,
+        "padding_top": 60,
+        "padding_bottom": 60,
         "show_rating": false
       }
     },
@@ -248,8 +248,8 @@
         "textarea_text": "We combine Swiss quality, thoughtful design and sustainability in every detail.",
         "url_button_link": "",
         "text_button_text": "",
-        "padding_top": 5,
-        "padding_bottom": 5
+        "padding_top": 80,
+        "padding_bottom": 80
       }
     },
     "target_groups": {
@@ -303,8 +303,8 @@
         "text_heading": "Grosskunden. Grosse Wirkung.",
         "url_button_link": "",
         "text_button_text": "View all",
-        "padding_top": 7.5,
-        "padding_bottom": 7.5
+        "padding_top": 120,
+        "padding_bottom": 120
       }
     },
     "attach_headline": {
@@ -313,8 +313,8 @@
         "text_vortitel": "Attach-Portfolio",
         "text_uberschrift": "Mehrwert im Warenkorb",
         "textarea_beschreibung": "Jeder verkaufte Laptop ist ein Einstiegspunkt für Zubehör, das regelmässig nachbestellt wird.",
-        "padding_top": 5,
-        "padding_bottom": 2.5,
+        "padding_top": 80,
+        "padding_bottom": 40,
         "text_align": "center",
         "bg_color": "#ffffff",
         "text_color": "#0f0f0f"
@@ -413,8 +413,8 @@
         "text_bewertung_zahl": "4,83",
         "text_bewertung_label": "Excellent",
         "text_anzahl_bewertungen": "17,982 reviews",
-        "padding_top": 4,
-        "padding_bottom": 4,
+        "padding_top": 60,
+        "padding_bottom": 60,
         "show_rating": false
       }
     },
@@ -448,8 +448,8 @@
         "text_heading": "Gesprächsstrategie im Kundengespräch",
         "textarea_text": "Das Run-Rate-Gespräch funktioniert am besten als Prozess-Gespräch, nicht als Produktgespräch. Der Einstieg: Den aktuellen Beschaffungsprozess des Kunden verstehen.",
         "image_image": "shopify://shop_images/Michael.png",
-        "padding_top": 5,
-        "padding_bottom": 5
+        "padding_top": 80,
+        "padding_bottom": 80
       }
     },
     "b2b_key_selling_argu_e83Mdk": {
@@ -467,7 +467,7 @@
           "type": "argument",
           "name": "Argument",
           "settings": {
-            "text_heading": "Kostentransparenz",
+            "text_heading": "Cost Transparency",
             "textarea_text": "Feste Preise im Rahmenvertrag machen das Jahresbudget kalkulierbar."
           },
           "blocks": {}
@@ -505,6 +505,51 @@
         "padding_top": 4,
         "padding_bottom": 4
       }
+    },
+    "benefits_grid_r4nLgh": {
+      "type": "benefits_grid",
+      "blocks": {
+        "benefit_9hdG4q": {
+          "type": "benefit",
+          "name": "Benefit",
+          "settings": {
+            "text_heading": "Process Reduction",
+            "textarea_text": "One supplier, one order, one invoice instead of ten different sources."
+          },
+          "blocks": {}
+        },
+        "benefit_mczcPm": {
+          "type": "benefit",
+          "name": "Benefit",
+          "settings": {
+            "text_heading": "Cost transparency",
+            "textarea_text": "Fixed prices in the framework agreement make it possible to forecast the annual budget."
+          },
+          "blocks": {}
+        },
+        "benefit_9y4nb6": {
+          "type": "benefit",
+          "settings": {
+            "text_heading": "Supply Reliability",
+            "textarea_text": "Top-selling products always in stock – no shortages for the next roll-out."
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "benefit_9hdG4q",
+        "benefit_mczcPm",
+        "benefit_9y4nb6"
+      ],
+      "name": "Benefits Grid",
+      "settings": {
+        "text_subline": "Why DICOTA",
+        "text_heading": "Kernargumente für den IT-Einkäufer",
+        "url_button_link": "",
+        "text_button_text": "",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
     }
   },
   "order": [
@@ -523,7 +568,8 @@
     "quote2",
     "cta",
     "owner_spotlight_idR8mL",
-    "b2b_key_selling_argu_e83Mdk"
+    "b2b_key_selling_argu_e83Mdk",
+    "benefits_grid_r4nLgh"
   ],
   "layout": "b2b",
   "wrapper": "main.main-wrapper"
