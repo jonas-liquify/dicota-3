@@ -132,45 +132,6 @@
         "image_position": "left"
       }
     },
-    "stats": {
-      "type": "stats_strip",
-      "blocks": {
-        "s1": {
-          "type": "icon-block",
-          "settings": {
-            "text_zahl": "Top 50",
-            "text_label": "Topseller dauerhaft auf Lager"
-          },
-          "blocks": {}
-        },
-        "s2": {
-          "type": "icon-block",
-          "settings": {
-            "text_zahl": "+20–30%",
-            "text_label": "höherer Warenkorbwert durch Attach-Produkte"
-          },
-          "blocks": {}
-        },
-        "s3": {
-          "type": "icon-block",
-          "settings": {
-            "text_zahl": "1 Quelle",
-            "text_label": "für Topseller & Zubehör – weniger Lieferanten"
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "s1",
-        "s2",
-        "s3"
-      ],
-      "disabled": true,
-      "settings": {
-        "padding_top": 40,
-        "padding_bottom": 40
-      }
-    },
     "quote1": {
       "type": "testimonials",
       "blocks": {
@@ -250,6 +211,7 @@
         },
         "stats-row": {
           "type": "stats-row",
+          "disabled": true,
           "static": true,
           "settings": {},
           "blocks": {}
@@ -372,6 +334,7 @@
         "b4": {
           "type": "reseller-promo-banner",
           "settings": {
+            "image_bild": "shopify://shop_images/2_CT1c_LaptopBag.jpg",
             "text_titel": "Backpacks & Bags",
             "textarea_text": "Unternehmens-Backpacks und Businesstaschen sind Standardartikel in Grosskundenausschreibungen – besonders für Aussendienst-Teams, Berater und hybride Mitarbeiter. DICOTA bietet ein breites Sortiment in verschiedenen Preislagen, das sich einfach in Rahmenverträge integrieren lässt.",
             "url_button_link": "",
@@ -387,55 +350,6 @@
         "b4"
       ],
       "settings": {}
-    },
-    "usps": {
-      "type": "usp_icon_row",
-      "blocks": {
-        "u1": {
-          "type": "usp-block",
-          "settings": {
-            "text_uberschrift": "Dauerhaft verfügbar",
-            "textarea_beschreibung": "Top-50-Topseller ständig auf Lager."
-          },
-          "blocks": {}
-        },
-        "u2": {
-          "type": "usp-block",
-          "settings": {
-            "text_uberschrift": "Klare SKUs",
-            "textarea_beschreibung": "Saubere Struktur, einfache Bestellung."
-          },
-          "blocks": {}
-        },
-        "u3": {
-          "type": "usp-block",
-          "settings": {
-            "text_uberschrift": "Einfache Integration",
-            "textarea_beschreibung": "Passt in ERP- und Einkaufssysteme."
-          },
-          "blocks": {}
-        },
-        "u4": {
-          "type": "usp-block",
-          "settings": {
-            "text_uberschrift": "Planbare Margen",
-            "textarea_beschreibung": "Attach-Umsatz ohne Mehraufwand."
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "u1",
-        "u2",
-        "u3",
-        "u4"
-      ],
-      "settings": {
-        "padding_top": 60,
-        "padding_bottom": 120,
-        "bg_color": "#ffffff",
-        "text_color": "#0f0f0f"
-      }
     },
     "conversation": {
       "type": "image_text",
@@ -468,6 +382,7 @@
       "block_order": [
         "t2"
       ],
+      "disabled": true,
       "settings": {
         "text_uberschrift": "What our customers say",
         "text_bewertung_zahl": "4,83",
@@ -478,86 +393,38 @@
         "show_rating": false
       }
     },
-    "why": {
-      "type": "feature_card_grid",
-      "blocks": {
-        "feature-cards": {
-          "type": "feature-cards",
-          "static": true,
-          "settings": {},
-          "blocks": {
-            "c1": {
-              "type": "feature-karte",
-              "settings": {
-                "text_heading": "Prozessreduktion",
-                "textarea_text": "Ein Lieferant, eine Bestellung, eine Rechnung statt zehn verschiedene Quellen.",
-                "url_button_link": "",
-                "text_button_text": "Learn more"
-              },
-              "blocks": {}
-            },
-            "c2": {
-              "type": "feature-karte",
-              "settings": {
-                "text_heading": "Kostentransparenz",
-                "textarea_text": "Feste Preise im Rahmenvertrag machen das Jahresbudget kalkulierbar.",
-                "url_button_link": "",
-                "text_button_text": "Learn more"
-              },
-              "blocks": {}
-            },
-            "c3": {
-              "type": "feature-karte",
-              "settings": {
-                "text_heading": "Liefersicherheit",
-                "textarea_text": "Topseller dauerhaft verfügbar – kein Engpass beim nächsten Rollout.",
-                "url_button_link": "",
-                "text_button_text": "Learn more"
-              },
-              "blocks": {}
-            },
-            "c4": {
-              "type": "feature-karte",
-              "settings": {
-                "text_heading": "Compliance",
-                "textarea_text": "Alle DICOTA-Produkte mit vollständiger Dokumentation – kein Aufwand bei internen Audits.",
-                "url_button_link": "",
-                "text_button_text": "Learn more"
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "c1",
-            "c2",
-            "c3",
-            "c4"
-          ]
-        },
-        "stats-row": {
-          "type": "stats-row",
-          "static": true,
-          "settings": {},
-          "blocks": {}
-        }
-      },
-      "settings": {
-        "text_subline": "Kernargumente",
-        "text_heading": "Warum IT-Einkäufer auf DICOTA setzen",
-        "textarea_text": "We combine Swiss quality, thoughtful design and sustainability in every detail.",
-        "url_button_link": "",
-        "text_button_text": "Our values",
-        "padding_top": 80,
-        "padding_bottom": 80
-      }
-    },
     "cta": {
       "type": "discover_banner",
+      "disabled": true,
       "settings": {
         "text_heading": "Mehr Planbarkeit. Weniger Aufwand. Höhere Kundenzufriedenheit.",
         "textarea_text": "DICOTA macht Run-Rate-Supply einfach.",
         "url_button_link": "shopify://pages/b2b-get-a-quote",
         "text_button_text": "Offertes Gespräch vereinbaren"
+      }
+    },
+    "owner_spotlight_idR8mL": {
+      "type": "owner_spotlight",
+      "blocks": {
+        "zitat_wx4BAb": {
+          "type": "zitat",
+          "settings": {
+            "text_block_heading": "\"Wie läuft bei Ihnen aktuell die Beschaffung von IT-Zubehör – zentral über den IT-Einkauf oder dezentral durch die Abteilungen? Und wie viel Zeit und Aufwand steckt dahinter?\"",
+            "text_block_text": "— Michael Mühlenbruch"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "zitat_wx4BAb"
+      ],
+      "name": "Owner Spotlight",
+      "settings": {
+        "text_heading": "Gesprächsstrategie im Kundengespräch",
+        "textarea_text": "Das Run-Rate-Gespräch funktioniert am besten als Prozess-Gespräch, nicht als Produktgespräch. Der Einstieg: Den aktuellen Beschaffungsprozess des Kunden verstehen.",
+        "image_image": "shopify://shop_images/Michael.png",
+        "padding_top": 80,
+        "padding_bottom": 80
       }
     }
   },
@@ -567,17 +434,15 @@
     "hero_image",
     "b2b_solution_fQqwVw",
     "backbone",
-    "stats",
     "quote1",
     "advantages",
     "target_groups",
     "attach_headline",
     "attach",
-    "usps",
     "conversation",
     "quote2",
-    "why",
-    "cta"
+    "cta",
+    "owner_spotlight_idR8mL"
   ],
   "layout": "b2b",
   "wrapper": "main.main-wrapper"
