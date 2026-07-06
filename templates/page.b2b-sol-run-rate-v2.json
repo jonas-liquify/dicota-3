@@ -287,6 +287,7 @@
           "blocks": {}
         }
       },
+      "disabled": true,
       "settings": {
         "text_subline": "Was das Geschäftsmodell ausmacht",
         "text_heading": "Ihr Vorteil im Run-Rate-Geschäft",
@@ -421,6 +422,71 @@
       ],
       "settings": {}
     },
+    "team_grid_GihKc3": {
+      "type": "team_grid",
+      "blocks": {
+        "team_slide_Rqrbky": {
+          "type": "team-slide",
+          "settings": {},
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "team_slide_Rqrbky"
+      ],
+      "name": "Team Grid",
+      "settings": {
+        "text_heading": "The team behind DICOTA",
+        "textarea_text": "Over 100 colleagues worldwide share the passion to better equip mobile professionals. Get to know them.",
+        "text_karte_1_heading": "Sleeves & Cases",
+        "textarea_karte_1_text": "Perfectly tailored to the size and brand of the device – simply include them in your shopping basket as standard items. No explanation needed, no tender required. Sleeves and cases are a staple in virtually every corporate IT environment. If you include them as standard extras in your range, you’ll sell them without even having to actively promote them.",
+        "text_karte_2_heading": "Locks & Security",
+        "textarea_karte_2_text": "In many companies, anti-theft protection is an IT policy – not an optional extra. The lock is an essential item, particularly in environments with shared workstations, co-working spaces or field service teams. The advantage for retailers: high add-on rate, minimal need for explanation, good contribution margin.",
+        "text_karte_3_heading": "Adapter & Connectivity",
+        "textarea_karte_3_text": "USB-C hubs, HDMI adaptors, multi-port solutions – these items are always in demand, but rarely ordered proactively. They often end up being bought as a last-minute purchase in shops or on online platforms when an employee realises, during their first meeting whilst working from home, that they don’t have the right connector. By including these items in your standard product range, you can fill this gap – and significantly increase the average order value.",
+        "url_button_link": "",
+        "text_button_text": "More about us",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "the_latest_ryDLnV": {
+      "type": "the_latest",
+      "blocks": {
+        "latest_slide_zkPGPR": {
+          "type": "latest-slide",
+          "name": "Latest Slide",
+          "settings": {
+            "url_link": "",
+            "text_badge": "NEW",
+            "text_titel": "Seven",
+            "textarea_text": "(Placeholder) Since 1992, more than 12 million PET bottles have been processed to minimize waste -"
+          },
+          "blocks": {}
+        },
+        "latest_slide_jUeREU": {
+          "type": "latest-slide",
+          "settings": {
+            "url_link": "",
+            "text_badge": "NEW",
+            "text_titel": "Seven",
+            "textarea_text": "(Placeholder) Since 1992, more than 12 million PET bottles have been processed to minimize waste -"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "latest_slide_zkPGPR",
+        "latest_slide_jUeREU"
+      ],
+      "disabled": true,
+      "name": "The Latest",
+      "settings": {
+        "text_heading": "The Latest. Take a look at what's new, right now.",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
     "conversation": {
       "type": "image_text",
       "settings": {
@@ -465,7 +531,6 @@
     },
     "cta": {
       "type": "discover_banner",
-      "disabled": true,
       "settings": {
         "text_heading": "Mehr Planbarkeit. Weniger Aufwand. Höhere Kundenzufriedenheit.",
         "textarea_text": "DICOTA macht Run-Rate-Supply einfach.",
@@ -566,6 +631,8 @@
     "target_groups",
     "attach_headline",
     "attach",
+    "team_grid_GihKc3",
+    "the_latest_ryDLnV",
     "conversation",
     "quote2",
     "cta",
