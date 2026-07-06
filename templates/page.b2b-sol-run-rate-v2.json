@@ -35,6 +35,31 @@
         "layout": "full"
       }
     },
+    "b2b_key_selling_argu_hWeGLL": {
+      "type": "b2b_key_selling_argu",
+      "blocks": {
+        "argument_wR8PJz": {
+          "type": "argument",
+          "disabled": true,
+          "settings": {
+            "text_heading": "1,000+ products in stock",
+            "textarea_text": "A broad portfolio with fast availability and strong reseller margins."
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "argument_wR8PJz"
+      ],
+      "name": "B2B Key Selling Argu",
+      "settings": {
+        "text_subline": "",
+        "text_heading": "Ausgangslage & Marktchance",
+        "textarea_text": "Das Rückgrat jedes erfolgreichen Reseller-Geschäfts ist das wiederkehrende Geschäft mit Grosskunden. Projekte kommen und gehen – aber der laufende Bedarf an Schutz, Connectivity und Zubehör bleibt konstant. Genau hier liegt die grösste Umsatzchance für Händler: Wer im Run-Rate-Geschäft als zuverlässiger Lieferant positioniert ist, profitiert von planbaren Umsätzen, niedrigen Akquisekosten und hoher Kundenbindung.\nDICOTA ist als Zubehöranbieter optimal für dieses Segment positioniert: breites Topseller-Portfolio, dauerhaft hohe Lagerverfügbarkeit und eine klare SKU-Struktur, die sich einfach in bestehende ERP- und Einkaufssysteme integrieren lässt. Für Händler bedeutet das: weniger Aufwand in der Abwicklung, mehr Zeit für den Kundenaufbau.",
+        "padding_top": 4,
+        "padding_bottom": 4
+      }
+    },
     "b2b_solution_fQqwVw": {
       "type": "b2b_solution",
       "blocks": {
@@ -486,6 +511,7 @@
     "b2b_subnav",
     "hero",
     "hero_image",
+    "b2b_key_selling_argu_hWeGLL",
     "b2b_solution_fQqwVw",
     "backbone",
     "quote1",
