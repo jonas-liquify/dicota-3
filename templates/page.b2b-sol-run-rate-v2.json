@@ -534,12 +534,22 @@
             "textarea_text": "Top-selling products always in stock – no shortages for the next roll-out."
           },
           "blocks": {}
+        },
+        "benefit_4tkmnT": {
+          "type": "benefit",
+          "name": "Benefit",
+          "settings": {
+            "text_heading": "Compliance",
+            "textarea_text": "All DICOTA products come with comprehensive documentation – making internal audits hassle-free."
+          },
+          "blocks": {}
         }
       },
       "block_order": [
         "benefit_9hdG4q",
         "benefit_mczcPm",
-        "benefit_9y4nb6"
+        "benefit_9y4nb6",
+        "benefit_4tkmnT"
       ],
       "name": "Benefits Grid",
       "settings": {
