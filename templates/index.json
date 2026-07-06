@@ -541,6 +541,7 @@
         "testimonial_FDpL7f",
         "testimonial"
       ],
+      "disabled": true,
       "settings": {
         "text_uberschrift": "Was unsere Kund:innen sagen",
         "text_bewertung_zahl": "4,83",
@@ -559,7 +560,7 @@
         "textarea_text": "If you have questions about applying, the selection process or getting started — we have answers.",
         "padding_top": 80,
         "padding_bottom": 80,
-        "faq_set": "shipping",
+        "faq_set": "",
         "faq_entries": [
           "can-i-remove-the-privacy-filter-when-i-dont-need-it",
           "are-dicota-privacy-filters-compatible-with-my-laptop-or-monitor",
