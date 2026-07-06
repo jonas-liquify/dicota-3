@@ -215,7 +215,7 @@
               "type": "feature-karte",
               "settings": {
                 "text_heading": "Verfügbarkeit als Versprechen",
-                "textarea_text": "DICOTA hält die wichtigsten 50 Topseller dauerhaft auf Lager und garantiert kurze Lieferzeiten auch bei grösseren Mengen – verbindliche Zusagen, die Sie einhalten können.",
+                "textarea_text": "Im Grosskunden-Geschäft ist Lieferfähigkeit keine Option, sondern eine Grundvoraussetzung. Wenn ein IT-Verantwortlicher 200 Laptops ausrollt und drei Tage später feststellt, dass die Cases nicht lieferbar sind, ist das nicht nur ein logistisches Problem – es beschädigt das Vertrauen in den gesamten Kanal. DICOTA hält die wichtigsten 50 Topseller dauerhaft auf Lager und garantiert kurze Lieferzeiten auch bei grösseren Mengen.<br><br>\nFür Händler bedeutet das: Sie können ihren Grosskunden verbindliche Zusagen machen – und diese auch einhalten. Das ist der Unterschied zwischen einem Lieferanten und einem Partner.",
                 "url_button_link": "",
                 "text_button_text": ""
               },
@@ -225,7 +225,7 @@
               "type": "feature-karte",
               "settings": {
                 "text_heading": "Planbarkeit durch Rahmenverträge",
-                "textarea_text": "Rahmenverträge mit definierten Produkten, Preisen und Abrufmengen. Laufzeiten von 12 bis 36 Monaten schaffen Sicherheit – bei flexibel steuerbaren Abrufmengen.",
+                "textarea_text": "Grosskunden denken in Budgetzyklen, nicht in Einzelbestellungen. Rahmenverträge mit definierten Produkten, Preisen und Abrufmengen sind der Standard im Enterprise-Umfeld. DICOTA unterstützt dieses Modell vollständig: Händler können Rahmenvereinbarungen abschliessen, die ihren Kunden vorhersehbare Konditionen und ihnen selbst planbare Margen bieten.<br><br>\nTypische Laufzeiten von 12 bis 36 Monaten schaffen auf beiden Seiten Sicherheit. Gleichzeitig können Abrufmengen flexibel gesteuert werden – ideal für Kunden mit saisonalen Schwankungen oder rollierenden Rollout-Zyklen.",
                 "url_button_link": "",
                 "text_button_text": ""
               },
@@ -240,23 +240,12 @@
                 "text_button_text": ""
               },
               "blocks": {}
-            },
-            "c4": {
-              "type": "feature-karte",
-              "settings": {
-                "text_heading": "Attach-Portfolio – Marge ohne Mehraufwand",
-                "textarea_text": "Das eigentliche Margenpotenzial liegt im Attach. In den Bestellprozess integriert, laufen Zubehörartikel automatisch mit – ohne Neuverhandlung.",
-                "url_button_link": "",
-                "text_button_text": ""
-              },
-              "blocks": {}
             }
           },
           "block_order": [
             "c1",
             "c2",
-            "c3",
-            "c4"
+            "c3"
           ]
         },
         "stats-row": {
@@ -350,28 +339,31 @@
         "b1": {
           "type": "reseller-promo-banner",
           "settings": {
+            "image_bild": "shopify://shop_images/1_CT1c_Sleeves.jpg",
             "text_titel": "Sleeves & Cases",
-            "textarea_text": "Passgenau nach Gerätegrösse und Marke – als Standardartikel im Warenkorb mitführen. In nahezu jedem Unternehmens-IT-Umfeld gesetzt.",
+            "textarea_text": "Passgenau nach Gerätegrösse und Marke – einfach als Standardartikel im Warenkorb mitführen. Keine Erklärung nötig, keine Ausschreibung erforderlich. Sleeve und Case sind in nahezu jedem Unternehmens-IT-Umfeld gesetzt. Wer sie als Standard-Beilage im Angebot platziert, verkauft sie, ohne aktiv zu verkaufen.",
             "url_button_link": "",
-            "text_button_text": "Invite a friend"
+            "text_button_text": ""
           },
           "blocks": {}
         },
         "b2": {
           "type": "reseller-promo-banner",
           "settings": {
+            "image_bild": "shopify://shop_images/3_CT1c_Accessories.jpg",
             "text_titel": "Locks & Security",
-            "textarea_text": "Diebstahlsicherung ist in vielen Unternehmen IT-Richtlinie, nicht optionales Zubehör. Hoher Attach-Grad, kaum Erklärungsaufwand, guter Deckungsbeitrag.",
+            "textarea_text": "Die Diebstahlsicherung ist in vielen Unternehmen IT-Richtlinie – nicht optionales Zubehör. Besonders in Umgebungen mit geteilten Arbeitsplätzen, Co-Working-Spaces oder Aussendienst-Teams ist der Lock ein Pflichtartikel. Der Vorteil für Händler: hoher Attach-Grad, kaum Erklärungsaufwand, guter Deckungsbeitrag.",
             "url_button_link": "",
-            "text_button_text": "Invite a friend"
+            "text_button_text": ""
           },
           "blocks": {}
         },
         "b3": {
           "type": "reseller-promo-banner",
           "settings": {
+            "image_bild": "shopify://shop_images/3_CT1c_Accessories.jpg",
             "text_titel": "Adapter & Connectivity",
-            "textarea_text": "USB-C-Hubs, HDMI-Adapter, Multiport-Lösungen – immer nachgefragt, selten proaktiv bestellt. Im Standard-Warenkorb schliessen Sie die Lücke.",
+            "textarea_text": "USB-C-Hubs, HDMI-Adapter, Multiport-Lösungen – diese Artikel werden immer nachgefragt, aber selten proaktiv bestellt. Sie landen oft als Notfallkauf im Einzelhandel oder auf Plattformen, wenn der Mitarbeiter beim ersten Meeting im Homeoffice merkt, dass er keinen passenden Anschluss hat. Wer diese Artikel im Standard-Warenkorb mitführt, schliesst diese Lücke – und erhöht den Auftragswertes spürbar.",
             "url_button_link": "",
             "text_button_text": "Invite a friend"
           },
@@ -381,7 +373,7 @@
           "type": "reseller-promo-banner",
           "settings": {
             "text_titel": "Backpacks & Bags",
-            "textarea_text": "Standardartikel in Grosskundenausschreibungen – für Aussendienst, Berater und hybride Teams. Breites Sortiment, einfach in Rahmenverträge integrierbar.",
+            "textarea_text": "Unternehmens-Backpacks und Businesstaschen sind Standardartikel in Grosskundenausschreibungen – besonders für Aussendienst-Teams, Berater und hybride Mitarbeiter. DICOTA bietet ein breites Sortiment in verschiedenen Preislagen, das sich einfach in Rahmenverträge integrieren lässt.",
             "url_button_link": "",
             "text_button_text": "Invite a friend"
           },
