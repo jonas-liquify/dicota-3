@@ -15,12 +15,12 @@
   "sections": {
     "b2b_mkt_presentation_e4ipG": {
       "type": "b2b_mkt_presentation",
-      "disabled": false,
+      "disabled": true,
       "settings": {
         "text_uberschrift": "Product Presentations",
         "textarea_einleitung": "Download our product presentations as PDF or PPT — available in German, English and French.",
-        "header-daf3acb083ea41533425a04fd77c27a4": null,
-        "paragraph-fcbf7bfccbd5d988907806a0c49a558a": null
+        "header-3c7723872900443a509dc2c05d4a7304": null,
+        "paragraph-3a688fd1ef3dc5a68038288918e5975b": null
       },
       "blocks": {
         "produkt_kategorie_87Cdi": {

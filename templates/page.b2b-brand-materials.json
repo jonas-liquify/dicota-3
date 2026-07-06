@@ -17,36 +17,346 @@
         "account_menu": ""
       }
     },
+    "section_headline_4mzKWN": {
+      "type": "section_headline",
+      "name": "Section Headline",
+      "settings": {
+        "text_vortitel": "BRAND MATERIAL",
+        "text_uberschrift": "",
+        "textarea_beschreibung": "Bags are everywhere. Bags with a laptop compartment too. But true computer bags? Those you'll only find at Dicota.",
+        "padding_top": 80,
+        "padding_bottom": 40,
+        "text_align": "center",
+        "bg_color": "#ffffff",
+        "text_color": "#0f0f0f"
+      }
+    },
+    "b2b_mkt_presentation_fFaWf4": {
+      "type": "b2b_mkt_presentation",
+      "blocks": {
+        "produkt_kategorie_DhqyGL": {
+          "type": "produkt-kategorie",
+          "name": "B2B",
+          "settings": {
+            "text_kategorie_name": "for B2B Customers"
+          },
+          "blocks": {
+            "prasentation_ey4TGj": {
+              "type": "prasentation",
+              "name": "PDF",
+              "settings": {
+                "text_titel": "B2B Company Presentation PDF",
+                "text_datei_info": "PDF · 2.6 MB",
+                "url_de_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/DICOTA_Company_Presentation_B2B_DE_2026.pdf?v=1783155369",
+                "url_en_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/DICOTA_Company_Presentation_B2B_EN_2026.pdf?v=1783155363",
+                "url_fr_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/DICOTA_Company_Presentation_B2B_FR_2026.pdf?v=1783155364"
+              },
+              "blocks": {}
+            },
+            "prasentation_ccN89E": {
+              "type": "prasentation",
+              "name": "PPT",
+              "settings": {
+                "text_titel": "B2B Company Presentation PPT",
+                "text_datei_info": "PPT · 6.5 MB",
+                "url_de_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/DICOTA_Company_Presentation_B2B_DE_2026.pptx?v=1783155369",
+                "url_en_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/DICOTA_Company_Presentation_B2B_EN_2026.pptx?v=1783155367",
+                "url_fr_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/DICOTA_Company_Presentation_B2B_FR_2026.pptx?v=1783155362"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "prasentation_ey4TGj",
+            "prasentation_ccN89E"
+          ]
+        },
+        "produkt_kategorie_eeLrHT": {
+          "type": "produkt-kategorie",
+          "name": "Distributors",
+          "settings": {
+            "text_kategorie_name": "for Distributors"
+          },
+          "blocks": {
+            "prasentation_neATCa": {
+              "type": "prasentation",
+              "name": "PDF",
+              "settings": {
+                "text_titel": "Distrbutors Company Presentation PDF",
+                "text_datei_info": "PDF · 2.6 MB",
+                "url_de_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/DICOTA_Company_Presentation_Distributors_DE_2026.pdf?v=1783155456",
+                "url_en_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/DICOTA_Company_Presentation_Distributors_EN_2026.pdf?v=1783155451",
+                "url_fr_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/DICOTA_Company_Presentation_Distributors_FR_2026.pdf?v=1783155450"
+              },
+              "blocks": {}
+            },
+            "prasentation_KXiMTM": {
+              "type": "prasentation",
+              "name": "PPT",
+              "settings": {
+                "text_titel": "Distrbutors Company Presentation PPT",
+                "text_datei_info": "PPT · 6.5 MB",
+                "url_de_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/DICOTA_Company_Presentation_Distributors_DE_2026.pptx?v=1783155455",
+                "url_en_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/DICOTA_Company_Presentation_Distributors_EN.pptx?v=1783155497",
+                "url_fr_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/DICOTA_Company_Presentation_Distributors_FR_2026.pptx?v=1783155450"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "prasentation_neATCa",
+            "prasentation_KXiMTM"
+          ]
+        },
+        "produkt_kategorie_RExUqd": {
+          "type": "produkt-kategorie",
+          "name": "e-Tail",
+          "settings": {
+            "text_kategorie_name": "for e-Tail Customers"
+          },
+          "blocks": {
+            "prasentation_frwwHb": {
+              "type": "prasentation",
+              "name": "PDF",
+              "settings": {
+                "text_titel": "e-Tail Company Presentation PDF",
+                "text_datei_info": "PDF · 2.6 MB",
+                "url_de_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/DICOTA_Company_Presentation_E-Tail_DE_2026.pdf?v=1783156109",
+                "url_en_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/DICOTA_Company_Presentation_E-Tail_EN_2026.pdf?v=1783156109",
+                "url_fr_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/DICOTA_Company_Presentation_E-Tail_FR_2026.pdf?v=1783156109"
+              },
+              "blocks": {}
+            },
+            "prasentation_rwmfwA": {
+              "type": "prasentation",
+              "name": "PPT",
+              "settings": {
+                "text_titel": "e-Tail Company Presentation PPT",
+                "text_datei_info": "PPT · 6.5 MB",
+                "url_de_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/DICOTA_Company_Presentation_E-Tail_DE_2026.pptx?v=1783156124",
+                "url_en_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/DICOTA_Company_Presentation_E-Tail_EN_2026.pptx?v=1783156124",
+                "url_fr_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/DICOTA_Company_Presentation_E-Tail_FR_2026.pptx?v=1783156123"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "prasentation_frwwHb",
+            "prasentation_rwmfwA"
+          ]
+        },
+        "produkt_kategorie_UNMhrH": {
+          "type": "produkt-kategorie",
+          "name": "Retail",
+          "settings": {
+            "text_kategorie_name": "for Retail Customers"
+          },
+          "blocks": {
+            "prasentation_gbgUYP": {
+              "type": "prasentation",
+              "name": "PDF",
+              "settings": {
+                "text_titel": "Retail Company Presentation PDF",
+                "text_datei_info": "PDF · 2.6 MB",
+                "url_de_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/DICOTA_Company_Presentation_Retail_DE_2026.pdf?v=1783156109",
+                "url_en_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/DICOTA_Company_Presentation_Retail_EN_2026.pdf?v=1783156108",
+                "url_fr_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/DICOTA_Company_Presentation_Retail_FR_2026.pdf?v=1783156110"
+              },
+              "blocks": {}
+            },
+            "prasentation_UYQ9xe": {
+              "type": "prasentation",
+              "name": "PPT",
+              "settings": {
+                "text_titel": "Product Presentation PPT",
+                "text_datei_info": "PPT · 6.5 MB",
+                "url_de_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/DICOTA_Company_Presentation_Retail_DE_2026.pptx?v=1783156123",
+                "url_en_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/DICOTA_Company_Presentation_Retail_EN_2026.pptx?v=1783156121",
+                "url_fr_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/DICOTA_Company_Presentation_Retail_FR_2026.pptx?v=1783156120"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "prasentation_gbgUYP",
+            "prasentation_UYQ9xe"
+          ]
+        },
+        "produkt_kategorie_QHniBr": {
+          "type": "produkt-kategorie",
+          "name": "VARs",
+          "settings": {
+            "text_kategorie_name": "for Value Added Resellers"
+          },
+          "blocks": {
+            "prasentation_TNaKJw": {
+              "type": "prasentation",
+              "name": "PDF",
+              "settings": {
+                "text_titel": "VARs Company Presentation PDF",
+                "text_datei_info": "PDF · 2.6 MB",
+                "url_de_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/DICOTA_Company_Presentation_VARs_DE_2026.pdf?v=1783156110",
+                "url_en_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/DICOTA_Company_Presentation_VARs_EN_2026.pdf?v=1783156109",
+                "url_fr_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/DICOTA_Company_Presentation_VARs_FR_2026.pdf?v=1783156105"
+              },
+              "blocks": {}
+            },
+            "prasentation_Mz4nLA": {
+              "type": "prasentation",
+              "name": "PPT",
+              "settings": {
+                "text_titel": "VARs Company Presentation PPT",
+                "text_datei_info": "PPT · 6.5 MB",
+                "url_de_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/DICOTA_Company_Presentation_VARs_DE_2026.pptx?v=1783156119",
+                "url_en_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/DICOTA_Company_Presentation_VARs_EN_2026.pptx?v=1783156113",
+                "url_fr_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/DICOTA_Company_Presentation_VARs_FR_2026.pptx?v=1783156104"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "prasentation_TNaKJw",
+            "prasentation_Mz4nLA"
+          ]
+        }
+      },
+      "block_order": [
+        "produkt_kategorie_DhqyGL",
+        "produkt_kategorie_eeLrHT",
+        "produkt_kategorie_RExUqd",
+        "produkt_kategorie_UNMhrH",
+        "produkt_kategorie_QHniBr"
+      ],
+      "name": "Company Presentation",
+      "settings": {
+        "text_uberschrift": "DICOTA Company Presentation",
+        "textarea_einleitung": "Download our DICOTA Company Presentation tailored to your key segment. Choose from ready-to-share PDF versions or editable PowerPoint files, available in English, German, and French."
+      }
+    },
+    "b2b_tpl_banner_1x_J9FinR": {
+      "type": "b2b_tpl_banner_1x",
+      "name": "B2B Tpl Banner 1x",
+      "settings": {
+        "image_banner_bild": "shopify://shop_images/LinkedIn_image.png",
+        "text_tag": "social media",
+        "text_heading": "LINKEDIN DICOTA Header",
+        "textarea_text": "The latest LinkedIn Header for your personal profile page.",
+        "url_button_link": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/Linkedin_Head_2026_FINAL.jpg?v=1783095226",
+        "text_button_text": "Download"
+      }
+    },
+    "b2b_mkt_presentation_bPPeAP": {
+      "type": "b2b_mkt_presentation",
+      "blocks": {
+        "produkt_kategorie_aYYxnt": {
+          "type": "produkt-kategorie",
+          "name": "Advertorial",
+          "settings": {
+            "text_kategorie_name": "Advertorial Templates"
+          },
+          "blocks": {
+            "prasentation_C4zhy9": {
+              "type": "prasentation",
+              "name": "RGB",
+              "settings": {
+                "text_titel": "RGB Online Template",
+                "text_datei_info": "ZIP · 8.5 MB",
+                "url_de_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/Inserat_A4_SEVEN_RGB_DE.zip?v=1783158271",
+                "url_en_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/Inserat_A4_SEVEN_RGB_EN.zip?v=1783158270",
+                "url_fr_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/Inserat_A4_SEVEN_RGB_FR.zip?v=1783158269"
+              },
+              "blocks": {}
+            },
+            "prasentation_qq9NtA": {
+              "type": "prasentation",
+              "name": "CMYK",
+              "settings": {
+                "text_titel": "CMYK Print Template",
+                "text_datei_info": "PDF · 3.3 MB",
+                "url_de_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/Inserat_A4_SEVEN_CMYK_DE.pdf?v=1783158264",
+                "url_en_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/Inserat_A4_SEVEN_CMYK_EN.pdf?v=1783158263",
+                "url_fr_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/Inserat_A4_SEVEN_CMYK_FR.pdf?v=1783158265"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "prasentation_C4zhy9",
+            "prasentation_qq9NtA"
+          ]
+        }
+      },
+      "block_order": [
+        "produkt_kategorie_aYYxnt"
+      ],
+      "name": "Advertorials",
+      "settings": {
+        "text_uberschrift": "DICOTA Advertorials",
+        "textarea_einleitung": "Download the latest DICOTA advertorial: “FOR AMBITIOUS PROFESSIONALS – The new SEVEN for maximum protection.” Available now as a ready-to-share file."
+      }
+    },
+    "b2b_tpl_banner_1x_6GCTj8": {
+      "type": "b2b_tpl_banner_1x",
+      "name": "Brand Page",
+      "settings": {
+        "image_banner_bild": "shopify://shop_images/DICOTA_Brandpage_Scroll_Animation.gif",
+        "text_tag": "brand introduction",
+        "text_heading": "DICOTA Brand Page",
+        "textarea_text": "Download a ready-to-use DICOTA brand page for use on third-party websites and portals to introduce DICOTA.",
+        "url_button_link": "",
+        "text_button_text": "Download"
+      }
+    },
     "b2b_mkt_documents": {
       "type": "b2b_mkt_documents",
       "blocks": {
         "b2b_mkt_dokument_ApQcqA": {
           "type": "b2b-mkt-dokument",
-          "name": "B2B Mkt Dokument",
+          "name": "CD Guidelines",
           "settings": {
-            "url_datei_link": "",
-            "text_titel": "Thumbnails",
-            "text_datei_info": "ZIP · 25 MB"
+            "url_datei_link": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/DICOTA_CD_Guidelines.pdf?v=1783181378",
+            "text_titel": "DICOTA Corporate Design Guidelines",
+            "text_datei_info": "PDF · 42 KB"
           },
           "blocks": {}
         },
         "b2b_mkt_dokument_VqpRee": {
           "type": "b2b-mkt-dokument",
-          "name": "B2B Mkt Dokument",
+          "name": "Logo black",
           "settings": {
-            "url_datei_link": "",
-            "text_titel": "Thumbnails",
-            "text_datei_info": "ZIP · 25 MB"
+            "url_datei_link": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/DICOTA-Logo-Black.zip?v=1783181522",
+            "text_titel": "DICOTA Logo Black",
+            "text_datei_info": "ZIP · 136 KB"
           },
           "blocks": {}
         },
         "b2b_mkt_dokument_KG3FUi": {
           "type": "b2b-mkt-dokument",
-          "name": "B2B Mkt Dokument",
+          "name": "Logo White",
           "settings": {
-            "url_datei_link": "",
-            "text_titel": "Thumbnails",
-            "text_datei_info": "ZIP · 25 MB"
+            "url_datei_link": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/DICOTA-Logo-White.zip?v=1783181522",
+            "text_titel": "DICOTA Logo White",
+            "text_datei_info": "ZIP · 142 KB"
+          },
+          "blocks": {}
+        },
+        "b2b_mkt_dokument_eUHVCd": {
+          "type": "b2b-mkt-dokument",
+          "name": " Futura PT Book",
+          "settings": {
+            "url_datei_link": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/Futura-PT-Book.otf.zip?v=1783181529",
+            "text_titel": "DICOTA Futura PT Book (font)",
+            "text_datei_info": "ZIP · 53 kB"
+          },
+          "blocks": {}
+        },
+        "b2b_mkt_dokument_MpXrbg": {
+          "type": "b2b-mkt-dokument",
+          "name": " Futura PT Demi",
+          "settings": {
+            "url_datei_link": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/Futura-PT-Demi.otf.zip?v=1783181529",
+            "text_titel": "DICOTA Futura PT Demi (font)",
+            "text_datei_info": "ZIP · 56 KB"
           },
           "blocks": {}
         }
@@ -54,10 +364,37 @@
       "block_order": [
         "b2b_mkt_dokument_ApQcqA",
         "b2b_mkt_dokument_VqpRee",
-        "b2b_mkt_dokument_KG3FUi"
+        "b2b_mkt_dokument_KG3FUi",
+        "b2b_mkt_dokument_eUHVCd",
+        "b2b_mkt_dokument_MpXrbg"
       ],
+      "name": "DICOTA CI",
       "settings": {
-        "text_uberschrift": "Documents"
+        "text_uberschrift": "DICOTA Corporate design"
+      }
+    },
+    "b2b_tpl_banner_1x_XVeFWX": {
+      "type": "b2b_tpl_banner_1x",
+      "name": "PPT Master",
+      "settings": {
+        "image_banner_bild": "shopify://shop_images/DICOTA_Master_Template.gif",
+        "text_tag": "DONWLOAD",
+        "text_heading": "DICOTA PPT Master",
+        "textarea_text": "Download the official DICOTA PowerPoint template, featuring a range of design options and ready-to-use slide layouts.",
+        "url_button_link": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/DICOTA_Master_Template.pptx?v=1783237693",
+        "text_button_text": "Download"
+      }
+    },
+    "b2b_tpl_banner_1x_WLyWz7": {
+      "type": "b2b_tpl_banner_1x",
+      "name": "TEAMS Background",
+      "settings": {
+        "image_banner_bild": "shopify://shop_images/Background_Teams_2026.jpg",
+        "text_tag": "Download",
+        "text_heading": "TEAMS Background",
+        "textarea_text": "Download our new standardized DICOTA brand background for Microsoft Teams and use it for all external meetings.",
+        "url_button_link": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/Background_Teams_2026.jpg?v=1783272705",
+        "text_button_text": "Download"
       }
     }
   },
@@ -65,6 +402,13 @@
   "wrapper": "main.main-wrapper",
   "order": [
     "b2b_subnav",
-    "b2b_mkt_documents"
+    "section_headline_4mzKWN",
+    "b2b_mkt_presentation_fFaWf4",
+    "b2b_tpl_banner_1x_J9FinR",
+    "b2b_mkt_presentation_bPPeAP",
+    "b2b_tpl_banner_1x_6GCTj8",
+    "b2b_mkt_documents",
+    "b2b_tpl_banner_1x_XVeFWX",
+    "b2b_tpl_banner_1x_WLyWz7"
   ]
 }

@@ -1,0 +1,110 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "b2b_subnav": {
+      "type": "b2b_subnav",
+      "settings": {
+        "text_dummy_description": "Short description",
+        "text_punkte_label": "Current point balance:",
+        "account_menu": ""
+      }
+    },
+    "b2b_mkt_presentation_HzWpea": {
+      "type": "b2b_mkt_presentation",
+      "blocks": {
+        "produkt_kategorie_94R3xy": {
+          "type": "produkt-kategorie",
+          "settings": {
+            "text_kategorie_name": "SEVEN family"
+          },
+          "blocks": {
+            "prasentation_BH4WbR": {
+              "type": "prasentation",
+              "name": "Print",
+              "settings": {
+                "text_titel": "Transition Sheet for Print",
+                "text_datei_info": "PDF · 4 MB",
+                "url_de_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/SEVEN_transition_sheet_DE_print.pdf?v=1783090517",
+                "url_en_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/SEVEN_transition_sheet_EN_print.pdf?v=1783090515",
+                "url_fr_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/SEVEN_transition_sheet_FR_print.pdf?v=1783090515"
+              },
+              "blocks": {}
+            },
+            "prasentation_LAPDG9": {
+              "type": "prasentation",
+              "name": "Online",
+              "settings": {
+                "text_titel": "Transition Sheet for Online",
+                "text_datei_info": "PDF · 245 KB",
+                "url_de_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/SEVEN_transition_sheet_DE.pdf?v=1783090498",
+                "url_en_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/SEVEN_transition_sheet_EN.pdf?v=1783090493",
+                "url_fr_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/SEVEN_transition_sheet_FR.pdf?v=1783090492"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "prasentation_BH4WbR",
+            "prasentation_LAPDG9"
+          ]
+        }
+      },
+      "block_order": [
+        "produkt_kategorie_94R3xy"
+      ],
+      "name": "B2B Mkt Campaigns",
+      "settings": {
+        "text_uberschrift": "Product Campaigns",
+        "textarea_einleitung": "Download our product presentations as PDF or PPT — available in German, English and French."
+      }
+    },
+    "b2b_mkt_documents": {
+      "type": "b2b_mkt_documents",
+      "blocks": {
+        "b2b_mkt_dokument_ApQcqA": {
+          "type": "b2b-mkt-dokument",
+          "name": "Key Visual",
+          "settings": {
+            "url_datei_link": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/SEVEN_key_visual_scaled.jpg?v=1783090492",
+            "text_titel": "Key Visual",
+            "text_datei_info": "JPG · 193 KB"
+          },
+          "blocks": {}
+        },
+        "b2b_mkt_dokument_VqpRee": {
+          "type": "b2b-mkt-dokument",
+          "name": "Bento Graphic",
+          "settings": {
+            "url_datei_link": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/SEVEN_Bento_scaled.png?v=1783090494",
+            "text_titel": "Bento Graphic",
+            "text_datei_info": "PNG · 710 KB"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "b2b_mkt_dokument_ApQcqA",
+        "b2b_mkt_dokument_VqpRee"
+      ],
+      "name": "SEVEN family",
+      "settings": {
+        "text_uberschrift": "SEVEN family Key Visual & Bento Graphic"
+      }
+    }
+  },
+  "layout": "b2b",
+  "wrapper": "main.main-wrapper",
+  "order": [
+    "b2b_subnav",
+    "b2b_mkt_presentation_HzWpea",
+    "b2b_mkt_documents"
+  ]
+}

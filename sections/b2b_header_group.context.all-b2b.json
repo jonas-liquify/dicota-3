@@ -8,9 +8,16 @@
  * ------------------------------------------------------------
  */
 {
-  "markets": {
-    "all-b2b": {
-      "parent": "@default"
+  "context": {
+    "market": "all-b2b"
+  },
+  "parent": "b2b_header_group.json",
+  "sections": {
+    "header": {
+      "settings": {
+        "menu": "main-menu-reseller"
+      },
+      "blocks": {}
     }
   }
 }

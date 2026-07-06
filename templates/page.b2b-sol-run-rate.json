@@ -1,364 +1,281 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "b2b_subnav": {
       "type": "b2b_subnav",
-      "settings": {}
-    },
-    "hero": {
-      "type": "two_column_hero",
       "settings": {
-        "text_heading": "Run Rate Supply",
-        "textarea_text": "DICOTA ist der ideale Partner für das wiederkehrende Grosskundengeschäft: breites Topseller-Portfolio, dauerhaft hohe Verfügbarkeit und eine klare SKU-Struktur schaffen planbare Umsätze und hohe Kundenbindung.",
-        "text_button_text": "Offertes Gespräch vereinbaren",
-        "url_button_link": "shopify://pages/b2b-get-a-quote"
+        "text_dummy_description": "Short description",
+        "text_punkte_label": "Current point balance:",
+        "account_menu": ""
       }
     },
-    "hero_image": {
-      "type": "boxed_image",
-      "settings": {
-        "layout": "full"
-      }
-    },
-    "backbone": {
-      "type": "image_text",
-      "settings": {
-        "text_heading": "Das Rückgrat Ihres Reseller-Geschäfts",
-        "textarea_text": "Das Rückgrat jedes erfolgreichen Reseller-Geschäfts ist das wiederkehrende Geschäft mit Grosskunden. Projekte kommen und gehen – aber der laufende Bedarf an Schutz, Connectivity und Zubehör bleibt konstant. Wer hier als zuverlässiger Lieferant positioniert ist, profitiert von planbaren Umsätzen, niedrigen Akquisekosten und hoher Kundenbindung.<br><br>DICOTA ist als Zubehöranbieter optimal für dieses Segment positioniert: breites Topseller-Portfolio, dauerhaft hohe Lagerverfügbarkeit und eine klare SKU-Struktur, die sich einfach in bestehende ERP- und Einkaufssysteme integrieren lässt.",
-        "image_position": "left"
-      }
-    },
-    "stats": {
-      "type": "stats_strip",
-      "settings": {},
+    "b2b_solution": {
+      "type": "b2b_solution",
       "blocks": {
-        "s1": {
-          "type": "icon-block",
+        "b2b_sol_fact_1": {
+          "type": "b2b-sol-fact",
           "settings": {
             "text_zahl": "Top 50",
-            "text_label": "Topseller dauerhaft auf Lager"
-          }
+            "text_label": "Top sellers always in stock"
+          },
+          "blocks": {}
         },
-        "s2": {
-          "type": "icon-block",
+        "b2b_sol_fact_2": {
+          "type": "b2b-sol-fact",
           "settings": {
-            "text_zahl": "+20–30%",
-            "text_label": "höherer Warenkorbwert durch Attach-Produkte"
-          }
+            "text_zahl": "+20 to 30%",
+            "text_label": "higher basket value thanks to add-on products"
+          },
+          "blocks": {}
         },
-        "s3": {
-          "type": "icon-block",
+        "b2b_sol_fact_3": {
+          "type": "b2b-sol-fact",
           "settings": {
-            "text_zahl": "1 Quelle",
-            "text_label": "für Topseller & Zubehör – weniger Lieferanten"
-          }
-        }
-      },
-      "block_order": [
-        "s1",
-        "s2",
-        "s3"
-      ]
-    },
-    "quote1": {
-      "type": "testimonials",
-      "settings": {
-        "show_rating": false
-      },
-      "blocks": {
-        "t1": {
-          "type": "testimonial",
-          "settings": {
-            "textarea_bewertungs_text": "Ein Partner, der Verfügbarkeit verspricht und hält, macht den Unterschied zwischen einem Lieferanten und einem Partner.",
-            "text_name": "IT-Einkäufer",
-            "text_kurz_headline": "Grosskundenverhältnis",
-            "verified": false
-          }
-        }
-      },
-      "block_order": [
-        "t1"
-      ]
-    },
-    "advantages": {
-      "type": "feature_card_grid",
-      "settings": {
-        "text_subline": "Was das Geschäftsmodell ausmacht",
-        "text_heading": "Ihr Vorteil im Run-Rate-Geschäft"
-      },
-      "blocks": {
-        "feature-cards": {
-          "type": "feature-cards",
+            "text_zahl": "One Source",
+            "text_label": "for bestsellers and accessories – fewer suppliers"
+          },
+          "blocks": {}
+        },
+        "b2b-sol-referenzen": {
+          "type": "b2b-sol-referenzen",
+          "disabled": true,
           "static": true,
           "settings": {},
           "blocks": {
-            "c1": {
-              "type": "feature-karte",
-              "settings": {
-                "text_heading": "Verfügbarkeit als Versprechen",
-                "textarea_text": "DICOTA hält die wichtigsten 50 Topseller dauerhaft auf Lager und garantiert kurze Lieferzeiten auch bei grösseren Mengen – verbindliche Zusagen, die Sie einhalten können."
-              }
-            },
-            "c2": {
-              "type": "feature-karte",
-              "settings": {
-                "text_heading": "Planbarkeit durch Rahmenverträge",
-                "textarea_text": "Rahmenverträge mit definierten Produkten, Preisen und Abrufmengen. Laufzeiten von 12 bis 36 Monaten schaffen Sicherheit – bei flexibel steuerbaren Abrufmengen."
-              }
-            },
-            "c3": {
-              "type": "feature-karte",
-              "settings": {
-                "text_heading": "Einfache Abwicklung",
-                "textarea_text": "Wenige, klar definierte SKUs, eine saubere Preisliste und ein eingespielter Bestellprozess reduzieren den administrativen Aufwand auf ein Minimum."
-              }
-            },
-            "c4": {
-              "type": "feature-karte",
-              "settings": {
-                "text_heading": "Attach-Portfolio – Marge ohne Mehraufwand",
-                "textarea_text": "Das eigentliche Margenpotenzial liegt im Attach. In den Bestellprozess integriert, laufen Zubehörartikel automatisch mit – ohne Neuverhandlung."
-              }
+            "b2b_sol_referenz_TMwXD8": {
+              "type": "b2b-sol-referenz",
+              "name": "B2B Sol Referenz",
+              "settings": {},
+              "blocks": {}
             }
           },
           "block_order": [
-            "c1",
-            "c2",
-            "c3",
-            "c4"
+            "b2b_sol_referenz_TMwXD8"
           ]
         }
+      },
+      "block_order": [
+        "b2b_sol_fact_1",
+        "b2b_sol_fact_2",
+        "b2b_sol_fact_3"
+      ],
+      "settings": {
+        "url_breadcrumb_parent_link": "",
+        "text_breadcrumb_parent_label": "Solutions",
+        "text_breadcrumb": "Run Rate Product Supply",
+        "text_subline": "B2B Solutions",
+        "text_heading_1": "Run Rate Product Supply",
+        "textarea_subheading_1": "The backbone of any successful reseller business is the recurring business with major customers. Projects come and go – but the ongoing need for protection, connectivity and accessories remains constant. This is precisely where the greatest revenue opportunity lies for resellers: those who position themselves as reliable suppliers in the run-rate business benefit from predictable revenue, low acquisition costs and high customer loyalty.",
+        "url_hero_button_link": "",
+        "text_hero_button_text": "Become a reseller",
+        "text_feature_subline": "Why DICOTA",
+        "text_feature_heading": "Your everyday IT accessory partner",
+        "textarea_feature_text": "As an accessories supplier, DICOTA is ideally positioned for this segment: a broad portfolio of best-sellers, consistently high stock availability and a clear SKU structure that can be easily integrated into existing ERP and procurement systems. For retailers, this means less effort in order processing and more time to build customer relationships.",
+        "text_facts_heading": "Key figures at a glance",
+        "text_referenzen_heading": "Trusted by",
+        "text_cta_heading": "Ready to stock up?",
+        "textarea_cta_text": "Order online with fast availability and no minimum order quantity — backed by dedicated customer support.",
+        "url_cta_button_link": "",
+        "text_cta_button_text": "Start ordering",
+        "breadcrumb_parent_label": "Solutions",
+        "breadcrumb_parent_link": "",
+        "padding_top": 60,
+        "padding_bottom": 60
       }
     },
-    "target_groups": {
-      "type": "triple_cards",
-      "settings": {
-        "text_heading": "Grosskunden. Grosse Wirkung."
-      },
+    "b2b_key_selling_argu_zHN3nH": {
+      "type": "b2b_key_selling_argu",
       "blocks": {
-        "k1": {
-          "type": "karte",
+        "argument_kxMEdq": {
+          "type": "argument",
+          "name": "Argument",
           "settings": {
-            "text_card_heading": "Unternehmens- & Konzernkunden"
-          }
-        },
-        "k2": {
-          "type": "karte",
-          "settings": {
-            "text_card_heading": "IT-Einkäufer & Procurement"
-          }
-        },
-        "k3": {
-          "type": "karte",
-          "settings": {
-            "text_card_heading": "Reseller & IT-Händler"
-          }
-        },
-        "k4": {
-          "type": "karte",
-          "settings": {
-            "text_card_heading": "Key Account Manager"
-          }
-        }
-      },
-      "block_order": [
-        "k1",
-        "k2",
-        "k3",
-        "k4"
-      ]
-    },
-    "attach_headline": {
-      "type": "section_headline",
-      "settings": {
-        "text_vortitel": "Attach-Portfolio",
-        "text_uberschrift": "Mehrwert im Warenkorb",
-        "textarea_beschreibung": "Jeder verkaufte Laptop ist ein Einstiegspunkt für Zubehör, das regelmässig nachbestellt wird."
-      }
-    },
-    "attach": {
-      "type": "reseller_promo_grid",
-      "settings": {},
-      "blocks": {
-        "b1": {
-          "type": "reseller-promo-banner",
-          "settings": {
-            "text_titel": "Sleeves & Cases",
-            "textarea_text": "Passgenau nach Gerätegrösse und Marke – als Standardartikel im Warenkorb mitführen. In nahezu jedem Unternehmens-IT-Umfeld gesetzt."
-          }
-        },
-        "b2": {
-          "type": "reseller-promo-banner",
-          "settings": {
-            "text_titel": "Locks & Security",
-            "textarea_text": "Diebstahlsicherung ist in vielen Unternehmen IT-Richtlinie, nicht optionales Zubehör. Hoher Attach-Grad, kaum Erklärungsaufwand, guter Deckungsbeitrag."
-          }
-        },
-        "b3": {
-          "type": "reseller-promo-banner",
-          "settings": {
-            "text_titel": "Adapter & Connectivity",
-            "textarea_text": "USB-C-Hubs, HDMI-Adapter, Multiport-Lösungen – immer nachgefragt, selten proaktiv bestellt. Im Standard-Warenkorb schliessen Sie die Lücke."
-          }
-        },
-        "b4": {
-          "type": "reseller-promo-banner",
-          "settings": {
-            "text_titel": "Backpacks & Bags",
-            "textarea_text": "Standardartikel in Grosskundenausschreibungen – für Aussendienst, Berater und hybride Teams. Breites Sortiment, einfach in Rahmenverträge integrierbar."
-          }
-        }
-      },
-      "block_order": [
-        "b1",
-        "b2",
-        "b3",
-        "b4"
-      ]
-    },
-    "usps": {
-      "type": "usp_icon_row",
-      "settings": {},
-      "blocks": {
-        "u1": {
-          "type": "usp-block",
-          "settings": {
-            "text_uberschrift": "Dauerhaft verfügbar",
-            "textarea_beschreibung": "Top-50-Topseller ständig auf Lager."
-          }
-        },
-        "u2": {
-          "type": "usp-block",
-          "settings": {
-            "text_uberschrift": "Klare SKUs",
-            "textarea_beschreibung": "Saubere Struktur, einfache Bestellung."
-          }
-        },
-        "u3": {
-          "type": "usp-block",
-          "settings": {
-            "text_uberschrift": "Einfache Integration",
-            "textarea_beschreibung": "Passt in ERP- und Einkaufssysteme."
-          }
-        },
-        "u4": {
-          "type": "usp-block",
-          "settings": {
-            "text_uberschrift": "Planbare Margen",
-            "textarea_beschreibung": "Attach-Umsatz ohne Mehraufwand."
-          }
-        }
-      },
-      "block_order": [
-        "u1",
-        "u2",
-        "u3",
-        "u4"
-      ]
-    },
-    "conversation": {
-      "type": "image_text",
-      "settings": {
-        "text_heading": "So führen Sie das Run-Rate-Gespräch",
-        "textarea_text": "Das Run-Rate-Gespräch funktioniert am besten als Prozess-Gespräch, nicht als Produktgespräch. Der Einstieg: den aktuellen Beschaffungsprozess des Kunden verstehen. Beschreibt der Kunde einen dezentralen oder chaotischen Prozess – und das tun die meisten – ist der Weg zur Lösung direkt: ein zentraler Warenkorb mit definierten Artikeln, festen Preisen und einem einzigen Ansprechpartner.",
-        "image_position": "right"
-      }
-    },
-    "quote2": {
-      "type": "testimonials",
-      "settings": {
-        "show_rating": false
-      },
-      "blocks": {
-        "t2": {
-          "type": "testimonial",
-          "settings": {
-            "textarea_bewertungs_text": "Wie läuft bei Ihnen aktuell die Beschaffung von IT-Zubehör – zentral über den IT-Einkauf oder dezentral durch die Abteilungen? Und wie viel Zeit und Aufwand steckt dahinter?",
-            "text_name": "Einstiegsfrage im Kundengespräch",
-            "verified": false
-          }
-        }
-      },
-      "block_order": [
-        "t2"
-      ]
-    },
-    "why": {
-      "type": "feature_card_grid",
-      "settings": {
-        "text_subline": "Kernargumente",
-        "text_heading": "Warum IT-Einkäufer auf DICOTA setzen"
-      },
-      "blocks": {
-        "feature-cards": {
-          "type": "feature-cards",
-          "static": true,
-          "settings": {},
-          "blocks": {
-            "c1": {
-              "type": "feature-karte",
-              "settings": {
-                "text_heading": "Prozessreduktion",
-                "textarea_text": "Ein Lieferant, eine Bestellung, eine Rechnung statt zehn verschiedene Quellen."
-              }
-            },
-            "c2": {
-              "type": "feature-karte",
-              "settings": {
-                "text_heading": "Kostentransparenz",
-                "textarea_text": "Feste Preise im Rahmenvertrag machen das Jahresbudget kalkulierbar."
-              }
-            },
-            "c3": {
-              "type": "feature-karte",
-              "settings": {
-                "text_heading": "Liefersicherheit",
-                "textarea_text": "Topseller dauerhaft verfügbar – kein Engpass beim nächsten Rollout."
-              }
-            },
-            "c4": {
-              "type": "feature-karte",
-              "settings": {
-                "text_heading": "Compliance",
-                "textarea_text": "Alle DICOTA-Produkte mit vollständiger Dokumentation – kein Aufwand bei internen Audits."
-              }
-            }
+            "text_heading": "1,000+ products in stock",
+            "textarea_text": "A broad portfolio with fast availability and strong reseller margins."
           },
-          "block_order": [
-            "c1",
-            "c2",
-            "c3",
-            "c4"
-          ]
+          "blocks": {}
+        },
+        "argument_tenWfM": {
+          "type": "argument",
+          "settings": {
+            "text_heading": "1,000+ products in stock",
+            "textarea_text": "A broad portfolio with fast availability and strong reseller margins."
+          },
+          "blocks": {}
         }
+      },
+      "block_order": [
+        "argument_kxMEdq",
+        "argument_tenWfM"
+      ],
+      "disabled": true,
+      "name": "B2B Key Selling Argu",
+      "settings": {
+        "text_subline": "Why DICOTA for B2B",
+        "text_heading": "Key selling arguments",
+        "textarea_text": "The most compelling reasons for resellers and end customers to choose DICOTA — ready to use in your sales conversations.",
+        "padding_top": 80,
+        "padding_bottom": 80
       }
     },
-    "cta": {
-      "type": "discover_banner",
+    "b2b_mkt_trainings_dXHC8A": {
+      "type": "b2b_mkt_trainings",
+      "disabled": true,
+      "name": "B2B Mkt Trainings",
       "settings": {
-        "text_heading": "Mehr Planbarkeit. Weniger Aufwand. Höhere Kundenzufriedenheit.",
-        "textarea_text": "DICOTA macht Run-Rate-Supply einfach.",
-        "text_button_text": "Offertes Gespräch vereinbaren",
-        "url_button_link": "shopify://pages/b2b-get-a-quote"
+        "url_breadcrumb_parent_link": "",
+        "text_breadcrumb_parent_label": "Marketing",
+        "text_breadcrumb": "Trainings",
+        "text_heading": "Trainings",
+        "textarea_subheading": "When you're on the move, there are many situations where you can't keep your laptop on you at all times. Whether it's a trip to the restroom on the train or a quick coffee break in the shared kitchen of a coworking space. Even in just a few minutes, opportunists could strike."
+      }
+    },
+    "page_content_PrgJLK": {
+      "type": "page_content",
+      "disabled": true,
+      "name": "Page Content",
+      "settings": {}
+    },
+    "value_tabs_qtUxcQ": {
+      "type": "value_tabs",
+      "blocks": {
+        "tab_gPKXpe": {
+          "type": "tab",
+          "name": "Availability",
+          "settings": {
+            "text_tab_label": "Availability",
+            "text_tab_heading": "Availability as a Promise",
+            "textarea_tab_text": "In the key account business, the ability to deliver is not an option, but a fundamental requirement. If an IT manager rolls out 200 laptops and realises three days later that the cases are not available, this is not just a logistical problem – it undermines trust in the entire supply chain. DICOTA keeps its 50 top-selling products in stock at all times and guarantees short delivery times, even for larger quantities.<br><br>\nFor retailers, this means they can make binding commitments to their major clients – and actually keep them. That is the difference between a supplier and a partner."
+          },
+          "blocks": {}
+        },
+        "tab_aLRV7h": {
+          "type": "tab",
+          "name": "Predictability",
+          "settings": {
+            "text_tab_label": "Predictability",
+            "text_tab_heading": "Predictability through framework agreements",
+            "textarea_tab_text": "Major customers think in terms of budget cycles, not individual orders. Framework agreements with defined products, prices and call-off quantities are the norm in the enterprise sector. DICOTA fully supports this model: retailers can enter into framework agreements that offer their customers predictable terms and conditions and provide the retailers themselves with predictable margins.<br><br>\nTypical contract terms of 12 to 36 months provide certainty for both parties. At the same time, call-off quantities can be managed flexibly – ideal for customers with seasonal fluctuations or rolling rollout cycles."
+          },
+          "blocks": {}
+        },
+        "tab_J9TKUW": {
+          "type": "tab",
+          "name": "Simple processing",
+          "settings": {
+            "text_tab_label": "Simple Processing",
+            "text_tab_heading": "Simple Processing – no administrative overhead",
+            "textarea_tab_text": "Many retailers underestimate the amount of internal effort involved in managing an unstructured range of accessories: different suppliers, varying ordering processes, inconsistent documentation. DICOTA simplifies this radically. A small number of clearly defined SKUs, a well-organised price list and a well-established ordering process reduce the administrative burden to a minimum."
+          },
+          "blocks": {}
+        },
+        "tab_BtRXig": {
+          "type": "tab",
+          "name": "Attach Portfolio",
+          "settings": {
+            "text_tab_label": "Attach Portfolio",
+            "text_tab_heading": "Attach Portfolio – Margin without extra effort",
+            "textarea_tab_text": "The real margin potential in run-rate business does not lie in the top-seller itself – it lies in the attach. Every laptop sold is a gateway to several accessories that are regularly reordered. The trick lies in integrating these add-on products into the ordering process in such a way that they are automatically included – without having to be renegotiated each time."
+          },
+          "blocks": {}
+        },
+        "tab_JAxLww": {
+          "type": "tab",
+          "settings": {
+            "text_tab_label": "Trust",
+            "text_tab_heading": "Trust",
+            "textarea_tab_text": "We build on long-term relationships — with customers, partners and colleagues alike."
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "tab_gPKXpe",
+        "tab_aLRV7h",
+        "tab_J9TKUW",
+        "tab_BtRXig",
+        "tab_JAxLww"
+      ],
+      "name": "Value Tabs",
+      "settings": {
+        "text_heading": "What defines the business model",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "benefits_grid_Rgyjmf": {
+      "type": "benefits_grid",
+      "blocks": {
+        "benefit_N9aUeg": {
+          "type": "benefit",
+          "name": "Benefit",
+          "settings": {
+            "text_heading": "Sleeves & Cases",
+            "textarea_text": "Precisely tailored to device size and brand – simply include them as standard items in your shopping basket. No explanation needed, no tender required. Sleeves and cases are standard in almost every corporate IT environment. If you include them as standard extras in your range, you’ll sell them without having to actively promote them."
+          },
+          "blocks": {}
+        },
+        "benefit_kKC8eQ": {
+          "type": "benefit",
+          "name": "Benefit",
+          "settings": {
+            "text_heading": "Locks & Security",
+            "textarea_text": "Anti-theft protection is an IT policy requirement in many companies – not an optional accessory. Particularly in environments with shared workstations, co-working spaces or field service teams, locks are a must-have item. The advantage for retailers: high add-on rate, minimal need for explanation, good contribution margin."
+          },
+          "blocks": {}
+        },
+        "benefit_UdRpMx": {
+          "type": "benefit",
+          "name": "Benefit",
+          "settings": {
+            "text_heading": "Adapter & Connectivity",
+            "textarea_text": "USB-C hubs, HDMI adaptors, multi-port solutions – these items are always in demand, but rarely ordered proactively. They often end up as emergency purchases in retail outlets or on online platforms when an employee realises during their first meeting whilst working from home that they don’t have the right connector. Retailers who include these items in their standard product range fill this gap – and significantly increase the order value."
+          },
+          "blocks": {}
+        },
+        "benefit_VAPrGa": {
+          "type": "benefit",
+          "settings": {
+            "text_heading": "Backpacks & Bags",
+            "textarea_text": "Corporate backpacks and business bags are standard items in tenders from major clients – particularly for field sales teams, consultants and hybrid workers. DICOTA offers a wide range across various price points that can be easily integrated into framework agreements."
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "benefit_N9aUeg",
+        "benefit_kKC8eQ",
+        "benefit_UdRpMx",
+        "benefit_VAPrGa"
+      ],
+      "name": "Benefits Grid",
+      "settings": {
+        "text_subline": "Attach Portfolio",
+        "text_heading": "Margin without extra effort",
+        "url_button_link": "",
+        "text_button_text": "",
+        "padding_top": 80,
+        "padding_bottom": 80
       }
     }
   },
+  "layout": "b2b",
+  "wrapper": "main.main-wrapper",
   "order": [
     "b2b_subnav",
-    "hero",
-    "hero_image",
-    "backbone",
-    "stats",
-    "quote1",
-    "advantages",
-    "target_groups",
-    "attach_headline",
-    "attach",
-    "usps",
-    "conversation",
-    "quote2",
-    "why",
-    "cta"
-  ],
-  "layout": "b2b",
-  "wrapper": "main.main-wrapper"
+    "b2b_solution",
+    "b2b_key_selling_argu_zHN3nH",
+    "b2b_mkt_trainings_dXHC8A",
+    "page_content_PrgJLK",
+    "value_tabs_qtUxcQ",
+    "benefits_grid_Rgyjmf"
+  ]
 }
