@@ -24,8 +24,17 @@
         "textarea_text": "If you have questions about applying, the selection process or getting started — we have answers.",
         "padding_top": 80,
         "padding_bottom": 80,
-        "faq_set": "shipping",
-        "faq_entries": []
+        "faq_set": "",
+        "faq_entries": [
+          "how-much-does-shipping-cost-for-my-order",
+          "do-you-support-international-b2b-shipping",
+          "do-you-offer-drop-shipping-services",
+          "how-are-b2b-shipping-costs-calculated",
+          "who-manages-shipping-coordination-for-b2b-accounts",
+          "from-where-are-dicota-orders-shipped",
+          "how-are-shipping-delays-communicated",
+          "how-can-i-contact-support-for-shipping-issues"
+        ]
       }
     }
   },
