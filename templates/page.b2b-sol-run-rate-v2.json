@@ -35,9 +35,95 @@
         "layout": "full"
       }
     },
+    "b2b_solution_fQqwVw": {
+      "type": "b2b_solution",
+      "blocks": {
+        "b2b_sol_fact_wpA4Xi": {
+          "type": "b2b-sol-fact",
+          "name": "B2B Sol Fact",
+          "settings": {
+            "text_zahl": "1,000+",
+            "text_label": "Products available"
+          },
+          "blocks": {}
+        },
+        "b2b_sol_fact_HKnUGr": {
+          "type": "b2b-sol-fact",
+          "name": "B2B Sol Fact",
+          "settings": {
+            "text_zahl": "1,000+",
+            "text_label": "Products available"
+          },
+          "blocks": {}
+        },
+        "b2b_sol_fact_DDMYeg": {
+          "type": "b2b-sol-fact",
+          "settings": {
+            "text_zahl": "1,000+",
+            "text_label": "Products available"
+          },
+          "blocks": {}
+        },
+        "b2b_sol_capability_xkRhR3": {
+          "type": "b2b-sol-capability",
+          "disabled": true,
+          "settings": {
+            "text_heading": "Capability title",
+            "textarea_text": "Describe the capability — e.g. branding, doming, custom configuration or bundle."
+          },
+          "blocks": {}
+        },
+        "b2b-sol-referenzen": {
+          "type": "b2b-sol-referenzen",
+          "disabled": true,
+          "static": true,
+          "settings": {},
+          "blocks": {
+            "b2b_sol_referenz_RmBN6z": {
+              "type": "b2b-sol-referenz",
+              "settings": {},
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "b2b_sol_referenz_RmBN6z"
+          ]
+        }
+      },
+      "block_order": [
+        "b2b_sol_fact_wpA4Xi",
+        "b2b_sol_fact_HKnUGr",
+        "b2b_sol_fact_DDMYeg",
+        "b2b_sol_capability_xkRhR3"
+      ],
+      "custom_css": [],
+      "name": "B2B Solution",
+      "settings": {
+        "url_breadcrumb_parent_link": "",
+        "text_breadcrumb_parent_label": "",
+        "text_breadcrumb": "",
+        "text_subline": "",
+        "text_heading_1": "",
+        "textarea_subheading_1": "",
+        "url_hero_button_link": "",
+        "text_hero_button_text": "",
+        "text_feature_subline": "",
+        "text_feature_heading": "",
+        "textarea_feature_text": "",
+        "text_facts_heading": "Key facts",
+        "text_referenzen_heading": "",
+        "text_cta_heading": "Ausgangslage & Marktchance",
+        "textarea_cta_text": "Das Rückgrat jedes erfolgreichen Reseller-Geschäfts ist das wiederkehrende Geschäft mit Grosskunden. Projekte kommen und gehen – aber der laufende Bedarf an Schutz, Connectivity und Zubehör bleibt konstant. Wer hier als zuverlässiger Lieferant positioniert ist, profitiert von planbaren Umsätzen, niedrigen Akquisekosten und hoher Kundenbindung.<br><br>DICOTA ist als Zubehöranbieter optimal für dieses Segment positioniert: breites Topseller-Portfolio, dauerhaft hohe Lagerverfügbarkeit und eine klare SKU-Struktur, die sich einfach in bestehende ERP- und Einkaufssysteme integrieren lässt.",
+        "url_cta_button_link": "",
+        "text_cta_button_text": "",
+        "breadcrumb_parent_label": "",
+        "breadcrumb_parent_link": "",
+        "padding_top": 4,
+        "padding_bottom": 4
+      }
+    },
     "backbone": {
       "type": "image_text",
-      "disabled": true,
       "settings": {
         "text_heading": "Das Rückgrat Ihres Reseller-Geschäfts",
         "textarea_text": "Das Rückgrat jedes erfolgreichen Reseller-Geschäfts ist das wiederkehrende Geschäft mit Grosskunden. Projekte kommen und gehen – aber der laufende Bedarf an Schutz, Connectivity und Zubehör bleibt konstant. Wer hier als zuverlässiger Lieferant positioniert ist, profitiert von planbaren Umsätzen, niedrigen Akquisekosten und hoher Kundenbindung.<br><br>DICOTA ist als Zubehöranbieter optimal für dieses Segment positioniert: breites Topseller-Portfolio, dauerhaft hohe Lagerverfügbarkeit und eine klare SKU-Struktur, die sich einfach in bestehende ERP- und Einkaufssysteme integrieren lässt.",
@@ -79,6 +165,7 @@
         "s2",
         "s3"
       ],
+      "disabled": true,
       "settings": {
         "padding_top": 40,
         "padding_bottom": 40
@@ -147,8 +234,8 @@
             "c3": {
               "type": "feature-karte",
               "settings": {
-                "text_heading": "Einfache Abwicklung",
-                "textarea_text": "Wenige, klar definierte SKUs, eine saubere Preisliste und ein eingespielter Bestellprozess reduzieren den administrativen Aufwand auf ein Minimum.",
+                "text_heading": "Einfache Abwicklung – kein Overhead",
+                "textarea_text": "Viele Händler unterschätzen, wie viel internen Aufwand ein unstrukturiertes Zubehör-Sortiment erzeugt: verschiedene Lieferanten, unterschiedliche Bestellprozesse, inkonsistente Dokumentation. DICOTA vereinfacht das radikal. Wenige, klar definierte SKUs, eine saubere Preisliste und ein eingespielter Bestellprozess reduzieren den administrativen Aufwand auf ein Minimum.",
                 "url_button_link": "",
                 "text_button_text": ""
               },
@@ -235,6 +322,7 @@
         "k3",
         "k4"
       ],
+      "disabled": true,
       "settings": {
         "text_heading": "Grosskunden. Grosse Wirkung.",
         "url_button_link": "",
@@ -485,6 +573,7 @@
     "b2b_subnav",
     "hero",
     "hero_image",
+    "b2b_solution_fQqwVw",
     "backbone",
     "stats",
     "quote1",
