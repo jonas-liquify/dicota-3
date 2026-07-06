@@ -7,7 +7,7 @@
 {% endif %}{% if localization.available_countries.size > 1 %}    <div li-if="localization.available_countries.size > 1" class="li-lang_dd-group">
     {% form 'localization', class: 'li-lang_form' %}
 <input type="hidden" name="return_to" value="{{ request.path }}"><div li-for:inside="country in localization.available_countries" class="li-lang_dd-items">
-        {% for country in localization.available_countries %}                            <button type="submit" name="country_code" class="li-lang_dd-link{% if country.iso_code == localization.country.iso_code %} is-active{% endif %}" value="{{ country.iso_code }}"><span li-object="country.name">{{ country.name }}</span><span class="li-lang_dd-currency"><span li-object="country.currency.symbol">{{ country.currency.symbol }}</span><span li-object="country.currency.iso_code">{{ country.currency.iso_code }}</span></span></button>
+        {% for country in localization.available_countries %}                            <button type="submit" name="country_code" class="li-lang_dd-link{% if country.iso_code == localization.country.iso_code %} is-active{% endif %}" value="{{ country.iso_code }}"><span li-object="country.name">{{ country.name }}</span><span class="li-lang_dd-currency"><span li-object="country.currency.symbol">{{ country.currency.symbol }}</span></span></button>
                     {% endfor %}    </div>{% endform %}    </div>
 {% endif %}</nav></div>    </div>
 {% endif %}

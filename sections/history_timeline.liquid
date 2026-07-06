@@ -1,6 +1,8 @@
-<div class="padding-global padding-section-medium"><div class="container-large"><div class="swiper_component is-history-swiper"><div class="default-space-between"><div class="default-flex-small"><div class="text-style-subline">
+<div class="padding-global padding-section-medium"><div class="container-large"><div class="swiper_component is-history-swiper"><div class="default-space-between"><div class="default-flex-small">{% if section.settings.text_subline != blank %}    <div class="li-guard" li-if="section.settings.text_subline != blank">
+    <div class="text-style-subline">
 {{ section.settings.text_subline }}
-</div><h2 class="heading-style-h2">
+</div>    </div>
+{% endif %}<h2 class="heading-style-h2">
 {{ section.settings.text_heading }}
 </h2></div><div class="history_pagination"><div class="text-size-large">
 {{ section.settings.text_start_year }}

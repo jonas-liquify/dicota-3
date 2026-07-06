@@ -1,8 +1,10 @@
-<picture class="sustainability_bg-picture">{% if section.settings.image_hintergrundbild %}
+{% if section.settings.image_hintergrundbild != blank %}    <picture li-if="section.settings.image_hintergrundbild != blank" class="sustainability_bg-picture">
+    {% if section.settings.image_hintergrundbild %}
 {{ section.settings.image_hintergrundbild | image_url: width: 2400 | image_tag: loading: 'lazy', class: 'sustainability_bg-image' }}
 {% else %}
 <img src="{{ 'hero-apparel-2.svg' | asset_url }}" loading="lazy" alt="" class="sustainability_bg-image">
-{% endif %}</picture><div class="sustainability_overlay" style="background-color: rgba(0,0,0,{{ section.settings.overlay_strength | divided_by: 100.0 }});"></div>{% if section.settings.badge != blank %}    <div li-if="section.settings.badge != blank" class="sustainability_badge">
+{% endif %}    </picture>
+{% endif %}<div class="sustainability_overlay" style="background-color: rgba(0,0,0,{{ section.settings.overlay_strength | divided_by: 100.0 }});"></div>{% if section.settings.badge != blank %}    <div li-if="section.settings.badge != blank" class="sustainability_badge">
     {% if section.settings.image_badge_top_right %}
 {{ section.settings.image_badge_top_right | image_url: width: 1000 | image_tag: loading: 'lazy', class: 'sustainability_badge-image' }}
 {% else %}

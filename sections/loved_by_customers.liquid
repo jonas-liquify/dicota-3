@@ -1,12 +1,16 @@
-<div class="loved-by_grid" style="padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px; background-color: {{ section.settings.bg_color }};"><div class="loved-by_headline-tile"><picture class="loved-by_headline-picture">{% if section.settings.image_header_bild %}
+<div class="loved-by_grid" style="padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px; background-color: {{ section.settings.bg_color }};"><div class="loved-by_headline-tile">{% if section.settings.image_header_bild != blank %}    <picture li-if="section.settings.image_header_bild != blank" class="loved-by_headline-picture">
+    {% if section.settings.image_header_bild %}
 {{ section.settings.image_header_bild | image_url: width: 800 | image_tag: loading: 'lazy', class: 'loved-by_headline-image' }}
 {% else %}
 <img src="{{ 'hero-apparel-3.svg' | asset_url }}" loading="lazy" alt="" class="loved-by_headline-image">
-{% endif %}</picture><div class="loved-by_headline-overlay"></div><div class="loved-by_headline-content"><h2 class="loved-by_headline-title heading-style-h2">
+{% endif %}    </picture>
+{% endif %}<div class="loved-by_headline-overlay"></div><div class="loved-by_headline-content"><h2 class="loved-by_headline-title heading-style-h2">
 {{ section.settings.text_uberschrift }}
-</h2><div class="loved-by_rating"><div class="loved-by_stars" aria-hidden="true"><svg viewbox="0 0 60 12" xmlns="http://www.w3.org/2000/svg"><g fill="currentColor"><polygon points="6,0 7.4,4.3 12,4.3 8.3,7 9.7,11.3 6,8.6 2.3,11.3 3.7,7 0,4.3 4.6,4.3"></polygon><polygon points="18,0 19.4,4.3 24,4.3 20.3,7 21.7,11.3 18,8.6 14.3,11.3 15.7,7 12,4.3 16.6,4.3"></polygon><polygon points="30,0 31.4,4.3 36,4.3 32.3,7 33.7,11.3 30,8.6 26.3,11.3 27.7,7 24,4.3 28.6,4.3"></polygon><polygon points="42,0 43.4,4.3 48,4.3 44.3,7 45.7,11.3 42,8.6 38.3,11.3 39.7,7 36,4.3 40.6,4.3"></polygon><polygon points="54,0 55.4,4.3 60,4.3 56.3,7 57.7,11.3 54,8.6 50.3,11.3 51.7,7 48,4.3 52.6,4.3"></polygon></g></svg></div><p class="loved-by_rating-text">
+</h2><div class="loved-by_rating"><div class="loved-by_stars" aria-hidden="true"><svg viewbox="0 0 60 12" xmlns="http://www.w3.org/2000/svg"><g fill="currentColor"><polygon points="6,0 7.4,4.3 12,4.3 8.3,7 9.7,11.3 6,8.6 2.3,11.3 3.7,7 0,4.3 4.6,4.3"></polygon><polygon points="18,0 19.4,4.3 24,4.3 20.3,7 21.7,11.3 18,8.6 14.3,11.3 15.7,7 12,4.3 16.6,4.3"></polygon><polygon points="30,0 31.4,4.3 36,4.3 32.3,7 33.7,11.3 30,8.6 26.3,11.3 27.7,7 24,4.3 28.6,4.3"></polygon><polygon points="42,0 43.4,4.3 48,4.3 44.3,7 45.7,11.3 42,8.6 38.3,11.3 39.7,7 36,4.3 40.6,4.3"></polygon><polygon points="54,0 55.4,4.3 60,4.3 56.3,7 57.7,11.3 54,8.6 50.3,11.3 51.7,7 48,4.3 52.6,4.3"></polygon></g></svg></div>{% if section.settings.text_bewertungstext != blank %}    <div class="li-guard" li-if="section.settings.text_bewertungstext != blank">
+    <p class="loved-by_rating-text">
 {{ section.settings.text_bewertungstext }}
-</p></div></div></div><div class="loved-by_slider-wrapper"><div class="loved-by_swiper swiper"><div li-cf-theme-blocks="" class="swiper-wrapper loved-by_slides">
+</p>    </div>
+{% endif %}</div></div></div><div class="loved-by_slider-wrapper"><div class="loved-by_swiper swiper"><div li-cf-theme-blocks="" class="swiper-wrapper loved-by_slides">
 {% content_for 'blocks' %}
 </div><button type="button" class="loved-by_arrow swiper-button-next" aria-label="Next"><div class="icon-embed-xsmall w-embed">{% render 'icon_chevron_right' %}</div></button><button type="button" class="loved-by_arrow is-prev swiper-button-prev" aria-label="Previous"><div class="icon-embed-xsmall w-embed">{% render 'icon_chevron_left' %}</div></button></div></div></div><div class="hide w-embed w-script"><script>document.addEventListener("DOMContentLoaded", function() {
   var ensure = function(cb) {

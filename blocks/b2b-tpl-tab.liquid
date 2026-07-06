@@ -1,8 +1,10 @@
 <button li-block="B2B Tpl Tab" type="button" role="tab" class="acc-dis_tab-link" id="acc-tab-{{ forloop.index }}" aria-controls="acc-tabpanel-{{ forloop.index }}" x-on:click="tab = {{ forloop.index }}" x-bind:aria-selected="tab === {{ forloop.index }} ? 'true' : 'false'" x-bind:class="tab === {{ forloop.index }} ? 'is-active' : ''" {{ block.shopify_attributes }}>
-                    {% if block.settings.image_tab_icon %}
+                    {% if block.settings.image_tab_icon != blank %}    <span class="li-guard" li-if="block.settings.image_tab_icon != blank">
+    {% if block.settings.image_tab_icon %}
 {{ block.settings.image_tab_icon | image_url: width: 48 | image_tag: loading: 'lazy', class: 'icon-1x1-small' }}
 {% else %}
 <img src="{{ 'platzhalter.svg' | asset_url }}" loading="lazy" alt="" class="icon-1x1-small">
+{% endif %}    </span>
 {% endif %}
                     <div>
 {{ block.settings.text_tab_label }}

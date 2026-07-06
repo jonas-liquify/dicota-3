@@ -2,9 +2,11 @@
 {{ section.settings.text_heading }}
 </h1><div class="blog-hero_top-row"><div class="blog_tag is-large is-dark"><div>
 {{ section.settings.text_tag_1 }}
-</div></div><div class="text-size-tiny">
+</div></div>{% if section.settings.text_tag_2 != blank %}    <div class="li-guard" li-if="section.settings.text_tag_2 != blank">
+    <div class="text-size-tiny">
 {{ section.settings.text_tag_2 }}
-</div></div></div><div class="text-rich-text w-richtext"> {{ section.settings.richtext_beschreibung }} </div></div></div></div></div> {% schema %} {
+</div>    </div>
+{% endif %}</div></div><div class="text-rich-text w-richtext"> {{ section.settings.richtext_beschreibung }} </div></div></div></div></div> {% schema %} {
     "tag": "section",
     "name": "Job Detail Article",
     "class": "section_article",

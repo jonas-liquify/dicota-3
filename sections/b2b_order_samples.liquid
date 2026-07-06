@@ -1,8 +1,12 @@
-<div class="padding-global padding-section-small" style="padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px;"><div class="container-large"><div class="acc-default_wrapper"><div class="acc-default_flex-small"><ul role="list" class="breadcrumbs_component w-list-unstyled"><li class="breadcrumbs_item"><a li-object:href="routes.root_url" href="{{ routes.root_url }}" class="w-inline-block"><div li-object="'general.home' | t" class="text-size-regular">{{ 'general.home' | t }}</div></a><div class="breadcrumbs_icon w-embed"><svg width="15" height="15" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="1.5" fill="none"></path></svg></div></li><li class="breadcrumbs_item"><div>
+<div class="padding-global padding-section-small" style="padding-top: {{ section.settings.padding_top }}rem; padding-bottom: {{ section.settings.padding_bottom }}rem;"><div class="container-large"><div class="acc-default_wrapper"><div class="acc-default_flex-small"><ul role="list" class="breadcrumbs_component w-list-unstyled"><li class="breadcrumbs_item"><a li-object:href="routes.root_url" href="{{ routes.root_url }}" class="w-inline-block"><div li-object="'general.home' | t" class="text-size-regular">{{ 'general.home' | t }}</div></a><div class="breadcrumbs_icon w-embed"><svg width="15" height="15" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="1.5" fill="none"></path></svg></div></li><li class="breadcrumbs_item">{% if section.settings.text_breadcrumb != blank %}    <div class="li-guard" li-if="section.settings.text_breadcrumb != blank">
+    <div>
 {{ section.settings.text_breadcrumb }}
-</div></li></ul><div class="default-flex-tiny"><h1 class="heading-style-h2">
+</div>    </div>
+{% endif %}</li></ul><div class="default-flex-tiny"><h1 class="heading-style-h2">
 {{ section.settings.text_heading }}
-</h1><div class="text-size-medium max-width-large"> {{ section.settings.textarea_subheading }} </div></div><div class="multi-form_component" x-data="{ submitted:false, loading:false, products:[], pq:'', pr:[], pl:false, async search(){ var q=this.pq.trim(); if(q.length<2){ this.pr=[]; return } this.pl=true; try{ var r=await fetch('/search/suggest.json?q='+encodeURIComponent(q)+'&resources[type]=product&resources[limit]=6',{headers:{Accept:'application/json'}}); var d=await r.json(); this.pr=(((d.resources||{}).results)||{}).products||[] }catch(e){} this.pl=false }, add(p){ this.products.push({ title:p.title, sku:(p.sku||''), qty:1 }); this.pq=''; this.pr=[] }, rm(i){ this.products.splice(i,1) }, async submit(){ this.loading=true; var f=this.$root.querySelector('form'); var fd=new FormData(f); var data={}; fd.forEach(function(v,k){ data[k]=v }); data.products=this.products; data.account_email=this.$root.dataset.accountEmail; data.account_name=this.$root.dataset.accountName; data.account_id=this.$root.dataset.accountId; data.sales_team=this.$root.dataset.salesTeam; var hook=this.$root.dataset.hook; try{ if(hook){ var resp=await fetch(hook,{ method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(data) }); if(!resp.ok) throw new Error('bad response') } this.submitted=true }catch(e){ console.error('Sample order submit error:', e) } this.loading=false }, reset(){ this.submitted=false; this.products=[]; this.pq=''; this.pr=[] } }" data-hook="{{ section.settings.url_sample_hook }}" data-account-email="{{ customer.email }}" data-account-name="{{ customer.name | escape }}" data-account-id="{{ customer.id }}" data-sales-team="{{ customer.metafields.custom.sales_team }}"><div class="multi-form_block w-form"><form name="sample-order" data-name="Sample Order" method="post" class="multi-form_form" x-on:submit.prevent="submit()" x-show="!submitted"><div class="multi-form_step"><div class="multi-form_heading"><h2 class="heading-style-h4">
+</h1>{% if section.settings.textarea_subheading != blank %}    <div class="li-guard" li-if="section.settings.textarea_subheading != blank">
+    <div class="text-size-medium max-width-large"> {{ section.settings.textarea_subheading }} </div>    </div>
+{% endif %}</div><div class="multi-form_component" x-data="{ submitted:false, loading:false, products:[], pq:'', pr:[], pl:false, async search(){ var q=this.pq.trim(); if(q.length<2){ this.pr=[]; return } this.pl=true; try{ var r=await fetch('/search/suggest.json?q='+encodeURIComponent(q)+'&resources[type]=product&resources[limit]=6',{headers:{Accept:'application/json'}}); var d=await r.json(); this.pr=(((d.resources||{}).results)||{}).products||[] }catch(e){} this.pl=false }, add(p){ this.products.push({ title:p.title, sku:(p.sku||''), qty:1 }); this.pq=''; this.pr=[] }, rm(i){ this.products.splice(i,1) }, async submit(){ this.loading=true; var f=this.$root.querySelector('form'); var fd=new FormData(f); var data={}; fd.forEach(function(v,k){ data[k]=v }); data.products=this.products; data.account_email=this.$root.dataset.accountEmail; data.account_name=this.$root.dataset.accountName; data.account_id=this.$root.dataset.accountId; data.sales_team=this.$root.dataset.salesTeam; var hook=this.$root.dataset.hook; try{ if(hook){ var resp=await fetch(hook,{ method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(data) }); if(!resp.ok) throw new Error('bad response') } this.submitted=true }catch(e){ console.error('Sample order submit error:', e) } this.loading=false }, reset(){ this.submitted=false; this.products=[]; this.pq=''; this.pr=[] } }" data-hook="{{ section.settings.url_sample_hook }}" data-account-email="{{ customer.email }}" data-account-name="{{ customer.name | escape }}" data-account-id="{{ customer.id }}" data-sales-team="{{ customer.metafields.custom.sales_team }}"><div class="multi-form_block w-form"><form name="sample-order" data-name="Sample Order" method="post" class="multi-form_form" x-on:submit.prevent="submit()" x-show="!submitted"><div class="multi-form_step"><div class="multi-form_heading"><h2 class="heading-style-h4">
 {{ section.settings.text_form_heading }}
 </h2></div><div class="multi-form_form-content"><div class="text-size-medium text-weight-medium">
 {{ section.settings.text_products_label }}
@@ -18,9 +22,11 @@
 {{ section.settings.text_email_label }}
 </label></div></div></div><div class="multi-form_form-content"><div class="text-size-medium text-weight-medium">
 {{ section.settings.text_shipping_heading }}
-</div><div class="text-size-regular multi-form_subheading">
+</div>{% if section.settings.text_shipping_hint != blank %}    <div class="li-guard" li-if="section.settings.text_shipping_hint != blank">
+    <div class="text-size-regular multi-form_subheading">
 {{ section.settings.text_shipping_hint }}
-</div><div class="multi-form_double"><div class="form_field-wrapper"><input class="form_input w-input" name="shipping_company" placeholder=" " type="text" id="sample_shipping_company" value="{{ customer.default_address.company | escape }}"><label for="sample_shipping_company" class="form_label">
+</div>    </div>
+{% endif %}<div class="multi-form_double"><div class="form_field-wrapper"><input class="form_input w-input" name="shipping_company" placeholder=" " type="text" id="sample_shipping_company" value="{{ customer.default_address.company | escape }}"><label for="sample_shipping_company" class="form_label">
 {{ section.settings.text_company_label }}
 </label></div><div class="form_field-wrapper"><input class="form_input w-input" name="shipping_name" placeholder=" " type="text" id="sample_shipping_name" value="{{ customer.default_address.name | escape }}"><label for="sample_shipping_name" class="form_label">
 {{ section.settings.text_name_label }}
@@ -210,21 +216,21 @@
             "type": "range",
             "id": "padding_top",
             "min": 0,
-            "max": 160,
-            "step": 4,
-            "unit": "px",
+            "max": 12,
+            "step": 0.5,
+            "unit": "rem",
             "label": "Abstand oben",
-            "default": 60
+            "default": 4
         },
         {
             "type": "range",
             "id": "padding_bottom",
             "min": 0,
-            "max": 160,
-            "step": 4,
-            "unit": "px",
+            "max": 12,
+            "step": 0.5,
+            "unit": "rem",
             "label": "Abstand unten",
-            "default": 60
+            "default": 4
         }
     ],
     "presets": [

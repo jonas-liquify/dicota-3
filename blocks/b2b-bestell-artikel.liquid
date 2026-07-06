@@ -1,8 +1,10 @@
 <div li-block="B2B Bestell-Artikel" role="row" class="mkt-order_row" x-data="{ qty: 0 }" {{ block.shopify_attributes }}>
-                    <div role="cell" class="mkt-order_cell mkt-order_cell-img">{% if block.settings.image_bild %}
+                    <div role="cell" class="mkt-order_cell mkt-order_cell-img">{% if block.settings.image_bild != blank %}    <span class="li-guard" li-if="block.settings.image_bild != blank">
+    {% if block.settings.image_bild %}
 {{ block.settings.image_bild | image_url: width: 200 | image_tag: loading: 'lazy', class: 'mkt-order_img' }}
 {% else %}
 <img src="{{ 'product-apparel-2.svg' | asset_url }}" loading="lazy" alt="" class="mkt-order_img">
+{% endif %}    </span>
 {% endif %}</div>
                     <div role="cell" class="mkt-order_cell mkt-order_cell-desc"><span class="text-size-regular text-weight-medium">
 {{ block.settings.text_bezeichnung }}

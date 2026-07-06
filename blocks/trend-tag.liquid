@@ -1,5 +1,7 @@
 <div li-block="Trend Tag" style="display:contents" {{ block.shopify_attributes }}>
-                    <a href="{{ block.settings.url_link }}" class="reseller-hero_trend w-inline-block"> <span>{{ block.settings.text_text }}</span> </a>
+                    {% if block.settings.text_text != blank %}    <span class="li-guard" li-if="block.settings.text_text != blank">
+    <a href="{{ block.settings.url_link }}" class="reseller-hero_trend w-inline-block"> <span>{{ block.settings.text_text }}</span> </a>    </span>
+{% endif %}
                 </div> {% schema %} {
     "name": "Trend Tag",
     "settings": [

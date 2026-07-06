@@ -1,10 +1,14 @@
-<div class="padding-global" style="padding-top:{{ section.settings.padding_top }}px;padding-bottom:{{ section.settings.padding_bottom }}px;background-color:{{ section.settings.bg_color }};color:{{ section.settings.text_color }};"><div class="container-large"><article class="feature-product_card" style="background-color:{{ section.settings.card_bg }};"><div class="feature-product_media">{% if section.settings.image_produkt_bild %}
+<div class="padding-global" style="padding-top:{{ section.settings.padding_top }}px;padding-bottom:{{ section.settings.padding_bottom }}px;background-color:{{ section.settings.bg_color }};color:{{ section.settings.text_color }};"><div class="container-large"><article class="feature-product_card" style="background-color:{{ section.settings.card_bg }};"><div class="feature-product_media">{% if section.settings.image_produkt_bild != blank %}    <span class="li-guard" li-if="section.settings.image_produkt_bild != blank">
+    {% if section.settings.image_produkt_bild %}
 {{ section.settings.image_produkt_bild | image_url: width: 1400 | image_tag: loading: 'lazy', class: 'feature-product_image' }}
 {% else %}
 <img src="{{ 'platzhalter.svg' | asset_url }}" loading="lazy" alt="" class="feature-product_image">
+{% endif %}    </span>
 {% endif %}<button type="button" class="feature-product_favorite" aria-label="Add to wishlist"><div class="icon-embed-xsmall w-embed">{% render 'icon_favorite' %}</div></button></div><div class="feature-product_content"><h2 class="feature-product_title">
 {{ section.settings.text_produkt_titel }}
-</h2><p class="feature-product_desc"> {{ section.settings.textarea_beschreibung }} </p><a href="{{ section.settings.url_button_link }}" class="button is-outline feature-product_button w-button"> <span>{{ section.settings.text_button_text }}</span> </a></div></article></div></div> {% schema %} {
+</h2><p class="feature-product_desc"> {{ section.settings.textarea_beschreibung }} </p>{% if section.settings.text_button_text != blank %}    <span class="li-guard" li-if="section.settings.text_button_text != blank">
+    <a href="{{ section.settings.url_button_link }}" class="button is-outline feature-product_button w-button"> <span>{{ section.settings.text_button_text }}</span> </a>    </span>
+{% endif %}</div></article></div></div> {% schema %} {
     "tag": "section",
     "name": "Featured Product",
     "class": "section_feature-product",

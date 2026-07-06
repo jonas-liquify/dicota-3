@@ -4,7 +4,13 @@
 </div><div class="presentations_row-meta text-size-tiny text-style-muted">
 {{ block.settings.text_datei_info }}
 </div></div></div>
-                    <div class="presentations_row-langs"><a href="{{ block.settings.url_de_datei }}" target="_blank" rel="noopener" class="presentations_lang"> DE </a><a href="{{ block.settings.url_en_datei }}" target="_blank" rel="noopener" class="presentations_lang"> EN </a><a href="{{ block.settings.url_fr_datei }}" target="_blank" rel="noopener" class="presentations_lang"> FR </a></div>
+                    <div class="presentations_row-langs">{% if block.settings.url_de_datei != blank %}    <span class="li-guard" li-if="block.settings.url_de_datei != blank">
+    <a href="{{ block.settings.url_de_datei }}" target="_blank" rel="noopener" class="presentations_lang"> DE </a>    </span>
+{% endif %}{% if block.settings.url_en_datei != blank %}    <span class="li-guard" li-if="block.settings.url_en_datei != blank">
+    <a href="{{ block.settings.url_en_datei }}" target="_blank" rel="noopener" class="presentations_lang"> EN </a>    </span>
+{% endif %}{% if block.settings.url_fr_datei != blank %}    <span class="li-guard" li-if="block.settings.url_fr_datei != blank">
+    <a href="{{ block.settings.url_fr_datei }}" target="_blank" rel="noopener" class="presentations_lang"> FR </a>    </span>
+{% endif %}</div>
                 </div> {% schema %} {
     "name": "Pr\u00e4sentation",
     "settings": [

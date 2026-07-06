@@ -2,10 +2,12 @@
                     <button x-on:click="tab = idx" x-bind:class="tab === idx ? 'is-active' : ''" x-bind:aria-selected="tab === idx ? 'true' : 'false'" type="button" role="tab" class="value-tabs_link"><span>
 {{ block.settings.text_tab_label }}
 </span></button>
-                    <div role="tabpanel" x-show="tab === idx" x-cloak="" class="value-tabs_pane">{% if block.settings.image_tab_bild %}
+                    <div role="tabpanel" x-show="tab === idx" x-cloak="" class="value-tabs_pane">{% if block.settings.image_tab_bild != blank %}    <span class="li-guard" li-if="block.settings.image_tab_bild != blank">
+    {% if block.settings.image_tab_bild %}
 {{ block.settings.image_tab_bild | image_url: width: 1200 | image_tag: loading: 'lazy', class: 'value-tabs_image' }}
 {% else %}
 <img src="{{ 'platzhalter.svg' | asset_url }}" loading="lazy" alt="" class="value-tabs_image">
+{% endif %}    </span>
 {% endif %}<div class="value-tabs_content"><h3 class="heading-style-h3">
 {{ block.settings.text_tab_heading }}
 </h3><div class="text-size-medium"> {{ block.settings.textarea_tab_text }} </div></div></div>

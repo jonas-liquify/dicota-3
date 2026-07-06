@@ -1,6 +1,8 @@
-<div class="padding-global padding-section-medium"><div class="container-large"><div class="default-small-component"><div class="default-flex-tiny"><h2 class="heading-style-h2">
+<div class="padding-global padding-section-medium" style="padding-top: {{ section.settings.padding_top }}rem; padding-bottom: {{ section.settings.padding_bottom }}rem"><div class="container-large"><div class="default-small-component"><div class="default-flex-tiny"><h2 class="heading-style-h2">
 {{ section.settings.text_heading }}
-</h2><div class="text-size-medium"> {{ section.settings.textarea_text }} </div></div><div x-data="{tab: 1}" role="tablist" class="acc-dis_tab-component"><div li-cf-theme-blocks="" class="acc-dis_tab-menu">
+</h2>{% if section.settings.textarea_text != blank %}    <div class="li-guard" li-if="section.settings.textarea_text != blank">
+    <div class="text-size-medium"> {{ section.settings.textarea_text }} </div>    </div>
+{% endif %}</div><div x-data="{tab: 1}" role="tablist" class="acc-dis_tab-component"><div li-cf-theme-blocks="" class="acc-dis_tab-menu">
 {% content_for 'blocks' %}
 </div></div>{% content_for "block", type: "b2b-tpl-panes", id: "b2b-tpl-panes" %}</div></div></div> {% schema %} {
     "tag": "section",
@@ -29,6 +31,30 @@
             "type": "textarea",
             "label": "Text",
             "default": "Our authorized distribution partners worldwide."
+        },
+        {
+            "type": "header",
+            "content": "Abst\u00e4nde"
+        },
+        {
+            "type": "range",
+            "id": "padding_top",
+            "min": 0,
+            "max": 12,
+            "step": 0.5,
+            "unit": "rem",
+            "label": "Abstand oben",
+            "default": 4
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom",
+            "min": 0,
+            "max": 12,
+            "step": 0.5,
+            "unit": "rem",
+            "label": "Abstand unten",
+            "default": 4
         }
     ],
     "presets": [

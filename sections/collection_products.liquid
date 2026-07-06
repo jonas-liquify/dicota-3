@@ -12,20 +12,32 @@
         {% if forloop.index == section.settings.promo1_position %}
             <div class="coll_grid-item coll_promo-card" style="background-color: {{ section.settings.promo1_bg }};"><div class="coll_promo-card_inner"><div class="coll_promo-card_content"><h3 class="coll_promo-card_title">
 {{ section.settings.text_promo_1_headline }}
-</h3><p class="coll_promo-card_desc text-size-regular"> {{ section.settings.textarea_promo_1_text }} </p><a href="{{ section.settings.url_promo_1_link }}" class="coll_promo-card_cta w-button"> <span>{{ section.settings.text_promo_1_button }}</span> </a></div><div class="coll_promo-card_media">{% if section.settings.image_promo_1_bild %}
+</h3>{% if section.settings.textarea_promo_1_text != blank %}    <div class="li-guard" li-if="section.settings.textarea_promo_1_text != blank">
+    <p class="coll_promo-card_desc text-size-regular"> {{ section.settings.textarea_promo_1_text }} </p>    </div>
+{% endif %}{% if section.settings.text_promo_1_button != blank %}    <span class="li-guard" li-if="section.settings.text_promo_1_button != blank">
+    <a href="{{ section.settings.url_promo_1_link }}" class="coll_promo-card_cta w-button"> <span>{{ section.settings.text_promo_1_button }}</span> </a>    </span>
+{% endif %}</div><div class="coll_promo-card_media">{% if section.settings.image_promo_1_bild != blank %}    <span class="li-guard" li-if="section.settings.image_promo_1_bild != blank">
+    {% if section.settings.image_promo_1_bild %}
 {{ section.settings.image_promo_1_bild | image_url: width: 500 | image_tag: loading: 'lazy', class: 'coll_promo-card_image' }}
 {% else %}
 <img src="{{ 'placeholder.svg' | asset_url }}" loading="lazy" alt="" class="coll_promo-card_image">
+{% endif %}    </span>
 {% endif %}</div></div></div>        {% endif %}
     </div>
                             <div li-if:inside="forloop.index == section.settings.promo2_position" style="display:contents" inside="1">
         {% if forloop.index == section.settings.promo2_position %}
             <div class="coll_grid-item coll_promo-card" style="background-color: {{ section.settings.promo2_bg }};"><div class="coll_promo-card_inner"><div class="coll_promo-card_content"><h3 class="coll_promo-card_title">
 {{ section.settings.text_promo_2_headline }}
-</h3><p class="coll_promo-card_desc text-size-regular"> {{ section.settings.textarea_promo_2_text }} </p><a href="{{ section.settings.url_promo_2_link }}" class="coll_promo-card_cta w-button"> <span>{{ section.settings.text_promo_2_button }}</span> </a></div><div class="coll_promo-card_media">{% if section.settings.image_promo_2_bild %}
+</h3>{% if section.settings.textarea_promo_2_text != blank %}    <div class="li-guard" li-if="section.settings.textarea_promo_2_text != blank">
+    <p class="coll_promo-card_desc text-size-regular"> {{ section.settings.textarea_promo_2_text }} </p>    </div>
+{% endif %}{% if section.settings.text_promo_2_button != blank %}    <span class="li-guard" li-if="section.settings.text_promo_2_button != blank">
+    <a href="{{ section.settings.url_promo_2_link }}" class="coll_promo-card_cta w-button"> <span>{{ section.settings.text_promo_2_button }}</span> </a>    </span>
+{% endif %}</div><div class="coll_promo-card_media">{% if section.settings.image_promo_2_bild != blank %}    <span class="li-guard" li-if="section.settings.image_promo_2_bild != blank">
+    {% if section.settings.image_promo_2_bild %}
 {{ section.settings.image_promo_2_bild | image_url: width: 500 | image_tag: loading: 'lazy', class: 'coll_promo-card_image' }}
 {% else %}
 <img src="{{ 'placeholder.svg' | asset_url }}" loading="lazy" alt="" class="coll_promo-card_image">
+{% endif %}    </span>
 {% endif %}</div></div></div>        {% endif %}
     </div>
                     {% endfor %}    </div>{% if collection.products == blank %}    <div li-if="collection.products == blank" class="coll_empty">

@@ -1,4 +1,4 @@
-<div class="padding-global padding-section-small"><div class="container-large"><div class="acc-default_wrapper"><div li-cf-theme-blocks="" class="acc-double">
+<div class="padding-global padding-section-small" style="padding-top: {{ section.settings.padding_top }}rem; padding-bottom: {{ section.settings.padding_bottom }}rem"><div class="container-large"><div class="acc-default_wrapper"><div li-cf-theme-blocks="" class="acc-double">
 {% content_for 'blocks' %}
 </div></div></div></div> {% schema %} {
     "tag": "section",
@@ -10,6 +10,32 @@
         },
         {
             "type": "@app"
+        }
+    ],
+    "settings": [
+        {
+            "type": "header",
+            "content": "Abst\u00e4nde"
+        },
+        {
+            "type": "range",
+            "id": "padding_top",
+            "min": 0,
+            "max": 12,
+            "step": 0.5,
+            "unit": "rem",
+            "label": "Abstand oben",
+            "default": 4
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom",
+            "min": 0,
+            "max": 12,
+            "step": 0.5,
+            "unit": "rem",
+            "label": "Abstand unten",
+            "default": 4
         }
     ],
     "presets": [

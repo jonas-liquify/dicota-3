@@ -3,15 +3,19 @@
     {% render 'icon_chevron_down' %}    </div>
 {% endif %}</div>{% if link.links.size > 0 %}    <nav x-show="open" x-cloak="" li-if="link.links.size > 0" class="nav_secondary-content is-subnav">
     <div class="container-large"><div class="subnav_dropdown-list">{% for child_link in link.links %}    <div li-for="child_link in link.links" class="subnav_dropdown-item">
-                                    <a li-object:href="child_link.url" href="{{ child_link.url }}" class="subnav_dropdown-link w-inline-block"><div li-object="child_link.title" class="text-size-regular text-weight-medium">{{ child_link.title }}</div><div class="text-size-small">
+                                    <a li-object:href="child_link.url" href="{{ child_link.url }}" class="subnav_dropdown-link w-inline-block"><div li-object="child_link.title" class="text-size-regular text-weight-medium">{{ child_link.title }}</div>{% if section.settings.text_dummy_description != blank %}    <div class="li-guard" li-if="section.settings.text_dummy_description != blank">
+    <div class="text-size-small">
 {{ section.settings.text_dummy_description }}
-</div></a>
+</div>    </div>
+{% endif %}</a>
                         </div>
 {% endfor %}</div></div>    </nav>
 {% endif %}</div>
-                            <div class="subnav_points"><div class="text-size-small">
+                            <div class="subnav_points">{% if section.settings.text_punkte_label != blank %}    <div class="li-guard" li-if="section.settings.text_punkte_label != blank">
+    <div class="text-size-small">
 {{ section.settings.text_punkte_label }}
-</div><div class="text-size-small text-color-blue text-weight-medium"><span li-object="customer.metafields.custom.points | default: '0'">{{ customer.metafields.custom.points | default: '0' }}</span>P</div></div>
+</div>    </div>
+{% endif %}<div class="text-size-small text-color-blue text-weight-medium"><span li-object="customer.metafields.custom.points | default: '0'">{{ customer.metafields.custom.points | default: '0' }}</span>P</div></div>
                     {% endfor %}    </div></nav></div></div> {% schema %} {
     "tag": "section",
     "name": "B2B Subnav",

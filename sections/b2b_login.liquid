@@ -1,12 +1,14 @@
-<div class="split-image_content-wrapper is-right-image"><div class="default-flex-small"><div class="text-style-subline">
+<div class="split-image_content-wrapper is-right-image" style="padding-top: {{ section.settings.padding_top }}rem; padding-bottom: {{ section.settings.padding_bottom }}rem"><div class="default-flex-small"><div class="text-style-subline">
 {{ section.settings.text_subline }}
 </div><h1 class="heading-style-h1">
 {{ section.settings.text_heading }}
-</h1><div class="text-size-regular"> {{ section.settings.textarea_text }} </div></div><div class="button-group margin-top margin-small"><a href="{{ section.settings.url_login_link }}" class="button is-white w-button"> <span>{{ section.settings.text_button_text }}</span> </a></div></div><div class="split-image_image-block">{% if section.settings.image_bild %}
+</h1><div class="text-size-regular"> {{ section.settings.textarea_text }} </div></div><div class="button-group margin-top margin-small"><a href="{{ section.settings.url_login_link }}" class="button is-white w-button"> <span>{{ section.settings.text_button_text }}</span> </a></div></div>{% if section.settings.image_bild != blank %}    <div li-if="section.settings.image_bild != blank" class="split-image_image-block">
+    {% if section.settings.image_bild %}
 {{ section.settings.image_bild | image_url: width: 1200 | image_tag: loading: 'lazy', class: 'split-image_image' }}
 {% else %}
 <img src="{{ 'platzhalter.svg' | asset_url }}" loading="lazy" alt="" class="split-image_image">
-{% endif %}</div> {% schema %} {
+{% endif %}    </div>
+{% endif %} {% schema %} {
     "tag": "section",
     "name": "B2B Login",
     "class": "section_split-image-right section_b2b-login background-color-primary",
@@ -44,6 +46,30 @@
             "id": "image_bild",
             "type": "image_picker",
             "label": "Bild"
+        },
+        {
+            "type": "header",
+            "content": "Abst\u00e4nde"
+        },
+        {
+            "type": "range",
+            "id": "padding_top",
+            "min": 0,
+            "max": 12,
+            "step": 0.5,
+            "unit": "rem",
+            "label": "Abstand oben",
+            "default": 4
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom",
+            "min": 0,
+            "max": 12,
+            "step": 0.5,
+            "unit": "rem",
+            "label": "Abstand unten",
+            "default": 4
         }
     ],
     "presets": [

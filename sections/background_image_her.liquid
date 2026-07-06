@@ -1,9 +1,11 @@
 <div class="padding-global padding-section-medium"><div class="container-large"><div class="default-flex-small"><h1 class="heading-style-h1">
 {{ section.settings.text_heading }}
-</h1><div class="text-size-medium"> {{ section.settings.textarea_text }} </div></div></div></div><div class="default-bg-wrapper">{% if section.settings.image_hintergrundbild %}
+</h1><div class="text-size-medium"> {{ section.settings.textarea_text }} </div></div></div></div><div class="default-bg-wrapper">{% if section.settings.image_hintergrundbild != blank %}    <span class="li-guard" li-if="section.settings.image_hintergrundbild != blank">
+    {% if section.settings.image_hintergrundbild %}
 {{ section.settings.image_hintergrundbild | image_url: width: 2000 | image_tag: loading: 'lazy', class: 'default-bg-image' }}
 {% else %}
 <img src="{{ 'platzhalter.svg' | asset_url }}" loading="lazy" alt="" class="default-bg-image">
+{% endif %}    </span>
 {% endif %}<div class="default-bg-overlay"></div></div> {% schema %} {
     "tag": "section",
     "name": "Background Image Her",
