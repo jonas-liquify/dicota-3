@@ -355,6 +355,7 @@
     },
     "attach_headline": {
       "type": "section_headline",
+      "disabled": true,
       "settings": {
         "text_vortitel": "Attach-Portfolio",
         "text_uberschrift": "Mehrwert im Warenkorb",
@@ -420,6 +421,7 @@
         "b3",
         "b4"
       ],
+      "disabled": true,
       "settings": {}
     },
     "team_grid_GihKc3": {
@@ -445,7 +447,7 @@
         "text_karte_3_heading": "Adapter & Connectivity",
         "textarea_karte_3_text": "USB-C hubs, HDMI adaptors, multi-port solutions – these items are always in demand, but rarely ordered proactively. They often end up being bought as a last-minute purchase in shops or on online platforms when an employee realises, during their first meeting whilst working from home, that they don’t have the right connector. By including these items in your standard product range, you can fill this gap – and significantly increase the average order value.",
         "url_button_link": "",
-        "text_button_text": "More about us",
+        "text_button_text": "",
         "padding_top": 80,
         "padding_bottom": 80
       }
@@ -489,6 +491,7 @@
     },
     "conversation": {
       "type": "image_text",
+      "disabled": true,
       "settings": {
         "text_heading": "So führen Sie das Run-Rate-Gespräch",
         "textarea_text": "Das Run-Rate-Gespräch funktioniert am besten als Prozess-Gespräch, nicht als Produktgespräch. Der Einstieg: den aktuellen Beschaffungsprozess des Kunden verstehen. Beschreibt der Kunde einen dezentralen oder chaotischen Prozess – und das tun die meisten – ist der Weg zur Lösung direkt: ein zentraler Warenkorb mit definierten Artikeln, festen Preisen und einem einzigen Ansprechpartner.",
@@ -531,6 +534,7 @@
     },
     "cta": {
       "type": "discover_banner",
+      "disabled": true,
       "settings": {
         "text_heading": "Mehr Planbarkeit. Weniger Aufwand. Höhere Kundenzufriedenheit.",
         "textarea_text": "DICOTA macht Run-Rate-Supply einfach.",
