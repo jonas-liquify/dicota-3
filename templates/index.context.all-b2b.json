@@ -113,8 +113,8 @@
         "url_button_link": "",
         "text_button_text": "Learn more",
         "header-9a74bd3b6bf03dd73659e1a00e2b9c0e": null,
-        "padding_top": 40,
-        "padding_bottom": 60,
+        "padding_top": 2.5,
+        "padding_bottom": 4,
         "header-a70a634049c2424a5e47d416c01069ec": null,
         "bg_color": "#f6f6f6"
       },

@@ -87,8 +87,8 @@
         "text_cta_button_text": "Start ordering",
         "breadcrumb_parent_label": "Solutions",
         "breadcrumb_parent_link": "",
-        "padding_top": 60,
-        "padding_bottom": 60
+        "padding_top": 4,
+        "padding_bottom": 4
       }
     },
     "b2b_key_selling_argu_zHN3nH": {
@@ -122,8 +122,8 @@
         "text_subline": "Why DICOTA for B2B",
         "text_heading": "Key selling arguments",
         "textarea_text": "The most compelling reasons for resellers and end customers to choose DICOTA — ready to use in your sales conversations.",
-        "padding_top": 80,
-        "padding_bottom": 80
+        "padding_top": 5,
+        "padding_bottom": 5
       }
     },
     "b2b_mkt_trainings_dXHC8A": {

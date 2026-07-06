@@ -221,8 +221,8 @@
         "textarea_text": "(Placeholder) Since 1992, more than 12 million PET bottles have been processed to minimize waste - DCT (DICOTA Cushion Technology) is a structured cushioning system that absorbs impacts, knocks and pressure from various angles.",
         "url_button_link": "",
         "text_button_text": "Learn more",
-        "padding_top": 40,
-        "padding_bottom": 60,
+        "padding_top": 2.5,
+        "padding_bottom": 4,
         "bg_color": "#f6f6f6"
       }
     },
@@ -306,8 +306,8 @@
       "settings": {
         "text_titel_fett": "Not enough yet?",
         "text_titel_normal": "More news hot off the press",
-        "padding_top": 40,
-        "padding_bottom": 60,
+        "padding_top": 2.5,
+        "padding_bottom": 4,
         "bg_color": "#f6f6f6"
       }
     },
@@ -340,8 +340,8 @@
         "textarea_success_text": "Thank you. Our inside sales team will process your free sample request and get back to you shortly.",
         "text_restart_button": "Order more samples",
         "url_sample_hook": "",
-        "padding_top": 60,
-        "padding_bottom": 60
+        "padding_top": 4,
+        "padding_bottom": 4
       }
     },
     "b2b_produkt_download_CQ4mYY": {
@@ -351,8 +351,8 @@
         "text_heading": "Product downloads",
         "richtext_text": "<p>Search any DICOTA product by SKU or product title and download the document directly.</p>",
         "download_source": "product_leaflet",
-        "padding_top": 40,
-        "padding_bottom": 80
+        "padding_top": 2.5,
+        "padding_bottom": 5
       }
     },
     "b2b_sales_distributo_cVrGJF": {
@@ -614,8 +614,8 @@
         "text_cta_button_text": "Start ordering",
         "breadcrumb_parent_label": "Solutions",
         "breadcrumb_parent_link": "",
-        "padding_top": 60,
-        "padding_bottom": 60
+        "padding_top": 4,
+        "padding_bottom": 4
       }
     },
     "b2b_tpl_banner_1x_QimzAt": {
@@ -710,8 +710,8 @@
       "settings": {
         "text_heading": "What would you like to achieve?",
         "textarea_text": "Pick an area and put your DICOTA points to good use.",
-        "padding_top": 80,
-        "padding_bottom": 80
+        "padding_top": 5,
+        "padding_bottom": 5
       }
     },
     "b2b_tpl_distri_tabs_TDyD7Y": {
