@@ -22,8 +22,8 @@
       "settings": {
         "text_heading": "Run Rate Supply",
         "textarea_text": "DICOTA ist der ideale Partner für das wiederkehrende Grosskundengeschäft: breites Topseller-Portfolio, dauerhaft hohe Verfügbarkeit und eine klare SKU-Struktur schaffen planbare Umsätze und hohe Kundenbindung.",
-        "url_button_link": "shopify://pages/b2b-get-a-quote",
-        "text_button_text": "Offertes Gespräch vereinbaren",
+        "url_button_link": "shopify://pages/contact",
+        "text_button_text": "Gespräch vereinbaren",
         "padding_top": 80,
         "padding_bottom": 40
       }
