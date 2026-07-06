@@ -220,28 +220,6 @@
     },
     "add_to_your_kit": {
       "type": "add_to_your_kit",
-      "blocks": {
-        "produkt_LMTqbg": {
-          "type": "produkt",
-          "name": "Produkt",
-          "settings": {
-            "product": ""
-          },
-          "blocks": {}
-        },
-        "produkt": {
-          "type": "produkt",
-          "name": "Produkt",
-          "settings": {
-            "product": "10-in-1-docking-station-8k-tb4-hdmi-pd-96w-ch"
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "produkt_LMTqbg",
-        "produkt"
-      ],
       "settings": {
         "text_uberschrift": "Add to Your Kit",
         "text_tab_1_label": "Screen Filters",
