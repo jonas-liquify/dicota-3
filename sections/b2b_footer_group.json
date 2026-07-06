@@ -1,1 +1,43 @@
-{"type":"footer","name":"B2B Footer Group","sections":{"footer_newsletter":{"type":"footer_newsletter","settings":{}},"footer_bottom":{"type":"footer_bottom","settings":{}}},"order":["footer_newsletter","footer_bottom"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "footer",
+  "name": "B2B Footer Group",
+  "sections": {
+    "footer_newsletter": {
+      "type": "footer_newsletter",
+      "disabled": true,
+      "settings": {
+        "url_promo_1_link": "",
+        "text_promo_1_text": "Tell a friend + get 10%",
+        "url_promo_2_link": "",
+        "text_promo_2_text": "Earn 10 EUR Store Credit",
+        "text_headline": "Get free products &amp; exclusive rewards",
+        "textarea_subtext": "Collect Dicota points and redeem them for exclusive rewards",
+        "url_button_link": "",
+        "text_button_text": "Sign up now",
+        "show_form": false,
+        "placeholder_text": "Deine E-Mail-Adresse",
+        "footer_menu": "footer"
+      }
+    },
+    "footer_bottom": {
+      "type": "footer_bottom",
+      "settings": {
+        "text_copyright": "©2026 DCT Group AG",
+        "legal_menu": "footer"
+      }
+    }
+  },
+  "order": [
+    "footer_newsletter",
+    "footer_bottom"
+  ]
+}

@@ -157,6 +157,51 @@
         "padding_bottom": 4
       }
     },
+    "value_tabs_kmVq6P": {
+      "type": "value_tabs",
+      "blocks": {
+        "tab_XbJNht": {
+          "type": "tab",
+          "name": "Tab",
+          "settings": {
+            "text_tab_label": "Availability",
+            "text_tab_heading": "Availability as Promise",
+            "textarea_tab_text": "In the key account business, delivery reliability is not an option, but a fundamental requirement. If an IT manager rolls out 200 laptops and realises three days later that the cases are not available, this is not just a logistical problem – it undermines trust in the entire supply chain. DICOTA keeps its 50 top-selling products in stock at all times and guarantees short delivery times, even for larger quantities.<br><br>\nFor retailers, this means they can make binding commitments to their major clients – and actually keep them. That is the difference between a supplier and a partner."
+          },
+          "blocks": {}
+        },
+        "tab_D6RLzK": {
+          "type": "tab",
+          "name": "Tab",
+          "settings": {
+            "text_tab_label": "Trust",
+            "text_tab_heading": "Trust",
+            "textarea_tab_text": "We build on long-term relationships — with customers, partners and colleagues alike."
+          },
+          "blocks": {}
+        },
+        "tab_DpVWWY": {
+          "type": "tab",
+          "settings": {
+            "text_tab_label": "Trust",
+            "text_tab_heading": "Trust",
+            "textarea_tab_text": "We build on long-term relationships — with customers, partners and colleagues alike."
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "tab_XbJNht",
+        "tab_D6RLzK",
+        "tab_DpVWWY"
+      ],
+      "name": "Value Tabs",
+      "settings": {
+        "text_heading": "Ihr Vorteil im Run-Rate-Geschäft",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
     "quote1": {
       "type": "testimonials",
       "blocks": {
@@ -452,60 +497,6 @@
         "padding_bottom": 80
       }
     },
-    "b2b_key_selling_argu_e83Mdk": {
-      "type": "b2b_key_selling_argu",
-      "blocks": {
-        "argument_mxwkRG": {
-          "type": "argument",
-          "settings": {
-            "text_heading": "Prozessreduktion",
-            "textarea_text": "Ein Lieferant, eine Bestellung, eine Rechnung statt zehn verschiedene Quellen."
-          },
-          "blocks": {}
-        },
-        "argument_UPepzU": {
-          "type": "argument",
-          "name": "Argument",
-          "settings": {
-            "text_heading": "Cost Transparency",
-            "textarea_text": "Feste Preise im Rahmenvertrag machen das Jahresbudget kalkulierbar."
-          },
-          "blocks": {}
-        },
-        "argument_gkAUim": {
-          "type": "argument",
-          "name": "Argument",
-          "settings": {
-            "text_heading": "Liefersicherheit",
-            "textarea_text": "Topseller dauerhaft verfügbar – kein Engpass beim nächsten Rollout."
-          },
-          "blocks": {}
-        },
-        "argument_tUg3Jf": {
-          "type": "argument",
-          "name": "Argument",
-          "settings": {
-            "text_heading": "Compliance",
-            "textarea_text": "Alle DICOTA-Produkte mit vollständiger Dokumentation – kein Aufwand bei internen Audits."
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "argument_mxwkRG",
-        "argument_UPepzU",
-        "argument_gkAUim",
-        "argument_tUg3Jf"
-      ],
-      "name": "B2B Key Selling Argu",
-      "settings": {
-        "text_subline": "Why DICOTA for B2B",
-        "text_heading": "Kernargumente für den IT-Einkäufer",
-        "textarea_text": "The most compelling reasons for resellers and end customers to choose DICOTA — ready to use in your sales conversations.",
-        "padding_top": 4,
-        "padding_bottom": 4
-      }
-    },
     "benefits_grid_r4nLgh": {
       "type": "benefits_grid",
       "blocks": {
@@ -569,6 +560,7 @@
     "b2b_key_selling_argu_hWeGLL",
     "backbone",
     "b2b_solution_fQqwVw",
+    "value_tabs_kmVq6P",
     "quote1",
     "advantages",
     "target_groups",
@@ -578,7 +570,6 @@
     "quote2",
     "cta",
     "owner_spotlight_idR8mL",
-    "b2b_key_selling_argu_e83Mdk",
     "benefits_grid_r4nLgh"
   ],
   "layout": "b2b",
