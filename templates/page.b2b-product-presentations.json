@@ -255,12 +255,28 @@
         "text_uberschrift": "Product Presentations",
         "textarea_einleitung": "Download our latest product presentations as PDF or PPT — available in mostly in multiple languages."
       }
+    },
+    "product_breadcrumb_xNRMfe": {
+      "type": "product_breadcrumb",
+      "name": "Product Breadcrumb",
+      "settings": {
+        "text_home_label": "Home",
+        "text_kollektionen_label": "Collections",
+        "text_suche_label": "Search",
+        "text_warenkorb_label": "Cart",
+        "text_404_label": "Page not found",
+        "padding_top": 8,
+        "padding_bottom": 8,
+        "bg_color": "#ffffff",
+        "text_color": "#0f0f0f"
+      }
     }
   },
   "layout": "b2b",
   "wrapper": "main.main-wrapper",
   "order": [
     "b2b_subnav",
+    "product_breadcrumb_xNRMfe",
     "b2b_mkt_presentation"
   ]
 }
