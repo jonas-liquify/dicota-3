@@ -37,6 +37,7 @@
     },
     "backbone": {
       "type": "image_text",
+      "disabled": true,
       "settings": {
         "text_heading": "Das Rückgrat Ihres Reseller-Geschäfts",
         "textarea_text": "Das Rückgrat jedes erfolgreichen Reseller-Geschäfts ist das wiederkehrende Geschäft mit Grosskunden. Projekte kommen und gehen – aber der laufende Bedarf an Schutz, Connectivity und Zubehör bleibt konstant. Wer hier als zuverlässiger Lieferant positioniert ist, profitiert von planbaren Umsätzen, niedrigen Akquisekosten und hoher Kundenbindung.<br><br>DICOTA ist als Zubehöranbieter optimal für dieses Segment positioniert: breites Topseller-Portfolio, dauerhaft hohe Lagerverfügbarkeit und eine klare SKU-Struktur, die sich einfach in bestehende ERP- und Einkaufssysteme integrieren lässt.",
@@ -104,8 +105,9 @@
       "block_order": [
         "t1"
       ],
+      "disabled": true,
       "settings": {
-        "text_uberschrift": "What our customers say",
+        "text_uberschrift": "Was das Geschäftsmodell ausmacht",
         "text_bewertung_zahl": "4,83",
         "text_bewertung_label": "Excellent",
         "text_anzahl_bewertungen": "17,982 reviews",
@@ -128,7 +130,7 @@
                 "text_heading": "Verfügbarkeit als Versprechen",
                 "textarea_text": "DICOTA hält die wichtigsten 50 Topseller dauerhaft auf Lager und garantiert kurze Lieferzeiten auch bei grösseren Mengen – verbindliche Zusagen, die Sie einhalten können.",
                 "url_button_link": "",
-                "text_button_text": "Learn more"
+                "text_button_text": ""
               },
               "blocks": {}
             },
@@ -138,7 +140,7 @@
                 "text_heading": "Planbarkeit durch Rahmenverträge",
                 "textarea_text": "Rahmenverträge mit definierten Produkten, Preisen und Abrufmengen. Laufzeiten von 12 bis 36 Monaten schaffen Sicherheit – bei flexibel steuerbaren Abrufmengen.",
                 "url_button_link": "",
-                "text_button_text": "Learn more"
+                "text_button_text": ""
               },
               "blocks": {}
             },
@@ -148,7 +150,7 @@
                 "text_heading": "Einfache Abwicklung",
                 "textarea_text": "Wenige, klar definierte SKUs, eine saubere Preisliste und ein eingespielter Bestellprozess reduzieren den administrativen Aufwand auf ein Minimum.",
                 "url_button_link": "",
-                "text_button_text": "Learn more"
+                "text_button_text": ""
               },
               "blocks": {}
             },
@@ -158,7 +160,7 @@
                 "text_heading": "Attach-Portfolio – Marge ohne Mehraufwand",
                 "textarea_text": "Das eigentliche Margenpotenzial liegt im Attach. In den Bestellprozess integriert, laufen Zubehörartikel automatisch mit – ohne Neuverhandlung.",
                 "url_button_link": "",
-                "text_button_text": "Learn more"
+                "text_button_text": ""
               },
               "blocks": {}
             }
@@ -182,7 +184,7 @@
         "text_heading": "Ihr Vorteil im Run-Rate-Geschäft",
         "textarea_text": "We combine Swiss quality, thoughtful design and sustainability in every detail.",
         "url_button_link": "",
-        "text_button_text": "Our values",
+        "text_button_text": "",
         "padding_top": 80,
         "padding_bottom": 80
       }
