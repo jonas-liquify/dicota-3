@@ -101,8 +101,8 @@
         "text_anzahl_bewertungen": "17,982 reviews",
         "url_provider_link": "",
         "alignment": "center",
-        "padding_top": 1.5,
-        "padding_bottom": 1.5,
+        "padding_top": 24,
+        "padding_bottom": 24,
         "bg_color": "#ffffff",
         "text_color": "#0f0f0f",
         "stars_color": "#fd6612"
@@ -114,8 +114,8 @@
         "text_vortitel": "[DI:CO:TA]",
         "text_uberschrift": "Die Computer Tasche",
         "textarea_beschreibung": "Taschen gibt es wie Sand am Meer. Taschen mit Laptopfach ebenso. Aber wirkliche Computer Taschen, die gibt es nur bei Dicota.",
-        "padding_top": 5,
-        "padding_bottom": 2.5,
+        "padding_top": 80,
+        "padding_bottom": 40,
         "text_align": "center",
         "bg_color": "#ffffff",
         "text_color": "#0f0f0f"
@@ -130,8 +130,8 @@
         "collection_kollektion": "backpacks",
         "collection_kollektion_limit": 6,
         "show_view_all": true,
-        "padding_top": 2.5,
-        "padding_bottom": 5,
+        "padding_top": 40,
+        "padding_bottom": 80,
         "bg_color": "#ffffff",
         "text_color": "#0f0f0f"
       }
@@ -183,8 +183,8 @@
         "usp_block_cziYXN"
       ],
       "settings": {
-        "padding_top": 4,
-        "padding_bottom": 7.5,
+        "padding_top": 60,
+        "padding_bottom": 120,
         "bg_color": "#ffffff",
         "text_color": "#0f0f0f"
       }
@@ -280,8 +280,8 @@
       ],
       "settings": {
         "text_uberschrift": "Shop by Category",
-        "padding_top": 4,
-        "padding_bottom": 4,
+        "padding_top": 60,
+        "padding_bottom": 60,
         "bg_color": "#ffffff",
         "text_color": "#0f0f0f"
       }
@@ -353,8 +353,8 @@
       ],
       "settings": {
         "text_uberschrift": "Zubehör & Accessories",
-        "padding_top": 4,
-        "padding_bottom": 4,
+        "padding_top": 60,
+        "padding_bottom": 60,
         "bg_color": "#ffffff",
         "text_color": "#0f0f0f"
       }
@@ -485,8 +485,8 @@
         "image_header_bild": "shopify://shop_images/3_MT_Urban.webp",
         "text_uberschrift": "Loved by 350.000 Customers DACH",
         "text_bewertungstext": "4,9/5.0 Sterne bei 80.000+ Bewertungen",
-        "padding_top": 4,
-        "padding_bottom": 4,
+        "padding_top": 60,
+        "padding_bottom": 60,
         "bg_color": "#ffffff"
       }
     },
@@ -547,8 +547,8 @@
         "text_bewertung_zahl": "4,83",
         "text_bewertung_label": "Hervorragend",
         "text_anzahl_bewertungen": "17 982 Bewertungen",
-        "padding_top": 5,
-        "padding_bottom": 5,
+        "padding_top": 80,
+        "padding_bottom": 80,
         "show_rating": true
       }
     },
@@ -558,8 +558,8 @@
       "settings": {
         "text_heading": "Frequently asked questions",
         "textarea_text": "If you have questions about applying, the selection process or getting started — we have answers.",
-        "padding_top": 5,
-        "padding_bottom": 5,
+        "padding_top": 80,
+        "padding_bottom": 80,
         "faq_set": "",
         "faq_entries": [
           "can-i-remove-the-privacy-filter-when-i-dont-need-it",
@@ -567,6 +567,34 @@
           "does_the_privacy_filter_support_touchscreen_devices",
           "how-does-a-dicota-privacy-filter-protect-my-screen-1"
         ]
+      }
+    },
+    "team_grid_4a6jiw": {
+      "type": "team_grid",
+      "blocks": {
+        "team_slide_HzxGjA": {
+          "type": "team-slide",
+          "settings": {},
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "team_slide_HzxGjA"
+      ],
+      "name": "Team Grid",
+      "settings": {
+        "text_heading": "The team behind DICOTA",
+        "textarea_text": "Over 100 colleagues worldwide share the passion to better equip mobile professionals. Get to know them.",
+        "text_karte_1_heading": "Diversity",
+        "textarea_karte_1_text": "Different backgrounds make us stronger — together we think further.",
+        "text_karte_2_heading": "Responsibility",
+        "textarea_karte_2_text": "We hand over responsibility early — and stand behind our decisions.",
+        "text_karte_3_heading": "Growth",
+        "textarea_karte_3_text": "Personal and professional development is part of everyday life here.",
+        "url_button_link": "",
+        "text_button_text": "More about us",
+        "padding_top": 80,
+        "padding_bottom": 80
       }
     }
   },
@@ -586,6 +614,7 @@
     "loved_by_customers",
     "sustainability_banne",
     "testimonials",
-    "faq_accordion_6xnCFe"
+    "faq_accordion_6xnCFe",
+    "team_grid_4a6jiw"
   ]
 }
