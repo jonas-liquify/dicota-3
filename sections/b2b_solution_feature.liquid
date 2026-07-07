@@ -1,0 +1,73 @@
+<div class="padding-global padding-section-small" style="padding-top: {{ section.settings.padding_top }}rem; padding-bottom: {{ section.settings.padding_bottom }}rem;"><div class="container-large"><div class="acc-default_wrapper"><div class="sol-feature"><div class="sol-feature_media">{% if section.settings.image_feature_bild != blank %}    <span class="li-guard" li-if="section.settings.image_feature_bild != blank">
+    {% if section.settings.image_feature_bild %}
+{{ section.settings.image_feature_bild | image_url: width: 1200 | image_tag: loading: 'lazy', class: 'sol-feature_image' }}
+{% else %}
+<img src="{{ 'platzhalter.svg' | asset_url }}" loading="lazy" alt="" class="sol-feature_image">
+{% endif %}    </span>
+{% endif %}</div><div class="sol-feature_content">{% if section.settings.text_feature_subline != blank %}    <div class="li-guard" li-if="section.settings.text_feature_subline != blank">
+    <div class="text-style-subline">
+{{ section.settings.text_feature_subline }}
+</div>    </div>
+{% endif %}<h2 class="heading-style-h3">
+{{ section.settings.text_feature_heading }}
+</h2><div class="text-size-regular"> {{ section.settings.textarea_feature_text }} </div></div></div></div></div></div> {% schema %} {
+    "tag": "section",
+    "name": "B2B Solution Feature",
+    "class": "section_acc-default",
+    "settings": [
+        {
+            "id": "image_feature_bild",
+            "type": "image_picker",
+            "label": "Feature Bild"
+        },
+        {
+            "id": "text_feature_subline",
+            "type": "text",
+            "label": "Feature Subline",
+            "default": "Why DICOTA"
+        },
+        {
+            "id": "text_feature_heading",
+            "type": "text",
+            "label": "Feature Heading",
+            "default": "Your everyday IT accessory partner"
+        },
+        {
+            "id": "textarea_feature_text",
+            "type": "textarea",
+            "label": "Feature Text",
+            "default": "Ideal partner for daily IT accessory business: 1,000+ products, fast availability from a European warehouse, 2\u20133 day delivery, no MOQ, strong reseller margins, high product quality, online ordering and dedicated customer support."
+        },
+        {
+            "type": "header",
+            "content": "Abst\u00e4nde"
+        },
+        {
+            "type": "range",
+            "id": "padding_top",
+            "min": 0,
+            "max": 12,
+            "step": 0.5,
+            "unit": "rem",
+            "label": "Abstand oben",
+            "default": 2
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom",
+            "min": 0,
+            "max": 12,
+            "step": 0.5,
+            "unit": "rem",
+            "label": "Abstand unten",
+            "default": 2
+        }
+    ],
+    "presets": [
+        {
+            "name": "B2B Solution Feature",
+            "category": "_B2B",
+            "blocks": []
+        }
+    ]
+} {% endschema %}

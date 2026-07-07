@@ -1,0 +1,64 @@
+<div class="padding-global padding-section-medium" style="padding-top: {{ section.settings.padding_top }}rem; padding-bottom: {{ section.settings.padding_bottom }}rem;"><div class="container-large"><div class="rich-text_wrapper{% if section.settings.width == 'full' %} is-full{% endif %}"><div class="text-rich-text w-richtext"> {{ section.settings.richtext_inhalt }} </div></div></div></div> {% schema %} {
+    "tag": "section",
+    "name": "Rich Text",
+    "class": "section_rich-text",
+    "settings": [
+        {
+            "id": "richtext_inhalt",
+            "type": "richtext",
+            "label": "Inhalt",
+            "default": "<p>\u00dcberschriftHier l\u00e4sst sich v\u00f6llig frei formatierter Text einf\u00fcgen \u2014 \u00dcberschriften, Abs\u00e4tze, Listen, Links und mehr. Doppelklicken und direkt loslegen.<\/p>"
+        },
+        {
+            "type": "header",
+            "content": "Layout"
+        },
+        {
+            "type": "select",
+            "id": "width",
+            "label": "Breite",
+            "options": [
+                {
+                    "value": "narrow",
+                    "label": "Schmal (lesbar)"
+                },
+                {
+                    "value": "full",
+                    "label": "Volle Breite"
+                }
+            ],
+            "default": "narrow"
+        },
+        {
+            "type": "header",
+            "content": "Abst\u00e4nde"
+        },
+        {
+            "type": "range",
+            "id": "padding_top",
+            "min": 0,
+            "max": 12,
+            "step": 0.5,
+            "unit": "rem",
+            "label": "Abstand oben",
+            "default": 4
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom",
+            "min": 0,
+            "max": 12,
+            "step": 0.5,
+            "unit": "rem",
+            "label": "Abstand unten",
+            "default": 4
+        }
+    ],
+    "presets": [
+        {
+            "name": "Rich Text",
+            "category": "Content",
+            "blocks": []
+        }
+    ]
+} {% endschema %}

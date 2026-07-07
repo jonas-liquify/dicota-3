@@ -1,16 +1,10 @@
-<div class="boxed-image_wrapper{% if section.settings.layout == 'contained' %} is-contained{% else %} is-full{% endif %}">{% if section.settings.layout != 'contained' %}    <div li-if="section.settings.layout != 'contained'" class="boxed-image_bg-container">
-    <div class="boxed-image_image-wrapper">{% if section.settings.image_image_full %}
-{{ section.settings.image_image_full | image_url: width: 1600 | image_tag: class: 'boxed-image_image', loading: 'lazy' }}
+{% if section.settings.image_image_full != blank %}    <span class="li-guard" li-if="section.settings.image_image_full != blank">
+    {% if section.settings.image_image_full %}
+{{ section.settings.image_image_full | image_url: width: 2000 | image_tag: class: 'boxed-image_image', loading: 'lazy' }}
 {% else %}
 <img class="boxed-image_image" src="{{ 'platzhalter.svg' | asset_url }}" alt="" loading="lazy">
-{% endif %}</div>    </div>
-{% endif %}{% if section.settings.layout == 'contained' %}    <div li-if="section.settings.layout == 'contained'" class="padding-global">
-    <div class="container-large">{% if section.settings.image_image_zentriert %}
-{{ section.settings.image_image_zentriert | image_url: width: 1400 | image_tag: class: 'boxed-image_image-centerd', loading: 'lazy' }}
-{% else %}
-<img class="boxed-image_image-centerd" src="{{ 'platzhalter.svg' | asset_url }}" alt="" loading="lazy">
-{% endif %}</div>    </div>
-{% endif %}</div> {% schema %} {
+{% endif %}    </span>
+{% endif %} {% schema %} {
     "tag": "section",
     "name": "Boxed Image",
     "class": "section_boxed-image",
@@ -19,31 +13,6 @@
             "id": "image_image_full",
             "type": "image_picker",
             "label": "Image (Full)"
-        },
-        {
-            "id": "image_image_zentriert",
-            "type": "image_picker",
-            "label": "Image (Zentriert)"
-        },
-        {
-            "type": "header",
-            "content": "Layout"
-        },
-        {
-            "type": "select",
-            "id": "layout",
-            "label": "Layout",
-            "options": [
-                {
-                    "value": "full",
-                    "label": "Full-bleed (gro\u00dfe H\u00f6he, Bild als Hintergrund)"
-                },
-                {
-                    "value": "contained",
-                    "label": "Zentriert (mit Padding-Container)"
-                }
-            ],
-            "default": "full"
         }
     ],
     "presets": [

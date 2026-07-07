@@ -1,0 +1,62 @@
+<div class="padding-global padding-section-small" style="padding-top: {{ section.settings.padding_top }}rem; padding-bottom: {{ section.settings.padding_bottom }}rem"><div class="container-large"><div class="acc-default_wrapper"><div class="acc-default_flex-small"><div class="default-flex-tiny">{% if section.settings.text_subline != blank %}    <div class="li-guard" li-if="section.settings.text_subline != blank">
+    <div class="text-style-subline">
+{{ section.settings.text_subline }}
+</div>    </div>
+{% endif %}<h2 class="heading-style-h2">
+{{ section.settings.text_heading }}
+</h2><div class="text-size-medium max-width-large"> {{ section.settings.textarea_subheading }} </div></div></div></div></div></div> {% schema %} {
+    "tag": "section",
+    "name": "B2B Link Hub Header",
+    "class": "section_acc-default",
+    "settings": [
+        {
+            "id": "text_subline",
+            "type": "text",
+            "label": "Subline",
+            "default": "B2B Solutions"
+        },
+        {
+            "id": "text_heading",
+            "type": "text",
+            "label": "Heading",
+            "default": "Solutions for every business need"
+        },
+        {
+            "id": "textarea_subheading",
+            "type": "textarea",
+            "label": "Subheading",
+            "default": "DICOTA's services, expertise, and portfolio through clear B2B-focused storytelling \u2014 supported by facts, references, and concrete product offerings."
+        },
+        {
+            "type": "header",
+            "content": "Abst\u00e4nde"
+        },
+        {
+            "type": "range",
+            "id": "padding_top",
+            "min": 0,
+            "max": 12,
+            "step": 0.5,
+            "unit": "rem",
+            "label": "Abstand oben",
+            "default": 4
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom",
+            "min": 0,
+            "max": 12,
+            "step": 0.5,
+            "unit": "rem",
+            "label": "Abstand unten",
+            "default": 2
+        }
+    ],
+    "presets": [
+        {
+            "name": "B2B Link Hub Header",
+            "category": "_B2B",
+            "blocks": []
+        }
+    ]
+} {% endschema %}

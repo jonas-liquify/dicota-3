@@ -1,4 +1,4 @@
-<div class="padding-global blog-featured_padding" style="padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px;"><div class="container-large"><a li-object:href="blog.articles.first.url" href="{{ blog.articles.first.url }}" class="blog-featured_row w-inline-block"><div class="blog-featured_media"><img li-object:src="blog.articles.first.image | image_url: width: 1400" li-object:alt="blog.articles.first.image.alt" src="{{ blog.articles.first.image | image_url: width: 1400 }}" loading="eager" alt="{{ blog.articles.first.image.alt }}" class="blog-featured_image"></div><div class="blog-featured_panel"><div class="blog-featured_content"><div class="blog-featured_text"><div class="blog-featured_meta"><span li-object="blog.articles.first.tags.first">{{ blog.articles.first.tags.first }}</span><span class="blog-meta_dot">·</span><span li-object="blog.articles.first.published_at | date: '%-d. %B %Y'">{{ blog.articles.first.published_at | date: '%-d. %B %Y' }}</span></div><h2 li-object="blog.articles.first.title" class="blog-featured_title">{{ blog.articles.first.title }}</h2></div><p li-object="blog.articles.first.excerpt" class="blog-featured_excerpt text-size-medium">{{ blog.articles.first.excerpt }}</p></div><span class="button is-on-dark blog-featured_btn"><span>
+<div class="padding-global blog-featured_padding" style="padding-top: {{ section.settings.padding_top }}rem; padding-bottom: {{ section.settings.padding_bottom }}rem;"><div class="container-large"><a li-object:href="blog.articles.first.url" href="{{ blog.articles.first.url }}" class="blog-featured_row w-inline-block"><div class="blog-featured_media"><img li-object:src="blog.articles.first.image | image_url: width: 1400" li-object:alt="blog.articles.first.image.alt" src="{{ blog.articles.first.image | image_url: width: 1400 }}" loading="eager" alt="{{ blog.articles.first.image.alt }}" class="blog-featured_image"></div><div class="blog-featured_panel"><div class="blog-featured_content"><div class="blog-featured_text"><div class="blog-featured_meta"><span li-object="blog.articles.first.tags.first">{{ blog.articles.first.tags.first }}</span><span class="blog-meta_dot">·</span><span li-object="blog.articles.first.published_at | date: '%-d. %B %Y'">{{ blog.articles.first.published_at | date: '%-d. %B %Y' }}</span></div><h2 li-object="blog.articles.first.title" class="blog-featured_title">{{ blog.articles.first.title }}</h2></div><p li-object="blog.articles.first.excerpt" class="blog-featured_excerpt text-size-medium">{{ blog.articles.first.excerpt }}</p></div><span class="button is-on-dark blog-featured_btn"><span>
 {{ section.settings.text_button_text }}
 </span></span></div></a></div></div> {% schema %} {
     "tag": "section",
@@ -19,21 +19,21 @@
             "type": "range",
             "id": "padding_top",
             "min": 0,
-            "max": 160,
-            "step": 4,
-            "unit": "px",
+            "max": 12,
+            "step": 0.5,
+            "unit": "rem",
             "label": "Abstand oben",
-            "default": 60
+            "default": 4
         },
         {
             "type": "range",
             "id": "padding_bottom",
             "min": 0,
-            "max": 160,
-            "step": 4,
-            "unit": "px",
+            "max": 12,
+            "step": 0.5,
+            "unit": "rem",
             "label": "Abstand unten",
-            "default": 48
+            "default": 3
         }
     ],
     "presets": [

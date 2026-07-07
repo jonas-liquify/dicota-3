@@ -1,0 +1,75 @@
+<div class="padding-global padding-section-small" style="padding-top: {{ section.settings.padding_top }}rem; padding-bottom: {{ section.settings.padding_bottom }}rem;"><div class="container-large"><div class="acc-default_wrapper"><div class="acc-default_flex-small"><div class="default-flex-tiny">{% if section.settings.text_subline != blank %}    <div class="li-guard" li-if="section.settings.text_subline != blank">
+    <div class="text-style-subline">
+{{ section.settings.text_subline }}
+</div>    </div>
+{% endif %}<h1 class="heading-style-h2">
+{{ section.settings.text_heading_1 }}
+</h1><div class="text-size-medium max-width-large"> {{ section.settings.textarea_subheading_1 }} </div></div><div class="button-group margin-top margin-small">{% if section.settings.text_hero_button_text != blank %}    <span class="li-guard" li-if="section.settings.text_hero_button_text != blank">
+    <a href="{{ section.settings.url_hero_button_link }}" class="button w-button"> <span>{{ section.settings.text_hero_button_text }}</span> </a>    </span>
+{% endif %}</div></div></div></div></div> {% schema %} {
+    "tag": "section",
+    "name": "B2B Solution Header",
+    "class": "section_acc-default",
+    "settings": [
+        {
+            "id": "text_subline",
+            "type": "text",
+            "label": "Subline",
+            "default": "B2B Solutions"
+        },
+        {
+            "id": "text_heading_1",
+            "type": "text",
+            "label": "Heading 1",
+            "default": "Solution name"
+        },
+        {
+            "id": "textarea_subheading_1",
+            "type": "textarea",
+            "label": "Subheading 1",
+            "default": "Describe this B2B solution: the service, the value for the reseller, and what makes it work \u2014 supported by facts, references and concrete offerings."
+        },
+        {
+            "id": "url_hero_button_link",
+            "type": "url",
+            "label": "Hero Button Link"
+        },
+        {
+            "id": "text_hero_button_text",
+            "type": "text",
+            "label": "Hero Button Text",
+            "default": "Become a reseller"
+        },
+        {
+            "type": "header",
+            "content": "Abst\u00e4nde"
+        },
+        {
+            "type": "range",
+            "id": "padding_top",
+            "min": 0,
+            "max": 12,
+            "step": 0.5,
+            "unit": "rem",
+            "label": "Abstand oben",
+            "default": 4
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom",
+            "min": 0,
+            "max": 12,
+            "step": 0.5,
+            "unit": "rem",
+            "label": "Abstand unten",
+            "default": 2
+        }
+    ],
+    "presets": [
+        {
+            "name": "B2B Solution Header",
+            "category": "_B2B",
+            "blocks": []
+        }
+    ]
+} {% endschema %}
