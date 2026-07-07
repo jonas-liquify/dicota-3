@@ -40,7 +40,6 @@
       "blocks": {
         "argument_wR8PJz": {
           "type": "argument",
-          "disabled": true,
           "settings": {
             "text_heading": "1,000+ products in stock",
             "textarea_text": "A broad portfolio with fast availability and strong reseller margins."
@@ -54,7 +53,7 @@
       "name": "B2B Key Selling Argu",
       "settings": {
         "text_subline": "",
-        "text_heading": "Ausgangslage<br>& Marktchance",
+        "text_heading": "Ausgangslage& Marktchance",
         "textarea_text": "Das Rückgrat jedes erfolgreichen Reseller-Geschäfts ist das wiederkehrende Geschäft mit Grosskunden. Projekte kommen und gehen – aber der laufende Bedarf an Schutz, Connectivity und Zubehör bleibt konstant. Genau hier liegt die grösste Umsatzchance für Händler: Wer im Run-Rate-Geschäft als zuverlässiger Lieferant positioniert ist, profitiert von planbaren Umsätzen, niedrigen Akquisekosten und hoher Kundenbindung.\nDICOTA ist als Zubehöranbieter optimal für dieses Segment positioniert: breites Topseller-Portfolio, dauerhaft hohe Lagerverfügbarkeit und eine klare SKU-Struktur, die sich einfach in bestehende ERP- und Einkaufssysteme integrieren lässt. Für Händler bedeutet das: weniger Aufwand in der Abwicklung, mehr Zeit für den Kundenaufbau.",
         "padding_top": 4,
         "padding_bottom": 4
@@ -63,6 +62,7 @@
     "backbone": {
       "type": "image_text",
       "settings": {
+        "image_bild": "shopify://shop_images/o6EBR9Gd0DlmyQgLzRfu7Q.jpg",
         "text_heading": "Das Rückgrat Ihres Reseller-Geschäfts",
         "textarea_text": "Das Rückgrat jedes erfolgreichen Reseller-Geschäfts ist das wiederkehrende Geschäft mit Grosskunden. Projekte kommen und gehen – aber der laufende Bedarf an Schutz, Connectivity und Zubehör bleibt konstant. Wer hier als zuverlässiger Lieferant positioniert ist, profitiert von planbaren Umsätzen, niedrigen Akquisekosten und hoher Kundenbindung.<br><br>DICOTA ist als Zubehöranbieter optimal für dieses Segment positioniert: breites Topseller-Portfolio, dauerhaft hohe Lagerverfügbarkeit und eine klare SKU-Struktur, die sich einfach in bestehende ERP- und Einkaufssysteme integrieren lässt.",
         "url_button_link": "",
@@ -438,7 +438,7 @@
       ],
       "name": "Team Grid",
       "settings": {
-        "text_heading": "Attach Portfolio –<br>Margin without extra effort",
+        "text_heading": "Attach Portfolio –Margin without extra effort",
         "textarea_text": "The real margin potential in run-rate business does not lie in the top-selling product itself – it lies in the add-ons. Every laptop sold is a gateway to several accessories that are reordered on a regular basis. The trick is to integrate these add-on products into the ordering process in such a way that they are included automatically – without having to be renegotiated each time.",
         "text_karte_1_heading": "Sleeves & Cases",
         "textarea_karte_1_text": "Perfectly tailored to the size and brand of the device – simply include them in your shopping basket as standard items. No explanation needed, no tender required. Sleeves and cases are a staple in virtually every corporate IT environment. If you include them as standard extras in your range, you’ll sell them without even having to actively promote them.",
