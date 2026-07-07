@@ -1,4 +1,4 @@
-<div class="padding-global more-stories_padding" style="padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px;"><div class="container-large"><h2 class="more-stories_title heading-style-h4">
+<div class="padding-global more-stories_padding" style="padding-top: {{ section.settings.padding_top }}rem; padding-bottom: {{ section.settings.padding_bottom }}rem;"><div class="container-large"><h2 class="more-stories_title heading-style-h4">
 {{ section.settings.text_uberschrift }}
 </h2><div role="list" class="more-stories_grid w-dyn-items">{% for article in blog.articles %}    <a li-for="article in blog.articles" li-object:href="article.url" href="#" role="listitem" class="story-card w-inline-block">
                                     <div class="story-card_image-wrap"><img li-object:src="article.image | image_url: width: 700" li-object:alt="article.image.alt" src="{{ article.image | image_url: width: 700 }}" loading="lazy" alt="{{ article.image.alt }}" class="story-card_image"></div>
@@ -23,21 +23,21 @@
             "type": "range",
             "id": "padding_top",
             "min": 0,
-            "max": 160,
-            "step": 4,
-            "unit": "px",
+            "max": 12,
+            "step": 0.5,
+            "unit": "rem",
             "label": "Abstand oben",
-            "default": 40
+            "default": 2.5
         },
         {
             "type": "range",
             "id": "padding_bottom",
             "min": 0,
-            "max": 160,
-            "step": 4,
-            "unit": "px",
+            "max": 12,
+            "step": 0.5,
+            "unit": "rem",
             "label": "Abstand unten",
-            "default": 80
+            "default": 5
         }
     ],
     "presets": [

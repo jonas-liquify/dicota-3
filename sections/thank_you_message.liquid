@@ -4,10 +4,10 @@
     <p class="text-size-medium">
 {{ section.settings.text_paragraph }}
 </p>    </div>
-{% endif %}<div class="margin-top margin-medium"><div class="button-group is-center">{% if section.settings.text_button_text != blank %}    <a li-if="section.settings.text_button_text != blank" li-object:href="routes.root_url" href="routes.root_url" class="button w-button">
-    <span>
+{% endif %}<div class="margin-top margin-medium"><div class="button-group is-center">{% if section.settings.text_button_text != blank %}    <span class="li-guard" li-if="section.settings.text_button_text != blank">
+    <a li-object:href="routes.root_url" href="{{ routes.root_url }}" class="button w-button"><span>
 {{ section.settings.text_button_text }}
-</span>    </a>
+</span></a>    </span>
 {% endif %}</div></div></div></div></div></div> {% schema %} {
     "tag": "header",
     "name": "Thank You Message",

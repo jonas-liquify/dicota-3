@@ -1,0 +1,42 @@
+<div li-block="Team Karte" class="icon-cards_card" {{ block.shopify_attributes }}>
+                    {% if block.settings.image_icon != blank %}    <span class="li-guard" li-if="block.settings.image_icon != blank">
+    {% if block.settings.image_icon %}
+{{ block.settings.image_icon | image_url: width: 96 | image_tag: loading: 'lazy', class: 'icon-1x1-xlarge' }}
+{% else %}
+<img src="{{ 'platzhalter.svg' | asset_url }}" loading="lazy" alt="" class="icon-1x1-xlarge">
+{% endif %}    </span>
+{% endif %}
+                    <div class="default-flex-tiny"><h3 class="text-size-large">
+{{ block.settings.text_heading }}
+</h3>{% if block.settings.textarea_text != blank %}    <div class="li-guard" li-if="block.settings.textarea_text != blank">
+    <div class="text-size-medium"> {{ block.settings.textarea_text }} </div>    </div>
+{% endif %}</div>
+                </div> {% schema %} {
+    "name": "Team Karte",
+    "settings": [
+        {
+            "id": "image_icon",
+            "type": "image_picker",
+            "label": "Icon"
+        },
+        {
+            "id": "text_heading",
+            "type": "text",
+            "label": "Heading",
+            "default": "Diversity"
+        },
+        {
+            "id": "textarea_text",
+            "type": "textarea",
+            "label": "Text",
+            "default": "Different backgrounds make us stronger \u2014 together we think further."
+        }
+    ],
+    "presets": [
+        {
+            "name": "Team Karte",
+            "blocks": []
+        }
+    ],
+    "tag": null
+} {% endschema %}

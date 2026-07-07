@@ -1,0 +1,62 @@
+<div class="padding-global padding-section-medium" style="padding-top: {{ section.settings.padding_top }}rem; padding-bottom: {{ section.settings.padding_bottom }}rem;"><div class="container-large"><div class="headline-text_grid"><div class="headline-text_left">{% if section.settings.text_subline != blank %}    <div class="li-guard" li-if="section.settings.text_subline != blank">
+    <div class="text-style-subline">
+{{ section.settings.text_subline }}
+</div>    </div>
+{% endif %}<h2 class="heading-style-h2">
+{{ section.settings.text_heading }}
+</h2></div><div class="headline-text_right text-rich-text w-richtext"> {{ section.settings.richtext_text }} </div></div></div></div> {% schema %} {
+    "tag": "section",
+    "name": "Headline Text",
+    "class": "section_headline-text",
+    "settings": [
+        {
+            "id": "text_subline",
+            "type": "text",
+            "label": "Subline",
+            "default": "Eyebrow"
+        },
+        {
+            "id": "text_heading",
+            "type": "text",
+            "label": "Heading",
+            "default": "Section headline"
+        },
+        {
+            "id": "richtext_text",
+            "type": "richtext",
+            "label": "Text",
+            "default": "<p>Hier kommt frei formatierter Rich-Text hin \u2014 Abs\u00e4tze, Listen, Links und mehr, rechts neben der \u00dcberschrift.<\/p>"
+        },
+        {
+            "type": "header",
+            "content": "Abst\u00e4nde"
+        },
+        {
+            "type": "range",
+            "id": "padding_top",
+            "min": 0,
+            "max": 12,
+            "step": 0.5,
+            "unit": "rem",
+            "label": "Abstand oben",
+            "default": 4
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom",
+            "min": 0,
+            "max": 12,
+            "step": 0.5,
+            "unit": "rem",
+            "label": "Abstand unten",
+            "default": 4
+        }
+    ],
+    "presets": [
+        {
+            "name": "Headline Text",
+            "category": "Content",
+            "blocks": []
+        }
+    ]
+} {% endschema %}

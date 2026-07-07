@@ -1,6 +1,6 @@
 <div class="li-tag w-embed">{% assign ph_kf = product.metafields.custom.key_features.value %}{% if product.metafields.custom.filter_image_set != blank and product.metafields.custom.filter_image_set.value.key_features.value != blank %}{% assign ph_kf = product.metafields.custom.filter_image_set.value.key_features.value %}{% endif %}</div><div li-if:inside="ph_kf != blank" style="display:contents" inside="1">
         {% if ph_kf != blank %}
-            <div class="padding-global" style="padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px; background-color: {{ section.settings.bg_color }}; color: {{ section.settings.text_color }};"><div class="container-large"><h2 class="product-features_headline heading-style-h2">
+            <div class="padding-global" style="padding-top: {{ section.settings.padding_top }}rem; padding-bottom: {{ section.settings.padding_bottom }}rem; background-color: {{ section.settings.bg_color }}; color: {{ section.settings.text_color }};"><div class="container-large"><h2 class="product-features_headline heading-style-h2">
 {{ section.settings.text_uberschrift }}
 </h2><div class="swiper is-product-features"><div class="swiper-wrapper is-product-features">{% for feature in ph_kf %}    <div li-for="feature in ph_kf" class="swiper-slide is-product-features product-features_item">
                                     <div class="product-features_img-wrap"><img li-object:src="feature.image | image_url: width: 800" li-object:alt="feature.headline" src="{{ feature.image | image_url: width: 800 }}" loading="lazy" alt="{{ feature.headline }}" class="product-features_img"></div>
@@ -30,21 +30,21 @@
             "type": "range",
             "id": "padding_top",
             "min": 0,
-            "max": 120,
-            "step": 4,
-            "unit": "px",
+            "max": 12,
+            "step": 0.5,
+            "unit": "rem",
             "label": "Abstand oben",
-            "default": 80
+            "default": 5
         },
         {
             "type": "range",
             "id": "padding_bottom",
             "min": 0,
-            "max": 120,
-            "step": 4,
-            "unit": "px",
+            "max": 12,
+            "step": 0.5,
+            "unit": "rem",
             "label": "Abstand unten",
-            "default": 80
+            "default": 5
         },
         {
             "type": "header",

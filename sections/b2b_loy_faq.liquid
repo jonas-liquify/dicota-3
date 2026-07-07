@@ -1,28 +1,20 @@
-<div class="padding-global padding-section-small" style="padding-top: {{ section.settings.padding_top }}rem; padding-bottom: {{ section.settings.padding_bottom }}rem"><div class="container-large"><div class="acc-default_wrapper"><div class="acc-default_flex-small"><ul role="list" class="breadcrumbs_component w-list-unstyled"><li class="breadcrumbs_item"><a li-object:href="routes.root_url" href="{{ routes.root_url }}" class="w-inline-block"><div class="text-size-regular">Home</div></a><div class="breadcrumbs_icon w-embed"><svg width="15" height="15" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="1.5" fill="none"></path></svg></div></li><li class="breadcrumbs_item"><div>
-{{ section.settings.text_breadcrumb }}
-</div></li></ul><div class="default-flex-tiny"><h1 class="heading-style-h2">
+<div class="padding-global padding-section-small" style="padding-top: {{ section.settings.padding_top }}rem; padding-bottom: {{ section.settings.padding_bottom }}rem"><div class="container-large"><div class="acc-default_wrapper"><div class="acc-default_flex-small"><div class="default-flex-tiny"><h1 class="heading-style-h2">
 {{ section.settings.text_heading }}
 </h1>{% if section.settings.textarea_subheading != blank %}    <div class="li-guard" li-if="section.settings.textarea_subheading != blank">
     <div class="text-size-medium max-width-large"> {{ section.settings.textarea_subheading }} </div>    </div>
 {% endif %}</div>{% if section.settings.faq_set != blank %}    <div li-if="section.settings.faq_set != blank">
     <div class="faq_component" li-for:inside="faq in section.settings.faq_set.wich_faq.value">
-        {% for faq in section.settings.faq_set.wich_faq.value %}                            <div x-data="{open:false}" class="faq_item background-color-alternate"><div tabindex="0" role="button" x-on:click="open=!open" x-bind:aria-expanded="open?'true':'false'" class="faq_header is-account"><div li-object="faq.question" class="heading-style-h4">{{ faq.question }}</div><div class="faq_icon-outer is-grey"><div class="faq_icon-line"></div><div x-bind:class="open?'is-open':''" class="faq_icon-line is-rotating"></div></div></div><div x-bind:class="open?'is-open':''" class="faq_body is-account"><div class="faq_body-content"><div li-object="faq.faq_answer" class="text-size-medium">{{ faq.faq_answer }}</div></div></div></div>
+        {% for faq in section.settings.faq_set.wich_faq.value %}                            <div x-data="{open:false}" class="faq_item background-color-alternate"><div tabindex="0" role="button" x-on:click="open=!open" x-bind:aria-expanded="open?'true':'false'" class="faq_header is-account"><div li-object="faq.question" class="heading-style-h4">{{ faq.question }}</div><div class="faq_icon-outer is-grey"><div class="faq_icon-line"></div><div x-bind:class="open?'is-open':''" class="faq_icon-line is-rotating"></div></div></div><div x-bind:class="open?'is-open':''" class="faq_body is-account"><div class="faq_body-content"><div li-object="faq.faq_answer | metafield_tag" class="text-size-medium">{{ faq.faq_answer | metafield_tag }}</div></div></div></div>
                     {% endfor %}    </div>    </div>
 {% endif %}{% if section.settings.faq_set == blank %}    <div li-if="section.settings.faq_set == blank">
     <div class="faq_component" li-for:inside="faq in section.settings.faq_entries">
-        {% for faq in section.settings.faq_entries %}                            <div x-data="{open:false}" class="faq_item background-color-alternate"><div tabindex="0" role="button" x-on:click="open=!open" x-bind:aria-expanded="open?'true':'false'" class="faq_header is-account"><div li-object="faq.question" class="heading-style-h4">{{ faq.question }}</div><div class="faq_icon-outer is-grey"><div class="faq_icon-line"></div><div x-bind:class="open?'is-open':''" class="faq_icon-line is-rotating"></div></div></div><div x-bind:class="open?'is-open':''" class="faq_body is-account"><div class="faq_body-content"><div li-object="faq.faq_answer" class="text-size-medium">{{ faq.faq_answer }}</div></div></div></div>
+        {% for faq in section.settings.faq_entries %}                            <div x-data="{open:false}" class="faq_item background-color-alternate"><div tabindex="0" role="button" x-on:click="open=!open" x-bind:aria-expanded="open?'true':'false'" class="faq_header is-account"><div li-object="faq.question" class="heading-style-h4">{{ faq.question }}</div><div class="faq_icon-outer is-grey"><div class="faq_icon-line"></div><div x-bind:class="open?'is-open':''" class="faq_icon-line is-rotating"></div></div></div><div x-bind:class="open?'is-open':''" class="faq_body is-account"><div class="faq_body-content"><div li-object="faq.faq_answer | metafield_tag" class="text-size-medium">{{ faq.faq_answer | metafield_tag }}</div></div></div></div>
                     {% endfor %}    </div>    </div>
 {% endif %}</div></div></div></div> {% schema %} {
     "tag": "section",
     "name": "B2B Loy FAQ",
     "class": "section_acc-default",
     "settings": [
-        {
-            "id": "text_breadcrumb",
-            "type": "text",
-            "label": "Breadcrumb",
-            "default": "FAQ"
-        },
         {
             "id": "text_heading",
             "type": "text",

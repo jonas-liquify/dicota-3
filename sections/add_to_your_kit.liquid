@@ -1,4 +1,4 @@
-<div class="padding-global" style="padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px; background-color: {{ section.settings.bg_color }}; color: {{ section.settings.text_color }};">{% if product.metafields.shopify--discovery--product_recommendation.complementary_products != blank %}    <div class="container-large" li-if="product.metafields.shopify--discovery--product_recommendation.complementary_products != blank">
+<div class="padding-global" style="padding-top: {{ section.settings.padding_top }}rem; padding-bottom: {{ section.settings.padding_bottom }}rem; background-color: {{ section.settings.bg_color }}; color: {{ section.settings.text_color }};">{% if product.metafields.shopify--discovery--product_recommendation.complementary_products != blank %}    <div class="container-large" li-if="product.metafields.shopify--discovery--product_recommendation.complementary_products != blank">
     <div class="product-add-to-kit_header"><h2 class="product-add-to-kit_headline heading-style-h3">
 {{ section.settings.text_uberschrift }}
 </h2></div><div class="swiper is-add-to-kit"><div class="swiper-wrapper is-add-to-kit">{% for kit_product in product.metafields.shopify--discovery--product_recommendation.complementary_products.value %}    <div class="swiper-slide is-add-to-kit" li-for="kit_product in product.metafields.shopify--discovery--product_recommendation.complementary_products.value">
@@ -28,21 +28,21 @@
             "type": "range",
             "id": "padding_top",
             "min": 0,
-            "max": 120,
-            "step": 4,
-            "unit": "px",
+            "max": 12,
+            "step": 0.5,
+            "unit": "rem",
             "label": "Abstand oben",
-            "default": 80
+            "default": 5
         },
         {
             "type": "range",
             "id": "padding_bottom",
             "min": 0,
-            "max": 120,
-            "step": 4,
-            "unit": "px",
+            "max": 12,
+            "step": 0.5,
+            "unit": "rem",
             "label": "Abstand unten",
-            "default": 80
+            "default": 5
         },
         {
             "type": "header",

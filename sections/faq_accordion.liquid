@@ -1,17 +1,24 @@
-<div class="padding-global padding-section-medium"><div class="container-large"><div class="faq_wrapper"><div class="default-flex-small"><h2 class="heading-style-h2">
+<div class="padding-global padding-section-medium" style="padding-top: {{ section.settings.padding_top }}rem; padding-bottom: {{ section.settings.padding_bottom }}rem;"><div class="container-large"><div class="faq_wrapper"><div class="default-flex-small faq_sidebar"><h2 class="heading-style-h2">
 {{ section.settings.text_heading }}
-</h2><div class="text-size-medium"> {{ section.settings.textarea_text }} </div></div>{% if section.settings.faq_set != blank %}    <div li-if="section.settings.faq_set != blank">
-    <div class="faq_component" li-for:inside="faq in section.settings.faq_set.wich_faq.value">
-        {% for faq in section.settings.faq_set.which_faqs.value %}                            <div x-data="{open: false}" class="faq_item background-color-alternate"><div tabindex="0" role="button" x-on:click="open=!open" x-bind:aria-expanded="open?'true':'false'" class="faq_header"><div li-object="faq.question" class="text-size-medium text-weight-medium">{{ faq.question }}</div><div class="faq_icon-outer"><div class="faq_icon-line"></div><div x-bind:class="open?'is-open':''" class="faq_icon-line is-rotating"></div></div></div><div x-bind:class="open?'is-open':''" class="faq_body"><div class="faq_body-content"><div li-object="faq.faq_answer" class="text-size-regular">{{ faq.faq_answer | metafield_tag }}</div></div></div></div>
-                    {% endfor %}    </div>    </div>
-{% endif %}{% if section.settings.faq_set == blank %}    <div li-if="section.settings.faq_set == blank">
-    <div class="faq_component" li-for:inside="faq in section.settings.faq_entries">
-        {% for faq in section.settings.faq_entries %}                            <div x-data="{open: false}" class="faq_item background-color-alternate"><div tabindex="0" role="button" x-on:click="open=!open" x-bind:aria-expanded="open?'true':'false'" class="faq_header"><div li-object="faq.question" class="text-size-medium text-weight-medium">{{ faq.question  }}</div><div class="faq_icon-outer"><div class="faq_icon-line"></div><div x-bind:class="open?'is-open':''" class="faq_icon-line is-rotating"></div></div></div><div x-bind:class="open?'is-open':''" class="faq_body"><div class="faq_body-content"><div li-object="faq.faq_answer" class="text-size-regular">{{ faq.faq_answer | metafield_tag  }}</div></div></div></div>
-                    {% endfor %}    </div>    </div>
-{% endif %}</div></div></div> {% schema %} {
+</h2><div class="text-size-medium"> {{ section.settings.textarea_text }} </div>{% if section.blocks.size > 1 %}    <nav li-if="section.blocks.size > 1" class="faq_anchor-nav">
+    {% for cat.settings.text_kategorie_titel %}    <a li-for="cat in section.blocks" li-object="cat.settings.text_kategorie_titel" href="#" class="faq_anchor-link">
+                                    Category
+                        </a>
+{% endfor %}    </nav>
+{% endif %}</div><div li-cf-theme-blocks="" class="faq_categories">
+{% content_for 'blocks' %}
+</div></div></div></div> {% schema %} {
     "tag": "section",
     "name": "FAQ Accordion",
     "class": "section_faq",
+    "blocks": [
+        {
+            "type": "faq-kategorie"
+        },
+        {
+            "type": "@app"
+        }
+    ],
     "settings": [
         {
             "id": "text_heading",
@@ -33,46 +40,32 @@
             "type": "range",
             "id": "padding_top",
             "min": 0,
-            "max": 160,
-            "step": 4,
-            "unit": "px",
+            "max": 12,
+            "step": 0.5,
+            "unit": "rem",
             "label": "Abstand oben",
-            "default": 80
+            "default": 5
         },
         {
             "type": "range",
             "id": "padding_bottom",
             "min": 0,
-            "max": 160,
-            "step": 4,
-            "unit": "px",
+            "max": 12,
+            "step": 0.5,
+            "unit": "rem",
             "label": "Abstand unten",
-            "default": 80
-        },
-        {
-            "type": "header",
-            "content": "FAQ-Quelle"
-        },
-        {
-            "type": "metaobject",
-            "id": "faq_set",
-            "label": "FAQ-Set (Kategorie)",
-            "metaobject_type": "faqs_category",
-            "info": "Entweder ein FAQ-Set waehlen ODER unten einzelne FAQs. Ist ein Set gewaehlt, hat es Vorrang."
-        },
-        {
-            "type": "metaobject_list",
-            "id": "faq_entries",
-            "label": "Einzelne FAQs",
-            "metaobject_type": "faqs_filters",
-            "limit": 50
+            "default": 5
         }
     ],
     "presets": [
         {
             "name": "FAQ Accordion",
             "category": "Content",
-            "blocks": []
+            "blocks": [
+                {
+                    "type": "faq-kategorie"
+                }
+            ]
         }
     ]
 } {% endschema %}
