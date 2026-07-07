@@ -1,12 +1,12 @@
 <div class="padding-global padding-section-medium"><div class="container-large"><div class="faq_wrapper"><div class="default-flex-small"><h2 class="heading-style-h2">
 {{ section.settings.text_heading }}
 </h2><div class="text-size-medium"> {{ section.settings.textarea_text }} </div></div>{% if section.settings.faq_set != blank %}    <div li-if="section.settings.faq_set != blank">
-    <div class="faq_component" li-for:inside="faq in section.settings.faq_set.wich_faq.value">
-        {% for faq in section.settings.faq_set.which_faqs.value %}                            <div x-data="{open: false}" class="faq_item background-color-alternate"><div tabindex="0" role="button" x-on:click="open=!open" x-bind:aria-expanded="open?'true':'false'" class="faq_header"><div li-object="faq.question" class="text-size-medium text-weight-medium">{{ faq.question }}</div><div class="faq_icon-outer"><div class="faq_icon-line"></div><div x-bind:class="open?'is-open':''" class="faq_icon-line is-rotating"></div></div></div><div x-bind:class="open?'is-open':''" class="faq_body"><div class="faq_body-content"><div li-object="faq.faq_answer" class="text-size-regular">{{ faq.faq_answer | metafield_tag }}</div></div></div></div>
+    <div class="faq_component" li-for:inside="faq in section.settings.faq_set.which_faq.value">
+        {% for faq in section.settings.faq_set.which_faq.value %}                            <div x-data="{open: false}" class="faq_item background-color-alternate"><div tabindex="0" role="button" x-on:click="open=!open" x-bind:aria-expanded="open?'true':'false'" class="faq_header"><div li-object="faq.question" class="text-size-medium text-weight-medium">{{ faq.question }}</div><div class="faq_icon-outer"><div class="faq_icon-line"></div><div x-bind:class="open?'is-open':''" class="faq_icon-line is-rotating"></div></div></div><div x-bind:class="open?'is-open':''" class="faq_body"><div class="faq_body-content"><div li-object="faq.faq_answer | metafield_tag" class="text-size-regular">{{ faq.faq_answer | metafield_tag }}</div></div></div></div>
                     {% endfor %}    </div>    </div>
 {% endif %}{% if section.settings.faq_set == blank %}    <div li-if="section.settings.faq_set == blank">
     <div class="faq_component" li-for:inside="faq in section.settings.faq_entries">
-        {% for faq in section.settings.faq_entries %}                            <div x-data="{open: false}" class="faq_item background-color-alternate"><div tabindex="0" role="button" x-on:click="open=!open" x-bind:aria-expanded="open?'true':'false'" class="faq_header"><div li-object="faq.question" class="text-size-medium text-weight-medium">{{ faq.question  }}</div><div class="faq_icon-outer"><div class="faq_icon-line"></div><div x-bind:class="open?'is-open':''" class="faq_icon-line is-rotating"></div></div></div><div x-bind:class="open?'is-open':''" class="faq_body"><div class="faq_body-content"><div li-object="faq.faq_answer" class="text-size-regular">{{ faq.faq_answer | metafield_tag  }}</div></div></div></div>
+        {% for faq in section.settings.faq_entries %}                            <div x-data="{open: false}" class="faq_item background-color-alternate"><div tabindex="0" role="button" x-on:click="open=!open" x-bind:aria-expanded="open?'true':'false'" class="faq_header"><div li-object="faq.question" class="text-size-medium text-weight-medium">{{ faq.question }}</div><div class="faq_icon-outer"><div class="faq_icon-line"></div><div x-bind:class="open?'is-open':''" class="faq_icon-line is-rotating"></div></div></div><div x-bind:class="open?'is-open':''" class="faq_body"><div class="faq_body-content"><div li-object="faq.faq_answer | metafield_tag" class="text-size-regular">{{ faq.faq_answer | metafield_tag }}</div></div></div></div>
                     {% endfor %}    </div>    </div>
 {% endif %}</div></div></div> {% schema %} {
     "tag": "section",
@@ -33,21 +33,21 @@
             "type": "range",
             "id": "padding_top",
             "min": 0,
-            "max": 160,
-            "step": 4,
-            "unit": "px",
+            "max": 12,
+            "step": 0.5,
+            "unit": "rem",
             "label": "Abstand oben",
-            "default": 80
+            "default": 5
         },
         {
             "type": "range",
             "id": "padding_bottom",
             "min": 0,
-            "max": 160,
-            "step": 4,
-            "unit": "px",
+            "max": 12,
+            "step": 0.5,
+            "unit": "rem",
             "label": "Abstand unten",
-            "default": 80
+            "default": 5
         },
         {
             "type": "header",

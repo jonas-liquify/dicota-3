@@ -1,4 +1,4 @@
-<div class="padding-global reseller-catrow_padding" style="padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px;"><div class="container-large"><div li-cf-theme-blocks="" class="category-row_grid">
+<div class="padding-global reseller-catrow_padding" style="padding-top: {{ section.settings.padding_top }}rem; padding-bottom: {{ section.settings.padding_bottom }}rem;"><div class="container-large"><div li-cf-theme-blocks="" class="category-row_grid">
 {% content_for 'blocks' %}
 </div></div></div> {% schema %} {
     "tag": "section",
@@ -21,21 +21,21 @@
             "type": "range",
             "id": "padding_top",
             "min": 0,
-            "max": 160,
-            "step": 4,
-            "unit": "px",
+            "max": 12,
+            "step": 0.5,
+            "unit": "rem",
             "label": "Abstand oben",
-            "default": 60
+            "default": 4
         },
         {
             "type": "range",
             "id": "padding_bottom",
             "min": 0,
-            "max": 160,
-            "step": 4,
-            "unit": "px",
+            "max": 12,
+            "step": 0.5,
+            "unit": "rem",
             "label": "Abstand unten",
-            "default": 60
+            "default": 4
         }
     ],
     "presets": [

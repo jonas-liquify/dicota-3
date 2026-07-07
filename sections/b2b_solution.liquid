@@ -1,8 +1,4 @@
-<div class="padding-global padding-section-small" style="padding-top: {{ section.settings.padding_top }}rem; padding-bottom: {{ section.settings.padding_bottom }}rem;"><div class="container-large"><div class="acc-default_wrapper"><div class="acc-default_flex-small"><ul role="list" class="breadcrumbs_component w-list-unstyled"><li class="breadcrumbs_item"><a li-object:href="routes.root_url" href="{{ routes.root_url }}" class="w-inline-block"><div li-object="'general.home' | t" class="text-size-regular">{{ 'general.home' | t }}</div></a><div class="breadcrumbs_icon w-embed"><svg width="15" height="15" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="1.5" fill="none"></path></svg></div></li>{% if section.settings.breadcrumb_parent_label != blank %}    <li li-if="section.settings.breadcrumb_parent_label != blank" class="breadcrumbs_item">
-    <a href="{{ section.settings.url_breadcrumb_parent_link }}" class="w-inline-block"> <div class="text-size-regular">{{ section.settings.text_breadcrumb_parent_label }}</div> </a><div class="breadcrumbs_icon w-embed"><svg width="15" height="15" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="1.5" fill="none"></path></svg></div>    </li>
-{% endif %}<li class="breadcrumbs_item"><div>
-{{ section.settings.text_breadcrumb }}
-</div></li></ul><div class="default-flex-tiny">{% if section.settings.text_subline != blank %}    <div class="li-guard" li-if="section.settings.text_subline != blank">
+<div class="padding-global padding-section-small" style="padding-top: {{ section.settings.padding_top }}rem; padding-bottom: {{ section.settings.padding_bottom }}rem;"><div class="container-large"><div class="acc-default_wrapper"><div class="acc-default_flex-small"><div class="default-flex-tiny">{% if section.settings.text_subline != blank %}    <div class="li-guard" li-if="section.settings.text_subline != blank">
     <div class="text-style-subline">
 {{ section.settings.text_subline }}
 </div>    </div>
@@ -57,23 +53,6 @@
         }
     ],
     "settings": [
-        {
-            "id": "url_breadcrumb_parent_link",
-            "type": "url",
-            "label": "Breadcrumb Parent Link"
-        },
-        {
-            "id": "text_breadcrumb_parent_label",
-            "type": "text",
-            "label": "Breadcrumb Parent Label",
-            "default": "Solutions"
-        },
-        {
-            "id": "text_breadcrumb",
-            "type": "text",
-            "label": "Breadcrumb",
-            "default": "Solution"
-        },
         {
             "id": "text_subline",
             "type": "text",
@@ -165,22 +144,6 @@
             "type": "text",
             "label": "CTA Button Text",
             "default": "Start ordering"
-        },
-        {
-            "type": "header",
-            "content": "Kopfbereich"
-        },
-        {
-            "type": "text",
-            "id": "breadcrumb_parent_label",
-            "label": "Breadcrumb Parent Label",
-            "info": "Optional. Falls leer wird die Ebene \u00fcbersprungen.",
-            "default": "Solutions"
-        },
-        {
-            "type": "url",
-            "id": "breadcrumb_parent_link",
-            "label": "Breadcrumb Parent Link"
         },
         {
             "type": "header",

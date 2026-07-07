@@ -2015,9 +2015,9 @@ figcaption {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 2.4rem;
+  height: 2rem;
   width: auto;
-  min-width: 8rem;
+  min-width: 6.5rem;
   flex-shrink: 0;
   display: flex;
 }
@@ -3716,8 +3716,8 @@ figcaption {
     grid-template-columns: 1fr 1fr;
   }
   .nav_logo {
-    width: 8.4rem;
-    height: 3.6rem;
+    width: 7rem;
+    height: 3rem;
   }
   .swiper-container.is-product-gallery {
     padding-right: 0;
@@ -4230,9 +4230,6 @@ figcaption {
   .solutions_grid.is-3-columns {
     grid-template-columns: 1fr 1fr;
   }
-  .section_boxed-image {
-    min-height: 40dvh;
-  }
   .team_heading {
     grid-template-columns: 1fr;
     gap: 1.5rem;
@@ -4242,6 +4239,7 @@ figcaption {
   }
   .team_grid .swiper_component {
     grid-column: span 2;
+    grid-row: span 1;
     min-height: 16rem;
   }
   .benefits_grid {
@@ -4941,7 +4939,7 @@ figcaption {
   }
   .nav_logo {
     align-items: flex-start;
-    width: 8.7rem;
+    width: 7.2rem;
   }
   .footer_icon-grid {
     grid-template-columns: 1fr;
@@ -5872,6 +5870,10 @@ figcaption {
     grid-template-columns: 1fr;
   }
   .team_grid .swiper_component {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+  .team_grid .swiper_component + .icon-cards_card {
     grid-column: span 1;
   }
   .benefits_grid {
@@ -8967,10 +8969,16 @@ button.li-lang_dd-link {
 
 /* Liste breit genug für "GERMANY  € EUR", scrollbar bei vielen Märkten */
 
-/* Footer: Dropdown öffnet nach oben, Chevron zeigt entsprechend */
+/* Footer: Dropdown öffnet nach oben, Chevron zeigt entsprechend.
+   !important + expliziter relativer Anker, um Webflows Dropdown-Runtime
+   (Inline-Positionierung nach unten) zu überschreiben. */
+.section_footer-bottom .li-lang_dropdown {
+  position: relative;
+}
 .section_footer-bottom .li-lang_dd-list.w--open {
-  top: auto;
-  bottom: 100%;
+  top: auto !important;
+  bottom: 100% !important;
+  margin-bottom: .5rem;
 }
 
 .section_footer-bottom .dropdown-icon {
@@ -11018,38 +11026,11 @@ button.li-lang_dd-link {
 .section_boxed-image {
   width: 100%;
 }
-/* Layout modes (merged Boxed Image + Boxed Image Centered) */
-.section_boxed-image .boxed-image_wrapper.is-full {
-  position: relative;
-  min-height: 80dvh;
-  overflow: hidden;
-  z-index: 1;
-}
-.section_boxed-image .boxed-image_wrapper.is-contained {
-  width: 100%;
-}
-/* Only show the branch matching the active layout (li-if renders both in builder preview) */
-.section_boxed-image .boxed-image_wrapper.is-full > .padding-global { display: none; }
-.section_boxed-image .boxed-image_wrapper.is-contained > .boxed-image_bg-container { display: none; }
-.boxed-image_bg-container {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  display: grid;
-  grid-template-columns: 1fr min(76rem, 100%) 1fr;
-}
-.boxed-image_image-wrapper {
-  grid-column: 2;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-.boxed-image_image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+/* Ein einzelnes Bild über die volle Breite, natürliches Seitenverhältnis */
+.section_boxed-image .boxed-image_image {
   display: block;
+  width: 100%;
+  height: auto;
 }
 
 /* Section: Why Us */
@@ -11414,10 +11395,15 @@ button.li-lang_dd-link {
   border-bottom: none;
 }
 .team_grid .swiper_component {
-  grid-column: span 1;
+  grid-column: span 2;
+  grid-row: span 2;
   position: relative;
   overflow: hidden;
-  min-height: 22rem;
+  min-height: 30rem;
+}
+/* Erste Karte (direkt nach dem Slider) oben rechts über 2 Spalten */
+.team_grid .swiper_component + .icon-cards_card {
+  grid-column: span 2;
 }
 .swiper.is-team-swiper {
   width: 100%;
@@ -15353,7 +15339,7 @@ button.li-lang_dd-link {
   flex-shrink: 0;
 }
 .reseller-header_logo {
-  height: 1.4rem;
+  height: 1.2rem;
   width: auto;
   display: block;
 }
@@ -16895,3 +16881,4 @@ img.product-header_gallery-image {
    layout-neutral). span/div je nach Inline/Block-Kontext.
    ============================================================= */
 .li-guard { display: contents; }
+

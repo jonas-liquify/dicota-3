@@ -1,6 +1,4 @@
-<div class="padding-global padding-section-small" style="padding-top: {{ section.settings.padding_top }}rem; padding-bottom: {{ section.settings.padding_bottom }}rem"><div class="container-large"><div class="acc-default_wrapper"><div class="acc-default_flex-small"><ul role="list" class="breadcrumbs_component w-list-unstyled"><li class="breadcrumbs_item"><a li-object:href="routes.root_url" href="{{ routes.root_url }}" class="w-inline-block"><div li-object="'general.home' | t" class="text-size-regular">{{ 'general.home' | t }}</div></a><div class="breadcrumbs_icon w-embed"><svg width="15" height="15" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="1.5" fill="none"></path></svg></div></li><li class="breadcrumbs_item"><div>
-{{ section.settings.text_breadcrumb }}
-</div></li></ul><div class="default-flex-tiny"><h1 class="heading-style-h2">
+<div class="padding-global padding-section-small" style="padding-top: {{ section.settings.padding_top }}rem; padding-bottom: {{ section.settings.padding_bottom }}rem"><div class="container-large"><div class="acc-default_wrapper"><div class="acc-default_flex-small"><div class="default-flex-tiny"><h1 class="heading-style-h2">
 {{ section.settings.text_heading }}
 </h1><div class="text-size-medium max-width-large"> {{ section.settings.textarea_subheading }} </div></div><div li-cf-theme-blocks="" class="acc-triple">
 {% content_for 'blocks' %}
@@ -17,12 +15,6 @@
         }
     ],
     "settings": [
-        {
-            "id": "text_breadcrumb",
-            "type": "text",
-            "label": "Breadcrumb",
-            "default": "Events"
-        },
         {
             "id": "text_heading",
             "type": "text",

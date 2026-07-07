@@ -1,6 +1,4 @@
-<div class="padding-global padding-section-small" style="padding-top: {{ section.settings.padding_top }}rem; padding-bottom: {{ section.settings.padding_bottom }}rem"><div class="container-large"><div class="acc-default_wrapper"><div class="acc-default_flex-small"><ul role="list" class="breadcrumbs_component w-list-unstyled"><li class="breadcrumbs_item"><a li-object:href="routes.root_url" href="{{ routes.root_url }}" class="w-inline-block"><div li-object="'general.home' | t" class="text-size-regular">{{ 'general.home' | t }}</div></a><div class="breadcrumbs_icon w-embed"><svg width="15" height="15" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.55806 6.29544C2.46043 6.19781 2.46043 6.03952 2.55806 5.94189L3.44195 5.058C3.53958 4.96037 3.69787 4.96037 3.7955 5.058L8 9.26251L12.2045 5.058C12.3021 4.96037 12.4604 4.96037 12.5581 5.058L13.4419 5.94189C13.5396 6.03952 13.5396 6.19781 13.4419 6.29544L8.17678 11.5606C8.07915 11.6582 7.92086 11.6582 7.82323 11.5606L2.55806 6.29544Z" fill="currentColor" transform="rotate(-90 8 8)"></path></svg></div></li><li class="breadcrumbs_item"><div class="text-size-regular">
-{{ section.settings.text_aktueller_bereich }}
-</div></li></ul><div class="default-flex-tiny"><h1 class="heading-style-h2">
+<div class="padding-global padding-section-small" style="padding-top: {{ section.settings.padding_top }}rem; padding-bottom: {{ section.settings.padding_bottom }}rem"><div class="container-large"><div class="acc-default_wrapper"><div class="acc-default_flex-small"><div class="default-flex-tiny"><h1 class="heading-style-h2">
 {{ section.settings.text_heading_1 }}
 </h1>{% if section.settings.textarea_subheading_1 != blank %}    <div class="li-guard" li-if="section.settings.textarea_subheading_1 != blank">
     <div class="text-size-medium max-width-large"> {{ section.settings.textarea_subheading_1 }} </div>    </div>
@@ -61,12 +59,6 @@
         }
     ],
     "settings": [
-        {
-            "id": "text_aktueller_bereich",
-            "type": "text",
-            "label": "Aktueller Bereich",
-            "default": "Account"
-        },
         {
             "id": "text_heading_1",
             "type": "text",
