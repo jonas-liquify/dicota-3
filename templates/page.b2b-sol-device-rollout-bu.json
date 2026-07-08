@@ -263,51 +263,41 @@
       "blocks": {
         "tab_WtkFKC": {
           "type": "tab",
-          "name": "More Margin",
+          "name": "Argument 1",
           "settings": {
-            "text_tab_label": "More Margin",
+            "text_tab_label": "Argument 1",
             "text_tab_heading": "Margin without extra effort",
-            "textarea_tab_text": "The real margin potential in run-rate business does not lie in the top-seller itself – it lies in the attach. Every laptop sold is a gateway to several accessories that are regularly reordered. The trick lies in integrating these add-on products into the ordering process in such a way that they are automatically included – without having to be renegotiated each time."
+            "textarea_tab_text": "Standardisation reduces follow-on costs\nIf a company rolls out 300 devices and each employee then buys their own accessories, this results in 300 different scenarios: varying quality, different retailers, uncontrollable expenditure. The bundle standardises the set-up from day one – every employee has the same equipment, of the same quality, from a controlled source."
           },
           "blocks": {}
         },
         "tab_EnGYGA": {
           "type": "tab",
-          "name": "Sleeves & Cases",
+          "name": "Argument 2",
           "settings": {
-            "text_tab_label": "Sleeves & Cases",
-            "text_tab_heading": "Sleeves & Cases",
-            "textarea_tab_text": "Precisely tailored to device size and brand – simply include them as standard items in your shopping basket. No explanation needed, no tender required. Sleeves and cases are a staple in virtually every corporate IT environment. If you include them as standard extras in your range, you’ll sell them without having to actively promote them."
+            "text_tab_label": "Argument 2",
+            "text_tab_heading": "Compliance is not a risk",
+            "textarea_tab_text": "The lock is not just a nice-to-have. In many regulated environments, it is mandatory. If the accessory pack includes the lock from the outset, there is no compliance gap – and no IT manager discovering, three months after the roll-out, that 200 devices are unsecured."
           },
           "blocks": {}
         },
         "tab_U46hmf": {
           "type": "tab",
-          "name": "Locks & Security",
+          "name": "Argument 3",
           "settings": {
-            "text_tab_label": "Locks & Security",
-            "text_tab_heading": "Locks & Security",
-            "textarea_tab_text": "Anti-theft protection is an IT policy requirement in many companies – not an optional accessory. Locks are an essential item, particularly in environments with shared workstations, co-working spaces or field service teams. The advantage for retailers: high add-on rate, minimal need for explanation, good contribution margin."
+            "text_tab_label": "Argument 3",
+            "text_tab_heading": "A single accounting entry, no administrative burden",
+            "textarea_tab_text": "Three separate items mean three ordering processes, three deliveries, three invoices, three checks by the accounts department. A bundle SKU reduces this to a single transaction. That may sound like a minor detail – but for large companies with structured procurement processes, it’s a compelling argument."
           },
           "blocks": {}
         },
         "tab_3n6qfQ": {
           "type": "tab",
-          "name": "Adapters & Connectivity",
+          "name": "Argument 4",
           "settings": {
-            "text_tab_label": "Adapters & Connectivity",
+            "text_tab_label": "Argument 4",
             "text_tab_heading": "Adapters & Connectivity",
             "textarea_tab_text": "USB-C hubs, HDMI adaptors, multi-port solutions – these items are always in demand, but rarely ordered proactively. They often end up as emergency purchases in retail outlets or on online platforms when an employee realises during their first meeting whilst working from home that they don’t have the right connector. Stocking these items in your standard product range fills this gap – and noticeably increases the order value."
-          },
-          "blocks": {}
-        },
-        "tab_meKBEP": {
-          "type": "tab",
-          "name": "Backpacks & Bags",
-          "settings": {
-            "text_tab_label": "Backpacks & Bags",
-            "text_tab_heading": "Backpacks & Bags",
-            "textarea_tab_text": "Corporate backpacks and business bags are standard items in tenders from major clients – particularly for field sales teams, consultants and hybrid workers. DICOTA offers a wide range across various price points that can be easily integrated into framework agreements."
           },
           "blocks": {}
         }
@@ -316,8 +306,7 @@
         "tab_WtkFKC",
         "tab_EnGYGA",
         "tab_U46hmf",
-        "tab_3n6qfQ",
-        "tab_meKBEP"
+        "tab_3n6qfQ"
       ],
       "name": "Sales pitch for IT buyers",
       "settings": {
