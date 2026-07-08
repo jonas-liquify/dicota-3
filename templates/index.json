@@ -565,19 +565,54 @@
     "team_grid_4a6jiw": {
       "type": "team_grid",
       "blocks": {
-        "team_slide_HzxGjA": {
-          "type": "team-slide",
-          "settings": {},
+        "team_karte_pRHaAT": {
+          "type": "team-karte",
+          "name": "Team Karte",
+          "settings": {
+            "text_heading": "Diversity",
+            "textarea_text": "Different backgrounds make us stronger — together we think further."
+          },
+          "blocks": {}
+        },
+        "team_karte_A8NcV6": {
+          "type": "team-karte",
+          "name": "Team Karte",
+          "settings": {
+            "text_heading": "Diversity",
+            "textarea_text": "Different backgrounds make us stronger — together we think further."
+          },
+          "blocks": {}
+        },
+        "team_karte_QjPmUg": {
+          "type": "team-karte",
+          "name": "Team Karte",
+          "settings": {
+            "text_heading": "Diversity",
+            "textarea_text": "Different backgrounds make us stronger — together we think further."
+          },
+          "blocks": {}
+        },
+        "team_karte_9ywkpy": {
+          "type": "team-karte",
+          "name": "Team Karte",
+          "settings": {
+            "text_heading": "Diversity",
+            "textarea_text": "Different backgrounds make us stronger — together we think further."
+          },
           "blocks": {}
         }
       },
       "block_order": [
-        "team_slide_HzxGjA"
+        "team_karte_pRHaAT",
+        "team_karte_A8NcV6",
+        "team_karte_QjPmUg",
+        "team_karte_9ywkpy"
       ],
       "name": "Team Grid",
       "settings": {
         "text_heading": "The team behind DICOTA",
         "textarea_text": "Over 100 colleagues worldwide share the passion to better equip mobile professionals. Get to know them.",
+        "image_bild": "shopify://shop_images/Blog_Imag_Why_Laptop_Protection_matters_for_students.jpg",
         "url_button_link": "",
         "text_button_text": "More about us",
         "padding_top": 5,

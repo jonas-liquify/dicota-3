@@ -69,6 +69,93 @@
         "image_position": "left"
       }
     },
+    "b2b_solution_fQqwVw": {
+      "type": "b2b_solution",
+      "blocks": {
+        "b2b_sol_fact_wpA4Xi": {
+          "type": "b2b-sol-fact",
+          "name": "B2B Sol Fact",
+          "settings": {
+            "text_zahl": "1,000+",
+            "text_label": "Products available"
+          },
+          "blocks": {}
+        },
+        "b2b_sol_fact_HKnUGr": {
+          "type": "b2b-sol-fact",
+          "name": "B2B Sol Fact",
+          "settings": {
+            "text_zahl": "1,000+",
+            "text_label": "Products available"
+          },
+          "blocks": {}
+        },
+        "b2b_sol_fact_DDMYeg": {
+          "type": "b2b-sol-fact",
+          "settings": {
+            "text_zahl": "1,000+",
+            "text_label": "Products available"
+          },
+          "blocks": {}
+        },
+        "b2b_sol_capability_xkRhR3": {
+          "type": "b2b-sol-capability",
+          "disabled": true,
+          "settings": {
+            "text_heading": "Capability title",
+            "textarea_text": "Describe the capability — e.g. branding, doming, custom configuration or bundle."
+          },
+          "blocks": {}
+        },
+        "b2b-sol-referenzen": {
+          "type": "b2b-sol-referenzen",
+          "disabled": true,
+          "static": true,
+          "settings": {},
+          "blocks": {
+            "b2b_sol_referenz_RmBN6z": {
+              "type": "b2b-sol-referenz",
+              "settings": {},
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "b2b_sol_referenz_RmBN6z"
+          ]
+        }
+      },
+      "block_order": [
+        "b2b_sol_fact_wpA4Xi",
+        "b2b_sol_fact_HKnUGr",
+        "b2b_sol_fact_DDMYeg",
+        "b2b_sol_capability_xkRhR3"
+      ],
+      "custom_css": [],
+      "name": "B2B Solution",
+      "settings": {
+        "url_breadcrumb_parent_link": "",
+        "text_breadcrumb_parent_label": "",
+        "text_breadcrumb": "",
+        "text_subline": "",
+        "text_heading_1": "",
+        "textarea_subheading_1": "",
+        "url_hero_button_link": "",
+        "text_hero_button_text": "",
+        "text_feature_subline": "",
+        "text_feature_heading": "",
+        "textarea_feature_text": "",
+        "text_facts_heading": "Key facts",
+        "text_referenzen_heading": "",
+        "text_cta_heading": "",
+        "textarea_cta_text": "",
+        "url_cta_button_link": "",
+        "text_cta_button_text": "",
+        "breadcrumb_parent_label": "",
+        "breadcrumb_parent_link": "",
+        "padding_top": 4,
+        "padding_bottom": 4
+      }
+    },
     "value_tabs_kmVq6P": {
       "type": "value_tabs",
       "blocks": {
@@ -501,15 +588,6 @@
     "owner_spotlight_idR8mL": {
       "type": "owner_spotlight",
       "blocks": {
-        "zitat_WXJq9t": {
-          "type": "zitat",
-          "name": "Zitat",
-          "settings": {
-            "text_block_heading": "\"We think in generations, not in quarters.\"",
-            "text_block_text": "— Management"
-          },
-          "blocks": {}
-        },
         "zitat_wx4BAb": {
           "type": "zitat",
           "settings": {
@@ -520,7 +598,6 @@
         }
       },
       "block_order": [
-        "zitat_WXJq9t",
         "zitat_wx4BAb"
       ],
       "name": "Owner Spotlight",
@@ -586,6 +663,11 @@
         "padding_top": 5,
         "padding_bottom": 5
       }
+    },
+    "default_NzcGgK": {
+      "type": "default",
+      "name": "Default",
+      "settings": {}
     }
   },
   "order": [
@@ -594,6 +676,7 @@
     "hero_image",
     "b2b_key_selling_argu_hWeGLL",
     "backbone",
+    "b2b_solution_fQqwVw",
     "value_tabs_kmVq6P",
     "quote1",
     "advantages",
@@ -606,7 +689,8 @@
     "quote2",
     "cta",
     "owner_spotlight_idR8mL",
-    "benefits_grid_r4nLgh"
+    "benefits_grid_r4nLgh",
+    "default_NzcGgK"
   ],
   "layout": "b2b",
   "wrapper": "main.main-wrapper"
