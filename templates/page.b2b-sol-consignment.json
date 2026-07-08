@@ -214,6 +214,16 @@
         "padding_bottom": 5
       }
     },
+    "rich_text_YxCbPU": {
+      "type": "rich_text",
+      "name": "Rich Text",
+      "settings": {
+        "richtext_inhalt": "<p>When a customer describes a decentralised or chaotic process – and most do – the path to a solution is straightforward: a central shopping basket with defined items, fixed prices and a single point of contact. That is what we offer.</p>",
+        "width": "narrow",
+        "padding_top": 4,
+        "padding_bottom": 4
+      }
+    },
     "benefits_grid_kPtDBe": {
       "type": "benefits_grid",
       "blocks": {
@@ -281,6 +291,7 @@
     "rich_text_6aeaLY",
     "value_tabs_8xDcCx",
     "owner_spotlight_68NmAp",
+    "rich_text_YxCbPU",
     "benefits_grid_kPtDBe"
   ]
 }
