@@ -245,7 +245,7 @@
         "url_button_link": "",
         "text_button_text": "",
         "padding_top": 5,
-        "padding_bottom": 5
+        "padding_bottom": 0
       }
     },
     "rich_text_YxCbPU": {
@@ -254,8 +254,8 @@
       "settings": {
         "richtext_inhalt": "<h4>This approach significantly reduces the reseller’s internal workload: no manual checks for compatibility, no need to contact the manufacturer, and no mistakes regarding size. At the same time, it conveys a sense of professionalism to the customer – the offer comes across as well thought-out, not cobbled together.</h4>",
         "width": "narrow",
-        "padding_top": 4,
-        "padding_bottom": 4
+        "padding_top": 0,
+        "padding_bottom": 1.5
       }
     },
     "value_tabs_8xDcCx": {
