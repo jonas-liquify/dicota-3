@@ -221,7 +221,7 @@
           "type": "zitat",
           "settings": {
             "text_block_heading": "\"How is the procurement of IT equipment currently organised in your organisation – centrally via the IT procurement department or locally by the individual departments? And how much time and effort does it involve?\"",
-            "text_block_text": "— Michael Mühlenbruch"
+            "text_block_text": "— DICOTA Management"
           },
           "blocks": {}
         }
@@ -233,6 +233,7 @@
       "settings": {
         "text_heading": "Strategy for customer meetings",
         "textarea_text": "The run-rate discussion works best as a process-focused discussion, not as a product-focused one. The starting point: understanding the customer’s current procurement process.",
+        "image_image": "shopify://shop_images/Image_Management_01_square.png",
         "padding_top": 5,
         "padding_bottom": 5
       }
