@@ -188,13 +188,24 @@
             "textarea_tab_text": "USB-C hubs, HDMI adaptors, multi-port solutions – these items are always in demand, but rarely ordered proactively. They often end up as emergency purchases in retail outlets or on online platforms when an employee realises during their first meeting whilst working from home that they don’t have the right connector. Stocking these items in your standard product range fills this gap – and noticeably increases the order value."
           },
           "blocks": {}
+        },
+        "tab_meKBEP": {
+          "type": "tab",
+          "name": "Backpacks & Bags",
+          "settings": {
+            "text_tab_label": "Backpacks & Bags",
+            "text_tab_heading": "Backpacks & Bags",
+            "textarea_tab_text": "Corporate backpacks and business bags are standard items in tenders from major clients – particularly for field sales teams, consultants and hybrid workers. DICOTA offers a wide range across various price points that can be easily integrated into framework agreements."
+          },
+          "blocks": {}
         }
       },
       "block_order": [
         "tab_WtkFKC",
         "tab_EnGYGA",
         "tab_U46hmf",
-        "tab_3n6qfQ"
+        "tab_3n6qfQ",
+        "tab_meKBEP"
       ],
       "name": "Value Tabs",
       "settings": {
