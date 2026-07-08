@@ -150,7 +150,7 @@
         "collection_search_recent_limit": 6,
         "url_wishlist_link": "",
         "menu": "main-menu-d2c",
-        "transparent_over_first": true,
+        "transparent_over_first": false,
         "free_shipping_threshold": 50
       }
     }
