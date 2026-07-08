@@ -321,7 +321,7 @@
         "zitat_KtMLCt": {
           "type": "zitat",
           "settings": {
-            "text_block_heading": "\"How is the procurement of IT equipment currently organised in your organisation – centrally via the IT procurement department or locally by the individual departments? And how much time and effort does it involve?\"",
+            "text_block_heading": "\"Don’t position the bundle as an accessory, but as part of the device setup. “We supply you with a complete, policy-compliant workstation setup straight away with the device” – that sounds like a solution, not an upsell.\"",
             "text_block_text": "— DICOTA Management"
           },
           "blocks": {}
@@ -332,8 +332,8 @@
       ],
       "name": "Owner Spotlight",
       "settings": {
-        "text_heading": "Strategy for customer meetings",
-        "textarea_text": "The run-rate discussion works best as a process-focused discussion, not as a product-focused one. The starting point: understanding the customer’s current procurement process.",
+        "text_heading": "Sales tip",
+        "textarea_text": "Strategy for customer meetings\nPosition the device rollout bundle as part of the complete workplace setup — not as accessories, but as a ready-to-use, policy-compliant solution from day one.",
         "image_image": "shopify://shop_images/Image_Management_01_square.png",
         "padding_top": 5,
         "padding_bottom": 5
