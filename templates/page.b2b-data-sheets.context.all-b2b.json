@@ -12,5 +12,33 @@
     "market": "all-b2b"
   },
   "parent": "page.b2b-data-sheets.json",
-  "sections": {}
+  "sections": {
+    "product_breadcrumb_Xkfdd": {
+      "type": "product_breadcrumb",
+      "disabled": false,
+      "settings": {
+        "text_home_label": "Home",
+        "text_kollektionen_label": "Collections",
+        "text_suche_label": "Search",
+        "text_warenkorb_label": "Cart",
+        "text_404_label": "Page not found",
+        "header-b46f09d7e6d3aeea29a3d5b6dd2ea131": null,
+        "paragraph-d3cb22f9db3ff72f29be112ab16f3728": null,
+        "header-b8fdc915f00812395454c68917082245": null,
+        "padding_top": 0.5,
+        "padding_bottom": 0.5,
+        "header-be1abb0f4b53cf8d2011983e2d888584": null,
+        "bg_color": "#ffffff",
+        "text_color": "#0f0f0f"
+      },
+      "blocks": {},
+      "block_order": [],
+      "name": "Product Breadcrumb"
+    }
+  },
+  "order": [
+    "b2b_subnav",
+    "product_breadcrumb_Xkfdd",
+    "b2b_produkt_download"
+  ]
 }
