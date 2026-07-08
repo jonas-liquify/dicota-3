@@ -151,7 +151,7 @@
       "blocks": {
         "tab_WtkFKC": {
           "type": "tab",
-          "name": "Tab",
+          "name": "More Margin",
           "settings": {
             "text_tab_label": "More Margin",
             "text_tab_heading": "Margin without extra effort",
@@ -161,7 +161,7 @@
         },
         "tab_EnGYGA": {
           "type": "tab",
-          "name": "Tab",
+          "name": "Sleeves & Cases",
           "settings": {
             "text_tab_label": "Sleeves & Cases",
             "text_tab_heading": "Sleeves & Cases",
@@ -171,7 +171,7 @@
         },
         "tab_U46hmf": {
           "type": "tab",
-          "name": "Tab",
+          "name": "Locks & Security",
           "settings": {
             "text_tab_label": "Locks & Security",
             "text_tab_heading": "Locks & Security",
@@ -181,10 +181,11 @@
         },
         "tab_3n6qfQ": {
           "type": "tab",
+          "name": "Adapters & Connectivity",
           "settings": {
-            "text_tab_label": "Trust",
-            "text_tab_heading": "Trust",
-            "textarea_tab_text": "We build on long-term relationships — with customers, partners and colleagues alike."
+            "text_tab_label": "Adapters & Connectivity",
+            "text_tab_heading": "Adapters & Connectivity",
+            "textarea_tab_text": "USB-C hubs, HDMI adaptors, multi-port solutions – these items are always in demand, but rarely ordered proactively. They often end up as emergency purchases in retail outlets or on online platforms when an employee realises during their first meeting whilst working from home that they don’t have the right connector. Stocking these items in your standard product range fills this gap – and noticeably increases the order value."
           },
           "blocks": {}
         }
