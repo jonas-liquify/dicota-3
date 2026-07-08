@@ -19,16 +19,8 @@
     },
     "team_grid": {
       "type": "team_grid",
-      "blocks": {
-        "team-slide": {
-          "type": "team-slide",
-          "name": "Team Slide",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "team-slide"
-      ],
+      "blocks": {},
+      "block_order": [],
       "settings": {}
     },
     "4_up_card_slider": {
