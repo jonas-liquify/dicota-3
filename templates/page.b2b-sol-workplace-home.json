@@ -267,7 +267,7 @@
           "type": "tab",
           "name": "Employee onboarding",
           "settings": {
-            "text_tab_label": "Argument 1",
+            "text_tab_label": "Employee onboarding",
             "text_tab_heading": "Employee onboarding",
             "textarea_tab_text": "Every new hire triggers a full workplace setup. HR defines a standard package, IT adds the device, and the reseller delivers everything as a bundle – defined once, available at any time. Once this setup has been integrated into the onboarding process, there is little risk of being replaced.\nThe key lies in defining the onboarding package in collaboration with HR – not just with IT. HR focuses on the welcome kit and the employee experience; if the DICOTA package forms part of this experience, the order is secured."
           },
