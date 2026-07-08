@@ -1,0 +1,413 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "b2b_subnav": {
+      "type": "b2b_subnav",
+      "settings": {
+        "text_dummy_description": "Short description",
+        "text_punkte_label": "Current point balance:",
+        "account_menu": ""
+      }
+    },
+    "b2b_solution_header_9c4LJd": {
+      "type": "b2b_solution_header",
+      "name": "B2B Solution Header",
+      "settings": {
+        "text_subline": "B2B Solutions",
+        "text_heading_1": "Device Rollout Bundle",
+        "textarea_subheading_1": "DICOTA is the ideal partner for efficient device rollouts: high-quality backpacks, bags and sleeves provide perfect protection for new devices, while complementary IT accessories such as privacy filters, adapters, locks and workspace solutions simplify procurement, speed up deployment and ensure every device is protected, compliant and ready to use from day one.",
+        "url_hero_button_link": "",
+        "text_hero_button_text": "Become a reseller",
+        "padding_top": 4,
+        "padding_bottom": 2
+      }
+    },
+    "b2b_solution": {
+      "type": "b2b_solution",
+      "blocks": {
+        "b2b_sol_fact_1": {
+          "type": "b2b-sol-fact",
+          "settings": {
+            "text_zahl": "1,000+",
+            "text_label": "Products available"
+          },
+          "blocks": {}
+        },
+        "b2b_sol_fact_2": {
+          "type": "b2b-sol-fact",
+          "settings": {
+            "text_zahl": "1,000+",
+            "text_label": "Products available"
+          },
+          "blocks": {}
+        },
+        "b2b_sol_fact_3": {
+          "type": "b2b-sol-fact",
+          "settings": {
+            "text_zahl": "1,000+",
+            "text_label": "Products available"
+          },
+          "blocks": {}
+        },
+        "b2b-sol-referenzen": {
+          "type": "b2b-sol-referenzen",
+          "static": true,
+          "settings": {},
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "b2b_sol_fact_1",
+        "b2b_sol_fact_2",
+        "b2b_sol_fact_3"
+      ],
+      "disabled": true,
+      "settings": {
+        "url_breadcrumb_parent_link": "",
+        "text_breadcrumb_parent_label": "Solutions",
+        "text_breadcrumb": "Consignment Stock",
+        "text_subline": "B2B Solutions",
+        "text_heading_1": "Consignment Stock",
+        "textarea_subheading_1": "Describe this B2B solution: the service, the value for the reseller, and what makes it work — supported by facts, references and concrete offerings.",
+        "url_hero_button_link": "",
+        "text_hero_button_text": "Become a reseller",
+        "text_feature_subline": "Why DICOTA",
+        "text_feature_heading": "Your everyday IT accessory partner",
+        "textarea_feature_text": "Ideal partner for daily IT accessory business: 1,000+ products, fast availability from a European warehouse, 2–3 day delivery, no MOQ, strong reseller margins, high product quality, online ordering and dedicated customer support.",
+        "text_facts_heading": "Key facts",
+        "text_referenzen_heading": "",
+        "text_cta_heading": "Ready to get started?",
+        "textarea_cta_text": "Order online with fast availability and no minimum order quantity — backed by dedicated customer support.",
+        "url_cta_button_link": "",
+        "text_cta_button_text": "",
+        "breadcrumb_parent_label": "Solutions",
+        "breadcrumb_parent_link": "",
+        "padding_top": 4,
+        "padding_bottom": 4
+      }
+    },
+    "b2b_solution_feature_UnXFb6": {
+      "type": "b2b_solution_feature",
+      "name": "B2B Solution Feature",
+      "settings": {
+        "image_feature_bild": "shopify://shop_images/Blog_Image_Business_travel_in_2026_essentials_for_mobile_professionals.jpg",
+        "text_feature_subline": "",
+        "text_feature_heading": "Current situation<br>& market opportunity",
+        "textarea_feature_text": "Resellers and system integrators make their money primarily from devices – laptops, tablets and Surface products. However, the real potential for adding value lies in the accessories that come with each device. In practice, this potential is often not fully realised: accessories are treated as an afterthought, rather than as part of the offering.<br><br>\nThe Device Rollout Bundle fundamentally changes this approach. Instead of offering a sleeve, case and lock as three separate items that the customer might order, they are positioned as an integrated package – compatible with the device model, configurable as required, and ready to be added directly to the quote. The result: higher order value, less coordination effort and stronger customer loyalty.",
+        "padding_top": 2,
+        "padding_bottom": 2
+      }
+    },
+    "b2b_solution_facts_MnXDke": {
+      "type": "b2b_solution_facts",
+      "blocks": {
+        "b2b_sol_capability_LdYmLH": {
+          "type": "b2b-sol-capability",
+          "disabled": true,
+          "settings": {
+            "text_heading": "+20–30%",
+            "textarea_text": "Describe the capability — e.g. branding, doming, custom configuration or bundle."
+          },
+          "blocks": {}
+        },
+        "b2b_sol_fact_yjNgri": {
+          "type": "b2b-sol-fact",
+          "name": "3-in-1",
+          "settings": {
+            "text_zahl": "3-in-1",
+            "text_label": "Sleeve + Case + Lock in a bundle"
+          },
+          "blocks": {}
+        },
+        "b2b_sol_fact_ghexVD": {
+          "type": "b2b-sol-fact",
+          "name": "Ø +35%",
+          "settings": {
+            "text_zahl": "Ø +35%",
+            "text_label": "Higher order value compared to individual items"
+          },
+          "blocks": {}
+        },
+        "b2b_sol_fact_rw3wix": {
+          "type": "b2b-sol-fact",
+          "name": "1 SKU",
+          "settings": {
+            "text_zahl": "1 SKU",
+            "text_label": "Per device model – less listing effort"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "b2b_sol_capability_LdYmLH",
+        "b2b_sol_fact_yjNgri",
+        "b2b_sol_fact_ghexVD",
+        "b2b_sol_fact_rw3wix"
+      ],
+      "name": "B2B Solution Facts",
+      "settings": {
+        "text_facts_heading": "Key figures at a glance",
+        "padding_top": 2,
+        "padding_bottom": 2
+      }
+    },
+    "rich_text_6aeaLY": {
+      "type": "rich_text",
+      "name": "Rich Text",
+      "settings": {
+        "richtext_inhalt": "<h3><strong>THE BUNDLE IN DETAIL</strong></h3><p><strong>SLEEVE – PROTECTION FOR THE FIRST AND LAST METER</strong></p><p>The sleeve is the simplest and most common protective item in a corporate environment. It protects the device whilst being carried between the office, the home office and client meetings – and is used daily by almost all staff. DICOTA offers sleeves in all standard inch sizes (11‘ to 17’) and for all relevant brands and form factors.</p><p>In the bundle, the sleeve is the first visible item – the product that the employee holds in their hands every day. Good quality here creates a positive association with the entire package and, indirectly, with the reseller.</p><p><br/><strong>CASE – THE BAG FOR EVERYDAY PROFESSIONAL USE</strong></p><p>The case is the main bag for mobile use. In a business context, this means: space for a laptop, power adaptor, mouse, documents and other accessories – organised, robust and professional. DICOTA cases are available in various styles: from the classic briefcase format to the modern rucksack hybrid.</p><p>For resellers, the case is often the item with the highest visibility and recognition value. In corporate branding projects (see Solution 6), it is typically the first choice for logo placement.</p><p><br/><strong>LOCK – SECURITY AS AN ESSENTIAL ITEM</strong></p><p>The Kensington lock or a similar lock is explicitly required in many corporate IT policies – particularly in public sector organisations, financial services providers and healthcare organisations. Anyone who has to purchase the lock as a separate item risks compliance gaps and additional internal administrative work.<br/>When included in a bundle, the lock is the item that transforms an accessories pack into a security package. This significantly changes the pitch when speaking to IT managers: the focus is no longer on bags and cases, but on a complete, policy-compliant device setup.</p>",
+        "width": "narrow",
+        "padding_top": 4,
+        "padding_bottom": 4
+      }
+    },
+    "feature_card_grid_z43EaA": {
+      "type": "feature_card_grid",
+      "blocks": {
+        "feature-cards": {
+          "type": "feature-cards",
+          "static": true,
+          "settings": {},
+          "blocks": {
+            "feature_karte_DTVt9X": {
+              "type": "feature-karte",
+              "name": "Step 1",
+              "settings": {
+                "text_heading": "Step 1",
+                "textarea_text": "Enter the device model (e.g. Surface Pro 9, MacBook Air M3, Dell Latitude 14\")",
+                "url_button_link": "",
+                "text_button_text": ""
+              },
+              "blocks": {}
+            },
+            "feature_karte_LcRkLJ": {
+              "type": "feature-karte",
+              "name": "Step 2",
+              "settings": {
+                "text_heading": "Step 2",
+                "textarea_text": "A suitable bundle is automatically suggested – sleeve, case and lock in the correct size",
+                "url_button_link": "",
+                "text_button_text": ""
+              },
+              "blocks": {}
+            },
+            "feature_karte_jjERGN": {
+              "type": "feature-karte",
+              "name": "Step 3",
+              "settings": {
+                "text_heading": "Step 3",
+                "textarea_text": "Transfer the bundle directly into the customer quote or the ERP system – one SKU, one price",
+                "url_button_link": "",
+                "text_button_text": ""
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "feature_karte_DTVt9X",
+            "feature_karte_LcRkLJ",
+            "feature_karte_jjERGN"
+          ]
+        },
+        "stats-row": {
+          "type": "stats-row",
+          "static": true,
+          "settings": {},
+          "blocks": {
+            "stats_block_JLPkkE": {
+              "type": "stats-block",
+              "disabled": true,
+              "settings": {
+                "text_zahl": "14.2M",
+                "text_label": "Recycled PET bottles"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "stats_block_JLPkkE"
+          ]
+        }
+      },
+      "name": "Feature Card Grid",
+      "settings": {
+        "text_subline": "DICOTA Approach",
+        "text_heading": "Bundle Configurator – Logic and Process",
+        "textarea_text": "At the heart of the solution is the configurator logic: retailers enter the device model and are automatically presented with a suggested bundle – featuring the correct sizes, compatible products and a predefined package price.",
+        "url_button_link": "",
+        "text_button_text": "",
+        "padding_top": 5,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_YxCbPU": {
+      "type": "rich_text",
+      "name": "Rich Text",
+      "settings": {
+        "richtext_inhalt": "<h4>This approach significantly reduces the reseller’s internal workload: no manual checks for compatibility, no need to contact the manufacturer, and no mistakes regarding size. At the same time, it conveys a sense of professionalism to the customer – the offer comes across as well thought-out, not cobbled together.</h4>",
+        "width": "narrow",
+        "padding_top": 0,
+        "padding_bottom": 1.5
+      }
+    },
+    "value_tabs_8xDcCx": {
+      "type": "value_tabs",
+      "blocks": {
+        "tab_WtkFKC": {
+          "type": "tab",
+          "name": "Argument 1",
+          "settings": {
+            "text_tab_label": "Argument 1",
+            "text_tab_heading": "Margin without extra effort",
+            "textarea_tab_text": "Standardisation reduces follow-on costs\nIf a company rolls out 300 devices and each employee then buys their own accessories, this results in 300 different scenarios: varying quality, different retailers, uncontrollable expenditure. The bundle standardises the set-up from day one – every employee has the same equipment, of the same quality, from a controlled source."
+          },
+          "blocks": {}
+        },
+        "tab_EnGYGA": {
+          "type": "tab",
+          "name": "Argument 2",
+          "settings": {
+            "text_tab_label": "Argument 2",
+            "text_tab_heading": "Compliance is not a risk",
+            "textarea_tab_text": "The lock is not just a nice-to-have. In many regulated environments, it is mandatory. If the accessory pack includes the lock from the outset, there is no compliance gap – and no IT manager discovering, three months after the roll-out, that 200 devices are unsecured."
+          },
+          "blocks": {}
+        },
+        "tab_U46hmf": {
+          "type": "tab",
+          "name": "Argument 3",
+          "settings": {
+            "text_tab_label": "Argument 3",
+            "text_tab_heading": "A single accounting entry, no administrative burden",
+            "textarea_tab_text": "Three separate items mean three ordering processes, three deliveries, three invoices, three checks by the accounts department. A bundle SKU reduces this to a single transaction. That may sound like a minor detail – but for large companies with structured procurement processes, it’s a compelling argument."
+          },
+          "blocks": {}
+        },
+        "tab_3n6qfQ": {
+          "type": "tab",
+          "name": "Argument 4",
+          "settings": {
+            "text_tab_label": "Argument 4",
+            "text_tab_heading": "Warranty and support from a single source",
+            "textarea_tab_text": "If there’s a problem with the accessories – a broken zip, a sleeve that’s too small, a faulty lock – there’s a single point of contact: the reseller. No finger-pointing between different suppliers. No hassle for the customer in finding out who’s responsible. That’s a real service advantage that carries weight in discussions with the IT manager."
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "tab_WtkFKC",
+        "tab_EnGYGA",
+        "tab_U46hmf",
+        "tab_3n6qfQ"
+      ],
+      "name": "Sales pitch for IT buyers",
+      "settings": {
+        "text_heading": "Sales pitch for IT buyers",
+        "padding_top": 5,
+        "padding_bottom": 5
+      }
+    },
+    "owner_spotlight_68NmAp": {
+      "type": "owner_spotlight",
+      "blocks": {
+        "zitat_KtMLCt": {
+          "type": "zitat",
+          "settings": {
+            "text_block_heading": "\"Don’t position the bundle as an accessory, but as part of the device setup. “We supply you with a complete, policy-compliant workstation setup straight away with the device” – that sounds like a solution, not an upsell.\"",
+            "text_block_text": "— DICOTA Management"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "zitat_KtMLCt"
+      ],
+      "name": "Owner Spotlight",
+      "settings": {
+        "text_heading": "Sales tip",
+        "textarea_text": "Strategy for customer meetings\nPosition the device rollout bundle as part of the complete workplace setup — not as accessories, but as a ready-to-use, policy-compliant solution from day one.",
+        "image_image": "shopify://shop_images/Image_Management_01_square.png",
+        "padding_top": 5,
+        "padding_bottom": 5
+      }
+    },
+    "benefits_grid_kPtDBe": {
+      "type": "benefits_grid",
+      "blocks": {
+        "benefit_MNUn7q": {
+          "type": "benefit",
+          "name": "Benefit",
+          "settings": {
+            "text_heading": "Streamlined Processes",
+            "textarea_text": "One supplier, one order, one invoice instead of ten different sources."
+          },
+          "blocks": {}
+        },
+        "benefit_am3EMn": {
+          "type": "benefit",
+          "name": "Benefit",
+          "settings": {
+            "text_heading": "Cost Transparency",
+            "textarea_text": "Fixed prices in the framework agreement make the annual budget predictable."
+          },
+          "blocks": {}
+        },
+        "benefit_xchy3p": {
+          "type": "benefit",
+          "name": "Benefit",
+          "settings": {
+            "text_heading": "Supply Reliability",
+            "textarea_text": "Top-selling products are always in stock – no shortages during the next roll-out."
+          },
+          "blocks": {}
+        },
+        "benefit_XMTTnM": {
+          "type": "benefit",
+          "settings": {
+            "text_heading": "Compliance",
+            "textarea_text": "All DICOTA products come with full documentation – no extra work required for internal audits."
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "benefit_MNUn7q",
+        "benefit_am3EMn",
+        "benefit_xchy3p",
+        "benefit_XMTTnM"
+      ],
+      "name": "Benefits Grid",
+      "settings": {
+        "text_subline": "Why DICOTA",
+        "text_heading": "Key arguments for IT buyers",
+        "url_button_link": "",
+        "text_button_text": "",
+        "padding_top": 5,
+        "padding_bottom": 5
+      }
+    }
+  },
+  "layout": "b2b",
+  "wrapper": "main.main-wrapper",
+  "order": [
+    "b2b_subnav",
+    "b2b_solution_header_9c4LJd",
+    "b2b_solution",
+    "b2b_solution_feature_UnXFb6",
+    "b2b_solution_facts_MnXDke",
+    "rich_text_6aeaLY",
+    "feature_card_grid_z43EaA",
+    "rich_text_YxCbPU",
+    "value_tabs_8xDcCx",
+    "owner_spotlight_68NmAp",
+    "benefits_grid_kPtDBe"
+  ]
+}
