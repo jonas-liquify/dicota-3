@@ -1,0 +1,405 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "b2b_subnav": {
+      "type": "b2b_subnav",
+      "settings": {
+        "text_dummy_description": "Short description",
+        "text_punkte_label": "Current point balance:",
+        "account_menu": ""
+      }
+    },
+    "b2b_solution_header_9c4LJd": {
+      "type": "b2b_solution_header",
+      "name": "B2B Solution Header",
+      "settings": {
+        "text_subline": "B2B Solutions",
+        "text_heading_1": "Education & Public Sector",
+        "textarea_subheading_1": "DICOTA is the ideal partner for public-sector IT projects: compliant products, tender-ready documentation and reliable availability help resellers win framework agreements and build predictable long-term business with schools, authorities and municipalities.",
+        "url_hero_button_link": "shopify://pages/b2b-signup",
+        "text_hero_button_text": "Become a reseller",
+        "padding_top": 4,
+        "padding_bottom": 2
+      }
+    },
+    "b2b_solution": {
+      "type": "b2b_solution",
+      "blocks": {
+        "b2b_sol_fact_1": {
+          "type": "b2b-sol-fact",
+          "settings": {
+            "text_zahl": "1,000+",
+            "text_label": "Products available"
+          },
+          "blocks": {}
+        },
+        "b2b_sol_fact_2": {
+          "type": "b2b-sol-fact",
+          "settings": {
+            "text_zahl": "1,000+",
+            "text_label": "Products available"
+          },
+          "blocks": {}
+        },
+        "b2b_sol_fact_3": {
+          "type": "b2b-sol-fact",
+          "settings": {
+            "text_zahl": "1,000+",
+            "text_label": "Products available"
+          },
+          "blocks": {}
+        },
+        "b2b-sol-referenzen": {
+          "type": "b2b-sol-referenzen",
+          "static": true,
+          "settings": {},
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "b2b_sol_fact_1",
+        "b2b_sol_fact_2",
+        "b2b_sol_fact_3"
+      ],
+      "disabled": true,
+      "settings": {
+        "url_breadcrumb_parent_link": "",
+        "text_breadcrumb_parent_label": "Solutions",
+        "text_breadcrumb": "Consignment Stock",
+        "text_subline": "B2B Solutions",
+        "text_heading_1": "Consignment Stock",
+        "textarea_subheading_1": "Describe this B2B solution: the service, the value for the reseller, and what makes it work — supported by facts, references and concrete offerings.",
+        "url_hero_button_link": "",
+        "text_hero_button_text": "Become a reseller",
+        "text_feature_subline": "Why DICOTA",
+        "text_feature_heading": "Your everyday IT accessory partner",
+        "textarea_feature_text": "Ideal partner for daily IT accessory business: 1,000+ products, fast availability from a European warehouse, 2–3 day delivery, no MOQ, strong reseller margins, high product quality, online ordering and dedicated customer support.",
+        "text_facts_heading": "Key facts",
+        "text_referenzen_heading": "",
+        "text_cta_heading": "Ready to get started?",
+        "textarea_cta_text": "Order online with fast availability and no minimum order quantity — backed by dedicated customer support.",
+        "url_cta_button_link": "",
+        "text_cta_button_text": "",
+        "breadcrumb_parent_label": "Solutions",
+        "breadcrumb_parent_link": "",
+        "padding_top": 4,
+        "padding_bottom": 4
+      }
+    },
+    "b2b_solution_feature_UnXFb6": {
+      "type": "b2b_solution_feature",
+      "name": "B2B Solution Feature",
+      "settings": {
+        "image_feature_bild": "shopify://shop_images/Blog_Image_Business_travel_in_2026_essentials_for_mobile_professionals.jpg",
+        "text_feature_subline": "",
+        "text_feature_heading": "Current situation<br>& market opportunity",
+        "textarea_feature_text": "The public sector is one of the largest purchasers of IT equipment in every European country. Schools, universities, government departments, hospitals and local authorities – all these institutions regularly procure large quantities of equipment through structured processes. For resellers who understand this channel and meet the right criteria, it is a reliable and predictable area of business.<br><br>\nHowever, entering this market is different from the private sector: mandatory tendering, compliance requirements and formal procurement processes make it more complex – but also offer protection against unwanted competition. Once you are part of a framework agreement, you usually remain in it for several years.",
+        "padding_top": 2,
+        "padding_bottom": 2
+      }
+    },
+    "b2b_solution_facts_MnXDke": {
+      "type": "b2b_solution_facts",
+      "blocks": {
+        "b2b_sol_capability_LdYmLH": {
+          "type": "b2b-sol-capability",
+          "disabled": true,
+          "settings": {
+            "text_heading": "+20–30%",
+            "textarea_text": "Describe the capability — e.g. branding, doming, custom configuration or bundle."
+          },
+          "blocks": {}
+        },
+        "b2b_sol_fact_yjNgri": {
+          "type": "b2b-sol-fact",
+          "name": "100+",
+          "settings": {
+            "text_zahl": "100+",
+            "text_label": "Units per tender, typically"
+          },
+          "blocks": {}
+        },
+        "b2b_sol_fact_ghexVD": {
+          "type": "b2b-sol-fact",
+          "name": "3-5 Yrs",
+          "settings": {
+            "text_zahl": "3-5 Yrs",
+            "text_label": "Framework contract duration in the public sector"
+          },
+          "blocks": {}
+        },
+        "b2b_sol_fact_rw3wix": {
+          "type": "b2b-sol-fact",
+          "name": "1 SKU List",
+          "settings": {
+            "text_zahl": "1 Partner",
+            "text_label": "For equipment + accessories<br>= tender advantage"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "b2b_sol_capability_LdYmLH",
+        "b2b_sol_fact_yjNgri",
+        "b2b_sol_fact_ghexVD",
+        "b2b_sol_fact_rw3wix"
+      ],
+      "name": "B2B Solution Facts",
+      "settings": {
+        "text_facts_heading": "Key figures at a glance",
+        "padding_top": 2,
+        "padding_bottom": 2
+      }
+    },
+    "rich_text_6aeaLY": {
+      "type": "rich_text",
+      "name": "Rich Text",
+      "settings": {
+        "richtext_inhalt": "<h3></h3><h3>SEGMENT 1: EDUCATION</h3><p><strong>DIGITALISATION IN EDUCATION – STRUCTURAL TAILWIND</strong></p><p>The Digital Pact for Schools (Germany), the ‘Bildung.digital’ initiative (Switzerland) and similar programmes in other European countries have mobilised billions for the digitalisation of schools. Tablets and laptops for pupils are no longer the exception, but the norm. And with every device comes the need for robust, pupil-friendly accessories.<br/>Schools do not buy just one device – they buy 200, 500 or 2,000 devices at a time. And they need cases that are truly robust: children’s school bags are not a gentle environment. DICOTA offers products designed for the education sector – hard-wearing, easy to clean and available in a range of colours.</p><p><strong><br/>THE SCHOOL AUTHORITY AS THE KEY DECISION-MAKER</strong></p><p>In Germany and Switzerland, it is not the individual school that makes the purchase, but the school authority – that is, the local council, district or canton. This means: one decision-maker for many schools. Whoever wins over the school authority doesn’t just secure one contract, but potentially twenty.<br/>The best way to get started is via the relevant IT manager at the school authority – often a digitalisation department or an IT centre. The pitch: “We don’t just supply the devices, but the complete, documented setup including protective accessories – everything from a single source, all compliant with tender specifications.”</p><h3><br/>SEGMENT 2: PUBLIC SECTOR / GOVERNMENT AGENCIES</h3><p><strong>FRAMEWORK AGREEMENTS: THE KEY TO PREDICTABILITY</strong></p><p>Government agencies procure goods and services via framework agreements, which typically run for 3 to 5 years. During this period, products can be ordered on demand – without having to put the contract out to tender each time. For resellers, this is a goldmine: once a framework agreement has been secured, it means predictable turnover for years to come.</p><p>DICOTA supports resellers in preparing bids for framework agreements – with comprehensive product documentation, price transparency and clearly defined delivery terms. This reduces the workload for resellers and enhances the quality of their bids.</p><p><strong><br/>UNDERSTANDING AND MEETING COMPLIANCE REQUIREMENTS</strong></p><p>Public sector clients have strict requirements for their suppliers: CE marking, RoHS compliance, data protection compliance, proof of origin, sustainability certificates. These requirements are not obstacles – they are qualification criteria. Resellers who can provide this evidence qualify; all others are excluded.</p><p>DICOTA makes all relevant certificates and evidence available digitally – accessible, up-to-date and ready for immediate use in tender documents. For resellers, this means: no time spent on research, no waiting for documents, and no gaps in the documentation.<br/><br/></p>",
+        "width": "narrow",
+        "padding_top": 4,
+        "padding_bottom": 4
+      }
+    },
+    "feature_card_grid_z43EaA": {
+      "type": "feature_card_grid",
+      "blocks": {
+        "feature-cards": {
+          "type": "feature-cards",
+          "static": true,
+          "settings": {},
+          "blocks": {
+            "feature_karte_DTVt9X": {
+              "type": "feature-karte",
+              "name": "Step 1",
+              "settings": {
+                "text_heading": "Step 1",
+                "textarea_text": "Enter the device model (e.g. Surface Pro 9, MacBook Air M3, Dell Latitude 14\")",
+                "url_button_link": "",
+                "text_button_text": ""
+              },
+              "blocks": {}
+            },
+            "feature_karte_LcRkLJ": {
+              "type": "feature-karte",
+              "name": "Step 2",
+              "settings": {
+                "text_heading": "Step 2",
+                "textarea_text": "A suitable bundle is automatically suggested – sleeve, case and lock in the correct size",
+                "url_button_link": "",
+                "text_button_text": ""
+              },
+              "blocks": {}
+            },
+            "feature_karte_jjERGN": {
+              "type": "feature-karte",
+              "name": "Step 3",
+              "settings": {
+                "text_heading": "Step 3",
+                "textarea_text": "Transfer the bundle directly into the customer quote or the ERP system – one SKU, one price",
+                "url_button_link": "",
+                "text_button_text": ""
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "feature_karte_DTVt9X",
+            "feature_karte_LcRkLJ",
+            "feature_karte_jjERGN"
+          ]
+        },
+        "stats-row": {
+          "type": "stats-row",
+          "static": true,
+          "settings": {},
+          "blocks": {
+            "stats_block_JLPkkE": {
+              "type": "stats-block",
+              "disabled": true,
+              "settings": {
+                "text_zahl": "14.2M",
+                "text_label": "Recycled PET bottles"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "stats_block_JLPkkE"
+          ]
+        }
+      },
+      "disabled": true,
+      "name": "Feature Card Grid",
+      "settings": {
+        "text_subline": "DICOTA Approach",
+        "text_heading": "Bundle Configurator – Logic and Process",
+        "textarea_text": "At the heart of the solution is the configurator logic: retailers enter the device model and are automatically presented with a suggested bundle – featuring the correct sizes, compatible products and a predefined package price.",
+        "url_button_link": "",
+        "text_button_text": "",
+        "padding_top": 5,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_YxCbPU": {
+      "type": "rich_text",
+      "disabled": true,
+      "name": "Rich Text",
+      "settings": {
+        "richtext_inhalt": "<h4>This approach significantly reduces the reseller’s internal workload: no manual checks for compatibility, no need to contact the manufacturer, and no mistakes regarding size. At the same time, it conveys a sense of professionalism to the customer – the offer comes across as well thought-out, not cobbled together.</h4>",
+        "width": "narrow",
+        "padding_top": 0,
+        "padding_bottom": 1.5
+      }
+    },
+    "benefits_grid_kPtDBe": {
+      "type": "benefits_grid",
+      "blocks": {
+        "benefit_MNUn7q": {
+          "type": "benefit",
+          "name": "Benefit",
+          "settings": {
+            "text_heading": "CE certificates and RoHS declarations",
+            "textarea_text": "of conformity for all relevant products"
+          },
+          "blocks": {}
+        },
+        "benefit_am3EMn": {
+          "type": "benefit",
+          "name": "Benefit",
+          "settings": {
+            "text_heading": "Technical data sheets",
+            "textarea_text": "in a format compliant with tender requirements – can be copied directly into the specifications"
+          },
+          "blocks": {}
+        },
+        "benefit_xchy3p": {
+          "type": "benefit",
+          "name": "Benefit",
+          "settings": {
+            "text_heading": "Compatibility Matrix",
+            "textarea_text": "which DICOTA product is suitable for which device – by make and model"
+          },
+          "blocks": {}
+        },
+        "benefit_XMTTnM": {
+          "type": "benefit",
+          "settings": {
+            "text_heading": "Sustainability certificates (GRS, Bluesign)",
+            "textarea_text": "for tenders with Green IT criteria"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "benefit_MNUn7q",
+        "benefit_am3EMn",
+        "benefit_xchy3p",
+        "benefit_XMTTnM"
+      ],
+      "name": "Benefits Grid",
+      "settings": {
+        "text_subline": "What DICOTA provides for the tender",
+        "text_heading": "Tender documentation pack",
+        "url_button_link": "",
+        "text_button_text": "",
+        "padding_top": 5,
+        "padding_bottom": 5
+      }
+    },
+    "value_tabs_8xDcCx": {
+      "type": "value_tabs",
+      "blocks": {
+        "tab_WtkFKC": {
+          "type": "tab",
+          "name": "Employee onboarding",
+          "settings": {
+            "text_tab_label": "Employee onboarding",
+            "text_tab_heading": "Employee onboarding",
+            "textarea_tab_text": "Every new hire triggers a full workplace setup. HR defines a standard package, IT adds the device, and the reseller delivers everything as a bundle – defined once, available at any time. Once this setup has been integrated into the onboarding process, there is little risk of being replaced.\nThe key lies in defining the onboarding package in collaboration with HR – not just with IT. HR focuses on the welcome kit and the employee experience; if the DICOTA package forms part of this experience, the order is secured."
+          },
+          "blocks": {}
+        },
+        "tab_EnGYGA": {
+          "type": "tab",
+          "name": "Office Relocations and Refurbishments",
+          "settings": {
+            "text_tab_label": "Office Relocations and Refurbishments",
+            "text_tab_heading": "Office Relocations and Refurbishments",
+            "textarea_tab_text": "When companies relocate or modernise their office spaces, new workstations require new accessories. Resellers often overlook this opportunity because it doesn’t feature in the traditional IT procurement calendar. A quick check-in with the facilities manager or senior management – “Are you planning any refurbishments in the next 12 months?” – can lead to an unexpectedly large order."
+          },
+          "blocks": {}
+        },
+        "tab_U46hmf": {
+          "type": "tab",
+          "name": "Roll-out of the home working policy",
+          "settings": {
+            "text_tab_label": "Roll-out of the home working policy",
+            "text_tab_heading": "Roll-out of the home working policy",
+            "textarea_tab_text": "Since 2022, many companies have introduced formal home working policies that also set out a standard for equipping the home office. There is often a fixed per-person budget – around 200 to 500 euros – which employees can use to set up their home office. DICOTA packages fit perfectly into this budget framework: defined contents, a clear price, and simple invoicing."
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "tab_WtkFKC",
+        "tab_EnGYGA",
+        "tab_U46hmf"
+      ],
+      "disabled": true,
+      "name": "Sales pitch for IT buyers",
+      "settings": {
+        "text_heading": "Typical reasons for placing orders in detail",
+        "padding_top": 5,
+        "padding_bottom": 5
+      }
+    },
+    "owner_spotlight_68NmAp": {
+      "type": "owner_spotlight",
+      "blocks": {
+        "zitat_KtMLCt": {
+          "type": "zitat",
+          "settings": {
+            "text_block_heading": "\"Show the client that you understand the process. Mention specific qualifications, explain the tender documentation, and offer to help prepare the tender documents together. This demonstrates competence – and in the public sector, competence counts for more than price.\"",
+            "text_block_text": "— DICOTA Management"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "zitat_KtMLCt"
+      ],
+      "name": "Owner Spotlight",
+      "settings": {
+        "text_heading": "The most important tip for breaking into the public sector",
+        "textarea_text": "Show that you understand the tender process: reference the required certificates, explain the documentation package and offer to support the tender preparation.",
+        "image_image": "shopify://shop_images/Image_Management_01_square.png",
+        "padding_top": 5,
+        "padding_bottom": 5
+      }
+    }
+  },
+  "layout": "b2b",
+  "wrapper": "main.main-wrapper",
+  "order": [
+    "b2b_subnav",
+    "b2b_solution_header_9c4LJd",
+    "b2b_solution",
+    "b2b_solution_feature_UnXFb6",
+    "b2b_solution_facts_MnXDke",
+    "rich_text_6aeaLY",
+    "feature_card_grid_z43EaA",
+    "rich_text_YxCbPU",
+    "benefits_grid_kPtDBe",
+    "value_tabs_8xDcCx",
+    "owner_spotlight_68NmAp"
+  ]
+}
