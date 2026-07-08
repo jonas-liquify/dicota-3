@@ -17,6 +17,19 @@
         "account_menu": ""
       }
     },
+    "b2b_solution_header_9c4LJd": {
+      "type": "b2b_solution_header",
+      "name": "B2B Solution Header",
+      "settings": {
+        "text_subline": "B2B Solutions",
+        "text_heading_1": "Solution name",
+        "textarea_subheading_1": "Describe this B2B solution: the service, the value for the reseller, and what makes it work — supported by facts, references and concrete offerings.",
+        "url_hero_button_link": "",
+        "text_hero_button_text": "Become a reseller",
+        "padding_top": 4,
+        "padding_bottom": 2
+      }
+    },
     "b2b_solution": {
       "type": "b2b_solution",
       "blocks": {
@@ -44,26 +57,6 @@
           },
           "blocks": {}
         },
-        "b2b_sol_referenz_1": {
-          "type": "b2b-sol-referenz",
-          "settings": {},
-          "blocks": {}
-        },
-        "b2b_sol_referenz_2": {
-          "type": "b2b-sol-referenz",
-          "settings": {},
-          "blocks": {}
-        },
-        "b2b_sol_referenz_3": {
-          "type": "b2b-sol-referenz",
-          "settings": {},
-          "blocks": {}
-        },
-        "b2b_sol_referenz_4": {
-          "type": "b2b-sol-referenz",
-          "settings": {},
-          "blocks": {}
-        },
         "b2b-sol-referenzen": {
           "type": "b2b-sol-referenzen",
           "static": true,
@@ -74,12 +67,9 @@
       "block_order": [
         "b2b_sol_fact_1",
         "b2b_sol_fact_2",
-        "b2b_sol_fact_3",
-        "b2b_sol_referenz_1",
-        "b2b_sol_referenz_2",
-        "b2b_sol_referenz_3",
-        "b2b_sol_referenz_4"
+        "b2b_sol_fact_3"
       ],
+      "disabled": true,
       "settings": {
         "url_breadcrumb_parent_link": "",
         "text_breadcrumb_parent_label": "Solutions",
@@ -93,26 +83,67 @@
         "text_feature_heading": "Your everyday IT accessory partner",
         "textarea_feature_text": "Ideal partner for daily IT accessory business: 1,000+ products, fast availability from a European warehouse, 2–3 day delivery, no MOQ, strong reseller margins, high product quality, online ordering and dedicated customer support.",
         "text_facts_heading": "Key facts",
-        "text_referenzen_heading": "Trusted by",
+        "text_referenzen_heading": "",
         "text_cta_heading": "Ready to get started?",
         "textarea_cta_text": "Order online with fast availability and no minimum order quantity — backed by dedicated customer support.",
         "url_cta_button_link": "",
-        "text_cta_button_text": "Start ordering",
+        "text_cta_button_text": "",
         "breadcrumb_parent_label": "Solutions",
         "breadcrumb_parent_link": "",
         "padding_top": 4,
         "padding_bottom": 4
       }
     },
-    "b2b_link_hub_header_hcbU3U": {
-      "type": "b2b_link_hub_header",
-      "name": "B2B Link Hub Header",
+    "b2b_solution_feature_UnXFb6": {
+      "type": "b2b_solution_feature",
+      "name": "B2B Solution Feature",
       "settings": {
-        "text_subline": "B2B Solutions",
-        "text_heading": "Solutions for every business need",
-        "textarea_subheading": "DICOTA's services, expertise, and portfolio through clear B2B-focused storytelling — supported by facts, references, and concrete product offerings.",
-        "padding_top": 4,
+        "text_feature_subline": "Why DICOTA",
+        "text_feature_heading": "Your everyday IT accessory partner",
+        "textarea_feature_text": "Ideal partner for daily IT accessory business: 1,000+ products, fast availability from a European warehouse, 2–3 day delivery, no MOQ, strong reseller margins, high product quality, online ordering and dedicated customer support.",
+        "padding_top": 2,
         "padding_bottom": 2
+      }
+    },
+    "b2b_solution_facts_MnXDke": {
+      "type": "b2b_solution_facts",
+      "blocks": {
+        "b2b_sol_fact_yjNgri": {
+          "type": "b2b-sol-fact",
+          "settings": {
+            "text_zahl": "1,000+",
+            "text_label": "Products available"
+          },
+          "blocks": {}
+        },
+        "b2b_sol_capability_LdYmLH": {
+          "type": "b2b-sol-capability",
+          "settings": {
+            "text_heading": "Capability title",
+            "textarea_text": "Describe the capability — e.g. branding, doming, custom configuration or bundle."
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "b2b_sol_fact_yjNgri",
+        "b2b_sol_capability_LdYmLH"
+      ],
+      "name": "B2B Solution Facts",
+      "settings": {
+        "text_facts_heading": "Key facts",
+        "padding_top": 2,
+        "padding_bottom": 2
+      }
+    },
+    "rich_text_6aeaLY": {
+      "type": "rich_text",
+      "name": "Rich Text",
+      "settings": {
+        "richtext_inhalt": "<p><strong>AVAILABILITY AS A PROMISE<br/></strong><br/>In the key account business, the ability to deliver is not an option, but a fundamental requirement. If an IT manager rolls out 200 laptops and realises three days later that the cases are not available, this is not just a logistical problem – it undermines trust in the entire supply chain. DICOTA keeps its 50 top-selling products permanently in stock and guarantees short delivery times, even for larger quantities.<br/>For retailers, this means they can make binding commitments to their major clients – and actually keep them. That is the difference between a supplier and a partner.</p>",
+        "width": "narrow",
+        "padding_top": 4,
+        "padding_bottom": 4
       }
     }
   },
@@ -120,7 +151,10 @@
   "wrapper": "main.main-wrapper",
   "order": [
     "b2b_subnav",
+    "b2b_solution_header_9c4LJd",
     "b2b_solution",
-    "b2b_link_hub_header_hcbU3U"
+    "b2b_solution_feature_UnXFb6",
+    "b2b_solution_facts_MnXDke",
+    "rich_text_6aeaLY"
   ]
 }
