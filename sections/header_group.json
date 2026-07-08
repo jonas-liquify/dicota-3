@@ -14,6 +14,22 @@
     "announcement_bar_YPJcxP": {
       "type": "announcement_bar",
       "blocks": {
+        "usp_UjjLKy": {
+          "type": "usp",
+          "name": "USP",
+          "settings": {
+            "text_text": "Free shipping over 49 EUR"
+          },
+          "blocks": {}
+        },
+        "usp_XJyaDj": {
+          "type": "usp",
+          "name": "USP",
+          "settings": {
+            "text_text": "Free shipping over 100 EUR"
+          },
+          "blocks": {}
+        },
         "usp_Cw4kWR": {
           "type": "usp",
           "name": "USP",
@@ -30,7 +46,7 @@
             "url_reseller_button_link": ""
           },
           "blocks": {
-            "link_XQNWmp": {
+            "link_bmpV8z": {
               "type": "link",
               "name": "Link",
               "settings": {
@@ -52,12 +68,14 @@
             }
           },
           "block_order": [
-            "link_XQNWmp",
+            "link_bmpV8z",
             "link_enBgib"
           ]
         }
       },
       "block_order": [
+        "usp_UjjLKy",
+        "usp_XJyaDj",
         "usp_Cw4kWR"
       ],
       "name": "Announcement Bar",

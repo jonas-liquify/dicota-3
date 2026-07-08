@@ -18,6 +18,13 @@
         "menu": "main-menu-reseller"
       },
       "blocks": {}
+    },
+    "announcement_bar": {
+      "settings": {
+        "text_reseller_button": "for End Customers",
+        "url_reseller_button_link": "/"
+      },
+      "blocks": {}
     }
   }
 }
