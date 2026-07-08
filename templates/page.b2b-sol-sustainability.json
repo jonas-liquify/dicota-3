@@ -308,7 +308,7 @@
       "name": "Benefits Grid",
       "settings": {
         "text_subline": "What DICOTA provides for the tender",
-        "text_heading": "Tender documentation pack",
+        "text_heading": "Conversation starters for sales",
         "url_button_link": "",
         "text_button_text": "",
         "padding_top": 5,
@@ -365,22 +365,52 @@
     "owner_spotlight_68NmAp": {
       "type": "owner_spotlight",
       "blocks": {
+        "zitat_JhUqLp": {
+          "type": "zitat",
+          "name": "Zitat",
+          "settings": {
+            "text_block_heading": "\"Do you already have an approved supplier for IT accessories in your ESG supply chain? DICOTA is certified and automatically provides all the necessary documentation.\"",
+            "text_block_text": ""
+          },
+          "blocks": {}
+        },
+        "zitat_bqKnHU": {
+          "type": "zitat",
+          "name": "Zitat",
+          "settings": {
+            "text_block_heading": "\"In your next tender, sustainability criteria often account for 20–30 per cent of the overall score. With DICOTA, you can meet these criteria in a documented and verifiable manner.\"",
+            "text_block_text": ""
+          },
+          "blocks": {}
+        },
+        "zitat_mEKXkc": {
+          "type": "zitat",
+          "name": "Zitat",
+          "settings": {
+            "text_block_heading": "\"Your Scope 3 reporting requires CO₂ data for procurement – we can provide you with these figures per unit ordered.\"",
+            "text_block_text": ""
+          },
+          "blocks": {}
+        },
         "zitat_KtMLCt": {
           "type": "zitat",
           "settings": {
-            "text_block_heading": "\"Show the client that you understand the process. Mention specific qualifications, explain the tender documentation, and offer to help prepare the tender documents together. This demonstrates competence – and in the public sector, competence counts for more than price.\"",
+            "text_block_heading": "\"May I show you our sustainability data sheet? It could be directly usable for your next ESG report.\"",
             "text_block_text": "— DICOTA Management"
           },
           "blocks": {}
         }
       },
       "block_order": [
+        "zitat_JhUqLp",
+        "zitat_bqKnHU",
+        "zitat_mEKXkc",
         "zitat_KtMLCt"
       ],
       "name": "Owner Spotlight",
       "settings": {
-        "text_heading": "The most important tip for breaking into the public sector",
-        "textarea_text": "Show that you understand the tender process: reference the required certificates, explain the documentation package and offer to support the tender preparation.",
+        "text_heading": "Conversation starters for sales",
+        "textarea_text": "\"Do you already have an approved supplier for IT accessories in your ESG supply chain? DICOTA is certified and automatically provides all the necessary documentation.\"",
         "image_image": "shopify://shop_images/Image_Management_01_square.png",
         "padding_top": 5,
         "padding_bottom": 5
