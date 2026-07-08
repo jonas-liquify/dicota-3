@@ -554,67 +554,25 @@
     },
     "faq_accordion_6xnCFe": {
       "type": "faq_accordion",
-      "name": "FAQ Accordion",
-      "settings": {
-        "text_heading": "Frequently asked questions",
-        "textarea_text": "If you have questions about applying, the selection process or getting started — we have answers.",
-        "padding_top": 5,
-        "padding_bottom": 5
-      }
-    },
-    "team_grid_4a6jiw": {
-      "type": "team_grid",
       "blocks": {
-        "team_karte_pRHaAT": {
-          "type": "team-karte",
-          "name": "Team Karte",
+        "faq_kategorie_GzfQQt": {
+          "type": "faq-kategorie",
+          "name": "FAQ Kategorie",
           "settings": {
-            "text_heading": "Diversity",
-            "textarea_text": "Different backgrounds make us stronger — together we think further."
-          },
-          "blocks": {}
-        },
-        "team_karte_A8NcV6": {
-          "type": "team-karte",
-          "name": "Team Karte",
-          "settings": {
-            "text_heading": "Diversity",
-            "textarea_text": "Different backgrounds make us stronger — together we think further."
-          },
-          "blocks": {}
-        },
-        "team_karte_QjPmUg": {
-          "type": "team-karte",
-          "name": "Team Karte",
-          "settings": {
-            "text_heading": "Diversity",
-            "textarea_text": "Different backgrounds make us stronger — together we think further."
-          },
-          "blocks": {}
-        },
-        "team_karte_9ywkpy": {
-          "type": "team-karte",
-          "name": "Team Karte",
-          "settings": {
-            "text_heading": "Diversity",
-            "textarea_text": "Different backgrounds make us stronger — together we think further."
+            "text_kategorie_titel": "General questions",
+            "faq_set": "privacy-filters-magnatic",
+            "faq_entries": []
           },
           "blocks": {}
         }
       },
       "block_order": [
-        "team_karte_pRHaAT",
-        "team_karte_A8NcV6",
-        "team_karte_QjPmUg",
-        "team_karte_9ywkpy"
+        "faq_kategorie_GzfQQt"
       ],
-      "name": "Team Grid",
+      "name": "FAQ Accordion",
       "settings": {
-        "text_heading": "The team behind DICOTA",
-        "textarea_text": "Over 100 colleagues worldwide share the passion to better equip mobile professionals. Get to know them.",
-        "image_bild": "shopify://shop_images/Blog_Imag_Why_Laptop_Protection_matters_for_students.jpg",
-        "url_button_link": "",
-        "text_button_text": "More about us",
+        "text_heading": "Frequently asked questions",
+        "textarea_text": "If you have questions about applying, the selection process or getting started — we have answers.",
         "padding_top": 5,
         "padding_bottom": 5
       }
@@ -636,7 +594,6 @@
     "loved_by_customers",
     "sustainability_banne",
     "testimonials",
-    "faq_accordion_6xnCFe",
-    "team_grid_4a6jiw"
+    "faq_accordion_6xnCFe"
   ]
 }

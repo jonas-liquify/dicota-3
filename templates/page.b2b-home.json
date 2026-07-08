@@ -1,112 +1,138 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
-    "sections": {
-        "b2b_tpl_welcome_hero": {
-            "type": "b2b_tpl_welcome_hero"
-        },
-        "b2b_tpl_welcome_crds": {
-            "type": "b2b_tpl_welcome_crds",
-            "blocks": {
-                "b2b-welcome-karte": {
-                    "type": "b2b-welcome-karte",
-                    "name": "B2B Welcome Karte"
-                }
-            },
-            "block_order": [
-                "b2b-welcome-karte"
-            ]
-        },
-        "b2b_tpl_card_grid": {
-            "type": "b2b_tpl_card_grid",
-            "blocks": {
-                "b2b-tpl-karte": {
-                    "type": "b2b-tpl-karte",
-                    "name": "B2B Tpl Karte"
-                }
-            },
-            "block_order": [
-                "b2b-tpl-karte"
-            ]
-        },
-        "b2b_tpl_distri_tabs": {
-            "type": "b2b_tpl_distri_tabs",
-            "blocks": {
-                "b2b-tpl-tab": {
-                    "type": "b2b-tpl-tab",
-                    "name": "B2B Tpl Tab"
-                },
-                "b2b-tpl-panes": {
-                    "name": "B2B Tpl Panes",
-                    "type": "b2b-tpl-panes",
-                    "static": true,
-                    "blocks": {
-                        "b2b-tpl-tab-pane": {
-                            "type": "b2b-tpl-tab-pane",
-                            "name": "B2B Tpl Tab Pane"
-                        }
-                    },
-                    "block_order": [
-                        "b2b-tpl-tab-pane"
-                    ]
-                }
-            },
-            "block_order": [
-                "b2b-tpl-tab"
-            ]
-        },
-        "b2b_hub_featured": {
-            "type": "b2b_hub_featured"
-        },
-        "b2b_hub_banner": {
-            "type": "b2b_hub_banner"
-        },
-        "b2b_hub_quicklinks": {
-            "type": "b2b_hub_quicklinks",
-            "blocks": {
-                "b2b-quicklink": {
-                    "type": "b2b-quicklink",
-                    "name": "B2B Quicklink"
-                }
-            },
-            "block_order": [
-                "b2b-quicklink"
-            ]
-        },
-        "b2b_tpl_news_highl": {
-            "type": "b2b_tpl_news_highl",
-            "blocks": {
-                "b2b-tpl-news-karte": {
-                    "type": "b2b-tpl-news-karte",
-                    "name": "B2B Tpl News Karte"
-                }
-            },
-            "block_order": [
-                "b2b-tpl-news-karte"
-            ]
-        },
-        "b2b_tpl_news_list": {
-            "type": "b2b_tpl_news_list",
-            "blocks": {
-                "b2b-tpl-list-eintr": {
-                    "type": "b2b-tpl-list-eintr",
-                    "name": "B2B Tpl List Eintr"
-                }
-            },
-            "block_order": [
-                "b2b-tpl-list-eintr"
-            ]
-        }
+  "sections": {
+    "b2b_tpl_welcome_hero": {
+      "type": "b2b_tpl_welcome_hero",
+      "settings": {}
     },
-    "layout": "b2b",
-    "wrapper": "main.main-wrapper",
-    "order": [
-        "b2b_tpl_welcome_hero",
-        "b2b_tpl_welcome_crds",
-        "b2b_tpl_card_grid",
-        "b2b_tpl_distri_tabs",
-        "b2b_hub_featured",
-        "b2b_hub_banner",
-        "b2b_hub_quicklinks",
-        "b2b_tpl_news_highl",
-        "b2b_tpl_news_list"
-    ]
+    "b2b_tpl_welcome_crds": {
+      "type": "b2b_tpl_welcome_crds",
+      "blocks": {
+        "b2b-welcome-karte": {
+          "type": "b2b-welcome-karte",
+          "name": "B2B Welcome Karte",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "b2b-welcome-karte"
+      ],
+      "settings": {}
+    },
+    "b2b_tpl_card_grid": {
+      "type": "b2b_tpl_card_grid",
+      "blocks": {
+        "b2b-tpl-karte": {
+          "type": "b2b-tpl-karte",
+          "name": "B2B Tpl Karte",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "b2b-tpl-karte"
+      ],
+      "settings": {}
+    },
+    "b2b_tpl_distri_tabs": {
+      "type": "b2b_tpl_distri_tabs",
+      "blocks": {
+        "b2b-tpl-tab": {
+          "type": "b2b-tpl-tab",
+          "name": "B2B Tpl Tab",
+          "settings": {}
+        },
+        "b2b-tpl-panes": {
+          "type": "b2b-tpl-panes",
+          "name": "B2B Tpl Panes",
+          "static": true,
+          "settings": {},
+          "blocks": {
+            "b2b-tpl-tab-pane": {
+              "type": "b2b-tpl-tab-pane",
+              "name": "B2B Tpl Tab Pane",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "b2b-tpl-tab-pane"
+          ]
+        }
+      },
+      "block_order": [
+        "b2b-tpl-tab"
+      ],
+      "settings": {}
+    },
+    "b2b_hub_featured": {
+      "type": "b2b_hub_featured",
+      "settings": {}
+    },
+    "b2b_hub_banner": {
+      "type": "b2b_hub_banner",
+      "settings": {}
+    },
+    "b2b_hub_quicklinks": {
+      "type": "b2b_hub_quicklinks",
+      "blocks": {
+        "b2b-quicklink": {
+          "type": "b2b-quicklink",
+          "name": "B2B Quicklink",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "b2b-quicklink"
+      ],
+      "settings": {}
+    },
+    "b2b_tpl_news_highl": {
+      "type": "b2b_tpl_news_highl",
+      "blocks": {
+        "b2b-tpl-news-karte": {
+          "type": "b2b-tpl-news-karte",
+          "name": "B2B Tpl News Karte",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "b2b-tpl-news-karte"
+      ],
+      "settings": {}
+    },
+    "b2b_tpl_news_list": {
+      "type": "b2b_tpl_news_list",
+      "blocks": {
+        "b2b-tpl-list-eintr": {
+          "type": "b2b-tpl-list-eintr",
+          "name": "B2B Tpl List Eintr",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "b2b-tpl-list-eintr"
+      ],
+      "settings": {}
+    }
+  },
+  "layout": "b2b",
+  "wrapper": "main.main-wrapper",
+  "order": [
+    "b2b_tpl_welcome_hero",
+    "b2b_tpl_welcome_crds",
+    "b2b_tpl_card_grid",
+    "b2b_tpl_distri_tabs",
+    "b2b_hub_featured",
+    "b2b_hub_banner",
+    "b2b_hub_quicklinks",
+    "b2b_tpl_news_highl",
+    "b2b_tpl_news_list"
+  ]
 }

@@ -1,72 +1,93 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
-    "sections": {
-        "b2b_subnav": {
-            "type": "b2b_subnav"
-        },
-        "b2b_link_hub_header": {
-            "type": "b2b_link_hub_header"
-        },
-        "b2b_link_hub_cards": {
-            "type": "b2b_link_hub_cards",
-            "blocks": {
-                "b2b-hub-card": {
-                    "type": "b2b-hub-card",
-                    "name": "B2B Hub Card"
-                }
-            },
-            "block_order": [
-                "b2b-hub-card"
-            ]
-        },
-        "b2b_hub_banner": {
-            "type": "b2b_hub_banner"
-        },
-        "b2b_solution_header": {
-            "type": "b2b_solution_header"
-        },
-        "b2b_solution_feature": {
-            "type": "b2b_solution_feature"
-        },
-        "b2b_solution_facts": {
-            "type": "b2b_solution_facts",
-            "blocks": {
-                "b2b-sol-fact": {
-                    "type": "b2b-sol-fact",
-                    "name": "B2B Sol Fact"
-                },
-                "b2b-sol-capability": {
-                    "type": "b2b-sol-capability",
-                    "name": "B2B Sol Capability"
-                }
-            },
-            "block_order": [
-                "b2b-sol-fact",
-                "b2b-sol-capability"
-            ]
-        },
-        "b2b_solution_referen": {
-            "type": "b2b_solution_referen",
-            "blocks": {
-                "b2b-sol-referenz": {
-                    "type": "b2b-sol-referenz",
-                    "name": "B2B Sol Referenz"
-                }
-            },
-            "block_order": [
-                "b2b-sol-referenz"
-            ]
-        }
+  "sections": {
+    "b2b_subnav": {
+      "type": "b2b_subnav",
+      "settings": {}
     },
-    "layout": "b2b",
-    "wrapper": "main.main-wrapper",
-    "order": [
-        "b2b_subnav",
-        "b2b_link_hub_header",
-        "b2b_link_hub_cards",
-        "b2b_hub_banner",
-        "b2b_solution_header",
-        "b2b_solution_feature",
-        "b2b_solution_facts",
-        "b2b_solution_referen"
-    ]
+    "b2b_link_hub_header": {
+      "type": "b2b_link_hub_header",
+      "settings": {}
+    },
+    "b2b_link_hub_cards": {
+      "type": "b2b_link_hub_cards",
+      "blocks": {
+        "b2b-hub-card": {
+          "type": "b2b-hub-card",
+          "name": "B2B Hub Card",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "b2b-hub-card"
+      ],
+      "settings": {}
+    },
+    "b2b_hub_banner": {
+      "type": "b2b_hub_banner",
+      "settings": {}
+    },
+    "b2b_solution_header": {
+      "type": "b2b_solution_header",
+      "settings": {}
+    },
+    "b2b_solution_feature": {
+      "type": "b2b_solution_feature",
+      "settings": {}
+    },
+    "b2b_solution_facts": {
+      "type": "b2b_solution_facts",
+      "blocks": {
+        "b2b-sol-fact": {
+          "type": "b2b-sol-fact",
+          "name": "B2B Sol Fact",
+          "settings": {}
+        },
+        "b2b-sol-capability": {
+          "type": "b2b-sol-capability",
+          "name": "B2B Sol Capability",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "b2b-sol-fact",
+        "b2b-sol-capability"
+      ],
+      "settings": {}
+    },
+    "b2b_solution_referen": {
+      "type": "b2b_solution_referen",
+      "blocks": {
+        "b2b-sol-referenz": {
+          "type": "b2b-sol-referenz",
+          "name": "B2B Sol Referenz",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "b2b-sol-referenz"
+      ],
+      "settings": {}
+    }
+  },
+  "layout": "b2b",
+  "wrapper": "main.main-wrapper",
+  "order": [
+    "b2b_subnav",
+    "b2b_link_hub_header",
+    "b2b_link_hub_cards",
+    "b2b_hub_banner",
+    "b2b_solution_header",
+    "b2b_solution_feature",
+    "b2b_solution_facts",
+    "b2b_solution_referen"
+  ]
 }
