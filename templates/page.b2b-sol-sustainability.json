@@ -22,7 +22,7 @@
       "name": "B2B Solution Header",
       "settings": {
         "text_subline": "B2B Solutions",
-        "text_heading_1": "Education & Public Sector",
+        "text_heading_1": "Sustainability & Green Procurement",
         "textarea_subheading_1": "DICOTA is the ideal partner for public-sector IT projects: compliant products, tender-ready documentation and reliable availability help resellers win framework agreements and build predictable long-term business with schools, authorities and municipalities.",
         "url_hero_button_link": "shopify://pages/b2b-signup",
         "text_hero_button_text": "Become a reseller",
@@ -100,8 +100,8 @@
       "settings": {
         "image_feature_bild": "shopify://shop_images/Blog_Image_Business_travel_in_2026_essentials_for_mobile_professionals.jpg",
         "text_feature_subline": "",
-        "text_feature_heading": "Current situation<br>& market opportunity",
-        "textarea_feature_text": "The public sector is one of the largest purchasers of IT equipment in every European country. Schools, universities, government departments, hospitals and local authorities – all these institutions regularly procure large quantities of equipment through structured processes. For resellers who understand this channel and meet the right criteria, it is a reliable and predictable area of business.<br><br>\nHowever, entering this market is different from the private sector: mandatory tendering, compliance requirements and formal procurement processes make it more complex – but also offer protection against unwanted competition. Once you are part of a framework agreement, you usually remain in it for several years.",
+        "text_feature_heading": "Current situation& market opportunity",
+        "textarea_feature_text": "ESG – Environmental, Social, Governance – is no longer just a marketing term. It is a regulatory framework that imposes binding requirements on companies across Europe. From 2025, the EU’s Corporate Sustainability Reporting Directive (CSRD) will require thousands of companies to provide detailed sustainability reporting – including Scope 3 emissions, which cover the entire supply chain.<br><br>\nFor IT resellers, this means that their major clients will increasingly be asking what evidence of sustainability their suppliers can provide. Those unable to answer this question risk being removed from supplier lists. Those who provide a convincing answer will gain points in the procurement process and strengthen their partnership.",
         "padding_top": 2,
         "padding_bottom": 2
       }
