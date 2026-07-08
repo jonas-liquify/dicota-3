@@ -576,62 +576,6 @@
         "padding_top": 5,
         "padding_bottom": 5
       }
-    },
-    "team_grid_h8wgCg": {
-      "type": "team_grid",
-      "blocks": {
-        "team_karte_wNfwyw": {
-          "type": "team-karte",
-          "name": "Team Karte",
-          "settings": {
-            "text_heading": "Diversity",
-            "textarea_text": "Different backgrounds make us stronger — together we think further."
-          },
-          "blocks": {}
-        },
-        "team_karte_r9Ct34": {
-          "type": "team-karte",
-          "name": "Team Karte",
-          "settings": {
-            "text_heading": "Diversity",
-            "textarea_text": "Different backgrounds make us stronger — together we think further."
-          },
-          "blocks": {}
-        },
-        "team_karte_BNYWh8": {
-          "type": "team-karte",
-          "name": "Team Karte",
-          "settings": {
-            "text_heading": "Diversity",
-            "textarea_text": "Different backgrounds make us stronger — together we think further."
-          },
-          "blocks": {}
-        },
-        "team_karte_HyX9tk": {
-          "type": "team-karte",
-          "settings": {
-            "text_heading": "Diversity",
-            "textarea_text": "Different backgrounds make us stronger — together we think further."
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "team_karte_wNfwyw",
-        "team_karte_r9Ct34",
-        "team_karte_BNYWh8",
-        "team_karte_HyX9tk"
-      ],
-      "name": "Team Grid",
-      "settings": {
-        "text_heading": "The team behind DICOTA",
-        "textarea_text": "Over 100 colleagues worldwide share the passion to better equip mobile professionals. Get to know them.",
-        "image_bild": "shopify://shop_images/Blog_Image_Elegance_by_Eco-Design_how_sustainable_materials_influence_product_design.jpg",
-        "url_button_link": "",
-        "text_button_text": "More about us",
-        "padding_top": 5,
-        "padding_bottom": 5
-      }
     }
   },
   "layout": "theme",
@@ -650,7 +594,6 @@
     "loved_by_customers",
     "sustainability_banne",
     "testimonials",
-    "faq_accordion_6xnCFe",
-    "team_grid_h8wgCg"
+    "faq_accordion_6xnCFe"
   ]
 }
