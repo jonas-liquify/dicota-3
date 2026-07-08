@@ -120,27 +120,28 @@
         },
         "b2b_sol_fact_yjNgri": {
           "type": "b2b-sol-fact",
+          "name": "3-in-1",
           "settings": {
             "text_zahl": "3-in-1",
             "text_label": "Sleeve + Case + Lock in a bundle"
           },
           "blocks": {}
         },
-        "b2b_sol_fact_ghexVD": {
+        "b2b_sol_fact_rw3wix": {
           "type": "b2b-sol-fact",
-          "name": "B2B Sol Fact",
+          "name": "Ø +35%",
           "settings": {
             "text_zahl": "Ø +35%",
             "text_label": "Higher order value compared to individual items"
           },
           "blocks": {}
         },
-        "b2b_sol_fact_rw3wix": {
+        "b2b_sol_fact_ghexVD": {
           "type": "b2b-sol-fact",
-          "name": "B2B Sol Fact",
+          "name": "1 SKU",
           "settings": {
-            "text_zahl": "One Source",
-            "text_label": "For top sellers & accessories – fewer suppliers"
+            "text_zahl": "1 SKU",
+            "text_label": "Per device model – less listing effort"
           },
           "blocks": {}
         }
@@ -148,8 +149,8 @@
       "block_order": [
         "b2b_sol_capability_LdYmLH",
         "b2b_sol_fact_yjNgri",
-        "b2b_sol_fact_ghexVD",
-        "b2b_sol_fact_rw3wix"
+        "b2b_sol_fact_rw3wix",
+        "b2b_sol_fact_ghexVD"
       ],
       "name": "B2B Solution Facts",
       "settings": {
