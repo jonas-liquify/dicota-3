@@ -12,5 +12,84 @@
     "market": "all-b2b"
   },
   "parent": "page.b2b-project-request.json",
-  "sections": {}
+  "sections": {
+    "b2b_sales_volume_pri_HkrM8": {
+      "type": "b2b_sales_volume_pri",
+      "disabled": false,
+      "settings": {
+        "text_heading": "Request volume pricing",
+        "textarea_subheading": "Request a custom quote in four steps: reseller details, distributor, end customer and your notes.",
+        "text_form_heading": "Get a quote",
+        "text_step_1_label": "Reseller",
+        "text_step_2_label": "Distributor",
+        "text_step_3_label": "End customer",
+        "text_step_4_label": "Notes",
+        "text_step_2_heading": "Enter offer details",
+        "text_offer_type_label": "Offer type",
+        "text_offer_type_option_1": "Public tender",
+        "text_offer_type_option_2": "Project business",
+        "text_offer_type_option_3": "Own use",
+        "text_offer_value_label": "Estimated order value",
+        "text_products_label": "Select products",
+        "text_product_search_label": "Search products to add",
+        "text_no_products_text": "No products added yet.",
+        "text_step_3_heading": "End customer (if available)",
+        "text_billing_address_label": "Billing address",
+        "text_company_label": "Company",
+        "text_name_label": "Name",
+        "text_street_label": "Street",
+        "text_zip_label": "Postal code",
+        "text_city_label": "City",
+        "text_country_label": "Country",
+        "text_shipping_address_label": "Shipping address",
+        "text_step_4_heading": "Your notes",
+        "text_notes_label": "Notes",
+        "text_submitting_text": "Submitting…",
+        "text_success_heading": "Your request has been submitted",
+        "textarea_success_text": "Thank you. Our sales team will get back to you shortly. You can review your requested quotes under \"My online orders\".",
+        "text_restart_button": "Back to start",
+        "header-15e4cb9fd02861ffdcfc7662787d35f4": null,
+        "url_request_hook": "",
+        "header-de10b783bbdd19542a505e70499efef5": null,
+        "padding_top": 4,
+        "padding_bottom": 4
+      },
+      "blocks": {},
+      "block_order": [],
+      "name": "B2B Sales Volume Pri"
+    },
+    "product_breadcrumb_jgtpy": {
+      "type": "product_breadcrumb",
+      "disabled": false,
+      "settings": {
+        "text_home_label": "Home",
+        "text_kollektionen_label": "Collections",
+        "text_suche_label": "Search",
+        "text_warenkorb_label": "Cart",
+        "text_404_label": "Page not found",
+        "header-da2c9de6b965ffb5728aff0bcb3ae91a": null,
+        "paragraph-74ea6c8d0ba91d90279fce50c0bf16fe": null,
+        "header-61c1ec465d1e1db24b0a19d8bfa00ecd": null,
+        "padding_top": 0.5,
+        "padding_bottom": 0.5,
+        "header-1fffe7c7feb71588145a440ef38ef921": null,
+        "bg_color": "#ffffff",
+        "text_color": "#0f0f0f"
+      },
+      "blocks": {},
+      "block_order": [],
+      "name": "Product Breadcrumb"
+    },
+    "b2b_hub": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    }
+  },
+  "order": [
+    "b2b_subnav",
+    "product_breadcrumb_jgtpy",
+    "b2b_sales_volume_pri_HkrM8",
+    "b2b_hub"
+  ]
 }
