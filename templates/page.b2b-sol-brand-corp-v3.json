@@ -207,59 +207,13 @@
         "padding_bottom": 1.5
       }
     },
-    "value_tabs_8xDcCx": {
-      "type": "value_tabs",
-      "blocks": {
-        "tab_WtkFKC": {
-          "type": "tab",
-          "name": "Employee onboarding",
-          "settings": {
-            "text_tab_label": "Employee onboarding",
-            "text_tab_heading": "Employee onboarding",
-            "textarea_tab_text": "Every new hire triggers a full workplace setup. HR defines a standard package, IT adds the device, and the reseller delivers everything as a bundle – defined once, available at any time. Once this setup has been integrated into the onboarding process, there is little risk of being replaced.\nThe key lies in defining the onboarding package in collaboration with HR – not just with IT. HR focuses on the welcome kit and the employee experience; if the DICOTA package forms part of this experience, the order is secured."
-          },
-          "blocks": {}
-        },
-        "tab_EnGYGA": {
-          "type": "tab",
-          "name": "Office Relocations and Refurbishments",
-          "settings": {
-            "text_tab_label": "Office Relocations and Refurbishments",
-            "text_tab_heading": "Office Relocations and Refurbishments",
-            "textarea_tab_text": "When companies relocate or modernise their office spaces, new workstations require new accessories. Resellers often overlook this opportunity because it doesn’t feature in the traditional IT procurement calendar. A quick check-in with the facilities manager or senior management – “Are you planning any refurbishments in the next 12 months?” – can lead to an unexpectedly large order."
-          },
-          "blocks": {}
-        },
-        "tab_U46hmf": {
-          "type": "tab",
-          "name": "Roll-out of the home working policy",
-          "settings": {
-            "text_tab_label": "Roll-out of the home working policy",
-            "text_tab_heading": "Roll-out of the home working policy",
-            "textarea_tab_text": "Since 2022, many companies have introduced formal home working policies that also set out a standard for equipping the home office. There is often a fixed per-person budget – around 200 to 500 euros – which employees can use to set up their home office. DICOTA packages fit perfectly into this budget framework: defined contents, a clear price, and simple invoicing."
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "tab_WtkFKC",
-        "tab_EnGYGA",
-        "tab_U46hmf"
-      ],
-      "name": "Sales pitch for IT buyers",
-      "settings": {
-        "text_heading": "Typical reasons for placing orders in detail",
-        "padding_top": 5,
-        "padding_bottom": 5
-      }
-    },
     "owner_spotlight_68NmAp": {
       "type": "owner_spotlight",
       "blocks": {
         "zitat_KtMLCt": {
           "type": "zitat",
           "settings": {
-            "text_block_heading": "\"At your next IT meeting, be sure to raise the subject of onboarding. Ask how many new recruits the company plans to take on each year – and whether workplace equipment has already been standardised for them. The answer is often surprising: many companies do not have a standardised solution and are grateful for a concrete suggestion.\"",
+            "text_block_heading": "\"The price is negotiated on the basis of value, not on the basis of competition. This is the most attractive profit margin model in the entire accessories sector.\"",
             "text_block_text": "— DICOTA Management"
           },
           "blocks": {}
@@ -270,8 +224,8 @@
       ],
       "name": "Owner Spotlight",
       "settings": {
-        "text_heading": "Tip for resellers",
-        "textarea_text": "Use onboarding as the entry point: ask whether workplace equipment is already standardized for every new employee.",
+        "text_heading": "Profit margin potential",
+        "textarea_text": "Branded products are generally not listed on price comparison websites – they are exclusive. This means there is no price pressure and no \"race to the bottom\".",
         "image_image": "shopify://shop_images/Image_Management_01_square.png",
         "padding_top": 5,
         "padding_bottom": 5
@@ -344,7 +298,6 @@
     "rich_text_6aeaLY",
     "feature_card_grid_z43EaA",
     "rich_text_YxCbPU",
-    "value_tabs_8xDcCx",
     "owner_spotlight_68NmAp",
     "benefits_grid_kPtDBe"
   ]
