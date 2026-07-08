@@ -19,7 +19,7 @@
     },
     "b2b_solution_header_9c4LJd": {
       "type": "b2b_solution_header",
-      "name": "B2B Solution Header",
+      "name": "Brand & Corporate Identity",
       "settings": {
         "text_subline": "B2B Solutions",
         "text_heading_1": "Brand & Corporate Identity",
@@ -30,77 +30,13 @@
         "padding_bottom": 2
       }
     },
-    "b2b_solution": {
-      "type": "b2b_solution",
-      "blocks": {
-        "b2b_sol_fact_1": {
-          "type": "b2b-sol-fact",
-          "settings": {
-            "text_zahl": "1,000+",
-            "text_label": "Products available"
-          },
-          "blocks": {}
-        },
-        "b2b_sol_fact_2": {
-          "type": "b2b-sol-fact",
-          "settings": {
-            "text_zahl": "1,000+",
-            "text_label": "Products available"
-          },
-          "blocks": {}
-        },
-        "b2b_sol_fact_3": {
-          "type": "b2b-sol-fact",
-          "settings": {
-            "text_zahl": "1,000+",
-            "text_label": "Products available"
-          },
-          "blocks": {}
-        },
-        "b2b-sol-referenzen": {
-          "type": "b2b-sol-referenzen",
-          "static": true,
-          "settings": {},
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "b2b_sol_fact_1",
-        "b2b_sol_fact_2",
-        "b2b_sol_fact_3"
-      ],
-      "disabled": true,
-      "settings": {
-        "url_breadcrumb_parent_link": "",
-        "text_breadcrumb_parent_label": "Solutions",
-        "text_breadcrumb": "Consignment Stock",
-        "text_subline": "B2B Solutions",
-        "text_heading_1": "Consignment Stock",
-        "textarea_subheading_1": "Describe this B2B solution: the service, the value for the reseller, and what makes it work — supported by facts, references and concrete offerings.",
-        "url_hero_button_link": "",
-        "text_hero_button_text": "Become a reseller",
-        "text_feature_subline": "Why DICOTA",
-        "text_feature_heading": "Your everyday IT accessory partner",
-        "textarea_feature_text": "Ideal partner for daily IT accessory business: 1,000+ products, fast availability from a European warehouse, 2–3 day delivery, no MOQ, strong reseller margins, high product quality, online ordering and dedicated customer support.",
-        "text_facts_heading": "Key facts",
-        "text_referenzen_heading": "",
-        "text_cta_heading": "Ready to get started?",
-        "textarea_cta_text": "Order online with fast availability and no minimum order quantity — backed by dedicated customer support.",
-        "url_cta_button_link": "",
-        "text_cta_button_text": "",
-        "breadcrumb_parent_label": "Solutions",
-        "breadcrumb_parent_link": "",
-        "padding_top": 4,
-        "padding_bottom": 4
-      }
-    },
     "b2b_solution_feature_UnXFb6": {
       "type": "b2b_solution_feature",
-      "name": "B2B Solution Feature",
+      "name": "Current Situation & Market Opportunity",
       "settings": {
         "image_feature_bild": "shopify://shop_images/Blog_Image_Business_travel_in_2026_essentials_for_mobile_professionals.jpg",
         "text_feature_subline": "",
-        "text_feature_heading": "Current situation<br>& market opportunity",
+        "text_feature_heading": "Current situation& market opportunity",
         "textarea_feature_text": "Corporate identity is a topic that extends far beyond traditional IT accessories – and that is precisely why it is so strategically valuable. When a company places its logo on a laptop case or an employee’s rucksack, it is no longer simply about product protection. It is about the brand message, employee pride and corporate culture.<br><br>\nFor resellers, brand and corporate identity are the key to opening doors to new contacts – in marketing, HR and senior management – and to a margin model that differs fundamentally from the commodity business. Once you have embedded a branded product within a customer’s corporate culture, you have established a supplier relationship that cannot be undone by a simple price comparison.",
         "padding_top": 2,
         "padding_bottom": 2
@@ -152,7 +88,7 @@
         "b2b_sol_fact_ghexVD",
         "b2b_sol_fact_rw3wix"
       ],
-      "name": "B2B Solution Facts",
+      "name": "Key Figures at a Glance",
       "settings": {
         "text_facts_heading": "Key figures at a glance",
         "padding_top": 2,
@@ -161,7 +97,7 @@
     },
     "rich_text_6aeaLY": {
       "type": "rich_text",
-      "name": "Rich Text",
+      "name": "Case Studies in Detail",
       "settings": {
         "richtext_inhalt": "<h3>CASE STUDIES IN DETAIL</h3><p><strong>EMPLOYEE ONBOARDING – FIRST IMPRESSIONS COUNT</strong></p><p>The onboarding kit is one of the most significant touchpoints in the employee experience. What a new employee receives on their first day has a lasting impact on their perception of the company. A high-quality, branded bag or case featuring the company logo sends a clear message: This company invests in its staff; it has high standards of quality and consistency.</p><p>For resellers, this is a business model that repeats automatically with every new hire. If the branded onboarding kit is part of the standard process, there is a guaranteed order for every new employee – no need for acquisition, no pitching, no competition.</p><p><strong><br/>SALES & FIELD STAFF – BRAND AMBASSADORS IN THE FIELD</strong></p><p>Field staff, consultants and sales teams are a company’s most visible representatives when dealing with customers. What they wear and carry forms part of the professional impression they make. A uniform, branded bag or case signals: this company has standards – and adheres to them.</p><p>For many companies, this is also a security issue: if 50 field staff members carry the same branded case, it is immediately clear at a glance who belongs to the team and who does not. In security-sensitive environments, this is a practical benefit, not merely an aesthetic consideration.</p><p><strong><br/>EVENTS & TRADE FAIRS – MERCHANDISE WITH ADDED VALUE</strong></p><p>Trade fair appearances and corporate events are classic occasions for branded merchandise. The challenge is that most merchandise items – pens, notebooks, water bottles – end up in a cupboard or are thrown away after a short time. A high-quality laptop sleeve or a branded rucksack has a different lifespan: it is used every day, is visible and regularly reminds the wearer of the brand.</p><p>For resellers, this is a selling point when dealing with marketing managers: ‘The DICOTA sleeve costs more than a pen – but your customers use it every day and see your logo every time. This is measurably more effective than traditional event merchandise.’</p><p><strong><br/>CORPORATE ROLL-OUT – ONE ORDER, GLOBAL PRESENCE</strong></p><p>Large corporations with global offices standardise their equipment worldwide – including accessories. If a company with 10,000 employees decides that all laptops should have the same branded case, that represents an order for 10,000 units – and potentially a recurring annual order due to new hires and device replacements.</p><p>DICOTA has the production capacity for such high-volume orders and the experience in global delivery. For resellers managing such accounts, this is a strategic selling point: “I have a partner who can produce 10,000 customised cases and deliver them worldwide – within the agreed lead time and to a consistent standard of quality.”</p>",
         "width": "narrow",
@@ -181,8 +117,8 @@
               "type": "feature-karte",
               "name": "Step 1",
               "settings": {
-                "text_heading": "Step 1",
-                "textarea_text": "Enter the device model (e.g. Surface Pro 9, MacBook Air M3, Dell Latitude 14\")",
+                "text_heading": "Step 1: Briefing",
+                "textarea_text": "Record the customer’s corporate identity (CI) details (logo file, colours, placement specifications), clarify quantities and delivery timeframe, and define the budget.",
                 "url_button_link": "",
                 "text_button_text": ""
               },
@@ -192,8 +128,8 @@
               "type": "feature-karte",
               "name": "Step 2",
               "settings": {
-                "text_heading": "Step 2",
-                "textarea_text": "A suitable bundle is automatically suggested – sleeve, case and lock in the correct size",
+                "text_heading": "Step 2: Sample & Approval",
+                "textarea_text": "DICOTA creates a digital rendering and – for large orders – a physical sample. Production does not commence without written approval from the customer.",
                 "url_button_link": "",
                 "text_button_text": ""
               },
@@ -203,8 +139,19 @@
               "type": "feature-karte",
               "name": "Step 3",
               "settings": {
-                "text_heading": "Step 3",
-                "textarea_text": "Transfer the bundle directly into the customer quote or the ERP system – one SKU, one price",
+                "text_heading": "Step 3: Production",
+                "textarea_text": "Once approved, production begins with defined minimum quantities (typically: from 50–100 units) and a transparent delivery timeframe.",
+                "url_button_link": "",
+                "text_button_text": ""
+              },
+              "blocks": {}
+            },
+            "feature_karte_iLqkbN": {
+              "type": "feature-karte",
+              "name": "Step 4",
+              "settings": {
+                "text_heading": "Step 4: Delivery",
+                "textarea_text": "Option of centralised delivery to the reseller or drop-shipping directly to end-customer locations. For large corporations: storage at DICOTA’s premises and fulfilment on demand.",
                 "url_button_link": "",
                 "text_button_text": ""
               },
@@ -214,7 +161,8 @@
           "block_order": [
             "feature_karte_DTVt9X",
             "feature_karte_LcRkLJ",
-            "feature_karte_jjERGN"
+            "feature_karte_jjERGN",
+            "feature_karte_iLqkbN"
           ]
         },
         "stats-row": {
@@ -237,12 +185,11 @@
           ]
         }
       },
-      "disabled": true,
-      "name": "Feature Card Grid",
+      "name": "DICOTA Approach",
       "settings": {
         "text_subline": "DICOTA Approach",
-        "text_heading": "Bundle Configurator – Logic and Process",
-        "textarea_text": "At the heart of the solution is the configurator logic: retailers enter the device model and are automatically presented with a suggested bundle – featuring the correct sizes, compatible products and a predefined package price.",
+        "text_heading": "THE CUSTOMIZATION PROCESS – CLEAR AND LOW-RISK",
+        "textarea_text": "Many resellers shy away from the customisation business because they are daunted by its complexity: unclear specifications, production errors, delivery delays. DICOTA has clearly structured this process for its partners and made it low-risk.",
         "url_button_link": "",
         "text_button_text": "",
         "padding_top": 5,
@@ -392,7 +339,6 @@
   "order": [
     "b2b_subnav",
     "b2b_solution_header_9c4LJd",
-    "b2b_solution",
     "b2b_solution_feature_UnXFb6",
     "b2b_solution_facts_MnXDke",
     "rich_text_6aeaLY",
