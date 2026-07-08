@@ -25,7 +25,10 @@
         "rechte-seite": {
           "type": "rechte-seite",
           "static": true,
-          "settings": {},
+          "settings": {
+            "text_reseller_button": "Für Reseller",
+            "url_reseller_button_link": ""
+          },
           "blocks": {
             "link_enBgib": {
               "type": "link",
@@ -47,7 +50,10 @@
         "usp_Cw4kWR"
       ],
       "name": "Announcement Bar",
-      "settings": {}
+      "settings": {
+        "text_reseller_button": "Für Reseller",
+        "url_reseller_button_link": "shopify://pages/b2b-reseller-hub"
+      }
     },
     "reseller_header_UNKmKg": {
       "type": "reseller_header",
@@ -97,7 +103,13 @@
         "text_contact_sales_text": "Contact Sales",
         "url_login_link": "",
         "text_login_text": "myDCT Login",
-        "reseller_menu": ""
+        "text_suche_placeholder": "Search for bags, size...",
+        "text_such_tipp": "Tip: Search by products, categories or use case",
+        "collection_search_recent": "",
+        "collection_search_recent_limit": 6,
+        "url_wishlist_link": "",
+        "reseller_menu": "",
+        "free_shipping_threshold": 50
       }
     },
     "header_a83nJp": {
@@ -127,7 +139,8 @@
         "collection_search_recent_limit": 6,
         "url_wishlist_link": "",
         "menu": "main-menu-d2c",
-        "transparent_over_first": false
+        "transparent_over_first": false,
+        "free_shipping_threshold": 50
       }
     }
   },
