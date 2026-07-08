@@ -191,6 +191,29 @@
         "padding_bottom": 5
       }
     },
+    "owner_spotlight_68NmAp": {
+      "type": "owner_spotlight",
+      "blocks": {
+        "zitat_KtMLCt": {
+          "type": "zitat",
+          "settings": {
+            "text_block_heading": "\"We think in generations, not in quarters.\"",
+            "text_block_text": "— Management"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "zitat_KtMLCt"
+      ],
+      "name": "Owner Spotlight",
+      "settings": {
+        "text_heading": "Strategy for customer meetings",
+        "textarea_text": "The run-rate discussion works best as a process-focused discussion, not as a product-focused one. The starting point: understanding the customer’s current procurement process.",
+        "padding_top": 5,
+        "padding_bottom": 5
+      }
+    },
     "benefits_grid_kPtDBe": {
       "type": "benefits_grid",
       "blocks": {
@@ -257,6 +280,7 @@
     "b2b_solution_facts_MnXDke",
     "rich_text_6aeaLY",
     "value_tabs_8xDcCx",
+    "owner_spotlight_68NmAp",
     "benefits_grid_kPtDBe"
   ]
 }
