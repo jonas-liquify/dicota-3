@@ -16931,3 +16931,92 @@ img.product-header_gallery-image {
 @media screen and (max-width: 767px) {
   .headline-text_grid { grid-template-columns: 1fr; gap: 1rem; }
 }
+
+
+/* =============================================================
+   Password (Under Construction) — Hintergrundbild, Logo-Box,
+   Text + Passwort-Eingabe hinter Dropdown versteckt
+   ============================================================= */
+.password_bg-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+.password_overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(15, 15, 15, 0.45);
+  z-index: 1;
+}
+.password_content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 30rem;
+  padding: 2rem;
+  text-align: center;
+}
+.password_logo-box {
+  background-color: var(--base-color-neutral--white);
+  border-radius: var(--border-radius--medium);
+  padding: 1.25rem 2rem;
+  display: inline-flex;
+}
+.password_logo {
+  height: 2.5rem;
+  width: auto;
+  display: block;
+}
+.password_heading,
+.password_text {
+  color: var(--base-color-neutral--white);
+}
+.password_toggle-wrapper {
+  width: 100%;
+  max-width: 24rem;
+}
+.password_toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  width: 100%;
+  background-color: var(--base-color-neutral--white);
+  border: 1px solid var(--base-color-neutral--black);
+  padding: 0.9rem 1.5rem;
+  cursor: pointer;
+  color: var(--base-color-neutral--black);
+}
+.password_toggle-icon {
+  width: 1rem;
+  height: 1rem;
+  flex: none;
+  transition: transform 0.3s ease;
+}
+.password_toggle-icon.is-open {
+  transform: rotate(180deg);
+}
+.password_form-body {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease;
+}
+.password_form-body.is-open {
+  grid-template-rows: 1fr;
+}
+.password_form-body-content {
+  overflow: hidden;
+}
+.password_form-body-content .login_form {
+  border-top: none;
+  min-width: 0;
+  max-width: none;
+  width: 100%;
+}
