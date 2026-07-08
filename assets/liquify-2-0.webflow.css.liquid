@@ -5443,6 +5443,10 @@ figcaption {
     padding: .25rem .6rem;
     font-size: .8rem;
   }
+  .headline-text_grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
 }
 
 @media screen and (max-width: 479px) {
@@ -10989,6 +10993,8 @@ button.li-lang_dd-link {
 }
 .button-wrapper {
   display: inline-flex;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 .text-style-subline {
   text-transform: uppercase;
@@ -11142,11 +11148,12 @@ button.li-lang_dd-link {
   margin-bottom: 0.75rem;
   padding: 1rem 1rem 1.75rem;
   position: relative;
+  color: #000000;
 }
 .history_slide-image {
   width: 100%;
   aspect-ratio: 2 / 1;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
 }
 .history_slide-text {
@@ -16916,22 +16923,25 @@ img.product-header_gallery-image {
   margin-top: 1rem;
 }
 
-
 /* =============================================================
    Headline Text — 2-Spalten: Überschrift links, Rich-Text rechts
    ============================================================= */
-.section_headline-text { width: 100%; }
+.section_headline-text {
+  width: 100%;
+}
 .headline-text_grid {
   display: grid;
   grid-template-columns: 1fr 1.5fr;
   gap: 2rem 5rem;
   align-items: start;
 }
-.headline-text_right > * + * { margin-top: 1rem; }
-@media screen and (max-width: 767px) {
-  .headline-text_grid { grid-template-columns: 1fr; gap: 1rem; }
+.headline-text_left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
 }
-
+.headline-text_right > * + * { margin-top: 1rem; }
 
 /* =============================================================
    Password (Under Construction) — Hintergrundbild, Logo-Box,
@@ -17019,4 +17029,21 @@ img.product-header_gallery-image {
   min-width: 0;
   max-width: none;
   width: 100%;
+}
+
+.button-wrapper.is-right {
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+/* =============================================================
+   Subline auf dunklen Sektionen — Basisfarbe #686868 ist auf
+   Schwarz kaum lesbar. Automatischer Fix für alle Kontexte mit
+   .background-color-primary / .text-color-white (heller, dezent
+   transparenter Ton statt dunklem Grau), analog .text-style-muted
+   im Footer.
+   ============================================================= */
+.background-color-primary .text-style-subline,
+.text-color-white .text-style-subline {
+  color: rgba(255, 255, 255, 0.7);
 }
