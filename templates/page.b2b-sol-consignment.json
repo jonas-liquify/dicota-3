@@ -173,9 +173,9 @@
           "type": "tab",
           "name": "Tab",
           "settings": {
-            "text_tab_label": "Trust",
-            "text_tab_heading": "Trust",
-            "textarea_tab_text": "We build on long-term relationships — with customers, partners and colleagues alike."
+            "text_tab_label": "Locks & Security",
+            "text_tab_heading": "Locks & Security",
+            "textarea_tab_text": "Anti-theft protection is an IT policy requirement in many companies – not an optional accessory. Locks are an essential item, particularly in environments with shared workstations, co-working spaces or field service teams. The advantage for retailers: high add-on rate, minimal need for explanation, good contribution margin."
           },
           "blocks": {}
         },
