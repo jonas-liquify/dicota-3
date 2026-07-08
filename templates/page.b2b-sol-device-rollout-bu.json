@@ -248,6 +248,16 @@
         "padding_bottom": 5
       }
     },
+    "rich_text_YxCbPU": {
+      "type": "rich_text",
+      "name": "Rich Text",
+      "settings": {
+        "richtext_inhalt": "<h4>This approach significantly reduces the reseller’s internal workload: no manual checks for compatibility, no need to contact the manufacturer, and no mistakes regarding size. At the same time, it conveys a sense of professionalism to the customer – the offer comes across as well thought-out, not cobbled together.</h4>",
+        "width": "narrow",
+        "padding_top": 4,
+        "padding_bottom": 4
+      }
+    },
     "value_tabs_8xDcCx": {
       "type": "value_tabs",
       "blocks": {
@@ -341,16 +351,6 @@
         "padding_bottom": 5
       }
     },
-    "rich_text_YxCbPU": {
-      "type": "rich_text",
-      "name": "Rich Text",
-      "settings": {
-        "richtext_inhalt": "<h4>When a customer describes a decentralised or chaotic process – and most do – the path to a solution is straightforward:</h4><h4>A central shopping basket with defined items, fixed prices and a single point of contact. That is what we offer.</h4>",
-        "width": "narrow",
-        "padding_top": 4,
-        "padding_bottom": 4
-      }
-    },
     "benefits_grid_kPtDBe": {
       "type": "benefits_grid",
       "blocks": {
@@ -417,9 +417,9 @@
     "b2b_solution_facts_MnXDke",
     "rich_text_6aeaLY",
     "feature_card_grid_z43EaA",
+    "rich_text_YxCbPU",
     "value_tabs_8xDcCx",
     "owner_spotlight_68NmAp",
-    "rich_text_YxCbPU",
     "benefits_grid_kPtDBe"
   ]
 }
