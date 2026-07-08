@@ -22,8 +22,8 @@
       "name": "B2B Solution Header",
       "settings": {
         "text_subline": "B2B Solutions",
-        "text_heading_1": "Solution name",
-        "textarea_subheading_1": "Describe this B2B solution: the service, the value for the reseller, and what makes it work — supported by facts, references and concrete offerings.",
+        "text_heading_1": "Run Rate Supply",
+        "textarea_subheading_1": "DICOTA is the ideal partner for recurring business with major clients: a broad portfolio of top selling products, consistently high stock levels and a clear SKU structure ensure predictable turnover and strong customer loyalty.",
         "url_hero_button_link": "",
         "text_hero_button_text": "Become a reseller",
         "padding_top": 4,
@@ -98,9 +98,10 @@
       "type": "b2b_solution_feature",
       "name": "B2B Solution Feature",
       "settings": {
-        "text_feature_subline": "Why DICOTA",
-        "text_feature_heading": "Your everyday IT accessory partner",
-        "textarea_feature_text": "Ideal partner for daily IT accessory business: 1,000+ products, fast availability from a European warehouse, 2–3 day delivery, no MOQ, strong reseller margins, high product quality, online ordering and dedicated customer support.",
+        "image_feature_bild": "shopify://shop_images/Blog_Image_Business_travel_in_2026_essentials_for_mobile_professionals.jpg",
+        "text_feature_subline": "",
+        "text_feature_heading": "Current situation<br>& market opportunity",
+        "textarea_feature_text": "The backbone of any successful reseller business is the recurring business with major customers. Projects come and go – but the ongoing need for protection, connectivity and accessories remains constant. This is precisely where the greatest revenue opportunity lies for resellers: those who position themselves as reliable suppliers in the run-rate business benefit from predictable revenue, low acquisition costs and high customer loyalty.<br><br>\nAs an accessories supplier, DICOTA is ideally positioned for this segment: a broad portfolio of top-selling products, consistently high stock availability and a clear SKU structure that can be easily integrated into existing ERP and procurement systems. For retailers, this means less effort in order processing and more time to build customer relationships.",
         "padding_top": 2,
         "padding_bottom": 2
       }
