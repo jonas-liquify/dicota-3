@@ -199,7 +199,7 @@
           "name": "Benefit",
           "settings": {
             "text_heading": "Flexible working hours",
-            "textarea_text": "Key arguments for IT buyers\n–    Streamlined processes: One supplier, one order, one invoice instead of ten different sources.\n–    Cost transparency: Fixed prices in the framework agreement make the annual budget predictable.\n–    Supply reliability: Top-selling products are always in stock – no shortages during the next roll-out.\n–    Compliance: All DICOTA products come with full documentation – no extra work required for internal audits."
+            "textarea_text": "Streamlined processes: One supplier, one order, one invoice instead of ten different sources."
           },
           "blocks": {}
         },
