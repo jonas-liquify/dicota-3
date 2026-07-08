@@ -1,4 +1,4 @@
-<div class="padding-global" style="padding-top:{{ section.settings.padding_top }}rem;padding-bottom:{{ section.settings.padding_bottom }}rem;background-color:{{ section.settings.bg_color }};color:{{ section.settings.text_color }};"><div class="container-large"><nav class="product-breadcrumb_nav" aria-label="Breadcrumb"><a href="{{ routes.root_url }}" li-object:href="routes.root_url" class="product-breadcrumb_link"><span>
+<div class="padding-global" style="padding-top:{{ section.settings.padding_top }}px;padding-bottom:{{ section.settings.padding_bottom }}px;background-color:{{ section.settings.bg_color }};color:{{ section.settings.text_color }};"><div class="container-large"><nav class="product-breadcrumb_nav" aria-label="Breadcrumb"><a href="{{ routes.root_url }}" li-object:href="routes.root_url" class="product-breadcrumb_link"><span>
 {{ section.settings.text_home_label }}
 </span></a>{% if template == 'product' %}    <span li-if="template == 'product'">
     <span class="product-breadcrumb_sep">›</span>{% if product.collections.first != blank %}    <span li-if="product.collections.first != blank">
