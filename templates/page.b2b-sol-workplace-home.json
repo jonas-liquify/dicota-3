@@ -138,10 +138,10 @@
         },
         "b2b_sol_fact_rw3wix": {
           "type": "b2b-sol-fact",
-          "name": "1 SKU",
+          "name": "1 SKU List",
           "settings": {
-            "text_zahl": "1 SKU",
-            "text_label": "Per device model – less listing effort"
+            "text_zahl": "1 SKU List",
+            "text_label": "For all workstation types"
           },
           "blocks": {}
         }
