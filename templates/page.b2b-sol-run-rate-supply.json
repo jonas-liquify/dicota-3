@@ -121,8 +121,8 @@
         "b2b_sol_fact_yjNgri": {
           "type": "b2b-sol-fact",
           "settings": {
-            "text_zahl": "Top 50",
-            "text_label": "Top sellers always in stock"
+            "text_zahl": "3-in-1",
+            "text_label": "Sleeve + Case + Lock in a bundle"
           },
           "blocks": {}
         },
