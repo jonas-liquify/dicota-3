@@ -130,8 +130,8 @@
           "type": "b2b-sol-fact",
           "name": "B2B Sol Fact",
           "settings": {
-            "text_zahl": "+20-30%",
-            "text_label": "Higher basket value thanks to complementary products"
+            "text_zahl": "Ø +35%",
+            "text_label": "Higher order value compared to individual items"
           },
           "blocks": {}
         },
