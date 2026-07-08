@@ -31,8 +31,7 @@
     "hero_image": {
       "type": "boxed_image",
       "settings": {
-        "image_image_full": "shopify://shop_images/Header_b2b_solutions_run_rate_supply_1440x720_dc77e625-9ba5-4401-893f-7cb43aa70afe.png",
-        "layout": "full"
+        "image_image_full": "shopify://shop_images/Header_b2b_solutions_run_rate_supply_1440x720_dc77e625-9ba5-4401-893f-7cb43aa70afe.png"
       }
     },
     "b2b_key_selling_argu_hWeGLL": {
@@ -427,25 +426,17 @@
     "team_grid_GihKc3": {
       "type": "team_grid",
       "blocks": {
-        "team_slide_Rqrbky": {
-          "type": "team-slide",
+        "team-karten": {
+          "type": "team-karten",
+          "static": true,
           "settings": {},
           "blocks": {}
         }
       },
-      "block_order": [
-        "team_slide_Rqrbky"
-      ],
       "name": "Team Grid",
       "settings": {
         "text_heading": "Attach Portfolio –Margin without extra effort",
         "textarea_text": "The real margin potential in run-rate business does not lie in the top-selling product itself – it lies in the add-ons. Every laptop sold is a gateway to several accessories that are reordered on a regular basis. The trick is to integrate these add-on products into the ordering process in such a way that they are included automatically – without having to be renegotiated each time.",
-        "text_karte_1_heading": "Sleeves & Cases",
-        "textarea_karte_1_text": "Perfectly tailored to the size and brand of the device – simply include them in your shopping basket as standard items. No explanation needed, no tender required. Sleeves and cases are a staple in virtually every corporate IT environment. If you include them as standard extras in your range, you’ll sell them without even having to actively promote them.",
-        "text_karte_2_heading": "Locks & Security",
-        "textarea_karte_2_text": "In many companies, anti-theft protection is an IT policy – not an optional extra. The lock is an essential item, particularly in environments with shared workstations, co-working spaces or field service teams. The advantage for retailers: high add-on rate, minimal need for explanation, good contribution margin.",
-        "text_karte_3_heading": "Adapter & Connectivity",
-        "textarea_karte_3_text": "USB-C hubs, HDMI adaptors, multi-port solutions – these items are always in demand, but rarely ordered proactively. They often end up being bought as a last-minute purchase in shops or on online platforms when an employee realises, during their first meeting whilst working from home, that they don’t have the right connector. By including these items in your standard product range, you can fill this gap – and significantly increase the average order value.",
         "url_button_link": "",
         "text_button_text": "",
         "padding_top": 5,
