@@ -109,26 +109,47 @@
     "b2b_solution_facts_MnXDke": {
       "type": "b2b_solution_facts",
       "blocks": {
-        "b2b_sol_fact_yjNgri": {
-          "type": "b2b-sol-fact",
+        "b2b_sol_capability_LdYmLH": {
+          "type": "b2b-sol-capability",
+          "disabled": true,
           "settings": {
-            "text_zahl": "1,000+",
-            "text_label": "Products available"
+            "text_heading": "+20–30%",
+            "textarea_text": "Describe the capability — e.g. branding, doming, custom configuration or bundle."
           },
           "blocks": {}
         },
-        "b2b_sol_capability_LdYmLH": {
-          "type": "b2b-sol-capability",
+        "b2b_sol_fact_yjNgri": {
+          "type": "b2b-sol-fact",
           "settings": {
-            "text_heading": "Capability title",
-            "textarea_text": "Describe the capability — e.g. branding, doming, custom configuration or bundle."
+            "text_zahl": "Top 50",
+            "text_label": "Top sellers always in stock"
+          },
+          "blocks": {}
+        },
+        "b2b_sol_fact_ghexVD": {
+          "type": "b2b-sol-fact",
+          "name": "B2B Sol Fact",
+          "settings": {
+            "text_zahl": "+20-30%",
+            "text_label": "Higher basket value thanks to complementary products"
+          },
+          "blocks": {}
+        },
+        "b2b_sol_fact_rw3wix": {
+          "type": "b2b-sol-fact",
+          "name": "B2B Sol Fact",
+          "settings": {
+            "text_zahl": "One Source",
+            "text_label": "For top sellers & accessories – fewer suppliers"
           },
           "blocks": {}
         }
       },
       "block_order": [
+        "b2b_sol_capability_LdYmLH",
         "b2b_sol_fact_yjNgri",
-        "b2b_sol_capability_LdYmLH"
+        "b2b_sol_fact_ghexVD",
+        "b2b_sol_fact_rw3wix"
       ],
       "name": "B2B Solution Facts",
       "settings": {
