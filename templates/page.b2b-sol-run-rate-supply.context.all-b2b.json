@@ -12,5 +12,20 @@
     "market": "all-b2b"
   },
   "parent": "page.b2b-sol-run-rate-supply.json",
-  "sections": {}
+  "sections": {
+    "benefits_grid_kPtDBe": {
+      "settings": {
+        "padding_bottom": 0,
+        "padding_top": 2
+      },
+      "blocks": {}
+    },
+    "rich_text_YxCbPU": {
+      "settings": {
+        "padding_top": 2,
+        "padding_bottom": 2
+      },
+      "blocks": {}
+    }
+  }
 }
