@@ -145,6 +145,106 @@
         "padding_top": 4,
         "padding_bottom": 4
       }
+    },
+    "value_tabs_8xDcCx": {
+      "type": "value_tabs",
+      "blocks": {
+        "tab_EnGYGA": {
+          "type": "tab",
+          "name": "Tab",
+          "settings": {
+            "text_tab_label": "Trust",
+            "text_tab_heading": "Trust",
+            "textarea_tab_text": "We build on long-term relationships — with customers, partners and colleagues alike."
+          },
+          "blocks": {}
+        },
+        "tab_U46hmf": {
+          "type": "tab",
+          "name": "Tab",
+          "settings": {
+            "text_tab_label": "Trust",
+            "text_tab_heading": "Trust",
+            "textarea_tab_text": "We build on long-term relationships — with customers, partners and colleagues alike."
+          },
+          "blocks": {}
+        },
+        "tab_3n6qfQ": {
+          "type": "tab",
+          "settings": {
+            "text_tab_label": "Trust",
+            "text_tab_heading": "Trust",
+            "textarea_tab_text": "We build on long-term relationships — with customers, partners and colleagues alike."
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "tab_EnGYGA",
+        "tab_U46hmf",
+        "tab_3n6qfQ"
+      ],
+      "name": "Value Tabs",
+      "settings": {
+        "text_heading": "Our values",
+        "padding_top": 5,
+        "padding_bottom": 5
+      }
+    },
+    "benefits_grid_kPtDBe": {
+      "type": "benefits_grid",
+      "blocks": {
+        "benefit_MNUn7q": {
+          "type": "benefit",
+          "name": "Benefit",
+          "settings": {
+            "text_heading": "Flexible working hours",
+            "textarea_text": "Key arguments for IT buyers\n–    Streamlined processes: One supplier, one order, one invoice instead of ten different sources.\n–    Cost transparency: Fixed prices in the framework agreement make the annual budget predictable.\n–    Supply reliability: Top-selling products are always in stock – no shortages during the next roll-out.\n–    Compliance: All DICOTA products come with full documentation – no extra work required for internal audits."
+          },
+          "blocks": {}
+        },
+        "benefit_am3EMn": {
+          "type": "benefit",
+          "name": "Benefit",
+          "settings": {
+            "text_heading": "Flexible working hours",
+            "textarea_text": "Flexitime, home office and trust instead of a time clock."
+          },
+          "blocks": {}
+        },
+        "benefit_xchy3p": {
+          "type": "benefit",
+          "name": "Benefit",
+          "settings": {
+            "text_heading": "Flexible working hours",
+            "textarea_text": "Flexitime, home office and trust instead of a time clock."
+          },
+          "blocks": {}
+        },
+        "benefit_XMTTnM": {
+          "type": "benefit",
+          "settings": {
+            "text_heading": "Flexible working hours",
+            "textarea_text": "Flexitime, home office and trust instead of a time clock."
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "benefit_MNUn7q",
+        "benefit_am3EMn",
+        "benefit_xchy3p",
+        "benefit_XMTTnM"
+      ],
+      "name": "Benefits Grid",
+      "settings": {
+        "text_subline": "Why DICOTA",
+        "text_heading": "Key arguments for IT buyers",
+        "url_button_link": "",
+        "text_button_text": "",
+        "padding_top": 5,
+        "padding_bottom": 5
+      }
     }
   },
   "layout": "b2b",
@@ -155,6 +255,8 @@
     "b2b_solution",
     "b2b_solution_feature_UnXFb6",
     "b2b_solution_facts_MnXDke",
-    "rich_text_6aeaLY"
+    "rich_text_6aeaLY",
+    "value_tabs_8xDcCx",
+    "benefits_grid_kPtDBe"
   ]
 }
