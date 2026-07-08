@@ -196,17 +196,6 @@
         "padding_bottom": 0
       }
     },
-    "rich_text_YxCbPU": {
-      "type": "rich_text",
-      "disabled": true,
-      "name": "Rich Text",
-      "settings": {
-        "richtext_inhalt": "<h4>This approach significantly reduces the reseller’s internal workload: no manual checks for compatibility, no need to contact the manufacturer, and no mistakes regarding size. At the same time, it conveys a sense of professionalism to the customer – the offer comes across as well thought-out, not cobbled together.</h4>",
-        "width": "narrow",
-        "padding_top": 0,
-        "padding_bottom": 1.5
-      }
-    },
     "owner_spotlight_68NmAp": {
       "type": "owner_spotlight",
       "blocks": {
@@ -222,67 +211,11 @@
       "block_order": [
         "zitat_KtMLCt"
       ],
-      "name": "Owner Spotlight",
+      "name": "Profit margin potential",
       "settings": {
         "text_heading": "Profit margin potential",
         "textarea_text": "Branded products are generally not listed on price comparison websites – they are exclusive. This means there is no price pressure and no \"race to the bottom\".",
         "image_image": "shopify://shop_images/Image_Management_01_square.png",
-        "padding_top": 5,
-        "padding_bottom": 5
-      }
-    },
-    "benefits_grid_kPtDBe": {
-      "type": "benefits_grid",
-      "blocks": {
-        "benefit_MNUn7q": {
-          "type": "benefit",
-          "name": "Benefit",
-          "settings": {
-            "text_heading": "Streamlined Processes",
-            "textarea_text": "One supplier, one order, one invoice instead of ten different sources."
-          },
-          "blocks": {}
-        },
-        "benefit_am3EMn": {
-          "type": "benefit",
-          "name": "Benefit",
-          "settings": {
-            "text_heading": "Cost Transparency",
-            "textarea_text": "Fixed prices in the framework agreement make the annual budget predictable."
-          },
-          "blocks": {}
-        },
-        "benefit_xchy3p": {
-          "type": "benefit",
-          "name": "Benefit",
-          "settings": {
-            "text_heading": "Supply Reliability",
-            "textarea_text": "Top-selling products are always in stock – no shortages during the next roll-out."
-          },
-          "blocks": {}
-        },
-        "benefit_XMTTnM": {
-          "type": "benefit",
-          "settings": {
-            "text_heading": "Compliance",
-            "textarea_text": "All DICOTA products come with full documentation – no extra work required for internal audits."
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "benefit_MNUn7q",
-        "benefit_am3EMn",
-        "benefit_xchy3p",
-        "benefit_XMTTnM"
-      ],
-      "disabled": true,
-      "name": "Benefits Grid",
-      "settings": {
-        "text_subline": "Why DICOTA",
-        "text_heading": "Key arguments for IT buyers",
-        "url_button_link": "",
-        "text_button_text": "",
         "padding_top": 5,
         "padding_bottom": 5
       }
@@ -297,8 +230,6 @@
     "b2b_solution_facts_MnXDke",
     "rich_text_6aeaLY",
     "feature_card_grid_z43EaA",
-    "rich_text_YxCbPU",
-    "owner_spotlight_68NmAp",
-    "benefits_grid_kPtDBe"
+    "owner_spotlight_68NmAp"
   ]
 }
