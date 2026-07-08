@@ -100,7 +100,7 @@
       "settings": {
         "image_feature_bild": "shopify://shop_images/Blog_Image_Business_travel_in_2026_essentials_for_mobile_professionals.jpg",
         "text_feature_subline": "",
-        "text_feature_heading": "Current situation& market opportunity",
+        "text_feature_heading": "Current situation<br>& market opportunity",
         "textarea_feature_text": "ESG – Environmental, Social, Governance – is no longer just a marketing term. It is a regulatory framework that imposes binding requirements on companies across Europe. From 2025, the EU’s Corporate Sustainability Reporting Directive (CSRD) will require thousands of companies to provide detailed sustainability reporting – including Scope 3 emissions, which cover the entire supply chain.<br><br>\nFor IT resellers, this means that their major clients will increasingly be asking what evidence of sustainability their suppliers can provide. Those unable to answer this question risk being removed from supplier lists. Those who provide a convincing answer will gain points in the procurement process and strengthen their partnership.",
         "padding_top": 2,
         "padding_bottom": 2
@@ -120,28 +120,28 @@
         },
         "b2b_sol_fact_yjNgri": {
           "type": "b2b-sol-fact",
-          "name": "100+",
+          "name": "73%",
           "settings": {
-            "text_zahl": "100+",
-            "text_label": "Units per tender, typically"
+            "text_zahl": "73%",
+            "text_label": "of corporations have ESG procurement policies"
           },
           "blocks": {}
         },
         "b2b_sol_fact_ghexVD": {
           "type": "b2b-sol-fact",
-          "name": "3-5 Yrs",
+          "name": "ø +12%",
           "settings": {
-            "text_zahl": "3-5 Yrs",
-            "text_label": "Framework contract duration in the public sector"
+            "text_zahl": "ø +12%",
+            "text_label": "higher conversion rate for certified products"
           },
           "blocks": {}
         },
         "b2b_sol_fact_rw3wix": {
           "type": "b2b-sol-fact",
-          "name": "1 SKU List",
+          "name": "CSRD",
           "settings": {
-            "text_zahl": "1 Partner",
-            "text_label": "For equipment + accessories<br>= tender advantage"
+            "text_zahl": "CSRD",
+            "text_label": "requires Scope 3 transparency from 2025"
           },
           "blocks": {}
         }
