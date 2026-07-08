@@ -1,9 +1,9 @@
 <div class="padding-global padding-section-medium" style="padding-top: {{ section.settings.padding_top }}rem; padding-bottom: {{ section.settings.padding_bottom }}rem;"><div class="container-large"><div class="faq_wrapper"><div class="default-flex-small faq_sidebar"><h2 class="heading-style-h2">
 {{ section.settings.text_heading }}
-</h2><div class="text-size-medium"> {{ section.settings.textarea_text }} </div>{% if section.blocks.size > 1 %}    <nav class="faq_anchor-nav">
-    {% for cat in section.blocks %}    <div style="display:contents">
-    <a href="#faq-{{ cat.id }}" class="faq_anchor-link"><span>{{ cat.settings.text_kategorie_titel }}</span></a>
-    </div>
+</h2><div class="text-size-medium"> {{ section.settings.textarea_text }} </div>{% if section.blocks.size > 1 %}    <nav li-if="section.blocks.size > 1" class="faq_anchor-nav">
+    {% for cat in section.blocks %}    <div li-for="cat in section.blocks" style="display:contents">
+                                    <a href="#faq-{{ cat.id }}" class="faq_anchor-link"><span li-object="cat.settings.text_kategorie_titel">{{ cat.settings.text_kategorie_titel }}</span></a>
+                        </div>
 {% endfor %}    </nav>
 {% endif %}</div><div li-cf-theme-blocks="" class="faq_categories">
 {% content_for 'blocks' %}

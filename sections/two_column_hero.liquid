@@ -1,4 +1,4 @@
-<div class="padding-global padding-section-small"><div class="container-large"><div class="heading-h1_grid"><h1 class="heading-style-h1">
+<div class="padding-global padding-section-small" style="padding-top: {{ section.settings.padding_top }}rem; padding-bottom: {{ section.settings.padding_bottom }}rem;"><div class="container-large"><div class="heading-h1_grid"><h1 class="heading-style-h1">
 {{ section.settings.text_heading }}
 </h1><div class="default-flex-small"><div class="text-size-medium"> {{ section.settings.textarea_text }} </div>{% if section.settings.text_button_text != blank %}    <div li-if="section.settings.text_button_text != blank" class="button-wrapper">
     <a href="{{ section.settings.url_button_link }}" class="button w-button"> <span>{{ section.settings.text_button_text }}</span> </a>    </div>
