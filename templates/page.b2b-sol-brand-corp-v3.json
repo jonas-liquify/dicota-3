@@ -120,28 +120,28 @@
         },
         "b2b_sol_fact_yjNgri": {
           "type": "b2b-sol-fact",
-          "name": "ø 4-6",
+          "name": "ø 40%",
           "settings": {
-            "text_zahl": "ø 4-6",
-            "text_label": "Items per employee setup"
+            "text_zahl": "ø 40%",
+            "text_label": "Higher margin compared to the standard product"
           },
           "blocks": {}
         },
         "b2b_sol_fact_ghexVD": {
           "type": "b2b-sol-fact",
-          "name": "HR + IT",
+          "name": "3-5 Yrs.",
           "settings": {
-            "text_zahl": "HR + IT",
-            "text_label": "Two budgets in one meeting"
+            "text_zahl": "3-5 Yrs.",
+            "text_label": "Customer loyalty through exclusive design"
           },
           "blocks": {}
         },
         "b2b_sol_fact_rw3wix": {
           "type": "b2b-sol-fact",
-          "name": "1 SKU List",
+          "name": "1 Partner",
           "settings": {
-            "text_zahl": "1 SKU List",
-            "text_label": "For all workstation types"
+            "text_zahl": "1 Partner",
+            "text_label": "Design, production and delivery all under one roof"
           },
           "blocks": {}
         }
