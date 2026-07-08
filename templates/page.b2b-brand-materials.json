@@ -17,6 +17,21 @@
         "account_menu": ""
       }
     },
+    "product_breadcrumb_yTFBNe": {
+      "type": "product_breadcrumb",
+      "name": "Product Breadcrumb",
+      "settings": {
+        "text_home_label": "Home",
+        "text_kollektionen_label": "Collections",
+        "text_suche_label": "Search",
+        "text_warenkorb_label": "Cart",
+        "text_404_label": "Page not found",
+        "padding_top": 0.5,
+        "padding_bottom": 0.5,
+        "bg_color": "#ffffff",
+        "text_color": "#0f0f0f"
+      }
+    },
     "section_headline_4mzKWN": {
       "type": "section_headline",
       "name": "Section Headline",
@@ -230,7 +245,9 @@
       "name": "Company Presentation",
       "settings": {
         "text_uberschrift": "DICOTA Company Presentation",
-        "textarea_einleitung": "Download our DICOTA Company Presentation tailored to your key segment. Choose from ready-to-share PDF versions or editable PowerPoint files, available in English, German, and French."
+        "textarea_einleitung": "Download our DICOTA Company Presentation tailored to your key segment. Choose from ready-to-share PDF versions or editable PowerPoint files, available in English, German, and French.",
+        "padding_top": 4,
+        "padding_bottom": 4
       }
     },
     "b2b_tpl_banner_1x_J9FinR": {
@@ -242,7 +259,9 @@
         "text_heading": "LINKEDIN DICOTA Header",
         "textarea_text": "The latest LinkedIn Header for your personal profile page.",
         "url_button_link": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/Linkedin_Head_2026_FINAL.jpg?v=1783095226",
-        "text_button_text": "Download"
+        "text_button_text": "Download",
+        "padding_top": 4,
+        "padding_bottom": 4
       }
     },
     "b2b_mkt_presentation_bPPeAP": {
@@ -292,7 +311,9 @@
       "name": "Advertorials",
       "settings": {
         "text_uberschrift": "DICOTA Advertorials",
-        "textarea_einleitung": "Download the latest DICOTA advertorial: “FOR AMBITIOUS PROFESSIONALS – The new SEVEN for maximum protection.” Available now as a ready-to-share file."
+        "textarea_einleitung": "Download the latest DICOTA advertorial: “FOR AMBITIOUS PROFESSIONALS – The new SEVEN for maximum protection.” Available now as a ready-to-share file.",
+        "padding_top": 4,
+        "padding_bottom": 4
       }
     },
     "b2b_tpl_banner_1x_6GCTj8": {
@@ -303,8 +324,10 @@
         "text_tag": "brand introduction",
         "text_heading": "DICOTA Brand Page",
         "textarea_text": "Download a ready-to-use DICOTA brand page for use on third-party websites and portals to introduce DICOTA.",
-        "url_button_link": "",
-        "text_button_text": "Download"
+        "url_button_link": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/Brandpage_Package_External.zip?v=1783543432",
+        "text_button_text": "Download",
+        "padding_top": 4,
+        "padding_bottom": 4
       }
     },
     "b2b_mkt_documents": {
@@ -370,7 +393,9 @@
       ],
       "name": "DICOTA CI",
       "settings": {
-        "text_uberschrift": "DICOTA Corporate design"
+        "text_uberschrift": "DICOTA Corporate design",
+        "padding_top": 4,
+        "padding_bottom": 4
       }
     },
     "b2b_tpl_banner_1x_XVeFWX": {
@@ -382,7 +407,9 @@
         "text_heading": "DICOTA PPT Master",
         "textarea_text": "Download the official DICOTA PowerPoint template, featuring a range of design options and ready-to-use slide layouts.",
         "url_button_link": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/DICOTA_Master_Template.pptx?v=1783237693",
-        "text_button_text": "Download"
+        "text_button_text": "Download",
+        "padding_top": 4,
+        "padding_bottom": 4
       }
     },
     "b2b_tpl_banner_1x_WLyWz7": {
@@ -394,22 +421,9 @@
         "text_heading": "TEAMS Background",
         "textarea_text": "Download our new standardized DICOTA brand background for Microsoft Teams and use it for all external meetings.",
         "url_button_link": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/Background_Teams_2026.jpg?v=1783272705",
-        "text_button_text": "Download"
-      }
-    },
-    "product_breadcrumb_yTFBNe": {
-      "type": "product_breadcrumb",
-      "name": "Product Breadcrumb",
-      "settings": {
-        "text_home_label": "Home",
-        "text_kollektionen_label": "Collections",
-        "text_suche_label": "Search",
-        "text_warenkorb_label": "Cart",
-        "text_404_label": "Page not found",
-        "padding_top": 0.5,
-        "padding_bottom": 0.5,
-        "bg_color": "#ffffff",
-        "text_color": "#0f0f0f"
+        "text_button_text": "Download",
+        "padding_top": 4,
+        "padding_bottom": 4
       }
     }
   },
