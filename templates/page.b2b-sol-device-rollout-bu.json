@@ -169,6 +169,85 @@
         "padding_bottom": 4
       }
     },
+    "feature_card_grid_z43EaA": {
+      "type": "feature_card_grid",
+      "blocks": {
+        "feature-cards": {
+          "type": "feature-cards",
+          "static": true,
+          "settings": {},
+          "blocks": {
+            "feature_karte_DTVt9X": {
+              "type": "feature-karte",
+              "name": "Step 1",
+              "settings": {
+                "text_heading": "Step 1",
+                "textarea_text": "Enter the device model (e.g. Surface Pro 9, MacBook Air M3, Dell Latitude 14\")",
+                "url_button_link": "",
+                "text_button_text": ""
+              },
+              "blocks": {}
+            },
+            "feature_karte_LcRkLJ": {
+              "type": "feature-karte",
+              "name": "Step 2",
+              "settings": {
+                "text_heading": "Step 2",
+                "textarea_text": "A suitable bundle is automatically suggested – sleeve, case and lock in the correct size",
+                "url_button_link": "",
+                "text_button_text": ""
+              },
+              "blocks": {}
+            },
+            "feature_karte_jjERGN": {
+              "type": "feature-karte",
+              "name": "Step 3",
+              "settings": {
+                "text_heading": "Step 3",
+                "textarea_text": "Transfer the bundle directly into the customer quote or the ERP system – one SKU, one price",
+                "url_button_link": "",
+                "text_button_text": ""
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "feature_karte_DTVt9X",
+            "feature_karte_LcRkLJ",
+            "feature_karte_jjERGN"
+          ]
+        },
+        "stats-row": {
+          "type": "stats-row",
+          "static": true,
+          "settings": {},
+          "blocks": {
+            "stats_block_JLPkkE": {
+              "type": "stats-block",
+              "disabled": true,
+              "settings": {
+                "text_zahl": "14.2M",
+                "text_label": "Recycled PET bottles"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "stats_block_JLPkkE"
+          ]
+        }
+      },
+      "name": "Feature Card Grid",
+      "settings": {
+        "text_subline": "Why DICOTA",
+        "text_heading": "Bundle Configurator – Logic and Process",
+        "textarea_text": "At the heart of the solution is the configurator logic: retailers enter the device model and are automatically presented with a suggested bundle – featuring the correct sizes, compatible products and a predefined package price.",
+        "url_button_link": "",
+        "text_button_text": "",
+        "padding_top": 5,
+        "padding_bottom": 5
+      }
+    },
     "value_tabs_8xDcCx": {
       "type": "value_tabs",
       "blocks": {
@@ -230,6 +309,7 @@
         "tab_3n6qfQ",
         "tab_meKBEP"
       ],
+      "disabled": true,
       "name": "Value Tabs",
       "settings": {
         "text_heading": "Attach-Portfolio",
@@ -336,6 +416,7 @@
     "b2b_solution_feature_UnXFb6",
     "b2b_solution_facts_MnXDke",
     "rich_text_6aeaLY",
+    "feature_card_grid_z43EaA",
     "value_tabs_8xDcCx",
     "owner_spotlight_68NmAp",
     "rich_text_YxCbPU",
