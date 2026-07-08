@@ -237,6 +237,7 @@
           ]
         }
       },
+      "disabled": true,
       "name": "Feature Card Grid",
       "settings": {
         "text_subline": "DICOTA Approach",
@@ -263,11 +264,11 @@
       "blocks": {
         "tab_WtkFKC": {
           "type": "tab",
-          "name": "Argument 1",
+          "name": "Employee onboarding",
           "settings": {
             "text_tab_label": "Argument 1",
-            "text_tab_heading": "Margin without extra effort",
-            "textarea_tab_text": "Standardisation reduces follow-on costs\nIf a company rolls out 300 devices and each employee then buys their own accessories, this results in 300 different scenarios: varying quality, different retailers, uncontrollable expenditure. The bundle standardises the set-up from day one – every employee has the same equipment, of the same quality, from a controlled source."
+            "text_tab_heading": "Employee onboarding",
+            "textarea_tab_text": "Every new hire triggers a full workplace setup. HR defines a standard package, IT adds the device, and the reseller delivers everything as a bundle – defined once, available at any time. Once this setup has been integrated into the onboarding process, there is little risk of being replaced.\nThe key lies in defining the onboarding package in collaboration with HR – not just with IT. HR focuses on the welcome kit and the employee experience; if the DICOTA package forms part of this experience, the order is secured."
           },
           "blocks": {}
         },
@@ -310,7 +311,7 @@
       ],
       "name": "Sales pitch for IT buyers",
       "settings": {
-        "text_heading": "Sales pitch for IT buyers",
+        "text_heading": "Typical reasons for placing orders in detail",
         "padding_top": 5,
         "padding_bottom": 5
       }
