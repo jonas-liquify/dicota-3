@@ -588,6 +588,15 @@
     "owner_spotlight_idR8mL": {
       "type": "owner_spotlight",
       "blocks": {
+        "zitat_WXJq9t": {
+          "type": "zitat",
+          "name": "Zitat",
+          "settings": {
+            "text_block_heading": "\"We think in generations, not in quarters.\"",
+            "text_block_text": "— Management"
+          },
+          "blocks": {}
+        },
         "zitat_wx4BAb": {
           "type": "zitat",
           "settings": {
@@ -598,6 +607,7 @@
         }
       },
       "block_order": [
+        "zitat_WXJq9t",
         "zitat_wx4BAb"
       ],
       "name": "Owner Spotlight",
