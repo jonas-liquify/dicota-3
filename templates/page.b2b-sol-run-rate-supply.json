@@ -120,26 +120,27 @@
         },
         "b2b_sol_fact_yjNgri": {
           "type": "b2b-sol-fact",
+          "name": "Top 50",
           "settings": {
             "text_zahl": "Top 50",
             "text_label": "Top sellers always in stock"
           },
           "blocks": {}
         },
-        "b2b_sol_fact_ghexVD": {
+        "b2b_sol_fact_rw3wix": {
           "type": "b2b-sol-fact",
-          "name": "B2B Sol Fact",
+          "name": "+20-30%",
           "settings": {
             "text_zahl": "+20-30%",
             "text_label": "Higher basket value thanks to complementary products"
           },
           "blocks": {}
         },
-        "b2b_sol_fact_rw3wix": {
+        "b2b_sol_fact_ghexVD": {
           "type": "b2b-sol-fact",
-          "name": "B2B Sol Fact",
+          "name": "1 Source",
           "settings": {
-            "text_zahl": "One Source",
+            "text_zahl": "1 Source",
             "text_label": "For top sellers & accessories – fewer suppliers"
           },
           "blocks": {}
@@ -148,8 +149,8 @@
       "block_order": [
         "b2b_sol_capability_LdYmLH",
         "b2b_sol_fact_yjNgri",
-        "b2b_sol_fact_ghexVD",
-        "b2b_sol_fact_rw3wix"
+        "b2b_sol_fact_rw3wix",
+        "b2b_sol_fact_ghexVD"
       ],
       "name": "B2B Solution Facts",
       "settings": {

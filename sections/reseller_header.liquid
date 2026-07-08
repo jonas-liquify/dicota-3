@@ -1,6 +1,6 @@
 <div class="section_announcement-bar section_b2b-announcement-bar reseller-header_top"><div class="announcement-bar_container"><div li-cf-theme-blocks="" class="announcement-bar_items">
 {% content_for 'blocks' %}
-</div>{% content_for "block", type: "reseller-rechte-seite", id: "reseller-rechte-seite" %}</div></div><div class="reseller-header_nav"><div class="reseller-header_nav-inner"><div class="reseller-header_left"><a href="{{ routes.root_url }}" li-object:href="routes.root_url" class="reseller-header_brand" aria-label="To the homepage">{% if section.settings.image_logo %}
+</div>{% content_for "block", type: "reseller-rechte-seite", id: "reseller-rechte-seite" %}</div></div><div class="reseller-header_nav"><div x-data="{ open: false }" class="reseller-header_nav-inner"><div class="reseller-header_left"><a href="{{ routes.root_url }}" li-object:href="routes.root_url" class="reseller-header_brand" aria-label="To the homepage">{% if section.settings.image_logo %}
 {{ section.settings.image_logo | image_url: width: 300 | image_tag: loading: 'lazy', class: 'reseller-header_logo' }}
 {% else %}
 <img src="{{ 'liquify-logo-black.svg' | asset_url }}" loading="lazy" alt="" class="reseller-header_logo">
@@ -8,11 +8,425 @@
     <span class="reseller-header_sublabel">
 {{ section.settings.text_sublabel }}
 </span>    </span>
-{% endif %}</a>{% content_for "block", type: "reseller-menu", id: "reseller-menu" %}</div><div class="reseller-header_actions">{% if section.settings.text_contact_sales_text != blank %}    <span class="li-guard" li-if="section.settings.text_contact_sales_text != blank">
+{% endif %}</a></div>{% content_for "block", type: "reseller-menu", id: "reseller-menu" %}{% unless customer %}    <div x-bind:class="open ? 'is-open' : ''" li-unless="customer" class="reseller-header_actions">
+    {% if section.settings.text_contact_sales_text != blank %}    <span class="li-guard" li-if="section.settings.text_contact_sales_text != blank">
     <a href="{{ section.settings.url_contact_sales_link }}" class="button reseller-header_btn-outline w-button"> <span>{{ section.settings.text_contact_sales_text }}</span> </a>    </span>
 {% endif %}{% if section.settings.text_login_text != blank %}    <span class="li-guard" li-if="section.settings.text_login_text != blank">
     <a href="{{ section.settings.url_login_link }}" class="button reseller-header_btn-solid w-button"> <span class="reseller-header_btn-icon w-embed"><svg width="100%" height="100%" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 12C10.9 12 9.95833 11.6083 9.175 10.825C8.39167 10.0417 8 9.1 8 8C8 6.9 8.39167 5.95833 9.175 5.175C9.95833 4.39167 10.9 4 12 4C13.1 4 14.0417 4.39167 14.825 5.175C15.6083 5.95833 16 6.9 16 8C16 9.1 15.6083 10.0417 14.825 10.825C14.0417 11.6083 13.1 12 12 12ZM4 20V17.2C4 16.6333 4.14583 16.1125 4.4375 15.6375C4.72917 15.1625 5.11667 14.8 5.6 14.55C6.63333 14.0333 7.68333 13.6458 8.75 13.3875C9.81667 13.1292 10.9 13 12 13C13.1 13 14.1833 13.1292 15.25 13.3875C16.3167 13.6458 17.3667 14.0333 18.4 14.55C18.8833 14.8 19.2708 15.1625 19.5625 15.6375C19.8542 16.1125 20 16.6333 20 17.2V20H4Z" fill="currentColor"></path></svg></span><span>{{ section.settings.text_login_text }}</span> </a>    </span>
-{% endif %}</div></div></div> {% schema %} {
+{% endif %}    </div>
+{% endunless %}{% if customer %}    <div li-if="customer" class="nav_shop-icons">
+    <div class="nav_search nav_search-trigger-wrap" x-data="{ searchOpen: false, searchQuery: '', results: [], suggestions: [], loading: false }"><button type="button" aria-label="Open search" class="nav_shop-icon nav_search-pill" x-on:click="searchOpen = true; $nextTick(() => $refs.searchInput && $refs.searchInput.focus())"><div class="icon-embed-xsmall w-embed"><svg width="100%" height="100%" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M19.6 21L13.3 14.7C12.8 15.1 12.225 15.4167 11.575 15.65C10.925 15.8833 10.2333 16 9.5 16C7.68333 16 6.14583 15.3708 4.8875 14.1125C3.62917 12.8542 3 11.3167 3 9.5C3 7.68333 3.62917 6.14583 4.8875 4.8875C6.14583 3.62917 7.68333 3 9.5 3C11.3167 3 12.8542 3.62917 14.1125 4.8875C15.3708 6.14583 16 7.68333 16 9.5C16 10.2333 15.8833 10.925 15.65 11.575C15.4167 12.225 15.1 12.8 14.7 13.3L21 19.6L19.6 21ZM9.5 14C10.75 14 11.8125 13.5625 12.6875 12.6875C13.5625 11.8125 14 10.75 14 9.5C14 8.25 13.5625 7.1875 12.6875 6.3125C11.8125 5.4375 10.75 5 9.5 5C8.25 5 7.1875 5.4375 6.3125 6.3125C5.4375 7.1875 5 8.25 5 9.5C5 10.75 5.4375 11.8125 6.3125 12.6875C7.1875 13.5625 8.25 14 9.5 14Z" fill="currentColor"></path></svg></div><span class="nav_search-placeholder">
+{{ section.settings.text_suche_placeholder }}
+</span></button><div x-cloak="" x-show="searchOpen" class="nav_search-overlay" x-on:click.self="searchOpen = false" x-on:keydown.escape.window="searchOpen = false"><div class="nav_search-overlay-panel"><div class="nav_search-overlay-bar"><div class="nav_search-overlay-icon w-embed"><svg width="100%" height="100%" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M19.6 21L13.3 14.7C12.8 15.1 12.225 15.4167 11.575 15.65C10.925 15.8833 10.2333 16 9.5 16C7.68333 16 6.14583 15.3708 4.8875 14.1125C3.62917 12.8542 3 11.3167 3 9.5C3 7.68333 3.62917 6.14583 4.8875 4.8875C6.14583 3.62917 7.68333 3 9.5 3C11.3167 3 12.8542 3.62917 14.1125 4.8875C15.3708 6.14583 16 7.68333 16 9.5C16 10.2333 15.8833 10.925 15.65 11.575C15.4167 12.225 15.1 12.8 14.7 13.3L21 19.6L19.6 21ZM9.5 14C10.75 14 11.8125 13.5625 12.6875 12.6875C13.5625 11.8125 14 10.75 14 9.5C14 8.25 13.5625 7.1875 12.6875 6.3125C11.8125 5.4375 10.75 5 9.5 5C8.25 5 7.1875 5.4375 6.3125 6.3125C5.4375 7.1875 5 8.25 5 9.5C5 10.75 5.4375 11.8125 6.3125 12.6875C7.1875 13.5625 8.25 14 9.5 14Z" fill="currentColor"></path></svg></div><form action="/search" method="get" role="search" class="nav_search-overlay-form"><input type="search" name="q" x-model="searchQuery" x-on:input.debounce.300ms="window.__dicotaNavSearch($data)" x-ref="searchInput" placeholder="What are you looking for?" autocomplete="off" class="nav_search-overlay-input"></form><button type="button" aria-label="Close search" class="nav_search-overlay-close" x-on:click="searchOpen = false">{% render 'icon_close' %}</button></div><p class="nav_search-overlay-tip">
+{{ section.settings.text_such_tipp }}
+</p><div li-section="predictive_search" class="nav_search-overlay-states"><div x-show="!searchQuery || searchQuery.length === 0" class="nav_search-empty-grid"><div class="nav_search-empty-col"><div class="nav_search-empty-header"><div li-object="'search.popular' | t" class="text-style-subline">{{ 'search.popular' | t }}</div></div><div class="nav_search-pills">{% for block in section.blocks %}
+    {% if block.type == "nav-search-suggestion" %}
+                    <div li-block="Nav Search Suggestion" style="display:contents">
+                                    <a href="{{ block.settings.url_link }}" class="nav_search-pill-item"> <span>{{ block.settings.text_text }}</span> </a>
+                            </div>
+            {% endif %}
+{% endfor %}</div></div><div class="nav_search-empty-col"><div class="nav_search-empty-header"><div li-object="'search.recently_viewed' | t" class="text-style-subline">{{ 'search.recently_viewed' | t }}</div><a li-object="'general.clear' | t" href="#" class="text-style-link">{{ 'general.clear' | t }}</a></div><div class="nav_search-recent">{% for product in section.settings.collection_search_recent.products limit: section.settings.collection_search_recent_limit %}
+<div class="nav_search-recent-item">
+    <a li-object:href="product.url" href="{{ product.url }}" class="nav_search-recent-link"><img li-object:src="product.featured_image | image_url: width: 400" li-object:alt="product.featured_image.alt" src="{{ product.featured_image | image_url: width: 400 }}" loading="lazy" alt="{{ product.featured_image.alt }}" class="nav_search-recent-image"></a>
+</div>
+{% endfor %}</div></div></div><div x-cloak="" x-show="searchQuery && searchQuery.length > 0" class="nav_search-results-grid"><div class="nav_search-empty-col"><div li-object="'search.suggestions' | t" class="text-style-subline">{{ 'search.suggestions' | t }}</div><ul role="list" class="nav_search-suggestion-list w-list-unstyled"><template x-for="s in suggestions" :key="(s.text || s.title)"></template><li x-show="!loading && suggestions.length === 0" class="nav_search-suggestion-item"><span li-object="'search.no_suggestions' | t" class="nav_search-suggestion-link" style="opacity:.55">{{ 'search.no_suggestions' | t }}</span></li></ul></div><div class="nav_search-empty-col"><ul role="list" class="nav_search-product-grid w-list-unstyled"><template x-for="p in results" :key="p.id"></template><li li-object="'search.searching' | t" x-show="loading" role="listitem" class="nav_search-product-status">{{ 'search.searching' | t }}</li><li li-object="'collection.no_products' | t" x-show="!loading && results.length === 0" role="listitem" class="nav_search-product-status">{{ 'collection.no_products' | t }}</li></ul><a x-bind:href="'/search?q=' + encodeURIComponent(searchQuery)" href="/search" class="button is-outline nav_search-results-cta w-button"><span li-object="'search.view_all' | t">{{ 'search.view_all' | t }}</span></a></div></div></div></div></div></div><div class="nav_wishlist"><a href="{{ section.settings.url_wishlist_link }}" class="nav_shop-icon w-inline-block"> <div class="icon-embed-xsmall w-embed">{% render 'icon_favorite' %}</div> </a></div>{% if shop.customer_accounts_optional %}    <div li-if="shop.customer_accounts_optional" class="nav_account">
+    <a href="{% if customer %}{{ routes.account_url }}{% else %}{{ routes.account_login_url }}{% endif %}" class="nav_shop-icon w-inline-block"><div class="icon-embed-xsmall w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 24 24" fill="none" aria-hidden="true" role="img"><mask id="mask0_2941_121306" style="mask-type:alpha" maskunits="userSpaceOnUse" x="0" y="0" width="24" height="24"><rect width="24" height="24" fill="#D9D9D9"></rect></mask><g mask="url(#mask0_2941_121306)"><path d="M12 12C10.9 12 9.95833 11.6083 9.175 10.825C8.39167 10.0417 8 9.1 8 8C8 6.9 8.39167 5.95833 9.175 5.175C9.95833 4.39167 10.9 4 12 4C13.1 4 14.0417 4.39167 14.825 5.175C15.6083 5.95833 16 6.9 16 8C16 9.1 15.6083 10.0417 14.825 10.825C14.0417 11.6083 13.1 12 12 12ZM4 20V17.2C4 16.6333 4.14583 16.1125 4.4375 15.6375C4.72917 15.1625 5.11667 14.8 5.6 14.55C6.63333 14.0333 7.68333 13.6458 8.75 13.3875C9.81667 13.1292 10.9 13 12 13C13.1 13 14.1833 13.1292 15.25 13.3875C16.3167 13.6458 17.3667 14.0333 18.4 14.55C18.8833 14.8 19.2708 15.1625 19.5625 15.6375C19.8542 16.1125 20 16.6333 20 17.2V20H4Z" fill="currentColor"></path></g></svg></div></a>    </div>
+{% endif %}<div class="nav_mini-cart"><script>
+    document.addEventListener('alpine:init', () => {
+
+    Alpine.data('handleMinicart', () => ({
+        init() {
+            console.log('handleMinicart init')
+        },
+        cart: {
+            note: null,
+            attributes: {},
+            items: [],
+            currency: window.Shopify.currency.active,
+            cart_level_discount_applications: [],
+            response: {
+                result : {},
+                show : false,
+                timeout : 5000,
+            },
+            item_count: 0,
+            total_price:0,
+            total_weight: 0,
+            total_discount: 0,
+            original_total_price: 0,
+            items_subtotal_price: 0
+        },
+        _abortController : null,
+        initAbortController() {
+            if(this._abortController) {
+                this._abortController.abort('abort previous request');
+            }
+            this._abortController = new AbortController()
+        },
+        getAbortControllerSignal() {
+            return this._abortController.signal
+        },
+        resetAbortController() {
+            this._abortController = null;
+        },
+        toggleMiniCart() {
+            console.log('(minicart.js) toggleMiniCart called');
+
+            LiquifyHelper.handleTriggerClick();
+
+            this.getCart();
+        },
+
+        /**
+         * Get the cart data.
+         */
+        async getCart() {
+            this.initAbortController()
+            await fetch(window.Shopify.routes.root + 'cart.js', {
+                method: 'GET',
+                signal: this.getAbortControllerSignal(),
+                headers: {'Content-Type': 'application/json'},
+            })
+                .then(response => response.json())
+                .then(data => {
+                    this.resetAbortController();
+
+                    this.cart.item_count = data.item_count;
+
+                    this.cart.items = data.items.map((item) => {
+                        item.title = this.htmlspecialchars_decode(item.title)
+                        return item
+                    })
+
+
+                    this.cart.total_price = data.total_price;
+                    this.cart.total_weight = data.total_weight;
+                    this.cart.total_discount = data.total_discount;
+                    this.cart.original_total_price = data.original_total_price;
+
+                    this.$dispatch('carttotalitems', data.item_count);
+                    this.$dispatch('currentcartitems', this.cart.items);
+                })
+                .catch((error) => {
+                    console.error('Error:', error);
+                });
+        },
+
+        /**
+         * @param key
+         * @param quantity
+         */
+        increaseCartItemQuantity(key, quantity) {
+            this.updateCartItemQuantity(key, parseInt(quantity) + 1);
+        },
+
+        /**
+         * @param key
+         * @param quantity
+         */
+        decreaseCartItemQuantity(key, quantity) {
+            this.updateCartItemQuantity(key, parseInt(quantity) - 1);
+        },
+
+        /**
+         * Update the cart item.
+         *
+         * @param key
+         * @param quantity
+         */
+        updateCartItemQuantity(key, quantity) {
+            this.initAbortController();
+            console.log('updateCartItemQuantity(): key, quantity: ', key, quantity);
+            this.cart.items.filter((product)  => {
+                if(product.key === key) {
+                    product.quantity = quantity
+                }
+            })
+            let updates = {};
+            updates[key] = quantity;
+            fetch(window.Shopify.routes.root + 'cart/update.js', {
+                method: 'POST',
+                signal: this.getAbortControllerSignal(),
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({ updates }),
+            })
+                .then(response => response.json())
+                .then(data => {
+                    this.resetAbortController();
+                    console.log('updateCartItemQuantity(): ', data);
+
+                    this.$dispatch('cartupdated', this.cart.items);
+                    this.$dispatch('showcartmessage', { status: data.status, message: data.message, description: data.description });
+                })
+                .catch((error) => {
+                    console.error('Error:', error);
+                    this.$dispatch('showcartmessage', { status: error?.status, message: error, description: error });
+                });
+        },
+
+        /**
+         * Format monetary values.
+         */
+        moneyFormat(value, minor = true) {
+            return LiquifyHelper.moneyFormat(value, minor)
+        },
+
+        htmlspecialchars_decode(string) {
+            return LiquifyHelper.htmlspecialchars_decode(string)
+        },
+
+        /**
+         * Shows the minicart api message
+         * @param event
+         */
+        showCartMessage(event) {
+            if(event?.detail?.status) {
+                this.cart.response.result = event.detail ?? {}
+                this.cart.response.show = true
+                setTimeout(() => {
+                    this.cart.response.result = {};
+                    this.cart.response.show = false
+                }, this.cart.response.timeout ?? 5000)
+            }
+        },
+
+        async returnCartItems() {
+            await this.getCart();
+
+            this.$dispatch('currentcartitems', this.cart.items);
+        },
+
+        /**
+         * @deprecated
+         */
+        set open(open) { // deprecated use  LiquifyHelper instead
+            //console.warn('Deprecated "set open" in mini_cart')
+        },
+        /**
+         * @deprecated
+         */
+        get open() { // deprecated use  LiquifyHelper instead
+            //console.warn('Deprecated "get open" in mini_cart')
+            return false;
+        },
+        /**
+         * @deprecated
+         */
+        set note(note) { // deprecated
+            //console.warn('Deprecated "set note" in mini_cart')
+            this.cart.note = note;
+        },
+        /**
+         * @deprecated
+         */
+        get note() { // deprecated
+            //console.warn('Deprecated "get note" in mini_cart')
+            return this.cart?.note;
+        },
+        /**
+         * @deprecated
+         */
+        set attributes(attributes) { // deprecated
+            //console.warn('Deprecated "set attributes" in mini_cart')
+            this.cart.attributes = attributes;
+        },
+        /**
+         * @deprecated
+         */
+        get attributes() { // deprecated
+            //console.warn('Deprecated "get attributes" in mini_cart')
+            return this.cart?.attributes;
+        },
+        /**
+         * @deprecated
+         */
+        set original_total_price(original_total_price) { //deprecated
+            //console.warn('Deprecated "set original_total_price" in mini_cart')
+            this.cart.original_total_price = original_total_price;
+        },
+        /**
+         * @deprecated
+         */
+        get original_total_price() { //deprecated
+            //console.warn('Deprecated "get original_total_price" in mini_cart')
+            return this.cart.original_total_price;
+        },
+        /**
+         * @deprecated
+         */
+        set total_price(total_price) { //deprecated
+            //console.warn('Deprecated "set total_price" in mini_cart')
+            this.cart.total_price = total_price;
+        },
+        /**
+         * @deprecated
+         */
+        get total_price() { //deprecated
+            //console.warn('Deprecated "get total_price" in mini_cart')
+            return this.cart.total_price;
+        },
+        /**
+         * @deprecated
+         */
+        set total_discount(total_discount) { //deprecated
+            //console.warn('Deprecated "set total_discount" in mini_cart')
+            this.cart.total_discount = total_discount;
+        },
+        /**
+         * @deprecated
+         */
+        get total_discount() { //deprecated
+            //console.warn('Deprecated "get total_discount" in mini_cart')
+            return this.cart.total_discount;
+        },
+        /**
+         * @deprecated
+         */
+        set total_weight(total_weight) { //deprecated
+            //console.warn('Deprecated "set total_weight" in mini_cart')
+            this.cart.total_discount = total_weight;
+        },
+        /**
+         * @deprecated
+         */
+        get total_weight() { //deprecated
+            //console.warn('Deprecated "get total_weight" in mini_cart')
+            return this.cart.total_weight;
+        },
+        /**
+         * @deprecated
+         */
+        set item_count(item_count) { //deprecated
+            //console.warn('Deprecated "set item_count" in mini_cart')
+            this.cart.total_discount = item_count;
+        },
+        /**
+         * @deprecated
+         */
+        get item_count() { //deprecated
+            //console.warn('Deprecated "get item_count" in mini_cart')
+            return this.cart.item_count;
+        },
+        /**
+         * @deprecated
+         */
+        set items_subtotal_price(items_subtotal_price) { //deprecated
+            //console.warn('Deprecated "set items_subtotal_price" in mini_cart')
+            this.cart.items_subtotal_price = items_subtotal_price;
+        },
+        /**
+         * @deprecated
+         */
+        get items_subtotal_price() { //deprecated
+            //console.warn('Deprecated "get items_subtotal_price" in mini_cart')
+            return this.cart.items_subtotal_price;
+        },
+        /**
+         * @deprecated
+         */
+        set products(products) {
+            //console.warn('Deprecated "set products" in mini_cart')
+            this.cart.items = products;
+        },
+        /**
+         * @deprecated
+         */
+        get products() {
+            //console.warn('Deprecated "get products" in mini_cart')
+            return this.cart.items;
+        },
+        /**
+         * @deprecated
+         */
+        set requires_shipping(requires_shipping) {
+            //console.warn('Deprecated "set requires_shipping" in mini_cart')
+        },
+        /**
+         * @deprecated
+         */
+        get requires_shipping() {
+            //console.warn('Deprecated "get requires_shipping" in mini_cart')
+            return false;
+        },
+        /**
+         * @deprecated
+         */
+        set currency(currency) { //deprecated
+            //console.warn('Deprecated "set currency" in mini_cart')
+            this.cart.currency = currency;
+        },
+        /**
+         * @deprecated
+         */
+        get currency() { //deprecated
+            //console.warn('Deprecated "get currency" in mini_cart')
+            return this.cart.currency;
+        },
+        /**
+         * @deprecated
+         */
+        set cart_level_discount_applications(cart_level_discount_applications) { //deprecated
+            //console.warn('Deprecated "set cart_level_discount_applications" in mini_cart')
+            this.cart.cart_level_discount_applications = cart_level_discount_applications;
+        },
+        /**
+         * @deprecated
+         */
+        get cart_level_discount_applications() { //deprecated
+            //console.warn('Deprecated "get cart_level_discount_applications" in mini_cart')
+            return this.cart.cart_level_discount_applications;
+        },
+        /**
+         * @deprecated
+         */
+        set cartApiResponse(cartApiResponse) { //deprecated
+            //console.warn('Deprecated "set cartApiResponse" in mini_cart')
+            this.cart.cartApiResponse = cartApiResponse;
+        },
+        /**
+         * @deprecated
+         */
+        get cartApiResponse() { //deprecated
+            //console.warn('Deprecated "get cartApiResponse" in mini_cart')
+            return this.cart.response;
+        },
+        /**
+         * @deprecated
+         */
+        set total(total) { //deprecated
+            //console.warn('Deprecated "set total" in mini_cart')
+            this.cart.item_count = total.items;
+            this.cart.total_price = total.price;
+            this.cart.total_weight = total.weight;
+            this.cart.total_discount = total.discount;
+        },
+        /**
+         * @deprecated
+         */
+        get total() { //deprecated
+            //console.warn('Deprecated "get total" in mini_cart')
+            return {
+                items: this.cart.item_count,
+                price: this.cart.total_price,
+                weight: this.cart.total_weight,
+                discount: this.cart.total_discount,
+            };
+        }
+    }))
+
+
+});
+
+</script>
+<div data-hover="false" data-delay="400" li-element="mini-cart" class="nav_dropdown w-dropdown" x-data="handleMinicart()" x-init="getCart()" @cartupdated.window="getCart()" @setcartitem.window="updateCartItemQuantity($event.detail.product, $event.detail.quantity)" @increasecartitem.window="increaseCartItemQuantity($event.detail.product, $event.detail.quantity)" @decreasecartitem.window="decreaseCartItemQuantity($event.detail.product, $event.detail.quantity)" @toggleminicart.window="toggleMiniCart()" @showcartmessage.window="showCartMessage" @getcartitems.window="returnCartItems"><div aria-label="Cart" li-element="mini-cart-toggle" class="nav_shop-icon nav_shop-icon-cart w-dropdown-toggle" @click="$dispatch('cartupdated.window')"><div class="icon-embed-xsmall w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 24 24" fill="none" aria-hidden="true" role="img"><mask id="mask-mini-cart" style="mask-type:alpha" maskunits="userSpaceOnUse" x="0" y="0" width="24" height="24"><rect width="24" height="24" fill="#D9D9D9"></rect></mask><g mask="url(#mask-mini-cart)"><path d="M6 22C5.45 22 4.97917 21.8042 4.5875 21.4125C4.19583 21.0208 4 20.55 4 20V8C4 7.45 4.19583 6.97917 4.5875 6.5875C4.97917 6.19583 5.45 6 6 6H8C8 4.9 8.39167 3.95833 9.175 3.175C9.95833 2.39167 10.9 2 12 2C13.1 2 14.0417 2.39167 14.825 3.175C15.6083 3.95833 16 4.9 16 6H18C18.55 6 19.0208 6.19583 19.4125 6.5875C19.8042 6.97917 20 7.45 20 8V20C20 20.55 19.8042 21.0208 19.4125 21.4125C19.0208 21.8042 18.55 22 18 22H6Z" fill="currentColor"></path></g></svg></div><div li-element="mini-cart-item-count" class="nav_shop-quantity" x-data="{ items: 0 }" x-text="items" @carttotalitems.window="items = event.detail">0</div></div><nav li-element="mini-cart-container" class="nav_mini-cart-holder w-dropdown-list" :class="open || 'mini-cart-closed'"><div li-element="dropdown-toggle" class="nav_mini-cart-close" data-dropdowntoggle="" @click="LiquifyHelper.triggerClick($event.target.closest('.w-dropdown').querySelector('.w-dropdown-toggle.w--open'))"></div><div data-free-shipping="{{ section.settings.free_shipping_threshold | times: 100 }}" x-data="{ shippingFree: 5000 }" x-init="shippingFree = isNaN(parseInt($el.dataset.freeShipping, 10)) ? shippingFree : parseInt($el.dataset.freeShipping, 10)" class="mini-cart_component"><div li-element="mini-cart-full" class="mini-cart_full" :style="total.items < 1 && { display: 'none' }"><div class="nav_dropdown-header"><div class="heading-style-h4">{{ 'cart.heading' | t }}</div><div aria-label="Close cart" li-element="dropdown-toggle" role="button" tabindex="0" class="mini-cart_close w-embed" data-dropdowntoggle="" @click="LiquifyHelper.triggerClick($event.target.closest('.w-dropdown').querySelector('.w-dropdown-toggle.w--open'))"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewbox="0 0 30 30" fill="none"><rect y="30" width="30" height="30" rx="15" transform="rotate(-90 0 30)" fill="#0F0F0F"></rect><path d="M11.735 19.3471L10.6545 18.2666L13.9212 14.9999L10.6545 11.7333L11.735 10.6528L15.0017 13.9195L18.2683 10.6528L19.3488 11.7333L16.0821 14.9999L19.3488 18.2666L18.2683 19.3471L15.0017 16.0804L11.735 19.3471Z" fill="white"></path></svg></div></div><div x-bind:style="'display: ' + (((shippingFree - total.price) / 100) < 0 ? 'none' : 'flex')" class="mini-cart_footer_progress-component hide"><div class="text-size-regular text-weight-medium">{{ 'cart.get_free_shipping' | t }}</div><div class="margin-top margin-xsmall"><div class="text-size-tiny"><span>{{ 'cart.still' | t }}</span><span li-js-price="shippingFree - total.price" class="text-size-regular text-weight-medium" x-text="LiquifyHelper.moneyFormat(shippingFree - total.price, true, '{{ shop.money_with_currency_format }}')">52,75€</span><span>{{ 'cart.to_free_shipping' | t }}</span></div></div><div class="mini-cart_footer_progress-bar"><div x-bind:style="'width: ' + (total.price/shippingFree) *100 + '%'" class="mini-cart_footer_progress-bar-innner"></div></div></div><div x-bind:style="'display: ' + (((shippingFree - total.price) / 100) < 0 ? 'flex' : 'none')" class="mini-cart_footer_progress-component hide"><div class="text-size-regular text-weight-medium">{{ 'cart.free_shipping_heading' | t }}</div><div class="text-size-tiny">{{ 'cart.free_shipping_text' | t }}</div></div><div class="mini-cart_line-item no-scrollbar"><ul role="list" class="mini-cart_line-item_list w-list-unstyled"><template x-for="product in products" :key="product.key">
+    <li li-element="mini-cart-item" class="mini-cart_line-item_item"><img src="/images/product-apparel-2.svg" loading="lazy" alt="" class="mini-cart_line-item_img" x-bind:src="product.image"><div class="mini-cart_line-item_product-info"><div class="mini-cart_line-item-content"><div li-js-object="product.title" class="text-size-regular text-weight-medium" x-text="product.title">Product</div><div class="mini-cart_line-item_price"><div li-js-price="product.price" class="text-size-regular text-weight-medium" x-text="LiquifyHelper.moneyFormat(product.price, true, '{{ shop.money_with_currency_format }}')">14,99 €</div><template x-if="product.price < product.original_price">
+            <div li-js-if="product.price < product.original_price">
+        <div li-js-price="product.original_price" class="text-size-small text-style-strikethrough text-style-muted" x-text="LiquifyHelper.moneyFormat(product.original_price, true, '{{ shop.money_with_currency_format }}')">14,99 €</div>        </div>
+    </template></div></div><div class="mini-cart_line-item-content justify-center"><div class="mini-cart_line-item_quantity"><a li-element="mini-cart-item-decrease" href="#" class="mini-cart_line-item_quantity-adjust w-inline-block" :productprop="product" @click="$dispatch('decreasecartitem', { product: product.key, quantity: product.quantity, action: 'decrease' })"><div class="icon-1x1-tiny w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16" fill="none"><path d="M3 8h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg></div></a><input li-element="mini-cart-item-quantity" class="mini-cart_line-item_quantity-adjust" value="1" :productprop="product" @input="$dispatch('setcartitem', { product: product.key, quantity: product.quantity })" x-model="product.quantity"><a li-element="mini-cart-item-increase" href="#" class="mini-cart_line-item_quantity-adjust w-inline-block" :productprop="product" @click="$dispatch('increasecartitem', { product: product.key, quantity: product.quantity, action: 'increase' })"><div class="icon-1x1-tiny w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16" fill="none"><path d="M8 3v10M3 8h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg></div></a></div><a aria-label="Remove from cart" li-element="mini-cart-item-remove" href="#" class="mini-cart_line-item-remove w-inline-block" :productprop="product" @click="$dispatch('setcartitem', { product: product.key, quantity: 0 })"><div class="icon-1x1-tiny w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16" fill="none"><path d="M4.667 14c-.367 0-.681-.131-.942-.392A1.286 1.286 0 0 1 3.333 12.667V4H2.667V2.667H6V2h4v.667h3.333V4h-.666v8.667c0 .366-.131.68-.392.941a1.286 1.286 0 0 1-.942.392H4.667zm6.666-10H4.667v8.667h6.666V4zM6 11.333h1.333v-6H6v6zm2.667 0H10v-6H8.667v6z" fill="currentColor"></path></svg></div></a></div></div></li></template></ul></div><div class="mini-cart_footer"><div class="mini-cart_footer_total"><div class="text-size-medium">{{ 'cart.total_price' | t }}</div><div class="mini-cart_footer-sum"><div li-js-price="total.price" class="text-size-medium text-weight-medium" x-text="LiquifyHelper.moneyFormat(total.price, true, '{{ shop.money_with_currency_format }}')">14,99 €</div><template x-if="total.price < original_total_price">
+            <div li-js-if="total.price < original_total_price">
+        <div li-js-price="original_total_price" class="text-size-regular text-style-strikethrough text-style-muted" x-text="LiquifyHelper.moneyFormat(original_total_price, true, '{{ shop.money_with_currency_format }}')">14,99 €</div>        </div>
+    </template></div></div><div class="mini-cart_footer_total"><div class="text-size-medium">{{ 'cart.shipping_fee' | t }}</div><div class="text-align-right"><div><div class="text-size-medium text-weight-medium">{{ 'cart.free' | t }}</div></div><div x-bind:style="'display: ' + (((shippingFree - total.price) / 100) < 0 ? 'none' : 'block')" class="hide"><div class="text-size-medium text-weight-medium">4,99€</div></div></div></div><div li-element="mini-cart-api-response" class="mini-cart_footer-message hide"><div class="mini-cart_footer-message-item"><div class="text-size-regular text-weight-bold">Note</div><div li-js-object="cartApiResponse?.result?.message" class="text-size-regular text-weight-bold" x-text="cartApiResponse?.result?.message">14,99 €</div></div></div><a x-bind:href="'/checkout'" href="/checkout" class="button is-blue w-button">{{ 'cart.go_to_checkout' | t }}</a></div></div><div li-cloak="hide" li-element="mini-cart-empty" :style="total.items && { display: 'none' }"><div class="nav_dropdown-header"><div class="heading-style-h4">{{ 'cart.heading' | t }}</div><div aria-label="Close cart" li-element="dropdown-toggle" role="button" tabindex="0" class="mini-cart_close w-embed" data-dropdowntoggle="" @click="LiquifyHelper.triggerClick($event.target.closest('.w-dropdown').querySelector('.w-dropdown-toggle.w--open'))"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewbox="0 0 30 30" fill="none"><rect y="30" width="30" height="30" rx="15" transform="rotate(-90 0 30)" fill="#0F0F0F"></rect><path d="M11.735 19.3471L10.6545 18.2666L13.9212 14.9999L10.6545 11.7333L11.735 10.6528L15.0017 13.9195L18.2683 10.6528L19.3488 11.7333L16.0821 14.9999L19.3488 18.2666L18.2683 19.3471L15.0017 16.0804L11.735 19.3471Z" fill="white"></path></svg></div></div><div class="mini-cart_empty"><div class="text-size-regular">{{ 'cart.empty' | t }}</div></div></div></div></nav></div></div>    </div>
+{% endif %}<div class="hide w-embed w-script"><script>window.__dicotaNavSearch=function(c){var q=(c.searchQuery||"").trim();var grid=document.querySelector(".nav_search-product-grid");var sug=document.querySelector(".nav_search-suggestion-list");function clr(el){if(!el)return;var n=el.querySelectorAll("[data-ps-injected]");for(var i=0;i<n.length;i++){n[i].parentNode.removeChild(n[i]);}}if(q.length<2){c.results=[];c.suggestions=[];c.loading=false;clr(grid);clr(sug);return;}c.loading=true;var url="/search/suggest.json?q="+encodeURIComponent(q)+"&resources[type]=product,query&resources[limit]=6&resources[options][unavailable_products]=last";fetch(url,{headers:{"Accept":"application/json"}}).then(function(r){return r.json();}).then(function(d){var res=(d.resources&&d.resources.results)||{};var products=res.products||[];var queries=res.queries||[];c.results=products;c.suggestions=queries;c.loading=false;clr(grid);clr(sug);if(grid){var pref=grid.querySelector(".nav_search-product-status");products.forEach(function(p){var li=document.createElement("li");li.setAttribute("data-ps-injected","");li.setAttribute("role","listitem");var a=document.createElement("a");a.className="nav_search-product-link";a.setAttribute("href",p.url||"#");var w=document.createElement("div");w.className="nav_search-product-image-wrap";var im=document.createElement("img");im.className="nav_search-product-image";im.setAttribute("loading","lazy");im.setAttribute("alt",p.title||"");var src=(p.featured_image&&p.featured_image.url)||p.image||"";if(src){im.setAttribute("src",src);}w.appendChild(im);var info=document.createElement("div");info.className="nav_search-product-info";var br=document.createElement("span");br.className="nav_search-product-brand";br.textContent=p.vendor||"";var ti=document.createElement("span");ti.className="nav_search-product-title";ti.textContent=p.title||"";info.appendChild(br);info.appendChild(ti);a.appendChild(w);a.appendChild(info);li.appendChild(a);grid.insertBefore(li,pref);});}if(sug){var sref=sug.querySelector(".nav_search-suggestion-item");queries.forEach(function(s){var li=document.createElement("li");li.setAttribute("data-ps-injected","");li.className="nav_search-suggestion-item";var a=document.createElement("a");a.className="nav_search-suggestion-link";var txt=s.text||"";a.setAttribute("href",s.url||("/search?q="+encodeURIComponent(txt)));a.textContent=txt;li.appendChild(a);sug.insertBefore(li,sref);});}}).catch(function(){c.loading=false;});};</script></div><button type="button" x-on:click="open = !open" x-bind:aria-expanded="open ? 'true' : 'false'" aria-label="Menu" class="reseller-header_menu-button{% if customer %} is-adjacent{% endif %}"><div class="reseller-header_menu-icon" x-show="!open"><svg width="100%" height="100%" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M3 6H21" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path><path d="M3 12H21" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path><path d="M3 18H21" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path></svg></div><div class="reseller-header_menu-icon" x-show="open" x-cloak="">{% render 'icon_close' %}</div></button></div></div> {% schema %} {
     "tag": "section",
     "name": "Reseller Header",
     "class": "section_reseller-header",
@@ -62,6 +476,37 @@
             "default": "myDCT Login"
         },
         {
+            "id": "text_suche_placeholder",
+            "type": "text",
+            "label": "Suche Placeholder",
+            "default": "Search for bags, size..."
+        },
+        {
+            "id": "text_such_tipp",
+            "type": "text",
+            "label": "Such-Tipp",
+            "default": "Tip: Search by products, categories or use case"
+        },
+        {
+            "id": "collection_search_recent",
+            "type": "collection",
+            "label": "Search - Recent"
+        },
+        {
+            "type": "range",
+            "id": "collection_search_recent_limit",
+            "min": 1,
+            "max": 99,
+            "step": 1,
+            "label": "Limit: Search - Recent",
+            "default": 6
+        },
+        {
+            "id": "url_wishlist_link",
+            "type": "url",
+            "label": "Wishlist Link"
+        },
+        {
             "type": "header",
             "content": "Reseller-Men\u00fc"
         },
@@ -72,7 +517,22 @@
         },
         {
             "type": "paragraph",
-            "content": "Diese Section kombiniert eine B2B-Announcement-Bar (dark, Theme Blocks f\u00fcr USPs und Links) mit einer eigenen Reseller-Navigation (Logo + RESELLER-Sublabel, Men\u00fc aus separater Linkliste, Contact-Sales + myDCT-Login Buttons). Auf der Reseller-Hub-Page als ERSTE Section in den Main-Content einf\u00fcgen \u2014 die globale Header-Group erscheint trotzdem davor, ausser du blendest sie per Theme-Editor auf dieser Page aus."
+            "content": "B2B-Announcement-Bar (USPs + Links) plus eigene Reseller-Navigation (Logo, RESELLER-Sublabel, Men\u00fc aus Linkliste). Rechts: eingeloggt = Shop-Icons wie im Hauptmen\u00fc (Suche, Wishlist, Account, Mini-Cart); ausgeloggt = Contact-Sales + myDCT-Login Buttons. Als ERSTE Section in den Main-Content der Reseller-Hub-Page einf\u00fcgen \u2014 die globale Header-Group erscheint trotzdem davor, ausser du blendest sie im Theme-Editor f\u00fcr diese Page aus."
+        },
+        {
+            "type": "header",
+            "content": "Mini-Cart"
+        },
+        {
+            "type": "range",
+            "id": "free_shipping_threshold",
+            "min": 0,
+            "max": 250,
+            "step": 5,
+            "unit": "\u20ac",
+            "label": "Gratis-Versand ab",
+            "default": 50,
+            "info": "Schwelle ab der Versand kostenlos wird. Mini-Cart zeigt Progress-Bar mit \u201eNoch X \u20ac bis Gratis-Versand\u201c. Wert in EUR \u2014 wird intern in Cents umgerechnet."
         }
     ],
     "presets": [
