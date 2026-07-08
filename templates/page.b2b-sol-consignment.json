@@ -149,13 +149,23 @@
     "value_tabs_8xDcCx": {
       "type": "value_tabs",
       "blocks": {
+        "tab_WtkFKC": {
+          "type": "tab",
+          "name": "Tab",
+          "settings": {
+            "text_tab_label": "More Margin",
+            "text_tab_heading": "Margin without extra effort",
+            "textarea_tab_text": "The real margin potential in run-rate business does not lie in the top-seller itself – it lies in the attach. Every laptop sold is a gateway to several accessories that are regularly reordered. The trick lies in integrating these add-on products into the ordering process in such a way that they are automatically included – without having to be renegotiated each time."
+          },
+          "blocks": {}
+        },
         "tab_EnGYGA": {
           "type": "tab",
           "name": "Tab",
           "settings": {
-            "text_tab_label": "Trust",
-            "text_tab_heading": "Trust",
-            "textarea_tab_text": "We build on long-term relationships — with customers, partners and colleagues alike."
+            "text_tab_label": "Sleeves & Cases",
+            "text_tab_heading": "Sleeves & Cases",
+            "textarea_tab_text": "Precisely tailored to device size and brand – simply include them as standard items in your shopping basket. No explanation needed, no tender required. Sleeves and cases are a staple in virtually every corporate IT environment. If you include them as standard extras in your range, you’ll sell them without having to actively promote them."
           },
           "blocks": {}
         },
@@ -180,13 +190,14 @@
         }
       },
       "block_order": [
+        "tab_WtkFKC",
         "tab_EnGYGA",
         "tab_U46hmf",
         "tab_3n6qfQ"
       ],
       "name": "Value Tabs",
       "settings": {
-        "text_heading": "Our values",
+        "text_heading": "Attach-Portfolio",
         "padding_top": 5,
         "padding_bottom": 5
       }
