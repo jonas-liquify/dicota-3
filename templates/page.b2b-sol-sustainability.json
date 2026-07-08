@@ -365,24 +365,6 @@
     "owner_spotlight_68NmAp": {
       "type": "owner_spotlight",
       "blocks": {
-        "zitat_JhUqLp": {
-          "type": "zitat",
-          "name": "Zitat",
-          "settings": {
-            "text_block_heading": "\"Do you already have an approved supplier for IT accessories in your ESG supply chain? DICOTA is certified and automatically provides all the necessary documentation.\"",
-            "text_block_text": ""
-          },
-          "blocks": {}
-        },
-        "zitat_bqKnHU": {
-          "type": "zitat",
-          "name": "Zitat",
-          "settings": {
-            "text_block_heading": "\"In your next tender, sustainability criteria often account for 20–30 per cent of the overall score. With DICOTA, you can meet these criteria in a documented and verifiable manner.\"",
-            "text_block_text": ""
-          },
-          "blocks": {}
-        },
         "zitat_mEKXkc": {
           "type": "zitat",
           "name": "Zitat",
@@ -396,16 +378,24 @@
           "type": "zitat",
           "settings": {
             "text_block_heading": "\"May I show you our sustainability data sheet? It could be directly usable for your next ESG report.\"",
+            "text_block_text": ""
+          },
+          "blocks": {}
+        },
+        "zitat_bqKnHU": {
+          "type": "zitat",
+          "name": "Zitat",
+          "settings": {
+            "text_block_heading": "\"In your next tender, sustainability criteria often account for 20–30 per cent of the overall score. With DICOTA, you can meet these criteria in a documented and verifiable manner.\"",
             "text_block_text": "— DICOTA Management"
           },
           "blocks": {}
         }
       },
       "block_order": [
-        "zitat_JhUqLp",
-        "zitat_bqKnHU",
         "zitat_mEKXkc",
-        "zitat_KtMLCt"
+        "zitat_KtMLCt",
+        "zitat_bqKnHU"
       ],
       "name": "Owner Spotlight",
       "settings": {
