@@ -19,8 +19,11 @@
       "settings": {
         "text_uberschrift": "Product Presentations",
         "textarea_einleitung": "Download our product presentations as PDF or PPT — available in German, English and French.",
-        "header-3c7723872900443a509dc2c05d4a7304": null,
-        "paragraph-3a688fd1ef3dc5a68038288918e5975b": null
+        "header-2d1c606e58bb8c80124944cd9ca988a2": null,
+        "paragraph-67cedb2f807b6b77734e58605cd19528": null,
+        "header-b714b23f5e5af9dbb680d86384e81d20": null,
+        "padding_top": 4,
+        "padding_bottom": 4
       },
       "blocks": {
         "produkt_kategorie_87Cdi": {
@@ -140,6 +143,12 @@
         "produkt_kategorie_6RPbD"
       ],
       "name": "B2B Mkt Presentation"
+    },
+    "header_a83nJp": {
+      "settings": {
+        "menu": "main-menu-reseller"
+      },
+      "blocks": {}
     }
   },
   "order": [

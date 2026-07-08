@@ -11,23 +11,51 @@
   "sections": {
     "reseller_hero": {
       "type": "reseller_hero",
-      "settings": {}
+      "settings": {
+        "text_headline": "Welcome to DICOTA myDCT",
+        "textarea_subtext": "Benefit from attractive prices and offers for your end customers",
+        "text_kategorie_label": "Categories",
+        "min_height": 78,
+        "text_color": "#ffffff"
+      }
     },
     "reseller_category_ro": {
       "type": "reseller_category_ro",
-      "settings": {}
+      "settings": {
+        "padding_top": 4,
+        "padding_bottom": 4
+      }
     },
     "reseller_hub": {
       "type": "reseller_hub",
-      "settings": {}
+      "settings": {
+        "text_heading": "DICOTA Reseller Hub. A no-brainer for everyone who wants to enjoy the benefits",
+        "url_button_1_link": "",
+        "text_button_1_text": "Log in",
+        "url_button_2_link": "",
+        "text_button_2_text": "Register"
+      }
     },
     "the_latest": {
       "type": "the_latest",
-      "settings": {}
+      "settings": {
+        "text_heading": "The Latest. Take a look at what's new, right now.",
+        "padding_top": 5,
+        "padding_bottom": 5
+      }
     },
     "the_dicota_differenc": {
       "type": "the_dicota_differenc",
-      "settings": {}
+      "settings": {
+        "text_heading": "The Dicota Difference. Even more reasons to become a reseller.",
+        "url_button_1_link": "",
+        "text_button_1_text": "Einloggen",
+        "url_button_2_link": "",
+        "text_button_2_text": "Registrieren",
+        "padding_top": 5,
+        "padding_bottom": 5,
+        "bg_color": "#f4f4f4"
+      }
     },
     "reseller_promo_grid": {
       "type": "reseller_promo_grid",
@@ -35,11 +63,28 @@
     },
     "b2b_news_highlight": {
       "type": "b2b_news_highlight",
-      "settings": {}
+      "settings": {
+        "text_badge": "NEW",
+        "text_kategorie": "Company News",
+        "text_datum": "May 5, 2026",
+        "text_uberschrift": "Dicota is opening another Office-Complex in Dubai",
+        "textarea_text": "(Placeholder) Since 1992, more than 12 million PET bottles have been processed to minimize waste - DCT (DICOTA Cushion Technology) is a structured cushioning system that absorbs impacts, knocks and pressure from various angles.",
+        "url_button_link": "",
+        "text_button_text": "Learn more",
+        "padding_top": 4,
+        "padding_bottom": 4,
+        "bg_color": "#f6f6f6"
+      }
     },
     "b2b_news_updates": {
       "type": "b2b_news_updates",
-      "settings": {}
+      "settings": {
+        "text_titel_fett": "Not enough yet?",
+        "text_titel_normal": "More news hot off the press",
+        "padding_top": 4,
+        "padding_bottom": 4,
+        "bg_color": "#f6f6f6"
+      }
     }
   },
   "layout": "page.reseller-hub",
