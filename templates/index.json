@@ -560,7 +560,7 @@
           "name": "FAQ Kategorie",
           "settings": {
             "text_kategorie_titel": "General questions",
-            "faq_set": "privacy-filters-magnatic",
+            "faq_set": "shipping",
             "faq_entries": []
           },
           "blocks": {}
