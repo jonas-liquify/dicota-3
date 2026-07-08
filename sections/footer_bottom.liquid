@@ -1,16 +1,16 @@
-<div class="footer-bottom_row">{% if shop.enabled_payment_types.size > 0 %}    <ul li-if="shop.enabled_payment_types.size > 0" role="list" class="footer-bottom_payments">
+<div class="padding-global" style="padding-top: {{ section.settings.padding_top }}rem; padding-bottom: {{ section.settings.padding_bottom }}rem;"><div class="container-large"><div class="footer-bottom_row">{% if shop.enabled_payment_types.size > 0 %}    <ul li-if="shop.enabled_payment_types.size > 0" role="list" class="footer-bottom_payments">
     {% for type in shop.enabled_payment_types %}    <li li-for="type in shop.enabled_payment_types" class="footer-bottom_payment-item">
                                     <div li-object="type | payment_type_svg_tag: class: 'footer-bottom_payment-svg'" class="footer-bottom_payment-svg-wrap">{{ type | payment_type_svg_tag: class: 'footer-bottom_payment-svg' }}</div>
                         </li>
 {% endfor %}    </ul>
 {% endif %}<ul li-cf-theme-blocks="" role="list" class="footer-bottom_socials">
 {% content_for 'blocks' %}
-</ul></div><div class="footer-bottom_legal-row"><p class="footer-bottom_copyright">
+</ul></div></div></div><div class="footer-bottom_legal-band"><div class="padding-global"><div class="container-large"><div class="footer-bottom_legal-row"><p class="footer-bottom_copyright">
 {{ section.settings.text_copyright }}
 </p><nav class="footer-bottom_legal-links">{% for link in linklists[section.settings.legal_menu].links %}    <div li-for="link in linklists[section.settings.legal_menu].links" class="footer-bottom_legal-item">
                                     <a li-object="link.title" li-object:href="link.url" href="{{ link.url }}" class="footer-bottom_legal-link">{{ link.title }}</a>
                         </div>
-{% endfor %}</nav>{% render 'localization_picker' %}</div> {% schema %} {
+{% endfor %}</nav>{% render 'localization_picker' %}</div></div></div></div> {% schema %} {
     "tag": "section",
     "name": "Footer Bottom",
     "class": "section_footer-bottom",
@@ -28,6 +28,30 @@
             "type": "text",
             "label": "Copyright",
             "default": "\u00a92026 DCT Group AG"
+        },
+        {
+            "type": "header",
+            "content": "Abst\u00e4nde"
+        },
+        {
+            "type": "range",
+            "id": "padding_top",
+            "min": 0,
+            "max": 12,
+            "step": 0.5,
+            "unit": "rem",
+            "label": "Abstand oben",
+            "default": 2.5
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom",
+            "min": 0,
+            "max": 12,
+            "step": 0.5,
+            "unit": "rem",
+            "label": "Abstand unten",
+            "default": 0
         },
         {
             "type": "header",

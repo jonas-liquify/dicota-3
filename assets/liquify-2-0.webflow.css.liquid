@@ -4072,12 +4072,6 @@ figcaption {
   .loved-by_headline-title {
     font-size: 1.5rem;
   }
-  .footer-newsletter_inner,
-  .footer-bottom_row,
-  .footer-bottom_legal-row {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
   .footer-newsletter_promos {
     grid-template-columns: 1fr;
   }
@@ -4604,9 +4598,6 @@ figcaption {
     height: 3rem;
   }
   #w-node-_5eccf730-c887-5204-0e0c-693f99a732bf-99a7328f, #w-node-_5eccf730-c887-5204-0e0c-693f99a732d3-99a7328f { justify-self: start; }
-  .footer-newsletter_inner,
-  .footer-bottom_row,
-  .footer-bottom_legal-row { padding-left: 1.5rem; padding-right: 1.5rem; }
   .section_collection-header > .padding-global { padding-top: 3rem; padding-bottom: 4rem; }
   .section_feature-product > .padding-global { padding-top: 3rem; padding-bottom: 4rem; }
   .icon-cards_card.is-line-right,
@@ -8572,9 +8563,12 @@ figcaption {
 /* ---- Newsletter section ---- */
 .section_footer-newsletter {
   width: 100%;
-  padding-top: 3.75rem;
   background-color: #000;
   color: #ffffff;
+}
+.section_footer-newsletter > .padding-global {
+  padding-top: 3.75rem;
+  padding-bottom: 0rem;
 }
 /* Defensive: enforce white text on all common children, in case some
    parent's `color: var(--base-color-neutral--white)` doesn't resolve
@@ -8615,7 +8609,6 @@ figcaption {
   display: flex;
   flex-direction: column;
   gap: 3.75rem;
-  padding: 0 3.75rem;
 }
 
 /* Top promo CTAs */
@@ -8806,9 +8799,12 @@ figcaption {
 /* ---- Footer Bottom ---- */
 .section_footer-bottom {
   width: 100%;
-  padding-top: 2.5rem;
   background-color: #000;
   color: #ffffff;
+}
+.section_footer-bottom > .padding-global {
+  padding-top: 2.5rem;
+  padding-bottom: 0rem;
 }
 .section_footer-bottom a,
 .section_footer-bottom p,
@@ -8829,7 +8825,6 @@ figcaption {
   align-items: center;
   justify-content: space-between;
   gap: 1.5rem;
-  padding: 0 3.75rem;
   flex-wrap: wrap;
 }
 
@@ -8906,14 +8901,18 @@ figcaption {
 }
 
 /* Legal bar */
+.footer-bottom_legal-band {
+  width: 100%;
+  margin-top: 2.5rem;
+  background-color: rgba(255, 255, 255, .1);
+}
 .footer-bottom_legal-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1.5rem;
-  margin-top: 2.5rem;
-  padding: .5rem 3.75rem;
-  background-color: rgba(255, 255, 255, .1);
+  padding-top: .5rem;
+  padding-bottom: .5rem;
   flex-wrap: wrap;
 }
 
