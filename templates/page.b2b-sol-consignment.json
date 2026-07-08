@@ -198,8 +198,8 @@
           "type": "benefit",
           "name": "Benefit",
           "settings": {
-            "text_heading": "Flexible working hours",
-            "textarea_text": "Streamlined processes: One supplier, one order, one invoice instead of ten different sources."
+            "text_heading": "Streamlined Processes",
+            "textarea_text": "One supplier, one order, one invoice instead of ten different sources."
           },
           "blocks": {}
         },
@@ -207,8 +207,8 @@
           "type": "benefit",
           "name": "Benefit",
           "settings": {
-            "text_heading": "Flexible working hours",
-            "textarea_text": "Flexitime, home office and trust instead of a time clock."
+            "text_heading": "Cost Transparency",
+            "textarea_text": "Fixed prices in the framework agreement make the annual budget predictable."
           },
           "blocks": {}
         },
@@ -216,16 +216,16 @@
           "type": "benefit",
           "name": "Benefit",
           "settings": {
-            "text_heading": "Flexible working hours",
-            "textarea_text": "Flexitime, home office and trust instead of a time clock."
+            "text_heading": "Supply Reliability",
+            "textarea_text": "Top-selling products are always in stock – no shortages during the next roll-out."
           },
           "blocks": {}
         },
         "benefit_XMTTnM": {
           "type": "benefit",
           "settings": {
-            "text_heading": "Flexible working hours",
-            "textarea_text": "Flexitime, home office and trust instead of a time clock."
+            "text_heading": "Compliance",
+            "textarea_text": "All DICOTA products come with full documentation – no extra work required for internal audits."
           },
           "blocks": {}
         }
