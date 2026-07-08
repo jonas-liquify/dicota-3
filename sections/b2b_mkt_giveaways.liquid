@@ -1,8 +1,4 @@
-<div class="padding-global padding-section-small" style="padding-top: {{ section.settings.padding_top }}rem; padding-bottom: {{ section.settings.padding_bottom }}rem"><div class="container-large"><div class="acc-default_wrapper"><div class="acc-default_flex-small"><ul role="list" class="breadcrumbs_component w-list-unstyled"><li class="breadcrumbs_item"><a li-object:href="routes.root_url" href="{{ routes.root_url }}" class="w-inline-block"><div li-object="'general.home' | t" class="text-size-regular">{{ 'general.home' | t }}</div></a><div class="breadcrumbs_icon w-embed"><svg width="15" height="15" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="1.5" fill="none"></path></svg></div></li>{% if section.settings.breadcrumb_parent_label != blank %}    <li li-if="section.settings.breadcrumb_parent_label != blank" class="breadcrumbs_item">
-    <a href="{{ section.settings.url_breadcrumb_parent_link }}" class="w-inline-block"> <div class="text-size-regular">{{ section.settings.text_breadcrumb_parent_label }}</div> </a><div class="breadcrumbs_icon w-embed"><svg width="15" height="15" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="1.5" fill="none"></path></svg></div>    </li>
-{% endif %}<li class="breadcrumbs_item"><div>
-{{ section.settings.text_breadcrumb }}
-</div></li></ul><div class="default-flex-tiny"><h1 class="heading-style-h2">
+<div class="padding-global padding-section-small" style="padding-top: {{ section.settings.padding_top }}rem; padding-bottom: {{ section.settings.padding_bottom }}rem"><div class="container-large"><div class="acc-default_wrapper"><div class="acc-default_flex-small"><div class="default-flex-tiny"><h1 class="heading-style-h2">
 {{ section.settings.text_heading }}
 </h1><div class="text-size-medium max-width-large"> {{ section.settings.textarea_subheading }} </div></div>{% form 'contact', class: 'mkt-order_form' %}
 <div class="mkt-order_card mkt-order_table-card"><div role="row" class="mkt-order_thead"><div role="columnheader" class="mkt-order_th mkt-order_th-img"><span class="text-style-subline">
@@ -32,23 +28,6 @@
         }
     ],
     "settings": [
-        {
-            "id": "url_breadcrumb_parent_link",
-            "type": "url",
-            "label": "Breadcrumb Parent Link"
-        },
-        {
-            "id": "text_breadcrumb_parent_label",
-            "type": "text",
-            "label": "Breadcrumb Parent Label",
-            "default": "Marketing"
-        },
-        {
-            "id": "text_breadcrumb",
-            "type": "text",
-            "label": "Breadcrumb",
-            "default": "Giveaways"
-        },
         {
             "id": "text_heading",
             "type": "text",
@@ -108,22 +87,6 @@
             "type": "text",
             "label": "Submit Button",
             "default": "Submit now"
-        },
-        {
-            "type": "header",
-            "content": "Kopfbereich"
-        },
-        {
-            "type": "text",
-            "id": "breadcrumb_parent_label",
-            "label": "Breadcrumb Parent Label",
-            "info": "Optional. Falls leer wird die Ebene \u00fcbersprungen.",
-            "default": "Marketing"
-        },
-        {
-            "type": "url",
-            "id": "breadcrumb_parent_link",
-            "label": "Breadcrumb Parent Link"
         },
         {
             "type": "header",

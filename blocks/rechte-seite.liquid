@@ -1,6 +1,8 @@
 <div li-static-block="Rechte Seite" class="announcement-bar_right"><div li-cf-theme-blocks="" class="announcement-bar_links">
 {% content_for 'blocks' %}
-</div>{% render 'localization_picker' %}</div> {% schema %} {
+</div>{% render 'localization_picker' %}{% if block.settings.text_reseller_button != blank %}    <span class="li-guard" li-if="block.settings.text_reseller_button != blank">
+    <a href="{{ block.settings.url_reseller_button_link }}" class="announcement-bar_reseller-btn"><span li-object="block.settings.text_reseller_button">{{ block.settings.text_reseller_button }}</span></a>    </span>
+{% endif %}</div> {% schema %} {
     "name": "Rechte Seite",
     "blocks": [
         {
@@ -10,7 +12,23 @@
             "type": "@app"
         }
     ],
-    "settings": [],
+    "settings": [
+        {
+            "type": "header",
+            "content": "Reseller-Button"
+        },
+        {
+            "type": "text",
+            "id": "text_reseller_button",
+            "label": "Reseller Button Text",
+            "default": "F\u00fcr Reseller"
+        },
+        {
+            "type": "url",
+            "id": "url_reseller_button_link",
+            "label": "Reseller Button Link"
+        }
+    ],
     "presets": [
         {
             "name": "Rechte Seite",

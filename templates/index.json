@@ -568,6 +568,34 @@
           "how-does-a-dicota-privacy-filter-protect-my-screen-1"
         ]
       }
+    },
+    "team_grid_4a6jiw": {
+      "type": "team_grid",
+      "blocks": {
+        "team_slide_HzxGjA": {
+          "type": "team-slide",
+          "settings": {},
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "team_slide_HzxGjA"
+      ],
+      "name": "Team Grid",
+      "settings": {
+        "text_heading": "The team behind DICOTA",
+        "textarea_text": "Over 100 colleagues worldwide share the passion to better equip mobile professionals. Get to know them.",
+        "text_karte_1_heading": "Diversity",
+        "textarea_karte_1_text": "Different backgrounds make us stronger — together we think further.",
+        "text_karte_2_heading": "Responsibility",
+        "textarea_karte_2_text": "We hand over responsibility early — and stand behind our decisions.",
+        "text_karte_3_heading": "Growth",
+        "textarea_karte_3_text": "Personal and professional development is part of everyday life here.",
+        "url_button_link": "",
+        "text_button_text": "More about us",
+        "padding_top": 5,
+        "padding_bottom": 5
+      }
     }
   },
   "layout": "theme",
@@ -586,6 +614,7 @@
     "loved_by_customers",
     "sustainability_banne",
     "testimonials",
-    "faq_accordion_6xnCFe"
+    "faq_accordion_6xnCFe",
+    "team_grid_4a6jiw"
   ]
 }

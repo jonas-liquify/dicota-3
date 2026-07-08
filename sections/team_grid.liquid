@@ -2,37 +2,7 @@
 {{ section.settings.text_heading }}
 </h2><div class="text-size-medium"> {{ section.settings.textarea_text }} </div></div><div class="team_grid"><div class="swiper_component is-team-swiper"><div class="swiper is-team-swiper"><div li-cf-theme-blocks="" class="swiper-wrapper is-team-swiper">
 {% content_for 'blocks' %}
-</div></div><div class="swiper_navigation is-absolute"><button aria-label="Previous slide" class="swiper_button swiper_prev"><div class="swiper_button-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewbox="0 0 38 38" fill="none"><rect x="38" y="0" width="38" height="38" rx="19" transform="rotate(90 38 0)" fill="rgba(255,255,255,0.85)"></rect><path d="M12.7765 19.5483L21.2284 11.0964L22.8037 12.6718L15.9272 19.5483L22.8037 26.4249L21.2283 28.0002L12.7765 19.5483Z" fill="#0F0F0F"></path></svg></div></button><button aria-label="Next slide" class="swiper_button swiper_next"><div class="swiper_button-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewbox="0 0 38 38" fill="none"><rect y="38" width="38" height="38" rx="19" transform="rotate(-90 0 38)" fill="#0F0F0F"></rect><path d="M25.2245 18.4522L16.7726 26.9041L15.1973 25.3287L22.0738 18.4522L15.1973 11.5756L16.7726 10.0003L25.2245 18.4522Z" fill="white"></path></svg></div></button></div></div><div class="icon-cards_card is-line-left">{% if section.settings.image_karte_1_icon != blank %}    <span class="li-guard" li-if="section.settings.image_karte_1_icon != blank">
-    {% if section.settings.image_karte_1_icon %}
-{{ section.settings.image_karte_1_icon | image_url: width: 120 | image_tag: loading: 'lazy', class: 'icon-1x1-huge' }}
-{% else %}
-<img src="{{ 'platzhalter.svg' | asset_url }}" loading="lazy" alt="" class="icon-1x1-huge">
-{% endif %}    </span>
-{% endif %}<div class="default-flex-tiny"><h3 class="text-size-large">
-{{ section.settings.text_karte_1_heading }}
-</h3>{% if section.settings.textarea_karte_1_text != blank %}    <div class="li-guard" li-if="section.settings.textarea_karte_1_text != blank">
-    <div class="text-size-medium"> {{ section.settings.textarea_karte_1_text }} </div>    </div>
-{% endif %}</div></div><div class="icon-cards_card is-line-right is-line-left">{% if section.settings.image_karte_2_icon != blank %}    <span class="li-guard" li-if="section.settings.image_karte_2_icon != blank">
-    {% if section.settings.image_karte_2_icon %}
-{{ section.settings.image_karte_2_icon | image_url: width: 96 | image_tag: loading: 'lazy', class: 'icon-1x1-xlarge' }}
-{% else %}
-<img src="{{ 'platzhalter.svg' | asset_url }}" loading="lazy" alt="" class="icon-1x1-xlarge">
-{% endif %}    </span>
-{% endif %}<div class="default-flex-tiny"><h3 class="text-size-large">
-{{ section.settings.text_karte_2_heading }}
-</h3>{% if section.settings.textarea_karte_2_text != blank %}    <div class="li-guard" li-if="section.settings.textarea_karte_2_text != blank">
-    <div class="text-size-medium"> {{ section.settings.textarea_karte_2_text }} </div>    </div>
-{% endif %}</div></div><div class="icon-cards_card">{% if section.settings.image_karte_3_icon != blank %}    <span class="li-guard" li-if="section.settings.image_karte_3_icon != blank">
-    {% if section.settings.image_karte_3_icon %}
-{{ section.settings.image_karte_3_icon | image_url: width: 96 | image_tag: loading: 'lazy', class: 'icon-1x1-xlarge' }}
-{% else %}
-<img src="{{ 'platzhalter.svg' | asset_url }}" loading="lazy" alt="" class="icon-1x1-xlarge">
-{% endif %}    </span>
-{% endif %}<div class="default-flex-tiny"><h3 class="text-size-large">
-{{ section.settings.text_karte_3_heading }}
-</h3>{% if section.settings.textarea_karte_3_text != blank %}    <div class="li-guard" li-if="section.settings.textarea_karte_3_text != blank">
-    <div class="text-size-medium"> {{ section.settings.textarea_karte_3_text }} </div>    </div>
-{% endif %}</div></div></div><div class="button-group is-center">{% if section.settings.text_button_text != blank %}    <span class="li-guard" li-if="section.settings.text_button_text != blank">
+</div></div><div class="swiper_navigation is-absolute"><button aria-label="Previous slide" class="swiper_button swiper_prev"><div class="swiper_button-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewbox="0 0 38 38" fill="none"><rect x="38" y="0" width="38" height="38" rx="19" transform="rotate(90 38 0)" fill="rgba(255,255,255,0.85)"></rect><path d="M12.7765 19.5483L21.2284 11.0964L22.8037 12.6718L15.9272 19.5483L22.8037 26.4249L21.2283 28.0002L12.7765 19.5483Z" fill="#0F0F0F"></path></svg></div></button><button aria-label="Next slide" class="swiper_button swiper_next"><div class="swiper_button-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewbox="0 0 38 38" fill="none"><rect y="38" width="38" height="38" rx="19" transform="rotate(-90 0 38)" fill="#0F0F0F"></rect><path d="M25.2245 18.4522L16.7726 26.9041L15.1973 25.3287L22.0738 18.4522L15.1973 11.5756L16.7726 10.0003L25.2245 18.4522Z" fill="white"></path></svg></div></button></div></div>{% content_for "block", type: "team-karten", id: "team-karten" %}</div><div class="button-group is-center">{% if section.settings.text_button_text != blank %}    <span class="li-guard" li-if="section.settings.text_button_text != blank">
     <a href="{{ section.settings.url_button_link }}" class="button w-button"> <span>{{ section.settings.text_button_text }}</span> </a>    </span>
 {% endif %}</div></div></div></div><div class="hide w-embed w-script"><script>document.addEventListener("DOMContentLoaded", function() { var ensure = function(cb) { if (typeof Swiper !== "undefined") return cb(); var s = document.createElement("script"); s.src = "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"; s.onload = cb; document.head.appendChild(s); }; ensure(function() { document.querySelectorAll(".swiper_component.is-team-swiper").forEach(function(c) { var prev = c.querySelector(".swiper_button.swiper_prev"); var next = c.querySelector(".swiper_button.swiper_next"); new Swiper(c.querySelector(".swiper"), { slidesPerView: 1, spaceBetween: 24, speed: 500, effect: "fade", fadeEffect: { crossFade: true }, navigation: { prevEl: prev, nextEl: next, disabledClass: "swiper-button-disabled" } }); }); }); });</script></div> {% schema %} {
     "tag": "section",
@@ -41,6 +11,9 @@
     "blocks": [
         {
             "type": "team-slide"
+        },
+        {
+            "type": "team-karte"
         },
         {
             "type": "@app"
@@ -58,57 +31,6 @@
             "type": "textarea",
             "label": "Text",
             "default": "Over 100 colleagues worldwide share the passion to better equip mobile professionals. Get to know them."
-        },
-        {
-            "id": "image_karte_1_icon",
-            "type": "image_picker",
-            "label": "Karte 1 Icon"
-        },
-        {
-            "id": "text_karte_1_heading",
-            "type": "text",
-            "label": "Karte 1 Heading",
-            "default": "Diversity"
-        },
-        {
-            "id": "textarea_karte_1_text",
-            "type": "textarea",
-            "label": "Karte 1 Text",
-            "default": "Different backgrounds make us stronger \u2014 together we think further."
-        },
-        {
-            "id": "image_karte_2_icon",
-            "type": "image_picker",
-            "label": "Karte 2 Icon"
-        },
-        {
-            "id": "text_karte_2_heading",
-            "type": "text",
-            "label": "Karte 2 Heading",
-            "default": "Responsibility"
-        },
-        {
-            "id": "textarea_karte_2_text",
-            "type": "textarea",
-            "label": "Karte 2 Text",
-            "default": "We hand over responsibility early \u2014 and stand behind our decisions."
-        },
-        {
-            "id": "image_karte_3_icon",
-            "type": "image_picker",
-            "label": "Karte 3 Icon"
-        },
-        {
-            "id": "text_karte_3_heading",
-            "type": "text",
-            "label": "Karte 3 Heading",
-            "default": "Growth"
-        },
-        {
-            "id": "textarea_karte_3_text",
-            "type": "textarea",
-            "label": "Karte 3 Text",
-            "default": "Personal and professional development is part of everyday life here."
         },
         {
             "id": "url_button_link",
@@ -153,6 +75,16 @@
             "blocks": [
                 {
                     "type": "team-slide"
+                },
+                {
+                    "type": "team-karten",
+                    "static": true,
+                    "id": "team-karten",
+                    "blocks": [
+                        {
+                            "type": "team-karte"
+                        }
+                    ]
                 }
             ]
         }

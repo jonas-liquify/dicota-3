@@ -40,7 +40,6 @@
       "blocks": {
         "argument_wR8PJz": {
           "type": "argument",
-          "disabled": true,
           "settings": {
             "text_heading": "1,000+ products in stock",
             "textarea_text": "A broad portfolio with fast availability and strong reseller margins."
@@ -54,7 +53,7 @@
       "name": "B2B Key Selling Argu",
       "settings": {
         "text_subline": "",
-        "text_heading": "Ausgangslage<br>& Marktchance",
+        "text_heading": "Ausgangslage& Marktchance",
         "textarea_text": "Das Rückgrat jedes erfolgreichen Reseller-Geschäfts ist das wiederkehrende Geschäft mit Grosskunden. Projekte kommen und gehen – aber der laufende Bedarf an Schutz, Connectivity und Zubehör bleibt konstant. Genau hier liegt die grösste Umsatzchance für Händler: Wer im Run-Rate-Geschäft als zuverlässiger Lieferant positioniert ist, profitiert von planbaren Umsätzen, niedrigen Akquisekosten und hoher Kundenbindung.\nDICOTA ist als Zubehöranbieter optimal für dieses Segment positioniert: breites Topseller-Portfolio, dauerhaft hohe Lagerverfügbarkeit und eine klare SKU-Struktur, die sich einfach in bestehende ERP- und Einkaufssysteme integrieren lässt. Für Händler bedeutet das: weniger Aufwand in der Abwicklung, mehr Zeit für den Kundenaufbau.",
         "padding_top": 4,
         "padding_bottom": 4
@@ -63,6 +62,7 @@
     "backbone": {
       "type": "image_text",
       "settings": {
+        "image_bild": "shopify://shop_images/o6EBR9Gd0DlmyQgLzRfu7Q.jpg",
         "text_heading": "Das Rückgrat Ihres Reseller-Geschäfts",
         "textarea_text": "Das Rückgrat jedes erfolgreichen Reseller-Geschäfts ist das wiederkehrende Geschäft mit Grosskunden. Projekte kommen und gehen – aber der laufende Bedarf an Schutz, Connectivity und Zubehör bleibt konstant. Wer hier als zuverlässiger Lieferant positioniert ist, profitiert von planbaren Umsätzen, niedrigen Akquisekosten und hoher Kundenbindung.<br><br>DICOTA ist als Zubehöranbieter optimal für dieses Segment positioniert: breites Topseller-Portfolio, dauerhaft hohe Lagerverfügbarkeit und eine klare SKU-Struktur, die sich einfach in bestehende ERP- und Einkaufssysteme integrieren lässt.",
         "url_button_link": "",
@@ -157,6 +157,51 @@
         "padding_bottom": 4
       }
     },
+    "value_tabs_kmVq6P": {
+      "type": "value_tabs",
+      "blocks": {
+        "tab_XbJNht": {
+          "type": "tab",
+          "name": "Tab",
+          "settings": {
+            "text_tab_label": "Availability",
+            "text_tab_heading": "Availability as Promise",
+            "textarea_tab_text": "In the key account business, delivery reliability is not an option, but a fundamental requirement. If an IT manager rolls out 200 laptops and realises three days later that the cases are not available, this is not just a logistical problem – it undermines trust in the entire supply chain. DICOTA keeps its 50 top-selling products in stock at all times and guarantees short delivery times, even for larger quantities.<br><br>\nFor retailers, this means they can make binding commitments to their major clients – and actually keep them. That is the difference between a supplier and a partner."
+          },
+          "blocks": {}
+        },
+        "tab_D6RLzK": {
+          "type": "tab",
+          "name": "Tab",
+          "settings": {
+            "text_tab_label": "Predictability",
+            "text_tab_heading": "Predictability through framework agreements",
+            "textarea_tab_text": "Major customers think in terms of budget cycles, not individual orders. Framework agreements with defined products, prices and call-off quantities are the norm in the enterprise sector. DICOTA fully supports this model: retailers can enter into framework agreements that offer their customers predictable terms and conditions and provide the retailers themselves with predictable margins.<br><br>\nTypical contract terms of 12 to 36 months provide certainty for both parties. At the same time, call-off quantities can be managed flexibly – ideal for customers with seasonal fluctuations or rolling rollout cycles."
+          },
+          "blocks": {}
+        },
+        "tab_DpVWWY": {
+          "type": "tab",
+          "settings": {
+            "text_tab_label": "Simple Processing",
+            "text_tab_heading": "Simple processing – no overhead",
+            "textarea_tab_text": "Many retailers underestimate the amount of internal effort involved in managing an unstructured range of accessories: different suppliers, varying ordering processes, and inconsistent documentation. DICOTA simplifies this radically. A small number of clearly defined SKUs, a well-organised price list and a well-established ordering process reduce the administrative burden to a minimum."
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "tab_XbJNht",
+        "tab_D6RLzK",
+        "tab_DpVWWY"
+      ],
+      "name": "Value Tabs",
+      "settings": {
+        "text_heading": "Your advantage in run-rate business",
+        "padding_top": 5,
+        "padding_bottom": 5
+      }
+    },
     "quote1": {
       "type": "testimonials",
       "blocks": {
@@ -242,6 +287,7 @@
           "blocks": {}
         }
       },
+      "disabled": true,
       "settings": {
         "text_subline": "Was das Geschäftsmodell ausmacht",
         "text_heading": "Ihr Vorteil im Run-Rate-Geschäft",
@@ -309,6 +355,7 @@
     },
     "attach_headline": {
       "type": "section_headline",
+      "disabled": true,
       "settings": {
         "text_vortitel": "Attach-Portfolio",
         "text_uberschrift": "Mehrwert im Warenkorb",
@@ -374,10 +421,77 @@
         "b3",
         "b4"
       ],
+      "disabled": true,
       "settings": {}
+    },
+    "team_grid_GihKc3": {
+      "type": "team_grid",
+      "blocks": {
+        "team_slide_Rqrbky": {
+          "type": "team-slide",
+          "settings": {},
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "team_slide_Rqrbky"
+      ],
+      "name": "Team Grid",
+      "settings": {
+        "text_heading": "Attach Portfolio –Margin without extra effort",
+        "textarea_text": "The real margin potential in run-rate business does not lie in the top-selling product itself – it lies in the add-ons. Every laptop sold is a gateway to several accessories that are reordered on a regular basis. The trick is to integrate these add-on products into the ordering process in such a way that they are included automatically – without having to be renegotiated each time.",
+        "text_karte_1_heading": "Sleeves & Cases",
+        "textarea_karte_1_text": "Perfectly tailored to the size and brand of the device – simply include them in your shopping basket as standard items. No explanation needed, no tender required. Sleeves and cases are a staple in virtually every corporate IT environment. If you include them as standard extras in your range, you’ll sell them without even having to actively promote them.",
+        "text_karte_2_heading": "Locks & Security",
+        "textarea_karte_2_text": "In many companies, anti-theft protection is an IT policy – not an optional extra. The lock is an essential item, particularly in environments with shared workstations, co-working spaces or field service teams. The advantage for retailers: high add-on rate, minimal need for explanation, good contribution margin.",
+        "text_karte_3_heading": "Adapter & Connectivity",
+        "textarea_karte_3_text": "USB-C hubs, HDMI adaptors, multi-port solutions – these items are always in demand, but rarely ordered proactively. They often end up being bought as a last-minute purchase in shops or on online platforms when an employee realises, during their first meeting whilst working from home, that they don’t have the right connector. By including these items in your standard product range, you can fill this gap – and significantly increase the average order value.",
+        "url_button_link": "",
+        "text_button_text": "",
+        "padding_top": 5,
+        "padding_bottom": 5
+      }
+    },
+    "the_latest_ryDLnV": {
+      "type": "the_latest",
+      "blocks": {
+        "latest_slide_zkPGPR": {
+          "type": "latest-slide",
+          "name": "Latest Slide",
+          "settings": {
+            "url_link": "",
+            "text_badge": "NEW",
+            "text_titel": "Seven",
+            "textarea_text": "(Placeholder) Since 1992, more than 12 million PET bottles have been processed to minimize waste -"
+          },
+          "blocks": {}
+        },
+        "latest_slide_jUeREU": {
+          "type": "latest-slide",
+          "settings": {
+            "url_link": "",
+            "text_badge": "NEW",
+            "text_titel": "Seven",
+            "textarea_text": "(Placeholder) Since 1992, more than 12 million PET bottles have been processed to minimize waste -"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "latest_slide_zkPGPR",
+        "latest_slide_jUeREU"
+      ],
+      "disabled": true,
+      "name": "The Latest",
+      "settings": {
+        "text_heading": "The Latest. Take a look at what's new, right now.",
+        "padding_top": 5,
+        "padding_bottom": 5
+      }
     },
     "conversation": {
       "type": "image_text",
+      "disabled": true,
       "settings": {
         "text_heading": "So führen Sie das Run-Rate-Gespräch",
         "textarea_text": "Das Run-Rate-Gespräch funktioniert am besten als Prozess-Gespräch, nicht als Produktgespräch. Der Einstieg: den aktuellen Beschaffungsprozess des Kunden verstehen. Beschreibt der Kunde einen dezentralen oder chaotischen Prozess – und das tun die meisten – ist der Weg zur Lösung direkt: ein zentraler Warenkorb mit definierten Artikeln, festen Preisen und einem einzigen Ansprechpartner.",
@@ -452,59 +566,65 @@
         "padding_bottom": 5
       }
     },
-    "b2b_key_selling_argu_e83Mdk": {
-      "type": "b2b_key_selling_argu",
+    "benefits_grid_r4nLgh": {
+      "type": "benefits_grid",
       "blocks": {
-        "argument_mxwkRG": {
-          "type": "argument",
+        "benefit_9hdG4q": {
+          "type": "benefit",
+          "name": "Benefit",
           "settings": {
-            "text_heading": "Prozessreduktion",
-            "textarea_text": "Ein Lieferant, eine Bestellung, eine Rechnung statt zehn verschiedene Quellen."
+            "text_heading": "Process Reduction",
+            "textarea_text": "One supplier, one order, one invoice instead of ten different sources."
           },
           "blocks": {}
         },
-        "argument_UPepzU": {
-          "type": "argument",
-          "name": "Argument",
+        "benefit_mczcPm": {
+          "type": "benefit",
+          "name": "Benefit",
           "settings": {
-            "text_heading": "Kostentransparenz",
-            "textarea_text": "Feste Preise im Rahmenvertrag machen das Jahresbudget kalkulierbar."
+            "text_heading": "Cost transparency",
+            "textarea_text": "Fixed prices in the framework agreement make it possible to forecast the annual budget."
           },
           "blocks": {}
         },
-        "argument_gkAUim": {
-          "type": "argument",
-          "name": "Argument",
+        "benefit_9y4nb6": {
+          "type": "benefit",
           "settings": {
-            "text_heading": "Liefersicherheit",
-            "textarea_text": "Topseller dauerhaft verfügbar – kein Engpass beim nächsten Rollout."
+            "text_heading": "Supply Reliability",
+            "textarea_text": "Top-selling products always in stock – no shortages for the next roll-out."
           },
           "blocks": {}
         },
-        "argument_tUg3Jf": {
-          "type": "argument",
-          "name": "Argument",
+        "benefit_4tkmnT": {
+          "type": "benefit",
+          "name": "Benefit",
           "settings": {
             "text_heading": "Compliance",
-            "textarea_text": "Alle DICOTA-Produkte mit vollständiger Dokumentation – kein Aufwand bei internen Audits."
+            "textarea_text": "All DICOTA products come with comprehensive documentation – making internal audits hassle-free."
           },
           "blocks": {}
         }
       },
       "block_order": [
-        "argument_mxwkRG",
-        "argument_UPepzU",
-        "argument_gkAUim",
-        "argument_tUg3Jf"
+        "benefit_9hdG4q",
+        "benefit_mczcPm",
+        "benefit_9y4nb6",
+        "benefit_4tkmnT"
       ],
-      "name": "B2B Key Selling Argu",
+      "name": "Benefits Grid",
       "settings": {
-        "text_subline": "Why DICOTA for B2B",
-        "text_heading": "Kernargumente für den IT-Einkäufer",
-        "textarea_text": "The most compelling reasons for resellers and end customers to choose DICOTA — ready to use in your sales conversations.",
-        "padding_top": 4,
-        "padding_bottom": 4
+        "text_subline": "Why choose DICOTA",
+        "text_heading": "Key arguments for IT buyers",
+        "url_button_link": "",
+        "text_button_text": "",
+        "padding_top": 5,
+        "padding_bottom": 5
       }
+    },
+    "default_NzcGgK": {
+      "type": "default",
+      "name": "Default",
+      "settings": {}
     }
   },
   "order": [
@@ -514,16 +634,20 @@
     "b2b_key_selling_argu_hWeGLL",
     "backbone",
     "b2b_solution_fQqwVw",
+    "value_tabs_kmVq6P",
     "quote1",
     "advantages",
     "target_groups",
     "attach_headline",
     "attach",
+    "team_grid_GihKc3",
+    "the_latest_ryDLnV",
     "conversation",
     "quote2",
     "cta",
     "owner_spotlight_idR8mL",
-    "b2b_key_selling_argu_e83Mdk"
+    "benefits_grid_r4nLgh",
+    "default_NzcGgK"
   ],
   "layout": "b2b",
   "wrapper": "main.main-wrapper"
