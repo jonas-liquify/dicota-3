@@ -18,15 +18,15 @@
           "type": "rechte-seite",
           "static": true,
           "settings": {
-            "url_reseller_button_link": "",
-            "text_reseller_button_text": "Für Reseller"
+            "text_reseller_button": "for End Customers",
+            "url_reseller_button_link": "/"
           },
           "blocks": {}
         }
       },
       "settings": {
-        "url_reseller_button_link": "",
-        "text_reseller_button_text": "Für Reseller"
+        "text_reseller_button": "Für Reseller",
+        "url_reseller_button_link": ""
       }
     },
     "header": {
@@ -55,7 +55,8 @@
         "collection_search_recent_limit": 6,
         "url_wishlist_link": "",
         "menu": "main-menu-b2b-public",
-        "transparent_over_first": false
+        "transparent_over_first": false,
+        "free_shipping_threshold": 50
       }
     }
   },
