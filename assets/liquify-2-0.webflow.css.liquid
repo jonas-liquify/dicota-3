@@ -4237,10 +4237,10 @@ figcaption {
   .team_grid {
     grid-template-columns: 1fr;
   }
-  .team_grid .swiper_component {
+  .team_image {
     min-height: 16rem;
   }
-  .team_cards {
+  .team_cards-grid {
     border-left: none;
     border-top: 1px solid #e8e8e8;
   }
@@ -11381,50 +11381,30 @@ button.li-lang_dd-link {
   gap: 2rem 8rem;
   align-items: start;
 }
+/* Team Grid — statisches Bild links, Karten-Grid rechts (kein Slider mehr) */
 .team_grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   border: 1px solid #e8e8e8;
   border-bottom: none;
 }
-.team_grid .swiper_component {
-  position: relative;
-  overflow: hidden;
+.team_image {
+  width: 100%;
+  height: 100%;
   min-height: 30rem;
-}
-/* Rechte Spalte: Karten als Theme-Blocks im 2-Spalten-Raster */
-.team_cards {
-  border-left: 1px solid #e8e8e8;
+  object-fit: cover;
+  display: block;
 }
 .team_cards-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  height: 100%;
+  border-left: 1px solid #e8e8e8;
 }
 .team_cards-grid > .icon-cards_card:nth-child(odd) {
   border-right: 1px solid #e8e8e8;
 }
-.swiper.is-team-swiper {
-  width: 100%;
-  height: 100%;
-}
-.swiper-wrapper.is-team-swiper,
-.swiper-slide.is-team-swiper {
-  height: 100%;
-}
-.swiper-slide.is-team-swiper {
-  position: relative;
-}
-.team_slide-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-.team_slide-overlay {
-  position: absolute;
-  inset: 0;
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
+.team_cards-grid > .icon-cards_card:nth-child(n+3) {
+  border-top: 1px solid #e8e8e8;
 }
 .swiper_navigation {
   display: flex;
