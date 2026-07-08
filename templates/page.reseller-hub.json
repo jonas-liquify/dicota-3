@@ -12,8 +12,9 @@
     "reseller_hero": {
       "type": "reseller_hero",
       "settings": {
-        "text_headline": "Welcome to DICOTA myDCT",
-        "textarea_subtext": "Benefit from attractive prices and offers for your end customers",
+        "image_hintergrundbild": "shopify://shop_images/B2B_Main_Header_Image_Trolley.png",
+        "text_headline": "Welcome to DICOTA Reseller Portal",
+        "textarea_subtext": "Everything DICOTA – The dedicated space for DICOTA partners to explore our products and tools to support your customer success.",
         "text_kategorie_label": "Categories",
         "min_height": 78,
         "text_color": "#ffffff"
