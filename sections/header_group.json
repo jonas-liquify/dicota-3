@@ -30,6 +30,16 @@
             "url_reseller_button_link": ""
           },
           "blocks": {
+            "link_XQNWmp": {
+              "type": "link",
+              "name": "Link",
+              "settings": {
+                "url_link_url": "",
+                "text_link_text": "About DICOTA",
+                "highlighted": false
+              },
+              "blocks": {}
+            },
             "link_enBgib": {
               "type": "link",
               "name": "Link",
@@ -42,6 +52,7 @@
             }
           },
           "block_order": [
+            "link_XQNWmp",
             "link_enBgib"
           ]
         }
@@ -139,7 +150,7 @@
         "collection_search_recent_limit": 6,
         "url_wishlist_link": "",
         "menu": "main-menu-d2c",
-        "transparent_over_first": false,
+        "transparent_over_first": true,
         "free_shipping_threshold": 50
       }
     }
