@@ -31,8 +31,7 @@
     "hero_image": {
       "type": "boxed_image",
       "settings": {
-        "image_image_full": "shopify://shop_images/Header_b2b_solutions_run_rate_supply_1440x720_dc77e625-9ba5-4401-893f-7cb43aa70afe.png",
-        "layout": "full"
+        "image_image_full": "shopify://shop_images/Header_b2b_solutions_run_rate_supply_1440x720_dc77e625-9ba5-4401-893f-7cb43aa70afe.png"
       }
     },
     "b2b_key_selling_argu_hWeGLL": {
@@ -68,93 +67,6 @@
         "url_button_link": "",
         "text_button_text": "Learn more",
         "image_position": "left"
-      }
-    },
-    "b2b_solution_fQqwVw": {
-      "type": "b2b_solution",
-      "blocks": {
-        "b2b_sol_fact_wpA4Xi": {
-          "type": "b2b-sol-fact",
-          "name": "B2B Sol Fact",
-          "settings": {
-            "text_zahl": "1,000+",
-            "text_label": "Products available"
-          },
-          "blocks": {}
-        },
-        "b2b_sol_fact_HKnUGr": {
-          "type": "b2b-sol-fact",
-          "name": "B2B Sol Fact",
-          "settings": {
-            "text_zahl": "1,000+",
-            "text_label": "Products available"
-          },
-          "blocks": {}
-        },
-        "b2b_sol_fact_DDMYeg": {
-          "type": "b2b-sol-fact",
-          "settings": {
-            "text_zahl": "1,000+",
-            "text_label": "Products available"
-          },
-          "blocks": {}
-        },
-        "b2b_sol_capability_xkRhR3": {
-          "type": "b2b-sol-capability",
-          "disabled": true,
-          "settings": {
-            "text_heading": "Capability title",
-            "textarea_text": "Describe the capability — e.g. branding, doming, custom configuration or bundle."
-          },
-          "blocks": {}
-        },
-        "b2b-sol-referenzen": {
-          "type": "b2b-sol-referenzen",
-          "disabled": true,
-          "static": true,
-          "settings": {},
-          "blocks": {
-            "b2b_sol_referenz_RmBN6z": {
-              "type": "b2b-sol-referenz",
-              "settings": {},
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "b2b_sol_referenz_RmBN6z"
-          ]
-        }
-      },
-      "block_order": [
-        "b2b_sol_fact_wpA4Xi",
-        "b2b_sol_fact_HKnUGr",
-        "b2b_sol_fact_DDMYeg",
-        "b2b_sol_capability_xkRhR3"
-      ],
-      "custom_css": [],
-      "name": "B2B Solution",
-      "settings": {
-        "url_breadcrumb_parent_link": "",
-        "text_breadcrumb_parent_label": "",
-        "text_breadcrumb": "",
-        "text_subline": "",
-        "text_heading_1": "",
-        "textarea_subheading_1": "",
-        "url_hero_button_link": "",
-        "text_hero_button_text": "",
-        "text_feature_subline": "",
-        "text_feature_heading": "",
-        "textarea_feature_text": "",
-        "text_facts_heading": "Key facts",
-        "text_referenzen_heading": "",
-        "text_cta_heading": "",
-        "textarea_cta_text": "",
-        "url_cta_button_link": "",
-        "text_cta_button_text": "",
-        "breadcrumb_parent_label": "",
-        "breadcrumb_parent_link": "",
-        "padding_top": 4,
-        "padding_bottom": 4
       }
     },
     "value_tabs_kmVq6P": {
@@ -427,25 +339,69 @@
     "team_grid_GihKc3": {
       "type": "team_grid",
       "blocks": {
-        "team_slide_Rqrbky": {
+        "team_slide_EdKd6D": {
           "type": "team-slide",
+          "name": "Team Slide",
           "settings": {},
           "blocks": {}
+        },
+        "team-karten": {
+          "type": "team-karten",
+          "static": true,
+          "settings": {},
+          "blocks": {
+            "team_karte_CXedfc": {
+              "type": "team-karte",
+              "name": "Team Karte",
+              "settings": {
+                "text_heading": "Diversity",
+                "textarea_text": "Different backgrounds make us stronger — together we think further."
+              },
+              "blocks": {}
+            },
+            "team_karte_RxngTa": {
+              "type": "team-karte",
+              "name": "Team Karte",
+              "settings": {
+                "text_heading": "Diversity",
+                "textarea_text": "Different backgrounds make us stronger — together we think further."
+              },
+              "blocks": {}
+            },
+            "team_karte_8Uwx6G": {
+              "type": "team-karte",
+              "name": "Team Karte",
+              "settings": {
+                "text_heading": "Diversity",
+                "textarea_text": "Different backgrounds make us stronger — together we think further."
+              },
+              "blocks": {}
+            },
+            "team_karte_dgJXDy": {
+              "type": "team-karte",
+              "name": "Team Karte",
+              "settings": {
+                "text_heading": "Diversity",
+                "textarea_text": "Different backgrounds make us stronger — together we think further."
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "team_karte_CXedfc",
+            "team_karte_RxngTa",
+            "team_karte_8Uwx6G",
+            "team_karte_dgJXDy"
+          ]
         }
       },
       "block_order": [
-        "team_slide_Rqrbky"
+        "team_slide_EdKd6D"
       ],
       "name": "Team Grid",
       "settings": {
         "text_heading": "Attach Portfolio –Margin without extra effort",
         "textarea_text": "The real margin potential in run-rate business does not lie in the top-selling product itself – it lies in the add-ons. Every laptop sold is a gateway to several accessories that are reordered on a regular basis. The trick is to integrate these add-on products into the ordering process in such a way that they are included automatically – without having to be renegotiated each time.",
-        "text_karte_1_heading": "Sleeves & Cases",
-        "textarea_karte_1_text": "Perfectly tailored to the size and brand of the device – simply include them in your shopping basket as standard items. No explanation needed, no tender required. Sleeves and cases are a staple in virtually every corporate IT environment. If you include them as standard extras in your range, you’ll sell them without even having to actively promote them.",
-        "text_karte_2_heading": "Locks & Security",
-        "textarea_karte_2_text": "In many companies, anti-theft protection is an IT policy – not an optional extra. The lock is an essential item, particularly in environments with shared workstations, co-working spaces or field service teams. The advantage for retailers: high add-on rate, minimal need for explanation, good contribution margin.",
-        "text_karte_3_heading": "Adapter & Connectivity",
-        "textarea_karte_3_text": "USB-C hubs, HDMI adaptors, multi-port solutions – these items are always in demand, but rarely ordered proactively. They often end up being bought as a last-minute purchase in shops or on online platforms when an employee realises, during their first meeting whilst working from home, that they don’t have the right connector. By including these items in your standard product range, you can fill this gap – and significantly increase the average order value.",
         "url_button_link": "",
         "text_button_text": "",
         "padding_top": 5,
@@ -545,6 +501,15 @@
     "owner_spotlight_idR8mL": {
       "type": "owner_spotlight",
       "blocks": {
+        "zitat_WXJq9t": {
+          "type": "zitat",
+          "name": "Zitat",
+          "settings": {
+            "text_block_heading": "\"We think in generations, not in quarters.\"",
+            "text_block_text": "— Management"
+          },
+          "blocks": {}
+        },
         "zitat_wx4BAb": {
           "type": "zitat",
           "settings": {
@@ -555,6 +520,7 @@
         }
       },
       "block_order": [
+        "zitat_WXJq9t",
         "zitat_wx4BAb"
       ],
       "name": "Owner Spotlight",
@@ -620,11 +586,6 @@
         "padding_top": 5,
         "padding_bottom": 5
       }
-    },
-    "default_NzcGgK": {
-      "type": "default",
-      "name": "Default",
-      "settings": {}
     }
   },
   "order": [
@@ -633,7 +594,6 @@
     "hero_image",
     "b2b_key_selling_argu_hWeGLL",
     "backbone",
-    "b2b_solution_fQqwVw",
     "value_tabs_kmVq6P",
     "quote1",
     "advantages",
@@ -646,8 +606,7 @@
     "quote2",
     "cta",
     "owner_spotlight_idR8mL",
-    "benefits_grid_r4nLgh",
-    "default_NzcGgK"
+    "benefits_grid_r4nLgh"
   ],
   "layout": "b2b",
   "wrapper": "main.main-wrapper"

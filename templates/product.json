@@ -222,10 +222,6 @@
       "type": "add_to_your_kit",
       "settings": {
         "text_uberschrift": "Add to Your Kit",
-        "text_tab_1_label": "Screen Filters",
-        "text_tab_2_label": "Locks",
-        "text_tab_3_label": "Hub Chargers",
-        "text_tab_4_label": "Input Devices",
         "padding_top": 5,
         "padding_bottom": 5,
         "bg_color": "#ffffff",
@@ -242,10 +238,7 @@
       "type": "product_reviews",
       "settings": {
         "text_breakdown_titel": "Bewertungsüberblick",
-        "shop_domain": "",
-        "api_token": "",
         "per_page": 10,
-        "api_base": "https://judge.me/api/v1",
         "padding_top": 5,
         "padding_bottom": 5,
         "bg_color": "#ffffff",

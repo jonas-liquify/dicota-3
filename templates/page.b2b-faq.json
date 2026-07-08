@@ -23,9 +23,7 @@
         "text_heading": "Frequently asked questions",
         "textarea_text": "If you have questions about applying, the selection process or getting started — we have answers.",
         "padding_top": 5,
-        "padding_bottom": 5,
-        "faq_set": "shipping",
-        "faq_entries": []
+        "padding_bottom": 5
       }
     }
   },
