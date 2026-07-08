@@ -120,19 +120,19 @@
         },
         "b2b_sol_fact_yjNgri": {
           "type": "b2b-sol-fact",
-          "name": "3-in-1",
+          "name": "ø 4-6",
           "settings": {
-            "text_zahl": "3-in-1",
-            "text_label": "Sleeve + Case + Lock in a bundle"
+            "text_zahl": "ø 4-6",
+            "text_label": "Items per employee setup"
           },
           "blocks": {}
         },
         "b2b_sol_fact_ghexVD": {
           "type": "b2b-sol-fact",
-          "name": "Ø +35%",
+          "name": "HR + IT",
           "settings": {
-            "text_zahl": "Ø +35%",
-            "text_label": "Higher order value compared to individual items"
+            "text_zahl": "HR + IT",
+            "text_label": "Two budgets in one meeting"
           },
           "blocks": {}
         },
