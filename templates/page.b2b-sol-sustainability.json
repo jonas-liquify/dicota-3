@@ -305,6 +305,7 @@
         "benefit_xchy3p",
         "benefit_XMTTnM"
       ],
+      "disabled": true,
       "name": "Benefits Grid",
       "settings": {
         "text_subline": "What DICOTA provides for the tender",
