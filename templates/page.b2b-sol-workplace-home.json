@@ -285,11 +285,11 @@
         },
         "tab_U46hmf": {
           "type": "tab",
-          "name": "Argument 3",
+          "name": "Roll-out of the home working policy",
           "settings": {
-            "text_tab_label": "Argument 3",
-            "text_tab_heading": "A single accounting entry, no administrative burden",
-            "textarea_tab_text": "Three separate items mean three ordering processes, three deliveries, three invoices, three checks by the accounts department. A bundle SKU reduces this to a single transaction. That may sound like a minor detail – but for large companies with structured procurement processes, it’s a compelling argument."
+            "text_tab_label": "Roll-out of the home working policy",
+            "text_tab_heading": "Roll-out of the home working policy",
+            "textarea_tab_text": "Since 2022, many companies have introduced formal home working policies that also set out a standard for equipping the home office. There is often a fixed per-person budget – around 200 to 500 euros – which employees can use to set up their home office. DICOTA packages fit perfectly into this budget framework: defined contents, a clear price, and simple invoicing."
           },
           "blocks": {}
         },
