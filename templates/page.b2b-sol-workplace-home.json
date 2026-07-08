@@ -292,23 +292,12 @@
             "textarea_tab_text": "Since 2022, many companies have introduced formal home working policies that also set out a standard for equipping the home office. There is often a fixed per-person budget – around 200 to 500 euros – which employees can use to set up their home office. DICOTA packages fit perfectly into this budget framework: defined contents, a clear price, and simple invoicing."
           },
           "blocks": {}
-        },
-        "tab_3n6qfQ": {
-          "type": "tab",
-          "name": "Argument 4",
-          "settings": {
-            "text_tab_label": "Argument 4",
-            "text_tab_heading": "Warranty and support from a single source",
-            "textarea_tab_text": "If there’s a problem with the accessories – a broken zip, a sleeve that’s too small, a faulty lock – there’s a single point of contact: the reseller. No finger-pointing between different suppliers. No hassle for the customer in finding out who’s responsible. That’s a real service advantage that carries weight in discussions with the IT manager."
-          },
-          "blocks": {}
         }
       },
       "block_order": [
         "tab_WtkFKC",
         "tab_EnGYGA",
-        "tab_U46hmf",
-        "tab_3n6qfQ"
+        "tab_U46hmf"
       ],
       "name": "Sales pitch for IT buyers",
       "settings": {
@@ -323,7 +312,7 @@
         "zitat_KtMLCt": {
           "type": "zitat",
           "settings": {
-            "text_block_heading": "\"Don’t position the bundle as an accessory, but as part of the device setup. “We supply you with a complete, policy-compliant workstation setup straight away with the device” – that sounds like a solution, not an upsell.\"",
+            "text_block_heading": "\"At your next IT meeting, be sure to raise the subject of onboarding. Ask how many new recruits the company plans to take on each year – and whether workplace equipment has already been standardised for them. The answer is often surprising: many companies do not have a standardised solution and are grateful for a concrete suggestion.\"",
             "text_block_text": "— DICOTA Management"
           },
           "blocks": {}
@@ -334,8 +323,8 @@
       ],
       "name": "Owner Spotlight",
       "settings": {
-        "text_heading": "Sales tip",
-        "textarea_text": "Strategy for customer meetings\nPosition the device rollout bundle as part of the complete workplace setup — not as accessories, but as a ready-to-use, policy-compliant solution from day one.",
+        "text_heading": "Tip for resellers",
+        "textarea_text": "Use onboarding as the entry point: ask whether workplace equipment is already standardized for every new employee.",
         "image_image": "shopify://shop_images/Image_Management_01_square.png",
         "padding_top": 5,
         "padding_bottom": 5
