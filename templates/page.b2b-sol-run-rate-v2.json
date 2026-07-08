@@ -426,13 +426,65 @@
     "team_grid_GihKc3": {
       "type": "team_grid",
       "blocks": {
+        "team_slide_EdKd6D": {
+          "type": "team-slide",
+          "name": "Team Slide",
+          "settings": {},
+          "blocks": {}
+        },
         "team-karten": {
           "type": "team-karten",
           "static": true,
           "settings": {},
-          "blocks": {}
+          "blocks": {
+            "team_karte_CXedfc": {
+              "type": "team-karte",
+              "name": "Team Karte",
+              "settings": {
+                "text_heading": "Diversity",
+                "textarea_text": "Different backgrounds make us stronger — together we think further."
+              },
+              "blocks": {}
+            },
+            "team_karte_RxngTa": {
+              "type": "team-karte",
+              "name": "Team Karte",
+              "settings": {
+                "text_heading": "Diversity",
+                "textarea_text": "Different backgrounds make us stronger — together we think further."
+              },
+              "blocks": {}
+            },
+            "team_karte_8Uwx6G": {
+              "type": "team-karte",
+              "name": "Team Karte",
+              "settings": {
+                "text_heading": "Diversity",
+                "textarea_text": "Different backgrounds make us stronger — together we think further."
+              },
+              "blocks": {}
+            },
+            "team_karte_dgJXDy": {
+              "type": "team-karte",
+              "name": "Team Karte",
+              "settings": {
+                "text_heading": "Diversity",
+                "textarea_text": "Different backgrounds make us stronger — together we think further."
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "team_karte_CXedfc",
+            "team_karte_RxngTa",
+            "team_karte_8Uwx6G",
+            "team_karte_dgJXDy"
+          ]
         }
       },
+      "block_order": [
+        "team_slide_EdKd6D"
+      ],
       "name": "Team Grid",
       "settings": {
         "text_heading": "Attach Portfolio –Margin without extra effort",
