@@ -11,14 +11,24 @@
   "sections": {
     "two_column_hero": {
       "type": "two_column_hero",
-      "settings": {}
+      "settings": {
+        "text_heading": "DICOTA — The Computer Bag.",
+        "textarea_text": "DICOTA was born in 1992 from a simple idea: transporting computers from A to B – safely, conveniently, and efficiently.<br><br>When computers became mobile in the early 90s, our journey started. For decades, DICOTA has stood as a synonym for constant innovation and premium quality."
+      }
     },
     "boxed_image": {
       "type": "boxed_image",
-      "settings": {}
+      "settings": {
+        "image_image_full": "shopify://shop_images/DICOTA---FIVE-Top-Traveller.jpg"
+      }
     },
     "feature_card_grid": {
       "type": "feature_card_grid",
+      "settings": {
+        "text_subline": "Why DICOTA?",
+        "text_heading": "You never work alone.",
+        "textarea_text": "For more than 30 years, DICOTA has been the first address for high-quality, functional carrying solutions and the market leader in Germany, Austria and Switzerland. As a true companion, DICOTA accompanies you as a friend and partner in your daily (work) life: whether commuting, traveling or simply business as usual — DICOTA is there."
+      },
       "blocks": {
         "feature-cards": {
           "type": "feature-cards",
@@ -26,14 +36,54 @@
           "static": true,
           "settings": {},
           "blocks": {
-            "feature-karte": {
+            "feature-karte_1": {
               "type": "feature-karte",
               "name": "Feature Karte",
-              "settings": {}
+              "settings": {
+                "image_icon": "shopify://shop_images/German_flag.svg",
+                "text_heading": "German Pioneer",
+                "textarea_text": "In smart & sustainable professional carrying solutions and IT accessories."
+              }
+            },
+            "feature-karte_2": {
+              "type": "feature-karte",
+              "name": "Feature Karte",
+              "settings": {
+                "image_icon": "shopify://shop_images/WeCare_Icon_d73af471-c810-40e8-91d3-ef20b26ddc37.svg",
+                "text_heading": "We Care",
+                "textarea_text": "Certified social and environmental responsibility across our entire supply chain.",
+                "text_button_text": "Read more",
+                "url_button_link": "shopify://pages/sustainability"
+              }
+            },
+            "feature-karte_3": {
+              "type": "feature-karte",
+              "name": "Feature Karte",
+              "settings": {
+                "image_icon": "shopify://shop_images/Heart_icon_e41df0aa-7b42-4700-8f08-4e56a580a40a.jpg",
+                "text_heading": "From people for people",
+                "textarea_text": "Our core values: Human, Protective, Enabling, Inspiring.",
+                "text_button_text": "Read more",
+                "url_button_link": "shopify://pages/sustainability"
+              }
+            },
+            "feature-karte_4": {
+              "type": "feature-karte",
+              "name": "Feature Karte",
+              "settings": {
+                "image_icon": "shopify://shop_images/Target_icon_2dd5566b-fe37-43e3-8b57-395a3dd89ab7.png",
+                "text_heading": "Concentrate on your goals",
+                "textarea_text": "We provide you with the best solutions for your individual work life.",
+                "text_button_text": "Read more",
+                "url_button_link": "shopify://collections/all"
+              }
             }
           },
           "block_order": [
-            "feature-karte"
+            "feature-karte_1",
+            "feature-karte_2",
+            "feature-karte_3",
+            "feature-karte_4"
           ]
         },
         "stats-row": {
@@ -42,64 +92,281 @@
           "static": true,
           "settings": {},
           "blocks": {
-            "stats-block": {
+            "stats-block_1": {
               "type": "stats-block",
               "name": "Stats Block",
-              "settings": {}
+              "settings": {
+                "image_icon": "shopify://shop_images/icon_customers_e1d2c907-39b9-4bcf-afa7-4c15fc81ea32.png",
+                "text_zahl": "20M+",
+                "text_label": "satisfied customers"
+              }
+            },
+            "stats-block_2": {
+              "type": "stats-block",
+              "name": "Stats Block",
+              "settings": {
+                "image_icon": "shopify://shop_images/icon_years.png",
+                "text_zahl": ">30 years",
+                "text_label": "experience in mobile working"
+              }
+            },
+            "stats-block_3": {
+              "type": "stats-block",
+              "name": "Stats Block",
+              "settings": {
+                "image_icon": "shopify://shop_images/icon_employees.png",
+                "text_zahl": "53",
+                "text_label": "dedicated employees"
+              }
+            },
+            "stats-block_4": {
+              "type": "stats-block",
+              "name": "Stats Block",
+              "settings": {
+                "image_icon": "shopify://shop_images/icon_skus.png",
+                "text_zahl": ">2,400",
+                "text_label": "realized models"
+              }
+            },
+            "stats-block_5": {
+              "type": "stats-block",
+              "name": "Stats Block",
+              "settings": {
+                "image_icon": "shopify://shop_images/icon_countries.png",
+                "text_zahl": ">60",
+                "text_label": "countries available"
+              }
+            },
+            "stats-block_6": {
+              "type": "stats-block",
+              "name": "Stats Block",
+              "settings": {
+                "text_zahl": "14.2M",
+                "text_label": "PET bottles recycled"
+              }
             }
           },
           "block_order": [
-            "stats-block"
+            "stats-block_1",
+            "stats-block_2",
+            "stats-block_3",
+            "stats-block_4",
+            "stats-block_5",
+            "stats-block_6"
           ]
         }
-      },
-      "settings": {}
+      }
     },
-    "history_timeline": {
-      "type": "history_timeline",
-      "blocks": {
-        "meilenstein": {
-          "type": "meilenstein",
-          "name": "Meilenstein",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "meilenstein"
-      ],
-      "settings": {}
+    "boxed_image_2": {
+      "type": "boxed_image",
+      "settings": {
+        "image_image_full": "shopify://shop_images/About_Us_At_a_Glance.jpg"
+      }
     },
     "owner_spotlight": {
       "type": "owner_spotlight",
+      "settings": {
+        "text_heading": "Then, Now, Next",
+        "textarea_text": "Today, we're passionate about making your mobile and hybrid work life more convenient and secure. Rooted in German heritage, the brand's legacy continues strong.<br><br>Since the management buyout in 2013, Swiss values have enriched DICOTA's approach with a focus on sustainability — fostering meaningful partnerships with customers, suppliers and employees alike. All united. Pioneering tomorrow's success.",
+        "image_image": "shopify://shop_images/Management_23a4313f-8612-4161-a301-0c2da82c7bfd.jpg"
+      },
       "blocks": {
-        "zitat": {
+        "zitat_1": {
           "type": "zitat",
           "name": "Zitat",
-          "settings": {}
+          "settings": {
+            "text_block_heading": "Stephan Meyer",
+            "text_block_text": "CPO"
+          }
+        },
+        "zitat_2": {
+          "type": "zitat",
+          "name": "Zitat",
+          "settings": {
+            "text_block_heading": "Michael Mühlenbruch",
+            "text_block_text": "CMO"
+          }
+        },
+        "zitat_3": {
+          "type": "zitat",
+          "name": "Zitat",
+          "settings": {
+            "text_block_heading": "Ruedi Nauer",
+            "text_block_text": "CEO"
+          }
         }
       },
       "block_order": [
-        "zitat"
-      ],
-      "settings": {}
+        "zitat_1",
+        "zitat_2",
+        "zitat_3"
+      ]
+    },
+    "history_timeline": {
+      "type": "history_timeline",
+      "settings": {
+        "text_subline": "Our Heritage",
+        "text_heading": "More than 30 years of quality, functionality and reliability.",
+        "text_start_year": "1992",
+        "text_end_year": "2023"
+      },
+      "blocks": {
+        "meilenstein_1": {
+          "type": "meilenstein",
+          "name": "Meilenstein",
+          "settings": {
+            "image_slide_image": "shopify://shop_images/1992_DICOTA_Logo_259de20e-378f-40b7-a0a1-2fa60fadf190.jpg",
+            "text_slide_heading": "Established in Germany",
+            "textarea_slide_text": "DICOTA GmbH was founded in 1992 in Bietigheim-Bissingen by Siegmund Gailing. Computers became portable for the first time and needed a reliable and convenient transport solution.",
+            "text_slide_year": "1992"
+          }
+        },
+        "meilenstein_2": {
+          "type": "meilenstein",
+          "name": "Meilenstein",
+          "settings": {
+            "image_slide_image": "shopify://shop_images/2002_BaseXX_Logo_bf38eed8-37bb-4441-b278-751ecccd24b3.jpg",
+            "text_slide_heading": "Founding of the sub-brand BASE XX",
+            "textarea_slide_text": "BASE XX was introduced to the market. The brand contained a collection of different types of bags in the entry-level price segment. In 2021, the entire collection was reworked and relaunched.",
+            "text_slide_year": "2002"
+          }
+        },
+        "meilenstein_3": {
+          "type": "meilenstein",
+          "name": "Meilenstein",
+          "settings": {
+            "image_slide_image": "shopify://shop_images/2009_Nature_Family_6a01499e-25b1-4ca6-b2fc-e845a21a997e.jpg",
+            "text_slide_heading": "First bags made from natural materials",
+            "textarea_slide_text": "The two messenger bags with an alpine look picked up on the \"Green IT\" trend of the 2000s. They were made of both robust and environmentally friendly canvas cotton fabric and leather.",
+            "text_slide_year": "2009"
+          }
+        },
+        "meilenstein_4": {
+          "type": "meilenstein",
+          "name": "Meilenstein",
+          "settings": {
+            "image_slide_image": "shopify://shop_images/2010_Reclaim_Family.jpg",
+            "text_slide_heading": "First collection made from recycled PET",
+            "textarea_slide_text": "RECLAIM was the name of the first collection made from rPET. In total, more than 200,000 mobile users chose one of the 16 models — a great success story!",
+            "text_slide_year": "2010"
+          }
+        },
+        "meilenstein_5": {
+          "type": "meilenstein",
+          "name": "Meilenstein",
+          "settings": {
+            "image_slide_image": "shopify://shop_images/2013_Filter_Lock.jpg",
+            "text_slide_heading": "New product categories: locks and filters",
+            "textarea_slide_text": "The portfolio expanded with privacy filters in 2010 and notebook locks in 2013. Today we offer a large selection with the fitting accessories for almost every notebook.",
+            "text_slide_year": "2013"
+          }
+        },
+        "meilenstein_6": {
+          "type": "meilenstein",
+          "name": "Meilenstein",
+          "settings": {
+            "image_slide_image": "shopify://shop_images/2015_amfori_BSCI_070ef84e-b942-4899-b5ca-a7d2bcfc8eab.jpg",
+            "text_slide_heading": "First IT brand member of amfori BSCI",
+            "textarea_slide_text": "",
+            "text_slide_year": "2015"
+          }
+        },
+        "meilenstein_7": {
+          "type": "meilenstein",
+          "name": "Meilenstein",
+          "settings": {
+            "image_slide_image": "shopify://shop_images/2019_Mobile_Accessories.jpg",
+            "text_slide_heading": "Addition of mobile working accessories",
+            "textarea_slide_text": "Further accessories were added to the portfolio to support the trend of mobile working and to make working on the move as comfortable as possible.",
+            "text_slide_year": "2019"
+          }
+        },
+        "meilenstein_8": {
+          "type": "meilenstein",
+          "name": "Meilenstein",
+          "settings": {
+            "image_slide_image": "shopify://shop_images/2022_Environment.jpg",
+            "text_slide_heading": "Sustainable goal achieved: 95% of bags recycled",
+            "textarea_slide_text": "In DICOTA's anniversary year, we can expect further collections made from recycled PET. In addition, carrying solutions from the existing portfolio will be converted to rPET.",
+            "text_slide_year": "2022"
+          }
+        },
+        "meilenstein_9": {
+          "type": "meilenstein",
+          "name": "Meilenstein",
+          "settings": {
+            "image_slide_image": "shopify://shop_images/2023_HiVis.jpg",
+            "text_slide_heading": "Launch of the \"Safety at Work\" portfolio",
+            "textarea_slide_text": "",
+            "text_slide_year": "2023"
+          }
+        }
+      },
+      "block_order": [
+        "meilenstein_1",
+        "meilenstein_2",
+        "meilenstein_3",
+        "meilenstein_4",
+        "meilenstein_5",
+        "meilenstein_6",
+        "meilenstein_7",
+        "meilenstein_8",
+        "meilenstein_9"
+      ]
     },
     "discover_banner": {
       "type": "discover_banner",
-      "settings": {}
+      "settings": {
+        "image_bg_image": "shopify://shop_images/DICOTA_Team.png",
+        "text_heading": "One for all. All for you.",
+        "textarea_text": "People make the real difference. Top performance only comes from motivated and reliable colleagues. The specific role matters less than the daily motivation to make things a little better. That's what we live by at DICOTA.",
+        "url_button_link": "shopify://pages/career",
+        "text_button_text": "Careers at DICOTA"
+      }
     },
     "triple_cards": {
       "type": "triple_cards",
+      "settings": {
+        "text_heading": "The World of DICOTA",
+        "url_button_link": "shopify://collections/all"
+      },
       "blocks": {
-        "karte": {
+        "karte_1": {
           "type": "karte",
           "name": "Karte",
-          "settings": {}
+          "settings": {
+            "url_card_link": "shopify://pages/sustainability",
+            "text_card_heading": "Responsible. Socially and ecologically.",
+            "text_card_button_text": "Read more",
+            "image_card_bg_image": "shopify://shop_images/Teaser_Responsibility.jpg"
+          }
+        },
+        "karte_2": {
+          "type": "karte",
+          "name": "Karte",
+          "settings": {
+            "url_card_link": "/",
+            "text_card_heading": "Inspiration for the world of tomorrow.",
+            "text_card_button_text": "Read more",
+            "image_card_bg_image": "shopify://shop_images/Teaser_Design.jpg"
+          }
+        },
+        "karte_3": {
+          "type": "karte",
+          "name": "Karte",
+          "settings": {
+            "url_card_link": "shopify://pages/qualitat",
+            "text_card_heading": "Our promise to you.",
+            "text_card_button_text": "Read more",
+            "image_card_bg_image": "shopify://shop_images/Lasting_Quality_b5fb68b8-cd4a-46ce-a788-51f7ec672cad.jpg"
+          }
         }
       },
       "block_order": [
-        "karte"
-      ],
-      "settings": {}
+        "karte_1",
+        "karte_2",
+        "karte_3"
+      ]
     }
   },
   "layout": "theme",
@@ -108,8 +375,9 @@
     "two_column_hero",
     "boxed_image",
     "feature_card_grid",
-    "history_timeline",
+    "boxed_image_2",
     "owner_spotlight",
+    "history_timeline",
     "discover_banner",
     "triple_cards"
   ]
