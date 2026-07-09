@@ -352,6 +352,22 @@
       "settings": {
         "text_heading": "All Collections"
       }
+    },
+    "featured_products_Eafp8J": {
+      "type": "featured_products",
+      "name": "Featured Products",
+      "settings": {
+        "text_uberschrift": "Some of our Bestsellers",
+        "url_button_link": "shopify://collections/b2b-products-all",
+        "text_button_text": "All Products",
+        "collection_kollektion": "b2b-our-bestsellers",
+        "collection_kollektion_limit": 10,
+        "show_view_all": true,
+        "padding_top": 2.5,
+        "padding_bottom": 5,
+        "bg_color": "#ffffff",
+        "text_color": "#0f0f0f"
+      }
     }
   },
   "layout": "b2b",
@@ -369,6 +385,7 @@
     "owner_spotlight_68NmAp",
     "rich_text_YxCbPU",
     "benefits_grid_kPtDBe",
-    "list_collection_hero_HUkM4c"
+    "list_collection_hero_HUkM4c",
+    "featured_products_Eafp8J"
   ]
 }
