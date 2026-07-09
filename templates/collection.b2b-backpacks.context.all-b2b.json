@@ -27,7 +27,8 @@
         "textarea_beschreibung": "The SEVEN Backpack is designed for professionals who demand more, it combines decades of expertise with cutting-edge innovation to make mobile working safer, smarter, and more sustainable.",
         "text_button_text": "Check out",
         "padding_top": 0,
-        "padding_bottom": 0
+        "padding_bottom": 0,
+        "url_button_link": "shopify://products/backpack-seven-14-16"
       },
       "blocks": {}
     },
