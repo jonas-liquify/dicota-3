@@ -10,7 +10,7 @@
         {% for product in collection.products %}                            <div class="coll_grid-item">{% render 'product_card', product: product %}</div>
                             <div li-if:inside="forloop.index == section.settings.promo1_position" style="display:contents" inside="1">
         {% if forloop.index == section.settings.promo1_position %}
-            <div class="coll_grid-item coll_promo-card" style="background-color: {{ section.settings.promo1_bg }};"><div class="coll_promo-card_inner"><div class="coll_promo-card_content"><h3 class="coll_promo-card_title">
+            <div class="coll_grid-item coll_promo-card{% unless section.settings.promo1_large %} is-normal{% endunless %}" style="background-color: {{ section.settings.promo1_bg }};"><div class="coll_promo-card_inner"><div class="coll_promo-card_content"><h3 class="coll_promo-card_title">
 {{ section.settings.text_promo_1_headline }}
 </h3>{% if section.settings.textarea_promo_1_text != blank %}    <div class="li-guard" li-if="section.settings.textarea_promo_1_text != blank">
     <p class="coll_promo-card_desc text-size-regular"> {{ section.settings.textarea_promo_1_text }} </p>    </div>
@@ -26,7 +26,7 @@
     </div>
                             <div li-if:inside="forloop.index == section.settings.promo2_position" style="display:contents" inside="1">
         {% if forloop.index == section.settings.promo2_position %}
-            <div class="coll_grid-item coll_promo-card" style="background-color: {{ section.settings.promo2_bg }};"><div class="coll_promo-card_inner"><div class="coll_promo-card_content"><h3 class="coll_promo-card_title">
+            <div class="coll_grid-item coll_promo-card{% unless section.settings.promo2_large %} is-normal{% endunless %}" style="background-color: {{ section.settings.promo2_bg }};"><div class="coll_promo-card_inner"><div class="coll_promo-card_content"><h3 class="coll_promo-card_title">
 {{ section.settings.text_promo_2_headline }}
 </h3>{% if section.settings.textarea_promo_2_text != blank %}    <div class="li-guard" li-if="section.settings.textarea_promo_2_text != blank">
     <p class="coll_promo-card_desc text-size-regular"> {{ section.settings.textarea_promo_2_text }} </p>    </div>
@@ -194,6 +194,12 @@
             "default": 10
         },
         {
+            "type": "checkbox",
+            "id": "promo1_large",
+            "label": "Promo 1 gro\u00df (\u00fcber 2 Kacheln)",
+            "default": true
+        },
+        {
             "type": "color",
             "id": "promo1_bg",
             "label": "Promo 1 Hintergrundfarbe",
@@ -204,6 +210,12 @@
             "id": "promo2_position",
             "label": "Promo 2 nach Produkt Nr.",
             "default": 22
+        },
+        {
+            "type": "checkbox",
+            "id": "promo2_large",
+            "label": "Promo 2 gro\u00df (\u00fcber 2 Kacheln)",
+            "default": true
         },
         {
             "type": "color",

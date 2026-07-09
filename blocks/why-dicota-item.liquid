@@ -1,0 +1,21 @@
+<div li-block="Why Dicota Item" class="why-dicota_item" {{ block.shopify_attributes }}>
+                    <div class="why-dicota_icon w-embed">{% render 'icon_verified' %}</div>
+                    <div class="why-dicota_text w-richtext"> {{ block.settings.richtext_text }} </div>
+                </div> {% schema %} {
+    "name": "Why Dicota Item",
+    "settings": [
+        {
+            "id": "richtext_text",
+            "type": "richtext",
+            "label": "Text",
+            "default": "<p><strong>Marktf\u00fchrer in Deutschland und \u00d6sterreich<\/strong> bei Notebooktaschen<\/p>"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Why Dicota Item",
+            "blocks": []
+        }
+    ],
+    "tag": null
+} {% endschema %}

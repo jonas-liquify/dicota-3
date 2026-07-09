@@ -16,11 +16,11 @@ NACH JEDEM Desktop-Builder-Build erneut laufen lassen — die Ergänzungen leben
 kompilierten Theme und gehen beim Neubau verloren.
 
 Aufruf:  python3 tools/fix_static_block_schemas.py [THEME_DIR]
-Default THEME_DIR: /Users/jonas/Desktop/dicota-3
+Default THEME_DIR: /Users/jonas/Ablage/Liquiflow Projects/dicota-3
 """
 import json, re, glob, os, sys
 
-THEME = sys.argv[1] if len(sys.argv) > 1 else "/Users/jonas/Desktop/dicota-3"
+THEME = sys.argv[1] if len(sys.argv) > 1 else "/Users/jonas/Ablage/Liquiflow Projects/dicota-3"
 SECTIONS = os.path.join(THEME, "sections")
 
 
@@ -42,12 +42,11 @@ def main():
         missing = [s for s in statics if s not in existing]
         if not missing:
             continue
-        nested = [b.get("type") for b in sc.get("blocks", [])
-                  if b.get("type") not in ("@app",) and b.get("type") not in statics]
-        nested_decl = [{"type": n} for n in nested] if nested else [{"type": "@theme"}]
+        # A block-type reference in a section schema must be a bare {"type": X} —
+        # Shopify rejects "name"/"blocks" here (nested blocks belong in the block's
+        # OWN schema file under blocks/X.liquid, not repeated on the reference).
         for ty in sorted(missing):
-            sc.setdefault("blocks", []).insert(
-                0, {"type": ty, "name": ty.replace("-", " ").title(), "blocks": nested_decl})
+            sc.setdefault("blocks", []).insert(0, {"type": ty})
         newjson = json.dumps(sc, ensure_ascii=False, indent=2)
         open(p, "w", encoding="utf-8").write(t[:m.start(2)] + "\n" + newjson + "\n" + t[m.end(2):])
         fixed.append((os.path.basename(p), missing))
