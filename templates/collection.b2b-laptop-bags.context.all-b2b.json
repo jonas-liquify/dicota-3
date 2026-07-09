@@ -53,9 +53,7 @@
         "url_promo_1_link": "shopify://products/top-traveller-seven-14-16",
         "image_promo_1_bild": "shopify://shop_images/7_GB1c_ProductPromotion_TopTravSeven_9318833a-1c25-4848-8865-d44e681d7715.jpg",
         "textarea_promo_2_text": "Protect sensitive information wherever you work. Discover our Privacy Filter solutions.",
-        "image_promo_2_bild": "shopify://shop_images/4_CT1c_Filter.jpg",
-        "text_promo_2_headline": "DICOTA PRIVACY FILTERS",
-        "url_promo_2_link": "shopify://collections/b2b-screen-filters-all"
+        "promo2_position": 15
       },
       "blocks": {}
     }
