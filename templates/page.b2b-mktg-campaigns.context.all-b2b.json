@@ -22,12 +22,12 @@
         "text_suche_label": "Search",
         "text_warenkorb_label": "Cart",
         "text_404_label": "Page not found",
-        "header-c159dfc15fe479ae225fb18b7ab98157": null,
-        "paragraph-14ed91e8c328672b3eebe8fe818fbf31": null,
-        "header-7b2ca305d8a00d9c8e17d1b08b9c16f0": null,
+        "header-d9493dfd2893f024da8ff587ac72695a": null,
+        "paragraph-f5b25b498be7b61b0b47547ce46425eb": null,
+        "header-db6ad401b5e43272fe595a6122b32c73": null,
         "padding_top": 0.5,
         "padding_bottom": 0.5,
-        "header-5f2815558badacf13dc79835c8dd2b17": null,
+        "header-3cf8c0e51515560f946a9de4870067e1": null,
         "bg_color": "#ffffff",
         "text_color": "#0f0f0f"
       },
@@ -41,9 +41,9 @@
       "settings": {
         "text_uberschrift": "TWO Family",
         "textarea_einleitung": "",
-        "header-5b67a8e893ee6dcdaf0436cd3475d39e": null,
-        "paragraph-29a69c5f1493aa46f1761657f1b9607a": null,
-        "header-7098d1c254cd0d035b1cd1fd4a88ace3": null,
+        "header-749d99006fb39bf25fbbbb3028052d21": null,
+        "paragraph-0f441268d092e94c6049ff0f423f6f30": null,
+        "header-dbf4c2732a9cea8ee5aa789d9f3b0e13": null,
         "padding_top": 4,
         "padding_bottom": 4
       },
@@ -69,7 +69,7 @@
               "name": "Online",
               "disabled": false,
               "settings": {
-                "text_titel": "Transition Sheet for Online",
+                "text_titel": "Product Presentation PDF",
                 "text_datei_info": "PDF · 25 MB",
                 "url_de_datei": "",
                 "url_en_datei": "",
