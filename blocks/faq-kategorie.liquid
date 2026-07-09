@@ -6,7 +6,7 @@
   {% comment %} --- VARIANTE A: Ein FAQ-Set (Metaobjekt) ist ausgewählt --- {% endcomment %}
   {% if block.settings.faq_set != blank %}
     <div class="faq_component">
-      {% for faq in block.settings.faq_set.which_faq.values %}
+      {% for faq in block.settings.faq_set.which_faqs.value %}
         <div x-data="{open: false}" class="faq_item background-color-alternate">
           <div tabindex="0" role="button" x-on:click="open=!open" x-bind:aria-expanded="open?'true':'false'" class="faq_header">
             <div class="text-size-medium text-weight-medium">{{ faq.question }}</div>
