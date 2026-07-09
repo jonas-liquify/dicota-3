@@ -82,7 +82,7 @@
             "prasentation_Rqw76"
           ],
           "settings": {
-            "text_kategorie_name": "Category"
+            "text_kategorie_name": "TRANSITION SHEETS"
           }
         }
       },
@@ -125,7 +125,7 @@
     },
     "b2b_mkt_documents": {
       "settings": {
-        "text_uberschrift": "SEVEN family Mrketing Assets"
+        "text_uberschrift": "SEVEN family Marketing Assets"
       },
       "blocks": {
         "b2b_mkt_dokument_DfU3a": {
@@ -160,7 +160,7 @@
       "type": "b2b_mkt_documents",
       "disabled": false,
       "settings": {
-        "text_uberschrift": "Documents",
+        "text_uberschrift": "TWO family Marketing Assets",
         "paragraph-59663bb9061fbe9e6ecd903003988da6": null,
         "header-14a1460870e3fa9528df851a1e68a11d": null,
         "padding_top": 4,
