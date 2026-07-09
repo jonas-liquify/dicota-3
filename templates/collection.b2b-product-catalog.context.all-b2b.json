@@ -26,11 +26,26 @@
       "blocks": {},
       "block_order": [],
       "name": "Collection Image Her"
+    },
+    "featured_product_qe68Cr": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    },
+    "collection_intro": {
+      "settings": {},
+      "blocks": {
+        "kategorie_bild_hiEEbP": {
+          "settings": {
+            "text_titel": "Laptop Bags & Backpacks",
+            "textarea_text": "Reliable protection, smart organization and everyday comfort. Discover our Laptop Bags & Backpacks."
+          }
+        }
+      }
     }
   },
   "order": [
     "collection_image_her_aPVXw",
-    "collection_hero_8TRwPe",
     "featured_product_qe68Cr",
     "collection_intro",
     "collection_products",
