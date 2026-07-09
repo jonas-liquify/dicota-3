@@ -12,5 +12,17 @@
     "market": "all-b2b"
   },
   "parent": "collection.b2b-laptop-bags.json",
-  "sections": {}
+  "sections": {
+    "collection_intro": {
+      "settings": {},
+      "blocks": {
+        "kategorie_bild_hiEEbP": {
+          "settings": {
+            "image_bild": "shopify://shop_images/5_SCT1c_LB_EntryLevel.jpg",
+            "textarea_text": "The right product for low budget but great quality and useful features – ideal products for your project tender."
+          }
+        }
+      }
+    }
+  }
 }
