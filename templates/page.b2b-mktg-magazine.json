@@ -186,6 +186,18 @@
                 "url_fr_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/PRODUCT_CATALOG_4.0_ONE_FR.pdf?v=1783594699"
               },
               "blocks": {}
+            },
+            "prasentation_33w4xh": {
+              "type": "prasentation",
+              "name": "MOTION Family",
+              "settings": {
+                "text_titel": "MOTION Family",
+                "text_datei_info": "PDF · 3.4 MB",
+                "url_de_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/PRODUCT_CATALOG_4.0_MOTION_DE.pdf?v=1783594768",
+                "url_en_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/PRODUCT_CATALOG_4.0_MOTION_EN.pdf?v=1783594766",
+                "url_fr_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/PRODUCT_CATALOG_4.0_MOTION_FR.pdf?v=1783594769"
+              },
+              "blocks": {}
             }
           },
           "block_order": [
@@ -193,7 +205,8 @@
             "prasentation_CRDBRi",
             "prasentation_hgYTQ3",
             "prasentation_ifF6wz",
-            "prasentation_TXL6L6"
+            "prasentation_TXL6L6",
+            "prasentation_33w4xh"
           ]
         },
         "produkt_kategorie_tL9Vid": {
