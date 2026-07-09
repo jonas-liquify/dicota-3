@@ -12,5 +12,28 @@
     "market": "all-b2b"
   },
   "parent": "collection.b2b-product-catalog.json",
-  "sections": {}
+  "sections": {
+    "collection_image_her_aPVXw": {
+      "type": "collection_image_her",
+      "disabled": false,
+      "settings": {
+        "image_hintergrundbild": null,
+        "textarea_text": "Refined design. Recycled modern materials.",
+        "header-ec543006d4ae8f235f6e907eaddc64c4": null,
+        "padding_top": 2.5,
+        "padding_bottom": 2.5
+      },
+      "blocks": {},
+      "block_order": [],
+      "name": "Collection Image Her"
+    }
+  },
+  "order": [
+    "collection_hero_8TRwPe",
+    "featured_product_qe68Cr",
+    "collection_intro",
+    "collection_products",
+    "testimonials",
+    "collection_image_her_aPVXw"
+  ]
 }
