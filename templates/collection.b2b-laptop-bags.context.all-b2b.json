@@ -36,6 +36,13 @@
           }
         }
       }
+    },
+    "featured_product_qe68Cr": {
+      "settings": {
+        "image_produkt_bild": "shopify://shop_images/4_CTw_LaptopBag_01.jpg",
+        "text_produkt_titel": "Engineered to Protect. Built to Last."
+      },
+      "blocks": {}
     }
   }
 }
