@@ -165,6 +165,7 @@
         "karte_pWQixU",
         "karte_Vqt49F"
       ],
+      "disabled": true,
       "name": "Download as PDF",
       "settings": {
         "text_heading": "Download as PDF",
