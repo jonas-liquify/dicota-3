@@ -52,8 +52,8 @@
             "text_merken_text": "Save",
             "url_vergleichen_link": "",
             "text_vergleichen_text": "Compare",
-            "text_trust_1": "Free shipping from €59.00",
-            "text_trust_2": "Pay by invoice with Klarna",
+            "text_trust_1": "Free shipping from €49.00",
+            "text_trust_2": "Pay later by Klarna",
             "text_trust_3": "30-day money-back guarantee"
           },
           "blocks": {}
@@ -64,8 +64,29 @@
           "blocks": {
             "we_care_item_atw3EC": {
               "type": "we-care-item",
+              "name": "Quality & Reliability",
               "settings": {
-                "text_headline": "30 years of German quality &amp; reliability",
+                "text_headline": "30 years of German quality & reliability",
+                "url_link": "shopify://pages/qualitat",
+                "text_linktext": "See our principles"
+              },
+              "blocks": {}
+            },
+            "we_care_item_ndHQkz": {
+              "type": "we-care-item",
+              "name": "Certified Standards",
+              "settings": {
+                "text_headline": "Certified Standards (Eco Vadis)",
+                "url_link": "shopify://pages/qualitat",
+                "text_linktext": "See our principles"
+              },
+              "blocks": {}
+            },
+            "we_care_item_RrHY4f": {
+              "type": "we-care-item",
+              "name": "We Care Item",
+              "settings": {
+                "text_headline": "30 years of German quality & reliability",
                 "url_link": "",
                 "text_linktext": "See our principles"
               },
@@ -73,7 +94,9 @@
             }
           },
           "block_order": [
-            "we_care_item_atw3EC"
+            "we_care_item_atw3EC",
+            "we_care_item_ndHQkz",
+            "we_care_item_RrHY4f"
           ]
         },
         "beschreibungs_tabs_4QbGBE": {
@@ -141,6 +164,7 @@
       "block_order": [
         "usp-item"
       ],
+      "disabled": true,
       "settings": {
         "padding_top": 4,
         "padding_bottom": 4,
@@ -161,7 +185,7 @@
     "product_family": {
       "type": "product_family",
       "settings": {
-        "text_uberschrift": "Die Produktfamilie auf einen Blick",
+        "text_uberschrift": "The Product family at a Glance",
         "padding_top": 5,
         "padding_bottom": 5,
         "bg_color": "#f5f5f5"
@@ -169,6 +193,7 @@
     },
     "product_loved_by_gal": {
       "type": "product_loved_by_gal",
+      "disabled": true,
       "settings": {
         "text_uberschrift": "How People Wear It",
         "padding_top": 5,
@@ -194,6 +219,7 @@
       "block_order": [
         "vergleichszeile"
       ],
+      "disabled": true,
       "settings": {
         "text_headline_zeile_1": "BECOME",
         "text_headline_zeile_2": "WHATEVER MAKES YOU BRILLIANT",
@@ -210,11 +236,12 @@
     "we_care_banner": {
       "type": "we_care_banner",
       "settings": {
+        "image_hintergrundbild": "shopify://shop_images/Sustainable_Materials.png",
         "text_zahler": "12.483.129",
-        "text_headline": "Verarbeitete Flaschen",
-        "textarea_beschreibung": "Seit 1992 wurden mehr als 12 Millionen PET-Flaschen verarbeitet, um Abfall zu minimieren und Nachhaltigkeit zu fördern",
-        "url_cta_link": "",
-        "text_cta_text": "Mehr zur Nachhaltigkeit",
+        "text_headline": "Bottles processed",
+        "textarea_beschreibung": "Since 1992, more than 12 million PET bottles have been recycled to minimise waste and promote sustainability.",
+        "url_cta_link": "shopify://pages/sustainability",
+        "text_cta_text": "More about Responsibility",
         "bg_color": "#0a1628"
       }
     },
@@ -238,7 +265,7 @@
       "type": "product_reviews",
       "settings": {
         "text_breakdown_titel": "Bewertungsüberblick",
-        "proxy_url": "dicota-reviews.dicota-judgeme.workers.dev",
+        "proxy_url": "",
         "per_page": 10,
         "padding_top": 5,
         "padding_bottom": 5,
@@ -248,6 +275,7 @@
     },
     "product_faq": {
       "type": "product_faq",
+      "disabled": true,
       "settings": {
         "text_titel": "FAQ",
         "faq_set": "",
