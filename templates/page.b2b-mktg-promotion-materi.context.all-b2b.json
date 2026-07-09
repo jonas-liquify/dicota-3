@@ -12,5 +12,52 @@
     "market": "all-b2b"
   },
   "parent": "page.b2b-mktg-promotion-materi.json",
-  "sections": {}
+  "sections": {
+    "b2b_mkt_overview": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    },
+    "b2b_mkt_giveaways": {
+      "settings": {},
+      "blocks": {
+        "b2b_bestell_artikel_fmKCC": {
+          "type": "b2b-bestell-artikel",
+          "name": "B2B Bestell-Artikel",
+          "disabled": false,
+          "settings": {
+            "image_bild": "shopify://shop_images/Flight_Tag.png",
+            "text_bezeichnung": "Flight Tag \"You never work alone\"",
+            "text_art_nr": "MO343",
+            "text_preis": "€0.90*"
+          }
+        },
+        "b2b_bestell_artikel_3f6X4G": {
+          "settings": {
+            "image_bild": "shopify://shop_images/Peppermint_Box.png"
+          }
+        },
+        "b2b_bestell_artikel_Bfgtaj": {
+          "settings": {
+            "image_bild": "shopify://shop_images/BallPenBlack.png"
+          }
+        },
+        "b2b_bestell_artikel_fdtqdz": {
+          "settings": {
+            "image_bild": "shopify://shop_images/Textmarkers.png",
+            "text_bezeichnung": "Textmarkers",
+            "text_art_nr": "MO330 (yellow)<br>M0331 (orange)",
+            "text_preis": "€1.24*"
+          }
+        }
+      },
+      "block_order": [
+        "b2b_bestell_artikel_Bfgtaj",
+        "b2b_bestell_artikel_3f6X4G",
+        "b2b_bestell_artikel_fmKCC",
+        "b2b_bestell_artikel_jzJNmm",
+        "b2b_bestell_artikel_fdtqdz"
+      ]
+    }
+  }
 }
