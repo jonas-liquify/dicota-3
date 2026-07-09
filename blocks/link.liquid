@@ -1,5 +1,13 @@
 <div li-block="Link" style="display:contents" {{ block.shopify_attributes }}>
-                    <a href="{{ block.settings.url_link_url }}" class="announcement-bar_link{% if block.settings.highlighted %} is-highlighted{% endif %}"> <span>{{ block.settings.text_link_text }}</span> </a>
+                    {% if block.settings.link_list == blank %}    <span class="li-guard" li-if="block.settings.link_list == blank">
+    <a href="{{ block.settings.url_link_url }}" class="announcement-bar_link{% if block.settings.highlighted %} is-highlighted{% endif %}"> <span>{{ block.settings.text_link_text }}</span> </a>    </span>
+{% endif %}
+                    {% if block.settings.link_list != blank %}    <div class="li-guard" li-if="block.settings.link_list != blank">
+    <div data-hover="true" data-delay="200" class="announcement-bar_link-dropdown w-dropdown"><div class="announcement-bar_link-toggle announcement-bar_link w-dropdown-toggle{% if block.settings.highlighted %} is-highlighted{% endif %}"><span li-object="block.settings.text_link_text">{{ block.settings.text_link_text }}</span><div class="dropdown-icon w-embed">{% render 'icon_chevron_down' %}</div></div><nav class="announcement-bar_link-list w-dropdown-list"><div li-for:inside="link in linklists[block.settings.link_list].links" class="announcement-bar_link-item">
+        {% for link in linklists[block.settings.link_list].links %}                            <a li-object:href="link.url" href="{{ link.url }}" class="announcement-bar_link-dd-link"><span li-object="link.title">{{ link.title }}</span></a>
+                    {% endfor %}    </div></nav></div>    </div>
+{% endif %}
+                    
                 </div> {% schema %} {
     "name": "Link",
     "settings": [
@@ -13,6 +21,12 @@
             "type": "text",
             "label": "Link Text",
             "default": "About DICOTA"
+        },
+        {
+            "type": "link_list",
+            "id": "link_list",
+            "label": "Dropdown-Men\u00fc (optional)",
+            "info": "Wenn gesetzt, wird aus dem Link ein Dropdown-Trigger; \u201eLink Text\u201c bleibt das Label, \u201eLink URL\u201c wird ignoriert. Men\u00fc \u00fcber Shopify-Navigation pflegen."
         },
         {
             "type": "checkbox",

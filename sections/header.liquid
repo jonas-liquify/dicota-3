@@ -16,7 +16,9 @@
 {% endfor %}    </ul>
 {% endif %}
                         </div>
-{% endfor %}</div><a href="{{ section.settings.url_promo_link }}" class="nav_mega-promo w-inline-block"> {% if section.settings.image_promo_bild %} {{ section.settings.image_promo_bild | image_url: width: 1200 | image_tag: loading: 'lazy', class: 'nav_mega-promo-img' }} {% else %} <img src="{{ 'placeholder.svg' | asset_url }}" loading="lazy" alt="" class="nav_mega-promo-img"> {% endif %}<div class="nav_mega-promo-content"><h3 class="nav_mega-promo-headline">{{ section.settings.text_promo_headline }}</h3><p class="nav_mega-promo-text"> {{ section.settings.textarea_promo_text }} </p><span class="nav_mega-promo-btn"><span>{{ section.settings.text_promo_button_text }}</span></span></div> </a>    </nav>
+{% endfor %}</div><a href="{{ link.object.metafields.custom.navlink | default: section.settings.url_promo_link }}" class="nav_mega-promo w-inline-block"><img li-object:src="link.object.metafields.custom.navimage.value | default: section.settings.image_promo_bild | image_url: width: 1200" src="{{ link.object.metafields.custom.navimage.value | default: section.settings.image_promo_bild | image_url: width: 1200 }}" loading="lazy" alt="" class="nav_mega-promo-img"><div class="nav_mega-promo-content"><h3 li-object="link.object.metafields.custom.navheadline | default: section.settings.text_promo_headline" class="nav_mega-promo-headline">{{ link.object.metafields.custom.navheadline | default: section.settings.text_promo_headline }}</h3><p li-object="link.object.metafields.custom.navtext | default: section.settings.textarea_promo_text" class="nav_mega-promo-text">{{ link.object.metafields.custom.navtext | default: section.settings.textarea_promo_text }}</p><span class="nav_mega-promo-btn"><span>
+{{ section.settings.text_promo_button_text }}
+</span></span></div></a>    </nav>
 {% endif %}
                         </div>
 {% endfor %}</nav><div class="nav_shop-icons"><div class="nav_search nav_search-trigger-wrap" x-data="{ searchOpen: false, searchQuery: '', results: [], suggestions: [], loading: false }"><button type="button" aria-label="Open search" class="nav_shop-icon nav_search-pill" x-on:click="searchOpen = true; $nextTick(() => $refs.searchInput && $refs.searchInput.focus())"><div class="icon-embed-xsmall w-embed"><svg width="100%" height="100%" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M19.6 21L13.3 14.7C12.8 15.1 12.225 15.4167 11.575 15.65C10.925 15.8833 10.2333 16 9.5 16C7.68333 16 6.14583 15.3708 4.8875 14.1125C3.62917 12.8542 3 11.3167 3 9.5C3 7.68333 3.62917 6.14583 4.8875 4.8875C6.14583 3.62917 7.68333 3 9.5 3C11.3167 3 12.8542 3.62917 14.1125 4.8875C15.3708 6.14583 16 7.68333 16 9.5C16 10.2333 15.8833 10.925 15.65 11.575C15.4167 12.225 15.1 12.8 14.7 13.3L21 19.6L19.6 21ZM9.5 14C10.75 14 11.8125 13.5625 12.6875 12.6875C13.5625 11.8125 14 10.75 14 9.5C14 8.25 13.5625 7.1875 12.6875 6.3125C11.8125 5.4375 10.75 5 9.5 5C8.25 5 7.1875 5.4375 6.3125 6.3125C5.4375 7.1875 5 8.25 5 9.5C5 10.75 5.4375 11.8125 6.3125 12.6875C7.1875 13.5625 8.25 14 9.5 14Z" fill="currentColor"></path></svg></div><span class="nav_search-placeholder">
@@ -459,32 +461,40 @@
             "label": "Logo"
         },
         {
-            "id": "url_promo_link",
-            "type": "url",
-            "label": "Promo Link"
-        },
-        {
-            "id": "image_promo_bild",
-            "type": "image_picker",
-            "label": "Promo Bild"
-        },
-        {
-            "id": "text_promo_headline",
-            "type": "text",
-            "label": "Promo Headline",
-            "default": "Weigh Darker\u2122 Moon Bag Ruffle"
-        },
-        {
-            "id": "textarea_promo_text",
-            "type": "textarea",
-            "label": "Promo Text",
-            "default": "Refined design. Recycled materials."
-        },
-        {
             "id": "text_promo_button_text",
             "type": "text",
             "label": "Promo Button Text",
             "default": "Shop now"
+        },
+        {
+            "type": "header",
+            "content": "Mega-Men\u00fc Promo"
+        },
+        {
+            "type": "paragraph",
+            "content": "Fallback f\u00fcr alle Dropdowns, deren verlinkte Seite\/Kollektion keine eigenen Metafelder (Navigation Image\/Headline\/Text\/Link) gesetzt hat."
+        },
+        {
+            "type": "url",
+            "id": "url_promo_link",
+            "label": "Promo Link"
+        },
+        {
+            "type": "image_picker",
+            "id": "image_promo_bild",
+            "label": "Promo Bild"
+        },
+        {
+            "type": "text",
+            "id": "text_promo_headline",
+            "label": "Promo Headline",
+            "default": "Weigh Darker\u2122 Moon Bag Ruffle"
+        },
+        {
+            "type": "textarea",
+            "id": "textarea_promo_text",
+            "label": "Promo Text",
+            "default": "Refined design. Recycled materials."
         },
         {
             "id": "text_suche_placeholder",
