@@ -60,9 +60,10 @@
       "type": "b2b_mkt_campaigns",
       "name": "Magazine",
       "settings": {
-        "text_breadcrumb": "DICOTA Magazine",
         "text_heading": "DICOTA Magazine",
-        "textarea_subheading": "Explore the DICOTA Magazine in your preferred language and download the latest edition with just one click."
+        "textarea_subheading": "Explore the DICOTA Magazine in your preferred language and download the latest edition with just one click.",
+        "padding_top": 4,
+        "padding_bottom": 4
       }
     },
     "triple_cards_HEViiP": {
@@ -132,9 +133,9 @@
               "settings": {
                 "text_titel": "Product Presentation PDF",
                 "text_datei_info": "PDF · 25 MB",
-                "url_de_datei": "",
-                "url_en_datei": "",
-                "url_fr_datei": ""
+                "url_de_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/PRODUCT_CATALOG_4.0_SEVEN_DE.pdf?v=1781682102",
+                "url_en_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/PRODUCT_CATALOG_4.0_SEVEN_EN.pdf?v=1781682120",
+                "url_fr_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/PRODUCT_CATALOG_4.0_SEVEN_FR.pdf?v=1781682129"
               },
               "blocks": {}
             },
@@ -175,7 +176,9 @@
       "name": "B2B Mkt Presentation",
       "settings": {
         "text_uberschrift": "Product Family Bulletins",
-        "textarea_einleitung": "Discover our dedicated product family bulletins, featuring all key information, highlights, and insights from the latest DICOTA Magazine — available for download."
+        "textarea_einleitung": "Discover our dedicated product family bulletins, featuring all key information, highlights, and insights from the latest DICOTA Magazine — available for download.",
+        "padding_top": 4,
+        "padding_bottom": 4
       }
     },
     "b2b_tpl_banner_1x_x3qWc4": {
@@ -188,7 +191,9 @@
         "text_heading": "TEAMS Background",
         "textarea_text": "Download our new standardized DICOTA brand background for Microsoft Teams and use it for all external Teams meetings.",
         "url_button_link": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/Background_Teams_2026.jpg?v=1783272705",
-        "text_button_text": "Discover now"
+        "text_button_text": "Discover now",
+        "padding_top": 4,
+        "padding_bottom": 4
       }
     }
   },
