@@ -26,6 +26,16 @@
           "settings": {
             "image_icon": "shopify://shop_images/Icon_delivery_truck_speed.png"
           }
+        },
+        "usp_XJyaDj": {
+          "settings": {
+            "image_icon": "shopify://shop_images/Icon_return.png"
+          }
+        },
+        "usp_Cw4kWR": {
+          "settings": {
+            "image_icon": "shopify://shop_images/Icon_warranty.png"
+          }
         }
       }
     }
