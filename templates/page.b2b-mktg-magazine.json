@@ -122,17 +122,17 @@
       "blocks": {
         "produkt_kategorie_DKq9ND": {
           "type": "produkt-kategorie",
-          "name": "SEVEN",
+          "name": "Cut & Sew",
           "settings": {
-            "text_kategorie_name": "SEVEN family"
+            "text_kategorie_name": "Laptop Bags & Packs"
           },
           "blocks": {
             "prasentation_fUmTDn": {
               "type": "prasentation",
-              "name": "Präsentation",
+              "name": "SEVEN Family",
               "settings": {
-                "text_titel": "Product Presentation PDF",
-                "text_datei_info": "PDF · 25 MB",
+                "text_titel": "SEVEN Family",
+                "text_datei_info": "PDF · 2.3 MB",
                 "url_de_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/PRODUCT_CATALOG_4.0_SEVEN_DE.pdf?v=1781682102",
                 "url_en_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/PRODUCT_CATALOG_4.0_SEVEN_EN.pdf?v=1781682120",
                 "url_fr_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/PRODUCT_CATALOG_4.0_SEVEN_FR.pdf?v=1781682129"
