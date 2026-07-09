@@ -58,12 +58,69 @@
     },
     "b2b_mkt_campaigns": {
       "type": "b2b_mkt_campaigns",
+      "disabled": true,
       "name": "Magazine",
       "settings": {
         "text_heading": "DICOTA Magazine",
         "textarea_subheading": "Explore the DICOTA Magazine in your preferred language and download the latest edition with just one click.",
         "padding_top": 4,
         "padding_bottom": 4
+      }
+    },
+    "b2b_mkt_presentation_egKLYK": {
+      "type": "b2b_mkt_presentation",
+      "blocks": {
+        "produkt_kategorie_gk63Mf": {
+          "type": "produkt-kategorie",
+          "settings": {
+            "text_kategorie_name": "Category"
+          },
+          "blocks": {
+            "prasentation_myDYPq": {
+              "type": "prasentation",
+              "settings": {
+                "text_titel": "Download the latest DICOTA Magazine",
+                "text_datei_info": "PDF · 19 MB",
+                "url_de_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/DICOTA_Magazine_4.0_DE_compressed.pdf?v=1783069516",
+                "url_en_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/DICOTA_Magazine_3.0_EN.pdf?v=1783067335",
+                "url_fr_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/DICOTA_Magazine_4.0_FR_compressed.pdf?v=1783069623"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "prasentation_myDYPq"
+          ]
+        }
+      },
+      "block_order": [
+        "produkt_kategorie_gk63Mf"
+      ],
+      "name": "B2B Mkt Presentation",
+      "settings": {
+        "text_uberschrift": "DICOTA Magazine",
+        "textarea_einleitung": "Explore the DICOTA Magazine in your preferred language and download the latest edition with just one click.",
+        "padding_top": 4,
+        "padding_bottom": 4
+      }
+    },
+    "image_banner_394gED": {
+      "type": "image_banner",
+      "name": "Image Banner",
+      "settings": {
+        "image_hintergrundbild": "shopify://shop_images/DICOTA_Magazine_4.0_Web_Banner_Clean_10s_2048x570_babccfd4-8818-4acb-975b-504df7981d16.gif",
+        "text_headline_zeile_1": "",
+        "text_headline_zeile_2": "",
+        "textarea_subtext": "",
+        "url_button_link": "",
+        "text_button_text": "",
+        "min_height": 45,
+        "full_bleed": true,
+        "content_horizontal": "flex-start",
+        "content_vertical": "center",
+        "text_align": "left",
+        "text_color": "#ffffff",
+        "overlay_strength": 0
       }
     },
     "triple_cards_HEViiP": {
@@ -298,25 +355,6 @@
         "padding_top": 4,
         "padding_bottom": 4
       }
-    },
-    "image_banner_394gED": {
-      "type": "image_banner",
-      "name": "Image Banner",
-      "settings": {
-        "image_hintergrundbild": "shopify://shop_images/DICOTA_Magazine_4.0_Web_Banner_Clean_10s_2048x570_babccfd4-8818-4acb-975b-504df7981d16.gif",
-        "text_headline_zeile_1": "",
-        "text_headline_zeile_2": "",
-        "textarea_subtext": "",
-        "url_button_link": "",
-        "text_button_text": "",
-        "min_height": 45,
-        "full_bleed": true,
-        "content_horizontal": "flex-start",
-        "content_vertical": "center",
-        "text_align": "left",
-        "text_color": "#ffffff",
-        "overlay_strength": 0
-      }
     }
   },
   "layout": "b2b",
@@ -325,9 +363,10 @@
     "b2b_subnav",
     "b2b_mkt_overview",
     "b2b_mkt_campaigns",
+    "b2b_mkt_presentation_egKLYK",
+    "image_banner_394gED",
     "triple_cards_HEViiP",
     "b2b_mkt_presentation_9ttTMF",
-    "b2b_tpl_banner_1x_x3qWc4",
-    "image_banner_394gED"
+    "b2b_tpl_banner_1x_x3qWc4"
   ]
 }
