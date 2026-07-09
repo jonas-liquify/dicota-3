@@ -17,8 +17,8 @@
       "type": "collection_image_her",
       "disabled": false,
       "settings": {
-        "image_hintergrundbild": null,
-        "textarea_text": "Refined design. Recycled modern materials.",
+        "image_hintergrundbild": "shopify://shop_images/DICOTA_smf_25-24.png",
+        "textarea_text": "Equip your team with solutions that boost performance, reduce risk and ensure long.-term productivity.",
         "header-ec543006d4ae8f235f6e907eaddc64c4": null,
         "padding_top": 2.5,
         "padding_bottom": 2.5
