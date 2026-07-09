@@ -49,19 +49,30 @@
       "blocks": {
         "b2b_mkt_dokument_DfU3a": {
           "type": "b2b-mkt-dokument",
-          "name": "B2B Mkt Dokument",
+          "name": "Product Images",
           "disabled": false,
           "settings": {
             "url_datei_link": "https://www.dicota.com/collections/seven?download=true",
-            "text_titel": "Download Product Images",
+            "text_titel": "Product Images",
             "text_datei_info": "ZIP · 136.4 MB"
+          }
+        },
+        "b2b_mkt_dokument_4T9m6": {
+          "type": "b2b-mkt-dokument",
+          "name": "Product Lifestyle Images",
+          "disabled": false,
+          "settings": {
+            "url_datei_link": "",
+            "text_titel": "Product Lifestyle Images",
+            "text_datei_info": "ZIP · 25 MB"
           }
         }
       },
       "block_order": [
         "b2b_mkt_dokument_ApQcqA",
         "b2b_mkt_dokument_VqpRee",
-        "b2b_mkt_dokument_DfU3a"
+        "b2b_mkt_dokument_DfU3a",
+        "b2b_mkt_dokument_4T9m6"
       ]
     }
   },
