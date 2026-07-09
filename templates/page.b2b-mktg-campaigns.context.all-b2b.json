@@ -22,18 +22,60 @@
         "text_suche_label": "Search",
         "text_warenkorb_label": "Cart",
         "text_404_label": "Page not found",
-        "header-ee2ab8a2e2b0cffbb3cb6a454b4277a8": null,
-        "paragraph-1b6b84a01de24b6f5d22adb83bc3a258": null,
-        "header-5ff37e38263081ce907cb692153a722b": null,
+        "header-3d665d6add8000dc474d5d4daf580865": null,
+        "paragraph-31da0fe8cff10e052ae9b9dbf1f1f1d3": null,
+        "header-9761692f4310c532b62898caf0ed7e5d": null,
         "padding_top": 0.5,
         "padding_bottom": 0.5,
-        "header-06e70f8ee26378448d5867c662a1a698": null,
+        "header-2f7b85747751293780b4bc5bf8e7c809": null,
         "bg_color": "#ffffff",
         "text_color": "#0f0f0f"
       },
       "blocks": {},
       "block_order": [],
       "name": "Product Breadcrumb"
+    },
+    "b2b_mkt_presentation_ptYHt": {
+      "type": "b2b_mkt_presentation",
+      "disabled": false,
+      "settings": {
+        "text_uberschrift": "TWO Family",
+        "textarea_einleitung": "",
+        "header-c8953d7b4834bfbd388fbdb454217cf3": null,
+        "paragraph-eb950645d758368108430c5519b4d5a8": null,
+        "header-14bdf373dbcdcb35780c8fa17dcbe430": null,
+        "padding_top": 4,
+        "padding_bottom": 4
+      },
+      "blocks": {
+        "produkt_kategorie_bwJKj": {
+          "type": "produkt-kategorie",
+          "disabled": false,
+          "blocks": {
+            "prasentation_Rqw76": {
+              "type": "prasentation",
+              "disabled": false,
+              "settings": {
+                "text_titel": "Product Presentation PDF",
+                "text_datei_info": "PDF · 25 MB",
+                "url_de_datei": "",
+                "url_en_datei": "",
+                "url_fr_datei": ""
+              }
+            }
+          },
+          "block_order": [
+            "prasentation_Rqw76"
+          ],
+          "settings": {
+            "text_kategorie_name": "Category"
+          }
+        }
+      },
+      "block_order": [
+        "produkt_kategorie_bwJKj"
+      ],
+      "name": "B2B Mkt Presentation"
     },
     "b2b_mkt_presentation_HzWpea": {
       "settings": {
@@ -99,48 +141,6 @@
         "b2b_mkt_dokument_DfU3a",
         "b2b_mkt_dokument_4T9m6"
       ]
-    },
-    "b2b_mkt_presentation_ptYHt": {
-      "type": "b2b_mkt_presentation",
-      "disabled": false,
-      "settings": {
-        "text_uberschrift": "Product Presentations",
-        "textarea_einleitung": "Download our product presentations as PDF or PPT — available in German, English and French.",
-        "header-e3d762f558acf3afc51d73830efe3f4a": null,
-        "paragraph-5586540bc85c1ef1cc428f7a570caf83": null,
-        "header-2a543a6475b139f1a24d4eb43b80a2f9": null,
-        "padding_top": 4,
-        "padding_bottom": 4
-      },
-      "blocks": {
-        "produkt_kategorie_bwJKj": {
-          "type": "produkt-kategorie",
-          "disabled": false,
-          "blocks": {
-            "prasentation_Rqw76": {
-              "type": "prasentation",
-              "disabled": false,
-              "settings": {
-                "text_titel": "Product Presentation PDF",
-                "text_datei_info": "PDF · 25 MB",
-                "url_de_datei": "",
-                "url_en_datei": "",
-                "url_fr_datei": ""
-              }
-            }
-          },
-          "block_order": [
-            "prasentation_Rqw76"
-          ],
-          "settings": {
-            "text_kategorie_name": "Category"
-          }
-        }
-      },
-      "block_order": [
-        "produkt_kategorie_bwJKj"
-      ],
-      "name": "B2B Mkt Presentation"
     }
   },
   "order": [
