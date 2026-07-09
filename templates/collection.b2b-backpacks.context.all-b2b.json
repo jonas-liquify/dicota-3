@@ -52,6 +52,17 @@
           }
         }
       }
+    },
+    "collection_products": {
+      "settings": {
+        "image_promo_1_bild": "shopify://shop_images/7_GB1c_Advice_XRay.jpg",
+        "promo1_large": false,
+        "image_promo_2_bild": "shopify://shop_images/8_GB2c_ProductPromotion_Filter_04.jpg",
+        "promo2_large": true,
+        "promo2_position": 12,
+        "promo1_position": 5
+      },
+      "blocks": {}
     }
   }
 }
