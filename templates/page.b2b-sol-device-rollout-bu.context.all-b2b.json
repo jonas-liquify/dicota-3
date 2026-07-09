@@ -12,5 +12,12 @@
     "market": "all-b2b"
   },
   "parent": "page.b2b-sol-device-rollout-bu.json",
-  "sections": {}
+  "sections": {
+    "owner_spotlight_68NmAp": {
+      "settings": {
+        "image_image": "shopify://shop_images/Image_Management_01_hoizontal.png"
+      },
+      "blocks": {}
+    }
+  }
 }
