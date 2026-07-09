@@ -22,12 +22,12 @@
         "text_suche_label": "Search",
         "text_warenkorb_label": "Cart",
         "text_404_label": "Page not found",
-        "header-aaa7838ea0f863b2ce1cce966d7ea11b": null,
-        "paragraph-4ee414af2e6ab386dc6682ad8262d810": null,
-        "header-30b1602b6ce83510d7f2f45ebdbe8971": null,
+        "header-ee2ab8a2e2b0cffbb3cb6a454b4277a8": null,
+        "paragraph-1b6b84a01de24b6f5d22adb83bc3a258": null,
+        "header-5ff37e38263081ce907cb692153a722b": null,
         "padding_top": 0.5,
         "padding_bottom": 0.5,
-        "header-fadddf60c49ddd38104f529adae4eeda": null,
+        "header-06e70f8ee26378448d5867c662a1a698": null,
         "bg_color": "#ffffff",
         "text_color": "#0f0f0f"
       },
@@ -62,9 +62,9 @@
           "name": "Product Lifestyle Images",
           "disabled": false,
           "settings": {
-            "url_datei_link": "",
+            "url_datei_link": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/SEVEN_Product_Lifestyle_Images.zip?v=1783605473",
             "text_titel": "Product Lifestyle Images",
-            "text_datei_info": "ZIP · 25 MB"
+            "text_datei_info": "ZIP · 15.5 MB"
           }
         }
       },
