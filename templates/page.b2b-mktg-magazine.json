@@ -240,6 +240,18 @@
             "text_kategorie_name": "Accessories"
           },
           "blocks": {
+            "prasentation_LmQULk": {
+              "type": "prasentation",
+              "name": "Accessories",
+              "settings": {
+                "text_titel": "Accessories",
+                "text_datei_info": "PDF · 1.4 MB",
+                "url_de_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/PRODUCT_CATALOG_4.0_ACCESSORIES_DE.pdf?v=1783594178",
+                "url_en_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/PRODUCT_CATALOG_4.0_ACCESSORIES_EN.pdf?v=1783594178",
+                "url_fr_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/PRODUCT_CATALOG_4.0_ACCESSORIES_FR.pdf?v=1783594178"
+              },
+              "blocks": {}
+            },
             "prasentation_mkaFGN": {
               "type": "prasentation",
               "name": "Locks",
@@ -254,6 +266,7 @@
             }
           },
           "block_order": [
+            "prasentation_LmQULk",
             "prasentation_mkaFGN"
           ]
         }

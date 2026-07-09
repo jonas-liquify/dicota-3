@@ -12,5 +12,21 @@
     "market": "all-b2b"
   },
   "parent": "collection.b2b-backpacks.json",
-  "sections": {}
+  "sections": {
+    "collection_hero_8TRwPe": {
+      "settings": {
+        "text_button_text": ""
+      },
+      "blocks": {}
+    },
+    "featured_product_qe68Cr": {
+      "settings": {
+        "image_produkt_bild": "shopify://shop_images/1_PITw_Seven_c9d12401-382e-44d4-b23b-6923a3d41b7a.jpg",
+        "text_produkt_titel": "Engineered to Protect. Built to Last.",
+        "textarea_beschreibung": "The SEVEN Backpack is designed for professionals who demand more, it combines decades of expertise with cutting-edge innovation to make mobile working safer, smarter, and more sustainable.",
+        "text_button_text": "Check out"
+      },
+      "blocks": {}
+    }
+  }
 }
