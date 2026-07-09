@@ -18,15 +18,22 @@
       "disabled": false,
       "settings": {
         "text_headline": "",
-        "header-c77145661bd5de3546370cc48ad9728e": null,
+        "header-66f14ffb2392222e21ec743f73291d28": null,
         "video_upload": "shopify://files/videos/DICOTA_Magazine_4.0_Web_Banner_2048x570.mp4",
-        "header-3097b27a6640800734549053f3578767": null,
-        "padding_top": 2,
+        "header-c0fe5b3ac2922ba81f46efca15980918": null,
+        "padding_top": 0,
         "padding_bottom": 5
       },
       "blocks": {},
       "block_order": [],
       "name": "Video"
+    },
+    "b2b_mkt_campaigns": {
+      "disabled": false,
+      "settings": {
+        "padding_bottom": 2
+      },
+      "blocks": {}
     },
     "b2b_mkt_presentation_egKLYK": {
       "settings": {
@@ -47,13 +54,6 @@
           }
         }
       }
-    },
-    "b2b_mkt_campaigns": {
-      "disabled": false,
-      "settings": {
-        "padding_bottom": 2
-      },
-      "blocks": {}
     }
   },
   "order": [
