@@ -28,6 +28,12 @@
             "text_titel": "Students & Urban",
             "textarea_text": "Looking for a less corporate look without compromising on functionality and quality? Discover our products designed for everyday life."
           }
+        },
+        "kategorie-bild": {
+          "settings": {
+            "text_titel": "Business",
+            "textarea_text": "Premium design, smart functionality and reliable protection. Discover our Business Collection."
+          }
         }
       }
     }
