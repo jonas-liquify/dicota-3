@@ -171,8 +171,8 @@
           "type": "b2b-mkt-dokument",
           "disabled": false,
           "settings": {
-            "url_datei_link": "",
-            "text_titel": "Thumbnails",
+            "url_datei_link": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/TWO_key_visual_scaled.jpg?v=1783606049",
+            "text_titel": "Key Visual",
             "text_datei_info": "ZIP · 25 MB"
           }
         }
