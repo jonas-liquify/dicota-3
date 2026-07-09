@@ -16,7 +16,7 @@
       "blocks": {
         "usp_UjjLKy": {
           "type": "usp",
-          "name": "USP",
+          "name": "USP: Free Shipping",
           "settings": {
             "text_text": "Free shipping over 49 EUR"
           },
@@ -42,8 +42,8 @@
           "type": "rechte-seite",
           "static": true,
           "settings": {
-            "text_reseller_button": "Für Reseller",
-            "url_reseller_button_link": ""
+            "text_reseller_button": "For Resellers",
+            "url_reseller_button_link": "shopify://pages/b2b-reseller-hub"
           },
           "blocks": {
             "link_bmpV8z": {
