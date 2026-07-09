@@ -41,8 +41,15 @@
       "settings": {
         "image_produkt_bild": "shopify://shop_images/4_CTw_LaptopBag_01.jpg",
         "text_produkt_titel": "Engineered to Protect. Built to Last.",
-        "textarea_beschreibung": "The SEVEN Backpack is designed for professionals who demand more, it combines decades of expertise with cutting-edge innovation to make mobile working safer, smarter, and more sustainable.",
+        "textarea_beschreibung": "The SEVEN Top Traveller is designed for professionals who demand more, it combines decades of expertise with cutting-edge innovation to make mobile working safer, smarter, and more sustainable.",
         "url_button_link": "shopify://products/top-traveller-seven-14-16"
+      },
+      "blocks": {}
+    },
+    "collection_products": {
+      "settings": {
+        "image_promo_1_bild": "shopify://shop_images/7_GB1c_ProductPromotion_TopTravSeven_9318833a-1c25-4848-8865-d44e681d7715.jpg",
+        "text_promo_1_headline": "Engineered to Protect. Built to Last."
       },
       "blocks": {}
     }
