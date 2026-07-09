@@ -175,10 +175,21 @@
             "text_titel": "Key Visual",
             "text_datei_info": "JPG · 188 KB"
           }
+        },
+        "b2b_mkt_dokument_6aXWa": {
+          "type": "b2b-mkt-dokument",
+          "name": "B2B Mkt Dokument",
+          "disabled": false,
+          "settings": {
+            "url_datei_link": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/TWO_product_brief.pdf?v=1783606011",
+            "text_titel": "Product Brief",
+            "text_datei_info": "PDF · 313 KB"
+          }
         }
       },
       "block_order": [
-        "b2b_mkt_dokument_qEQ8t"
+        "b2b_mkt_dokument_qEQ8t",
+        "b2b_mkt_dokument_6aXWa"
       ],
       "name": "B2B Mkt Documents"
     }
