@@ -41,6 +41,28 @@
       "blocks": {},
       "block_order": [],
       "name": "Product Breadcrumb"
+    },
+    "b2b_mkt_documents": {
+      "settings": {
+        "text_uberschrift": "SEVEN family Mrketing Assets"
+      },
+      "blocks": {
+        "b2b_mkt_dokument_DfU3a": {
+          "type": "b2b-mkt-dokument",
+          "name": "B2B Mkt Dokument",
+          "disabled": false,
+          "settings": {
+            "url_datei_link": "",
+            "text_titel": "Thumbnails",
+            "text_datei_info": "ZIP · 25 MB"
+          }
+        }
+      },
+      "block_order": [
+        "b2b_mkt_dokument_ApQcqA",
+        "b2b_mkt_dokument_VqpRee",
+        "b2b_mkt_dokument_DfU3a"
+      ]
     }
   },
   "order": [
