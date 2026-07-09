@@ -9,6 +9,19 @@
  */
 {
   "sections": {
+    "collection_hero_8TRwPe": {
+      "type": "collection_hero",
+      "name": "Collection Hero",
+      "settings": {
+        "url_button_link": "",
+        "text_button_text": "Learn more",
+        "show_button": true,
+        "padding_top": 4,
+        "padding_bottom": 6,
+        "bg_color": "#ffffff",
+        "text_color": "#0f0f0f"
+      }
+    },
     "featured_product_qe68Cr": {
       "type": "featured_product",
       "name": "Featured Product",
@@ -82,11 +95,14 @@
         "url_promo_2_link": "",
         "text_promo_2_button": "JETZT SHOPPEN",
         "promo1_position": 10,
+        "promo1_large": true,
         "promo1_bg": "#162040",
         "promo2_position": 22,
+        "promo2_large": true,
         "promo2_bg": "#162040",
         "padding_top": 0,
-        "padding_bottom": 5
+        "padding_bottom": 5,
+        "text_download_titel": "Processing images…"
       }
     },
     "testimonials": {
@@ -120,11 +136,6 @@
         "padding_bottom": 4,
         "show_rating": true
       }
-    },
-    "collection_hero_8TRwPe": {
-      "type": "collection_hero",
-      "name": "Collection Hero",
-      "settings": {}
     }
   },
   "layout": "theme",
