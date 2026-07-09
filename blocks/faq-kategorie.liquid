@@ -1,60 +1,19 @@
 <div li-block="FAQ Kategorie" class="faq_category" {{ block.shopify_attributes }}>
-  <h3 class="heading-style-h4 faq_category-title" id="faq-{{ block.id }}">
-    {{ block.settings.text_kategorie_titel }}
-  </h3>
-
-  {% comment %} --- VARIANTE A: Ein FAQ-Set (Metaobjekt) ist ausgewählt --- {% endcomment %}
-  {% if block.settings.faq_set != blank %}
-    <div class="faq_component">
-      {% for faq in block.settings.faq_set.which_faqs.value %}
-        <div x-data="{open: false}" class="faq_item background-color-alternate">
-          <div tabindex="0" role="button" x-on:click="open=!open" x-bind:aria-expanded="open?'true':'false'" class="faq_header">
-            <div class="text-size-medium text-weight-medium">{{ faq.question }}</div>
-            <div class="faq_icon-outer">
-              <div class="faq_icon-line"></div>
-              <div x-bind:class="open?'is-open':''" class="faq_icon-line is-rotating"></div>
-            </div>
-          </div>
-          <div x-bind:class="open?'is-open':''" class="faq_body">
-            <div class="faq_body-content">
-              <div class="text-size-regular">
-                {% comment %} Nutzt das Feld direkt, falls metafield_tag es blockiert hat {% endcomment %}
-                {{ faq.faq_answer | metafield_tag }} 
-              </div>
-            </div>
-          </div>
-        </div>
-      {% endfor %}
-    </div>
-  {% endif %}
-
-  {% comment %} --- VARIANTE B: Einzelne FAQs wurden ausgewählt --- {% endcomment %}
-  {% if block.settings.faq_set == blank and block.settings.faq_entries != blank %}
-    <div class="faq_component">
-      {% for faq in block.settings.faq_entries %}
-        <div x-data="{open: false}" class="faq_item background-color-alternate">
-          <div tabindex="0" role="button" x-on:click="open=!open" x-bind:aria-expanded="open?'true':'false'" class="faq_header">
-            <div class="text-size-medium text-weight-medium">{{ faq.question }}</div>
-            <div class="faq_icon-outer">
-              <div class="faq_icon-line"></div>
-              <div x-bind:class="open?'is-open':''" class="faq_icon-line is-rotating"></div>
-            </div>
-          </div>
-          <div x-bind:class="open?'is-open':''" class="faq_body">
-            <div class="faq_body-content">
-              <div class="text-size-regular">
-                {{ faq.faq_answer | metafield_tag }}
-              </div>
-            </div>
-          </div>
-        </div>
-      {% endfor %}
-    </div>
-  {% endif %}
-</div>
-
-{% schema %}
-{
+                    <h3 class="heading-style-h4 faq_category-title" id="faq-{{ block.id }}">
+{{ block.settings.text_kategorie_titel }}
+</h3>
+                    {% if block.settings.faq_set != blank %}    <div li-if="block.settings.faq_set != blank">
+    <div class="faq_component" li-for:inside="faq in block.settings.faq_set.which_faqs.value">
+        {% for faq in block.settings.faq_set.which_faqs.value %}                            <div x-data="{open: false}" class="faq_item background-color-alternate"><div tabindex="0" role="button" x-on:click="open=!open" x-bind:aria-expanded="open?'true':'false'" class="faq_header"><div li-object="faq.question" class="text-size-medium text-weight-medium">{{ faq.question }}</div><div class="faq_icon-outer"><div class="faq_icon-line"></div><div x-bind:class="open?'is-open':''" class="faq_icon-line is-rotating"></div></div></div><div x-bind:class="open?'is-open':''" class="faq_body"><div class="faq_body-content"><div li-object="faq.faq_answer | metafield_tag" class="text-size-regular">{{ faq.faq_answer | metafield_tag }}</div></div></div></div>
+                    {% endfor %}    </div>    </div>
+{% endif %}
+                    {% if block.settings.faq_set == blank %}    <div li-if="block.settings.faq_set == blank">
+    <div class="faq_component" li-for:inside="faq in block.settings.faq_entries">
+        {% for faq in block.settings.faq_entries %}                            <div x-data="{open: false}" class="faq_item background-color-alternate"><div tabindex="0" role="button" x-on:click="open=!open" x-bind:aria-expanded="open?'true':'false'" class="faq_header"><div li-object="faq.question" class="text-size-medium text-weight-medium">{{ faq.question }}</div><div class="faq_icon-outer"><div class="faq_icon-line"></div><div x-bind:class="open?'is-open':''" class="faq_icon-line is-rotating"></div></div></div><div x-bind:class="open?'is-open':''" class="faq_body"><div class="faq_body-content"><div li-object="faq.faq_answer | metafield_tag" class="text-size-regular">{{ faq.faq_answer | metafield_tag }}</div></div></div></div>
+                    {% endfor %}    </div>    </div>
+{% endif %}
+                    
+                </div> {% schema %} {
     "name": "FAQ Kategorie",
     "settings": [
         {
@@ -85,8 +44,8 @@
     "presets": [
         {
             "name": "FAQ Kategorie",
-            "settings": {}
+            "blocks": []
         }
-    ]
-}
-{% endschema %}
+    ],
+    "tag": null
+} {% endschema %}

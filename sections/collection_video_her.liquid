@@ -1,0 +1,74 @@
+<div class="collection-video-hero_media" style="background-color: {{ section.settings.bg_color }};">{% if section.settings.video_upload != blank %}    <div class="li-guard" li-if="section.settings.video_upload != blank">
+    <div li-object="section.settings.video_upload | video_tag: loop: true, muted: true, autoplay: true, image_size: '1600x'" class="collection-video-hero_video-wrap">{{ section.settings.video_upload | video_tag: loop: true, muted: true, autoplay: true, image_size: '1600x' }}</div><div class="collection-video-hero_overlay"></div><button type="button" aria-label="Play video" x-on:click="videoOpen=true" class="collection-video-hero_play">{% render 'icon_play' %}</button>    </div>
+{% endif %}</div><div class="padding-global" style="padding-top: {{ section.settings.padding_top }}rem; padding-bottom: {{ section.settings.padding_bottom }}rem;"><div class="container-large"><div class="collection-video-hero_content"><h1 li-object="collection.metafields.custom.collection_name | default: collection.title" class="collection-video-hero_title heading-style-h2">{{ collection.metafields.custom.collection_name | default: collection.title }}</h1>{% if section.settings.textarea_text != blank %}    <div class="li-guard" li-if="section.settings.textarea_text != blank">
+    <p class="collection-video-hero_text"> {{ section.settings.textarea_text }} </p>    </div>
+{% endif %}</div></div></div>{% if section.settings.video_upload != blank %}    <div class="li-guard" li-if="section.settings.video_upload != blank">
+    <div x-cloak="" x-show="videoOpen" class="collection-video-hero_lightbox" x-on:click.self="videoOpen=false" x-on:keydown.escape.window="videoOpen=false"><button type="button" aria-label="Close video" x-on:click="videoOpen=false" class="collection-video-hero_lightbox-close">{% render 'icon_close' %}</button><div li-object="section.settings.video_upload | video_tag: controls: true, image_size: '1600x'" class="collection-video-hero_lightbox-video">{{ section.settings.video_upload | video_tag: controls: true, image_size: '1600x' }}</div></div>    </div>
+{% endif %} {% schema %} {
+    "tag": "section",
+    "name": "Collection Video Her",
+    "class": "section_collection-video-hero",
+    "settings": [
+        {
+            "id": "textarea_text",
+            "type": "textarea",
+            "label": "Text",
+            "default": "Refined design. Recycled modern materials."
+        },
+        {
+            "type": "header",
+            "content": "Video"
+        },
+        {
+            "type": "video",
+            "id": "video_upload",
+            "label": "Video"
+        },
+        {
+            "type": "header",
+            "content": "Abst\u00e4nde"
+        },
+        {
+            "type": "range",
+            "id": "padding_top",
+            "min": 0,
+            "max": 12,
+            "step": 0.5,
+            "unit": "rem",
+            "label": "Abstand oben (Text)",
+            "default": 2.5
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom",
+            "min": 0,
+            "max": 12,
+            "step": 0.5,
+            "unit": "rem",
+            "label": "Abstand unten (Text)",
+            "default": 2.5
+        },
+        {
+            "type": "header",
+            "content": "Farben"
+        },
+        {
+            "type": "color",
+            "id": "bg_color",
+            "label": "Hintergrundfarbe (Fallback ohne Video)",
+            "default": "#162040"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Collection Video Her",
+            "category": "Hero",
+            "blocks": []
+        }
+    ],
+    "enabled_on": {
+        "templates": [
+            "collection"
+        ]
+    }
+} {% endschema %}

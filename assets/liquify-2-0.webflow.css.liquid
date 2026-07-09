@@ -4115,7 +4115,7 @@ figcaption {
   .product-reviews_summary {
     position: static;
   }
-  .product-header_gallery {
+  .product-header_gallery.product-header_gallery {
     position: static;
     top: auto;
     height: auto;
@@ -9660,47 +9660,6 @@ button.li-lang_dd-link {
   max-width: 48.75rem;
   margin: 0 auto;
 }
-.product-faq_items {
-  display: flex;
-  flex-direction: column;
-}
-.product-faq_item {
-  border-bottom: 1px solid #e0e0e0;
-}
-.product-faq_question {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  text-align: left;
-  padding: 1.25rem 0;
-  gap: 1rem;
-  cursor: pointer;
-}
-.product-faq_question-text {
-  font-size: 1rem;
-  font-weight: 500;
-  font-family: "Futura PT", sans-serif;
-  line-height: 1.4;
-}
-.product-faq_icon {
-  flex-shrink: 0;
-  width: 1.25rem;
-  height: 1.25rem;
-  transition: transform 0.25s ease;
-}
-.product-faq_icon.is-open {
-  transform: rotate(180deg);
-}
-.product-faq_answer {
-  padding-bottom: 1.25rem;
-}
-.product-faq_answer-text {
-  font-size: 0.9375rem;
-  color: #444444;
-  line-height: 1.7;
-  margin: 0;
-}
 
 /* =============================================================
    DICOTA PDP — Add to Your Kit
@@ -9824,6 +9783,8 @@ button.li-lang_dd-link {
   display: block;
   flex: 1 1 auto;
   min-width: 0;
+  position: sticky;
+  top: 4.5rem;
 }
 
 /* ── Gallery ─────────────────────────────────────────────── */
@@ -10767,40 +10728,55 @@ button.li-lang_dd-link {
 }
 
 .coll_promo-card_inner {
-  display: flex;
   height: 100%;
   min-height: 28.6875rem;
   position: relative;
   overflow: hidden;
 }
 .coll_promo-card.is-normal .coll_promo-card_inner {
-  flex-direction: column-reverse;
-  min-height: 0;
+  min-height: 18rem;
 }
 .coll_promo-card.is-normal .coll_promo-card_content {
-  flex: 0 0 auto;
-  max-width: 100%;
   padding: 1.25rem;
   gap: 0.5rem;
-}
-.coll_promo-card.is-normal .coll_promo-card_media {
-  flex: 1 1 auto;
-  min-height: 10rem;
 }
 .coll_promo-card.is-normal .coll_promo-card_title {
   font-size: 1.125rem;
 }
 
+.coll_promo-card_media {
+  position: absolute;
+  inset: 0;
+}
+
+.coll_promo-card_image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.coll_promo-card_overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
 .coll_promo-card_content {
-  position: relative;
+  position: absolute;
   z-index: 2;
+  left: 0;
+  bottom: 0;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   justify-content: flex-end;
   gap: 0.875rem;
   padding: 2.5rem;
-  flex: 0 0 50%;
-  max-width: 50%;
+  max-width: 26rem;
 }
 
 .coll_promo-card_title {
@@ -10835,21 +10811,6 @@ button.li-lang_dd-link {
 
 .coll_promo-card_cta:hover {
   background-color: #e8e8e8;
-}
-
-.coll_promo-card_media {
-  flex: 1 1 auto;
-  position: relative;
-  overflow: hidden;
-}
-
-.coll_promo-card_image {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
 }
 
 /* Empty state */
@@ -17254,5 +17215,149 @@ img.product-header_gallery-image {
 @media screen and (max-width: 767px) {
   .why-dicota_card-heading {
     font-size: 1.5rem;
+  }
+}
+
+/* =============================================================
+   DICOTA — Video (Section: Video)
+   ============================================================= */
+.section_video {
+  width: 100%;
+}
+.video_headline {
+  text-align: left;
+  margin: 0 0 1.5rem;
+}
+.video_player {
+  width: 100%;
+  border-radius: .25rem;
+  overflow: hidden;
+  background: #000;
+}
+.video_player video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* =============================================================
+   DICOTA — Collection Video Hero (Figma 5404-5099)
+   ============================================================= */
+.section_collection-video-hero {
+  width: 100%;
+  position: relative;
+}
+.collection-video-hero_media {
+  position: relative;
+  width: 100%;
+  min-height: 30.9375rem;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+}
+.collection-video-hero_video-wrap {
+  position: absolute;
+  inset: 0;
+}
+.collection-video-hero_video-wrap video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.collection-video-hero_overlay {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(59.54deg, rgba(0, 0, 0, .5) 2.327%, rgba(0, 0, 0, 0) 31.065%);
+  pointer-events: none;
+}
+.collection-video-hero_play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 3.25rem;
+  height: 3.25rem;
+  border-radius: 2.5rem;
+  background-color: rgba(255, 255, 255, .1);
+  -webkit-backdrop-filter: blur(14.3px);
+  backdrop-filter: blur(14.3px);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+}
+.collection-video-hero_play svg {
+  width: 1.7729rem;
+  height: 1.7729rem;
+  margin-left: .15rem;
+}
+.section_collection-video-hero > .padding-global {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.collection-video-hero_content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  max-width: 25.2rem;
+  color: #ffffff;
+}
+.collection-video-hero_title {
+  margin: 0;
+}
+.collection-video-hero_text {
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.26;
+}
+.collection-video-hero_lightbox {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1100;
+  background-color: rgba(15, 15, 15, .85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem;
+}
+.collection-video-hero_lightbox-video {
+  width: 100%;
+  max-width: 75rem;
+}
+.collection-video-hero_lightbox-video video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.collection-video-hero_lightbox-close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, .1);
+  border: none;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+@media screen and (max-width: 767px) {
+  .collection-video-hero_media {
+    min-height: 25rem;
+  }
+  .collection-video-hero_content {
+    max-width: 100%;
   }
 }
