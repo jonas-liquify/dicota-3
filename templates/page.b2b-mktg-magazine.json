@@ -153,6 +153,7 @@
             },
             "prasentation_hgYTQ3": {
               "type": "prasentation",
+              "name": "CORE Family",
               "settings": {
                 "text_titel": "Core Family",
                 "text_datei_info": "PDF · 2.1 MB",
@@ -168,10 +169,60 @@
             "prasentation_CRDBRi",
             "prasentation_hgYTQ3"
           ]
+        },
+        "produkt_kategorie_tL9Vid": {
+          "type": "produkt-kategorie",
+          "name": "Screen Filters",
+          "settings": {
+            "text_kategorie_name": "Screen Filters"
+          },
+          "blocks": {
+            "prasentation_9FwQKa": {
+              "type": "prasentation",
+              "name": "Screen Filters",
+              "settings": {
+                "text_titel": "Screen Filters",
+                "text_datei_info": "PDF · 25 MB",
+                "url_de_datei": "",
+                "url_en_datei": "",
+                "url_fr_datei": ""
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "prasentation_9FwQKa"
+          ]
+        },
+        "produkt_kategorie_fFwDeB": {
+          "type": "produkt-kategorie",
+          "name": "Accessories",
+          "settings": {
+            "text_kategorie_name": "Accessories"
+          },
+          "blocks": {
+            "prasentation_mkaFGN": {
+              "type": "prasentation",
+              "name": "Locks",
+              "settings": {
+                "text_titel": "Locks",
+                "text_datei_info": "PDF · 1.3 MB",
+                "url_de_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/PRODUCT_CATALOG_4.0_LOCKS_DE.pdf?v=1783593949",
+                "url_en_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/PRODUCT_CATALOG_4.0_LOCKS_EN.pdf?v=1783593948",
+                "url_fr_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/PRODUCT_CATALOG_4.0_LOCKS_FR.pdf?v=1783593949"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "prasentation_mkaFGN"
+          ]
         }
       },
       "block_order": [
-        "produkt_kategorie_DKq9ND"
+        "produkt_kategorie_DKq9ND",
+        "produkt_kategorie_tL9Vid",
+        "produkt_kategorie_fFwDeB"
       ],
       "name": "B2B Mkt Presentation",
       "settings": {
