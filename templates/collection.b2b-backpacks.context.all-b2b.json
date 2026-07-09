@@ -15,7 +15,8 @@
   "sections": {
     "collection_hero_8TRwPe": {
       "settings": {
-        "text_button_text": ""
+        "text_button_text": "",
+        "padding_bottom": 4
       },
       "blocks": {}
     },
@@ -24,9 +25,33 @@
         "image_produkt_bild": "shopify://shop_images/1_PITw_Seven_c9d12401-382e-44d4-b23b-6923a3d41b7a.jpg",
         "text_produkt_titel": "Engineered to Protect. Built to Last.",
         "textarea_beschreibung": "The SEVEN Backpack is designed for professionals who demand more, it combines decades of expertise with cutting-edge innovation to make mobile working safer, smarter, and more sustainable.",
-        "text_button_text": "Check out"
+        "text_button_text": "Check out",
+        "padding_top": 0,
+        "padding_bottom": 0
       },
       "blocks": {}
+    },
+    "collection_intro": {
+      "settings": {},
+      "blocks": {
+        "kategorie_bild_hiEEbP": {
+          "settings": {
+            "textarea_text": "The right product for low budget but great quality and useful features – for your project tender."
+          }
+        },
+        "kategorie_bild_3YJtex": {
+          "settings": {
+            "image_bild": "shopify://shop_images/compressed-Backpack_Commuter_All.png",
+            "text_titel": "Students & Urban",
+            "textarea_text": "You are looking for a less corporate more colourful back for every day?"
+          }
+        },
+        "kategorie-bild": {
+          "settings": {
+            "text_titel": "Business Professional"
+          }
+        }
+      }
     }
   }
 }
