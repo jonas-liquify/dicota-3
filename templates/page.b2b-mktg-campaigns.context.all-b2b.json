@@ -22,12 +22,12 @@
         "text_suche_label": "Search",
         "text_warenkorb_label": "Cart",
         "text_404_label": "Page not found",
-        "header-642d59c37633bfac8369e2ffe4bb93b8": null,
-        "paragraph-e72d238e4223ea50f700f1535fccd66d": null,
-        "header-b19166a55eb91c1349a9d49e0a3bac3b": null,
+        "header-c0efc143dbe8db80fcb4e7076c30930b": null,
+        "paragraph-55842f26c95e99e9f7b2c8885712f6be": null,
+        "header-ca60f79a8caad7fc69dac4e7f1741538": null,
         "padding_top": 0.5,
         "padding_bottom": 0.5,
-        "header-a38749f65bbba6d92be72b66ce4f1049": null,
+        "header-bf79a5e88ff394b91a96123bd6d959b0": null,
         "bg_color": "#ffffff",
         "text_color": "#0f0f0f"
       },
@@ -41,9 +41,9 @@
       "settings": {
         "text_uberschrift": "TWO Family",
         "textarea_einleitung": "",
-        "header-3921786acd91587248001f6970b2c6ff": null,
-        "paragraph-aa70f92f9abda6e2edfa64fd7dab0732": null,
-        "header-dd7ebaed617b377232369d5042809e13": null,
+        "header-2ab59fe78de4ca317b6ba30997fe706f": null,
+        "paragraph-e34d37800779e2a22fcfd97541b4620c": null,
+        "header-87fc4700946541a832faaab43ba1457e": null,
         "padding_top": 4,
         "padding_bottom": 4
       },
@@ -72,7 +72,7 @@
                 "text_titel": "Transition Sheet for Online",
                 "text_datei_info": "PDF · 814 KB",
                 "url_de_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/TWO_transition_sheet_DE_online.pdf?v=1783606012",
-                "url_en_datei": "",
+                "url_en_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/TWO_transition_sheet_EN_online.pdf?v=1783606012",
                 "url_fr_datei": ""
               }
             }
