@@ -25,7 +25,8 @@
         },
         "b2b_mkt_download_9Ci9mX": {
           "settings": {
-            "text_subheading": "All our current accessory products"
+            "text_subheading": "All our current accessory products",
+            "url_download_link": "https://www.dicota.com/collections/accessories?download=true"
           }
         }
       }
