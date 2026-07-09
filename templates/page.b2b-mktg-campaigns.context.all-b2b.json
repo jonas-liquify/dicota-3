@@ -66,9 +66,10 @@
             },
             "prasentation_Rqw76": {
               "type": "prasentation",
+              "name": "Online",
               "disabled": false,
               "settings": {
-                "text_titel": "Product Presentation PDF",
+                "text_titel": "Transition Sheet for Online",
                 "text_datei_info": "PDF · 25 MB",
                 "url_de_datei": "",
                 "url_en_datei": "",
