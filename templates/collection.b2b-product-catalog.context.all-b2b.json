@@ -44,9 +44,15 @@
         },
         "kategorie_bild_3YJtex": {
           "settings": {
-            "text_titel": "Screen Filters",
             "image_bild": "shopify://shop_images/5_SCT1c_SF_People.png",
+            "text_titel": "Screen Filters",
             "textarea_text": "Protect sensitive data, reduce glare and safeguard your screen. Discover our Screen Filter solutions."
+          }
+        },
+        "kategorie-bild": {
+          "settings": {
+            "text_titel": "ACCESSORIES",
+            "textarea_text": "Stay connected, powered and secure. Discover our smart accessories for a more productive workspace."
           }
         }
       }
