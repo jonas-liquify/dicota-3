@@ -18,7 +18,9 @@
       "blocks": {
         "b2b_mkt_download_NcHJ8B": {
           "settings": {
-            "text_subheading": "All our current cut & sew products (48 folders · 121 MB)"
+            "text_subheading": "All our current cut & sew products",
+            "text_heading": "Bags & Packs",
+            "url_download_link": "https://www.dicota.com/collections/cut-sew?download=true"
           }
         }
       }
