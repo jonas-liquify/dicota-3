@@ -22,12 +22,12 @@
         "text_suche_label": "Search",
         "text_warenkorb_label": "Cart",
         "text_404_label": "Page not found",
-        "header-d21311f8732980534304ae060d7effff": null,
-        "paragraph-fc2010de65cd213e87fd4b420a7b272d": null,
-        "header-0fefcd85bb259eb07f0d4c252263d6cb": null,
+        "header-3a37d95cbc0313f55a6652b16b3ebff8": null,
+        "paragraph-45502ab3f9d5f855a0827e2cba707b6f": null,
+        "header-74a95d0d07dc32d2e154f32556b56d96": null,
         "padding_top": 0.5,
         "padding_bottom": 0.5,
-        "header-8f1d7de0b98d9482b46bf488aefeb33d": null,
+        "header-3e8890c99b77b99fdea7c93daca6c5d6": null,
         "bg_color": "#ffffff",
         "text_color": "#0f0f0f"
       },
@@ -41,9 +41,9 @@
       "settings": {
         "text_uberschrift": "TWO Family",
         "textarea_einleitung": "",
-        "header-ca425d9d1bc93fb2b121100069711489": null,
-        "paragraph-841d4fb8598d6fa6a8fc76cbf1ca784d": null,
-        "header-9338b4d9a5e974d20d273e3fd90d8f0f": null,
+        "header-bc4db2095e0a48944700fdc3fd3f87b5": null,
+        "paragraph-9628b59fe1fb44aae3093dfc644f7c82": null,
+        "header-b6ab9abf4b0e769dc2407498f50378c0": null,
         "padding_top": 4,
         "padding_bottom": 4
       },
@@ -58,7 +58,7 @@
               "disabled": false,
               "settings": {
                 "text_titel": "Transition Sheet for Print",
-                "text_datei_info": "PDF · 25 MB",
+                "text_datei_info": "PDF · 3.9 MB",
                 "url_de_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/TWO_transition_sheet_DE_print.pdf?v=1783606016",
                 "url_en_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/TWO_key_visual_scaled.jpg?v=1783606049",
                 "url_fr_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/TWO_transition_sheet_FR_print.pdf?v=1783606016"
