@@ -36,8 +36,7 @@
       "blocks": {
         "kategorie_bild_hiEEbP": {
           "settings": {
-            "image_bild": "shopify://shop_images/5_SCT1c_BP_EntryLevel.jpg",
-            "textarea_text": "The right product for low budget but great quality and useful features – for your project tender."
+            "textarea_text": "The right product for low budget but great quality and useful features – ideal products for your project tender."
           }
         },
         "kategorie_bild_3YJtex": {
@@ -49,16 +48,10 @@
         },
         "kategorie-bild": {
           "settings": {
-            "text_titel": "Business Professional",
-            "image_bild": "shopify://shop_images/5_SCT1c_BP_BusinessProfessional.jpg"
+            "text_titel": "Business Professional"
           }
         }
-      },
-      "block_order": [
-        "kategorie_bild_hiEEbP",
-        "kategorie_bild_3YJtex",
-        "kategorie-bild"
-      ]
+      }
     },
     "collection_products": {
       "settings": {
@@ -70,45 +63,6 @@
         "promo2_large": true
       },
       "blocks": {}
-    },
-    "hero_slider_wrx48": {
-      "type": "hero_slider",
-      "disabled": false,
-      "settings": {
-        "header-b11a62067405c02a43395f458f7150e8": null,
-        "autoplay": true,
-        "autoplay_delay": 6000,
-        "header-0c2543a3a778000e55c84cc425b9d1e4": null,
-        "min_height": 90,
-        "header-02ebb185de18a6994ae4a913f0a1e44c": null,
-        "text_color": "#ffffff"
-      },
-      "blocks": {
-        "slide_NBXKP": {
-          "type": "slide",
-          "disabled": false,
-          "settings": {
-            "image_hintergrundbild": null,
-            "text_headline_zeile_1": "Weigh Darker™",
-            "text_headline_zeile_2": "Moon Bag Ruffle",
-            "text_subtext": "Refined design. Recycled modern materials.",
-            "url_button_link": "",
-            "text_button_text": "Shop now"
-          }
-        }
-      },
-      "block_order": [
-        "slide_NBXKP"
-      ],
-      "name": "Hero Slider"
     }
-  },
-  "order": [
-    "hero_slider_wrx48",
-    "collection_hero_8TRwPe",
-    "featured_product_qe68Cr",
-    "collection_intro",
-    "collection_products",
-    "testimonials"
-  ]
+  }
 }
