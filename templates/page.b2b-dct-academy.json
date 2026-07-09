@@ -20,9 +20,6 @@
     "b2b_mkt_trainings": {
       "type": "b2b_mkt_trainings",
       "settings": {
-        "url_breadcrumb_parent_link": "",
-        "text_breadcrumb_parent_label": "Marketing",
-        "text_breadcrumb": "DCT Academy",
         "text_heading": "DCT Academy",
         "textarea_subheading": "When you're on the move, there are many situations where you can't keep your laptop on you at all times. Whether it's a trip to the restroom on the train or a quick coffee break in the shared kitchen of a coworking space. Even in just a few minutes, opportunists could strike.",
         "padding_top": 4,
