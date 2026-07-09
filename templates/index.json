@@ -587,6 +587,16 @@
         "padding_top": 5,
         "padding_bottom": 5
       }
+    },
+    "video_6CVi9g": {
+      "type": "video",
+      "name": "Video",
+      "settings": {
+        "text_headline": "Video Headline",
+        "video_upload": "shopify://files/videos/DICOTA_Magazine_4.0_Web_Banner_2048x570.mp4",
+        "padding_top": 5,
+        "padding_bottom": 5
+      }
     }
   },
   "layout": "theme",
@@ -605,6 +615,7 @@
     "loved_by_customers",
     "sustainability_banne",
     "testimonials",
-    "faq_accordion_6xnCFe"
+    "faq_accordion_6xnCFe",
+    "video_6CVi9g"
   ]
 }
