@@ -19,6 +19,34 @@
         "textarea_einleitung": "Download our latest product and marketing campaigns as PDF or PPT — mostly available in German, English and French."
       },
       "blocks": {}
+    },
+    "product_breadcrumb_VCMwB": {
+      "type": "product_breadcrumb",
+      "disabled": false,
+      "settings": {
+        "text_home_label": "Home",
+        "text_kollektionen_label": "Collections",
+        "text_suche_label": "Search",
+        "text_warenkorb_label": "Cart",
+        "text_404_label": "Page not found",
+        "header-891358e57b2db1f73c071fbabba7dd15": null,
+        "paragraph-02fc7c35169eb98407f7cb040048fc92": null,
+        "header-5b46dad23bf45578091432533154980a": null,
+        "padding_top": 0.5,
+        "padding_bottom": 0.5,
+        "header-9f0baa47b46a16f806a2a92009418255": null,
+        "bg_color": "#ffffff",
+        "text_color": "#0f0f0f"
+      },
+      "blocks": {},
+      "block_order": [],
+      "name": "Product Breadcrumb"
     }
-  }
+  },
+  "order": [
+    "b2b_subnav",
+    "product_breadcrumb_VCMwB",
+    "b2b_mkt_presentation_HzWpea",
+    "b2b_mkt_documents"
+  ]
 }
