@@ -17241,67 +17241,38 @@ img.product-header_gallery-image {
 }
 
 /* =============================================================
-   DICOTA — Collection Video Hero (Figma 5404-5099)
+   DICOTA — Collection Image Hero (Figma 5404-5099)
    ============================================================= */
-.section_collection-video-hero {
+.section_collection-image-hero {
   width: 100%;
   position: relative;
 }
-.collection-video-hero_media {
-  position: relative;
-  width: 100%;
-  min-height: 30.9375rem;
-  overflow: hidden;
-  background-size: cover;
-  background-position: center;
-}
-.collection-video-hero_video-wrap {
+.collection-image-hero_media {
   position: absolute;
   inset: 0;
+  overflow: hidden;
+  background-color: #162040;
 }
-.collection-video-hero_video-wrap video {
+.collection-image-hero_image {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.collection-video-hero_overlay {
+.collection-image-hero_overlay {
   position: absolute;
   inset: 0;
   background-image: linear-gradient(59.54deg, rgba(0, 0, 0, .5) 2.327%, rgba(0, 0, 0, 0) 31.065%);
   pointer-events: none;
 }
-.collection-video-hero_play {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 3.25rem;
-  height: 3.25rem;
-  border-radius: 2.5rem;
-  background-color: rgba(255, 255, 255, .1);
-  -webkit-backdrop-filter: blur(14.3px);
-  backdrop-filter: blur(14.3px);
-  border: none;
+.section_collection-image-hero > .padding-global {
+  position: relative;
+  min-height: 30.9375rem;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  padding: 0;
+  align-items: flex-end;
 }
-.collection-video-hero_play svg {
-  width: 1.7729rem;
-  height: 1.7729rem;
-  margin-left: .15rem;
-}
-.section_collection-video-hero > .padding-global {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-.collection-video-hero_content {
+.collection-image-hero_content {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -17309,55 +17280,19 @@ img.product-header_gallery-image {
   max-width: 25.2rem;
   color: #ffffff;
 }
-.collection-video-hero_title {
+.collection-image-hero_title {
   margin: 0;
 }
-.collection-video-hero_text {
+.collection-image-hero_text {
   margin: 0;
   font-size: 1.25rem;
   line-height: 1.26;
 }
-.collection-video-hero_lightbox {
-  position: fixed;
-  inset: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 1100;
-  background-color: rgba(15, 15, 15, .85);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2.5rem;
-}
-.collection-video-hero_lightbox-video {
-  width: 100%;
-  max-width: 75rem;
-}
-.collection-video-hero_lightbox-video video {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-.collection-video-hero_lightbox-close {
-  position: absolute;
-  top: 1.5rem;
-  right: 1.5rem;
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, .1);
-  border: none;
-  color: #ffffff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-}
 @media screen and (max-width: 767px) {
-  .collection-video-hero_media {
+  .section_collection-image-hero > .padding-global {
     min-height: 25rem;
   }
-  .collection-video-hero_content {
+  .collection-image-hero_content {
     max-width: 100%;
   }
 }
