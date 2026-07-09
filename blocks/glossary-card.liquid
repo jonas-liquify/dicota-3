@@ -1,0 +1,34 @@
+<div class="acc-card" li-static-block="Glossary Card"><h2 class="why-dicota_card-heading">
+{{ block.settings.text_glossary_heading }}
+</h2><div li-cf-theme-blocks="" class="why-dicota_glossary">
+{% content_for 'blocks' %}
+</div></div> {% schema %} {
+    "name": "Glossary Card",
+    "blocks": [
+        {
+            "type": "glossary-term"
+        },
+        {
+            "type": "@app"
+        }
+    ],
+    "settings": [
+        {
+            "id": "text_glossary_heading",
+            "type": "text",
+            "label": "Glossary Heading",
+            "default": "Key selling arguments"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Glossary Card",
+            "blocks": [
+                {
+                    "type": "glossary-term"
+                }
+            ]
+        }
+    ],
+    "tag": null
+} {% endschema %}

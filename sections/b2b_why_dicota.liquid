@@ -6,11 +6,7 @@
 {{ section.settings.text_checklist_heading }}
 </h2><div li-cf-theme-blocks="" class="why-dicota_list">
 {% content_for 'blocks' %}
-</div></div><div class="acc-card"><h2 class="why-dicota_card-heading">
-{{ section.settings.text_glossary_heading }}
-</h2><div li-cf-theme-blocks="" class="why-dicota_glossary">
-{% content_for 'blocks' %}
-</div></div></div></div></div></div> {% schema %} {
+</div></div>{% content_for "block", type: "glossary-card", id: "glossary-card" %}</div></div></div></div> {% schema %} {
     "tag": "section",
     "name": "B2B Why Dicota",
     "class": "section_acc-default",
@@ -84,7 +80,14 @@
                     "type": "why-dicota-item"
                 },
                 {
-                    "type": "glossary-term"
+                    "type": "glossary-card",
+                    "static": true,
+                    "id": "glossary-card",
+                    "blocks": [
+                        {
+                            "type": "glossary-term"
+                        }
+                    ]
                 }
             ]
         }
