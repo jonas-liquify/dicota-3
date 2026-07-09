@@ -238,14 +238,40 @@
           "settings": {
             "image_icon": null,
             "text_heading": "DICOTA Product Presentations",
-            "richtext_text": "<p>A short note about where this link leads.</p>",
+            "richtext_text": "",
             "url_button_link": "shopify://pages/b2b-product-presentations",
+            "text_button_text": "more"
+          }
+        },
+        "b2b_quicklink_mTJPQ": {
+          "type": "b2b-quicklink",
+          "name": "B2B Quicklink",
+          "disabled": false,
+          "settings": {
+            "image_icon": null,
+            "text_heading": "Product Images & Contents",
+            "richtext_text": "",
+            "url_button_link": "shopify://pages/b2b-product-images-contents",
+            "text_button_text": "more"
+          }
+        },
+        "b2b_quicklink_CNYQ3": {
+          "type": "b2b-quicklink",
+          "name": "B2B Quicklink",
+          "disabled": false,
+          "settings": {
+            "image_icon": null,
+            "text_heading": "DCT Academy",
+            "richtext_text": "",
+            "url_button_link": "shopify://pages/b2b-dicota-academy",
             "text_button_text": "more"
           }
         }
       },
       "block_order": [
-        "b2b_quicklink_WMN7m"
+        "b2b_quicklink_WMN7m",
+        "b2b_quicklink_mTJPQ",
+        "b2b_quicklink_CNYQ3"
       ],
       "name": "B2B Hub Quicklinks"
     }
