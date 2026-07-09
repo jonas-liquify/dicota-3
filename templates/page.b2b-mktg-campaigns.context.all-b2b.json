@@ -52,9 +52,9 @@
           "name": "B2B Mkt Dokument",
           "disabled": false,
           "settings": {
-            "url_datei_link": "",
-            "text_titel": "Thumbnails",
-            "text_datei_info": "ZIP · 25 MB"
+            "url_datei_link": "https://www.dicota.com/collections/seven?download=true",
+            "text_titel": "Download Product Images",
+            "text_datei_info": "ZIP · 136.4 MB"
           }
         }
       },
