@@ -40,7 +40,9 @@
     "featured_product_qe68Cr": {
       "settings": {
         "image_produkt_bild": "shopify://shop_images/4_CTw_LaptopBag_01.jpg",
-        "text_produkt_titel": "Engineered to Protect. Built to Last."
+        "text_produkt_titel": "Engineered to Protect. Built to Last.",
+        "textarea_beschreibung": "The SEVEN Backpack is designed for professionals who demand more, it combines decades of expertise with cutting-edge innovation to make mobile working safer, smarter, and more sustainable.",
+        "url_button_link": "shopify://collections/seven"
       },
       "blocks": {}
     }
