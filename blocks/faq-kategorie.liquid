@@ -19,7 +19,7 @@
             <div class="faq_body-content">
               <div class="text-size-regular">
                 {% comment %} Nutzt das Feld direkt, falls metafield_tag es blockiert hat {% endcomment %}
-                {{ faq.faq_answer }} 
+                {{ faq.faq_answer | metafield_tag }} 
               </div>
             </div>
           </div>
@@ -43,7 +43,7 @@
           <div x-bind:class="open?'is-open':''" class="faq_body">
             <div class="faq_body-content">
               <div class="text-size-regular">
-                {{ faq.faq_answer }}
+                {{ faq.faq_answer | metafield_tag }}
               </div>
             </div>
           </div>
