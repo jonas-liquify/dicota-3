@@ -143,11 +143,11 @@
               "type": "prasentation",
               "name": "Präsentation",
               "settings": {
-                "text_titel": "Product Presentation PDF",
-                "text_datei_info": "PDF · 25 MB",
-                "url_de_datei": "",
-                "url_en_datei": "",
-                "url_fr_datei": ""
+                "text_titel": "FIVE Family",
+                "text_datei_info": "PDF · 2.7 MB",
+                "url_de_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/PRODUCT_CATALOG_4.0_FIVE_DE.pdf?v=1781682111",
+                "url_en_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/PRODUCT_CATALOG_4.0_SEVEN_EN.pdf?v=1781682120",
+                "url_fr_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/PRODUCT_CATALOG_4.0_FIVE_FR.pdf?v=1781682088"
               },
               "blocks": {}
             },
