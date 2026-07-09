@@ -127,6 +127,18 @@
             "text_kategorie_name": "Laptop Bags & Packs"
           },
           "blocks": {
+            "prasentation_ifF6wz": {
+              "type": "prasentation",
+              "name": "TWO Family",
+              "settings": {
+                "text_titel": "TWO Family",
+                "text_datei_info": "PDF · 1.9 MB",
+                "url_de_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/PRODUCT_CATALOG_4.0_TWO_DE.pdf?v=1783594697",
+                "url_en_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/PRODUCT_CATALOG_4.0_TWO_EN.pdf?v=1783594699",
+                "url_fr_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/PRODUCT_CATALOG_4.0_TWO_FR.pdf?v=1783594698"
+              },
+              "blocks": {}
+            },
             "prasentation_fUmTDn": {
               "type": "prasentation",
               "name": "SEVEN Family",
@@ -165,6 +177,7 @@
             }
           },
           "block_order": [
+            "prasentation_ifF6wz",
             "prasentation_fUmTDn",
             "prasentation_CRDBRi",
             "prasentation_hgYTQ3"
