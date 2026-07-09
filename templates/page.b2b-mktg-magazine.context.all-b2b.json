@@ -38,7 +38,8 @@
     "b2b_mkt_presentation_egKLYK": {
       "settings": {
         "text_uberschrift": "",
-        "textarea_einleitung": ""
+        "textarea_einleitung": "",
+        "padding_top": 0
       },
       "blocks": {
         "produkt_kategorie_gk63Mf": {
@@ -63,6 +64,7 @@
     "video_rHdVN",
     "b2b_mkt_overview",
     "b2b_mkt_presentation_egKLYK",
+    "image_banner_394gED",
     "b2b_mkt_presentation_9ttTMF"
   ]
 }
