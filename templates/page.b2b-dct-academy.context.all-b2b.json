@@ -12,5 +12,22 @@
     "market": "all-b2b"
   },
   "parent": "page.b2b-dct-academy.json",
-  "sections": {}
+  "sections": {
+    "b2b_mkt_train_videos": {
+      "settings": {},
+      "blocks": {
+        "b2b_mkt_video_xREJHd": {
+          "settings": {
+            "url_video_link": "https://cdn.shopify.com/videos/c/o/v/918efd7f54e94f0383763139833ef378.mp4",
+            "textarea_beschreibung": ""
+          }
+        },
+        "b2b_mkt_video_gUFQyn": {
+          "settings": {
+            "url_video_link": "https://cdn.shopify.com/videos/c/o/v/ee26ffe15b0c4aab9e012d1caf116975.mp4"
+          }
+        }
+      }
+    }
+  }
 }
