@@ -37,10 +37,35 @@
     },
     "b2b_mkt_presentation_HzWpea": {
       "settings": {
-        "text_uberschrift": "Marketing Campaigns",
+        "text_uberschrift": "SEVEN FAMILY",
         "textarea_einleitung": "Download our latest product and marketing campaigns as PDF or PPT — <br>mostly available in German, English and French."
       },
-      "blocks": {}
+      "blocks": {
+        "produkt_kategorie_94R3xy": {
+          "blocks": {
+            "prasentation_QhV4U": {
+              "type": "prasentation",
+              "disabled": true,
+              "name": "Präsentation",
+              "settings": {
+                "text_titel": "Product Presentation PDF",
+                "text_datei_info": "PDF · 25 MB",
+                "url_de_datei": "",
+                "url_en_datei": "",
+                "url_fr_datei": ""
+              }
+            }
+          },
+          "block_order": [
+            "prasentation_QhV4U",
+            "prasentation_BH4WbR",
+            "prasentation_LAPDG9"
+          ],
+          "settings": {
+            "text_kategorie_name": "TRANSITION SHEETS"
+          }
+        }
+      }
     },
     "b2b_mkt_documents": {
       "settings": {
@@ -74,12 +99,55 @@
         "b2b_mkt_dokument_DfU3a",
         "b2b_mkt_dokument_4T9m6"
       ]
+    },
+    "b2b_mkt_presentation_ptYHt": {
+      "type": "b2b_mkt_presentation",
+      "disabled": false,
+      "settings": {
+        "text_uberschrift": "Product Presentations",
+        "textarea_einleitung": "Download our product presentations as PDF or PPT — available in German, English and French.",
+        "header-e3d762f558acf3afc51d73830efe3f4a": null,
+        "paragraph-5586540bc85c1ef1cc428f7a570caf83": null,
+        "header-2a543a6475b139f1a24d4eb43b80a2f9": null,
+        "padding_top": 4,
+        "padding_bottom": 4
+      },
+      "blocks": {
+        "produkt_kategorie_bwJKj": {
+          "type": "produkt-kategorie",
+          "disabled": false,
+          "blocks": {
+            "prasentation_Rqw76": {
+              "type": "prasentation",
+              "disabled": false,
+              "settings": {
+                "text_titel": "Product Presentation PDF",
+                "text_datei_info": "PDF · 25 MB",
+                "url_de_datei": "",
+                "url_en_datei": "",
+                "url_fr_datei": ""
+              }
+            }
+          },
+          "block_order": [
+            "prasentation_Rqw76"
+          ],
+          "settings": {
+            "text_kategorie_name": "Category"
+          }
+        }
+      },
+      "block_order": [
+        "produkt_kategorie_bwJKj"
+      ],
+      "name": "B2B Mkt Presentation"
     }
   },
   "order": [
     "b2b_subnav",
     "product_breadcrumb_VCMwB",
     "b2b_mkt_presentation_HzWpea",
-    "b2b_mkt_documents"
+    "b2b_mkt_documents",
+    "b2b_mkt_presentation_ptYHt"
   ]
 }
