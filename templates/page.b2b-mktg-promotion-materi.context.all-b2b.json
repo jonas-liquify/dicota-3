@@ -21,6 +21,17 @@
     "b2b_mkt_giveaways": {
       "settings": {},
       "blocks": {
+        "b2b_bestell_artikel_VGi8F": {
+          "type": "b2b-bestell-artikel",
+          "name": "B2B Bestell-Artikel",
+          "disabled": false,
+          "settings": {
+            "image_bild": "shopify://shop_images/Sportsbag_Reflective.png",
+            "text_bezeichnung": "Sportsbag Reflective",
+            "text_art_nr": "MO071",
+            "text_preis": "€2.71*"
+          }
+        },
         "b2b_bestell_artikel_fmKCC": {
           "type": "b2b-bestell-artikel",
           "name": "B2B Bestell-Artikel",
@@ -56,7 +67,8 @@
         "b2b_bestell_artikel_3f6X4G",
         "b2b_bestell_artikel_fmKCC",
         "b2b_bestell_artikel_jzJNmm",
-        "b2b_bestell_artikel_fdtqdz"
+        "b2b_bestell_artikel_fdtqdz",
+        "b2b_bestell_artikel_VGi8F"
       ]
     }
   }
