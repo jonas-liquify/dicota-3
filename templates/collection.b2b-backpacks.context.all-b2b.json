@@ -48,7 +48,8 @@
         },
         "kategorie-bild": {
           "settings": {
-            "text_titel": "Business Professional"
+            "text_titel": "Business",
+            "textarea_text": "Premium design, smart functionality and reliable protection. Discover our Business Collection."
           }
         }
       }
