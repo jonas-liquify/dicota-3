@@ -18,23 +18,23 @@
           "type": "usp",
           "name": "USP: Free Shipping",
           "settings": {
-            "text_text": "Free shipping over 49 EUR"
+            "text_text": "Free shipping to GER/CH on order over €49"
           },
           "blocks": {}
         },
         "usp_XJyaDj": {
           "type": "usp",
-          "name": "USP",
+          "name": "USP: Returns",
           "settings": {
-            "text_text": "Free shipping over 100 EUR"
+            "text_text": "30-day free returns"
           },
           "blocks": {}
         },
         "usp_Cw4kWR": {
           "type": "usp",
-          "name": "USP",
+          "name": "USP: Warranty",
           "settings": {
-            "text_text": "Free shipping over 100 EUR"
+            "text_text": "Lifetime warranty on bags & packs"
           },
           "blocks": {}
         },
