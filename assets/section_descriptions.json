@@ -69,6 +69,7 @@
   "Collection Intro": "Einleitungstext/-block einer Kollektion.",
   "Collection Intro Cards": "Intro-Karten für Kollektionen.",
   "Collection Products": "Produktraster einer Kollektion inkl. Filter/Sortierung.",
+  "Collection Video Hero": "Alternativer Video-Hero für die Kollektionsseite: Vollbild-Video (Merchant-Upload) mit Play-Button/Lightbox, Titel aus Collection-Metafeld (Fallback: Titel), optionaler Text.",
   "Collections Grid": "Raster aus Kollektions-Kacheln.",
   "Collections Hero": "Hero für die Kollektions-Übersichtsseite.",
   "Contact Form": "Allgemeines Kontaktformular.",
@@ -130,6 +131,7 @@
   "Two-Column Hero": "Zweispaltiger Hero (Text links, Bild rechts).",
   "USP Icon Row": "USP-/Trust-Reihe mit Icons (Versand, Garantie, Retoure …).",
   "Value Tabs": "Tab-Komponente mit umschaltbaren Inhaltspanels.",
+  "Video": "Einfache Video-Sektion: Merchant-Upload über die volle Container-Breite, optionale linksbündige Headline darüber.",
   "We Care Banner": "„We Care\"-Nachhaltigkeitsbanner.",
   "Weitere Storys": "Weitere Story-/Artikel-Empfehlungen.",
   "predictive_search": "Predictive-Search-Dropdown (Vorschläge + Produkte)."

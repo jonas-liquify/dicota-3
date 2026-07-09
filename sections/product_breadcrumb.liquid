@@ -2,12 +2,12 @@
 {{ section.settings.text_home_label }}
 </span></a>{% if template == 'product' %}    <span li-if="template == 'product'">
     <span class="product-breadcrumb_sep">›</span>{% if product.collections.first != blank %}    <span li-if="product.collections.first != blank">
-    <a li-object:href="product.collections.first.url" href="{{ product.collections.first.url }}" class="product-breadcrumb_link"><span li-object="product.collections.first.title">{{ product.collections.first.title }}</span></a><span class="product-breadcrumb_sep">›</span>    </span>
+    <a li-object:href="product.collections.first.url" href="{{ product.collections.first.url }}" class="product-breadcrumb_link"><span li-object="product.collections.first.metafields.custom.collection_name | default: product.collections.first.title">{{ product.collections.first.metafields.custom.collection_name | default: product.collections.first.title }}</span></a><span class="product-breadcrumb_sep">›</span>    </span>
 {% endif %}<span class="product-breadcrumb_current" li-object="product.title">{{ product.title }}</span>    </span>
 {% endif %}{% if template == 'collection' %}    <span li-if="template == 'collection'">
     <span class="product-breadcrumb_sep">›</span><a href="{{ routes.collections_url }}" li-object:href="routes.collections_url" class="product-breadcrumb_link"><span>
 {{ section.settings.text_kollektionen_label }}
-</span></a><span class="product-breadcrumb_sep">›</span><span class="product-breadcrumb_current" li-object="collection.title">{{ collection.title }}</span>    </span>
+</span></a><span class="product-breadcrumb_sep">›</span><span class="product-breadcrumb_current" li-object="collection.metafields.custom.collection_name | default: collection.title">{{ collection.metafields.custom.collection_name | default: collection.title }}</span>    </span>
 {% endif %}{% if template == 'list-collections' %}    <span li-if="template == 'list-collections'">
     <span class="product-breadcrumb_sep">›</span><span class="product-breadcrumb_current"><span>
 {{ section.settings.text_kollektionen_label }}
