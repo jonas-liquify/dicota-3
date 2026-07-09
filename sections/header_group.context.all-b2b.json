@@ -18,6 +18,16 @@
         "menu": "main-menu-reseller"
       },
       "blocks": {}
+    },
+    "announcement_bar_YPJcxP": {
+      "settings": {},
+      "blocks": {
+        "usp_UjjLKy": {
+          "settings": {
+            "image_icon": "shopify://shop_images/Icon_delivery_truck_speed.png"
+          }
+        }
+      }
     }
   }
 }
