@@ -21,6 +21,13 @@
             "image_bild": "shopify://shop_images/5_SCT1c_LB_EntryLevel.jpg",
             "textarea_text": "The right product for low budget but great quality and useful features – ideal products for your project tender."
           }
+        },
+        "kategorie_bild_3YJtex": {
+          "settings": {
+            "image_bild": "shopify://shop_images/5_SCT1c_LB_Student.jpg",
+            "text_titel": "Students & Urban",
+            "textarea_text": "You are looking for a less corporate design but still functional and high quality? Check out our products for every day life."
+          }
         }
       }
     }
