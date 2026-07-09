@@ -13,6 +13,16 @@
   },
   "parent": "collection.b2b-laptop-bags.json",
   "sections": {
+    "featured_product_qe68Cr": {
+      "settings": {
+        "image_produkt_bild": "shopify://shop_images/4_CTw_Filter.jpg",
+        "text_produkt_titel": "Privacy Filters by DICOTA",
+        "textarea_beschreibung": "Protect sensitive information wherever you work. Discover our Privacy Filter solutions.",
+        "url_button_link": "shopify://products/top-traveller-seven-14-16",
+        "text_button_text": "check out"
+      },
+      "blocks": {}
+    },
     "collection_intro": {
       "settings": {},
       "blocks": {
@@ -37,26 +47,39 @@
         }
       }
     },
-    "featured_product_qe68Cr": {
-      "settings": {
-        "image_produkt_bild": "shopify://shop_images/4_CTw_LaptopBag_01.jpg",
-        "text_produkt_titel": "Engineered to Protect. Built to Last.",
-        "textarea_beschreibung": "The SEVEN Top Traveller is designed for professionals who demand more, it combines decades of expertise with cutting-edge innovation to make mobile working safer, smarter, and more sustainable.",
-        "url_button_link": "shopify://products/top-traveller-seven-14-16"
-      },
-      "blocks": {}
-    },
     "collection_products": {
       "settings": {
+        "image_promo_1_bild": "shopify://shop_images/7_GB1c_ProductPromotion_TopTravSeven_9318833a-1c25-4848-8865-d44e681d7715.jpg",
         "text_promo_1_headline": "Engineered to Protect. Built to Last.",
         "textarea_promo_1_text": "The SEVEN Top Traveller is designed for professionals who demand more, it combines decades of expertise with cutting-edge innovation to make mobile working safer, smarter, and more sustainable.",
         "url_promo_1_link": "shopify://products/top-traveller-seven-14-16",
-        "image_promo_1_bild": "shopify://shop_images/7_GB1c_ProductPromotion_TopTravSeven_9318833a-1c25-4848-8865-d44e681d7715.jpg",
         "textarea_promo_2_text": "Protect sensitive information wherever you work. Discover our Privacy Filter solutions.",
-        "promo2_position": 15,
-        "promo1_position": 9
+        "promo1_position": 9,
+        "promo2_position": 15
       },
       "blocks": {}
+    },
+    "collection_image_her_wiCDT": {
+      "type": "collection_image_her",
+      "disabled": false,
+      "settings": {
+        "image_hintergrundbild": "shopify://shop_images/4_CTw_LaptopBag_01_56509e46-e639-42dd-a3cf-5a60110e0791.jpg",
+        "textarea_text": "Refined design. Recycled modern materials.",
+        "header-fa00fa4b8b10601fd6ecd072d1933bee": null,
+        "padding_top": 2.5,
+        "padding_bottom": 2.5
+      },
+      "blocks": {},
+      "block_order": [],
+      "name": "Collection Image Her"
     }
-  }
+  },
+  "order": [
+    "collection_image_her_wiCDT",
+    "collection_hero_8TRwPe",
+    "collection_intro",
+    "collection_products",
+    "testimonials",
+    "featured_product_qe68Cr"
+  ]
 }
