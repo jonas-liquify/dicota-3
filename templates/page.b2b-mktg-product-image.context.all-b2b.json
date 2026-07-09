@@ -18,9 +18,14 @@
       "blocks": {
         "b2b_mkt_download_NcHJ8B": {
           "settings": {
-            "text_subheading": "All our current cut & sew products",
+            "url_download_link": "https://www.dicota.com/collections/cut-sew?download=true",
             "text_heading": "Bags & Packs",
-            "url_download_link": "https://www.dicota.com/collections/cut-sew?download=true"
+            "text_subheading": "All our current cut & sew products"
+          }
+        },
+        "b2b_mkt_download_9Ci9mX": {
+          "settings": {
+            "text_subheading": "All our current accessory products"
           }
         }
       }
