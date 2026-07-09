@@ -22,12 +22,12 @@
         "text_suche_label": "Search",
         "text_warenkorb_label": "Cart",
         "text_404_label": "Page not found",
-        "header-1b00aeaf8a2352b7d7c963061df1b8f2": null,
-        "paragraph-fc53b58d2ec9252942960ea86e94555d": null,
-        "header-4ece3ab05d20d2b9fe0856a4e31f88e1": null,
+        "header-15bfa7129cad2ca1e80cf332ca35452f": null,
+        "paragraph-3e2e7ada8edfa0887228f148e3331851": null,
+        "header-5a560e8959d80bf34985120f2ad2aabb": null,
         "padding_top": 0.5,
         "padding_bottom": 0.5,
-        "header-b074d44f02b8d326c10662500113b32f": null,
+        "header-32fa357009795cb82ce0ae8c460d7365": null,
         "bg_color": "#ffffff",
         "text_color": "#0f0f0f"
       },
@@ -41,9 +41,9 @@
       "settings": {
         "text_uberschrift": "TWO Family",
         "textarea_einleitung": "",
-        "header-398eb7bf187f0ccd53de738e642121b5": null,
-        "paragraph-804aa0bb1645b0faf569f1bbc4175d72": null,
-        "header-2d3f42d9051e5121c3c8e211ba1be0a5": null,
+        "header-3192f8e3418a00351087a6769a93a16e": null,
+        "paragraph-12f44d28780411c2c79c871257a7406d": null,
+        "header-a9b147f08d79fffbbe8227156351c7d1": null,
         "padding_top": 4,
         "padding_bottom": 4
       },
@@ -155,6 +155,32 @@
         "b2b_mkt_dokument_DfU3a",
         "b2b_mkt_dokument_4T9m6"
       ]
+    },
+    "b2b_mkt_documents_Hibiy": {
+      "type": "b2b_mkt_documents",
+      "disabled": false,
+      "settings": {
+        "text_uberschrift": "Documents",
+        "paragraph-59663bb9061fbe9e6ecd903003988da6": null,
+        "header-14a1460870e3fa9528df851a1e68a11d": null,
+        "padding_top": 4,
+        "padding_bottom": 4
+      },
+      "blocks": {
+        "b2b_mkt_dokument_qEQ8t": {
+          "type": "b2b-mkt-dokument",
+          "disabled": false,
+          "settings": {
+            "url_datei_link": "",
+            "text_titel": "Thumbnails",
+            "text_datei_info": "ZIP · 25 MB"
+          }
+        }
+      },
+      "block_order": [
+        "b2b_mkt_dokument_qEQ8t"
+      ],
+      "name": "B2B Mkt Documents"
     }
   },
   "order": [
@@ -162,6 +188,7 @@
     "product_breadcrumb_VCMwB",
     "b2b_mkt_presentation_HzWpea",
     "b2b_mkt_documents",
-    "b2b_mkt_presentation_ptYHt"
+    "b2b_mkt_presentation_ptYHt",
+    "b2b_mkt_documents_Hibiy"
   ]
 }
