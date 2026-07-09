@@ -13,13 +13,6 @@
   },
   "parent": "page.b2b-mktg-campaigns.json",
   "sections": {
-    "b2b_mkt_presentation_HzWpea": {
-      "settings": {
-        "text_uberschrift": "Marketing Campaigns",
-        "textarea_einleitung": "Download our latest product and marketing campaigns as PDF or PPT — mostly available in German, English and French."
-      },
-      "blocks": {}
-    },
     "product_breadcrumb_VCMwB": {
       "type": "product_breadcrumb",
       "disabled": false,
@@ -29,18 +22,25 @@
         "text_suche_label": "Search",
         "text_warenkorb_label": "Cart",
         "text_404_label": "Page not found",
-        "header-891358e57b2db1f73c071fbabba7dd15": null,
-        "paragraph-02fc7c35169eb98407f7cb040048fc92": null,
-        "header-5b46dad23bf45578091432533154980a": null,
+        "header-aaa7838ea0f863b2ce1cce966d7ea11b": null,
+        "paragraph-4ee414af2e6ab386dc6682ad8262d810": null,
+        "header-30b1602b6ce83510d7f2f45ebdbe8971": null,
         "padding_top": 0.5,
         "padding_bottom": 0.5,
-        "header-9f0baa47b46a16f806a2a92009418255": null,
+        "header-fadddf60c49ddd38104f529adae4eeda": null,
         "bg_color": "#ffffff",
         "text_color": "#0f0f0f"
       },
       "blocks": {},
       "block_order": [],
       "name": "Product Breadcrumb"
+    },
+    "b2b_mkt_presentation_HzWpea": {
+      "settings": {
+        "text_uberschrift": "Marketing Campaigns",
+        "textarea_einleitung": "Download our latest product and marketing campaigns as PDF or PPT — mostly available in German, English and French."
+      },
+      "blocks": {}
     },
     "b2b_mkt_documents": {
       "settings": {
