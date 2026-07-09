@@ -13,7 +13,7 @@
   },
   "parent": "page.b2b-data-sheets.json",
   "sections": {
-    "product_breadcrumb_Xkfdd": {
+    "product_breadcrumb_jEqp6": {
       "type": "product_breadcrumb",
       "disabled": false,
       "settings": {
@@ -22,12 +22,12 @@
         "text_suche_label": "Search",
         "text_warenkorb_label": "Cart",
         "text_404_label": "Page not found",
-        "header-b46f09d7e6d3aeea29a3d5b6dd2ea131": null,
-        "paragraph-d3cb22f9db3ff72f29be112ab16f3728": null,
-        "header-b8fdc915f00812395454c68917082245": null,
+        "header-8d5cf0514b7395f1c142d594feea85e6": null,
+        "paragraph-ea4fd12194be70d4b3b7e990224bbf35": null,
+        "header-e8695fd213ae47d493ef6d1bb0ef99b0": null,
         "padding_top": 0.5,
         "padding_bottom": 0.5,
-        "header-be1abb0f4b53cf8d2011983e2d888584": null,
+        "header-31d7968ef4d69f35b98a0fae244bdcff": null,
         "bg_color": "#ffffff",
         "text_color": "#0f0f0f"
       },
@@ -38,7 +38,7 @@
   },
   "order": [
     "b2b_subnav",
-    "product_breadcrumb_Xkfdd",
+    "product_breadcrumb_jEqp6",
     "b2b_produkt_download"
   ]
 }
