@@ -12,5 +12,53 @@
     "market": "all-b2b"
   },
   "parent": "page.b2b-mktg-magazine.json",
-  "sections": {}
+  "sections": {
+    "video_rHdVN": {
+      "type": "video",
+      "disabled": false,
+      "settings": {
+        "text_headline": "DICOTA MAGAZINE",
+        "header-dc29586afc1321df2f4b6dc63bb71257": null,
+        "video_upload": "shopify://files/videos/DICOTA_Magazine_4.0_Web_Banner_2048x570.mp4",
+        "header-00a3fa884bc52324895cb4cca554eab9": null,
+        "padding_top": 5,
+        "padding_bottom": 5
+      },
+      "blocks": {},
+      "block_order": [],
+      "name": "Video"
+    },
+    "b2b_mkt_presentation_egKLYK": {
+      "settings": {
+        "text_uberschrift": "",
+        "textarea_einleitung": ""
+      },
+      "blocks": {
+        "produkt_kategorie_gk63Mf": {
+          "blocks": {
+            "prasentation_myDYPq": {
+              "settings": {
+                "text_titel": "DICOTA Magazine (2026)"
+              }
+            }
+          },
+          "settings": {
+            "text_kategorie_name": "DOWNLOAD"
+          }
+        }
+      }
+    }
+  },
+  "order": [
+    "b2b_subnav",
+    "product_breadcrumb_4fEP6r",
+    "video_rHdVN",
+    "b2b_mkt_overview",
+    "b2b_mkt_campaigns",
+    "b2b_mkt_presentation_egKLYK",
+    "image_banner_394gED",
+    "triple_cards_HEViiP",
+    "b2b_mkt_presentation_9ttTMF",
+    "b2b_tpl_banner_1x_x3qWc4"
+  ]
 }
