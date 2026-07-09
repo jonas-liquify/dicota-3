@@ -356,12 +356,28 @@
         "padding_top": 4,
         "padding_bottom": 4
       }
+    },
+    "product_breadcrumb_4fEP6r": {
+      "type": "product_breadcrumb",
+      "name": "Product Breadcrumb",
+      "settings": {
+        "text_home_label": "Home",
+        "text_kollektionen_label": "Collections",
+        "text_suche_label": "Search",
+        "text_warenkorb_label": "Cart",
+        "text_404_label": "Page not found",
+        "padding_top": 0.5,
+        "padding_bottom": 0.5,
+        "bg_color": "#ffffff",
+        "text_color": "#0f0f0f"
+      }
     }
   },
   "layout": "b2b",
   "wrapper": "main.main-wrapper",
   "order": [
     "b2b_subnav",
+    "product_breadcrumb_4fEP6r",
     "b2b_mkt_overview",
     "b2b_mkt_campaigns",
     "b2b_mkt_presentation_egKLYK",
