@@ -26,6 +26,11 @@
           "settings": {
             "url_video_link": "https://cdn.shopify.com/videos/c/o/v/ee26ffe15b0c4aab9e012d1caf116975.mp4"
           }
+        },
+        "b2b_mkt_video_3": {
+          "settings": {
+            "url_video_link": "https://cdn.shopify.com/videos/c/o/v/601a05d9d6344b4f9ae347c0d2b3c785.mp4"
+          }
         }
       }
     }
