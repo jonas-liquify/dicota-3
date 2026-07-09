@@ -141,7 +141,7 @@
             },
             "prasentation_CRDBRi": {
               "type": "prasentation",
-              "name": "Präsentation",
+              "name": "FIVE Family",
               "settings": {
                 "text_titel": "FIVE Family",
                 "text_datei_info": "PDF · 2.7 MB",
@@ -154,11 +154,11 @@
             "prasentation_hgYTQ3": {
               "type": "prasentation",
               "settings": {
-                "text_titel": "Product Presentation PDF",
-                "text_datei_info": "PDF · 25 MB",
-                "url_de_datei": "",
-                "url_en_datei": "",
-                "url_fr_datei": ""
+                "text_titel": "Core Family",
+                "text_datei_info": "PDF · 2.1 MB",
+                "url_de_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/PRODUCT_CATALOG_4.0_CORE_DE.pdf?v=1783593469",
+                "url_en_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/PRODUCT_CATALOG_4.0_CORE_EN.pdf?v=1783593463",
+                "url_fr_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/PRODUCT_CATALOG_4.0_CORE_FR.pdf?v=1783593475"
               },
               "blocks": {}
             }
