@@ -17,10 +17,10 @@
       "type": "video",
       "disabled": false,
       "settings": {
-        "text_headline": "DICOTA MAGAZINE",
-        "header-dc29586afc1321df2f4b6dc63bb71257": null,
+        "text_headline": "",
+        "header-c77145661bd5de3546370cc48ad9728e": null,
         "video_upload": "shopify://files/videos/DICOTA_Magazine_4.0_Web_Banner_2048x570.mp4",
-        "header-00a3fa884bc52324895cb4cca554eab9": null,
+        "header-3097b27a6640800734549053f3578767": null,
         "padding_top": 5,
         "padding_bottom": 5
       },
@@ -47,18 +47,23 @@
           }
         }
       }
+    },
+    "b2b_mkt_campaigns": {
+      "disabled": false,
+      "settings": {
+        "padding_bottom": 2
+      },
+      "blocks": {}
     }
   },
   "order": [
     "b2b_subnav",
     "product_breadcrumb_4fEP6r",
+    "b2b_mkt_campaigns",
     "video_rHdVN",
     "b2b_mkt_overview",
-    "b2b_mkt_campaigns",
     "b2b_mkt_presentation_egKLYK",
     "image_banner_394gED",
-    "triple_cards_HEViiP",
-    "b2b_mkt_presentation_9ttTMF",
-    "b2b_tpl_banner_1x_x3qWc4"
+    "b2b_mkt_presentation_9ttTMF"
   ]
 }
