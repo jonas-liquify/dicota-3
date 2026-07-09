@@ -22,12 +22,12 @@
         "text_suche_label": "Search",
         "text_warenkorb_label": "Cart",
         "text_404_label": "Page not found",
-        "header-3d665d6add8000dc474d5d4daf580865": null,
-        "paragraph-31da0fe8cff10e052ae9b9dbf1f1f1d3": null,
-        "header-9761692f4310c532b62898caf0ed7e5d": null,
+        "header-c159dfc15fe479ae225fb18b7ab98157": null,
+        "paragraph-14ed91e8c328672b3eebe8fe818fbf31": null,
+        "header-7b2ca305d8a00d9c8e17d1b08b9c16f0": null,
         "padding_top": 0.5,
         "padding_bottom": 0.5,
-        "header-2f7b85747751293780b4bc5bf8e7c809": null,
+        "header-5f2815558badacf13dc79835c8dd2b17": null,
         "bg_color": "#ffffff",
         "text_color": "#0f0f0f"
       },
@@ -41,9 +41,9 @@
       "settings": {
         "text_uberschrift": "TWO Family",
         "textarea_einleitung": "",
-        "header-c8953d7b4834bfbd388fbdb454217cf3": null,
-        "paragraph-eb950645d758368108430c5519b4d5a8": null,
-        "header-14bdf373dbcdcb35780c8fa17dcbe430": null,
+        "header-5b67a8e893ee6dcdaf0436cd3475d39e": null,
+        "paragraph-29a69c5f1493aa46f1761657f1b9607a": null,
+        "header-7098d1c254cd0d035b1cd1fd4a88ace3": null,
         "padding_top": 4,
         "padding_bottom": 4
       },
@@ -52,6 +52,18 @@
           "type": "produkt-kategorie",
           "disabled": false,
           "blocks": {
+            "prasentation_NrNLG": {
+              "type": "prasentation",
+              "name": "Print",
+              "disabled": false,
+              "settings": {
+                "text_titel": "Transition Sheet for Print",
+                "text_datei_info": "PDF · 25 MB",
+                "url_de_datei": "",
+                "url_en_datei": "",
+                "url_fr_datei": ""
+              }
+            },
             "prasentation_Rqw76": {
               "type": "prasentation",
               "disabled": false,
@@ -65,6 +77,7 @@
             }
           },
           "block_order": [
+            "prasentation_NrNLG",
             "prasentation_Rqw76"
           ],
           "settings": {
