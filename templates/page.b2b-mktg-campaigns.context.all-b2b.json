@@ -38,7 +38,7 @@
     "b2b_mkt_presentation_HzWpea": {
       "settings": {
         "text_uberschrift": "Marketing Campaigns",
-        "textarea_einleitung": "Download our latest product and marketing campaigns as PDF or PPT — mostly available in German, English and French."
+        "textarea_einleitung": "Download our latest product and marketing campaigns as PDF or PPT — <br>mostly available in German, English and French."
       },
       "blocks": {}
     },
