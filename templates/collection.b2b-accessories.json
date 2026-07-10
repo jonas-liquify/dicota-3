@@ -9,8 +9,19 @@
  */
 {
   "sections": {
+    "collection_image_her_M9pfGR": {
+      "type": "collection_image_her",
+      "name": "Collection Image Her",
+      "settings": {
+        "image_hintergrundbild": "shopify://shop_images/4_CTw_Accessories_02_a6257014-5805-47ec-a73c-6d29f305d493.jpg",
+        "textarea_text": "Refined design. Recycled modern materials.",
+        "padding_top": 2.5,
+        "padding_bottom": 2.5
+      }
+    },
     "collection_hero_8TRwPe": {
       "type": "collection_hero",
+      "disabled": true,
       "name": "Collection Hero",
       "settings": {
         "url_button_link": "",
@@ -138,26 +149,16 @@
         "padding_bottom": 4,
         "show_rating": true
       }
-    },
-    "collection_image_her_M9pfGR": {
-      "type": "collection_image_her",
-      "name": "Collection Image Her",
-      "settings": {
-        "image_hintergrundbild": "shopify://shop_images/4_CTw_Accessories_02_a6257014-5805-47ec-a73c-6d29f305d493.jpg",
-        "textarea_text": "Refined design. Recycled modern materials.",
-        "padding_top": 2.5,
-        "padding_bottom": 2.5
-      }
     }
   },
   "layout": "theme",
   "wrapper": "main.main-wrapper",
   "order": [
+    "collection_image_her_M9pfGR",
     "collection_hero_8TRwPe",
     "featured_product_qe68Cr",
     "collection_intro",
     "collection_products",
-    "testimonials",
-    "collection_image_her_M9pfGR"
+    "testimonials"
   ]
 }
