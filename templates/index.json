@@ -224,7 +224,7 @@
           "type": "kategorie",
           "name": "Sleeves",
           "settings": {
-            "url_link": "",
+            "url_link": "shopify://collections/d2c-sleeves-all",
             "image_bild": "shopify://shop_images/CT1c_Sleeves.jpg",
             "text_titel": "Sleeves"
           },
