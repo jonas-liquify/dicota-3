@@ -41,6 +41,18 @@
       "disabled": true,
       "settings": {},
       "blocks": {}
+    },
+    "collection_products": {
+      "settings": {
+        "text_promo_2_headline": "Lorem Ipsum",
+        "textarea_promo_2_text": "Sublime",
+        "text_promo_2_button": "Shop now",
+        "promo1_position": 0,
+        "promo2_position": 0,
+        "text_promo_1_headline": "Lorem Ipsum",
+        "textarea_promo_1_text": "Subline"
+      },
+      "blocks": {}
     }
   },
   "order": [
