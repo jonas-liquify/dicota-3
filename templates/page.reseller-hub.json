@@ -115,8 +115,8 @@
           "type": "reseller-vorteil",
           "name": "Reseller Vorteil",
           "settings": {
-            "text_titel": "Marketing & Sales",
-            "textarea_text": "Use the club's tools and resources to present your range at its best — both online and on the sales floor!"
+            "text_titel": "Solutions for your individual business",
+            "textarea_text": "From run-rate business to global device rollouts, DICOTA delivers tailored solutions for modern workplaces, sustainability requirements and enterprise procurement."
           },
           "blocks": {}
         },
@@ -166,7 +166,7 @@
       ],
       "settings": {
         "image_bild": "shopify://shop_images/5_SCT1c_SF_People.png",
-        "text_heading": "DICOTA Reseller Hub. A no-brainer for everyone who wants to enjoy the benefits",
+        "text_heading": "DICOTA Reseller Hub.",
         "url_button_1_link": "",
         "text_button_1_text": "Log in",
         "url_button_2_link": "",
