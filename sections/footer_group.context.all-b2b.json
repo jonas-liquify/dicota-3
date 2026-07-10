@@ -17,9 +17,10 @@
       "settings": {
         "text_promo_1_text": "",
         "text_promo_2_text": "",
-        "text_headline": "",
-        "textarea_subtext": "",
-        "text_button_text": ""
+        "text_headline": "Benefit now",
+        "textarea_subtext": "Sign up for our newsletter and enjoy exclusive offers, early access to new products and many more benefits.",
+        "text_button_text": "",
+        "show_form": true
       },
       "blocks": {}
     }
