@@ -2766,8 +2766,70 @@
           "declined": "تم رفض الدفع",
           "inventory": "العناصر غير متوفرة",
           "fraud": "أمر احتيالي",
-          "customer": "قام العميل بتغيير/إلغاء الطلب"
-        }
+          "customer": "قام العميل بتغيير/إلغاء الطلب",
+          "staff": "خطأ الموظفين",
+          "other": "أخرى"
+        },
+        "cash_on_delivery": "الدفع عند الاستلام (COD)"
+      },
+      "cart": {
+        "not_found": "لم يتم العثور على سلة التسوق",
+        "only_n_items_available": "يمكنك إضافة فقط %{count} %{name} إلى العربة.",
+        "too_many_items_in_cart": "لا يمكنك إضافة المزيد %{name} إلى العربة.",
+        "only_one_added_to_cart": "تمت إضافة عنصر واحد فقط إلى سلة التسوق الخاصة بك بسبب التوفر.",
+        "only_n_added_to_cart": "فقط %{quantity} تمت إضافة العناصر إلى سلة التسوق الخاصة بك بسبب التوفر.",
+        "maximum_available_quantity_reached": "الحد الأقصى لكمية هذا العنصر موجود بالفعل في سلة التسوق الخاصة بك.",
+        "less_than_minimum": "هذا البند لديه الحد الأدنى من %{min}.",
+        "more_than_maximum": "هذا البند لديه الحد الأقصى %{max}.",
+        "not_respect_step": "يمكنك فقط إضافة هذا العنصر بزيادات %{step}.",
+        "all_items_in_cart": "الكل %{count} %{name} موجودة في سلة التسوق الخاصة بك.",
+        "empty_update": "لا يمكن تحديث سلة التسوق الفارغة",
+        "missing_parameters": "لا يوجد معرف صالح أو معلمة سطر",
+        "generic_error": "خطأ في سلة التسوق",
+        "invalid_input": "%{parameter} المعلمة غير صالحة.",
+        "product_not_available": "المنتج غير متوفر",
+        "too_many_line_items_error": "لا يمكن أن تحتوي سلة التسوق الخاصة بك على أكثر من %{max} العناصر.",
+        "link_expired": "انتهت صلاحية الرابط",
+        "link_no_longer_exists": "الرابط لم يعد موجودا.",
+        "stock_problems_html": "واحد أو أكثر من العناصر لم تعد متوفرة. لقد قدمنا <a href='%{link}'>عربة محدثة</a>.",
+        "changed": "تغيرت العربة",
+        "items_changed": "تم تغيير عنصر واحد أو أكثر.",
+        "product_sold_out": "المنتج '%{name}\"تم بيعه بالفعل.",
+        "variant_not_found": "لا يمكن العثور على البديل",
+        "variant_requires_selling_plan": "لا يمكن شراء البديل إلا من خلال خطة بيع.",
+        "selling_plan_not_available_for_company_locations": "الشراء لمرة واحدة فقط متاح لطلبات B2B",
+        "digital_product_not_available_for_company_locations": "لا يمكن إضافة هذا العنصر إلى طلب B2B",
+        "buyer_cannot_purchase_for_company_locations": "لا يمكنك الشراء لهذا الموقع",
+        "selling_plan_not_applicable": "لا يمكن تطبيق خطة البيع على البديل",
+        "shipping_address_not_required": "هذه العربة لا تتطلب الشحن",
+        "shipping_address_invalid": "حدثت مشكلة أثناء حساب أسعار الشحن. استمر في الخروج لاختيار سعر الشحن قبل إكمال طلبك.",
+        "bundle_requires_components": "المنتج المجمع '%{name}'لا يمكن إضافتها إلى سلة التسوق.",
+        "gift_card_with_components_not_supported": "المنتج المجمع '%{name}'لا يمكن إضافتها إلى سلة التسوق.",
+        "gift_card_price_must_be_greater_than_zero": "المنتج المجمع '%{name}'لا يمكن إضافتها إلى سلة التسوق.",
+        "gift_card_recipient_validation_error": "مستلم بطاقة الهدايا المحدد غير صالح",
+        "view_lines_limit_reached": "يجب أن تكون الخطوط أقل من أو تساوي %{limit}",
+        "cart_too_large": "سلة التسوق كبيرة جدًا.",
+        "cart_attributes_error": "تحتوي سمات سلة التسوق على بيانات غير صالحة.",
+        "merchandise_line_transformers": {
+          "run_error": "حدث خطأ في سلة التسوق الخاصة بك."
+        },
+        "merchandise_not_applicable": "لا يمكن شراء العنصر كما تم تكوينه."
+      },
+      "storefront": {
+        "invalid_password": "كلمة المرور غير صحيحة، يرجى المحاولة مرة أخرى."
+      },
+      "tags": {
+        "add_articles": "قم بتضييق نطاق البحث إلى المقالات التي تحتوي أيضًا على علامة %{tag}",
+        "add_products": "تحديد ضيق للمنتجات المطابقة للعلامة %{tag}",
+        "remove_articles": "قم بتوسيع البحث ليشمل المقالات التي لم يتم وضع علامة عليها %{tag}",
+        "remove_products": "إزالة العلامة %{tag}"
+      }
+    },
+    "email_marketing": {
+      "subscribed": {
+        "confirmation": "شكرا لاشتراكك في قائمتنا البريدية.",
+        "disclaimer": "يمكنك إلغاء الاشتراك في أي وقت.",
+        "unsubscribe": "إلغاء الاشتراك"
       }
     }
   }
