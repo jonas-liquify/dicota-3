@@ -1706,7 +1706,73 @@
         "change_button": "التغيير"
       },
       "review": {
-        "title": "مراجعة"
+        "title": "مراجعة",
+        "review_title": "أكمل طلبك",
+        "review_and_confirm_title": "المراجعة والتأكيد",
+        "checkout_as_guest": "تسجيل الخروج كضيف",
+        "account_more_actions": "المزيد من الإجراءات لهذا الحساب",
+        "checkout_a_different_way": "تحقق من طريقة مختلفة",
+        "blocks": {
+          "contact_method_title": "الاتصال",
+          "billing_address_title": "الفواتير",
+          "shipping_address_title": "السفينة الى",
+          "shipping_method_title": "طريقة الشحن",
+          "payment_method_title": "طريقة الدفع",
+          "change_link_label": "التغيير",
+          "change_contact_method_link_label": "تغيير معلومات الاتصال",
+          "change_billing_address_link_label": "تغيير عنوان إرسال الفواتير",
+          "change_company_location_link_label": "تغيير موقع الشركة",
+          "change_shipping_address_link_label": "تغيير عنوان الشحن",
+          "change_shipping_method_link_label": "تغيير طريقة الشحن",
+          "change_payment_method_link_label": "تغيير طريقة الدفع",
+          "pick_up_in_store_shipping_method_html": "الاستلام من المتجر · %{location_name}",
+          "purchase_order_number_title": "رقم أمر الشراء",
+          "change_purchase_order_number_label": "تغيير رقم أمر الشراء",
+          "change_delivery_method_link_label": "تغيير طريقة التسليم",
+          "no_address": "(لا يوجد عنوان)",
+          "no_purchase_order_number": "(لا يوجد رقم أمر الشراء)",
+          "due_after_order_reviewed_html": "مستحق بعد مراجعة الطلب",
+          "review_title_free_order": "قم بمراجعة وإكمال طلبك",
+          "payment_method_saved_company_location": "حفظ البطاقة لهذا الموقع",
+          "company_location": "موقع الشركة",
+          "pickup_items_at": {
+            "one": "بيك اب %{count} البند في",
+            "other": "بيك اب %{count} العناصر في"
+          },
+          "ship_items_to": {
+            "one": "سفينة %{count} البند ل",
+            "other": "سفينة %{count} العناصر ل"
+          }
+        },
+        "block_title": "قم بمراجعة معلوماتك",
+        "item_header": {
+          "change_value": "تغيير القيمة",
+          "section": "القسم",
+          "value": "القيمة"
+        }
+      },
+      "marketing": {
+        "accept_marketing_checkbox_label": "أرسل لي الأخبار والعروض",
+        "post_accept_marketing_checkbox_label": "أنت مشترك لتلقي الأخبار والعروض عبر البريد الإلكتروني",
+        "pending_accept_marketing_checkbox_label": "تحقق من بريدك الإلكتروني لتأكيد اشتراكك في الأخبار والعروض",
+        "accept_sms_checkbox_label": "أرسل لي رسالة نصية تحتوي على الأخبار والعروض",
+        "disclaimer": {
+          "privacy_policy": "سياسة الخصوصية",
+          "terms_of_service": "شروط الخدمة"
+        },
+        "sms": {
+          "disclaimer": {
+            "privacy_policy": "سياسة الخصوصية",
+            "terms_of_service": "شروط الخدمة",
+            "description_html": "من خلال التسجيل عبر الرسائل النصية، فإنك توافق على تلقي رسائل تسويقية آلية متكررة، بما في ذلك تذكيرات سلة التسوق، على رقم الهاتف المقدم. الموافقة ليست شرطا للشراء. قم بالرد بـ STOP لإلغاء الاشتراك. الرد على مساعدة للحصول على المساعدة. يختلف تردد الرسالة. قد يتم تطبيق أسعار الرسائل والبيانات. عرض لدينا %{privacy_policy_link} و %{terms_of_service_link}.",
+            "description_transactional_html": "قد تتلقى رسائل نصية تتعلق بتأكيد الطلب وتحديثات الشحن. قم بالرد بـ STOP لإلغاء الاشتراك. الرد على مساعدة للحصول على المساعدة. يختلف تردد الرسالة. قد يتم تطبيق أسعار الرسائل والبيانات. عرض لدينا %{privacy_policy_modal_link} و %{terms_of_service_modal_link}."
+          },
+          "mobile_phone_number": "رقم الهاتف المحمول",
+          "get_offers_by_text": "الحصول على العروض عن طريق النص"
+        },
+        "unsubscribe": {
+          "title": "لقد قمت بإلغاء الاشتراك"
+        }
       }
     }
   }
