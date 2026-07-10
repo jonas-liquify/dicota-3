@@ -2626,7 +2626,73 @@
       "gift_card_already_applied": "لقد تم بالفعل تطبيق الرمز على الخروج الخاص بك",
       "gift_card_code_invalid": "الرمز غير صالح",
       "gift_card_currency_mismatch": "لا يمكن استخدام بطاقة الهدايا هذه في عملية الشراء هذه. الاتصال %{shop_name} لإعادة إصداره.",
-      "gift_card_depleted": "لا توجد أموال متبقية في بطاقة الهدايا هذه"
+      "gift_card_depleted": "لا توجد أموال متبقية في بطاقة الهدايا هذه",
+      "gift_card_disabled": "تم تعطيل بطاقة الهدايا",
+      "gift_card_expired": "انتهت صلاحية بطاقة الهدايا",
+      "invalid": "غير صالح",
+      "bad_domain": "يحتوي على اسم مجال غير صالح",
+      "taken": "وقد تم اتخاذها بالفعل",
+      "contains_html_tags": "لا يمكن أن تحتوي على علامات HTML",
+      "too_short": "قصير جدًا (الحد الأدنى هو %{count} الشخصيات)",
+      "too_long": "طويل جدًا (الحد الأقصى هو %{count} الشخصيات)",
+      "password_mismatch": "يجب أن تتطابق مع كلمة المرور المقدمة",
+      "contains_spaces": "يبدأ أو ينتهي بمسافات.",
+      "invalid_for_country": "غير صالح ل %{country}",
+      "invalid_for_country_and_province": "غير صالح ل %{province} و %{country}",
+      "invalid_province_in_country": "ليست مقاطعة صالحة في %{country}",
+      "invalid_state_in_country": "ليست حالة صالحة في %{country}",
+      "invalid_region_in_country": "ليست منطقة صالحة في %{country}",
+      "less_than_or_equal_to": "يجب أن يكون أقل من أو يساوي %{count}",
+      "not_supported": "غير معتمد",
+      "full_name_required": "أدخل الاسم الأول واسم العائلة",
+      "invalid_for_card_type": "غير صالح",
+      "invalid_type": "آسف، نحن لا نقبل بطاقات من هذا النوع",
+      "invalid_format": "التنسيق غير صالح",
+      "expired": "انتهت صلاحيتها",
+      "invalid_start_date_or_issue_number_for_debit": "مطلوب تاريخ بدء صالح أو رقم الإصدار",
+      "invalid_expiry_year": "ليست سنة انتهاء صالحة",
+      "reset_password_html": "عنوان البريد الإلكتروني هذا مرتبط بالفعل بحساب. إذا كان هذا الحساب ملكك، فيمكنك ذلك <a href=\"/account/login#recover\">إعادة تعيين كلمة المرور الخاصة بك</a>",
+      "verify_email": "لقد أرسلنا بريدًا إلكترونيًا إلى %{customer_email}، الرجاء النقر فوق الرابط المتضمن للتحقق من عنوان بريدك الإلكتروني.",
+      "product_not_available": "لم يتم نشر المنتج لهذا العميل.",
+      "shop_404": {
+        "title": "إنشاء موقع للتجارة الإلكترونية والبيع عبر الإنترنت! برامج التجارة الإلكترونية من Shopify",
+        "title_unavailable": "المتجر غير متاح",
+        "heros": {
+          "store_will_be_right_back": "سوف يعود هذا المتجر فورًا",
+          "store_unavailable": "هذا المتجر غير متوفر حاليا.",
+          "store_not_exist": "هذا المتجر غير موجود.",
+          "no_storefront": "هذا المتجر ليس لديه موقع على شبكة الانترنت حتى الآن."
+        },
+        "subtitles": {
+          "store_will_be_right_back": "يعمل Shopify على إعادته إلى الإنترنت في أقرب وقت ممكن."
+        },
+        "links": {
+          "refresh_page": "قم بتحديث الصفحة",
+          "explore_other_stores": "اكتشف المتاجر الأخرى",
+          "start_free_trial": "ابدأ نسخة تجريبية مجانية"
+        },
+        "status_card": {
+          "eyebrow": "مساعدة لأصحاب المحلات",
+          "header": "تحقق من حالة Shopify",
+          "caption": "اكتشف ما إذا كان هناك انقطاع يؤثر على أكثر من مجرد هذا المتجر على Shopify.",
+          "link_text": "عرض حالة أنظمة Shopify"
+        },
+        "owner_ctas": {
+          "header": "هل أنت صاحب المتجر؟",
+          "fix_domain": "قم بإنهاء إعداد عنوان الويب الجديد الخاص بك، انتقل إلى %{domain_settings_link}. انقر فوق \"اتصال المجال\" وأدخل: %{domain}.<br>إذا كنت تواجه مشكلة في الدخول إلى متجرك، فجرّب %{forgot_your_store_link} الصفحة.",
+          "fix_domain_link_text": "إعدادات المجال الخاص بك",
+          "forgot_your_store_link_text": "نسيت متجرك",
+          "add_storefront": "يمكنك إعداد موقع الويب الخاص بك عن طريق إضافة قناة المتجر عبر الإنترنت في حسابك %{admin_link}. إذا كنت تواجه مشكلة في الدخول إلى متجرك، فجرّب %{forgot_your_store_link} الصفحة.",
+          "admin_link_text": "admin"
+        },
+        "ctas": {
+          "sell_in_person": {
+            "header": "بيع شخصيا",
+            "caption": "احصل على الميزات التي تحتاجها لتشغيل متجر البيع بالتجزئة الخاص بك سواء كنت تبدأ مشروعك أو تقوم بتوسيع نطاقه.",
+            "link_text": "ابدأ النسخة التجريبية المجانية"
+          }
+        }
+      }
     }
   }
 }
