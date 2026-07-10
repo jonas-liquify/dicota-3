@@ -355,7 +355,79 @@
           "some_products_other": "هذه المنتجات غير متوفرة للتسليم إلى %{location_name}.",
           "all_products_one": "المنتج الموجود في سلة التسوق الخاصة بك غير متاح للتوصيل إلى %{location_name}.",
           "all_products_other": "المنتجات الموجودة في سلة التسوق الخاصة بك غير متاحة للتوصيل إلى %{location_name}."
+        },
+        "missing_country_fallback": "بلدك",
+        "indeterminate_location_fallback": "موقعك",
+        "cart_updated": "تم تحديث سلة التسوق الخاصة بك.",
+        "change_address_only": "قم بتغيير عنوان التسليم للمتابعة.",
+        "change_address_or_remove": "تغيير عنوان التسليم أو %{remove_action}.",
+        "remove_items_action": {
+          "one": "إزالة العنصر غير المتاح",
+          "other": "إزالة العناصر غير المتاحة"
+        },
+        "empty_cart_action": "عربة فارغة والعودة إلى المتجر",
+        "unavailable_line_item": "%{product_name} / %{variant_label}"
+      },
+      "deliverability": {
+        "not_deliverable": {
+          "title": {
+            "one": "لا يوجد توصيل ل %{count} البند",
+            "other": "لا يوجد توصيل ل %{count} العناصر"
+          },
+          "message": {
+            "one": "ستتم إزالة هذا العنصر من سلة التسوق الخاصة بك لأنه لا توجد طرق تسليم متاحة لعنوانك.",
+            "other": "ستتم إزالة هذه العناصر من سلة التسوق الخاصة بك لأنه لا توجد طرق تسليم متاحة لعنوانك."
+          },
+          "label": "لا التسليم"
         }
+      },
+      "order_summary": {
+        "title": "ملخص الطلب",
+        "group_title_label": "جزء من \"%{group_title}\"",
+        "for_add_on": "ل: %{group_title}",
+        "from_shop_heading": "من %{shop_name}",
+        "from_other_stores_heading": "من المتاجر الأخرى",
+        "from_multiple_stores_heading": "من متاجر متعددة",
+        "number_items": {
+          "one": "%{count} البند",
+          "other": "%{count} العناصر"
+        },
+        "view_all_items": {
+          "one": "عرض %{count} البند",
+          "other": "عرض الكل %{count} العناصر"
+        },
+        "more_items_modal": {
+          "search_item": "بحث",
+          "clear_search": "مسح البحث",
+          "empty_results": "لم يتم العثور على أي نتائج ل \"%{searchText}\". قم بالتدقيق الإملائي أو استخدم كلمة أو عبارة مختلفة.",
+          "number_items_shown": "%{shownNumber} من %{totalNumber} العناصر"
+        },
+        "order_name_label": "النظام %{name}",
+        "shopping_cart_label": "عربة التسوق",
+        "discount_title": "خصم",
+        "discount_title_stacking": {
+          "one": "خصم",
+          "other": "خصومات"
+        },
+        "discount_order_stacking": {
+          "one": "خصم الطلب",
+          "other": "تخفيضات النظام"
+        },
+        "discount_label": "رمز الخصم",
+        "discount_not_found": "تعذر العثور على خصم صالح مطابق للكود الذي تم إدخاله",
+        "discount_placeholder": "رمز الخصم",
+        "discount_code_applied": "تم تطبيق رمز الخصم",
+        "discount_code_applied_with_code": "رمز الخصم %{code} تم تطبيقه",
+        "discount_code_removed": "رمز الخصم %{code} تمت إزالته",
+        "discount_code_replaced": "رمز الخصم %{old_code} إزالة و %{code} تم تطبيقه",
+        "discount_code_replaced_multiple": "تمت إزالة رموز الخصم المتعددة و %{code} تم تطبيقه",
+        "discount_code_allocations_mismatch": "الخاص بك <strong style=\"text-transform:uppercase\">%{code}</strong> لقد تغير رمز الخصم. قم بمراجعة سلة التسوق الخاصة بك وحاول مرة أخرى.",
+        "order_discounts_apply_to_local_shop": "تنطبق خصومات الطلب فقط على العناصر من %{shop_name}",
+        "gift_card_applied": "تم تطبيق بطاقة الهدايا",
+        "enter_shipping_address": "أدخل عنوان الشحن",
+        "gift_card_title": "بطاقة هدية",
+        "gift_card_label": "بطاقة هدية",
+        "gift_card_placeholder": "بطاقة هدية"
       }
     }
   }
