@@ -111,7 +111,7 @@
       "type": "featured_products",
       "settings": {
         "text_uberschrift": "New Releases",
-        "url_button_link": "",
+        "url_button_link": "shopify://collections/d2c-new-releases",
         "text_button_text": "Alle New Releases",
         "collection_kollektion": "d2c-new-releases",
         "collection_kollektion_limit": 16,
