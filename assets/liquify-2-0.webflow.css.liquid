@@ -11301,13 +11301,16 @@ button.li-lang_dd-link {
   align-items: start;
 }
 
-/* Promo Card — spans 2 columns (default). Toggle "Promo groß" off → .is-normal, 1 Kachel. */
+/* Promo Card — spans 2 columns (default). Toggle "Promo groß" off → .is-normal, 1 Kachel.
+   align-self: stretch overrides .coll_grid's align-items: start so the promo
+   card always fills the full row height, matching its sibling product cards. */
 .coll_promo-card {
   grid-column: span 2;
   background-color: #162040;
   color: #ffffff;
   overflow: hidden;
   min-height: 28.6875rem;
+  align-self: stretch;
 }
 .coll_promo-card.is-normal {
   grid-column: span 1;
@@ -13158,13 +13161,14 @@ button.li-lang_dd-link {
   color: #0f0f0f;
 }
 
-/* Download Item (bordered download row inside acc-card) */
+/* Download Item (bordered download row inside acc-card) — always white,
+   regardless of which background-color-* utility modifier a section uses. */
 .acc_download-item {
   width: 100%;
-  background-color: #f4f4f4;
+  background-color: #ffffff;
 }
 .acc_download-item.background-color-secondary {
-  background-color: #f4f4f4;
+  background-color: #ffffff;
 }
 .acc_download-banner {
   display: flex;
