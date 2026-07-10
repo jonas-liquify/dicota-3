@@ -754,9 +754,71 @@
             "week": {
               "one": "كل أسبوع",
               "other": "كل %{count} أسابيع"
+            },
+            "month": {
+              "one": "كل شهر",
+              "other": "كل %{count} أشهر"
+            },
+            "year": {
+              "one": "كل عام",
+              "other": "كل %{count} سنوات"
             }
+          },
+          "multiple_subscriptions_shipping_price_label": "%{shipping_price} لكل تسليم",
+          "prepaid_shipping_price_label": "%{shipping_price} لكل تسليم × %{delivery_interval_count}",
+          "initial_order_discounted": "تكلفة الشحن الأولى %{discounted_shipping_cost}، ثم %{frequency_description}",
+          "prepaid_initial_order_discounted": "تكلفة الشحن الأولى %{discounted_shipping_price} %{prepaid_delivery_frequency}",
+          "prepaid_initial_order_discounted_with_per_delivery_price": "تكلفة الشحن الأولى %{discounted_shipping_price} %{prepaid_delivery_frequency} (%{discounted_cost_per_delivery})",
+          "prepaid_initial_order_discounted_with_renewal": "تكلفة الشحن الأولى %{discounted_shipping_price} %{prepaid_delivery_frequency}، ثم %{shipping_price} %{billing_cycle}",
+          "prepaid_initial_order_discounted_with_per_delivery_price_and_renewal": "تكلفة الشحن الأولى %{discounted_shipping_price} %{prepaid_delivery_frequency} (%{discounted_cost_per_delivery})، ثم %{shipping_price} %{billing_cycle}",
+          "shipping_price_included": "متضمنة",
+          "recurring_order_shipping_price": "تليها %{recurring_order_shipping_price}",
+          "first_order_shipping_price_included": "تم تضمين الطلب الأول، يليه %{recurring_order_shipping_price}",
+          "first_order_different_shipping_price": "%{first_order_shipping_price} (%{per_delivery_price} لكل تسليم)، تليها %{recurring_order_shipping_price}",
+          "first_n_order_free": {
+            "one": "الطلب الأول مجاني",
+            "other": "أولا %{count} الطلبات مجانية"
+          },
+          "free_for_first_n_order": {
+            "one": "للطلب الأول",
+            "other": "لأول مرة %{count} أوامر"
           }
-        }
+        },
+        "one_time_purchase_shipping": "الشحن لمرة واحدة",
+        "duties_and_taxes_title": "الرسوم والضرائب",
+        "shipping_information_required_notice": "معلومات الشحن مطلوبة. {{link}}.",
+        "shipping_information_redirect_link": "أدخل المعلومات الخاصة بك هنا",
+        "loading_progressive_rates": "جارٍ البحث عن المزيد من الأسعار...",
+        "no_other_methods_available": "لا توجد طرق أخرى متاحة",
+        "duties_and_taxes_options": {
+          "ddu_title": "الدفع عند التسليم",
+          "ddu_caption": "قد يتم تطبيق رسوم إضافية",
+          "ddp_title": "ادفع الآن",
+          "ddp_caption": "لا توجد رسوم إضافية عند التسليم"
+        },
+        "shipping_method_combinations": {
+          "without_separator": "%{firstMethod}, %{secondMethod}",
+          "with_separator": "%{rest}, %{current},",
+          "combination": "%{rest} و %{current}"
+        },
+        "shipping_used_as_billing_notice": "سيتم استخدام هذا أيضًا كعنوان إرسال الفواتير لهذا الطلب.",
+        "address_update": "تحديث العنوان",
+        "shipping_address_title": "السفينة الى",
+        "shipping_address_rollup_accessibility_label": "الشحن إلى خيارات العنوان",
+        "third_party_address_timeout": "غير قادر على تحميل العناوين. أعد المحاولة أو استخدم عنوانًا مختلفًا.",
+        "third_party_address_error": "حدث خطأ أثناء تحميل اختيار العنوان. أدخل عنوانك يدويا أدناه.",
+        "third_party_payment_timeout": "غير قادر على تحميل طرق الدفع. أعد المحاولة أو استخدم طريقة دفع مختلفة.",
+        "third_party_payment_error": "حدث خطأ أثناء تحميل اختيار الدفع. استخدم طريقة دفع مختلفة.",
+        "add_address": "استخدم عنوانًا مختلفًا",
+        "add_delivery_instructions": "إضافة تعليمات التسليم",
+        "edit": "تحرير",
+        "delete": "حذف",
+        "back": "العودة",
+        "address_more": "المزيد من الإجراءات لهذا العنوان",
+        "address_edit": "تحرير العنوان",
+        "address_delete": "حذف العنوان",
+        "address_confirm": "هل أنت متأكد أنك تريد حذف هذا العنوان من حسابك؟",
+        "address_default": "تعيين كافتراضي"
       }
     }
   }
