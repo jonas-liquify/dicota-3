@@ -234,7 +234,7 @@
           "type": "kategorie",
           "name": "Trolleys",
           "settings": {
-            "url_link": "",
+            "url_link": "shopify://collections/d2c-trolleys",
             "image_bild": "shopify://shop_images/CT1c_Trolley.jpg",
             "text_titel": "Trolleys"
           },
