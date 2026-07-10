@@ -11,7 +11,13 @@
   "sections": {
     "product_finder": {
       "type": "product_finder",
-      "settings": {}
+      "settings": {
+        "text_heading": "Product Finder",
+        "textarea_text": "Answer a few questions and we'll recommend the right DICOTA product for your needs.",
+        "productfinder_iframe": "<iframe name=\"external\" src=\"https://www.upgradebox.eu/v3/?customer=ch-de.shopify.dicota.com&amp;sl=2\" frameborder=\"0\" scrolling=\"no\" width=\"100%\" height=\"2080pix\" iframe=\"\"></iframe>",
+        "padding_top": 5,
+        "padding_bottom": 5
+      }
     }
   },
   "layout": "theme",
