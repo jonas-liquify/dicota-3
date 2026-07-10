@@ -1328,7 +1328,75 @@
       },
       "post_purchase": {
         "page_title": "ما بعد الشراء",
-        "title": "ما بعد الشراء"
+        "title": "ما بعد الشراء",
+        "escape_confirmation": "لقد دفعت ثمن طلبك.",
+        "escape_action": "عرض تأكيد الطلب ›",
+        "components": {
+          "close": "إغلاق",
+          "expand": "عرض المزيد",
+          "processing": "جارٍ المعالجة…",
+          "submit": "إرسال"
+        }
+      },
+      "processing": {
+        "redirecting_page_title": "إعادة التوجيه...",
+        "redirecting_title": "إعادة التوجيه...",
+        "redirecting_notice": "انتظر بينما نقوم بإعادة توجيهك.",
+        "redirecting_to_bank": "إعادة التوجيه إلى {{bank}}",
+        "complete_your_purchase_title": "أكمل عملية الشراء",
+        "continue_to_payment_gateway_notice": "استمر في الدفع لإضافة معلومات الدفع الخاصة بك.",
+        "continue_to_payment_gateway_button_label": "الاستمرار في الدفع",
+        "complete_your_purchase_title_error": "تصحيح معلومات الدفع الخاصة بك",
+        "continue_to_payment_gateway_notice_error": "لا يمكن التحقق من معلومات الدفع الخاصة بك.",
+        "continue_to_payment_gateway_button_label_error": "تحديث معلومات الدفع",
+        "page_title": "أمر المعالجة",
+        "title": "أمر المعالجة",
+        "your_order_has_been_received_title": "شكرا لطلبك",
+        "you_will_receive_confirmation": "نحن نتلقى الكثير من الطلبات في الوقت الحالي. من المفترض أن تتلقى تأكيدًا عبر البريد الإلكتروني أو الرسالة النصية قريبًا. إذا لم تستلمها خلال الساعة التالية، فأخبرنا بذلك.",
+        "you_will_not_be_charged": "لن يتم تحصيل الرسوم منك بعد",
+        "wait": {
+          "short": "طلبك قيد المعالجة.",
+          "medium": {
+            "one": "طلبك قيد المعالجة. وقت الانتظار المقدر هو %{count} دقيقة.",
+            "other": "طلبك قيد المعالجة. وقت الانتظار المقدر هو %{count} دقائق."
+          },
+          "long": "ستتلقى بريدًا إلكترونيًا بمجرد معالجة طلبك. يوجد حاليًا حجم كبير من الطلبات.",
+          "no_auto_refresh_html": "إذا لم تتم إعادة توجيهك تلقائيًا، %{link}.",
+          "refresh_this_page": "تحديث هذه الصفحة"
+        },
+        "remote_shops_payments_processing": "معالجة المدفوعات",
+        "action_required": "الإجراء مطلوب",
+        "modal_notice": "نحن نتصل {{paymentMethod}}",
+        "remote_checkout_count": "%{current} من %{total}"
+      },
+      "payment_challenge_modal": {
+        "instructions": "أكمل عملية الشراء باستخدام {{paymentMethod}} كود",
+        "timer_message": "لديك {{timeLeft}} للدفع",
+        "copy_text": "نسخ {{paymentMethod}} كود",
+        "open_app_text": "مفتوح {{paymentMethod}} التطبيق",
+        "header": "ادفع مع {{paymentMethod}}",
+        "qr_code": {
+          "instructions": "أكمل عملية الشراء باستخدام {{paymentMethod}} كود",
+          "wechat_instructions": "امسح رمز الاستجابة السريعة ضوئيًا باستخدام تطبيق WeChat على هاتفك لإكمال عملية الشراء باليوان الصيني.",
+          "wechat_instructions_mobile": "قم بمسح رمز QR هذا ضوئيًا باستخدام تطبيق WeChat على جهاز آخر لإكمال عملية الشراء باليوان الصيني."
+        },
+        "external": {
+          "instructions": "قم بتأكيد الدفع على تطبيقك لإكمال عملية الشراء هذه"
+        },
+        "close": "أغلق التحدي"
+      },
+      "failed_payment": {
+        "page_title": "لا يمكن معالجة الدفع",
+        "title": "لا يمكن معالجة الدفع",
+        "payment_not_processed_title": "لا يمكن معالجة دفعتك",
+        "payment_not_processed_text": "لم يتم تحصيل أي رسوم منك. العودة إلى سلة التسوق الخاصة بك لإكمال عملية الشراء.",
+        "return_to_cart_button_label": "العودة إلى السلة"
+      },
+      "payment_gateway": {
+        "credit_card_label": "بطاقة الائتمان",
+        "bogus_label": "بوابة الدفع التجريبية",
+        "bank_deposit_label": "الودائع المصرفية",
+        "bank_account_label": "حساب مصرفي"
       }
     }
   }
