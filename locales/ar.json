@@ -3050,6 +3050,76 @@
         "title": "تأكيد هويتك",
         "verify_button": "التالي",
         "verify_button_accessibility_label": "التحقق من بريدك الإلكتروني الحالي"
+      },
+      "verify_new_email_modal": {
+        "title": "التحقق من بريدك الإلكتروني الجديد",
+        "description": "الآن قم بإدخال الرمز المكون من 6 أرقام الذي تم إرساله إلى بريدك الإلكتروني الجديد:",
+        "one_time_password_label": "رمز مكون من 6 أرقام",
+        "email_resend_button": "إعادة إرسال الرمز",
+        "email_resend_button_accessibility_label": "إعادة إرسال رمز التحقق",
+        "verify_button": "تحقق",
+        "verify_button_accessibility_label": "التحقق من كلمة المرور لمرة واحدة",
+        "cancel_button": "إلغاء",
+        "cancel_button_accessibility_label": "إلغاء تحرير الملف الشخصي",
+        "email_resend_button_success_toast_message": "تم إرسال رمز التحقق",
+        "email_resend_button_failure_banner_message": "تعذر إرسال رمز التحقق"
+      },
+      "marketing_preferences": {
+        "email_label": "البريد الإلكتروني",
+        "pending_confirmation": "انقر فوق الرابط الموجود في بريدك الإلكتروني للتأكيد.",
+        "resend_email": "إعادة إرسال البريد الإلكتروني",
+        "resend_email_success": "تم إرسال الرابط",
+        "title": "تفضيلات التسويق",
+        "unsubscribe_confirmation": {
+          "cancel": "إلغاء",
+          "description": "لن تتلقى التسويق عبر البريد الإلكتروني بعد الآن {{shopName}}",
+          "title": "إلغاء الاشتراك من رسائل البريد الإلكتروني؟",
+          "unsubscribe": "إلغاء الاشتراك"
+        },
+        "update_error": {
+          "description": "حدثت مشكلة أثناء تحديث تفضيلاتك التسويقية. حاول تحديث هذه الصفحة أو التحقق من اتصالك بالإنترنت."
+        },
+        "update_success": "تم تحديث تفضيلات التسويق"
+      },
+      "email_update_success_modal": {
+        "title": "التحقق من البريد الإلكتروني",
+        "description": "تم تحديث البريد الإلكتروني بنجاح. إعادة التوجيه لتسجيل الدخول."
+      },
+      "profile_update_confirmation_message": "تم تحديث الملف الشخصي",
+      "email_update_confirmation_message": "تم تحديث البريد الإلكتروني إلى {{email}}",
+      "title": "الملف الشخصي",
+      "people": {
+        "pagination": {
+          "load_more": "عرض المزيد",
+          "load_more_accessibility_label": "أظهر المزيد من الأشخاص",
+          "loading_accessibility_label": "تحميل الناس"
+        }
+      },
+      "add_button": "أضف"
+    },
+    "orders": {
+      "list_layout_accessibility_label": "خيارات التخطيط",
+      "list_title": "أوامر",
+      "list_title_with_pending_orders": "الطلبات:",
+      "list_title_confirmed_orders_accessibility_label": "الطلبات: مؤكدة",
+      "list_title_pending_orders_accessibility_label": "الطلبات: معلقة",
+      "switch_order_type_pending_orders_accessibility_label": "تبديل نوع الأمر، عرض الأوامر المعلقة حاليًا",
+      "switch_order_type_confirmed_orders_accessibility_label": "تبديل نوع الطلب، حاليًا يتم عرض الطلبات المؤكدة",
+      "order_list": {
+        "column_headers": {
+          "order": "النظام",
+          "total": "المجموع",
+          "actions_accessibility_label": "الإجراءات",
+          "products_accessibility_label": "المنتجات"
+        },
+        "order_status_and_message": "{{orderStatus}} - {{message}}",
+        "delivered": "تم التسليم {{date}}",
+        "empty_state_order_source_description": "الطلبات المقدمة فقط من قبل {{email}} سوف تظهر هنا.",
+        "empty_state_redesign_cta": "تسوق الآن",
+        "empty_state_redesign_subtitle": "على استعداد للتسوق؟",
+        "empty_state_redesign_welcome": "مرحبًا",
+        "empty_state_redesign_welcome_with_name": "مرحباً، {{firstName}}",
+        "empty_state_subtitle": "اذهب إلى المتجر لتقديم الطلب."
       }
     }
   }
