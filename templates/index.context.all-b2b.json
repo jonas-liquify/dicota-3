@@ -126,6 +126,18 @@
       "disabled": false,
       "settings": {},
       "blocks": {
+        "reseller_promo_banner_iCb9i": {
+          "type": "reseller-promo-banner",
+          "name": "Reseller Promo Banner",
+          "disabled": false,
+          "settings": {
+            "image_bild": null,
+            "text_titel": "SEVEN",
+            "textarea_text": "Our premium collection for demanding business professionals, combining sophisticated design, premium protection and smart functionality.",
+            "url_button_link": "",
+            "text_button_text": "Invite a friend"
+          }
+        },
         "reseller_promo_banner_mU9PB": {
           "type": "reseller-promo-banner",
           "name": "Reseller Promo Banner",
@@ -140,6 +152,7 @@
         }
       },
       "block_order": [
+        "reseller_promo_banner_iCb9i",
         "reseller_promo_banner_mU9PB"
       ],
       "name": "Reseller Promo Grid"
