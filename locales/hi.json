@@ -1,0 +1,28 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "general": {
+    "back": "वापस",
+    "clear": "स्पष्ट",
+    "filters": "फिल्टर",
+    "form": {
+      "error": "उफ़! सबमिट करते समय कुछ गलत हो गया.",
+      "success": "धन्यवाद! आपकी बिनती को प्राप्त किया गया है।"
+    },
+    "home": "घर",
+    "next": "अगला",
+    "previous": "पिछला",
+    "product": "उत्पाद",
+    "search": "खोजें",
+    "sort_by": "क्रमबद्ध करें",
+    "submit": "सबमिट करें",
+    "trending": "ट्रेंडिंग"
+  }
+}
