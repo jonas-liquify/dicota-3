@@ -255,6 +255,7 @@
           "name": "Accessories",
           "settings": {
             "url_link": "",
+            "image_bild": "shopify://shop_images/5_SCT1c_Charger.jpg",
             "text_titel": "Accessories"
           },
           "blocks": {}
