@@ -71,9 +71,9 @@
           "type": "kategorie-bild",
           "name": "Kategorie-Bild",
           "settings": {
-            "url_link": "",
+            "url_link": "shopify://collections/d2c-laptop-bags-entry-level",
             "image_bild": "shopify://shop_images/5_SCT1c_BP_EntryLevel.jpg",
-            "text_titel": "ENTRY LEVEL OR EVERYDAY",
+            "text_titel": "VALUE FOR PRICE & EVERYDAY",
             "textarea_text": "Everything you need at an exceptional price – reliable protection, practical organization and everyday comfort."
           },
           "blocks": {}
