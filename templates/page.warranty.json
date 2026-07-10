@@ -11,11 +11,6 @@
   "sections": {
     "feature_card_grid": {
       "type": "feature_card_grid",
-      "settings": {
-        "text_subline": "Warranty",
-        "text_heading": "Warranty — Disclaimer",
-        "textarea_text": "We cover what matters. Here's exactly what our warranty includes — and what it doesn't."
-      },
       "blocks": {
         "feature-cards": {
           "type": "feature-cards",
@@ -26,27 +21,104 @@
               "type": "feature-karte",
               "settings": {
                 "text_heading": "What's covered?",
-                "textarea_text": "We cover what matters.<br>Your warranty includes protection against:<br><br>• Material defects<br>• Faulty zippers<br>• Stitching issues<br>• Structural faults<br><br>And it applies to a wide range of DICOTA products. The Lifetime Warranty covers the following product families:<br><br>ACTIVE, BASE, CODE, CORE, ECO, ECO BASE, ECO GO, ECO MOTION, ECO MOVE, ECO PRO, ECO SCALE, ECO SELECT, EDGE, E-SPORTS, FIVE, FLOW, GO, MOS, MOVE, PERFECT SKIN, PRO, SCALE, SELECT, SMART SKIN, SPIN, STYLE, TABLET, UNIVERSAL, URBAN"
-              }
+                "textarea_text": "We cover what matters.<br>Your warranty includes protection against:<br><br>• Material defects<br>• Faulty zippers<br>• Stitching issues<br>• Structural faults<br><br>And it applies to a wide range of DICOTA products. The Lifetime Warranty covers the following product families:<br><br>ACTIVE, BASE, CODE, CORE, ECO, ECO BASE, ECO GO, ECO MOTION, ECO MOVE, ECO PRO, ECO SCALE, ECO SELECT, EDGE, E-SPORTS, FIVE, FLOW, GO, MOS, MOVE, PERFECT SKIN, PRO, SCALE, SELECT, SMART SKIN, SPIN, STYLE, TABLET, UNIVERSAL, URBAN",
+                "url_button_link": "",
+                "text_button_text": "Learn more"
+              },
+              "blocks": {}
             },
             "c2": {
               "type": "feature-karte",
               "settings": {
                 "text_heading": "What's not covered?",
-                "textarea_text": "Even the best companions have their limits.<br>This warranty does not include:<br><br>• Normal wear and tear<br>• Misuse or improper handling<br>• Water damage<br>• Natural disasters"
-              }
+                "textarea_text": "Even the best companions have their limits.<br>This warranty does not include:<br><br>• Normal wear and tear<br>• Misuse or improper handling<br>• Water damage<br>• Natural disasters",
+                "url_button_link": "",
+                "text_button_text": "Learn more"
+              },
+              "blocks": {}
             }
           },
           "block_order": [
             "c1",
             "c2"
           ]
+        },
+        "stats-row": {
+          "type": "stats-row",
+          "static": true,
+          "settings": {},
+          "blocks": {}
         }
+      },
+      "settings": {
+        "text_subline": "Warranty",
+        "text_heading": "Warranty — Disclaimer",
+        "textarea_text": "We cover what matters. Here's exactly what our warranty includes — and what it doesn't.",
+        "url_button_link": "",
+        "text_button_text": "Our values",
+        "padding_top": 5,
+        "padding_bottom": 5
+      }
+    },
+    "contact_form_kRcaYF": {
+      "type": "contact_form",
+      "blocks": {
+        "forms_inline_pn6fxJ": {
+          "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
+          "settings": {
+            "form_id": "547627",
+            "text_color": "#202020",
+            "button_background_color": "#202020",
+            "button_label_color": "#ffffff",
+            "links_color": "#1878b9",
+            "errors_color": "#e02229",
+            "text_alignment": "center",
+            "form_alignment": "flex-start",
+            "padding_top": 0,
+            "padding_bottom": 24,
+            "padding_right": 0,
+            "padding_left": 0
+          }
+        },
+        "contact-list": {
+          "type": "contact-list",
+          "static": true,
+          "settings": {},
+          "blocks": {
+            "contact_location_AxGpwf": {
+              "type": "contact-location",
+              "name": "Contact Location",
+              "settings": {
+                "text_location": "Switzerland",
+                "richtext_address": "<p><strong>Europa</strong><br/>DICOTA GmbH<br/>Fabrikstrasse 18<br/>73277 Owen</p><p>GERMANY<br/>Telephone: +49 7021 72508 0</p><p><br/><strong>MEA & India</strong><br/>DICOTA MEA<br/>30-1-1630<br/>1st Floor, DMCC Business Centre<br/>PO Box: 30562 JLT, Dubai </p><p>UAE<br/>Telephone: +97 14 3214 210</p><p>India<br/>Telephone: +91 99 005 23128<br/><br/><strong>Asia Pacific</strong><br/>DICOTA APAC Limited<br/>Unit 1301, 13/F Arion Commercial Centre<br/>2-12 Queen’s Road West, Sheung Wan<br/>HONG KONG<br/>Telephone: +852 3543 1659<br/><br/><strong>Asia Pacific</strong><br/>DICOTA APAC Limited<br/>Unit 1301, 13/F Arion Commercial Centre<br/>2-12 Queen’s Road West, Sheung Wan<br/>HONG KONG<br/>Telephone: +852 3543 1659</p>"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "contact_location_AxGpwf"
+          ]
+        }
+      },
+      "block_order": [
+        "forms_inline_pn6fxJ"
+      ],
+      "settings": {
+        "text_heading": "Warranty",
+        "text_paragraph": "",
+        "image_contact_photo": "shopify://shop_images/3_Mallorca-447x302.jpg",
+        "text_contact_name": "DICOTA - always there for you!",
+        "text_contact_role": "",
+        "text_address_subline": "Address",
+        "richtext_address_text": "<p>DICOTA SCHWEIZ AG<br/>Churerstrasse 20<br/>8808 Pfäffikon SZ<br/>SWITZERLAND</p>",
+        "text_contact_subline": "Contact",
+        "text_opening_hours": ""
       }
     }
   },
   "order": [
-    "feature_card_grid"
+    "feature_card_grid",
+    "contact_form_kRcaYF"
   ],
   "layout": "theme",
   "wrapper": "main.main-wrapper"
