@@ -4201,7 +4201,77 @@
         "pre_orders_title": "القادمة",
         "pre_orders_list_accessibility_label": "قائمة منتجات الطلبات المعلقة",
         "resources_list_accessibility_label": "منتجات الاشتراك ومنتجات الطلبات المعلقة باستخدام طريقة الدفع هذه",
-        "resources_card_scroll": "قم بالتمرير لمزيد من العناصر"
+        "resources_card_scroll": "قم بالتمرير لمزيد من العناصر",
+        "resources_card_show_more": "عرض المزيد",
+        "resources_card_show_less": "عرض أقل",
+        "loading_form_accessibility_message": "جارٍ تحميل نموذج تحديث طريقة الدفع",
+        "loading_current_payment_method": "جارٍ تحميل طريقة الدفع الحالية",
+        "loading_digital_wallets": "جارٍ تحميل خيارات المحفظة الرقمية",
+        "loading_card_fields": "جارٍ تحميل حقول بطاقة الائتمان",
+        "loading_resources": "تحميل الاشتراكات والأوامر القادمة"
+      },
+      "link_expired": {
+        "message": "لقد انتهت صلاحية هذا الرابط لتحديث طريقة الدفع الخاصة بك.",
+        "update_message": "لقد انتهت صلاحية هذا الرابط لتحديث طريقة الدفع الخاصة بك.",
+        "add_message": "لقد انتهت صلاحية هذا الرابط لإضافة طريقة الدفع الخاصة بك.",
+        "return_home_button": "العودة إلى الصفحة الرئيسية"
+      },
+      "update_success": {
+        "title": "تم تحديث طريقة الدفع",
+        "done_button": "مواصلة التسوق"
+      },
+      "add_success": {
+        "title": "تمت إضافة طريقة الدفع",
+        "done_button": "مواصلة التسوق"
+      },
+      "card_fields": {
+        "card_number_label": "رقم البطاقة",
+        "card_number_placeholder": "رقم البطاقة",
+        "name_on_card_label": "الاسم على البطاقة",
+        "name_on_card_placeholder": "الاسم على البطاقة",
+        "card_expiry_label": "تاريخ انتهاء الصلاحية (شهر / سنة)",
+        "card_expiry_placeholder": "تاريخ انتهاء الصلاحية (شهر / سنة)",
+        "card_verification_value_label": "رمز الأمان",
+        "card_verification_value_placeholder": "رمز الأمان",
+        "card_start_label": "تاريخ الإصدار (شهر / سنة)",
+        "card_start_placeholder": "تاريخ الإصدار (شهر / سنة)",
+        "tooltip": {
+          "tooltip_accessibility_label": "مزيد من المعلومات",
+          "card_verification_value_explanation_amex": "رمز الحماية المكون من 4 أرقام الموجود على مقدمة بطاقتك",
+          "card_verification_value_explanation_other": "رمز الحماية المكون من 3 أرقام الموجود على ظهر بطاقتك",
+          "card_verification_value_explanation": "عادةً ما يوجد رمز الأمان المكون من 3 أرقام على ظهر بطاقتك. تحتوي بطاقات أمريكان إكسبريس على رمز مكون من 4 أرقام موجود في الجهة الأمامية.",
+          "card_security_notice": "جميع المعاملات آمنة ومشفرة."
+        },
+        "field_errors": {
+          "credit_card_name_invalid": "أدخل اسمك تمامًا كما هو مكتوب على بطاقتك",
+          "credit_card_number_invalid": "أدخل رقم بطاقة صالح",
+          "credit_card_expiry_invalid": "أدخل تاريخ انتهاء صالح للبطاقة",
+          "credit_card_verification_value_blank": "أدخل رمز CVV أو رمز الأمان الموجود على بطاقتك"
+        },
+        "unavailable": {
+          "text": "الدفعات ببطاقات الائتمان والخصم غير متاحة حاليًا.",
+          "link_text": "قم بتحديث هذه الصفحة",
+          "suffix": "أو حاول مرة أخرى لاحقًا."
+        }
+      },
+      "payment_delete": {
+        "title": "حذف طريقة الدفع",
+        "description_without_replacement": "لن تكون طريقة الدفع هذه متاحة لعمليات الشراء المستقبلية.",
+        "description_with_replacement": "سيؤثر حذف طريقة الدفع هذه على المدفوعات المصرح بها مسبقًا. يمكنك اختياريًا استبدالها بطريقة دفع أخرى لمواصلة تلقي الطلبات القادمة.",
+        "warning_message_with_replacement": {
+          "with_pending_orders_and_subscriptions": "سيؤثر حذف طريقة الدفع هذه على المدفوعات المصرح بها مسبقًا. ما لم تقم بتحديد طريقة دفع بديلة، فسيتم تحصيل رسوم من طريقة الدفع هذه مقابل أي أرصدة مستحقة على الطلبات الحالية. سيسمح لك تحديد طريقة دفع بديلة بتلقي طلبات الاشتراك القادمة دون انقطاع.",
+          "with_pending_orders": "سيؤدي حذف طريقة الدفع هذه إلى إزالتها من حسابك ولن تكون متاحة لعمليات الشراء المستقبلية. ما لم تقم بتحديد طريقة دفع بديلة، فسيتم فرض رسوم على أي أرصدة مستحقة على الطلبات الحالية.",
+          "with_subscriptions": "سيؤثر حذف طريقة الدفع هذه على المدفوعات المصرح بها مسبقًا. استبدلها بطريقة دفع بديلة لمواصلة تلقي الطلبات القادمة."
+        },
+        "warning_message_without_replacement": {
+          "with_pending_orders_and_subscriptions": "سيؤثر حذف طريقة الدفع هذه على المدفوعات المصرح بها مسبقًا. سيتم الاستمرار في تحصيل رسوم من طريقة الدفع هذه مقابل أي أرصدة مستحقة على الطلبات الحالية، لكنك لن تتلقى طلبات الاشتراك القادمة. أضف طريقة دفع بديلة لمواصلة تلقي طلبات الاشتراك.",
+          "with_pending_orders": "سيؤدي حذف طريقة الدفع هذه إلى إزالتها من حسابك ولن تكون متاحة لعمليات الشراء المستقبلية. سيتم تحصيل الرسوم من أي أرصدة مستحقة على الطلبات الحالية.",
+          "with_subscriptions": "سيؤثر حذف طريقة الدفع هذه على المدفوعات المصرح بها مسبقًا. أضف طريقة دفع بديلة لمواصلة تلقي الطلبات القادمة."
+        },
+        "payment_method_selector_placeholder": "حدد طريقة دفع بديلة (اختياري)",
+        "payment_method_selector_no_alternative_payment": "لا توجد طريقة بديلة",
+        "replace_method_with_new_method_description": "الخاص بك {{currentPaymentMethodName}} سيتم حذفه واستبداله بـ {{newPaymentMethodName}}.",
+        "error_when_deleting": "نعتذر ولكن حدث خطأ ما ولم نتمكن من حذف طريقة الدفع هذه. يرجى المحاولة مرة أخرى لاحقًا أو تحديث الصفحة."
       }
     }
   }
