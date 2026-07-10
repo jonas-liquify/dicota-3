@@ -10612,6 +10612,7 @@ button.li-lang_dd-link {
   border-top: 1px solid #eeeeee;
   padding-top: 1.25rem;
   overflow: clip;
+  position: relative;
 }
 /* Row: swiper on left, dots on right */
 .ph_we-care-row {
@@ -18277,13 +18278,6 @@ img.product-header_gallery-image {
     height: 3rem;
   }
   .nav_container > .nav_menu-button.nav_menu-button { order: 1; }
-<<<<<<< HEAD
-  .nav_wishlist.nav_wishlist { display: none; }
-  .nav_mini-cart.nav_mini-cart { order: 3; }
-  .nav_account.nav_account { order: 1; }
-  .nav_search.nav_search { order: 2; }
-  .nav_dropdown-list.nav_mega.nav_mega { position: static;
-=======
   .nav_wishlist.nav_wishlist {
     display: none;
   }
@@ -18298,7 +18292,6 @@ img.product-header_gallery-image {
   }
   .nav_dropdown-list.nav_mega.nav_mega {
     position: static;
->>>>>>> 62be5088453a886a729fa96f47529b903af4075c
     inset: auto;
     grid-template-columns: 1fr;
     border-top: 0;
@@ -18541,53 +18534,19 @@ img.product-header_gallery-image {
   }
 }
 
-<<<<<<< HEAD
-@media screen and (max-width: 991px) {
-  .coll_filter-pills.coll_filter-pills {
-    display: none;
-  }
-  .coll_filter-mobile-btn.coll_filter-mobile-btn {
-    display: flex;
-  }
-}
-
 /* FAQ Sidebar: sticky nur im Side-by-Side-Layout sinnvoll (Desktop);
    ab dem Breakpoint, an dem .faq_wrapper zu einer Spalte stapelt,
    ueberlappt der sticky Header sonst den darunter scrollenden Inhalt. */
-@media screen and (max-width: 991px) {
-  .default-flex-small.faq_sidebar.faq_sidebar {
-    position: static;
-    top: auto;
-    height: auto;
-  }
-}
-
-=======
-/* FAQ Sidebar: sticky nur im Side-by-Side-Layout sinnvoll (Desktop);
-   ab dem Breakpoint, an dem .faq_wrapper zu einer Spalte stapelt,
-   ueberlappt der sticky Header sonst den darunter scrollenden Inhalt. */
->>>>>>> 62be5088453a886a729fa96f47529b903af4075c
 
 /* Announcement Bar mobile: Sprachumschalter ganz links, Reseller-Button ganz rechts
    (da .announcement-bar_items/USP mobile ausgeblendet ist, muss .announcement-bar_right
    selbst die volle Breite einnehmen, damit space-between greift). */
-<<<<<<< HEAD
-@media screen and (max-width: 767px) {
-  .announcement-bar_right.announcement-bar_right {
-    width: 100%;
-    justify-content: space-between;
-  }
-  .li-lang_wrapper.li-lang_wrapper {
-    order: -1;
-  }
-  .announcement-bar_reseller-btn.announcement-bar_reseller-btn {
-    order: 1;
-  }
-}
-
-=======
 
 .announcement-bar_link-toggle.announcement-bar_link.w-dropdown-toggle {
   padding-right: 0px;
 }
->>>>>>> 62be5088453a886a729fa96f47529b903af4075c
+
+.swiper-pagination.ph_we-care-dots {
+  position: absolute;
+  right: 0px;
+}
