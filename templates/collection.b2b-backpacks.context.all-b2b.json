@@ -13,17 +13,19 @@
   },
   "parent": "collection.b2b-backpacks.json",
   "sections": {
-    "featured_product_qe68Cr": {
+    "collection_image_her_fkCVA": {
+      "type": "collection_image_her",
+      "disabled": false,
       "settings": {
-        "image_produkt_bild": "shopify://shop_images/1_PITw_Seven_c9d12401-382e-44d4-b23b-6923a3d41b7a.jpg",
-        "text_produkt_titel": "Engineered to Protect. Built to Last.",
-        "textarea_beschreibung": "The SEVEN Backpack is designed for professionals who demand more, it combines decades of expertise with cutting-edge innovation to make mobile working safer, smarter, and more sustainable.",
-        "url_button_link": "shopify://products/backpack-seven-14-16",
-        "text_button_text": "Check out",
-        "padding_top": 0,
-        "padding_bottom": 0
+        "image_hintergrundbild": "shopify://shop_images/4_CTw_Backpacks_01.jpg",
+        "textarea_text": "Refined design. Recycled modern materials.",
+        "header-a1f08c0c5a8535ca73ddc095231935ab": null,
+        "padding_top": 2.5,
+        "padding_bottom": 2.5
       },
-      "blocks": {}
+      "blocks": {},
+      "block_order": [],
+      "name": "Collection Image Her"
     },
     "collection_intro": {
       "settings": {},
@@ -52,26 +54,24 @@
       "settings": {
         "image_promo_1_bild": "shopify://shop_images/7_GB1c_Advice_XRay.jpg",
         "image_promo_2_bild": "shopify://shop_images/8_GB2c_ProductPromotion_Filter_04.jpg",
-        "promo1_position": 5,
+        "promo1_position": 0,
         "promo1_large": false,
-        "promo2_position": 12,
+        "promo2_position": 0,
         "promo2_large": true
       },
       "blocks": {}
     },
-    "collection_image_her_fkCVA": {
-      "type": "collection_image_her",
-      "disabled": false,
+    "featured_product_qe68Cr": {
       "settings": {
-        "image_hintergrundbild": "shopify://shop_images/4_CTw_Backpacks_01.jpg",
-        "textarea_text": "Refined design. Recycled modern materials.",
-        "header-fc26b1280c6cb37e5858c4d96541c39b": null,
-        "padding_top": 2.5,
-        "padding_bottom": 2.5
+        "image_produkt_bild": "shopify://shop_images/1_PITw_Seven_c9d12401-382e-44d4-b23b-6923a3d41b7a.jpg",
+        "text_produkt_titel": "Engineered to Protect. Built to Last.",
+        "textarea_beschreibung": "The SEVEN Backpack is designed for professionals who demand more, it combines decades of expertise with cutting-edge innovation to make mobile working safer, smarter, and more sustainable.",
+        "url_button_link": "shopify://products/backpack-seven-14-16",
+        "text_button_text": "Check out",
+        "padding_top": 0,
+        "padding_bottom": 0
       },
-      "blocks": {},
-      "block_order": [],
-      "name": "Collection Image Her"
+      "blocks": {}
     }
   },
   "order": [
