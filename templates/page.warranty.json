@@ -1,0 +1,44 @@
+{
+  "sections": {
+    "feature_card_grid": {
+      "type": "feature_card_grid",
+      "settings": {
+        "text_subline": "Warranty",
+        "text_heading": "Warranty — Disclaimer",
+        "textarea_text": "We cover what matters. Here's exactly what our warranty includes — and what it doesn't."
+      },
+      "blocks": {
+        "feature-cards": {
+          "type": "feature-cards",
+          "static": true,
+          "settings": {},
+          "blocks": {
+            "c1": {
+              "type": "feature-karte",
+              "settings": {
+                "text_heading": "What's covered?",
+                "textarea_text": "We cover what matters.<br>Your warranty includes protection against:<br><br>• Material defects<br>• Faulty zippers<br>• Stitching issues<br>• Structural faults<br><br>And it applies to a wide range of DICOTA products. The Lifetime Warranty covers the following product families:<br><br>ACTIVE, BASE, CODE, CORE, ECO, ECO BASE, ECO GO, ECO MOTION, ECO MOVE, ECO PRO, ECO SCALE, ECO SELECT, EDGE, E-SPORTS, FIVE, FLOW, GO, MOS, MOVE, PERFECT SKIN, PRO, SCALE, SELECT, SMART SKIN, SPIN, STYLE, TABLET, UNIVERSAL, URBAN"
+              }
+            },
+            "c2": {
+              "type": "feature-karte",
+              "settings": {
+                "text_heading": "What's not covered?",
+                "textarea_text": "Even the best companions have their limits.<br>This warranty does not include:<br><br>• Normal wear and tear<br>• Misuse or improper handling<br>• Water damage<br>• Natural disasters"
+              }
+            }
+          },
+          "block_order": [
+            "c1",
+            "c2"
+          ]
+        }
+      }
+    }
+  },
+  "order": [
+    "feature_card_grid"
+  ],
+  "layout": "theme",
+  "wrapper": "main.main-wrapper"
+}
