@@ -2,10 +2,11 @@
         {% for n in (1..5) %}                            <svg width="16" height="16" viewbox="0 0 24 24" fill="currentColor" class="product-reviews_star{% unless n <= jm_data.average_rating %} is-empty{% endunless %}"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
                     {% endfor %}    </div></div><p class="product-reviews_score" li-object="jm_data.average_rating">{{ jm_data.average_rating }}</p><p class="product-reviews_count" li-object="jm_data.review_summary_text">{{ jm_data.review_summary_text }}</p></div><div class="product-reviews_breakdown"><p class="product-reviews_breakdown-title">
 {{ section.settings.text_breakdown_titel }}
-</p><div class="product-reviews_bars"><div li-for:inside="row in jm_data.histogram" class="product-reviews_bar-row">
-        {% for row in jm_data.histogram %}                            <span li-object="row.rating" class="product-reviews_bar-label">{{ row.rating }}</span>
+</p><div class="product-reviews_bars">{% for row in jm_data.histogram %}    <div class="product-reviews_bar-row" li-for="row in jm_data.histogram">
+                                    <span li-object="row.rating" class="product-reviews_bar-label">{{ row.rating }}</span>
                             <div class="product-reviews_bar-track"><div class="product-reviews_bar-fill" style="width: {{ row.percentage }}%;"></div></div>
-                    {% endfor %}    </div></div></div><button type="button" class="button product-reviews_write-btn" data-jm-open="">Write a review</button></div><div class="product-reviews_list"><div class="product-reviews_items" data-jm-list=""><div li-for:inside="review in jm_data.reviews" class="product-reviews_item">
+                        </div>
+{% endfor %}</div></div><button type="button" class="button product-reviews_write-btn" data-jm-open="">Write a review</button></div><div class="product-reviews_list"><div class="product-reviews_items" data-jm-list=""><div li-for:inside="review in jm_data.reviews" class="product-reviews_item">
         {% for review in jm_data.reviews %}                            <div class="product-reviews_item-stars"><div li-for:inside="n in (1..5)" style="display:contents">
         {% for n in (1..5) %}                            <svg width="16" height="16" viewbox="0 0 24 24" fill="currentColor" class="product-reviews_star{% unless n <= review.rating %} is-empty{% endunless %}"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
                     {% endfor %}    </div></div>
