@@ -36,7 +36,8 @@
           "type": "usp",
           "name": "USP",
           "settings": {
-            "text_text": "Free shipping over 100 EUR"
+            "image_icon": "shopify://shop_images/Icon_warranty.png",
+            "text_text": "Lifetime / 30 years warranty"
           },
           "blocks": {}
         },
