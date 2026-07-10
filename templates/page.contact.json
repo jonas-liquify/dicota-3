@@ -18,9 +18,9 @@
             "form_id": "547676",
             "text_color": "#202020",
             "button_background_color": "#202020",
-            "button_label_color": "#FFFFFF",
-            "links_color": "#1878B9",
-            "errors_color": "#E02229",
+            "button_label_color": "#ffffff",
+            "links_color": "#1878b9",
+            "errors_color": "#e02229",
             "text_alignment": "center",
             "form_alignment": "flex-start",
             "padding_top": 0,
@@ -39,8 +39,7 @@
               "name": "Contact Location",
               "settings": {
                 "text_location": "Switzerland",
-                "url_link": "",
-                "text_contact_info": "+41 55 416 50 30"
+                "richtext_address": "<p><strong>Europa</strong><br/>DICOTA GmbH<br/>Fabrikstrasse 18<br/>73277 Owen</p><p>GERMANY<br/>Telephone: +49 7021 72508 0</p><p><br/><strong>MEA & India</strong><br/>DICOTA MEA<br/>30-1-1630<br/>1st Floor, DMCC Business Centre<br/>PO Box: 30562 JLT, Dubai </p><p>UAE<br/>Telephone: +97 14 3214 210</p><p>India<br/>Telephone: +91 99 005 23128<br/><br/><strong>Asia Pacific</strong><br/>DICOTA APAC Limited<br/>Unit 1301, 13/F Arion Commercial Centre<br/>2-12 Queen’s Road West, Sheung Wan<br/>HONG KONG<br/>Telephone: +852 3543 1659<br/><br/><strong>Asia Pacific</strong><br/>DICOTA APAC Limited<br/>Unit 1301, 13/F Arion Commercial Centre<br/>2-12 Queen’s Road West, Sheung Wan<br/>HONG KONG<br/>Telephone: +852 3543 1659</p>"
               },
               "blocks": {}
             }
@@ -60,9 +59,9 @@
         "text_contact_name": "DICOTA - always there for you!",
         "text_contact_role": "",
         "text_address_subline": "Address",
-        "text_address_text": "DCT Group AG · Churerstrasse 20, 8808 Pfäffikon SZ, Switzerland",
+        "richtext_address_text": "<p>DICOTA SCHWEIZ AG<br/>Churerstrasse 20<br/>8808 Pfäffikon SZ<br/>SWITZERLAND</p>",
         "text_contact_subline": "Contact",
-        "text_opening_hours": "Monday – Friday: 08:00 – 17:00"
+        "text_opening_hours": ""
       }
     }
   },
