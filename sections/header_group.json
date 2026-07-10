@@ -64,6 +64,7 @@
             "link_enBgib": {
               "type": "link",
               "name": "Link",
+              "disabled": true,
               "settings": {
                 "url_link_url": "",
                 "text_link_text": "About DICOTA",
