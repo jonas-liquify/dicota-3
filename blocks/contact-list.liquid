@@ -1,0 +1,25 @@
+<div li-static-block="Contact List"><div li-cf-theme-blocks="" class="footer_contact-list">
+{% content_for 'blocks' %}
+</div></div> {% schema %} {
+    "name": "Contact List",
+    "blocks": [
+        {
+            "type": "contact-location"
+        },
+        {
+            "type": "@app"
+        }
+    ],
+    "settings": [],
+    "presets": [
+        {
+            "name": "Contact List",
+            "blocks": [
+                {
+                    "type": "contact-location"
+                }
+            ]
+        }
+    ],
+    "tag": null
+} {% endschema %}
