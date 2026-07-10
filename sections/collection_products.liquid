@@ -17,8 +17,8 @@
 {% endfor %}</div><div class="coll-filter-modal_footer"><a li-object:href="collection.url" href="{{ collection.url }}" class="text-style-link coll-filter-modal_clear"><span li-object="'general.clear' | t">{{ 'general.clear' | t }}</span></a><button type="button" class="button is-blue coll-filter-modal_apply" x-on:click="filterModalOpen = false"><span li-object="'collection.show_results' | t">{{ 'collection.show_results' | t }}</span></button></div></div></div></div></div></div><div class="padding-global" style="padding-bottom: {{ section.settings.padding_bottom }}rem;"><div class="container-large">{% paginate collection.products by 24 %}
     <div li-paginate="collection.products" li-paginate:by="24" by="24"><div class="coll_grid" li-for:inside="product in collection.products">
         {% for product in collection.products %}                            <div class="coll_grid-item">{% render 'product_card', product: product %}</div>
-                            <div li-if:inside="forloop.index == section.settings.promo1_position" style="display:contents" inside="1">
-        {% if forloop.index == section.settings.promo1_position %}
+                            <div li-if:inside="section.settings.show_promo1 and forloop.index == section.settings.promo1_position" style="display:contents" inside="1">
+        {% if section.settings.show_promo1 and forloop.index == section.settings.promo1_position %}
             <div class="coll_grid-item coll_promo-card{% unless section.settings.promo1_large %} is-normal{% endunless %}" style="background-color: {{ section.settings.promo1_bg }};"><div class="coll_promo-card_inner"><div class="coll_promo-card_media">{% if section.settings.image_promo_1_bild != blank %}    <span class="li-guard" li-if="section.settings.image_promo_1_bild != blank">
     {% if section.settings.image_promo_1_bild %}
 {{ section.settings.image_promo_1_bild | image_url: width: 1200 | image_tag: loading: 'lazy', class: 'coll_promo-card_image' }}
@@ -33,8 +33,8 @@
     <a href="{{ section.settings.url_promo_1_link }}" class="coll_promo-card_cta w-button"> <span>{{ section.settings.text_promo_1_button }}</span> </a>    </span>
 {% endif %}</div></div></div>        {% endif %}
     </div>
-                            <div li-if:inside="forloop.index == section.settings.promo2_position" style="display:contents" inside="1">
-        {% if forloop.index == section.settings.promo2_position %}
+                            <div li-if:inside="section.settings.show_promo2 and forloop.index == section.settings.promo2_position" style="display:contents" inside="1">
+        {% if section.settings.show_promo2 and forloop.index == section.settings.promo2_position %}
             <div class="coll_grid-item coll_promo-card{% unless section.settings.promo2_large %} is-normal{% endunless %}" style="background-color: {{ section.settings.promo2_bg }};"><div class="coll_promo-card_inner"><div class="coll_promo-card_media">{% if section.settings.image_promo_2_bild != blank %}    <span class="li-guard" li-if="section.settings.image_promo_2_bild != blank">
     {% if section.settings.image_promo_2_bild %}
 {{ section.settings.image_promo_2_bild | image_url: width: 1200 | image_tag: loading: 'lazy', class: 'coll_promo-card_image' }}
@@ -197,6 +197,12 @@
             "content": "Promo-Karten"
         },
         {
+            "type": "checkbox",
+            "id": "show_promo1",
+            "label": "Promo 1 anzeigen",
+            "default": false
+        },
+        {
             "type": "number",
             "id": "promo1_position",
             "label": "Promo 1 nach Produkt Nr.",
@@ -223,6 +229,12 @@
             "label": "Promo 1 Deckkraft",
             "info": "0 = transparent, 1 = deckend",
             "default": 1
+        },
+        {
+            "type": "checkbox",
+            "id": "show_promo2",
+            "label": "Promo 2 anzeigen",
+            "default": false
         },
         {
             "type": "number",
