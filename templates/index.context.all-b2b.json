@@ -38,8 +38,21 @@
         "padding_top": 4,
         "padding_bottom": 4
       },
-      "blocks": {},
-      "block_order": [],
+      "blocks": {
+        "reseller_kategorie_wA44E": {
+          "type": "reseller-kategorie",
+          "name": "Reseller Kategorie",
+          "disabled": false,
+          "settings": {
+            "url_link": "shopify://collections/b2b-backpacks-all",
+            "image_bild": "shopify://shop_images/5_SCT1c_BP_EntryLevel.jpg",
+            "text_titel": "Backpacks"
+          }
+        }
+      },
+      "block_order": [
+        "reseller_kategorie_wA44E"
+      ],
       "name": "Reseller Category Ro"
     },
     "reseller_hub_EwB6Y": {
@@ -183,8 +196,8 @@
   "order": [
     "reseller_hero_97i8b",
     "reseller_category_ro_WCArV",
-    "reseller_hub_EwB6Y",
     "the_dicota_differenc_JXxMG",
+    "reseller_hub_EwB6Y",
     "reseller_promo_grid_ydyLg",
     "b2b_news_highlight_LhrNM"
   ]
