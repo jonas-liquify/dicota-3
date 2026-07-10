@@ -818,7 +818,67 @@
         "address_edit": "تحرير العنوان",
         "address_delete": "حذف العنوان",
         "address_confirm": "هل أنت متأكد أنك تريد حذف هذا العنوان من حسابك؟",
-        "address_default": "تعيين كافتراضي"
+        "address_default": "تعيين كافتراضي",
+        "address_form": {
+          "add_address": "أضف عنوانًا",
+          "save": "حفظ",
+          "cancel": "إلغاء",
+          "edit": "تحرير العنوان",
+          "update": "حفظ التغييرات",
+          "generic_error": "حدثت مشكلة في حفظ عنوانك. حاول ثانية.",
+          "one_time_address_subtitle": "استخدم عنوانًا لمرة واحدة لهذا الطلب"
+        },
+        "different_shipping_method_summary": "أدخل عنوان شحن مختلفًا لعرض طرق الشحن المتاحة",
+        "invalid_shipping_method_summary": "أدخل عنوان شحن صالحًا لعرض طرق الشحن المتاحة",
+        "invalid_shipping_method_summary_selected": "حدد عنوان شحن مختلفًا لعرض طرق الشحن المتاحة",
+        "method_summary": {
+          "incomplete_address_entered": "أدخل عنوان الشحن كاملاً لعرض طرق الشحن المتاحة",
+          "incomplete_address_selected": "حدد عنوان الشحن الكامل لعرض طرق الشحن المتاحة"
+        },
+        "local_pickup": {
+          "search_address": "البحث عن العنوان",
+          "rollup_title": "موقع الالتقاط",
+          "rollup_accessibility_label": "خيارات موقع الالتقاط"
+        },
+        "missing_shipping_address": "عنوان الشحن مفقود",
+        "split_shipping_merchandise_quantity_label_standard": "%{quantity} العناصر",
+        "split_shipping_merchandise_quantity_label_additional": "+%{quantity} المزيد",
+        "split_shipping_merchandise_shipment_number": "شحنة %{number} من %{total}",
+        "pre_order_ships_now": "السفن الآن",
+        "pre_order_ships_later": "السفن في وقت لاحق",
+        "pre_order_ships_date": "السفن %{date}",
+        "split_shipping_shipped_by_shop": "تم الشحن بواسطة %{shop_name}",
+        "split_shipping_multiple_shipment_label": "شحنات متعددة",
+        "split_shipping_shipping_label": "الطريقة",
+        "split_shipping_shipment_notice": "سوف يصل طلبك %{quantity_shipments}",
+        "split_shipping_first_shipment_notice": "سوف يصل طلبك الأول %{quantity_shipments}",
+        "split_shipping_multiple_shipment_quantity_label": "%{quantity} شحنات",
+        "split_shipping_multiple_shipment_notice": "سوف يصل طلبك في شحنات متعددة",
+        "split_shipping_multiple_shipment_notice_one_time_purchase": "سوف يصل طلبك %{quantity} شحنات",
+        "split_shipping_more_shipping_options": "المزيد من خيارات الشحن",
+        "split_shipping_shipment_number": "شحنة %{number}",
+        "split_shipping_merchandise_quantity_label_inline_primary": "الكمية: %{quantity}",
+        "split_shipping_merchandise_quantity_label_inline": "%{merchandise_title} ×%{quantity}",
+        "split_shipping_option_free": "شحن مجاني",
+        "split_shipping_option_lowest_price": "أدنى سعر",
+        "split_shipping_option_fastest": "الأسرع",
+        "split_shipping_option_recommended": "موصى به",
+        "split_shipping_option_custom": "مخصص",
+        "add_shipping_address": "أضف عنوان الشحن",
+        "add_new_delivery_address": "إضافة عنوان تسليم جديد",
+        "choose_new_address": "اختر عنوانًا جديدًا"
+      },
+      "localized_fields": {
+        "additional_information": {
+          "title": "معلومات إضافية",
+          "tax_credential_br": "CPF/CNPJ",
+          "shipping_credential_br": "CPF/CNPJ",
+          "shipping_credential_kr": "قانون الجمارك الشخصية",
+          "shipping_credential_cn": "رقم هوية المقيم",
+          "tax_credential_it": "الكوديس المالي (اختياري)",
+          "tax_email_it": "بيك (اختياري)",
+          "tax_credential_cl": "روت"
+        }
       }
     }
   }
