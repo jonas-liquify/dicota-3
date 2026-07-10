@@ -24,5 +24,84 @@
     "sort_by": "Sortuj według",
     "submit": "Prześlij",
     "trending": "Trendy"
+  },
+  "cart": {
+    "heading": "Koszyk",
+    "empty": "Twój koszyk jest pusty",
+    "get_free_shipping": "Odblokuj bezpłatną wysyłkę",
+    "still": "Tylko",
+    "to_free_shipping": "z dala od bezpłatnej wysyłki",
+    "free_shipping_heading": "Darmowa wysyłka odblokowana",
+    "free_shipping_text": "Kwalifikujesz się do bezpłatnej wysyłki tego zamówienia.",
+    "total_price": "Suma częściowa",
+    "shipping_fee": "Wysyłka",
+    "free": "Bezpłatny",
+    "go_to_checkout": "Kasa",
+    "note": "Uwaga"
+  },
+  "blog": {
+    "no_posts": "Nie znaleziono żadnych postów."
+  },
+  "certificates": {
+    "intro": "Wszystko DICOTA produkty posiadające List Zgodności (CE) — filtrowane po SKU lub tytule produktu."
+  },
+  "data_sheets": {
+    "intro": "Wszystko DICOTA produkty z kartą katalogową — filtrowane po SKU lub tytule produktu."
+  },
+  "manuals": {
+    "intro": "Wszystko DICOTA produkty z instrukcją produktu — filtrowane według SKU lub tytułu produktu."
+  },
+  "collection": {
+    "no_items": "Nie znaleziono żadnych elementów.",
+    "no_matches": "Brak produktów pasujących do tych filtrów.",
+    "no_products": "Nie znaleziono żadnych produktów.",
+    "show_results": "Pokaż wyniki"
+  },
+  "jobs": {
+    "about_role": "O roli",
+    "open_application": "Nie ma dla Ciebie odpowiedniego stanowiska? Nadal chcielibyśmy usłyszeć od ciebie."
+  },
+  "loyalty": {
+    "cashback": {
+      "account_holder": "Właściciel konta",
+      "bank": "Banku",
+      "bank_match": "Dane bankowe muszą być zgodne z nazwą firmy",
+      "conversion": "Kurs wymiany: 50 punktów = 1 EUR/CHF",
+      "disclaimer": "DICOTA zastrzega sobie prawo do zażądania dodatkowych informacji lub odmowy wypłaty w przypadku wątpliwości. Kurs wymiany może ulec zmianie bez wcześniejszego powiadomienia.",
+      "iban": "Numer konta / IBAN",
+      "min_points": "Wymagane co najmniej 10 000 punktów",
+      "payout": "Wypłata kwartalna przelewem bankowym",
+      "points_label": "Punkty do wypłaty (min. 10 000)"
+    },
+    "club": {
+      "benefit_cashback": "Cashback od 10 000 punktów",
+      "benefit_early": "Wczesny dostęp do nowych produktów",
+      "benefit_earn": "Zbieraj punkty przy każdym zakupie",
+      "benefit_rewards": "Ekskluzywne nagrody i zestawy",
+      "benefit_support": "Osobiste wsparcie klubu"
+    },
+    "reward": "Nagroda"
+  },
+  "marketing": {
+    "press": "Naciśnij",
+    "product_imgs": {
+      "meta_line": "Nr pozycji · Poprzedni model · Kod EAN · Dostępność · Typ konstrukcji · Kolor"
+    }
+  },
+  "products": {
+    "add_to_cart": "Dodaj do koszyka",
+    "on_sale": "W sprzedaży"
+  },
+  "reseller": {
+    "form": {
+      "contact_person": "Osoba kontaktowa*",
+      "email": "Adres e-mail*",
+      "heading": "Wprowadź dane sprzedawcy",
+      "phone": "Telefon"
+    }
+  },
+  "reviews": {
+    "body": "Twoja recenzja",
+    "email": "E-mail"
   }
 }
