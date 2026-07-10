@@ -601,7 +601,72 @@
         "recurring_payments": "المدفوعات المتكررة",
         "recurring_total_multiple_label": "يحتوي هذا الطلب على رسوم متكررة لعناصر متعددة.",
         "deferred_total_due_date_label": "مجموع المستحق {{date}}",
-        "deferred_total_due_date_label_next": "مستحق %{date}"
+        "deferred_total_due_date_label_next": "مستحق %{date}",
+        "full_price": "السعر الكامل: %{price}",
+        "custom_discount": "خصم مخصص",
+        "expand_component_information": {
+          "one": "عرض %{count} البند",
+          "other": "عرض %{count} العناصر"
+        },
+        "collapse_component_information": {
+          "one": "إخفاء %{count} البند",
+          "other": "إخفاء %{count} العناصر"
+        },
+        "component_quantity_title": "%{quantity} × %{product_title}",
+        "discount_discovery": {
+          "add_code": "إضافة خصم",
+          "back_to_finalize_order": "العودة إلى وضع اللمسات الأخيرة على النظام",
+          "merchandise_quantity_label": {
+            "one": "%{count} البند",
+            "other": "%{count} العناصر"
+          }
+        },
+        "alternative_payment_currency_total": "مشحونة كما %{amount_due}",
+        "alternative_payment_currency_chinese_yuan": "تأكيد إجمالي اليوان الصيني النهائي في %{wallet} التطبيق.",
+        "pay_merchant_label": "ادفع %{merchant_name}",
+        "discount_applies_to_subscription_items_only": "ينطبق هذا الخصم فقط على عناصر الاشتراك"
+      },
+      "shipping": {
+        "title": "الشحن",
+        "delivery_title": "التسليم",
+        "shipping_method_title": "طريقة الشحن",
+        "shipping_method_rollup_accessibility_label": "خيارات طريقة الشحن",
+        "shipping_method_one_time_purchase_group_title": "شراء لمرة واحدة",
+        "shipping_method_first_shipment_group_title": {
+          "one": "الشحنة الأولى",
+          "other": "الشحنات الأولى"
+        },
+        "shipping_method_subscription_group_title": "الاشتراك",
+        "shipping_method_recurring_shipments_group_title": {
+          "one": "شحنة متكررة",
+          "other": "الشحنات المتكررة"
+        },
+        "subscription_shipping": "شحن الإشتراك",
+        "subscription_local_delivery": "الاشتراك التسليم المحلي",
+        "subscription_pickup": "تحصيل الاشتراك",
+        "waiting_on_rate_notice": "جارٍ الحصول على أسعار الشحن المتوفرة…",
+        "waiting_on_pickup_location_notice": "جارٍ الحصول على مواقع الالتقاط المتاحة...",
+        "no_rates_for_cart_or_destination_notice": "لا توجد طرق شحن متاحة لسلة التسوق الخاصة بك أو عنوانك",
+        "no_pickup_location_notice": "واحد على الأقل من منتجاتك غير متاح للاستلام",
+        "no_rates_for_country_notice": "لم يتم العثور على أسعار الشحن لهذا العنوان.",
+        "no_rates_contact_notice": "اتصل بنا لمزيد من المعلومات",
+        "free_rate_label": "مجاني",
+        "cheapest_rate_label": "أرخص",
+        "estimated_delivery_date": {
+          "one": "%{count} يوم عمل",
+          "other": "%{count} أيام العمل"
+        },
+        "estimated_delivery_date_range": "%{minimum} ل %{maximum} أيام العمل",
+        "delivery_date_range": "%{min_time}–%{max_time}",
+        "estimated_delivery_time": "التسليم المقدر %{time}",
+        "estimated_delivery_time_range": "التسليم المقدر %{min_time}–%{max_time}",
+        "delivery_today": "التسليم في نفس اليوم %{time}",
+        "delivery_tomorrow": "التسليم في اليوم التالي %{time}",
+        "two_day_delivery": "التسليم لمدة يومين %{time}",
+        "delivery": "التسليم %{time}",
+        "delivery_to": "التسليم إلى",
+        "arrives_time": "يصل %{time}",
+        "arrives_time_range": "يصل %{min_time}–%{max_time}"
       }
     }
   }
