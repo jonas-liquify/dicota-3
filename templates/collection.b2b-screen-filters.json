@@ -88,6 +88,7 @@
         "kategorie_bild_3YJtex",
         "kategorie-bild"
       ],
+      "disabled": true,
       "settings": {
         "padding_top": 2.5,
         "padding_bottom": 2.5,
