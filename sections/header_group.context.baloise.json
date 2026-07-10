@@ -17,6 +17,12 @@
       "disabled": true,
       "settings": {},
       "blocks": {}
+    },
+    "header_a83nJp": {
+      "settings": {
+        "menu": "main-menu-helvetia"
+      },
+      "blocks": {}
     }
   }
 }
