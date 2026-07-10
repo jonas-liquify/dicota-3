@@ -3712,7 +3712,73 @@
     "address_form": {
       "attention": "انتبه",
       "attention_company": "الشركة / الاهتمام",
-      "attention_help_text": "اسم الشخص أو القسم"
+      "attention_help_text": "اسم الشخص أو القسم",
+      "auto_complete_close_accessibility_label": "إغلاق الاقتراحات",
+      "auto_complete_title": "اقتراحات",
+      "billing_address": "استخدم كعنوان إرسال الفواتير",
+      "cancel": "إلغاء",
+      "cancel_accessibility_label": "إلغاء عنوان التحرير {{address}}",
+      "creation_success_notification": "تمت إضافة العنوان",
+      "default_address": "هذا هو عنواني الافتراضي",
+      "default_address_creation_success_notification": "تمت إضافة العنوان الافتراضي",
+      "default_address_update_success_notification": "تم تحديث العنوان الافتراضي",
+      "loading_add_form_accessibility_message": "تحميل نموذج العنوان الجديد",
+      "loading_edit_form_accessibility_message": "جارٍ تحميل نموذج عنوان التحرير",
+      "loading_form_accessibility_message": "تحميل نموذج العنوان",
+      "loading_finished_accessibility_message": "تم تحميل نموذج العنوان",
+      "save": "حفظ",
+      "save_accessibility_label": "حفظ العنوان {{address}}",
+      "section_title_accessibility_label": "أضف عنوانًا",
+      "update_success_notification": "تم تحديث العنوان"
+    },
+    "account_menu": {
+      "signed_out_state": {
+        "sheet_title": "تسجيل الدخول أو إنشاء حساب",
+        "section_divider": "المزيد من الطرق لتسجيل الدخول",
+        "alternate_divider": "أو",
+        "use_email_button": "استخدم البريد الإلكتروني بدلاً من ذلك",
+        "email_field_label": "البريد الإلكتروني",
+        "orders_button": "أوامر",
+        "profile_button": "الملف الشخصي",
+        "shop_login_button": "تسجيل الدخول مع متجر",
+        "continue_with_google": "تواصل مع جوجل",
+        "continue_with_facebook": "تواصل مع الفيسبوك"
+      },
+      "signed_in_state": {
+        "greeting_with_name": "مرحبًا، {{first_name}}",
+        "greeting_without_name": "الحساب",
+        "orders_button": "أوامر",
+        "profile_button": "الملف الشخصي"
+      },
+      "location_picker": {
+        "sheet_title": "المواقع",
+        "search_field_placeholder": "بحث"
+      },
+      "aria_labels": {
+        "close_menu": "إغلاق القائمة",
+        "back_to_main_menu": "العودة إلى القائمة الرئيسية من {{title}}",
+        "open_submenu": "{{title}}, يفتح القائمة الفرعية",
+        "loading_menu": "جارٍ تحميل القائمة",
+        "account": "الحساب",
+        "sign_in_with_email": "قم بتسجيل الدخول باستخدام البريد الإلكتروني",
+        "sign_in": "تسجيل الدخول"
+      }
+    },
+    "B2B": {
+      "account_information": {
+        "company_card_name_label": "اسم الشركة",
+        "company_card_section_accessibility_label": "الشركة"
+      },
+      "locations": {
+        "contact_contact": "الاتصال",
+        "contact_email": "البريد الإلكتروني",
+        "contact_list_title": "الناس",
+        "contact_name": "الاسم",
+        "contact_permissions": "الأذونات",
+        "contact_phone_number": "رقم الهاتف",
+        "location_picker_label": "اسم الموقع",
+        "location_picker_accessibility_label": "اسم الموقع: {{locationName}}"
+      }
     }
   }
 }
