@@ -1,0 +1,28 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "general": {
+    "back": "Atrás",
+    "clear": "Borrar",
+    "filters": "Filtros",
+    "form": {
+      "error": "¡Ups! Algo salió mal al enviar.",
+      "success": "¡Gracias! Su envío ha sido recibido."
+    },
+    "home": "Inicio",
+    "next": "Siguiente",
+    "previous": "Anterior",
+    "product": "Producto",
+    "search": "Buscar",
+    "sort_by": "Ordenar por",
+    "submit": "Enviar",
+    "trending": "Tendencia"
+  }
+}
