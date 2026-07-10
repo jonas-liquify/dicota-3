@@ -244,7 +244,7 @@
           "type": "kategorie",
           "name": "Screen Filters",
           "settings": {
-            "url_link": "",
+            "url_link": "shopify://collections/d2c-screen-filters-all",
             "image_bild": "shopify://shop_images/CT1c_Filter.jpg",
             "text_titel": "Screen Filters"
           },
@@ -254,7 +254,7 @@
           "type": "kategorie",
           "name": "Accessories",
           "settings": {
-            "url_link": "",
+            "url_link": "shopify://collections/d2c-accessories-all",
             "image_bild": "shopify://shop_images/5_SCT1c_Charger.jpg",
             "text_titel": "Accessories"
           },
