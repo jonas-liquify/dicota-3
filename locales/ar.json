@@ -266,6 +266,96 @@
         "google_map_title": "خريطة جوجل",
         "confirm_order_button_label": "تأكيد الطلب",
         "submit_order_button_label": "إرسال الطلب"
+      },
+      "stock": {
+        "remove_from_cart_button_label": "إزالة من العربة",
+        "continue_shopping_button_label": "متابعة",
+        "go_back_to_cart_button_label": "العودة إلى عربة التسوق الخاصة بي",
+        "remove": "إزالة",
+        "return_to_store_label": "العودة إلى المتجر",
+        "continue_cta_label": "متابعة الخروج",
+        "item_label": {
+          "one": "{{count}} البند",
+          "other": "{{count}} العناصر"
+        },
+        "empty_cart_label": "سلة التسوق الخاصة بك فارغة",
+        "quantity_update": {
+          "page_title": "تحديث الكمية",
+          "title": "تحديث الكمية",
+          "description": "لقد تغيرت الكميات المتاحة لهذه العناصر وتم تحديثها في سلة التسوق الخاصة بك."
+        },
+        "unpurchasable_product": {
+          "title": "منتج غير قابل للشراء",
+          "header": "تمت إزالة بعض العناصر من سلة التسوق الخاصة بك",
+          "message": "هذه العناصر غير متوفرة لطلبات B2B.",
+          "status_column_header": "غير متوفر"
+        },
+        "unpurchasable_product_generic": {
+          "title": "منتج غير قابل للشراء",
+          "header": "تمت إزالة بعض العناصر من سلة التسوق الخاصة بك",
+          "message": "هذه العناصر غير متوفرة.",
+          "status_column_header": "غير متوفر"
+        },
+        "unfulfillable_product": {
+          "title": "التوصيل غير متوفر",
+          "message": {
+            "one": "%{delivery_method} لم يعد متوفرا لهذا البند.",
+            "other": "%{delivery_method} لم يعد متاحًا لهذه العناصر."
+          },
+          "default_message": {
+            "one": "طريقة التسليم المختارة لم تعد متاحة لهذا العنصر.",
+            "other": "لم تعد طريقة التسليم المختارة متاحة لهذه العناصر."
+          }
+        },
+        "unshippable_product": {
+          "title": "لا يوجد توصيل متاح",
+          "header": {
+            "one": "لا يوجد توصيل ل %{count} البند",
+            "other": "لا يوجد توصيل ل %{count} العناصر"
+          },
+          "message": {
+            "one": "ستتم إزالة هذا العنصر من سلة التسوق الخاصة بك لأنه لا توجد طرق تسليم متاحة لعنوانك.",
+            "other": "ستتم إزالة هذه العناصر من سلة التسوق الخاصة بك لأنه لا توجد طرق تسليم متاحة لعنوانك."
+          },
+          "status_column_header": "لا التسليم"
+        },
+        "price_update": {
+          "title": "تحديث الأسعار",
+          "description": "لقد تغيرت أسعار هذه العناصر وتم تحديثها في سلة التسوق الخاصة بك.",
+          "updated_price": "سعر محدث"
+        },
+        "price_and_quantity_update": {
+          "title": "تحديث السعر والكمية",
+          "description": "لقد تغيرت الأسعار والكميات المتاحة لهذه العناصر وتم تحديثها في سلة التسوق الخاصة بك."
+        },
+        "out_of_stock": {
+          "description": "لم تعد هذه العناصر متوفرة وسيتم إزالتها من سلة التسوق الخاصة بك.",
+          "items_unavailable": "بعض العناصر لم تعد متوفرة وسيتم إزالتها من سلة التسوق الخاصة بك."
+        },
+        "out_of_stock_in_context_label": "هذا المنتج غير متوفر في بلدك/منطقتك."
+      },
+      "contextual_availability": {
+        "title": {
+          "one": "منتج غير متوفر",
+          "other": "منتجات غير متوفرة"
+        },
+        "products_not_available": {
+          "one": "ستتم إزالة هذا المنتج من سلة التسوق الخاصة بك لأنه غير متوفر في بلدك/منطقتك.",
+          "other": "ستتم إزالة هذه المنتجات من سلة التسوق الخاصة بك لأنها غير متوفرة في بلدك/منطقتك."
+        },
+        "all_products_in_cart_unavailable": {
+          "one": "هذا المنتج غير متوفر في بلدك/منطقتك.",
+          "other": "هذه المنتجات غير متوفرة في بلدك/منطقتك."
+        },
+        "unavailable_label": "غير متاح"
+      },
+      "merchandise_unavailable_in_buyer_location": {
+        "banner_title": {
+          "some_products_one": "هذا المنتج غير متوفر للتوصيل إلى %{location_name}.",
+          "some_products_other": "هذه المنتجات غير متوفرة للتسليم إلى %{location_name}.",
+          "all_products_one": "المنتج الموجود في سلة التسوق الخاصة بك غير متاح للتوصيل إلى %{location_name}.",
+          "all_products_other": "المنتجات الموجودة في سلة التسوق الخاصة بك غير متاحة للتوصيل إلى %{location_name}."
+        }
       }
     }
   }
