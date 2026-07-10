@@ -51,27 +51,14 @@
           },
           "blocks": {}
         },
-        "slide_qcqnMF": {
-          "type": "slide",
-          "name": "Slide",
-          "settings": {
-            "image_hintergrundbild": "shopify://shop_images/4_MT_PrivacyFilter.webp",
-            "text_headline_zeile_1": "Weigh Darker™",
-            "text_headline_zeile_2": "Moon Bag Ruffle",
-            "text_subtext": "Raffiniertes Design. Recycelte moderne Materialien.",
-            "url_button_link": "",
-            "text_button_text": "Jetzt shoppen test"
-          },
-          "blocks": {}
-        },
         "slide_KednW8": {
           "type": "slide",
           "name": "Slide",
           "settings": {
             "image_hintergrundbild": "shopify://shop_images/5_MT_OneMore.webp",
-            "text_headline_zeile_1": "Weigh Darker™",
-            "text_headline_zeile_2": "Moon Bag Ruffle",
-            "text_subtext": "Raffiniertes Design. Recycelte moderne Materialien.",
+            "text_headline_zeile_1": "OCEAN BREEZE",
+            "text_headline_zeile_2": "made out of recycled fishing nets",
+            "text_subtext": "A fresh, urban collection made from recycled fishing nets – combining modern style, smart organization and reliable protection.",
             "url_button_link": "",
             "text_button_text": "Jetzt shoppen test"
           },
@@ -82,7 +69,6 @@
         "slide_XCDh4f",
         "slide_riGQW3",
         "slide",
-        "slide_qcqnMF",
         "slide_KednW8"
       ],
       "settings": {
