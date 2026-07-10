@@ -4458,7 +4458,79 @@
       "link_new_tab_confirmation": "لا يمكن فتح هذا الرابط داخل المحرر. سيتم فتحه في نافذة جديدة ({{resolved_to_link}}). انقر فوق موافق للمتابعة."
     },
     "settings": {
-      "title": "إعدادات"
+      "title": "إعدادات",
+      "loading_accessibility_message": "جارٍ تحميل صفحة الإعدادات",
+      "log_out_everywhere": {
+        "title": "تسجيل الخروج في كل مكان",
+        "description": "إذا فقدت جهازًا أو كانت لديك مخاوف أمنية، فقم بتسجيل الخروج من كل مكان لضمان أمان حسابك.",
+        "button": "تسجيل الخروج من جميع الأجهزة",
+        "warning_message": "سيتم أيضًا تسجيل خروجك على هذا الجهاز."
+      }
+    },
+    "shop_ads": {
+      "title": "منتجات أخرى قد ترغب بها",
+      "subtitle": "متاحة لفترة محدودة",
+      "button": "اكتشف في المتجر",
+      "previous_button": "السابق",
+      "next_button": "التالي"
+    },
+    "knowledge_base": {
+      "self_serve_returns": {
+        "enabled": "يمكن للعملاء طلب المرتجعات وإدارتها بأنفسهم.",
+        "disabled": "يجب على العملاء الاتصال بالتاجر لطلب الإرجاع."
+      }
+    },
+    "subscriptions": {
+      "update_payment_instrument": {
+        "title": "استبدال طريقة الدفع",
+        "loading": "جارٍ تحميل طرق الدفع",
+        "no_payment_methods_available": "لا توجد طرق دفع متاحة",
+        "select_new_payment_method": "حدد طريقة دفع جديدة",
+        "current_method": "الحالي",
+        "cancel": "إلغاء",
+        "save": "حفظ",
+        "success": "تم تحديث طريقة الدفع",
+        "use_new_payment_method": "+ استخدم طريقة الدفع الجديدة"
+      }
+    },
+    "intents": {
+      "subscription_replace_payment_method": {
+        "card_number": "رقم البطاقة",
+        "title": "استبدال طريقة الدفع",
+        "replace_with": "استبدل ب",
+        "add_new_payment_method": "أضف جديدا",
+        "save_button": "حفظ",
+        "close_button": "إغلاق",
+        "loading": "جارٍ تحميل طريقة استبدال طريقة الدفع",
+        "success": "تم تحديث طريقة الدفع",
+        "invalid_subscription_contract": "غير قادر على العثور على الاشتراك",
+        "expiry_date": "إكسب. {{expiryDate}}",
+        "edit_current_payment_method": "تعديل طريقة الدفع الحالية",
+        "edit_selected_payment_method": "تعديل طريقة الدفع المحددة"
+      }
+    },
+    "sign_in": {
+      "brand_logo_alt_text": "%{shop_name} الشعار",
+      "processing": "جارٍ المعالجة…",
+      "step_one": {
+        "page_title": "تسجيل الدخول - %{shop_name}",
+        "heading": "تسجيل الدخول",
+        "subheading": "أدخل بريدك الإلكتروني وسنرسل لك رمز التحقق",
+        "subheading_with_sign_in_options": "تسجيل الدخول أو إنشاء حساب",
+        "input_field_label": "البريد الإلكتروني",
+        "button": "متابعة",
+        "or": "أو",
+        "consent_agreement": "من خلال المتابعة، فإنك توافق على %{terms}",
+        "last_used_pill": "آخر استخدام"
+      },
+      "step_two": {
+        "page_title": "أدخل الرمز - %{shop_name}",
+        "heading": "أدخل الرمز",
+        "subheading": "أرسلت إلى %{email}",
+        "change_email": "التغيير",
+        "restart_link": "قم بتسجيل الدخول باستخدام بريد إلكتروني مختلف",
+        "input_field_label": "رمز مكون من 6 أرقام"
+      }
     }
   }
 }
