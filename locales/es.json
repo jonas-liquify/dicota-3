@@ -24,5 +24,84 @@
     "sort_by": "Ordenar por",
     "submit": "Enviar",
     "trending": "Tendencia"
+  },
+  "cart": {
+    "heading": "Carrito",
+    "empty": "Tu carrito está vacío",
+    "get_free_shipping": "Desbloquear envío gratuito",
+    "still": "Sólo",
+    "to_free_shipping": "lejos del envío gratuito",
+    "free_shipping_heading": "Envío gratuito desbloqueado",
+    "free_shipping_text": "Usted califica para envío gratis en este pedido.",
+    "total_price": "Subtotal",
+    "shipping_fee": "Envío",
+    "free": "Gratis",
+    "go_to_checkout": "Pagar",
+    "note": "Nota"
+  },
+  "blog": {
+    "no_posts": "No se encontraron publicaciones."
+  },
+  "certificates": {
+    "intro": "Todos DICOTA Productos con una Carta de conformidad (CE): filtrados por SKU o título del producto."
+  },
+  "data_sheets": {
+    "intro": "Todos DICOTA Productos con una hoja de datos, filtrados por SKU o título del producto."
+  },
+  "manuals": {
+    "intro": "Todos DICOTA Productos con un manual del producto, filtrados por SKU o título del producto."
+  },
+  "collection": {
+    "no_items": "No se encontraron artículos.",
+    "no_matches": "No hay productos que coincidan con estos filtros.",
+    "no_products": "No se encontraron productos.",
+    "show_results": "Mostrar resultados"
+  },
+  "jobs": {
+    "about_role": "sobre el papel",
+    "open_application": "¿No hay ningún puesto adecuado para usted? Todavía nos encantaría saber de usted."
+  },
+  "loyalty": {
+    "cashback": {
+      "account_holder": "Titular de la cuenta",
+      "bank": "banco",
+      "bank_match": "Los datos bancarios deben coincidir con el nombre de la empresa.",
+      "conversion": "Tasa de conversión: 50 puntos = 1 EUR/CHF",
+      "disclaimer": "DICOTA se reserva el derecho de solicitar información adicional o rechazar pagos en caso de dudas. La tasa de conversión puede cambiar sin previo aviso.",
+      "iban": "Número de cuenta / IBAN",
+      "min_points": "Se requieren al menos 10,000 puntos",
+      "payout": "Pago trimestral mediante transferencia bancaria",
+      "points_label": "Puntos a pagar (mínimo 10.000)"
+    },
+    "club": {
+      "benefit_cashback": "Reembolso desde 10.000 puntos",
+      "benefit_early": "Acceso temprano a nuevos productos",
+      "benefit_earn": "Gana puntos con cada compra",
+      "benefit_rewards": "Recompensas y paquetes exclusivos",
+      "benefit_support": "Apoyo personal del club"
+    },
+    "reward": "recompensa"
+  },
+  "marketing": {
+    "press": "prensa",
+    "product_imgs": {
+      "meta_line": "Número de artículo. · Modelo antecesor · Código EAN · Disponibilidad · Tipo de construcción · Color"
+    }
+  },
+  "products": {
+    "add_to_cart": "Añadir al carrito",
+    "on_sale": "En venta"
+  },
+  "reseller": {
+    "form": {
+      "contact_person": "Persona de contacto*",
+      "email": "Dirección de correo electrónico*",
+      "heading": "Ingrese los detalles del revendedor",
+      "phone": "Teléfono"
+    }
+  },
+  "reviews": {
+    "body": "Tu reseña",
+    "email": "Correo electrónico"
   }
 }
