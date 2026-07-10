@@ -2278,6 +2278,84 @@
         "errors": {
           "not_solved": "أكمل اختبار CAPTCHA للمتابعة"
         }
+      },
+      "clipboard": {
+        "copied": "منقول",
+        "failed_to_copy": "فشل النسخ"
+      },
+      "discount_errors": {
+        "generic_error": "تعذرت معالجة طلبك لأن رمز الخصم الخاص بك لم يعد متاحًا. قم بمراجعة إجمالي طلبك وحاول مرة أخرى."
+      },
+      "b2b_errors": {
+        "lost_b2b_purchasing_permissions": "لم يعد لديك إذن لتقديم طلبات B2B. %{logout_url} لتقديم طلب شخصي بدلاً من ذلك.",
+        "log_out_link_text": "تسجيل الخروج",
+        "lost_permissions_subtitle": "لم يعد لديك إذن لتقديم طلبات B2B. قم بتسجيل الخروج لتقديم طلب شخصي.",
+        "lost_permissions_title": "لا توجد أذونات الموقع"
+      },
+      "shop_pay_external": {
+        "title": "متجر الدفع الخروج",
+        "errors": {
+          "problem_loading": "هناك مشكلة في تحميل Shop Pay",
+          "try_again_later": "تحقق من اتصالك أو أغلق هذه النافذة وحاول مرة أخرى خلال لحظات قليلة.",
+          "checkout_has_expired": "لقد انتهت صلاحية الخروج الخاص بك. أغلق هذه النافذة وحاول السحب مرة أخرى من {{shopName}}."
+        },
+        "return_to_store": "العودة إلى {{shopName}}",
+        "return_to_store_simple": "العودة إلى المتجر"
+      },
+      "wallets": {
+        "return_to_store": "العودة إلى المتجر",
+        "return_to_checkout": "العودة إلى الخروج",
+        "redirect_hint": "سيُطلب منك تسجيل الدخول باستخدام {{walletName}}.",
+        "logged_in": "متصل ب {{email}}",
+        "shipping_line_label": "الشحن",
+        "connect_shipping_methods": "{{method1}} و {{method2}}",
+        "payment_in_progress_title": "الدفع قيد التقدم",
+        "payment_in_progress_body": "تتم معالجة دفعتك. سيتم الانتهاء من طلبك قريبا.",
+        "deceleration": {
+          "one_more_step": "خطوة أخرى..."
+        },
+        "call_to_action": "ادفع مع {{walletName}}",
+        "place_order": "وضع النظام",
+        "redirection_notice": "سيتم إعادة توجيهك إلى {{walletName}} لإكمال عملية الشراء",
+        "recovery_notice": "هناك مشكلة في تفاصيل طلبك. قم بتحديث معلوماتك لإنهاء الدفع.",
+        "errors": {
+          "unavailable": {
+            "title": "{{walletName}} غير متوفر",
+            "description": "{{walletName}} لم يكن متاحا. استخدم طريقة دفع مختلفة أو حاول مرة أخرى لاحقًا.",
+            "instructions": "كانت هناك مشكلة مع {{walletName}}. ارجع إلى المتجر للمحاولة مرة أخرى أو التحقق بطريقة مختلفة.",
+            "unavailable_for_country": "{{walletName}} غير متوفر في {{countryName}}. حدد طريقة دفع مختلفة لإكمال عملية الشراء"
+          },
+          "unavailable_terminal": {
+            "instructions": "{{walletName}} غير متوفر حاليا لطلبك. لمواصلة عملية الشراء، اختر طريقة دفع أخرى."
+          },
+          "subscription_review_required": "يتضمن طلبك اشتراكًا. يجب عليك مراجعة الشروط أدناه قبل إكمال طلبك.",
+          "generic": "كانت هناك مشكلة مع {{walletName}}. حاول مرة أخرى أو استخدم طريقة دفع مختلفة.",
+          "discount_code": "غير قادر على تطبيق رمز الخصم هذا. قم بمراجعة الرمز الخاص بك وحاول مرة أخرى.",
+          "terminal": "كانت هناك مشكلة مع {{walletName}}. استخدم طريقة دفع مختلفة.",
+          "detour": {
+            "stock_problems": "بعض العناصر لم تعد متوفرة. إغلاق {{walletName}} وحاول مرة أخرى.",
+            "price_change": "لقد تغيرت أسعار بعض العناصر. إغلاق {{walletName}} لمراجعة طلبك والمحاولة مرة أخرى.",
+            "queue": "لقد تم وضعك في قائمة الانتظار للخروج. إغلاق {{walletName}} للمتابعة.",
+            "currency_change": "لا يمكنك استخدام عنوان مختلف مع {{walletName}}. استخدم العنوان الأصلي، أو جرب طريقة دفع مختلفة."
+          },
+          "unsupported": {
+            "address": "لا يمكن للتاجر التسليم إلى هذا العنوان",
+            "wallet_is_unavailable": "{{walletName}} لا يمكن استخدامها مع هذا العنوان. حدد عنوانًا مختلفًا أو أغلقه {{walletName}} لإكمال عملية الشراء",
+            "postal_code": "هذا الموقع غير مدعوم"
+          },
+          "outdated": {
+            "shipping_method": "لقد تغيرت خيارات الشحن لطلبك. قم بمراجعة اختيارك.",
+            "payment_terms": "لقد تغيرت شروط الدفع. قم بمراجعة طلبك"
+          },
+          "invalid": {
+            "shipping_address": "أدخل عنوان شحن صالحًا",
+            "billing_address": "أدخل عنوانًا صالحًا لإرسال الفواتير",
+            "shipping_option": "اختر خيار شحن صالحًا",
+            "email": "أدخل بريدًا إلكترونيًا صالحًا",
+            "zone": "أدخل ولاية / مقاطعة صالحة",
+            "billing_zone": "أدخل عنوانًا صالحًا لإرسال الفواتير (الولاية/المقاطعة)."
+          }
+        }
       }
     }
   }
