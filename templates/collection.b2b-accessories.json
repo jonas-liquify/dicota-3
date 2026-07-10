@@ -138,6 +138,15 @@
         "padding_bottom": 4,
         "show_rating": true
       }
+    },
+    "collection_image_her_M9pfGR": {
+      "type": "collection_image_her",
+      "name": "Collection Image Her",
+      "settings": {
+        "textarea_text": "Refined design. Recycled modern materials.",
+        "padding_top": 2.5,
+        "padding_bottom": 2.5
+      }
     }
   },
   "layout": "theme",
@@ -147,6 +156,7 @@
     "featured_product_qe68Cr",
     "collection_intro",
     "collection_products",
-    "testimonials"
+    "testimonials",
+    "collection_image_her_M9pfGR"
   ]
 }
