@@ -1493,8 +1493,8 @@ figcaption {
   align-items: center;
   width: 100%;
   height: auto;
-  padding-left: 5%;
-  padding-right: 5%;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
   display: flex;
 }
 
@@ -1828,6 +1828,8 @@ figcaption {
   aspect-ratio: 545 / 606;
   margin-left: 0;
   margin-bottom: 0;
+  position: sticky;
+  top: 4.5rem;
 }
 
 /* Rechte Spalte: Fotos füllen das Quadrat (cover), kein Innenabstand */
@@ -4139,6 +4141,8 @@ figcaption {
     float: none;
     width: 100%;
     aspect-ratio: auto;
+    position: relative;
+    top: auto;
   }
   .swiper-slide.is-product-gallery:not(:first-child) .product-header_gallery-lightbox {
     padding: 1rem;
@@ -4607,7 +4611,6 @@ figcaption {
   .reseller-header_btn-outline,
   .reseller-header_btn-solid { padding: 0.625rem 1rem; font-size: 0.8125rem; }
   .product-header_gallery > .swiper.is-product-gallery { width: 100%; aspect-ratio: 1 / 1; height: auto !important; max-height: 32.5rem; }
-  /* Mobile-Nav: Logo ganz links, Icons (Cart/Account/Suche) + Burger ganz rechts */
   .nav_container > .nav_menu-button {
     order: 1;
   }
@@ -4701,10 +4704,6 @@ figcaption {
     text-transform: uppercase;
     font-weight: 600;
     letter-spacing: .06em;
-  }
-  .product-card .product-card_rating {
-    left: .75rem;
-    right: auto;
   }
   .section_usp-row .usp-row_grid {
     grid-template-columns: repeat(2, 1fr);
@@ -4962,6 +4961,8 @@ figcaption {
   .nav_component {
     height: auto;
     min-height: 5.3rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
   }
   .nav_logo-link {
     padding-left: 0;
@@ -5218,10 +5219,6 @@ figcaption {
   .featured-products_item {
     width: 16rem;
   }
-  .product-card_image-link.product-card_image-link {
-    height: auto;
-    aspect-ratio: 3 / 4;
-  }
   .featured-products_arrow {
     width: 2.5rem;
     height: 2.5rem;
@@ -5371,7 +5368,7 @@ figcaption {
     font-size: 1.5rem;
   }
   .collection-intro_tiles.collection-intro_tiles {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
   }
   .coll_grid {
     grid-template-columns: repeat(2, 1fr);
@@ -5472,10 +5469,6 @@ figcaption {
   .nav_search-empty-grid, .nav_search-results-grid { grid-template-columns: 1fr; gap: 2rem; }
   .article_title, .article_body h2, .article_body h3, .article_body blockquote { font-size: 1.6rem; }
   .value-tabs_link, .value-tabs_pane { grid-column: 1; }
-  .product-card .product-card_image-link {
-    height: auto;
-    aspect-ratio: 3 / 4;
-  }
   .multi-form_product-row {
     flex-wrap: wrap;
   }
@@ -5501,6 +5494,15 @@ figcaption {
   .headline-text_grid {
     grid-template-columns: 1fr;
     gap: 1rem;
+  }
+  .why-dicota_card-heading {
+    font-size: 1.5rem;
+  }
+  .section_collection-image-hero > .padding-global {
+    min-height: 25rem;
+  }
+  .collection-image-hero_content {
+    max-width: 100%;
   }
 }
 
@@ -5879,10 +5881,6 @@ figcaption {
     grid-template-columns: repeat(2, 1fr);
     gap: 0.75rem 0.5rem;
   }
-  .product-card_image-link.product-card_image-link {
-    height: auto;
-    aspect-ratio: 3 / 4;
-  }
   .section_collection-header > .padding-global {
     padding-top: 2rem;
     padding-bottom: 3rem;
@@ -6127,6 +6125,10 @@ figcaption {
   }
   .multi-form_button-group .button.is-secondary {
     margin-right: 0;
+  }
+  .collection-intro_layout {
+    grid-auto-flow: row;
+    grid-template-columns: repeat(11, 1fr);
   }
 }
 
@@ -7038,7 +7040,8 @@ figcaption {
   position: relative;
   display: block;
   width: 100%;
-  height: 28.6875rem;
+  height: auto;
+  aspect-ratio: 3 / 4;
   padding: .625rem;
   background-color: #f6f6f6;
   overflow: hidden;
@@ -9636,6 +9639,13 @@ button.li-lang_dd-link {
   font-size: 0.875rem;
   font-weight: 600;
 }
+.product-reviews_item-verified {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #2f7d3c;
+  display: inline-flex;
+  align-items: center;
+}
 .product-reviews_item-date {
   font-size: 0.8125rem;
   color: #888888;
@@ -9783,8 +9793,6 @@ button.li-lang_dd-link {
   display: block;
   flex: 1 1 auto;
   min-width: 0;
-  position: sticky;
-  top: 4.5rem;
 }
 
 /* ── Gallery ─────────────────────────────────────────────── */
@@ -10449,6 +10457,7 @@ button.li-lang_dd-link {
   grid-template-columns: 1fr 2fr;
   gap: 3rem;
   align-items: start;
+  grid-auto-flow: row;
 }
 
 .collection-intro_text-col {
@@ -10478,9 +10487,15 @@ button.li-lang_dd-link {
 }
 
 .collection-intro_tile {
+  display: block;
+}
+
+.collection-intro_tile-link {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
+  color: inherit;
+  text-decoration: none;
 }
 
 .collection-intro_tile-media {
@@ -10592,9 +10607,7 @@ button.li-lang_dd-link {
 }
 
 .coll_filter-dropdown {
-  position: absolute;
-  top: 100%;
-  left: 0;
+  position: fixed;
   min-width: 14rem;
   background-color: #ffffff;
   border: 1px solid #e8e8e8;
@@ -14984,10 +14997,12 @@ button.li-lang_dd-link {
   pointer-events: none;
   transition: opacity .12s ease, visibility .12s ease;
 }
-.section_navbar .nav_dropdown-list.nav_mega.w--open {
+.section_navbar .nav_dropdown-list.nav_mega.w--open,
+.section_navbar .nav_dropdown-list.nav_mega.w--nav-dropdown-list-open {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
+  height: auto !important;
 }
 /* Ensure the navbar component is the positioning context for the dropdown
    so it sticks below the nav bar instead of the viewport top. We also
@@ -15347,7 +15362,8 @@ button.li-lang_dd-link {
 .section_navbar .nav_menu-dropdown .w-dropdown-toggle,
 .section_navbar .nav_menu-dropdown .w-dropdown-link,
 .section_navbar .nav_menu-dropdown a,
-.section_navbar .w-dropdown-toggle.nav_dropdown-toggle {
+.section_navbar .w-dropdown-toggle.nav_dropdown-toggle,
+.section_navbar .nav_shop-icon-cart.w-dropdown-toggle {
   color: inherit;
 }
 /* =============================================================
@@ -16210,16 +16226,16 @@ button.li-lang_dd-link {
     display: none;
   }
   .ph_gallery-more {
-    clear: left;
-    float: left;
-    width: calc(63.6% - .375rem);
+    clear: right;
+    float: right;
+    width: 36.4%;
     box-sizing: border-box;
     margin-top: .75rem;
     padding: .25rem 0;
     background: none;
     border: 0;
     cursor: pointer;
-    text-align: left;
+    text-align: center;
     font-family: "Futura PT", sans-serif;
     font-weight: 600;
     font-size: .875rem;
@@ -17212,11 +17228,6 @@ img.product-header_gallery-image {
   line-height: 1.34;
   color: #0f0f0f;
 }
-@media screen and (max-width: 767px) {
-  .why-dicota_card-heading {
-    font-size: 1.5rem;
-  }
-}
 
 /* =============================================================
    DICOTA — Video (Section: Video)
@@ -17288,11 +17299,295 @@ img.product-header_gallery-image {
   font-size: 1.25rem;
   line-height: 1.26;
 }
+
+/* =============================================================
+   DICOTA — Wishlist + Vergleichen temporär ausgeblendet
+   Kundenwunsch: Feature erstmal komplett hiden (Header-Icon,
+   Produktkarten-Herz, Vergleichen-Button auf der Produktseite).
+   Rein visuell (CSS) — Markup/Logik bleibt erhalten, einfach
+   rueckgaengig zu machen indem dieser Block entfernt wird.
+   ============================================================= */
+.nav_wishlist.nav_wishlist,
+.product-card_favorite.product-card_favorite,
+.ph_buy-actions.ph_buy-actions {
+  display: none !important;
+}
+
+/* =============================================================
+   DICOTA — Burger-Menü: Mega-Menu Fixes (Figma 5890:5881 Mobile)
+   Die "Header Mega Menu"-Desktop-Regeln (weiter oben) wurden NACH
+   diesen Mobile-Overrides ergänzt und haben sie durch gleiche/
+   hoehere Spezifitaet + spaetere Source-Order lautlos ausgehebelt
+   (bekanntes CSS-Spezifitaets-Muster in diesem Projekt). Hier
+   erneut mit ausreichender Spezifitaet + Datei-Ende deklariert:
+   1) Toggle/Link-Text war weiss-auf-weiss (inherit von
+      .is-transparent) im weissen Burger-Menu-Panel.
+   2) Mega-Menu-Liste blieb position:absolute + 2-spaltig statt
+      static + 1-spaltig zu stapeln -> kollabierte auf 0 Hoehe.
+   3) Promo-Bild/-Panel wird im Burger-Menu komplett ausgeblendet
+      (Kundenwunsch: dort nicht benoetigt).
+   ============================================================= */
+@media screen and (max-width: 991px) {
+  .nav_menu.is-page-height-tablet .nav_dropdown-toggle,
+  .nav_menu.is-page-height-tablet .nav_dropdown-link,
+  .nav_menu.is-page-height-tablet .nav_dropdown-link_child {
+    color: #0f0f0f;
+  }
+  .section_navbar .nav_dropdown-list.nav_mega {
+    position: static;
+    inset: auto;
+    grid-template-columns: 1fr;
+    border-top: 0;
+    max-height: none;
+  }
+  .nav_mega-cols.nav_mega-cols {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1.25rem;
+  }
+  .nav_mega-col.nav_mega-col {
+    gap: .5rem;
+  }
+  .nav_mega-promo.nav_mega-promo {
+    display: none;
+  }
+  .nav_menu-dropdown .nav_dropdown-toggle.nav_dropdown-toggle {
+    opacity: 1;
+  }
+}
+
+/* Mega-Menu-Spalten (Header/Links) tragen die generische Webflow-Klasse
+   .w-dropdown-link und werden dadurch von der "force inherit"-Regel weiter
+   oben (.section_navbar .nav_menu-dropdown .w-dropdown-link/a { color:
+   inherit }) erfasst — die faellt bei transparentem Header (weiss) auf
+   das weisse Mega-Menu-Panel zurueck. Betrifft Desktop UND Mobile, daher
+   ohne Media-Query. Gleiche Spezifitaet (3 Teile) + Datei-Ende. */
+.section_navbar .nav_menu-dropdown .nav_mega-col-header,
+.section_navbar .nav_menu-dropdown .nav_mega-col-link {
+  color: #0f0f0f;
+}
+
+/* =============================================================
+   DICOTA — Produktkarte: Badge/Rating überlappen auf schmalen Kacheln
+   Sale-Badge (unten links) + Rating (unten rechts) sind zusammen
+   breiter als schmale Mobile-Kacheln → Überlappung/optisches
+   "Abschneiden". Rating auf oben rechts verlagern. Datei-Ende +
+   gleiche Spezifität, da die Basis-Regel (.product-card_rating,
+   bottom:0) später im File steht und sonst gewinnt.
+   ============================================================= */
 @media screen and (max-width: 767px) {
-  .section_collection-image-hero > .padding-global {
-    min-height: 25rem;
+  .product-card_rating {
+    top: 0;
+    bottom: auto;
   }
-  .collection-image-hero_content {
-    max-width: 100%;
-  }
+}
+
+/* =============================================================
+   DICOTA — Breakpoint-Refactor: Wiederherstellung verdeckter Mobile-Overrides
+   Automatisch aus systematischem Scan generiert (198 Konflikte).
+   Grund: spätere unconditional-Regeln (aus dem urspruenglichen
+   section-by-section Build) haben gleiche Spezifitaet + spaeteren
+   Source-Order als die @media-Overrides aus dem Responsive-Refactor
+   und gewinnen daher faelschlich auch innerhalb der Media Query.
+   Diese Bloecke stellen die beabsichtigten Mobile/Tablet-Werte wieder her.
+   ============================================================= */
+@media screen and (max-width: 991px) {
+  .section_hero { margin-top: -7rem; }
+  .hero_headline { font-size: 1.75rem; }
+  .hero_arrow { width: 2rem; height: 2rem; }
+  .hero_arrow-prev { left: .75rem; }
+  .usp-row_grid { gap: 2.5rem 1.5rem; grid-template-columns: repeat(2, 1fr); }
+  .image-banner_headline { font-size: 1.75rem; }
+  .image-link-list_inner { min-height: auto; grid-template-columns: 1fr; }
+  .image-link-list_inner.is-image-right { grid-template-areas: none; }
+  .image-link-list_text-side { padding: 3rem 1.5rem; }
+  .image-link-list_content { gap: 2rem; }
+  .loved-by_headline-title { font-size: 1.5rem; }
+  .footer-newsletter_promos { grid-template-columns: 1fr; }
+  .footer-newsletter_main { gap: 2.5rem; }
+  .footer-newsletter_headline { font-size: 2rem; }
+  .swiper-slide.is-product-features { width: calc(33.333% - 1rem); }
+  .product-loved-by_grid { grid-template-columns: repeat(2, 1fr); }
+  .product-comparison_table-outer { padding: 2.5rem 1.5rem; }
+  .product-reviews_layout { grid-template-columns: 1fr; }
+  .product-reviews_summary { position: static; }
+  .product-header_details { padding: 2rem 2.5rem; max-width: 100%; }
+  .collection-intro_layout { gap: 2rem; grid-template-columns: 1fr; }
+  .coll_filter-bar-outer { top: 0; }
+  .coll_grid { grid-template-columns: repeat(3, 1fr); }
+  .section_collection-header > .padding-global { padding-bottom: 4rem; padding-top: 3rem; }
+  .collection-header_title { font-size: 2.25rem; }
+  .collection-header_layout { gap: 2rem; }
+  .section_feature-product > .padding-global { padding-bottom: 4rem; padding-top: 3rem; }
+  .feature-product_card { aspect-ratio: auto; min-height: 0; grid-template-columns: 1fr; }
+  .feature-product_content { padding: 2rem 1.5rem; }
+  .why-us_grid { gap: 2rem; grid-template-columns: 1fr; }
+  .icon-cards_grid { grid-template-columns: 1fr; }
+  .owner_grid { gap: 2rem; grid-template-columns: 1fr; }
+  .owner_main-component { min-height: 22rem; }
+  .section_discover { min-height: 0; grid-template-columns: 1fr; }
+  .discover_item-content { padding: 3rem 1.5rem; }
+  .value-tabs_component { grid-template-columns: 1fr; }
+  .faq_wrapper { grid-template-columns: 1fr; }
+  .section_image-hero { min-height: 50vh; }
+  .subnav_component { padding: 0 1rem; }
+  .nav_secondary-content.is-subnav { min-width: 100%; }
+  .subnav_dropdown-list { grid-template-columns: 1fr; }
+  .acc-cards_heading { grid-template-columns: 1fr; }
+  .acc-cards_grid { grid-template-columns: 1fr 1fr; }
+  .acc-dis_tab-component { grid-template-columns: 1fr; }
+  .acc-dis_tab-pane { grid-template-columns: 1fr 1fr; }
+  .acc-welcome_top { grid-template-columns: 1fr; }
+  .split-hero_grid { gap: 2rem; grid-template-columns: 1fr; }
+  .split-hero_bg-wrapper { grid-template-columns: 1fr; }
+  .acc-banner { grid-template-columns: 1fr; }
+  .acc-banner_content { padding: 2.5rem 2rem; }
+  .acc-banner_image { max-height: 18rem; }
+  .acc-double { grid-template-columns: 1fr; }
+  .acc-triple { grid-template-columns: 1fr 1fr; }
+  .acc-card { padding: 1.75rem; }
+  .acc_banner-item.is-large { gap: 1.5rem; }
+  .acc_gutschein-form-wrapper { position: static; }
+  .acc_gutschein-form { padding: 1.75rem; }
+  .faq_header.is-account { padding: 1.25rem; }
+  .multi-form_heading { padding: 1.25rem 1.5rem; }
+  .multi-form_form-content { padding: 1.5rem; }
+  .multi-form_triple { gap: 1.25rem; grid-template-columns: 1fr; }
+  .multi-form_double { gap: 1.25rem; grid-template-columns: 1fr; }
+  .reseller-hub_grid { grid-template-columns: 1fr; }
+  .reseller-hub_media { min-height: 22rem; }
+  .reseller-hub_panel-inner { padding: 2.5rem; max-width: none; }
+  .category-row_grid { justify-content: center; gap: 1.5rem; }
+  .coll-intro-cards_layout { gap: 2rem; }
+  .b2b-news_panel { min-height: 0; grid-template-columns: 1fr; }
+  .blog-featured_media { flex: none; }
+  .blog-featured_panel { padding: 2rem 0 0; }
+  .blog-grid { grid-template-columns: repeat(2, 1fr); }
+  .more-stories_grid { grid-template-columns: repeat(2, 1fr); }
+  .nav_mega-cols { padding: 1.25rem; gap: 1rem; grid-template-columns: 1fr; }
+  .nav_mega-col { gap: .5rem; }
+  .nav_mega-promo { padding: 1.5rem; min-height: 16rem; }
+  .nav_mega-promo-headline { font-size: 1.5rem; }
+  .nav_mega-promo-text { font-size: 1rem; }
+  .nav_menu-dropdown .nav_dropdown-toggle { opacity: 1; }
+  .reseller-header_nav { padding: 1rem 1.25rem; }
+  .mkt-order_thead { display: none; }
+  .mkt-order_row { align-items: start; padding: 1rem 1.25rem; gap: 0.75rem 1rem; grid-template-columns: 5rem 1fr; }
+  .mkt-order_img { width: 5rem; height: 5rem; }
+  .mkt-collection_card { padding: 1.25rem 1.5rem; }
+  .mkt-collection_thumb { width: 4.5rem; height: 3rem; }
+  .swiper-slide.featured-products_item { width: 85%; }
+  .accessories_item { width: 85%; }
+  .accessories_tabs { flex-wrap: nowrap; }
+  .sol-feature { grid-template-columns: 1fr; }
+  .sol-facts_grid { grid-template-columns: repeat(2, 1fr); }
+  .sol-refs_grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media screen and (max-width: 767px) {
+  .hero_arrow { width: 2rem; height: 2rem; }
+  .hero_arrow-prev { left: .75rem; }
+  .swiper-slide.is-product-features { width: calc(66.666% - 1rem); }
+  .product-loved-by_grid { grid-template-rows: repeat(4, minmax(0, 1fr)); height: clamp(40rem, 130vw, 60rem); grid-template-columns: repeat(2, 1fr); }
+  .coll_grid { gap: 1rem 0.75rem; grid-template-columns: repeat(2, 1fr); }
+  .value-tabs_component { grid-template-columns: 1fr; }
+  .accessories_item { width: 16rem; }
+  .sol-facts_grid { grid-template-columns: 1fr; }
+  .sol-refs_grid { grid-template-columns: repeat(2, 1fr); }
+  .featured-products_heading { align-items: flex-start; }
+  .featured-products_item { width: 16rem; }
+  .featured-products_arrow { width: 2.5rem; height: 2.5rem; }
+  .category-tile { height: 30rem; }
+  .shop-by-category_arrow { width: 2.5rem; height: 2.5rem; }
+  .shop-by-category_scrollbar { width: 100%; }
+  .two-column-banner_grid { grid-template-columns: 1fr; }
+  .two-column-banner_item { min-height: 50vh; }
+  .two-column-banner_content { padding: 1.5rem; }
+  .accessories_arrow { width: 2.5rem; height: 2.5rem; }
+  .accessories_scrollbar { width: 100%; }
+  .loved-by_arrow { width: 2.5rem; height: 2.5rem; }
+  .sustainability_counter-digit { padding: .25rem .4375rem; font-size: 1.5rem; }
+  .sustainability_title { font-size: 2rem; }
+  .testimonials_arrow { width: 2.5rem; height: 2.5rem; }
+  .swiper-slide.is-add-to-kit { width: 11.25rem; }
+  .ph_price-row { align-items: flex-start; gap: 0.5rem; }
+  .ph_trust-grid { gap: 0.5rem; grid-template-columns: 1fr; }
+  .ph_tab { padding: 0.65rem 0.75rem; font-size: 0.75rem; }
+  .we-care-banner_headline { font-size: 2rem; }
+  .we-care-banner_counter-num { font-size: 1.5rem; }
+  .coll_promo-card { grid-column: 1 / -1; }
+  .coll_promo-card_inner { min-height: 18rem; }
+  .nav_search-overlay-panel { padding: 1rem 1.25rem 1.5rem; }
+  .nav_search-product-grid { grid-template-columns: 1fr 1fr; }
+  .reseller-promo_grid { grid-template-columns: 1fr; }
+  .dicota-difference_btn { min-width: 0; }
+  .coll-intro-cards_grid { gap: 1.75rem; }
+  .blog-list_bar { align-items: flex-start; gap: 1rem; }
+  .article_intro { font-size: 1.125rem; }
+  .ph-lightbox_nav { width: 2.5rem; height: 2.5rem; }
+  .ph-lightbox_nav.is-next { right: .5rem; }
+  .hero_pagination { bottom: 1rem; gap: .75rem; }
+  .hero_bullet.is-active { width: 2.25rem; }
+  .value-tabs_pane { grid-row: auto; }
+  .sol-facts_value { font-size: 1.875rem; }
+  .announcement-bar_reseller-btn { padding: .25rem .6rem; }
+  .headline-text_grid { gap: 1rem; grid-template-columns: 1fr; }
+  .why-dicota_card-heading { font-size: 1.5rem; }
+  .section_collection-image-hero > .padding-global { min-height: 25rem; }
+  .collection-image-hero_content { max-width: 100%; }
+}
+@media screen and (max-width: 479px) {
+  .hero_headline { font-size: 1.5rem; }
+  .footer-newsletter_headline { font-size: 1.75rem; }
+  .swiper-slide.is-product-features { width: 85%; }
+  .product-loved-by_grid { grid-template-columns: repeat(2, 1fr); }
+  .product-header_details { padding: 1.5rem 1.25rem; }
+  .collection-intro_layout { grid-template-columns: repeat(11, 1fr); }
+  .coll_grid { gap: 0.75rem 0.5rem; grid-template-columns: repeat(2, 1fr); }
+  .section_collection-header > .padding-global { padding-bottom: 3rem; padding-top: 2rem; }
+  .collection-header_title { font-size: 1.75rem; }
+  .section_feature-product > .padding-global { padding-bottom: 3rem; padding-top: 2rem; }
+  .feature-product_content { padding: 1.5rem 1rem; }
+  .acc-cards_grid { grid-template-columns: 1fr; }
+  .acc-dis_tab-pane { padding: 1.5rem; grid-template-columns: 1fr 1fr; }
+  .acc-banner_content { padding: 2rem 1.25rem; }
+  .acc-card { padding: 1.25rem; }
+  .reseller-hub_panel-inner { padding: 1.75rem; }
+  .blog-grid { grid-template-columns: 1fr; }
+  .nav_mega-promo { padding: 1rem; min-height: 14rem; }
+  .nav_mega-promo-headline { font-size: 1.25rem; }
+  .mkt-collection_card { padding: 1rem 1.25rem; }
+  .mkt-collection_thumb { width: 3.5rem; height: 2.5rem; }
+  .swiper-slide.is-add-to-kit { width: 10rem; }
+  #w-node-b20e30bd-9cd3-7da4-6e58-bb49e01bdeca-e01bde9f { grid-area: span 1 / span 1 / span 1 / span 1; }
+  #w-node-_4ff72092-e0e6-d591-6af1-5b10f594a63c-f594a625 { grid-area: span 1 / span 2 / span 1 / span 2; }
+  #w-node-_4ff72092-e0e6-d591-6af1-5b10f594a64f-f594a625 { place-self: end; }
+  .footer-newsletter_link-grid { grid-template-columns: 1fr; }
+  .footer-bottom_legal-row { align-items: flex-start; gap: 1rem; }
+  .produkt_swatch-lable.is-max { max-width: 4.5rem; }
+  .collection-header_desc { font-size: 1rem; }
+  .feature-product_title { font-size: 1.25rem; }
+  .image-card_link { min-height: 16rem; }
+  .image-card_link.is-large { min-height: 22rem; }
+  .swiper-slide.is-history-swiper { width: 16rem; }
+  .company_icon-list { align-items: flex-start; gap: 1.5rem; }
+  .benefits_grid { gap: 2rem; grid-template-columns: 1fr; }
+  .jobs_item-top { flex-direction: column; }
+  .value-tabs_content { padding: 1.5rem; }
+  .value-tabs_link { padding: 0.75rem 1rem; font-size: 1.125rem; }
+  .acc_cta { align-items: flex-start; }
+  .acc_download-banner { align-items: flex-start; padding: 1.25rem; gap: 1rem; }
+  .acc_double-icons-list { align-items: flex-start; gap: 0.75rem; }
+  .acc_support-card-content { align-items: flex-start; gap: 0.75rem; }
+  .product-finder_embed { min-height: 24rem; }
+  .reseller-hero_search-cat { display: none; }
+  .category-row_circle { height: 5rem; }
+  .news-updates_blue-inner { padding: 2rem 1.5rem; }
+  .news-updates_card-content { padding: 2.5rem 1.5rem; }
+  .ph_title-row { gap: .5rem; }
+  .mkt-order_card { padding: 1rem; }
+  .mkt-order_label { font-size: 1rem; }
+  .mkt-doc_card { padding: 0.875rem 1rem; gap: 0.75rem; }
+  .ph-dim-modal_panel { width: 100%; }
+  .multi-form_button-group .button { min-width: 0; }
+  .multi-form_button-group .button.is-secondary { margin-right: 0; }
 }
