@@ -802,7 +802,7 @@ figcaption {
 }
 
 .section_navbar {
-  z-index: 1000;
+  z-index: 1002;
   background-color: var(--base-color-neutral--white);
   position: sticky;
   top: 0;
@@ -5573,7 +5573,7 @@ figcaption {
     align-items: flex-start;
   }
   .swiper-slide.is-add-to-kit {
-    width: 11.25rem;
+    width: 16rem;
   }
   .product-header_radio-list > div:not(.li-tag) {
     flex: 1 1 calc(50% - .25rem);
@@ -5818,7 +5818,7 @@ figcaption {
     font-size: 2rem;
   }
   .swiper-slide.is-add-to-kit.is-add-to-kit {
-    width: 11.25rem;
+    width: 16rem;
   }
   .ph_tab.ph_tab {
     padding: 0.65rem 0.75rem;
@@ -6258,7 +6258,7 @@ figcaption {
     grid-template-columns: repeat(2, 1fr);
   }
   .swiper-slide.is-add-to-kit {
-    width: 10rem;
+    width: 16rem;
   }
   .produkt_swatch-item,
   .produkt_swatch-link {
@@ -6582,7 +6582,7 @@ figcaption {
     height: 2.5rem;
   }
   .swiper-slide.is-add-to-kit.is-add-to-kit {
-    width: 10rem;
+    width: 16rem;
   }
   #w-node-b20e30bd-9cd3-7da4-6e58-bb49e01bdeca-e01bde9f#w-node-b20e30bd-9cd3-7da4-6e58-bb49e01bdeca-e01bde9f { grid-area: span 1 / span 1 / span 1 / span 1; }
   #w-node-_4ff72092-e0e6-d591-6af1-5b10f594a63c-f594a625#w-node-_4ff72092-e0e6-d591-6af1-5b10f594a63c-f594a625 { grid-area: span 1 / span 2 / span 1 / span 2; }
@@ -7011,6 +7011,13 @@ figcaption {
   position: relative;
   z-index: 1001;
 }
+/* .section_navbar sits above the announcement bar (z-index 1002) so the
+   search overlay and mini-cart dropdown, which live inside the navbar,
+   aren't covered by the bar. While one of the bar's own dropdowns is open,
+   temporarily outrank the navbar so that dropdown isn't hidden either. */
+.section_announcement-bar:has(.w--open) {
+  z-index: 1200;
+}
 /* Defensive: explicit white on all common text children in case
    CSS-variable inheritance doesn't resolve (Liquiflow Builder timing). */
 .section_announcement-bar,
@@ -7138,6 +7145,13 @@ figcaption {
   background-repeat: no-repeat;
   border-radius: 2px;
   overflow: hidden;
+  flex: none;
+}
+
+/* Small globe icon before the language code in the lang/currency toggle */
+.announcement-bar_lang-globe {
+  width: 1rem;
+  height: 1rem;
   flex: none;
 }
 

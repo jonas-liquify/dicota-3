@@ -1,0 +1,70 @@
+{
+  "sections": {
+    "two_column_hero": {
+      "type": "two_column_hero",
+      "settings": {
+        "text_heading": "Tailor Made — Individual solutions to fit your unique needs",
+        "textarea_text": "Make your brand stand out with personalized DICOTA bags representing your individual business needs. Every endeavour is unique. DICOTA develops the perfect bag for you, ideally tailored to your needs. Whether as a high-quality, personal thank-you gift for your customers or to protect your employees' valuable work equipment - with personalized bags from DICOTA, you can carry your brand out into the world. Our products are designed in such a way that they can be customized with your logo even in small quantities."
+      }
+    },
+    "feature_card_grid": {
+      "type": "feature_card_grid",
+      "settings": {
+        "text_subline": "You never work alone.",
+        "text_heading": "At DICOTA, we create the perfect solution through dialogue. Our experts listen, advise, and turn your ideas into practical designs, tailored to your corporate identity, budget, and needs.",
+        "textarea_text": "With extensive cross-industry expertise, the DICOTA team brings added value in materials, functionality, and manufacturing technologies. The result? Enhanced user satisfaction, improved efficiency, and cost targets met seamlessly - a true win-win approach. Compliance is at the core of our process. We fully adhere to EU legal standards and go further by verifying REACH and RoHS compliance through independent labs. Your dedicated DICOTA contact ensures smooth project management, coordinating every step and achieving milestones on time. Through focused meetings and workshops, we guarantee the creation of nothing less than the perfect carrying solution."
+      },
+      "blocks": {
+        "feature-cards": {
+          "type": "feature-cards",
+          "static": true,
+          "settings": {},
+          "blocks": {
+            "c1": {
+              "type": "feature-karte",
+              "settings": {
+                "text_heading": "Pad Printing",
+                "textarea_text": "A versatile method suitable for most surfaces, offering precise and clear results, even for complex designs."
+              }
+            },
+            "c2": {
+              "type": "feature-karte",
+              "settings": {
+                "text_heading": "Interested in exploring possibilities?",
+                "textarea_text": "Get in touch and let's discuss the perfect tailor-made solution for your brand.",
+                "url_button_link": "shopify://pages/contact",
+                "text_button_text": "Contact Us"
+              }
+            },
+            "c3": {
+              "type": "feature-karte",
+              "settings": {
+                "text_heading": "Doming Logo Plate",
+                "textarea_text": "This technique involves printing the logo onto a plate and enhancing it with a sleek 3D coating for a premium finish."
+              }
+            },
+            "c4": {
+              "type": "feature-karte",
+              "settings": {
+                "text_heading": "Happy Customers",
+                "textarea_text": "Consultancies, banks and insurance companies, sales and service organizations, technical field service, construction, public sector, public transport, military, fire brigade, police."
+              }
+            }
+          },
+          "block_order": [
+            "c1",
+            "c2",
+            "c3",
+            "c4"
+          ]
+        }
+      }
+    }
+  },
+  "order": [
+    "two_column_hero",
+    "feature_card_grid"
+  ],
+  "layout": "theme",
+  "wrapper": "main.main-wrapper"
+}
