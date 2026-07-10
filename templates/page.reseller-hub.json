@@ -124,7 +124,7 @@
           "type": "reseller-vorteil",
           "name": "Reseller Vorteil",
           "settings": {
-            "text_titel": "Marketing & Sales",
+            "text_titel": "Volume Pricing: Get your Quote",
             "textarea_text": "Use the club's tools and resources to present your range at its best — both online and on the sales floor!"
           },
           "blocks": {}
@@ -133,7 +133,7 @@
           "type": "reseller-vorteil",
           "name": "Reseller Vorteil",
           "settings": {
-            "text_titel": "Marketing & Sales",
+            "text_titel": "Marketing Support & Assets",
             "textarea_text": "Use the club's tools and resources to present your range at its best — both online and on the sales floor!"
           },
           "blocks": {}
@@ -142,7 +142,7 @@
           "type": "reseller-vorteil",
           "name": "Reseller Vorteil",
           "settings": {
-            "text_titel": "Marketing & Sales",
+            "text_titel": "Services & Tools",
             "textarea_text": "Use the club's tools and resources to present your range at its best — both online and on the sales floor!"
           },
           "blocks": {}
@@ -151,7 +151,7 @@
           "type": "reseller-vorteil",
           "name": "Reseller Vorteil",
           "settings": {
-            "text_titel": "Marketing & Sales",
+            "text_titel": "Excluisve Sale% Offers",
             "textarea_text": "Use the club's tools and resources to present your range at its best — both online and on the sales floor!"
           },
           "blocks": {}
