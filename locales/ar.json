@@ -1104,7 +1104,69 @@
         "purchase_options_subscription_cancellation_instructions": "%{cancel_text} يرجى الاطلاع على %{cancellation_policy_label}.",
         "purchase_options_subscription_cancel_text": "يمكنك الإلغاء في أي وقت عن طريق الذهاب إلى حسابك أو الاتصال بالمتجر.",
         "change_currency_section_description": "حدد خيار العملة",
-        "no_real_orders_dev_store": "لا يمكن لهذا المتجر قبول الطلبات الحقيقية أو المدفوعات الحقيقية."
+        "no_real_orders_dev_store": "لا يمكن لهذا المتجر قبول الطلبات الحقيقية أو المدفوعات الحقيقية.",
+        "order_edit_banner_multiple_items_return_line_item_removed": "تمت الإزالة {{amount}} من العودة",
+        "order_edit_banner_single_item_updated": "تم التحديث",
+        "order_edit_banner_updated_order_label": "طلب محدث",
+        "order_edit_banner_previous_taxes_label": "الضرائب السابقة:",
+        "order_edit_banner_new_taxes_label": "الضرائب الجديدة:",
+        "order_edit_banner_no_taxes_label": "لا شيء",
+        "gift_card_wrapper": {
+          "heading": "بطاقة هدية",
+          "apply_gift_card_label": "تطبيق بطاقة هدية",
+          "apply_another_gift_card_label": "تطبيق بطاقة هدية أخرى",
+          "gift_card_label": "بطاقة هدية %{identifier}",
+          "payment_tag": "بطاقة هدية",
+          "add_label": "أضف بطاقة هدية",
+          "manage_label": "إدارة بطاقات الهدايا"
+        },
+        "gift_card_store_credit": {
+          "add_label": "أضف بطاقة هدايا أو رصيد متجر",
+          "manage_label": "إدارة بطاقات الهدايا أو تخزين الائتمان"
+        },
+        "gift_card_checkbox_label": "تطبيق بطاقة الهدايا",
+        "custom_onsite_payment_method_modal": {
+          "title": "تأكيد الدفع المخصص في الموقع"
+        },
+        "markets_pro_disclaimer_label": "من خلال تقديم طلبك، فإنك توافق على الشراء من Global-e باعتبارك التاجر المسجل، وفقًا لشروط Global-e %{markets_pro_terms} و %{privacy_policy}، وشارك معلوماتك مع %{shop_name}.",
+        "markets_pro_disclaimer_terms_and_conditions": "الشروط والأحكام",
+        "markets_pro_disclaimer_privacy_policy": "سياسة الخصوصية",
+        "markets_pro_disclaimer_terms_and_conditions_title": "شروط وأحكام تاجر السجل",
+        "markets_pro_disclaimer_privacy_policy_title": "سياسة خصوصية تاجر السجل",
+        "purchase_order_number": {
+          "title": "رقم أمر الشراء",
+          "label": "رقم أمر الشراء (اختياري)"
+        },
+        "alternative_payment_currency_total_notice": "ملاحظة: سيتم محاسبتك %{amount_due}.",
+        "alternative_payment_currency_total_manual_payment_notice": "ملاحظة: الإجمالي المحول هو %{amount_due}.",
+        "waiting_on_taxes_message": "إذا لم يتم احتساب الضرائب الخاصة بك خلال الثواني القليلة القادمة، فقم بتحديث الصفحة.",
+        "waiting_on_taxes_notice": "حساب الضرائب",
+        "payment_method": "طريقة الدفع",
+        "payment_method_rollup_accessibility_label": "خيارات طريقة الدفع",
+        "expired_payment_method": "انتهت صلاحية طريقة الدفع المحددة",
+        "payment_method_update_failed": "فشل تحديث طريقة الدفع.",
+        "payment_method_incompatible_with_payment_terms": "طريقة الدفع غير متوافقة مع شروط الدفع.",
+        "proposed_gateway_unavailable": "بوابة الدفع المقترحة غير متاحة",
+        "pay_in_installments_split_pay_short": "4 دفعات %{amount}",
+        "gift_cards_unavailable": "لم يعد من الممكن تطبيق بطاقة الهدايا الخاصة بك على هذا الطلب وتمت إزالتها",
+        "payment_flexibility_terms_id_mismatch": "معرف شروط مرونة الدفع غير متطابق",
+        "payment_option": {
+          "accessibility_label": "اختر خيار الدفع"
+        },
+        "bank_account_type": {
+          "checking": "التحقق",
+          "savings": "الادخار"
+        },
+        "new_bank_account_disclaimer": "من خلال استكمال طلبك، فإنك تأذن %{shop_name} للخصم من الحساب أدناه عبر ACH للمبلغ وفي الوقت الموضح.",
+        "bank_account_disclaimer": "يمكن أن تستغرق معالجة دفعات ACH ما يصل إلى 4 أيام عمل.",
+        "bank_account_choose": "اختر حسابًا لإكمال عملية الشراء بشكل آمن",
+        "bank_account_connect_another": "ربط حساب مصرفي آخر",
+        "bank_account_connect": "ربط الحساب البنكي",
+        "bank_account_missing": "يجب أن يكون الحساب البنكي متصلاً",
+        "bank_account_generic_error": "تعذرت إضافة حساب مصرفي. حاول مرة أخرى لاحقًا.",
+        "separate_payments_label": "أغراضك من أكثر من متجر. سيتم محاسبتك %{separate_payments_link}.",
+        "separate_payments_text": "دفعات منفصلة",
+        "payments": "المدفوعات"
       }
     }
   }
