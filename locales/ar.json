@@ -1452,7 +1452,71 @@
         "company_tracking_number": "%{company} رقم التتبع:",
         "estimated_arrival": "تاريخ التسليم المتوقع: ",
         "estimated_delivery": "تقدير التسليم الحالي: ",
-        "re-order": "إعادة ترتيب نفس العناصر"
+        "re-order": "إعادة ترتيب نفس العناصر",
+        "confirmed": "تم التأكيد",
+        "confirmed_items_count": "%{confirmed_count} من %{total_count} تم تأكيد العناصر",
+        "items_fulfilled_by_store": {
+          "one": "العناصر التي اشتريتها سوف تأتي من %{remote_shop_name}.",
+          "other": "العناصر التي اشتريتها ستأتي من متاجر أخرى."
+        },
+        "gift_card_confirmation_by_text": "إذا لم تستلمها، أعد إرسال الرسالة النصية أو اتصل بنا.",
+        "gift_card_confirmation_by_email": "إذا لم تستلمها، أعد إرسال البريد الإلكتروني أو اتصل بنا.",
+        "gift_card_title": "بطاقات الهدايا",
+        "resend_gift_cards": "إعادة إرسال بطاقات الهدايا",
+        "thank_you_title": "تم تأكيد طلبك",
+        "thank_you_title_payment": "تم تأكيد الدفع الخاص بك",
+        "thank_you_title_review": "لقد تم تقديم طلبك للمراجعة",
+        "thank_you_title_payments_app_pending_default": "تتم معالجة دفعتك",
+        "thank_you_title_payments_app_pending_buyer_action_required": "تم استلام طلبك",
+        "thank_you_title_payments_app_failed_pending_payment": "لا يمكن معالجة دفعتك",
+        "thank_you_confirmed_with_email_description": {
+          "single_store": "ستتلقى رسالة تأكيد بالبريد الإلكتروني قريبًا",
+          "multi_store": "ستتلقى رسائل تأكيد منفصلة عبر البريد الإلكتروني من كل متجر قريبًا"
+        },
+        "thank_you_confirmed_with_phone_description": {
+          "single_store": "ستتلقى رسالة تأكيد نصية قريبًا",
+          "multi_store": "ستتلقى رسائل تأكيد منفصلة من كل متجر قريبًا"
+        },
+        "thank_you_confirmed_with_email_and_phone_description": {
+          "single_store": "ستتلقى رسالة تأكيد بالبريد الإلكتروني قريبًا",
+          "multi_store": "ستتلقى رسائل تأكيد منفصلة عبر البريد الإلكتروني من كل متجر قريبًا"
+        },
+        "thank_you_confirmed_order_with_email": "ستتلقى رسالة تأكيد عبر البريد الإلكتروني تحتوي على رقم طلبك قريبًا.",
+        "thank_you_confirmed_order_with_phone": "ستتلقى رسالة تأكيد نصية تحتوي على رقم طلبك قريبًا.",
+        "thank_you_confirmed_order_with_email_and_phone": "ستتلقى رسالة تأكيد عبر البريد الإلكتروني تحتوي على رقم طلبك قريبًا.",
+        "thank_you_confirmed_orders_with_email": "ستصلك رسائل تأكيد منفصلة عبر البريد الإلكتروني تتضمن أرقام طلبك قريبًا",
+        "thank_you_confirmed_orders_with_phone": "سوف تحصل على نصوص تأكيد منفصلة مع أرقام طلبك قريبًا",
+        "thank_you_confirmed_orders_with_email_and_phone": "ستصلك رسائل تأكيد منفصلة عبر البريد الإلكتروني تتضمن أرقام طلبك قريبًا",
+        "thank_you_confirmed_order_with_email_payment": "لقد قمت بالدفع على طلبك %{date}.",
+        "thank_you_confirmed_order_with_phone_payment": "لقد قمت بالدفع على طلبك %{date}.",
+        "thank_you_confirmed_order_with_email_and_phone_payment": "لقد قمت بالدفع على طلبك %{date}.",
+        "thank_you_confirmed_order_with_email_pick_up": "ستتلقى بريدًا إلكترونيًا عندما يكون طلبك جاهزًا للاستلام.",
+        "thank_you_confirmed_order_with_phone_pick_up": "ستتلقى رسالة نصية عندما يكون طلبك جاهزًا للاستلام.",
+        "thank_you_confirmed_order_with_email_and_phone_pick_up": "ستتلقى بريدًا إلكترونيًا عندما يكون طلبك جاهزًا للاستلام.",
+        "thank_you_confirmed_order_with_missing": "اتصل بنا عبر البريد الإلكتروني أو الهاتف لتلقي تأكيد الطلب.",
+        "thank_you_confirmed_order_with_missing_payment": "اتصل بنا عبر البريد الإلكتروني أو الهاتف لتلقي تأكيد الطلب.",
+        "thank_you_confirmed_order_with_missing_pick_up": "اتصل بنا عبر البريد الإلكتروني أو الهاتف لتلقي تأكيد الطلب.",
+        "thank_you_confirmed_order_with_draft": "سنخبرك إذا كنا بحاجة إلى مزيد من المعلومات أو عندما يتم تأكيد طلبك.",
+        "thank_you_confirmed_order_with_draft_payment": "سنخبرك إذا كنا بحاجة إلى مزيد من المعلومات أو عندما يتم تأكيد طلبك.",
+        "thank_you_confirmed_order_with_draft_pick_up": "سنخبرك إذا كنا بحاجة إلى مزيد من المعلومات أو عندما يتم تأكيد طلبك.",
+        "thank_you_unconfirmed_items_heading": {
+          "one": "لم يتم تأكيد عنصر واحد",
+          "other": "لم يتم تأكيد بعض العناصر"
+        },
+        "thank_you_unconfirmed_items_description": {
+          "one": "لم يتم محاسبتك على هذا",
+          "other": "لم يتم محاسبتك على هذه"
+        },
+        "thank_you_item_label": {
+          "one": "%{count} البند",
+          "other": "%{count} العناصر"
+        },
+        "thank_you_from_shop": "من %{shop_name}",
+        "thank_you_from_other_store": "من متجر آخر",
+        "thank_you_payments_app_failed_pending_payment": "لم يتم تحصيل رسوم منك مقابل طلبك. ارجع إلى عربة التسوق الخاصة بك لمراجعة طلبك والدفع مرة أخرى.",
+        "thank_you_payments_app_failed_pending_payment_payment": "لم يتم تحصيل رسوم منك مقابل طلبك. ارجع إلى عربة التسوق الخاصة بك لمراجعة طلبك والدفع مرة أخرى.",
+        "thank_you_payments_app_failed_pending_payment_pick_up": "لم يتم تحصيل رسوم منك مقابل طلبك. ارجع إلى عربة التسوق الخاصة بك لمراجعة طلبك والدفع مرة أخرى.",
+        "thank_you_payments_app_pending_payment_description_default_with_missing": "اتصل بنا عبر البريد الإلكتروني أو الهاتف لتلقي تأكيد الطلب."
       }
     }
   }
