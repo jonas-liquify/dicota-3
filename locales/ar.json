@@ -2023,7 +2023,80 @@
         "embed_errors": {
           "storefront_password_required": "هذا المتجر محمي بكلمة مرور",
           "customer_account_required": "مطلوب حساب العميل لإكمال الخروج",
-          "cart_completed": "لقد تم بالفعل الانتهاء من هذا الخروج"
+          "cart_completed": "لقد تم بالفعل الانتهاء من هذا الخروج",
+          "invalid_cart": "العربة لم تعد صالحة",
+          "not_authorized": "فشلت مصادقة الخروج. التحقق من بيانات اعتماد التطبيق الخاص بك",
+          "killswitch_enabled": "الخروج غير متاح مؤقتا",
+          "policy_violation": "غير قادر على إكمال الخروج بسبب قيود تكوين السياسة",
+          "unrecoverable_failure": "غير قادر على تحميل الخروج. حاول مرة أخرى"
+        }
+      },
+      "notice_banner": {
+        "return_to_cart_link_text": "العودة إلى السلة",
+        "return_to_cart_to_update_quantities": "%{return_to_cart_link_text} لتحديث الكميات",
+        "subscription_changed": "لقد تغير أحد اشتراكاتك.",
+        "company_location_changed": "تم تحديث سلة التسوق الخاصة بك. قم بمراجعة طلبك قبل تقديمه.",
+        "company_location_changed_product_removed": "تم تحديث سلة التسوق الخاصة بك لأن بعض المنتجات غير متوفرة في هذا الموقع. قم بمراجعة طلبك قبل تقديمه.",
+        "violations_title": "{{violation}} مفقود أو غير صالح",
+        "individual_violations_title": {
+          "DeliveryViolations": "عنوان الشحن",
+          "PaymentViolations": "عنوان إرسال الفواتير",
+          "OtherViolations": "معلومات الطلب",
+          "UnhandledViolations": "معلومات الطلب"
+        },
+        "all_violations_content": "اتصل أو {{emailLink}} لنا لتحديث هذه المعلومات وإكمال طلبك:",
+        "all_violations_email_link": "البريد الإلكتروني",
+        "editable_shipping_address_violations_message_title": "أضف هذه المعلومات لإكمال طلبك:",
+        "editable_shipping_address_violations_message_footer": "لتحديث عنوان هذا الموقع بشكل دائم، {{emailLink}}.",
+        "editable_shipping_address_violations_email_link": "اتصل بنا",
+        "shipping_address_incomplete_title": "عنوان الشحن غير مكتمل",
+        "calculating_shipping": "لا يزال يتم حساب الشحن. حاول مرة أخرى خلال بضع ثوان. لم يتم تحصيل أي رسوم منك.",
+        "calculating_taxes": "ولا تزال الضرائب قيد الاحتساب. حاول مرة أخرى خلال بضع ثوان. لم يتم تحصيل أي رسوم منك.",
+        "generic_processing_error": {
+          "title": "حدثت مشكلة أثناء معالجة طلبك",
+          "body": "لم يتم تحصيل أي رسوم منك. حاول مرة أخرى أو استخدم طريقة دفع مختلفة."
+        },
+        "payment_method_not_available_with_payment_terms": "طريقة الدفع التي حددتها لم تعد متاحة لأن الدفع لهذا الطلب قيد التشغيل الآن {{paymentTerms}} الشروط",
+        "payment_method_not_available_with_fulfillment_terms": "طريقة الدفع التي حددتها لم تعد متاحة لأن الدفع لهذا الطلب أصبح الآن مستحقًا عند استيفائه",
+        "payment_method_not_available_with_fixed_terms": "طريقة الدفع التي حددتها لم تعد متاحة لأن الدفع لهذا الطلب مستحق لاحقًا",
+        "payment_method_not_available_with_review_requirement": "طريقة الدفع التي حددتها لم تعد متاحة لأن الدفع سيكون مستحقًا بمجرد تأكيد طلبك.",
+        "contact_information": {
+          "title": "معلومات الاتصال غير صالحة",
+          "header": "لتحديث معلوماتك، {{emailLink}}.",
+          "email_link": "اتصل بنا"
+        },
+        "validation_errors_banner": {
+          "heading": {
+            "one": "هناك {{count}} خطأ:",
+            "other": "هناك {{count}} الأخطاء:"
+          },
+          "section_label": {
+            "delivery": "التسليم",
+            "contact": "الاتصال",
+            "payment": "الدفع",
+            "billing": "الفواتير"
+          },
+          "errors_in_section": {
+            "one": "{{count}} خطأ في {{section}}",
+            "other": "{{count}} أخطاء في {{section}}"
+          }
+        }
+      },
+      "review_address_modal": {
+        "title": "عنوان المراجعة",
+        "subtitle": {
+          "one": "سيتم شحن هذا الطلب إلى العنوان المقدم من قبل {{merchant}}.",
+          "other": "سيتم شحن هذا الطلب إلى العنوان المقدم من قبل {{merchant}}. حدد عنوان الشحن."
+        },
+        "subtitle_no_match": "لا يتطابق هذا العنوان مع أي من عناوينك المحفوظة.",
+        "subtitle_must_use": "سيتم شحن طلبك إلى هذا العنوان.",
+        "continue": "تواصل مع هذا العنوان",
+        "use_saved_address": "استخدم عنوانًا مختلفًا",
+        "return_to_cart": "العودة إلى السلة"
+      },
+      "marketplaces": {
+        "legal_notice": {
+          "legal_text": "مراجعة"
         }
       }
     }
