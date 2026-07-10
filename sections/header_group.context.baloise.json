@@ -12,5 +12,11 @@
     "market": "baloise"
   },
   "parent": "header_group.json",
-  "sections": {}
+  "sections": {
+    "product_breadcrumb_YTWmk": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    }
+  }
 }

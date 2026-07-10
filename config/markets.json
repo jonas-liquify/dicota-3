@@ -14,6 +14,9 @@
     },
     "b2b-euro": {
       "parent": "all-b2b"
+    },
+    "baloise": {
+      "parent": "all-b2b"
     }
   }
 }
