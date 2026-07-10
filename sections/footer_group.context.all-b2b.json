@@ -16,7 +16,10 @@
     "footer_newsletter_ULQtmR": {
       "settings": {
         "text_promo_1_text": "",
-        "text_promo_2_text": ""
+        "text_promo_2_text": "",
+        "text_headline": "",
+        "textarea_subtext": "",
+        "text_button_text": ""
       },
       "blocks": {}
     }
