@@ -82,7 +82,7 @@
           "type": "kategorie-bild",
           "name": "Kategorie-Bild",
           "settings": {
-            "url_link": "",
+            "url_link": "shopify://collections/d2c-laptop-bags-student-urban",
             "image_bild": "shopify://shop_images/5_SCT1c_LB_Student_e5236afd-f18d-4a32-9490-9ffc9576a7a1.jpg",
             "text_titel": "Students & Urban",
             "textarea_text": "Fresh designs, practical features and reliable protection for study, work and everyday adventures."
