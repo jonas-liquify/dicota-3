@@ -77,8 +77,9 @@
           "type": "reseller-kategorie",
           "name": "Reseller Kategorie",
           "settings": {
-            "url_link": "",
-            "text_titel": "Backpacks"
+            "url_link": "shopify://collections/b2b-accessories-all",
+            "image_bild": "shopify://shop_images/d32062_02.jpg",
+            "text_titel": "Accessories"
           },
           "blocks": {}
         },
@@ -86,8 +87,9 @@
           "type": "reseller-kategorie",
           "name": "Reseller Kategorie",
           "settings": {
-            "url_link": "",
-            "text_titel": "Backpacks"
+            "url_link": "shopify://collections/d2c-safety-at-work",
+            "image_bild": "shopify://shop_images/P20471-05-V2_01.webp",
+            "text_titel": "Safety at Work"
           },
           "blocks": {}
         }
