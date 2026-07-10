@@ -19,7 +19,7 @@
       "settings": {
         "image_hintergrundbild": "shopify://shop_images/4_CTw_Sleeves_01_1bc69a79-c88e-4fe5-b874-c1854f53aa3e.jpg",
         "textarea_text": "Slim protection for your device, wherever you go. Discover our Laptop Sleeves.",
-        "header-a63c651dca288edf1e95962eadeff9af": null,
+        "header-2ef461ebcc65d06f57d27d2545586dae": null,
         "padding_top": 2.5,
         "padding_bottom": 2.5
       },
@@ -47,8 +47,8 @@
         "text_promo_1_headline": "Lorem Ipsum",
         "text_promo_1_button": "Shop Now",
         "text_promo_2_headline": "Lorem Ipsum",
-        "text_promo_2_button": "Shop now",
-        "promo1_position": 0
+        "promo1_position": 0,
+        "promo2_position": 0
       },
       "blocks": {}
     }
