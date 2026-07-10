@@ -10,7 +10,36 @@
 </p><nav class="footer-bottom_legal-links">{% for link in linklists[section.settings.legal_menu].links %}    <div li-for="link in linklists[section.settings.legal_menu].links" class="footer-bottom_legal-item">
                                     <a li-object="link.title" li-object:href="link.url" href="{{ link.url }}" class="footer-bottom_legal-link">{{ link.title }}</a>
                         </div>
-{% endfor %}</nav>{% render 'localization_picker' %}</div></div></div></div> {% schema %} {
+{% endfor %}</nav>{% render 'localization_picker' %}</div></div></div></div><div class="hide w-embed w-script"><script>
+        /* Externe Links (nicht auf die eigene Domain) immer im neuen Tab &ouml;ffnen. */
+        (function () {
+          function markLink(a) {
+            if (!a || a.hasAttribute('target')) return;
+            var href = a.getAttribute('href');
+            if (!href || href.charAt(0) === '#' || href.indexOf('mailto:') === 0 || href.indexOf('tel:') === 0 || href.indexOf('javascript:') === 0) return;
+            var url;
+            try { url = new URL(href, window.location.href); } catch (e) { return; }
+            if (url.hostname && url.hostname !== window.location.hostname) {
+              a.setAttribute('target', '_blank');
+              a.setAttribute('rel', ((a.getAttribute('rel') || '') + ' noopener noreferrer').trim());
+            }
+          }
+          function markAll(root) {
+            if (!root || !root.querySelectorAll) return;
+            root.querySelectorAll('a[href]').forEach(markLink);
+          }
+          markAll(document);
+          new MutationObserver(function (mutations) {
+            mutations.forEach(function (m) {
+              m.addedNodes.forEach(function (node) {
+                if (node.nodeType !== 1) return;
+                if (node.matches && node.matches('a[href]')) markLink(node);
+                markAll(node);
+              });
+            });
+          }).observe(document.body, { childList: true, subtree: true });
+        })();
+      </script></div> {% schema %} {
     "tag": "section",
     "name": "Footer Bottom",
     "class": "section_footer-bottom",
