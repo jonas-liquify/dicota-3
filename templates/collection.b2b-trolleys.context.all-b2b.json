@@ -19,7 +19,7 @@
       "settings": {
         "image_hintergrundbild": "shopify://shop_images/4_CTw_Trolleys_01_a4165280-2aa0-4816-a40b-489a4e06db23.jpg",
         "textarea_text": "Travel smart with durable protection and effortless mobility. Discover our Rollers.",
-        "header-c7a371cc40f6ec10d44608e03068c34f": null,
+        "header-6d92d828b0342b652b993d982374feca": null,
         "padding_top": 2.5,
         "padding_bottom": 2.5
       },
@@ -29,11 +29,11 @@
     }
   },
   "order": [
+    "collection_image_her_Qqprn",
     "collection_hero_8TRwPe",
     "featured_product_qe68Cr",
     "collection_intro",
     "collection_products",
-    "testimonials",
-    "collection_image_her_Qqprn"
+    "testimonials"
   ]
 }
