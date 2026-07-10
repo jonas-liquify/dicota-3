@@ -38,8 +38,7 @@
           "name": "Reseller Kategorie",
           "settings": {
             "url_link": "",
-            "image_bild": "shopify://shop_images/D3260902_productshot_03.png",
-            "text_titel": "Laptop Bags"
+            "text_titel": "Backpacks"
           },
           "blocks": {}
         },
@@ -248,6 +247,22 @@
         "text_color": "#0f0f0f"
       }
     },
+    "featured_products_CMBfxg": {
+      "type": "featured_products",
+      "name": "Featured Products",
+      "settings": {
+        "text_uberschrift": "You may also like",
+        "url_button_link": "",
+        "text_button_text": "All new releases",
+        "collection_kollektion": "b2b-backpacks-all",
+        "collection_kollektion_limit": 6,
+        "show_view_all": true,
+        "padding_top": 2.5,
+        "padding_bottom": 5,
+        "bg_color": "#ffffff",
+        "text_color": "#0f0f0f"
+      }
+    },
     "reseller_promo_grid": {
       "type": "reseller_promo_grid",
       "blocks": {
@@ -291,6 +306,7 @@
     "reseller_hub",
     "the_latest",
     "featured_products_AHYneJ",
-    "reseller_promo_grid"
+    "reseller_promo_grid",
+    "featured_products_CMBfxg"
   ]
 }
