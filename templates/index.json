@@ -296,10 +296,10 @@
           "name": "Banner",
           "settings": {
             "image_hintergrundbild": "shopify://shop_images/Dicota_B2B_2756dd4f-7290-4be4-8489-408333a5a0d8.avif",
-            "text_uberschrift": "Tell A Friend & Get 15% Off",
-            "textarea_subtext": "Give your friends 15% off their first order, and get a 15% off for each successful referral",
+            "text_uberschrift": "Tailor Made",
+            "textarea_subtext": "Custom-designed solutions that combine your requirements with DICOTA quality and expertise.",
             "url_button_link": "",
-            "text_button_text": "Freund einladen"
+            "text_button_text": "Let's Talk"
           },
           "blocks": {}
         }
