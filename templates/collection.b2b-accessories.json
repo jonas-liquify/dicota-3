@@ -143,6 +143,7 @@
       "type": "collection_image_her",
       "name": "Collection Image Her",
       "settings": {
+        "image_hintergrundbild": "shopify://shop_images/4_CTw_Accessories_02_a6257014-5805-47ec-a73c-6d29f305d493.jpg",
         "textarea_text": "Refined design. Recycled modern materials.",
         "padding_top": 2.5,
         "padding_bottom": 2.5
