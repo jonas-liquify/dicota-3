@@ -2919,6 +2919,78 @@
       "message": "حل كلمة التحقق للمتابعة",
       "error": "فشل التحقق من صحة كلمة التحقق",
       "submit_button_text": "إرسال"
+    },
+    "store_availability": {
+      "pick_up_time": {
+        "one_hour": "عادة ما تكون جاهزة خلال ساعة واحدة",
+        "two_hours": "عادة ما تكون جاهزة خلال ساعتين",
+        "four_hours": "عادة ما تكون جاهزة خلال 4 ساعات",
+        "twenty_four_hours": "عادة ما تكون جاهزة خلال 24 ساعة",
+        "two_to_four_days": "عادة ما تكون جاهزة خلال 2-4 أيام",
+        "five_or_more_days": "عادة ما تكون جاهزة خلال 5+ أيام",
+        "zero_to_two_hours": "عادة ما تكون جاهزة خلال ساعتين",
+        "two_to_four_hours": "عادة ما تكون جاهزة خلال 4 ساعات",
+        "immediately": "جاهز للاستلام الآن",
+        "next_day": "جاهز للاستلام في اليوم التالي"
+      }
+    },
+    "subscriptions": {
+      "buyer_consent_product": "هذا العنصر عبارة عن عملية شراء متكررة أو مؤجلة. من خلال الاستمرار، أنا أوافق على %{cancellationPolicyLink} وأسمح لك بتحصيل الرسوم من طريقة الدفع الخاصة بي بالأسعار والتكرار والتواريخ المدرجة في هذه الصفحة حتى يتم استيفاء طلبي أو إلغاءه، إذا كان ذلك مسموحًا به.",
+      "buyer_consent_cart": "واحد أو أكثر من العناصر الموجودة في سلة التسوق الخاصة بك عبارة عن عملية شراء متكررة أو مؤجلة. من خلال الاستمرار، أنا أوافق على %{cancellationPolicyLink} وأسمح لك بتحصيل الرسوم من طريقة الدفع الخاصة بي بالأسعار والتكرار والتواريخ المدرجة في هذه الصفحة حتى يتم استيفاء طلبي أو إلغاءه، إذا كان ذلك مسموحًا به.",
+      "cancellation_policy": "سياسة الإلغاء"
+    }
+  },
+  "customer_accounts": {
+    "callback": {
+      "try_again": "حاول مرة أخرى"
+    },
+    "date": {
+      "range": "{{startDate}}–{{endDate}}",
+      "humanize": {
+        "lessThanOneYearAgo": "{{date}} في {{time}}",
+        "lessThanOneHourAgo": {
+          "one": "{{count}} منذ دقيقة",
+          "other": "{{count}} قبل دقائق"
+        },
+        "lessThanOneMinuteAgo": "الآن فقط",
+        "lessThanOneWeekAgo": "{{weekday}} في {{time}}",
+        "yesterday": "أمس في {{time}}",
+        "today": "اليوم في {{time}}",
+        "tomorrow": "غدا في {{time}}",
+        "lessThanOneWeekAway": "{{weekday}} في {{time}}",
+        "lessThanOneYearAway": "{{date}} في {{time}}"
+      }
+    },
+    "enable_javascript": "لعرض حسابك، قم بتمكين JavaScript في إعدادات المتصفح الخاص بك أو قم بتسجيل الدخول باستخدام متصفح آخر.",
+    "navigation_and_structure": {
+      "account_menu": {
+        "hide_accessibility_label": "إخفاء قائمة الحساب",
+        "show_accessibility_label": "إظهار قائمة الحساب",
+        "nav_accessibility_label": "التنقل في الحساب",
+        "open_menu_accessibility_label": "افتح التنقل في الحساب",
+        "close_menu_accessibility_label": "إغلاق التنقل في الحساب",
+        "label": "الحساب",
+        "loading_message": "جارٍ تحميل التنقل في الحساب"
+      },
+      "action_menu_accessibility_label": "المزيد من الإجراءات",
+      "back_button_accessibility_label": "العودة",
+      "go_to_store_link": "اذهب إلى المتجر",
+      "orders_link_label": "أوامر",
+      "subscriptions_link_label": "الاشتراكات",
+      "close_menu_accessibility_label": "إغلاق التنقل الرئيسي",
+      "contact_email_subject": "الاتصال من {{shopName}} متجر على الانترنت",
+      "contact_link": "معلومات الاتصال",
+      "delete_confirmation": {
+        "cancel": "إلغاء",
+        "delete": "حذف"
+      },
+      "dismiss_toast": "استبعاد",
+      "document_title": "{{sectionName}} - {{shopName}} - الحساب",
+      "generic_accessibility_label": "{{label}}: {{value}}",
+      "loading_message": "جاري التحميل",
+      "loading_policy_content_accessibility_label": "جارٍ تحميل محتوى السياسة",
+      "loading_section_accessibility_label": "جاري التحميل {{sectionName}}",
+      "policy_load_error": "تعذر التحميل {{policyName}}"
     }
   }
 }
