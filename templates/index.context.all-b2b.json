@@ -19,13 +19,11 @@
       "settings": {
         "image_hintergrundbild": null,
         "text_headline": "Willkommen bei DICOTA myDCT",
-        "textarea_subtext": "Profitieren Sie von attraktiven Preisen und Angeboten für Ihre Endkunden",
+        "textarea_subtext": "Welcome to the DICOTA Reseller Portal. Benefit from attractive reseller pricing, exclusive offers and everything you need to support your customers.",
         "text_kategorie_label": "Kategorien",
-        "url_link": "",
-        "text_text": "Summer Release",
-        "header-7f750169dc2f74344287dacf4ce6c9e3": null,
+        "header-cc3ea0d6ee12ce8d21df0d607178e3c3": null,
         "min_height": 78,
-        "header-f58bb5bee3fd12c2e99ceda2964015dc": null,
+        "header-d5fe199ef4e2004315b7ddf8eb504937": null,
         "text_color": "#ffffff"
       },
       "blocks": {},
@@ -36,10 +34,7 @@
       "type": "reseller_category_ro",
       "disabled": false,
       "settings": {
-        "url_link": "",
-        "image_bild": null,
-        "text_titel": "Backpacks",
-        "header-ca3e6ef08f09e4fcea45300e0f5abcd8": null,
+        "header-e057b0431f2347b2722c46735846094c": null,
         "padding_top": 4,
         "padding_bottom": 4
       },
@@ -71,10 +66,10 @@
         "text_button_1_text": "Einloggen",
         "url_button_2_link": "",
         "text_button_2_text": "Registrieren",
-        "header-1b0a6d73820bb000e7e09e4eb6bfd72c": null,
+        "header-e1f9f5c8ca73648aa1362f77824b82cd": null,
         "padding_top": 5,
         "padding_bottom": 5,
-        "header-ce37ceb3736315638f4c05251a27c7e6": null,
+        "header-edbf46f63dc525e9b73f912d768ab177": null,
         "bg_color": "#f4f4f4"
       },
       "blocks": {
@@ -82,6 +77,7 @@
           "type": "vorteil",
           "disabled": false,
           "settings": {
+            "image_icon": null,
             "text_titel": "Marketing &amp; Sales",
             "textarea_text": "Nutzen Sie die Tools und Ressourcen des Clubs für eine optimale Präsentation Ihres Sortiments — sowohl online als auch auf der Verkaufsfläche!"
           }
@@ -112,10 +108,10 @@
         "textarea_text": "(Platzhalter) Seit 1992 wurden mehr als 12 Millionen PET-Flaschen verarbeitet, um Abfall zu minimieren - DCT (DICOTA Cushion Technology) ist ein strukturiertes Dämpfungssystem, das Stösse, Schläge und Druck aus verschiedenen Winkeln absorbieren kann.",
         "url_button_link": "",
         "text_button_text": "Learn more",
-        "header-9a74bd3b6bf03dd73659e1a00e2b9c0e": null,
+        "header-148ea507c8c09e493b16a7711dd5d566": null,
         "padding_top": 2.5,
         "padding_bottom": 4,
-        "header-a70a634049c2424a5e47d416c01069ec": null,
+        "header-cede96add3b9afc983f48597325770db": null,
         "bg_color": "#f6f6f6"
       },
       "blocks": {},
