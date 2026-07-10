@@ -1846,7 +1846,103 @@
         "description": "أظهر دعمك للفريق على %{shop_name}",
         "presets_description": "حدد نسبة الإكرامية",
         "custom_label": "نصيحة مخصصة",
-        "add_tip": "أضف نصيحة"
+        "add_tip": "أضف نصيحة",
+        "update_tip": "تحديث النصيحة",
+        "message": "شكرا لك، ونحن نقدر ذلك.",
+        "preset_label": "%{tip_percent}%",
+        "no_tip_label": "لا شيء",
+        "not_available_with_spi": "غير متوفر مع أقساط Shop Pay"
+      },
+      "open_graph_meta_tag": {
+        "title_with_products": {
+          "zero": "شراء %{product_name}",
+          "one": "شراء %{product_name} و %{count} عنصر آخر",
+          "other": "شراء %{product_name} و %{count} عناصر أخرى"
+        }
+      },
+      "subscriptions": {
+        "recurring_total_intervals": {
+          "day": {
+            "one": "يوم",
+            "other": "%{count} أيام"
+          },
+          "week": {
+            "one": "أسبوع",
+            "other": "%{count} أسابيع"
+          },
+          "month": {
+            "one": "شهر",
+            "other": "%{count} أشهر"
+          },
+          "year": {
+            "one": "سنة",
+            "other": "%{count} سنوات"
+          }
+        },
+        "recurring_totals": "%{total_price} كل %{interval}",
+        "recurring_totals_with_initial_order_shipping_discount": "الدفعة الأولى %{total_price_with_discount}، ثم %{recurring_total}",
+        "recurring_totals_with_policies": {
+          "first_cycles": {
+            "one": "الدفعة الأولى %{total_price}",
+            "other": "أولا %{count} المدفوعات %{total_price} لكل منهما"
+          },
+          "following_cycles": "، ثم %{total_price} كل %{interval}"
+        },
+        "recurring_totals_with_initial_order_shipping_discount_with_policies": {
+          "first_cycles": {
+            "one": "، ثم %{count} الدفع عند %{total_price}",
+            "other": "، ثم %{count} المدفوعات في %{total_price} لكل منهما"
+          }
+        }
+      },
+      "customer_payment_methods": {
+        "page_title": "طرق الدفع",
+        "title": "طرق الدفع",
+        "update_card_button_label": "تحديث البطاقة",
+        "delete_customer_mandate": {
+          "generic_error": "حدثت مشكلة أثناء معالجة طلبك.",
+          "success_message": "لقد تم حذف طريقة الدفع الخاصة بك بنجاح"
+        }
+      },
+      "throttle": {
+        "too_many_attempts": {
+          "message": "محاولات كثيرة جدًا",
+          "description": "حاول مرة أخرى خلال بضع دقائق"
+        },
+        "line_to_check_out": "أنت في الطابور للتحقق",
+        "cart_summary_heading": "عربة التسوق الخاصة بك",
+        "merchandise": {
+          "available": "متاح",
+          "sold_out": "بيعت بالكامل"
+        },
+        "inventory": {
+          "partial_inventory_banner": "تم بيع جزء من سلة التسوق الخاصة بك ولن يكون متاحًا للشراء عند الدفع.",
+          "sold_out": {
+            "heading": "تم بيع سلة التسوق الخاصة بك",
+            "storefront_body": "العودة إلى المتجر لمواصلة التسوق",
+            "no_storefront_body": "لسوء الحظ، العنصر الذي تريد شراءه لم يعد متوفرا.",
+            "link": "العودة إلى المتجر"
+          }
+        },
+        "title": "قائمة الانتظار",
+        "time_to_checkout_title": "وقت الخروج - {{shopName}}",
+        "estimated_wait_time": {
+          "calculating": "حساب وقت الانتظار المقدر",
+          "less_than_one": "وقت الانتظار المقدر: أقل من دقيقة",
+          "one": "وقت الانتظار المقدر: {{count}} دقيقة",
+          "other": "وقت الانتظار المقدر: {{count}} دقائق"
+        },
+        "last_checked": "(آخر فحص: {{time}})",
+        "footer": {
+          "heading": "لا تقم بتحديث هذه الصفحة، سيتم تحديثها تلقائيًا.",
+          "body": "لا يتم حجز العناصر الموجودة في سلة التسوق الخاصة بك حتى تقوم بإكمال عملية الدفع."
+        }
+      },
+      "cart_checkout_validation": {
+        "runtime_error": "حدثت مشكلة أثناء معالجة طلبك. اتصل بصاحب المتجر."
+      },
+      "no_address_location": {
+        "title": "الموقع بدون عنوان"
       }
     }
   }
