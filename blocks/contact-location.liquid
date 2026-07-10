@@ -1,8 +1,8 @@
-<div li-block="Contact Location" style="display:contents" {{ block.shopify_attributes }}>
-                    <div class="footer_contact-label text-size-medium">
+<div li-block="Contact Location" class="footer_contact-block" {{ block.shopify_attributes }}>
+                    <div class="footer_contact-heading text-size-medium">
 {{ block.settings.text_location }}
 </div>
-                    <a href="{{ block.settings.url_link }}" class="footer_contact-link-wrap w-inline-block"> <div class="footer_contact-link">{{ block.settings.text_contact_info }}</div> </a>
+                    <div class="footer_contact-address text-size-medium"> {{ block.settings.richtext_address }} </div>
                 </div> {% schema %} {
     "name": "Contact Location",
     "settings": [
@@ -10,18 +10,13 @@
             "id": "text_location",
             "type": "text",
             "label": "Location",
-            "default": "Switzerland"
+            "default": "Europe"
         },
         {
-            "id": "url_link",
-            "type": "url",
-            "label": "Link"
-        },
-        {
-            "id": "text_contact_info",
-            "type": "text",
-            "label": "Contact Info",
-            "default": "+41 55 416 50 30"
+            "id": "richtext_address",
+            "type": "richtext",
+            "label": "Address",
+            "default": "<p>DICOTA GmbH<br\/>Fabrikstrasse 18<br\/>73277 Owen<br\/>GERMANY<br\/>Telephone: +49 7021 72508 0<\/p>"
         }
     ],
     "presets": [
