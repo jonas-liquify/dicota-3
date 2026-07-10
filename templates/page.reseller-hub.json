@@ -28,6 +28,7 @@
           "name": "Reseller Kategorie",
           "settings": {
             "url_link": "",
+            "image_bild": "shopify://shop_images/D3260101_productshot_01.png",
             "text_titel": "Backpacks"
           },
           "blocks": {}
