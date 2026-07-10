@@ -2554,11 +2554,79 @@
               "applied": "تم تطبيق الإعفاء من ضريبة القيمة المضافة",
               "domestic": "لم يتم تطبيق الإعفاء من ضريبة القيمة المضافة",
               "invalid_number": "فشل الإعفاء من ضريبة القيمة المضافة",
-              "service_unavailable": "غير قادر على التحقق من الإعفاء من ضريبة القيمة المضافة"
+              "service_unavailable": "غير قادر على التحقق من الإعفاء من ضريبة القيمة المضافة",
+              "service_error": "غير قادر على التحقق من الإعفاء من ضريبة القيمة المضافة"
             }
           }
         }
+      },
+      "address_management": {
+        "saved_with_store": "تم الحفظ مع هذا المتجر"
       }
+    },
+    "pagination": {
+      "previous": "السابق",
+      "next": "التالي"
+    },
+    "links": {
+      "powered_by_shopify": "مدعوم من شوبيفاي",
+      "learn_more": "تعلم المزيد"
+    },
+    "feed": {
+      "more": "المزيد"
+    },
+    "attributes": {
+      "email": "البريد الإلكتروني",
+      "password": "كلمة المرور",
+      "password_confirmation": "تأكيد كلمة المرور",
+      "first_name": "الاسم الأول",
+      "last_name": "الاسم الأخير",
+      "body": "الجسم",
+      "signature": "العنوان"
+    },
+    "addresses": {
+      "zip_code": "الرمز البريدي",
+      "postal_code": "الرمز البريدي",
+      "postcode": "الرمز البريدي",
+      "pincode": "الرمز السري",
+      "region": "المنطقة",
+      "prefecture": "المحافظة",
+      "province": "مقاطعة",
+      "state": "الدولة",
+      "state_and_territory": "الولاية/الإقليم",
+      "county": "مقاطعة",
+      "emirate": "الإمارة",
+      "governorate": "المحافظة",
+      "confirm": "هل أنت متأكد من رغبتك في حذف هذا العنوان؟"
+    },
+    "collections": {
+      "sorting": {
+        "manual": "مميز",
+        "best_selling": "الأكثر مبيعا",
+        "az": "أبجديًا، من الألف إلى الياء",
+        "za": "أبجديًا، Z-A",
+        "price_ascending": "السعر، من الأقل إلى الأعلى",
+        "price_descending": "السعر، من الأعلى إلى الأدنى",
+        "date_ascending": "التاريخ، من القديم إلى الجديد",
+        "date_descending": "التاريخ، الجديد إلى القديم",
+        "most_relevant": "الأكثر صلة"
+      }
+    },
+    "errors": {
+      "blank": "لا يمكن أن تكون فارغة",
+      "blocked_address": "هذا الموقع غير مدعوم",
+      "credit_card_session_expired": "لقد انتهت صلاحية ترخيص بطاقة الائتمان، يرجى إدخال معلومات الدفع الخاصة بك مرة أخرى. لم يتم شحن بطاقتك.",
+      "empty": "لا يمكن أن تكون فارغة",
+      "invalid_email": "يجب أن يكون عنوان بريد إلكتروني صالحًا",
+      "discount_disabled": "لقد تم تعطيل هذا الخصم",
+      "discount_expired": "هذا الخصم لم يعد صالحا بعد الآن",
+      "discount_limit_reached": "لقد وصل هذا الخصم إلى الحد الأقصى للاستخدام",
+      "discount_not_found": "تعذر العثور على خصم صالح مطابق للكود الذي تم إدخاله",
+      "customer_already_used_once_per_customer_discount_notice": "لقد وصل هذا الخصم إلى الحد الأقصى للاستخدام",
+      "gift_card_already_applied": "لقد تم بالفعل تطبيق الرمز على الخروج الخاص بك",
+      "gift_card_code_invalid": "الرمز غير صالح",
+      "gift_card_currency_mismatch": "لا يمكن استخدام بطاقة الهدايا هذه في عملية الشراء هذه. الاتصال %{shop_name} لإعادة إصداره.",
+      "gift_card_depleted": "لا توجد أموال متبقية في بطاقة الهدايا هذه"
     }
   }
 }
