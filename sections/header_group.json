@@ -178,28 +178,11 @@
         "transparent_over_first": false,
         "free_shipping_threshold": 50
       }
-    },
-    "product_breadcrumb_GCGP9D": {
-      "type": "product_breadcrumb",
-      "disabled": true,
-      "name": "Product Breadcrumb",
-      "settings": {
-        "text_home_label": "Home",
-        "text_kollektionen_label": "Collections",
-        "text_suche_label": "Search",
-        "text_warenkorb_label": "Cart",
-        "text_404_label": "Page not found",
-        "padding_top": 0.5,
-        "padding_bottom": 0.5,
-        "bg_color": "#ffffff",
-        "text_color": "#0f0f0f"
-      }
     }
   },
   "order": [
     "announcement_bar_YPJcxP",
     "reseller_header_UNKmKg",
-    "header_a83nJp",
-    "product_breadcrumb_GCGP9D"
+    "header_a83nJp"
   ]
 }
