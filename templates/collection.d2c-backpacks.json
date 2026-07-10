@@ -116,10 +116,11 @@
     "collection_products": {
       "type": "collection_products",
       "settings": {
-        "text_promo_1_headline": "WEIGH DARKER™ MOON BAG RUFFLE",
+        "image_promo_1_bild": "shopify://shop_images/5_SCT1c_BP_BusinessProfessional.jpg",
+        "text_promo_1_headline": "SEVEN Backpack",
         "textarea_promo_1_text": "Raffiniertes Design. Recycelte Materialien.",
         "url_promo_1_link": "",
-        "text_promo_1_button": "JETZT SHOPPEN",
+        "text_promo_1_button": "Explore Now",
         "text_promo_2_headline": "WEIGH DARKER™ MOON BAG RUFFLE",
         "textarea_promo_2_text": "Raffiniertes Design. Recycelte Materialien.",
         "url_promo_2_link": "",
