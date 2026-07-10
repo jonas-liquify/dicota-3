@@ -4143,9 +4143,65 @@
           "expirable_amounts_button": "عرض",
           "expired_amounts_button": "عرض المبالغ منتهية الصلاحية",
           "pagination": {
-            "load_more_label": "عرض المزيد"
+            "load_more_label": "عرض المزيد",
+            "load_more_accessibility_label": "عرض المزيد من الكميات التي تنتهي صلاحيتها"
           }
         }
+      },
+      "payment_details": {
+        "title": "تفاصيل طريقة الدفع",
+        "credit_card_details_accessibility_label": "تنتهي في {{lastDigits}}",
+        "billing_title": "عنوان إرسال الفواتير",
+        "card_info_title": "معلومات البطاقة",
+        "credit_card_details": "{{creditCardBrand}} •••• {{lastDigits}}",
+        "bank_account_details": "{{bankBrand}} •••• {{lastDigits}}",
+        "bank_details": "{{bankBrand}} •••• {{lastDigits}}",
+        "payment_method_expiring_on": "تنتهي صلاحيته {{expiryDate}}",
+        "payment_method_expired_on": "انتهت صلاحيته في {{expiryDate}}",
+        "preauthorized_payments": "المدفوعات المصرح بها مسبقا",
+        "close_payment_modal": "إغلاق",
+        "close_payment_modal_accessibility_label": "إغلاق تفاصيل طريقة الدفع المشروطة",
+        "payment_method_not_found_error": "غير قادر على العثور على طريقة الدفع",
+        "payment_details_loading": "جارٍ تحميل تفاصيل طريقة الدفع",
+        "pre_authorized_payments": "المدفوعات المصرح بها مسبقا",
+        "total_amount_of_subscription_line_items_left": "و {{total}} المزيد",
+        "total_amount_of_subscription_line_items_left_accessibility_label": "{{totalItems}} العناصر الإجمالية، عرض {{totalItemsToDisplay}} العناصر.",
+        "next_payment_due": "الدفعة التالية مستحقة {{dueDateInMonthDayYear}}",
+        "edit_payment_method_button": "تحرير",
+        "edit_payment_method_button_accessibility_label": "تعديل طريقة الدفع التي تنتهي بـ {{lastDigits}}",
+        "loading_shop_pay": "تحميل متجر الدفع",
+        "invalid_payment_method": "طريقة الدفع غير صالحة",
+        "invalid_payment_method_message": "استخدم بطاقة ائتمان جديدة لمواصلة تلقي الطلبات القادمة.",
+        "replace_payment_method": "استبدال طريقة الدفع",
+        "checkout_card_banner": "لا يمكن استخدام طريقة الدفع هذه إلا للمدفوعات المصرح بها مسبقًا. لن يظهر عند الخروج إذا قمت بتسجيل الدخول إلى هذا المتجر. ",
+        "default_checkbox": "تعيين كافتراضي",
+        "default_checkbox_accessibility_label": "قم بتعيين طريقة الدفع هذه كطريقة افتراضية",
+        "replace_payment_method_button": "استبدال"
+      },
+      "edit_payment_method": {
+        "title": "تعديل طريقة الدفع",
+        "save_payment_method_button": "حفظ",
+        "cancel_edit_payment_method_button": "إلغاء",
+        "payment_method_updated_toast": "تم تحديث طريقة الدفع",
+        "billing_address": "عنوان إرسال الفواتير",
+        "billing_address_add_new": "أضف جديدا",
+        "billing_address_choose_from_list": "اختر من القائمة",
+        "future_purchases_notice": "سيتم حفظ طريقة الدفع هذه لعمليات الشراء المستقبلية.",
+        "generic_error": "حدثت مشكلة أثناء التحديث. يرجى المحاولة مرة أخرى."
+      },
+      "update_payment_method": {
+        "title": "تحديث طريقة الدفع",
+        "button_title": "تحديث",
+        "billing_address": "عنوان إرسال الفواتير",
+        "disclaimer": "سيتم حفظ طريقة الدفع هذه لعمليات الشراء المستقبلية ويمكن استخدامها لأي عملية شراء متكررة أو مؤجلة.",
+        "error_message": "غير قادر على تحديث طريقة الدفع",
+        "current": "الحالي",
+        "subscriptions_title": "الاشتراكات",
+        "subscriptions_list_accessibility_label": "قائمة منتجات الاشتراك",
+        "pre_orders_title": "القادمة",
+        "pre_orders_list_accessibility_label": "قائمة منتجات الطلبات المعلقة",
+        "resources_list_accessibility_label": "منتجات الاشتراك ومنتجات الطلبات المعلقة باستخدام طريقة الدفع هذه",
+        "resources_card_scroll": "قم بالتمرير لمزيد من العناصر"
       }
     }
   }
