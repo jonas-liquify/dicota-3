@@ -14,6 +14,30 @@
     "announcement_bar": {
       "type": "announcement_bar",
       "blocks": {
+        "usp_R3jDX4": {
+          "type": "usp",
+          "name": "USP",
+          "settings": {
+            "text_text": "Free shipping over 100 EUR"
+          },
+          "blocks": {}
+        },
+        "usp_eNwyCC": {
+          "type": "usp",
+          "name": "USP",
+          "settings": {
+            "text_text": "Free shipping over 100 EUR"
+          },
+          "blocks": {}
+        },
+        "usp_KL3CMk": {
+          "type": "usp",
+          "name": "USP",
+          "settings": {
+            "text_text": "Free shipping over 100 EUR"
+          },
+          "blocks": {}
+        },
         "rechte-seite": {
           "type": "rechte-seite",
           "static": true,
@@ -21,9 +45,29 @@
             "text_reseller_button": "for End Customers",
             "url_reseller_button_link": "/"
           },
-          "blocks": {}
+          "blocks": {
+            "link_EBRwgA": {
+              "type": "link",
+              "name": "Link",
+              "settings": {
+                "url_link_url": "",
+                "text_link_text": "About DICOTA",
+                "link_list": "",
+                "highlighted": false
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "link_EBRwgA"
+          ]
         }
       },
+      "block_order": [
+        "usp_R3jDX4",
+        "usp_eNwyCC",
+        "usp_KL3CMk"
+      ],
       "settings": {
         "text_reseller_button": "Für Reseller",
         "url_reseller_button_link": ""
