@@ -1,39 +1,49 @@
 <div class="padding-global padding-section-small" style="padding-top: {{ section.settings.padding_top }}rem; padding-bottom: {{ section.settings.padding_bottom }}rem"><div class="container-large"><div class="acc-default_wrapper"><div class="acc-default_flex-small"><div class="default-flex-tiny"><h1 class="heading-style-h2">
-{{ section.settings.text_heading_1 }}
-</h1><div class="text-size-medium max-width-large"> {{ section.settings.textarea_subheading }} </div></div><div class="acc-card"><div class="acc-default_flex-small max-width-full"><h2 class="heading-style-h4">
-{{ section.settings.text_heading_2 }}
-</h2><div li-cf-theme-blocks="" class="acc-triple">
-{% content_for 'blocks' %}
-</div></div></div></div></div></div></div> {% schema %} {
+{{ section.settings.text_heading }}
+</h1>{% if section.settings.textarea_subheading != blank %}    <div class="li-guard" li-if="section.settings.textarea_subheading != blank">
+    <div class="text-size-medium max-width-large"> {{ section.settings.textarea_subheading }} </div>    </div>
+{% endif %}</div><div class="acc-card"><div class="default-flex-tiny"><h2 class="heading-style-h4">
+{{ section.settings.text_manager_heading }}
+</h2></div><div class="club-support_grid">{% for contact in company.metafields.custom.dicota_account_manager.value | default: localization.market.metafields.custom.dicota_account_manager.value %}    <div li-for="contact in company.metafields.custom.dicota_account_manager.value | default: localization.market.metafields.custom.dicota_account_manager.value" class="club-support_card">
+                                    <img li-object:src="contact.image.value | image_url: width: 400" src="{{ contact.image.value | image_url: width: 400 }}" loading="lazy" alt="" class="club-support_img">
+                            <div class="club-support_info"><div class="club-support_info-row"><div class="club-support_info-text"><div li-object="contact.dicota_account_manager.value" class="club-support_name">{{ contact.dicota_account_manager.value }}</div><div class="club-support_contacts">{% if contact.email.value != blank %}    <span class="li-guard" li-if="contact.email.value != blank">
+    <a li-object="contact.email.value" href="'mailto:' | append: contact.email.value" class="club-support_link">{{ contact.email.value }}</a>    </span>
+{% endif %}{% if contact.phone.value != blank %}    <span class="li-guard" li-if="contact.phone.value != blank">
+    <a li-object="contact.phone.value" href="'tel:' | append: contact.phone.value" class="club-support_link">{{ contact.phone.value }}</a>    </span>
+{% endif %}</div></div>{% if contact.linkedin.value != blank %}    <span class="li-guard" li-if="contact.linkedin.value != blank">
+    <a href="contact.linkedin.value" target="_blank" rel="noopener noreferrer" class="club-support_linkedin w-embed" aria-label="LinkedIn"><svg width="100%" height="100%" viewbox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="32" height="32" rx="4" fill="#0A66C2"></rect><path d="M11.5 13H9V23H11.5V13Z" fill="white"></path><path d="M10.25 11.5C11.0784 11.5 11.75 10.8284 11.75 10C11.75 9.17157 11.0784 8.5 10.25 8.5C9.42157 8.5 8.75 9.17157 8.75 10C8.75 10.8284 9.42157 11.5 10.25 11.5Z" fill="white"></path><path d="M16.25 13H13.9V23H16.4V17.8C16.4 16.35 17.15 15.6 18.25 15.6C19.3 15.6 19.9 16.3 19.9 17.8V23H22.4V17.05C22.4 14.15 20.9 12.8 18.85 12.8C17.5 12.8 16.75 13.4 16.4 14V13H16.25Z" fill="white"></path></svg></a>    </span>
+{% endif %}</div></div>
+                        </div>
+{% endfor %}</div></div></div></div></div></div> {% schema %} {
     "tag": "section",
     "name": "B2B Kontakt",
     "class": "section_acc-default",
-    "blocks": [
-        {
-            "type": "b2b-kontakt"
-        },
-        {
-            "type": "@app"
-        }
-    ],
     "settings": [
         {
-            "id": "text_heading_1",
+            "id": "text_heading",
             "type": "text",
-            "label": "Heading 1",
-            "default": "Sales Support"
+            "label": "Heading",
+            "default": "Club Support"
         },
         {
             "id": "textarea_subheading",
             "type": "textarea",
             "label": "Subheading",
-            "default": "Your direct line to the DICOTA sales team for individual requests."
+            "default": "Yorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis."
         },
         {
-            "id": "text_heading_2",
+            "id": "text_manager_heading",
             "type": "text",
-            "label": "Heading 2",
-            "default": "DICOTA Schweiz AG"
+            "label": "Manager Heading",
+            "default": "Ihr Club Manager"
+        },
+        {
+            "type": "paragraph",
+            "content": "Die Club-Manager-Kontakte kommen aus dem Metafeld custom.dicota_account_manager (Liste von Metaobjekt-Referenzen 'DICOTA Account Manager'). Ist auf der Company des eingeloggten B2B-Kunden eine eigene Liste hinterlegt, wird diese angezeigt; andernfalls greift automatisch der Markt-Standard (gleiches Metafeld auf dem aktiven Market)."
+        },
+        {
+            "type": "paragraph",
+            "content": "Aktuell hat das Metaobjekt 'DICOTA Account Manager' nur das Feld f\u00fcr den Namen. F\u00fcr Foto, E-Mail, Telefon und LinkedIn m\u00fcssen im Shopify Admin noch die Felder 'image', 'email', 'phone' und 'linkedin' zum Metaobjekt-Typ hinzugef\u00fcgt werden \u2014 die Sektion zeigt sie automatisch an, sobald sie gepflegt sind."
         },
         {
             "type": "header",
@@ -64,11 +74,7 @@
         {
             "name": "B2B Kontakt",
             "category": "_B2B",
-            "blocks": [
-                {
-                    "type": "b2b-kontakt"
-                }
-            ]
+            "blocks": []
         }
     ]
 } {% endschema %}

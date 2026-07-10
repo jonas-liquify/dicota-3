@@ -4,7 +4,25 @@
     <p class="text-size-medium">
 {{ section.settings.text_paragraph }}
 </p>    </div>
-{% endif %}</div><div class="contact_form-block w-form">{% form 'contact', return_to: '/', class: 'contact_form' %}
+{% endif %}{% if section.settings.image_bild != blank %}    <div class="li-guard" li-if="section.settings.image_bild != blank">
+    <div class="contact_top"><div class="default-bg-wrapper">{% if section.settings.image_bild %}
+{{ section.settings.image_bild | image_url: width: 1200 | image_tag: loading: 'lazy', class: 'default-bg-image' }}
+{% else %}
+<img src="{{ 'platzhalter.svg' | asset_url }}" loading="lazy" alt="" class="default-bg-image">
+{% endif %}</div></div>    </div>
+{% endif %}<div class="contact_bottom"><div class="contact_bottom-inner"><div class="contact_contact-row"><div class="text-style-subline">
+{{ section.settings.text_address_subline }}
+</div><div class="text-size-medium">
+{{ section.settings.text_address_text }}
+</div></div><div class="contact_trennlinie"></div><div class="contact_contact-row"><div class="text-style-subline">
+{{ section.settings.text_contact_subline }}
+</div><div li-cf-theme-blocks="" class="footer_contact-list">
+{% content_for 'blocks' %}
+</div></div>{% if section.settings.text_opening_hours != blank %}    <div class="li-guard" li-if="section.settings.text_opening_hours != blank">
+    <div class="text-size-medium">
+{{ section.settings.text_opening_hours }}
+</div>    </div>
+{% endif %}</div></div></div><div class="contact_form-block w-form">{% form 'contact', return_to: '/', class: 'contact_form' %}
 <div class="form_field-wrapper"><label for="First-Name-2" class="form_field-label">
 {{ section.settings.text_first_name }}
 </label><input class="form_input w-input" maxlength="256" name="contact[first_name]" data-name="First Name 2" placeholder="" type="text" id="First-Name-2" required=""></div><div class="form_field-wrapper"><label for="Last-Name-2" class="form_field-label">
@@ -17,6 +35,14 @@
     "tag": "section",
     "name": "Contact Form",
     "class": "section_contact",
+    "blocks": [
+        {
+            "type": "contact-location"
+        },
+        {
+            "type": "@app"
+        }
+    ],
     "settings": [
         {
             "id": "text_heading",
@@ -29,6 +55,35 @@
             "type": "text",
             "label": "Paragraph",
             "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        },
+        {
+            "id": "image_bild",
+            "type": "image_picker",
+            "label": "Bild"
+        },
+        {
+            "id": "text_address_subline",
+            "type": "text",
+            "label": "Address Subline",
+            "default": "Address"
+        },
+        {
+            "id": "text_address_text",
+            "type": "text",
+            "label": "Address Text",
+            "default": "DCT Group AG \u00b7 Churerstrasse 20, 8808 Pf\u00e4ffikon SZ, Switzerland"
+        },
+        {
+            "id": "text_contact_subline",
+            "type": "text",
+            "label": "Contact Subline",
+            "default": "Contact"
+        },
+        {
+            "id": "text_opening_hours",
+            "type": "text",
+            "label": "Opening Hours",
+            "default": "Monday \u2013 Friday: 08:00 \u2013 17:00"
         },
         {
             "id": "text_first_name",
@@ -65,7 +120,11 @@
         {
             "name": "Contact Form",
             "category": "Form",
-            "blocks": []
+            "blocks": [
+                {
+                    "type": "contact-location"
+                }
+            ]
         }
     ]
 } {% endschema %}
