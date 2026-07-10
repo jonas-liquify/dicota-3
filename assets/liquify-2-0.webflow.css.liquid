@@ -4618,13 +4618,13 @@ figcaption {
     display: none;
   }
   .nav_mini-cart {
-    order: 1;
+    order: 3;
   }
   .nav_account {
-    order: 2;
+    order: 1;
   }
   .nav_search {
-    order: 3;
+    order: 2;
   }
   .hero_arrow,
   .hero_pagination,
@@ -6631,7 +6631,11 @@ figcaption {
   width: 1rem;
   height: 1rem;
   background-color: #ffffff26;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   border-radius: 2px;
+  overflow: hidden;
   flex: none;
 }
 
@@ -16285,9 +16289,9 @@ button.li-lang_dd-link {
     display: none;
   }
   .ph_gallery-more {
-    clear: right;
-    float: right;
+    display: block;
     width: 36.4%;
+    margin-left: auto;
     box-sizing: border-box;
     margin-top: .75rem;
     padding: .25rem 0;
@@ -18128,9 +18132,9 @@ img.product-header_gallery-image {
     height: 3rem; }
   .nav_container > .nav_menu-button.nav_menu-button { order: 1; }
   .nav_wishlist.nav_wishlist { display: none; }
-  .nav_mini-cart.nav_mini-cart { order: 1; }
-  .nav_account.nav_account { order: 2; }
-  .nav_search.nav_search { order: 3; }
+  .nav_mini-cart.nav_mini-cart { order: 3; }
+  .nav_account.nav_account { order: 1; }
+  .nav_search.nav_search { order: 2; }
   .nav_dropdown-list.nav_mega.nav_mega { position: static;
     inset: auto;
     grid-template-columns: 1fr;
@@ -18393,3 +18397,32 @@ img.product-header_gallery-image {
     display: flex;
   }
 }
+
+/* FAQ Sidebar: sticky nur im Side-by-Side-Layout sinnvoll (Desktop);
+   ab dem Breakpoint, an dem .faq_wrapper zu einer Spalte stapelt,
+   ueberlappt der sticky Header sonst den darunter scrollenden Inhalt. */
+@media screen and (max-width: 991px) {
+  .default-flex-small.faq_sidebar.faq_sidebar {
+    position: static;
+    top: auto;
+    height: auto;
+  }
+}
+
+
+/* Announcement Bar mobile: Sprachumschalter ganz links, Reseller-Button ganz rechts
+   (da .announcement-bar_items/USP mobile ausgeblendet ist, muss .announcement-bar_right
+   selbst die volle Breite einnehmen, damit space-between greift). */
+@media screen and (max-width: 767px) {
+  .announcement-bar_right.announcement-bar_right {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .li-lang_wrapper.li-lang_wrapper {
+    order: -1;
+  }
+  .announcement-bar_reseller-btn.announcement-bar_reseller-btn {
+    order: 1;
+  }
+}
+
