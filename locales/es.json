@@ -102,29 +102,6 @@
   },
   "reviews": {
     "body": "Tu reseña",
-    "email": "Correo electrónico",
-    "empty": "Aún no hay reseñas. Sé el primero en escribir uno.",
-    "load_more": "Cargar más reseñas",
-    "name": "Nombre",
-    "submit": "Enviar reseña",
-    "title": "Título de la reseña",
-    "write": "Escribe una reseña",
-    "your_rating": "Tu calificación"
-  },
-  "sales": {
-    "product_list": {
-      "meta_line": "Número de artículo. · Modelo predecesor · Código EAN · Disponibilidad · Niveles de precios · Tipo de construcción · Color"
-    }
-  },
-  "search": {
-    "heading": "Buscar productos",
-    "no_results": "No se encontraron resultados.",
-    "no_results_hint": "No hay resultados con este criterio. Intente cambiar su búsqueda.",
-    "no_suggestions": "Sin sugerencias",
-    "popular": "Búsquedas populares",
-    "recently_viewed": "Visto recientemente",
-    "searching": "Buscando…",
-    "suggestions": "Sugerencias",
-    "view_all": "Ver todos los productos"
+    "email": "Correo electrónico"
   }
 }
