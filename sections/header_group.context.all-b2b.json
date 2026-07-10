@@ -13,12 +13,6 @@
   },
   "parent": "header_group.json",
   "sections": {
-    "header_a83nJp": {
-      "settings": {
-        "menu": "main-menu-reseller"
-      },
-      "blocks": {}
-    },
     "announcement_bar_YPJcxP": {
       "settings": {},
       "blocks": {
@@ -38,6 +32,40 @@
           }
         }
       }
+    },
+    "header_a83nJp": {
+      "settings": {
+        "menu": "main-menu-reseller"
+      },
+      "blocks": {}
+    },
+    "product_breadcrumb_YTWmk": {
+      "type": "product_breadcrumb",
+      "disabled": false,
+      "settings": {
+        "text_home_label": "Home",
+        "text_kollektionen_label": "Collections",
+        "text_suche_label": "Search",
+        "text_warenkorb_label": "Cart",
+        "text_404_label": "Page not found",
+        "header-ba19154476a846acf36a13e39f70c0fd": null,
+        "paragraph-2c77ad5dda3f9c94fb122a0d3fcf736a": null,
+        "header-0d6cd68ab7053c34cf415f6e629f3e04": null,
+        "padding_top": 0.5,
+        "padding_bottom": 0.5,
+        "header-9720ddf5aa4f033f2ccbc1cdbf447f27": null,
+        "bg_color": "#ffffff",
+        "text_color": "#0f0f0f"
+      },
+      "blocks": {},
+      "block_order": [],
+      "name": "Product Breadcrumb"
     }
-  }
+  },
+  "order": [
+    "announcement_bar_YPJcxP",
+    "reseller_header_UNKmKg",
+    "header_a83nJp",
+    "product_breadcrumb_YTWmk"
+  ]
 }

@@ -12,5 +12,28 @@
     "market": "all-b2b"
   },
   "parent": "collection.sleeves.json",
-  "sections": {}
+  "sections": {
+    "collection_image_her_mMmMA": {
+      "type": "collection_image_her",
+      "disabled": false,
+      "settings": {
+        "image_hintergrundbild": "shopify://shop_images/4_CTw_Sleeves_01_1bc69a79-c88e-4fe5-b874-c1854f53aa3e.jpg",
+        "textarea_text": "Slim protection for your device, wherever you go. Discover our Laptop Sleeves.",
+        "header-539a2356bc67be25267c6534134c58a2": null,
+        "padding_top": 2.5,
+        "padding_bottom": 2.5
+      },
+      "blocks": {},
+      "block_order": [],
+      "name": "Collection Image Her"
+    }
+  },
+  "order": [
+    "collection_hero_8TRwPe",
+    "featured_product_qe68Cr",
+    "collection_intro",
+    "collection_products",
+    "testimonials",
+    "collection_image_her_mMmMA"
+  ]
 }
