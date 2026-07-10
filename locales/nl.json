@@ -102,6 +102,29 @@
   },
   "reviews": {
     "body": "Jouw recensie",
-    "email": "E-mail"
+    "email": "E-mail",
+    "empty": "Nog geen beoordelingen. Wees de eerste die er een schrijft.",
+    "load_more": "Laad meer beoordelingen",
+    "name": "Naam",
+    "submit": "Beoordeling indienen",
+    "title": "Titel van de recensie",
+    "write": "Schrijf een recensie",
+    "your_rating": "Jouw beoordeling"
+  },
+  "sales": {
+    "product_list": {
+      "meta_line": "Artikelnr. · Voorgangermodel · EAN-code · Beschikbaarheid · Prijsniveaus · Bouwtype · Kleur"
+    }
+  },
+  "search": {
+    "heading": "Zoek naar producten",
+    "no_results": "Geen resultaten gevonden.",
+    "no_results_hint": "Er zijn geen resultaten met dit criterium. Probeer uw zoekopdracht te wijzigen.",
+    "no_suggestions": "Geen suggesties",
+    "popular": "Populaire zoekopdrachten",
+    "recently_viewed": "Recent bekeken",
+    "searching": "Zoeken…",
+    "suggestions": "Suggesties",
+    "view_all": "Bekijk alle producten"
   }
 }
