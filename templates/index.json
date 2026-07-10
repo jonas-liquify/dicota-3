@@ -284,10 +284,10 @@
           "name": "Banner",
           "settings": {
             "image_hintergrundbild": "shopify://shop_images/Dicota_Roller_c25f3e77-721b-45f9-8e7c-7aaf5d6930f3.avif",
-            "text_uberschrift": "Tell A Friend & Get 15% Off",
-            "textarea_subtext": "Give your friends 15% off their first order, and get a 15% off for each successful referral",
+            "text_uberschrift": "SEVEN Family",
+            "textarea_subtext": "Engineered to Protect. Built to Last.",
             "url_button_link": "",
-            "text_button_text": "Freund einladen"
+            "text_button_text": "Explore Now"
           },
           "blocks": {}
         },
