@@ -129,8 +129,9 @@
           "type": "usp-block",
           "name": "USP Block",
           "settings": {
-            "text_uberschrift": "Free Shipping ab 80 EUR",
-            "textarea_beschreibung": "Free standard shipping available in the European Union"
+            "image_icon": "shopify://shop_images/delivery_truck_speed.png",
+            "text_uberschrift": "Free Shipping",
+            "textarea_beschreibung": "To Germany and Switzerland on orders over €49."
           },
           "blocks": {}
         },
@@ -138,6 +139,7 @@
           "type": "usp-block",
           "name": "USP Block",
           "settings": {
+            "image_icon": "shopify://shop_images/delivery_truck_speed.png",
             "text_uberschrift": "Free Shipping ab 80 EUR",
             "textarea_beschreibung": "Free standard shipping available in the European Union"
           },
