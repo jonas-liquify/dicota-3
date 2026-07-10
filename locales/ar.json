@@ -3255,7 +3255,75 @@
         "ready_for_pickup_description": "هذه العناصر جاهزة للاستلام. يرجى إحضار تأكيد الطلب الخاص بك عند استلام طلبك.",
         "ready_for_pickup_location": "طلبك جاهز للاستلام في الموقع",
         "picked_up_label": "التقطت",
-        "canceled_label": "تم الإلغاء"
+        "canceled_label": "تم الإلغاء",
+        "canceled_title": "لقد تم إلغاء طلبك",
+        "come_back": "ارجع إلى هذه الصفحة للحصول على تحديثات حول حالة الشحن الخاصة بك.",
+        "company_tracking_number": "{{company}} رقم التتبع:",
+        "confirmed_label": "تم التأكيد",
+        "confirmed_title": "تم تأكيد طلبك",
+        "confirmed_description_pickup": "نحن نجهز هذه العناصر للاستلام.",
+        "confirmed_description_shipping": "نحن نجهز هذه العناصر للشحن.",
+        "confirmed_description_digital": "ستتلقى بريدًا إلكترونيًا عندما يكون طلبك جاهزًا.",
+        "confirmed_description_gift_card_text": "ستتلقى رسالة نصية عندما يكون طلبك جاهزًا.",
+        "complete_label": "كامل",
+        "delivered_label": "تم التسليم",
+        "delivered_description_gift_card": {
+          "one": "تم إرسال بطاقة الهدايا عبر البريد الإلكتروني.",
+          "other": "تم إرسال بطاقات الهدايا عبر البريد الإلكتروني."
+        },
+        "delivered_description_gift_card_text": {
+          "one": "تم إرسال بطاقة الهدايا عن طريق النص.",
+          "other": "تم إرسال بطاقات الهدايا عن طريق الرسائل النصية."
+        },
+        "gift_card_label": {
+          "one": "بطاقة هدية",
+          "other": "بطاقات الهدايا"
+        },
+        "gift_card_resend_button": {
+          "one": "إعادة إرسال بطاقة الهدايا",
+          "other": "إعادة إرسال بطاقات الهدايا"
+        },
+        "gift_resend_success": {
+          "one": "تمت إعادة إرسال بطاقة الهدايا",
+          "other": "بطاقات الهدايا مستاءة"
+        },
+        "gift_resend_failure": {
+          "one": "حدثت مشكلة أثناء إعادة إرسال بطاقة الهدايا. حاول مرة أخرى أو اتصل بنا.",
+          "other": "حدثت مشكلة أثناء إعادة إرسال بطاقات الهدايا. حاول مرة أخرى أو اتصل بنا."
+        },
+        "confirmed_gift_card_additional_description": {
+          "one": "سيتم إرسال بطاقة الهدايا في بريد إلكتروني منفصل.",
+          "other": "سيتم إرسال كل بطاقة هدية في بريد إلكتروني منفصل."
+        },
+        "confirmed_gift_card_additional_description_text": {
+          "one": "سيتم إرسال بطاقة الهدايا في نص منفصل.",
+          "other": "سيتم إرسال كل بطاقة هدية في نص منفصل."
+        },
+        "status_timestamp": "تم التحديث {{date}}",
+        "estimated_delivery": "متوقع {{date}}",
+        "expected_by": "المتوقع بواسطة {{date}}",
+        "was_expected_by": "كان متوقعا من قبل {{date}}",
+        "delivered": "تم التسليم {{date}}",
+        "buy_with_prime_logo_accessibility_label": "شراء أمازون مع شعار Prime",
+        "in_review_label": "قيد المراجعة",
+        "in_review_title": "طلبك قيد المراجعة",
+        "last_updated": "آخر تحديث {{date}}",
+        "multiple_shipments_label": "شحنات متعددة",
+        "multiple_statuses_label": "حالات الطلب المتعددة",
+        "no_tracking_number": "لا يوجد رقم تتبع لهذه الشحنة.",
+        "tracking_number": {
+          "one": "رقم التتبع",
+          "other": "أرقام التتبع"
+        },
+        "on_its_way_label": "في طريقها",
+        "out_for_delivery_label": "خارج للتسليم",
+        "resume_tracking": "استئناف التتبع",
+        "submitted_label": "تم الإرسال",
+        "submitted_description": "مراجعة الطلب وتفاصيل الدفع.",
+        "there_was_a_problem_label": "كانت هناك مشكلة",
+        "track_shipment": "تتبع الشحنة",
+        "request_return": "طلب العودة",
+        "view_order_for_details": "عرض الطلب للحصول على التفاصيل"
       }
     }
   }
