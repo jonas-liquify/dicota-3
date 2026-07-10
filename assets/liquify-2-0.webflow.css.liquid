@@ -3741,6 +3741,13 @@ figcaption {
     flex-direction: column;
     align-items: stretch;
   }
+  /* Columns stack here — sticky only makes sense side-by-side (desktop).
+     Boosted selector: the unboosted base rule sits later in this file and
+     would otherwise win at equal specificity (see project_css_media_specificity_bug). */
+  .product-header_details.product-header_details {
+    position: static;
+    top: auto;
+  }
   .product-header_product-details {
     padding-left: 0;
   }
@@ -6674,8 +6681,7 @@ figcaption {
     margin-right: 0;
   }
   .footer_contact-list {
-    grid-row-gap: .5rem;
-    grid-template-columns: 1fr;
+    grid-row-gap: 1.5rem;
   }
 }
 
@@ -10375,6 +10381,8 @@ button.li-lang_dd-link {
   max-width: 32rem;
   justify-content: flex-start;
   align-items: stretch;
+  position: sticky;
+  top: 4.5rem;
 }
 /* Every direct child of details column spans the full column width
    so title, USPs, price, options, buttons all line up vertically. */
@@ -18395,30 +18403,26 @@ img.product-header_gallery-image {
   height: 1px;
 }
 
-/* Fixed Switzerland/Europe/Email/MEA & India/Asia rows: label column + value
-   column, each row contributing 2 direct children (auto-flow: row). */
+/* Contact Location blocks (Europe/MEA & India/Asia Pacific, etc.): a bold
+   region heading followed by a multi-line richtext address, stacked. */
 .footer_contact-list {
-  grid-column-gap: 1.375rem;
-  grid-row-gap: 0.8125rem;
-  grid-template-columns: auto 1fr;
-  grid-auto-flow: row;
-  align-items: baseline;
-  display: grid;
+  grid-row-gap: 2rem;
+  flex-flow: column;
+  display: flex;
 }
 
-.footer_contact-label {
-  white-space: nowrap;
+.footer_contact-block {
+  grid-row-gap: 0.5rem;
+  flex-flow: column;
+  display: flex;
 }
 
-.footer_contact-link-wrap {
-  display: block;
+.footer_contact-heading {
+  font-weight: 600;
 }
 
-.footer_contact-link {
-  font-size: 1.125rem;
-  font-weight: 500;
-  line-height: 1.35;
-  text-decoration: underline;
+.footer_contact-address {
+  line-height: 1.5;
 }
 
 /* Announcement Bar: USP-Bloecke (links) mobile ausblenden */

@@ -18,9 +18,7 @@
 </div></div></div>    </div>
 {% endif %}<div class="contact_bottom"><div class="contact_bottom-inner"><div class="contact_contact-row"><div class="text-style-subline">
 {{ section.settings.text_address_subline }}
-</div><div class="text-size-medium">
-{{ section.settings.text_address_text }}
-</div></div><div class="contact_trennlinie"></div><div class="contact_contact-row"><div class="text-style-subline">
+</div><div class="text-size-medium"> {{ section.settings.richtext_address_text }} </div></div><div class="contact_trennlinie"></div><div class="contact_contact-row"><div class="text-style-subline">
 {{ section.settings.text_contact_subline }}
 </div>{% content_for "block", type: "contact-list", id: "contact-list" %}</div>{% if section.settings.text_opening_hours != blank %}    <div class="li-guard" li-if="section.settings.text_opening_hours != blank">
     <div class="text-size-medium">
@@ -72,19 +70,19 @@
             "id": "text_address_subline",
             "type": "text",
             "label": "Address Subline",
-            "default": "Address"
+            "default": "Headquarters"
         },
         {
-            "id": "text_address_text",
-            "type": "text",
+            "id": "richtext_address_text",
+            "type": "richtext",
             "label": "Address Text",
-            "default": "DCT Group AG \u00b7 Churerstrasse 20, 8808 Pf\u00e4ffikon SZ, Switzerland"
+            "default": "<p>DICOTA SCHWEIZ AG<br\/>Churerstrasse 20<br\/>8808 Pf\u00e4ffikon SZ<br\/>SWITZERLAND<\/p>"
         },
         {
             "id": "text_contact_subline",
             "type": "text",
             "label": "Contact Subline",
-            "default": "Contact"
+            "default": "Regional"
         },
         {
             "id": "text_opening_hours",
