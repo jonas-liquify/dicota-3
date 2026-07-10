@@ -1,0 +1,163 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "b2b_subnav": {
+      "type": "b2b_subnav",
+      "settings": {
+        "text_dummy_description": "Short description",
+        "text_punkte_label": "Current point balance:",
+        "account_menu": ""
+      }
+    },
+    "b2b_mkt_trainings": {
+      "type": "b2b_mkt_trainings",
+      "settings": {
+        "text_heading": "DCT Academy",
+        "textarea_subheading": "When you're on the move, there are many situations where you can't keep your laptop on you at all times. Whether it's a trip to the restroom on the train or a quick coffee break in the shared kitchen of a coworking space. Even in just a few minutes, opportunists could strike.",
+        "padding_top": 4,
+        "padding_bottom": 4
+      }
+    },
+    "b2b_mkt_train_videos": {
+      "type": "b2b_mkt_train_videos",
+      "blocks": {
+        "b2b_mkt_video_xREJHd": {
+          "type": "b2b-mkt-video",
+          "name": "B2B Mkt Video",
+          "settings": {
+            "url_video_link": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/Teaser_Image_Academy_self-healing_zipper.png?v=1783376202",
+            "image_thumbnail": "shopify://shop_images/Teaser_Image_Academy_self-healing_zipper.png",
+            "text_share_text": "Watch",
+            "text_titel": "Self-healing Zipper",
+            "textarea_beschreibung": "Mauris ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torq."
+          },
+          "blocks": {}
+        },
+        "b2b_mkt_video_gUFQyn": {
+          "type": "b2b-mkt-video",
+          "name": "B2B Mkt Video",
+          "settings": {
+            "url_video_link": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/Teaser_Image_Academy_Lockable_Zipper.png?v=1783376202",
+            "image_thumbnail": "shopify://shop_images/Teaser_Image_Academy_Lockable_Zipper.png",
+            "text_share_text": "Watch",
+            "text_titel": "Lockable Zipper",
+            "textarea_beschreibung": "Mauris ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torq."
+          },
+          "blocks": {}
+        },
+        "b2b_mkt_video_1": {
+          "type": "b2b-mkt-video",
+          "settings": {
+            "url_video_link": "https://cdn.shopify.com/videos/c/o/v/84f9a383cc7545ff8031348031e2473e.mp4",
+            "image_thumbnail": "shopify://shop_images/Teaser_Image_Academy_RFID_Protection.png",
+            "text_share_text": "Watch",
+            "text_titel": "RFID Protection",
+            "textarea_beschreibung": "Mauris ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torq."
+          },
+          "blocks": {}
+        },
+        "b2b_mkt_video_2": {
+          "type": "b2b-mkt-video",
+          "settings": {
+            "url_video_link": "https://cdn.shopify.com/videos/c/o/v/07f5ad1ff9e34487b65cc04be387c629.mp4",
+            "image_thumbnail": "shopify://shop_images/Teaser_Image_Academy_GPS_Tracker.png",
+            "text_share_text": "Watch",
+            "text_titel": "GPS Tracking",
+            "textarea_beschreibung": "Mauris ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torq."
+          },
+          "blocks": {}
+        },
+        "b2b_mkt_video_3": {
+          "type": "b2b-mkt-video",
+          "settings": {
+            "url_video_link": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/Teaser_Image_Academy_Lockable_D-Ring.png?v=1783376202",
+            "image_thumbnail": "shopify://shop_images/Teaser_Image_Academy_Lockable_D-Ring.png",
+            "text_share_text": "Watch",
+            "text_titel": "Lockable D-Ring",
+            "textarea_beschreibung": "Mauris ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torq."
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "b2b_mkt_video_xREJHd",
+        "b2b_mkt_video_gUFQyn",
+        "b2b_mkt_video_1",
+        "b2b_mkt_video_2",
+        "b2b_mkt_video_3"
+      ],
+      "settings": {
+        "text_uberschrift": "Security Features",
+        "padding_top": 4,
+        "padding_bottom": 4
+      }
+    },
+    "b2b_mkt_train_videos_hnWy9N": {
+      "type": "b2b_mkt_train_videos",
+      "blocks": {
+        "b2b_mkt_video_ajaNqn": {
+          "type": "b2b-mkt-video",
+          "name": "B2B Mkt Video",
+          "settings": {
+            "url_video_link": "https://cdn.shopify.com/videos/c/o/v/7d4b49b7f67943649808d2dedaf074df.mp4",
+            "image_thumbnail": "shopify://shop_images/Teaser_Image_Academy_Filter_magnetic.png",
+            "text_share_text": "Watch",
+            "text_titel": "Magnetic Screen Filters",
+            "textarea_beschreibung": "Mauris ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torq."
+          },
+          "blocks": {}
+        },
+        "b2b_mkt_video_icKccb": {
+          "type": "b2b-mkt-video",
+          "name": "B2B Mkt Video",
+          "settings": {
+            "url_video_link": "https://cdn.shopify.com/videos/c/o/v/75e5cc6b17654929a1b6a05b3f9c5c34.mp4",
+            "image_thumbnail": "shopify://shop_images/Teaser_Image_Academy_Filter_side-mounted.png",
+            "text_share_text": "Watch",
+            "text_titel": "Side-Mounted Screen Filters",
+            "textarea_beschreibung": "Mauris ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torq."
+          },
+          "blocks": {}
+        },
+        "b2b_mkt_video_LCEejp": {
+          "type": "b2b-mkt-video",
+          "settings": {
+            "url_video_link": "https://cdn.shopify.com/videos/c/o/v/ef2a286d4a8542ce9fd6a131737cd0ae.mp4",
+            "image_thumbnail": "shopify://shop_images/Teaser_Image_Academy_Filter_self-adhesive.png",
+            "text_share_text": "Watch",
+            "text_titel": "Self-Adhesive Screen Filters",
+            "textarea_beschreibung": "Mauris ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torq."
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "b2b_mkt_video_ajaNqn",
+        "b2b_mkt_video_icKccb",
+        "b2b_mkt_video_LCEejp"
+      ],
+      "name": "B2B Mkt Train Videos",
+      "settings": {
+        "text_uberschrift": "Videos",
+        "padding_top": 4,
+        "padding_bottom": 4
+      }
+    }
+  },
+  "layout": "b2b",
+  "wrapper": "main.main-wrapper",
+  "order": [
+    "b2b_subnav",
+    "b2b_mkt_trainings",
+    "b2b_mkt_train_videos",
+    "b2b_mkt_train_videos_hnWy9N"
+  ]
+}
