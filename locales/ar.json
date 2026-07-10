@@ -1566,7 +1566,65 @@
         "order_status_payments_app_pending_payment_description_default_with_phone": "ستصلك رسالة تأكيد نصية قريبًا. تتبع طلبك باستخدام تطبيق المتجر.",
         "order_status_payments_app_pending_payment_description_default_with_phone_payment": "ستصلك رسالة تأكيد نصية قريبًا. تتبع طلبك باستخدام تطبيق المتجر.",
         "order_status_payments_app_pending_payment_description_default_with_phone_pick_up": "ستصلك رسالة تأكيد نصية قريبًا. تتبع طلبك باستخدام تطبيق المتجر.",
-        "order_status_payments_app_pending_payment_description_buyer_action_required_with_missing": "اتصل بنا عبر البريد الإلكتروني أو الهاتف لتلقي تأكيد الطلب."
+        "order_status_payments_app_pending_payment_description_buyer_action_required_with_missing": "اتصل بنا عبر البريد الإلكتروني أو الهاتف لتلقي تأكيد الطلب.",
+        "attempted_delivery_description_html": "جرت محاولة لتوصيل طلبك لكنها لم تنجح. %{contact_us} لترتيب محاولة تسليم أخرى.",
+        "attempted_delivery_local_title": "التسليم المفقود",
+        "attempted_delivery_local_description_html": "لم نتمكن من تسليم طلبك. لتحديد موعد تسليم آخر، %{contact_us}.",
+        "delivered": "تم التسليم",
+        "delivered_title": "لقد تم تسليم طلبك",
+        "delivered_description_html": "لقد تم تسليم طلبك إلى العنوان الذي قدمته. إذا لم تستلمها، أو إذا كان لديك أي مشاكل أخرى، %{contact_us}.",
+        "delivered_local_title": "لقد تم تسليم طلبك",
+        "delivered_local_description_html": "لم تتلق طلبك؟ %{let_us_know}.",
+        "choose_payment_method_later": "اختر طريقة الدفع لاحقا",
+        "picked_up_title": "لقد تم التقاط طلبك",
+        "picked_up_description_html": "تم استلام طلبك في %{location_name} على %{date}.",
+        "contact_us": "اتصل بنا",
+        "contact_us_lowercase": "اتصل بنا",
+        "contact_us_html": "بحاجة الى مساعدة؟ %{contact_us}",
+        "updated_time": "تم التحديث %{time_ago} منذ",
+        "failure": "لم يتم تسليمها",
+        "failed_title": "لا يمكن تسليم طلبك",
+        "failed_contact_merchant": "الاتصال %{company} لترتيب التسليم.",
+        "failed_contact_merchant_no_company": "اتصل بنا لترتيب التسليم.",
+        "non_shippable_title": "طلبك مكتمل",
+        "let_us_know": "اسمحوا لنا أن نعرف",
+        "login_title": "قم بتسجيل الدخول لعرض كافة تفاصيل الطلب",
+        "login_description": "يمكنك العثور على رقم طلبك في الإيصال الذي تلقيته عبر البريد الإلكتروني.",
+        "login_description_phone": "يمكنك العثور على رقم طلبك في الإيصال الذي تلقيته عبر رسالة نصية.",
+        "login_not_customer_html": "لا %{name}؟ يمكنك ذلك %{link}",
+        "login_reorder_link_text": {
+          "one": "شراء هذا المنتج أيضا",
+          "other": "شراء هذه المنتجات أيضا"
+        },
+        "customer_information_hidden_fields_message": "قم بتسجيل الدخول لعرض جميع معلومات العميل.",
+        "cancelled_title": "لقد تم إلغاء طلبك",
+        "cancelled_description": "تم إلغاء طلبك بتاريخ %{date}. اتصل بنا إذا كان لديك أي أسئلة.",
+        "order_number_label": "رقم الطلب",
+        "customer_validation_error": "أدخل بريدًا إلكترونيًا صالحًا أو رقم الطلب.",
+        "customer_validation_error_phone": "أدخل رقم هاتف أو رقم طلب صالحًا.",
+        "login": "تسجيل الدخول",
+        "unfulfilled_items_title": "التحضير للشحن",
+        "unfulfilled_items_description": "نقوم حاليًا بإعداد هذه العناصر للشحن.",
+        "marker": {
+          "current": "موقع الشحنة الحالي",
+          "shipping": "عنوان الشحن"
+        },
+        "pick_up_in_store_marker": {
+          "current": "موقع الشحنة الحالي",
+          "shipping": "موقع الالتقاط"
+        },
+        "fulfillment": {
+          "fulfilled_table_title": "العناصر الموجودة في هذه الشحنة",
+          "unfulfilled_table_title": "العناصر المعدة للشحن",
+          "product_image_label": "صورة المنتج",
+          "description_label": "الوصف",
+          "quantity_label": "الكمية"
+        },
+        "order_updates_description_missing": "أنت لا تتلقى تحديثات الشحن.",
+        "order_updates_subscribe_to_email_notifications": "احصل على تحديثات الشحن عبر البريد الإلكتروني",
+        "order_updates_subscribe_to_email_or_phone_notifications": "احصل على تحديثات الشحن عبر البريد الإلكتروني أو الرسائل النصية",
+        "order_updates_subscribe_to_phone_notifications": "احصل على تحديثات الشحن عبر الرسائل النصية",
+        "order_updates_submit_subscription": "إرسال"
       }
     }
   }
