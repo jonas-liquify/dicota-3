@@ -19,7 +19,7 @@
       "settings": {
         "image_hintergrundbild": "shopify://shop_images/4_CTw_Sleeves_01_1bc69a79-c88e-4fe5-b874-c1854f53aa3e.jpg",
         "textarea_text": "Slim protection for your device, wherever you go. Discover our Laptop Sleeves.",
-        "header-bc364be8fdec6b935187fa14ae42e056": null,
+        "header-592bf7c664e48690ccdd8de34d880482": null,
         "padding_top": 2.5,
         "padding_bottom": 2.5
       },
@@ -27,18 +27,18 @@
       "block_order": [],
       "name": "Collection Image Her"
     },
+    "collection_hero_8TRwPe": {
+      "disabled": false,
+      "settings": {},
+      "blocks": {}
+    },
     "featured_product_qe68Cr": {
-      "disabled": true,
+      "disabled": false,
       "settings": {},
       "blocks": {}
     },
     "collection_intro": {
-      "disabled": true,
-      "settings": {},
-      "blocks": {}
-    },
-    "collection_hero_8TRwPe": {
-      "disabled": true,
+      "disabled": false,
       "settings": {},
       "blocks": {}
     }
