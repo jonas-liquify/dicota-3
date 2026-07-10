@@ -24,5 +24,84 @@
     "sort_by": "Sorteer op",
     "submit": "Verzenden",
     "trending": "Populair"
+  },
+  "cart": {
+    "heading": "Winkelwagen",
+    "empty": "Uw winkelwagen is leeg",
+    "get_free_shipping": "Ontgrendel gratis verzending",
+    "still": "Alleen",
+    "to_free_shipping": "weg van gratis verzending",
+    "free_shipping_heading": "Gratis verzending ontgrendeld",
+    "free_shipping_text": "U komt in aanmerking voor gratis verzending van deze bestelling.",
+    "total_price": "Subtotaal",
+    "shipping_fee": "Verzending",
+    "free": "Gratis",
+    "go_to_checkout": "Afrekenen",
+    "note": "Let op"
+  },
+  "blog": {
+    "no_posts": "Geen berichten gevonden."
+  },
+  "certificates": {
+    "intro": "Allemaal DICOTA producten met een conformiteitsverklaring (CE) — gefilterd op SKU of producttitel."
+  },
+  "data_sheets": {
+    "intro": "Allemaal DICOTA producten met een gegevensblad - gefilterd op SKU of producttitel."
+  },
+  "manuals": {
+    "intro": "Allemaal DICOTA producten met een producthandleiding — gefilterd op SKU of producttitel."
+  },
+  "collection": {
+    "no_items": "Geen artikelen gevonden.",
+    "no_matches": "Er zijn geen producten die aan deze filters voldoen.",
+    "no_products": "Geen producten gevonden.",
+    "show_results": "Resultaten weergeven"
+  },
+  "jobs": {
+    "about_role": "Over de rol",
+    "open_application": "Geen passende functie voor jou? Wij horen nog steeds graag van u."
+  },
+  "loyalty": {
+    "cashback": {
+      "account_holder": "Rekeninghouder",
+      "bank": "Bank",
+      "bank_match": "Bankgegevens moeten overeenkomen met de bedrijfsnaam",
+      "conversion": "Wisselkoers: 50 punten = 1 EUR/CHF",
+      "disclaimer": "DICOTA behoudt zich het recht voor om aanvullende informatie te vragen of uitbetalingen te weigeren in geval van problemen. De wisselkoers kan zonder voorafgaande kennisgeving worden gewijzigd.",
+      "iban": "Rekeningnummer / IBAN",
+      "min_points": "Minimaal 10.000 punten vereist",
+      "payout": "Kwartaaluitbetaling via bankoverschrijving",
+      "points_label": "Uit te betalen punten (min. 10.000)"
+    },
+    "club": {
+      "benefit_cashback": "Cashback vanaf 10.000 punten",
+      "benefit_early": "Vroege toegang tot nieuwe producten",
+      "benefit_earn": "Verdien punten bij elke aankoop",
+      "benefit_rewards": "Exclusieve beloningen en bundels",
+      "benefit_support": "Persoonlijke clubondersteuning"
+    },
+    "reward": "Beloning"
+  },
+  "marketing": {
+    "press": "Druk op",
+    "product_imgs": {
+      "meta_line": "Artikelnr. · Voorgangermodel · EAN-code · Beschikbaarheid · Bouwtype · Kleur"
+    }
+  },
+  "products": {
+    "add_to_cart": "Voeg toe aan winkelwagen",
+    "on_sale": "Te koop"
+  },
+  "reseller": {
+    "form": {
+      "contact_person": "Contactpersoon*",
+      "email": "E-mailadres*",
+      "heading": "Voer resellergegevens in",
+      "phone": "Telefoon"
+    }
+  },
+  "reviews": {
+    "body": "Jouw recensie",
+    "email": "E-mail"
   }
 }
