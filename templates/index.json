@@ -139,9 +139,9 @@
           "type": "usp-block",
           "name": "USP Block",
           "settings": {
-            "image_icon": "shopify://shop_images/delivery_truck_speed.png",
-            "text_uberschrift": "Free Shipping ab 80 EUR",
-            "textarea_beschreibung": "Free standard shipping available in the European Union"
+            "image_icon": "shopify://shop_images/box.png",
+            "text_uberschrift": "Free & easy Returns",
+            "textarea_beschreibung": "Shop with confidence with 30 days returns or exchanges"
           },
           "blocks": {}
         },
