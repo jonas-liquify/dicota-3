@@ -9,6 +9,34 @@
  */
 {
   "sections": {
+    "product_breadcrumb_98ixPN": {
+      "type": "product_breadcrumb",
+      "name": "Product Breadcrumb",
+      "settings": {
+        "text_home_label": "Home",
+        "text_kollektionen_label": "Collections",
+        "text_suche_label": "Search",
+        "text_warenkorb_label": "Cart",
+        "text_404_label": "Page not found",
+        "padding_top": 0.5,
+        "padding_bottom": 0.5,
+        "bg_color": "#ffffff",
+        "text_color": "#0f0f0f"
+      }
+    },
+    "collection_hero_8TRwPe": {
+      "type": "collection_hero",
+      "name": "Collection Hero",
+      "settings": {
+        "url_button_link": "",
+        "text_button_text": "Learn more",
+        "show_button": true,
+        "padding_top": 4,
+        "padding_bottom": 6,
+        "bg_color": "#ffffff",
+        "text_color": "#0f0f0f"
+      }
+    },
     "featured_product_qe68Cr": {
       "type": "featured_product",
       "name": "Featured Product",
@@ -31,6 +59,7 @@
           "type": "kategorie-bild",
           "name": "Kategorie-Bild",
           "settings": {
+            "url_link": "",
             "image_bild": "shopify://shop_images/Dicota_Roller_c25f3e77-721b-45f9-8e7c-7aaf5d6930f3.avif",
             "text_titel": "ENTRY LEVEL OR PROJECT TENDER",
             "textarea_text": "Lorem ipsum dolor sit amet, consectetur delle scu adipiscing elit. Suspendisse varius enim in eros elementum tristique."
@@ -41,6 +70,7 @@
           "type": "kategorie-bild",
           "name": "Kategorie-Bild",
           "settings": {
+            "url_link": "",
             "image_bild": "shopify://shop_images/D30846-RPET_40.webp",
             "text_titel": "ENTRY LEVEL OR PROJECT TENDER",
             "textarea_text": "Lorem ipsum dolor sit amet, consectetur delle scu adipiscing elit. Suspendisse varius enim in eros elementum tristique."
@@ -51,6 +81,7 @@
           "type": "kategorie-bild",
           "name": "Kategorie-Bild",
           "settings": {
+            "url_link": "",
             "image_bild": "shopify://shop_images/CT1c_Backpack.png",
             "text_titel": "ENTRY LEVEL OR PROJECT TENDER",
             "textarea_text": "Lorem ipsum dolor sit amet, consectetur delle scu adipiscing elit. Suspendisse varius enim in eros elementum tristique."
@@ -82,11 +113,16 @@
         "url_promo_2_link": "",
         "text_promo_2_button": "JETZT SHOPPEN",
         "promo1_position": 10,
+        "promo1_large": true,
         "promo1_bg": "#162040",
+        "promo1_bg_opacity": 1,
         "promo2_position": 22,
+        "promo2_large": true,
         "promo2_bg": "#162040",
+        "promo2_bg_opacity": 1,
         "padding_top": 0,
-        "padding_bottom": 5
+        "padding_bottom": 5,
+        "text_download_titel": "Processing images…"
       }
     },
     "testimonials": {
@@ -121,19 +157,26 @@
         "show_rating": true
       }
     },
-    "collection_hero_8TRwPe": {
-      "type": "collection_hero",
-      "name": "Collection Hero",
-      "settings": {}
+    "collection_image_her_AFpLEK": {
+      "type": "collection_image_her",
+      "name": "Collection Image Her",
+      "settings": {
+        "image_hintergrundbild": "shopify://shop_images/4_CTw_Backpacks_01_ccdce5ac-b79b-4e78-98c6-e551c6bee153.jpg",
+        "textarea_text": "Designed for business and everyday life, combining reliable protection, smart organization and all-day comfort.",
+        "padding_top": 2.5,
+        "padding_bottom": 2.5
+      }
     }
   },
   "layout": "theme",
   "wrapper": "main.main-wrapper",
   "order": [
+    "product_breadcrumb_98ixPN",
     "collection_hero_8TRwPe",
     "featured_product_qe68Cr",
     "collection_intro",
     "collection_products",
-    "testimonials"
+    "testimonials",
+    "collection_image_her_AFpLEK"
   ]
 }
