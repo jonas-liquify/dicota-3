@@ -26,6 +26,21 @@
       "blocks": {},
       "block_order": [],
       "name": "Collection Image Her"
+    },
+    "collection_hero_8TRwPe": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    },
+    "collection_intro": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    },
+    "featured_product_qe68Cr": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
     }
   },
   "order": [
