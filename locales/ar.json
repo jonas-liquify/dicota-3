@@ -990,7 +990,69 @@
         "card_change_label": "التغيير",
         "card_update_label": "تحديث البطاقة",
         "paypal_disconnect": "قطع الاتصال",
-        "ends_with_label": "تنتهي ب %{last_digits}"
+        "ends_with_label": "تنتهي ب %{last_digits}",
+        "masked_digits_label": "•••• %{last_digits}",
+        "payment_method_saved": "تم حفظ طريقة الدفع",
+        "card_vaulted_company_location": "تم حفظ البطاقة لهذا الموقع",
+        "bank_account_vaulted_company_location": "تم حفظ الحساب البنكي لهذا الموقع",
+        "expiry_long": "(تنتهي %{month}/%{year})",
+        "expiry_short": "(إكسب %{month}/%{year})",
+        "crypto_payment_method": {
+          "description": "قم بتوصيل محفظتك بشكل آمن. لن تتم مشاركة رصيدك وعنوانك.",
+          "tooltip": "لن يتم مشاركة رصيد محفظتك وعنوانك ويمكن خصم المبلغ المطلوب فقط",
+          "cashback_descriptor": {
+            "one": "سوف تتلقى استرداد النقود الخاص بك بعد %{count} يوم",
+            "other": "سوف تتلقى استرداد النقود الخاص بك بعد %{count} أيام"
+          }
+        },
+        "crypto_modal": {
+          "header": "ادفع %{shop_name} %{total_price} دولار أمريكي",
+          "error": {
+            "refresh": "تحديث",
+            "close": "قريب",
+            "sandbox_error": "حدث خطأ ما",
+            "web_component_error": "حدثت مشكلة أثناء تحميل هذه الصفحة"
+          }
+        },
+        "saved_by_payment_method": "تم الحفظ بواسطة %{payment_method}",
+        "pay_with_payment_method": "ادفع مع %{payment_method}",
+        "pay_with_credit_card": "الدفع ببطاقة الائتمان",
+        "pay_with_debit_card": "الدفع ببطاقة الخصم",
+        "different_credit_card_label": "استخدم بطاقة ائتمان مختلفة",
+        "same_billing_address_label": "نفس عنوان الشحن",
+        "different_billing_address_label": "استخدم عنوانًا مختلفًا لإرسال الفواتير",
+        "billing_address_associated_with_mandate": "استخدم العنوان المرتبط بطريقة الدفع",
+        "billing_address_associated_with_mandate_info": "إذا كنت ترغب في تغيير عنوان إرسال الفواتير، قم بإزالة تفاصيل بطاقتك الائتمانية وأعد إدخالها",
+        "free_order_notice_html": "طلبك هو <strong>مجانا</strong>. ليس هناك حاجة للدفع.",
+        "express_checkout_free_order": "لن يتم تحصيل رسوم منك مقابل الطلب المجاني",
+        "order_covered_by_gift_cards_notice": {
+          "one": "يتم تغطية طلبك بواسطة بطاقة الهدايا الخاصة بك.",
+          "other": "يتم تغطية طلبك من خلال بطاقات الهدايا الخاصة بك."
+        },
+        "offsite_gateway_redirect_hint": "سيتم إعادة توجيهك إلى %{gateway_label} لإكمال عملية الشراء.",
+        "offsite_gateway_review_page_redirect_hint": "بعد مراجعة طلبك، سيتم إعادة توجيهك إلى %{gateway_label} لإكمال عملية الشراء.",
+        "offsite_gateway_redirect_hint_multi_currency_html": "%{gateway_label} المجموع %{total_shop_price}",
+        "offsite_gateway_redirect_hint_no_button_label": "سيتم إعادة توجيهك إلى %{gateway_label} لإكمال عملية الشراء.",
+        "receiver_payment_experience_hint": "بعد تقديم طلبك، سوف تتلقى تفاصيل الدفع. قم بالدفع في Multibanco أو عبر الإنترنت من الداخل %{due_days} أيام.",
+        "billing_address_title": "عنوان إرسال الفواتير",
+        "billing_address_rollup_accessibility_label": "خيارات عنوان الفواتير",
+        "billing_address_description": "حدد العنوان الذي يتوافق مع بطاقتك أو طريقة الدفع الخاصة بك.",
+        "billing_address_description_no_shipping_address": "أدخل العنوان الذي يطابق بطاقتك أو طريقة الدفع الخاصة بك.",
+        "no_js_credit_card_fields_redirect_hint": "ستتم إعادة توجيهك لإضافة معلومات الدفع الخاصة بك.",
+        "card_fields_container_prefix": "حاوية ميدانية لـ:",
+        "card_fields_unavailable_html": {
+          "one": "الدفع ببطاقات الائتمان والخصم غير متاح حاليًا.<br><a href=\"%{current_url}\">قم بتحديث هذه الصفحة</a> أو حاول مرة أخرى لاحقًا.",
+          "other": "الدفع ببطاقات الائتمان والخصم غير متاح حاليًا.<br><a href=\"%{current_url}\">قم بتحديث هذه الصفحة</a> أو جرب طريقة دفع مختلفة."
+        },
+        "card_fields_processing_error": "حدثت مشكلة أثناء معالجة الدفع. حاول تحديث هذه الصفحة أو التحقق من اتصالك بالإنترنت.",
+        "technical_error": "لا يمكن معالجة الدفعات الآن بسبب مشكلة فنية. حاول مرة أخرى خلال بضع دقائق.",
+        "no_method_error": "لا يمكن لهذا المتجر قبول المدفوعات في الوقت الحالي.",
+        "not_configured_error": "لا يمكن لهذا المتجر قبول المدفوعات في الوقت الحالي.",
+        "missing_credit_card_error": "أدخل تفاصيل بطاقتك لإتمام عملية الدفع",
+        "shop_pay_ideal_unavailable_error": "ايديال | Wero غير متوفر لهذا الطلب. اختر طريقة دفع أخرى.",
+        "payment_method_not_available_for_shipping_address_error": "طريقة الدفع غير متاحة لعنوان الشحن المحدد. اختر طريقة دفع أخرى.",
+        "billing_address_not_supported_for_payment_method_error": "طريقة الدفع هذه غير متاحة لعنوان إرسال الفواتير والعملة الخاصة بك. جرّب طريقة دفع مختلفة.",
+        "generic_incorrect_card_info": "لا يمكن التحقق من تفاصيل الدفع الخاصة بك. تحقق من تفاصيل بطاقتك وحاول مرة أخرى."
       }
     }
   }
