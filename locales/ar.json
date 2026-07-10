@@ -3588,6 +3588,68 @@
         "pickup": "بيك اب",
         "pickup_location": "موقع الالتقاط",
         "pickup_point": "نقطة الالتقاء"
+      },
+      "show_items": "عرض العناصر",
+      "total_savings": "إجمالي المدخرات",
+      "show_order_summary": "عرض ملخص الطلب",
+      "hide_order_summary": "إخفاء ملخص الطلب",
+      "subtitle": "تم التأكيد {{date}}",
+      "subtotal": "المجموع الفرعي",
+      "subtotal_label_with_quantity": {
+        "one": "المجموع الفرعي",
+        "other": "المجموع الفرعي · {{count}} العناصر"
+      },
+      "summary_list_title_accessibility_label": "ترتيب العناصر",
+      "summary_title": "ملخص الطلب",
+      "summary_totals_title_accessibility_label": "إجمالي الطلب",
+      "shop_order_tracking": {
+        "download_shop_to_track": "تنزيل متجر لتتبع الحزمة",
+        "track_order_with_shop": "تتبع الطلب مع المتجر",
+        "title_header": "مسح مع هاتفك",
+        "real_time_delivery_updates": "سيرسل لك المتجر تحديثات التسليم في الوقت الفعلي بمجرد شحن طلبك.",
+        "real_time_delivery_updates_with_gift": "احصل على تحديثات التسليم في الوقت الفعلي و {{promoAmount}} هدية لإنفاقها في تطبيق المتجر.",
+        "shop_app_promo_amount_off": "احصل على أ {{promoAmount}} هدية",
+        "shop_app_promo_text": "{{amountOff}} للإنفاق في تطبيق المتجر"
+      },
+      "edit_summary": {
+        "added": "تمت الإضافة",
+        "added_with_quantity": "تمت الإضافة {{quantity}}",
+        "removed": "تمت الإزالة",
+        "removed_with_quantity": "تمت الإزالة {{quantity}}",
+        "updated_at": "تم تحديث طلبك بتاريخ {{date}}",
+        "returned": "عاد",
+        "returned_with_quantities": "عاد {{delta}} من {{total}}",
+        "removed_with_quantities": "تمت الإزالة {{delta}} من {{total}}",
+        "return_line_item_removed": "تمت إزالته من العودة",
+        "return_line_item_removed_with_quantities": "تمت الإزالة {{delta}} من العودة"
+      },
+      "shop_pay": {
+        "order_completed_with": "اكتمل الطلب مع",
+        "learn_more": "تعلم المزيد",
+        "usdc_rewards_terms": "عرض شروط مكافآت USDC"
+      },
+      "taxes": "الضرائب",
+      "taxes_included": "بما في ذلك {{amount}} في الضرائب",
+      "duties_and_taxes_included": "الإجمالي يشمل الرسوم والضرائب. لا توجد رسوم إضافية عند التسليم.",
+      "duties": "الواجبات",
+      "ok_duties_tooltip": "يتم شحن هذا الطلب من دولة أخرى، لذا تمت إضافة الرسوم الجمركية إلى إجمالي طلبك.",
+      "error_duties_tooltip": "يتم شحن هذا الطلب من دولة أخرى، لذلك قد يتم فرض رسوم وضرائب عند التسليم.",
+      "zero_duties_tooltip": "يتم شحن هذا الطلب من بلد آخر. لا يتم فرض رسوم على أوامر بهذه القيمة.",
+      "tip": "نصيحة",
+      "title": "النظام {{name}}",
+      "total": "المجموع",
+      "unit_price": "{{price}}/ea",
+      "pagination": {
+        "load_more": "عرض المزيد",
+        "load_more_accessibility_label": "عرض المزيد من العناصر",
+        "loading_accessibility_label": "جارٍ تحميل العناصر"
+      },
+      "login_to_view_all_order_details": "قم بتسجيل الدخول لعرض كافة تفاصيل الطلب.",
+      "log_in": "تسجيل الدخول",
+      "logged_in_account_no_permission_to_order": "لقد قمت بتسجيل الدخول كـ {{email}}. هذا الحساب ليس لديه إذن لإدارة هذا الطلب.",
+      "log_in_to_a_different_account": "قم بتسجيل الدخول إلى حساب مختلف",
+      "fees": {
+        "restocking_fee": "رسوم إعادة تخزين"
       }
     }
   }
