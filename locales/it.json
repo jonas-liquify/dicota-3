@@ -24,5 +24,84 @@
     "sort_by": "Ordina per",
     "submit": "Invia",
     "trending": "Tendenza"
+  },
+  "cart": {
+    "heading": "Carrello",
+    "empty": "Il tuo carrello è vuoto",
+    "get_free_shipping": "Sblocca la spedizione gratuita",
+    "still": "Solo",
+    "to_free_shipping": "lontano dalla spedizione gratuita",
+    "free_shipping_heading": "Spedizione gratuita sbloccata",
+    "free_shipping_text": "Hai diritto alla spedizione gratuita per questo ordine.",
+    "total_price": "Totale parziale",
+    "shipping_fee": "Spedizione",
+    "free": "Gratuito",
+    "go_to_checkout": "Check-out",
+    "note": "Nota"
+  },
+  "blog": {
+    "no_posts": "Nessun post trovato."
+  },
+  "certificates": {
+    "intro": "Tutto DICOTA prodotti con Lettera di conformità (CE), filtrati per SKU o titolo del prodotto."
+  },
+  "data_sheets": {
+    "intro": "Tutto DICOTA prodotti con una scheda tecnica, filtrati per SKU o titolo del prodotto."
+  },
+  "manuals": {
+    "intro": "Tutto DICOTA prodotti con un manuale del prodotto, filtrato per SKU o titolo del prodotto."
+  },
+  "collection": {
+    "no_items": "Nessun articolo trovato.",
+    "no_matches": "Non ci sono prodotti che corrispondono a questi filtri.",
+    "no_products": "Nessun prodotto trovato.",
+    "show_results": "Mostra risultati"
+  },
+  "jobs": {
+    "about_role": "Sul ruolo",
+    "open_application": "Nessuna posizione adatta a te? Ci farebbe ancora piacere sentire la tua opinione."
+  },
+  "loyalty": {
+    "cashback": {
+      "account_holder": "Titolare del conto",
+      "bank": "Banca",
+      "bank_match": "Le coordinate bancarie devono corrispondere al nome dell'azienda",
+      "conversion": "Tasso di conversione: 50 punti = 1 EUR/CHF",
+      "disclaimer": "DICOTA si riserva il diritto di richiedere ulteriori informazioni o di rifiutare i pagamenti in caso di dubbi. Il tasso di conversione può cambiare senza preavviso.",
+      "iban": "Numero di conto/IBAN",
+      "min_points": "Sono richiesti almeno 10.000 punti",
+      "payout": "Pagamento trimestrale tramite bonifico bancario",
+      "points_label": "Punti da pagare (min. 10.000)"
+    },
+    "club": {
+      "benefit_cashback": "Cashback a partire da 10.000 punti",
+      "benefit_early": "Accesso anticipato ai nuovi prodotti",
+      "benefit_earn": "Guadagna punti con ogni acquisto",
+      "benefit_rewards": "Premi e pacchetti esclusivi",
+      "benefit_support": "Supporto del club personale"
+    },
+    "reward": "Ricompensa"
+  },
+  "marketing": {
+    "press": "Premere",
+    "product_imgs": {
+      "meta_line": "Articolo n. · Modello predecessore · Codice EAN · Disponibilità · Tipologia costruttiva · Colore"
+    }
+  },
+  "products": {
+    "add_to_cart": "Aggiungi al carrello",
+    "on_sale": "In vendita"
+  },
+  "reseller": {
+    "form": {
+      "contact_person": "Persona di contatto*",
+      "email": "Indirizzo e-mail*",
+      "heading": "Inserisci i dettagli del rivenditore",
+      "phone": "Telefono"
+    }
+  },
+  "reviews": {
+    "body": "La tua recensione",
+    "email": "E-mail"
   }
 }
