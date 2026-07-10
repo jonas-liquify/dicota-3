@@ -16,7 +16,8 @@
     "collection_products": {
       "settings": {
         "text_promo_1_headline": "Lorem Ipsum",
-        "promo1_position": 0
+        "promo1_position": 0,
+        "promo2_position": 0
       },
       "blocks": {}
     }
