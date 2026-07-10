@@ -46,7 +46,7 @@
           "static": true,
           "settings": {
             "text_reseller_button": "For Resellers",
-            "url_reseller_button_link": "shopify://pages/b2b-reseller-hub"
+            "url_reseller_button_link": ""
           },
           "blocks": {
             "link_bmpV8z": {
