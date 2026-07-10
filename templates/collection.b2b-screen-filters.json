@@ -21,6 +21,7 @@
     },
     "collection_hero_8TRwPe": {
       "type": "collection_hero",
+      "disabled": true,
       "name": "Collection Hero",
       "settings": {
         "url_button_link": "",
