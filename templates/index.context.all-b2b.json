@@ -73,6 +73,16 @@
         "bg_color": "#f4f4f4"
       },
       "blocks": {
+        "vorteil_rae8i": {
+          "type": "vorteil",
+          "name": "Vorteil",
+          "disabled": false,
+          "settings": {
+            "image_icon": null,
+            "text_titel": "SUPPLIER OF THE TOP 100",
+            "textarea_text": "Trusted by many of the world's top 100 companies, DICOTA is your reliable partner for premium IT accessories."
+          }
+        },
         "vorteil_UGKnf": {
           "type": "vorteil",
           "disabled": false,
@@ -84,6 +94,7 @@
         }
       },
       "block_order": [
+        "vorteil_rae8i",
         "vorteil_UGKnf"
       ],
       "name": "The Dicota Differenc"
