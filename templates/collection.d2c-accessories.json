@@ -93,9 +93,9 @@
           "type": "kategorie-bild",
           "name": "Kategorie-Bild",
           "settings": {
-            "url_link": "",
+            "url_link": "shopify://collections/d2c-accessories-audio-video",
             "image_bild": "shopify://shop_images/CT1c_Backpack.png",
-            "text_titel": "Business Professional",
+            "text_titel": "Webcam & Accessories",
             "textarea_text": "Premium backpacks for professionals, combining sophisticated design, high protection and smart organization."
           },
           "blocks": {}
