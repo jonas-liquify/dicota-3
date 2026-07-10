@@ -2990,7 +2990,67 @@
       "loading_message": "جاري التحميل",
       "loading_policy_content_accessibility_label": "جارٍ تحميل محتوى السياسة",
       "loading_section_accessibility_label": "جاري التحميل {{sectionName}}",
-      "policy_load_error": "تعذر التحميل {{policyName}}"
+      "policy_load_error": "تعذر التحميل {{policyName}}",
+      "policy_try_again": "حاول مرة أخرى",
+      "log_out_link": "تسجيل الخروج",
+      "logout_overlay_label": "تسجيل الخروج...",
+      "nav_label_accessibility_label": "الملاحة الرئيسية",
+      "navigation_accessibility_message": "لقد انتقلت إلى {{sectionName}}",
+      "open_menu_accessibility_label": "افتح التنقل الرئيسي",
+      "shop_logo_accessibility_label": "{{shopName}} شعار",
+      "settings_link": "الإعدادات",
+      "country_switcher_toast_message": "البلد تحولت إلى {{countryName}}",
+      "switch_country": "تبديل البلد",
+      "no_countries_found": "لم يتم العثور على بلدان",
+      "location_switcher_toast_message": "تم التبديل إلى الموقع {{locationName}}",
+      "switch_location": "تبديل الموقع",
+      "no_locations_found": "لم يتم العثور على مواقع",
+      "try_new_search": "حاول إجراء بحث جديد",
+      "view_details": "عرض التفاصيل",
+      "company_location": "موقع الشركة",
+      "search": "بحث",
+      "skip_to_content": "انتقل إلى المحتوى"
+    },
+    "announcement_bar": {
+      "expand_label": "قم بتوسيع شريط الإعلانات",
+      "collapse_label": "طي شريط الإعلانات",
+      "close_label": "إغلاق شريط الإعلانات"
+    },
+    "account_information": {
+      "loading_accessibility_message": "جارٍ تحميل معلومات الحساب",
+      "loading_finished_accessibility_message": "تم تحميل معلومات الحساب",
+      "profile_card": {
+        "cancel": "إلغاء",
+        "cancel_accessibility_label": "إلغاء تحرير الملف الشخصي",
+        "edit": "تحرير",
+        "edit_accessibility_label": "تحرير الملف الشخصي",
+        "email_help_text": "لا يمكن تعديل البريد الإلكتروني",
+        "editable_email_help_text": "يُستخدم هذا البريد الإلكتروني لتسجيل الدخول وتحديثات الطلب.",
+        "first_name": "الاسم الأول",
+        "last_name": "الاسم الأخير",
+        "email": "البريد الإلكتروني",
+        "no_name_provided_accessibility_label": "لم تتم إضافة أي اسم",
+        "phone_number_help_text": "لا يمكن تعديل رقم الهاتف",
+        "save": "حفظ",
+        "save_accessibility_label": "حفظ الملف الشخصي",
+        "title": "الملف الشخصي",
+        "errors": {
+          "name_too_long": "{{fieldName}} طويل جدًا (الحد الأقصى هو 255 حرفًا)",
+          "name_cannot_contain_url": "{{fieldName}} لا يمكن أن يحتوي على عنوان URL",
+          "name_cannot_contain_html_tags": "{{fieldName}} لا يمكن أن تحتوي على علامات HTML",
+          "email_cant_be_blank": "لا يمكن أن يكون البريد الإلكتروني فارغًا",
+          "invalid_email_format": "أدخل بريدًا إلكترونيًا صالحًا"
+        }
+      },
+      "verify_current_email_modal": {
+        "cancel_button": "إلغاء",
+        "cancel_button_accessibility_label": "إلغاء تحرير الملف الشخصي",
+        "description": "أدخل الرمز المكون من 6 أرقام المرسل إلى بريدك الإلكتروني الأصلي:",
+        "email_resend_button_accessibility_label": "إعادة إرسال رمز التحقق",
+        "title": "تأكيد هويتك",
+        "verify_button": "التالي",
+        "verify_button_accessibility_label": "التحقق من بريدك الإلكتروني الحالي"
+      }
     }
   }
 }
