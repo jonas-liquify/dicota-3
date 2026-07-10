@@ -3981,8 +3981,102 @@
         "empty_state": "لا يوجد رقم أمر الشراء",
         "modal_po_number_input_label": "رقم أمر الشراء",
         "modal_po_number_input_max_length_error": "أرقام أمر الشراء لها حد أقصى {{maxLength}} الشخصيات.",
-        "save": "يحفظ"
+        "save": "يحفظ",
+        "title": "رقم طلب الشراء{{poNumber}}"
       }
+    },
+    "errors": {
+      "address_deletion_error": {
+        "description": "حدثت مشكلة أثناء حذف هذا العنوان. حاول مرة أخرى أو قم بتحديث الصفحة."
+      },
+      "addresses_loading_issue": {
+        "description": "خطأ في الاتصال. تحقق من اتصالك بالإنترنت وحاول مرة أخرى."
+      },
+      "banner_title": {
+        "one": "هناك {{count}} خطأ",
+        "other": "هناك {{count}} أخطاء"
+      },
+      "failed_address_creation": {
+        "description": "حدثت مشكلة أثناء إنشاء عنوانك. حاول تحديث هذه الصفحة أو التحقق من اتصالك بالإنترنت."
+      },
+      "failed_address_update": {
+        "description": "حدثت مشكلة أثناء تحديث عنوانك. حاول تحديث هذه الصفحة أو التحقق من اتصالك بالإنترنت."
+      },
+      "load_address_form_error": {
+        "title": "غير قادر على تحميل نموذج العنوان",
+        "description": "تعذر تحميل نموذج العنوان.",
+        "refresh_button": "تحديث الصفحة"
+      },
+      "load_orders_error": {
+        "title": "غير قادر على تحميل الطلبات",
+        "description": "أعد المحاولة أو عد لاحقًا.",
+        "retry_button": "أعد المحاولة"
+      },
+      "load_paypal_error": {
+        "description": "هناك مشكلة في تحميل PayPal. يرجى المحاولة مرة أخرى."
+      },
+      "logout_everywhere": {
+        "description": "حدث خطأ ما أثناء تسجيل الخروج. يرجى المحاولة مرة أخرى."
+      },
+      "no_access_to_locations": {
+        "description": "ليس لديك حق الوصول إلى أي مواقع"
+      },
+      "not_found": {
+        "description": "تحقق من عنوان URL أو حاول مرة أخرى خلال بضع دقائق.",
+        "title": "هناك مشكلة في تحميل هذه الصفحة"
+      },
+      "order_not_found": {
+        "description": "هذا الطلب غير موجود أو ليس لديك الإذن بمشاهدته.",
+        "title": "لم يتم العثور على الطلب"
+      },
+      "profile_update_error": {
+        "description": "حدثت مشكلة أثناء تحديث ملفك الشخصي. حاول تحديث هذه الصفحة أو التحقق من اتصالك بالإنترنت."
+      },
+      "profile_name_update_error": {
+        "description": "حدثت مشكلة أثناء تحديث اسمك. حاول تحديث هذه الصفحة أو التحقق من اتصالك بالإنترنت."
+      },
+      "retry_action_label": "حاول مرة أخرى",
+      "resend_link": {
+        "too_many_requests": "طلبات كثيرة جدًا. حاول مرة أخرى لاحقًا.",
+        "generic": "طلب فاشل"
+      },
+      "load_extension_error": {
+        "title": "خطأ",
+        "description": "قم بتحديث هذه الصفحة أو حاول مرة أخرى خلال بضع دقائق.",
+        "refresh_button": "تحديث الصفحة"
+      },
+      "already_upgraded": "تمت ترقية حسابات العملاء بالفعل.",
+      "failed_to_upgrade": "فشل في ترقية إعدادات حساب العميل.",
+      "not_upgraded": "لا تتم ترقية حسابات العملاء.",
+      "failed_to_revert": "فشل في العودة إلى إعدادات حساب العميل.",
+      "revert_window_expired": "انتهت صلاحية نافذة العودة."
+    },
+    "throttle": {
+      "too_many_attempts": {
+        "message": "محاولات كثيرة جدًا",
+        "description": "يرجى المحاولة مرة أخرى خلال بضع دقائق"
+      }
+    },
+    "payment_methods": {
+      "replacement_payment_method_title": "طريقة دفع الاستبدال",
+      "title": "طرق الدفع",
+      "add_payment_method_button": "أضف طريقة الدفع",
+      "add_payment_method_dropdown": {
+        "bank_account_consent": "من خلال إضافة طريقة دفع، فإنك تسمح بالخصم من بطاقتك أو الخصم من حسابك البنكي لعمليات الشراء المستقبلية التي وافقت عليها، حتى تقوم بالإلغاء."
+      },
+      "bank_account": {
+        "loading_accessibility_message": "يتم تحميل زر الحساب البنكي",
+        "iframe_title_accessibility_label": "إعداد الحساب البنكي",
+        "display_name": "حساب مصرفي",
+        "generic_error": "تعذرت إضافة حساب مصرفي. حاول مرة أخرى لاحقًا."
+      },
+      "add_payment_method_banner": "أضف طريقة دفع لإجراء عملية دفع أسرع أو خدمات معتمدة مسبقًا",
+      "no_payment_methods_banner": "لم تتم إضافة أي طرق دفع",
+      "edit_payment_method_button_accessibility_label": "تحرير {{paymentMethodName}} تنتهي في {{lastDigits}}",
+      "edit_payment_method_brand_button_accessibility_label": "تحرير {{paymentMethodName}}",
+      "delete_payment_method_button": "حذف",
+      "delete_payment_method_button_accessibility_label": "حذف {{paymentMethodName}}",
+      "back_button": "العودة"
     }
   }
 }
