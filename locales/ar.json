@@ -1104,7 +1104,79 @@
         "purchase_options_subscription_cancellation_instructions": "%{cancel_text} يرجى الاطلاع على %{cancellation_policy_label}.",
         "purchase_options_subscription_cancel_text": "يمكنك الإلغاء في أي وقت عن طريق الذهاب إلى حسابك أو الاتصال بالمتجر.",
         "change_currency_section_description": "حدد خيار العملة",
-        "no_real_orders_dev_store": "لا يمكن لهذا المتجر قبول الطلبات الحقيقية أو المدفوعات الحقيقية."
+        "no_real_orders_dev_store": "لا يمكن لهذا المتجر قبول الطلبات الحقيقية أو المدفوعات الحقيقية.",
+        "waiting_on_payment_methods": "جارٍ التعرف على طرق الدفع المتوفرة...",
+        "apple_pay_payment_error": "لا يمكن إكمال دفعتك. حاول مرة أخرى أو استخدم طريقة دفع مختلفة.",
+        "taxes_not_included": "الضرائب غير متضمنة",
+        "no_taxes_banner_content": "لن يتم فرض الضرائب على هذا الطلب. بمجرد تحصيل الدفع، لم يعد من الممكن إضافة الضرائب.",
+        "paypal": {
+          "connect": "انقر لربط حساب PayPal الخاص بك"
+        },
+        "apple": {
+          "connect": "انقر لتوصيل حساب Apple Pay الخاص بك",
+          "not_available": "Apple Pay غير متوفر في هذا المتصفح. لتوصيل حساب Apple Pay الخاص بك، ستحتاج إلى استخدام Safari على جهاز Apple."
+        },
+        "google": {
+          "connect": "انقر للاتصال بحساب Google Pay الخاص بك",
+          "error_authorizing": "حدث خطأ أثناء السماح بالدفع"
+        },
+        "account_connected": "تم ربط الحساب.",
+        "mor_disclaimer_html": "بالنقر أدناه وإكمال طلبك، فإنك توافق على شراء العنصر (العناصر) الخاص بك من Global-e كتاجر مسجل\nلهذه الصفقة، على Global-e's <a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{mor_terms}\" href=\"%{terms_href}\">الشروط والأحكام</a>\nو <a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{privacy_policy}\" href=\"%{policy_href}\">سياسة الخصوصية</a>. العالمية الإلكترونية هي دولية\nمزود خدمة الوفاء ل %{shop_name}\n",
+        "pending_payment": {
+          "due_notice": "الدفع الخاص بك %{amount_due} ومن المقرر على %{due_date}.",
+          "multibanco": {
+            "buyer_action_info": "الدفع الخاص بك %{amount_due} ومن المقرر.",
+            "instruction_html": "قم بالدفع في Multibanco أو عبر الإنترنت باستخدام التفاصيل أدناه. للأسئلة أو لتحديث تفاصيل الدفع، %{contact_us}.",
+            "entity": "الكيان",
+            "reference": "مرجع",
+            "amount": "المبلغ",
+            "find_nearest_atm": "البحث عن أقرب أجهزة الصراف الآلي"
+          }
+        },
+        "update_payment_method": "تحديث طريقة الدفع",
+        "order_covered_by_store_credit_notice": "يتم تغطية طلبك من خلال رصيد متجرك.",
+        "order_covered_by_redeemables_notice": "طلبك مغطى.",
+        "store_credit": {
+          "label": "تخزين الائتمان",
+          "apply_label": "تطبيق الائتمان المتجر",
+          "add_label": "إضافة رصيد المتجر",
+          "manage_label": "إدارة الائتمان المتجر",
+          "buying_gift_card": "لا يمكنك استخدام رصيد المتجر لشراء بطاقة هدايا",
+          "no_fixed_selling_plans": "لا يمكنك استخدام رصيد المتجر مع خيارات الشراء المؤجلة"
+        },
+        "clear": "واضح",
+        "billing_must_match_shipping_notice": "يجب أن يتطابق عنوان إرسال الفواتير الخاص بطريقة الدفع مع عنوان الشحن.",
+        "same_billing_address_checkbox_label": "استخدم عنوان الشحن كعنوان إرسال الفواتير",
+        "location_billing_address_label": "عنوان إرسال الفواتير الموقع",
+        "fact_billing_address_label": "عنوان إرسال الفواتير",
+        "location_shipping_address_label": "عنوان الشحن الموقع",
+        "use_order_billing_address_label": "استخدم عنوان إرسال فواتير الطلب",
+        "use_location_billing_address_label": "استخدام عنوان إرسال الفواتير الموقع",
+        "use_location_shipping_address_label": "استخدام عنوان الشحن الموقع",
+        "no_working_method_error": "لا يمكن لهذا المتجر قبول المدفوعات في الوقت الحالي. قم بتحديث هذه الصفحة أو قم بالعودة لاحقًا.",
+        "brand_not_available": "هذا المتجر لا يقبل {{brand}}. استخدم بطاقة مختلفة للدفع.",
+        "shipping_rate_updated": "تم تحديث طرق الشحن المتاحة. قم بتأكيد اختيارك قبل الخروج.",
+        "billing_address_invalid_phone": "قم بتحديث رقم الهاتف في عنوان إرسال الفواتير الخاص بك لـ {{label}} {{last_digits}} للمتابعة.",
+        "billing_address_invalid_phone_no_card": "قم بتحديث رقم الهاتف في عنوان إرسال الفواتير الخاص بك للمتابعة.",
+        "preview_not_available": {
+          "title": "المعاينة غير متاحة",
+          "content": "لا تقلق، فهذا الخروج السريع يناسب عملائك.",
+          "button": "حسنًا"
+        },
+        "card_fields": {
+          "errors": {
+            "required": {
+              "issue_date": "أدخل تاريخ إصدار صالحًا",
+              "issue_number": "أدخل رقم إصدار صالح"
+            },
+            "invalid": {
+              "verification_value": "أدخل رمز CVV أو رمز الأمان صالحًا"
+            }
+          }
+        },
+        "simulated_checkout": "المعاينة قريبا",
+        "simulated_express_checkout": "المحافظ غير متاحة في معاينة المحرر بسبب منطقتك أو متصفحك",
+        "vaulting_agreement_label": "احفظ معلومات الدفع الخاصة بي مع %{company} لخروج أسرع."
       }
     }
   }
