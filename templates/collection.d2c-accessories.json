@@ -71,8 +71,8 @@
           "type": "kategorie-bild",
           "name": "Kategorie-Bild",
           "settings": {
-            "url_link": "",
-            "image_bild": "shopify://shop_images/5_SCT1c_BP_EntryLevel.jpg",
+            "url_link": "shopify://collections/d2c-accessories-connectivity",
+            "image_bild": "shopify://shop_images/D32062_03.webp",
             "text_titel": "Connectivity",
             "textarea_text": "Stay connected wherever you work. Discover hubs, docking stations and adapters that expand connectivity, boost productivity and simplify every workspace."
           },
