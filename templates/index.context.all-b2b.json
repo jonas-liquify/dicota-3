@@ -49,9 +49,9 @@
         "image_bild": null,
         "text_heading": "DICOTA Reseller Hub. Enjoy exclusive benefits, added convenience and everything you need in one place.",
         "url_button_1_link": "",
-        "text_button_1_text": "Einloggen",
+        "text_button_1_text": "Login",
         "url_button_2_link": "",
-        "text_button_2_text": "Registrieren"
+        "text_button_2_text": "Register"
       },
       "blocks": {},
       "block_order": [],
@@ -63,9 +63,9 @@
       "settings": {
         "text_heading": "The Dicota Difference. Even more reasons to become a reseller.",
         "url_button_1_link": "",
-        "text_button_1_text": "Einloggen",
+        "text_button_1_text": "",
         "url_button_2_link": "",
-        "text_button_2_text": "Registrieren",
+        "text_button_2_text": "",
         "header-fd1437fabf77a5e6b789aa09b69a6822": null,
         "padding_top": 5,
         "padding_bottom": 5,
