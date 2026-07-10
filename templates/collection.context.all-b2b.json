@@ -47,6 +47,19 @@
       "disabled": true,
       "settings": {},
       "blocks": {}
+    },
+    "collection_products": {
+      "settings": {
+        "text_promo_1_headline": "",
+        "textarea_promo_1_text": "",
+        "text_promo_1_button": "",
+        "text_promo_2_headline": "",
+        "textarea_promo_2_text": "",
+        "text_promo_2_button": "",
+        "promo1_position": 0,
+        "promo2_position": 0
+      },
+      "blocks": {}
     }
   },
   "order": [
