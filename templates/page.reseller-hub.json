@@ -38,7 +38,8 @@
           "name": "Reseller Kategorie",
           "settings": {
             "url_link": "",
-            "text_titel": "Backpacks"
+            "image_bild": "shopify://shop_images/D3260902_productshot_03.png",
+            "text_titel": "Laptop Bags"
           },
           "blocks": {}
         },
