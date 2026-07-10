@@ -131,11 +131,11 @@
           "name": "Reseller Promo Banner",
           "disabled": false,
           "settings": {
-            "image_bild": null,
+            "image_bild": "shopify://shop_images/6_LPI_TravellerRollerSeven_7.jpg",
             "text_titel": "SEVEN",
             "textarea_text": "Our premium collection for demanding business professionals, combining sophisticated design, premium protection and smart functionality.",
-            "url_button_link": "",
-            "text_button_text": "Invite a friend"
+            "url_button_link": "shopify://collections/seven",
+            "text_button_text": "explore"
           }
         },
         "reseller_promo_banner_mU9PB": {
