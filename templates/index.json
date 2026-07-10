@@ -30,11 +30,11 @@
           "name": "Slide",
           "settings": {
             "image_hintergrundbild": "shopify://shop_images/2_PITw_Filter_b6157506-bf05-4037-b4c5-78007bf08f3f.jpg",
-            "text_headline_zeile_1": "Weigh Darker™",
-            "text_headline_zeile_2": "Moon Bag Ruffle",
-            "text_subtext": "Raffiniertes Design. Recycelte moderne Materialien.",
-            "url_button_link": "",
-            "text_button_text": "Jetzt shoppen test"
+            "text_headline_zeile_1": "SCREEN FILTERS",
+            "text_headline_zeile_2": "By DICOTA",
+            "text_subtext": "Protection, privacy and visual comfort for every screen.",
+            "url_button_link": "shopify://collections/d2c-screen-filters-all",
+            "text_button_text": "Explore Now"
           },
           "blocks": {}
         },
