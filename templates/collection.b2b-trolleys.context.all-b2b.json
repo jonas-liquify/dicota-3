@@ -1,0 +1,39 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "context": {
+    "market": "all-b2b"
+  },
+  "parent": "collection.b2b-trolleys.json",
+  "sections": {
+    "collection_image_her_Qqprn": {
+      "type": "collection_image_her",
+      "disabled": false,
+      "settings": {
+        "image_hintergrundbild": "shopify://shop_images/4_CTw_Trolleys_01_a4165280-2aa0-4816-a40b-489a4e06db23.jpg",
+        "textarea_text": "Travel smart with durable protection and effortless mobility. Discover our Rollers.",
+        "header-c7a371cc40f6ec10d44608e03068c34f": null,
+        "padding_top": 2.5,
+        "padding_bottom": 2.5
+      },
+      "blocks": {},
+      "block_order": [],
+      "name": "Collection Image Her"
+    }
+  },
+  "order": [
+    "collection_hero_8TRwPe",
+    "featured_product_qe68Cr",
+    "collection_intro",
+    "collection_products",
+    "testimonials",
+    "collection_image_her_Qqprn"
+  ]
+}
