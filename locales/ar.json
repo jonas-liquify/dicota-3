@@ -3649,8 +3649,70 @@
       "logged_in_account_no_permission_to_order": "لقد قمت بتسجيل الدخول كـ {{email}}. هذا الحساب ليس لديه إذن لإدارة هذا الطلب.",
       "log_in_to_a_different_account": "قم بتسجيل الدخول إلى حساب مختلف",
       "fees": {
-        "restocking_fee": "رسوم إعادة تخزين"
-      }
+        "restocking_fee": "رسوم إعادة تخزين",
+        "return_shipping_fee": "إعادة الشحن"
+      },
+      "vat_invoices": {
+        "label": "ضريبة القيمة المضافة",
+        "title": "فواتير ضريبة القيمة المضافة"
+      },
+      "link_sent": "تم إرسال الرابط",
+      "cash_rounding": "التقريب النقدي",
+      "adjusted_payment": "الدفع المعدل",
+      "adjusted_total": "المجموع المعدل",
+      "due_on_date": "مستحق {{date}}",
+      "due_on_fulfillment": "مستحق عند الوفاء",
+      "due_on_receipt": "مستحق عند الاستلام"
+    },
+    "addresses": {
+      "add_button": "أضف عنوانًا",
+      "add_button_text": "أضف",
+      "add_button_accessibility_label": "أضف عنوانًا",
+      "back_button": "العودة",
+      "back_button_accessibility_label": "العودة إلى عنوان التحرير {{address}}",
+      "add_address_banner": "أضف عناوين لاستخدامها عند الخروج",
+      "no_addresses_banner": "لم تتم إضافة أي عناوين",
+      "address_deleted_notification": "تم حذف العنوان",
+      "cancel_adding_address_accessibility_label": "إلغاء إضافة العنوان",
+      "cancel_deletion_button": "إلغاء",
+      "cancel_deletion_button_accessibility_label": "إلغاء الحذف {{address}}",
+      "default_address": {
+        "badge_label": "الافتراضي",
+        "title": "العنوان الافتراضي",
+        "title_accessibility_label": "العنوان الافتراضي: {{address}}"
+      },
+      "delete_button": "حذف",
+      "delete_button_accessibility_label": "حذف {{address}}",
+      "delete_confirmation_button": "حذف العنوان",
+      "delete_confirmation_button_accessibility_label": "حذف {{address}}",
+      "delete_confirmation_message": "هل تريد حذف العنوان؟ لا تتأثر الطلبات الحالية.",
+      "delete_confirmation_title": "هل تريد حذف العنوان؟",
+      "delete_confirmation_description": "لا تتأثر الطلبات الحالية.",
+      "edit_button": "تحرير",
+      "edit_button_accessibility_label": "تحرير {{address}}",
+      "edit_section_accessibility_label": "تحرير {{address}}",
+      "edit_modal_title": {
+        "default": "تحرير العنوان",
+        "billing": "تعديل عنوان إرسال الفواتير",
+        "shipping": "تحرير عنوان الشحن"
+      },
+      "loading_accessibility_message": "عنوان التحميل",
+      "loading_addresses_accessibility_message": "جارٍ تحميل العناوين",
+      "loading_billing_accessibility_message": "جارٍ تحميل عنوان إرسال الفواتير",
+      "loading_finished_accessibility_message": "تم تحميل صفحة جديدة من العناوين",
+      "loading_shipping_accessibility_message": "جارٍ تحميل عنوان الشحن",
+      "pagination": {
+        "load_more": "عرض المزيد",
+        "load_more_accessibility_label": "عرض المزيد من العناوين"
+      },
+      "save_new_address_accessibility_label": "حفظ العنوان",
+      "title": "العناوين",
+      "billing_address_dropdown_placeholder": "عنوان إرسال الفواتير"
+    },
+    "address_form": {
+      "attention": "انتبه",
+      "attention_company": "الشركة / الاهتمام",
+      "attention_help_text": "اسم الشخص أو القسم"
     }
   }
 }
