@@ -22,6 +22,80 @@
     },
     "reseller_category_ro": {
       "type": "reseller_category_ro",
+      "blocks": {
+        "reseller_kategorie_DJap3y": {
+          "type": "reseller-kategorie",
+          "name": "Reseller Kategorie",
+          "settings": {
+            "url_link": "",
+            "text_titel": "Backpacks"
+          },
+          "blocks": {}
+        },
+        "reseller_kategorie_4tCC6k": {
+          "type": "reseller-kategorie",
+          "name": "Reseller Kategorie",
+          "settings": {
+            "url_link": "",
+            "text_titel": "Backpacks"
+          },
+          "blocks": {}
+        },
+        "reseller_kategorie_WHUACj": {
+          "type": "reseller-kategorie",
+          "name": "Reseller Kategorie",
+          "settings": {
+            "url_link": "",
+            "text_titel": "Backpacks"
+          },
+          "blocks": {}
+        },
+        "reseller_kategorie_eEKrVf": {
+          "type": "reseller-kategorie",
+          "name": "Reseller Kategorie",
+          "settings": {
+            "url_link": "",
+            "text_titel": "Backpacks"
+          },
+          "blocks": {}
+        },
+        "reseller_kategorie_VP94bM": {
+          "type": "reseller-kategorie",
+          "name": "Reseller Kategorie",
+          "settings": {
+            "url_link": "",
+            "text_titel": "Backpacks"
+          },
+          "blocks": {}
+        },
+        "reseller_kategorie_AAnBFj": {
+          "type": "reseller-kategorie",
+          "name": "Reseller Kategorie",
+          "settings": {
+            "url_link": "",
+            "text_titel": "Backpacks"
+          },
+          "blocks": {}
+        },
+        "reseller_kategorie_EEmb6c": {
+          "type": "reseller-kategorie",
+          "name": "Reseller Kategorie",
+          "settings": {
+            "url_link": "",
+            "text_titel": "Backpacks"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "reseller_kategorie_DJap3y",
+        "reseller_kategorie_4tCC6k",
+        "reseller_kategorie_WHUACj",
+        "reseller_kategorie_eEKrVf",
+        "reseller_kategorie_VP94bM",
+        "reseller_kategorie_AAnBFj",
+        "reseller_kategorie_EEmb6c"
+      ],
       "settings": {
         "padding_top": 4,
         "padding_bottom": 4
@@ -29,7 +103,62 @@
     },
     "reseller_hub": {
       "type": "reseller_hub",
+      "blocks": {
+        "reseller_vorteil_XVxPay": {
+          "type": "reseller-vorteil",
+          "name": "Reseller Vorteil",
+          "settings": {
+            "text_titel": "Marketing & Sales",
+            "textarea_text": "Use the club's tools and resources to present your range at its best — both online and on the sales floor!"
+          },
+          "blocks": {}
+        },
+        "reseller_vorteil_pPLGfd": {
+          "type": "reseller-vorteil",
+          "name": "Reseller Vorteil",
+          "settings": {
+            "text_titel": "Marketing & Sales",
+            "textarea_text": "Use the club's tools and resources to present your range at its best — both online and on the sales floor!"
+          },
+          "blocks": {}
+        },
+        "reseller_vorteil_mNi8ba": {
+          "type": "reseller-vorteil",
+          "name": "Reseller Vorteil",
+          "settings": {
+            "text_titel": "Marketing & Sales",
+            "textarea_text": "Use the club's tools and resources to present your range at its best — both online and on the sales floor!"
+          },
+          "blocks": {}
+        },
+        "reseller_vorteil_WiwhaU": {
+          "type": "reseller-vorteil",
+          "name": "Reseller Vorteil",
+          "settings": {
+            "text_titel": "Marketing & Sales",
+            "textarea_text": "Use the club's tools and resources to present your range at its best — both online and on the sales floor!"
+          },
+          "blocks": {}
+        },
+        "reseller_vorteil_bdUeH8": {
+          "type": "reseller-vorteil",
+          "name": "Reseller Vorteil",
+          "settings": {
+            "text_titel": "Marketing & Sales",
+            "textarea_text": "Use the club's tools and resources to present your range at its best — both online and on the sales floor!"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "reseller_vorteil_XVxPay",
+        "reseller_vorteil_pPLGfd",
+        "reseller_vorteil_mNi8ba",
+        "reseller_vorteil_WiwhaU",
+        "reseller_vorteil_bdUeH8"
+      ],
       "settings": {
+        "image_bild": "shopify://shop_images/5_SCT1c_ALL_SEVEN.png",
         "text_heading": "DICOTA Reseller Hub. A no-brainer for everyone who wants to enjoy the benefits",
         "url_button_1_link": "",
         "text_button_1_text": "Log in",
