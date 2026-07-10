@@ -48,7 +48,7 @@
           "name": "Reseller Kategorie",
           "settings": {
             "url_link": "shopify://collections/b2b-sleeves-all",
-            "image_bild": "shopify://shop_images/D3250502_05.webp",
+            "image_bild": "shopify://shop_images/D3250502_01.webp",
             "text_titel": "Sleeves"
           },
           "blocks": {}
@@ -57,8 +57,9 @@
           "type": "reseller-kategorie",
           "name": "Reseller Kategorie",
           "settings": {
-            "url_link": "",
-            "text_titel": "Backpacks"
+            "url_link": "shopify://collections/b2b-trolleys",
+            "image_bild": "shopify://shop_images/D3250901_01.webp",
+            "text_titel": "Trolleys"
           },
           "blocks": {}
         },
@@ -66,8 +67,9 @@
           "type": "reseller-kategorie",
           "name": "Reseller Kategorie",
           "settings": {
-            "url_link": "",
-            "text_titel": "Backpacks"
+            "url_link": "shopify://collections/b2b-screen-filters-all",
+            "image_bild": "shopify://shop_images/dicota_Privacy_Screen_Protectors.png",
+            "text_titel": "Screen Filters"
           },
           "blocks": {}
         },
