@@ -72,7 +72,7 @@
           "name": "Kategorie-Bild",
           "settings": {
             "url_link": "shopify://collections/d2c-laptop-bags-entry-level",
-            "image_bild": "shopify://shop_images/5_SCT1c_BP_EntryLevel.jpg",
+            "image_bild": "shopify://shop_images/5_SCT1c_LB_EntryLevel_099203e0-ef97-454a-8d2b-a6a551421443.jpg",
             "text_titel": "VALUE FOR PRICE & EVERYDAY",
             "textarea_text": "Everything you need at an exceptional price – reliable protection, practical organization and everyday comfort."
           },
@@ -83,7 +83,7 @@
           "name": "Kategorie-Bild",
           "settings": {
             "url_link": "",
-            "image_bild": "shopify://shop_images/compressed-Backpack_Commuter_All.png",
+            "image_bild": "shopify://shop_images/5_SCT1c_LB_Student_e5236afd-f18d-4a32-9490-9ffc9576a7a1.jpg",
             "text_titel": "Students & Urban",
             "textarea_text": "Fresh designs, practical features and reliable protection for study, work and everyday adventures."
           },
@@ -93,10 +93,10 @@
           "type": "kategorie-bild",
           "name": "Kategorie-Bild",
           "settings": {
-            "url_link": "",
-            "image_bild": "shopify://shop_images/CT1c_Backpack.png",
+            "url_link": "shopify://collections/d2c-laptop-bags-business-professional",
+            "image_bild": "shopify://shop_images/5_SCT1c_LB_BusinessProfessional.jpg",
             "text_titel": "Business Professional",
-            "textarea_text": "Premium backpacks for professionals, combining sophisticated design, high protection and smart organization."
+            "textarea_text": "Premium Laptop bags for professionals, combining sophisticated design, high protection and smart organization."
           },
           "blocks": {}
         }
