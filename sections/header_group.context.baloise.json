@@ -13,15 +13,16 @@
   },
   "parent": "header_group.json",
   "sections": {
+    "header_a83nJp": {
+      "settings": {
+        "menu": "main-menu-helvetia",
+        "image_logo": "shopify://shop_images/DICOTA_Partnershop.png"
+      },
+      "blocks": {}
+    },
     "product_breadcrumb_YTWmk": {
       "disabled": true,
       "settings": {},
-      "blocks": {}
-    },
-    "header_a83nJp": {
-      "settings": {
-        "menu": "main-menu-helvetia"
-      },
       "blocks": {}
     }
   }
