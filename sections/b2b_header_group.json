@@ -18,6 +18,7 @@
           "type": "usp",
           "name": "USP",
           "settings": {
+            "image_icon": "shopify://shop_images/Icon_delivery_truck_speed.png",
             "text_text": "Free shipping over 100 EUR"
           },
           "blocks": {}
@@ -26,7 +27,8 @@
           "type": "usp",
           "name": "USP",
           "settings": {
-            "text_text": "Free shipping over 100 EUR"
+            "image_icon": "shopify://shop_images/Icon_return.png",
+            "text_text": "Sustainable & Responsible"
           },
           "blocks": {}
         },
