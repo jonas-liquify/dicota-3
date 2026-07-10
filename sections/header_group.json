@@ -67,7 +67,7 @@
               "settings": {
                 "url_link_url": "",
                 "text_link_text": "About DICOTA",
-                "link_list": "",
+                "link_list": "dicota-about-us-menue",
                 "highlighted": false
               },
               "blocks": {}
