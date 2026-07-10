@@ -11,7 +11,59 @@
   "sections": {
     "contact_form": {
       "type": "contact_form",
-      "settings": {}
+      "blocks": {
+        "forms_inline_WkgcjA": {
+          "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
+          "settings": {
+            "form_id": "547676",
+            "text_color": "#202020",
+            "button_background_color": "#202020",
+            "button_label_color": "#FFFFFF",
+            "links_color": "#1878B9",
+            "errors_color": "#E02229",
+            "text_alignment": "center",
+            "form_alignment": "flex-start",
+            "padding_top": 0,
+            "padding_bottom": 24,
+            "padding_right": 0,
+            "padding_left": 0
+          }
+        },
+        "contact-list": {
+          "type": "contact-list",
+          "static": true,
+          "settings": {},
+          "blocks": {
+            "contact_location_AnUfRN": {
+              "type": "contact-location",
+              "name": "Contact Location",
+              "settings": {
+                "text_location": "Switzerland",
+                "url_link": "",
+                "text_contact_info": "+41 55 416 50 30"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "contact_location_AnUfRN"
+          ]
+        }
+      },
+      "block_order": [
+        "forms_inline_WkgcjA"
+      ],
+      "settings": {
+        "text_heading": "Contact",
+        "text_paragraph": "",
+        "image_contact_photo": "shopify://shop_images/3_Mallorca-447x302.jpg",
+        "text_contact_name": "DICOTA - always there for you!",
+        "text_contact_role": "",
+        "text_address_subline": "Address",
+        "text_address_text": "DCT Group AG · Churerstrasse 20, 8808 Pfäffikon SZ, Switzerland",
+        "text_contact_subline": "Contact",
+        "text_opening_hours": "Monday – Friday: 08:00 – 17:00"
+      }
     }
   },
   "layout": "theme",
