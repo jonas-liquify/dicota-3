@@ -24,8 +24,19 @@
         "text_color": "#0f0f0f"
       }
     },
+    "collection_image_her_AFpLEK": {
+      "type": "collection_image_her",
+      "name": "Collection Image Her",
+      "settings": {
+        "image_hintergrundbild": "shopify://shop_images/4_CTw_Backpacks_01_ccdce5ac-b79b-4e78-98c6-e551c6bee153.jpg",
+        "textarea_text": "Designed for business and everyday life, combining reliable protection, smart organization and all-day comfort.",
+        "padding_top": 2.5,
+        "padding_bottom": 2.5
+      }
+    },
     "collection_hero_8TRwPe": {
       "type": "collection_hero",
+      "disabled": true,
       "name": "Collection Hero",
       "settings": {
         "url_button_link": "",
@@ -39,6 +50,7 @@
     },
     "featured_product_qe68Cr": {
       "type": "featured_product",
+      "disabled": true,
       "name": "Featured Product",
       "settings": {
         "text_produkt_titel": "Blickschutzfilter 2-fach magnetisch Universal (16:10)",
@@ -60,9 +72,9 @@
           "name": "Kategorie-Bild",
           "settings": {
             "url_link": "",
-            "image_bild": "shopify://shop_images/Dicota_Roller_c25f3e77-721b-45f9-8e7c-7aaf5d6930f3.avif",
-            "text_titel": "ENTRY LEVEL OR PROJECT TENDER",
-            "textarea_text": "Lorem ipsum dolor sit amet, consectetur delle scu adipiscing elit. Suspendisse varius enim in eros elementum tristique."
+            "image_bild": "shopify://shop_images/5_SCT1c_BP_EntryLevel.jpg",
+            "text_titel": "ENTRY LEVEL OR EVERYDAY",
+            "textarea_text": "Everything you need at an exceptional price – reliable protection, practical organization and everyday comfort."
           },
           "blocks": {}
         },
@@ -156,27 +168,17 @@
         "padding_bottom": 4,
         "show_rating": true
       }
-    },
-    "collection_image_her_AFpLEK": {
-      "type": "collection_image_her",
-      "name": "Collection Image Her",
-      "settings": {
-        "image_hintergrundbild": "shopify://shop_images/4_CTw_Backpacks_01_ccdce5ac-b79b-4e78-98c6-e551c6bee153.jpg",
-        "textarea_text": "Designed for business and everyday life, combining reliable protection, smart organization and all-day comfort.",
-        "padding_top": 2.5,
-        "padding_bottom": 2.5
-      }
     }
   },
   "layout": "theme",
   "wrapper": "main.main-wrapper",
   "order": [
     "product_breadcrumb_98ixPN",
+    "collection_image_her_AFpLEK",
     "collection_hero_8TRwPe",
     "featured_product_qe68Cr",
     "collection_intro",
     "collection_products",
-    "testimonials",
-    "collection_image_her_AFpLEK"
+    "testimonials"
   ]
 }
