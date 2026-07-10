@@ -263,10 +263,10 @@
           "name": "Reseller Promo Banner",
           "settings": {
             "image_bild": "shopify://shop_images/6_LPI_TravellerRollerSeven_7.jpg",
-            "text_titel": "One",
-            "textarea_text": "Give your friends 15% off their first order, and get a 15% off for each successful referral",
-            "url_button_link": "",
-            "text_button_text": "Invite a friend"
+            "text_titel": "SEVEN Family",
+            "textarea_text": "The premium choice for business professionals, combining elegant design, outstanding protection, intelligent organization and lasting comfort.",
+            "url_button_link": "shopify://collections/seven",
+            "text_button_text": "explore Now"
           },
           "blocks": {}
         },
