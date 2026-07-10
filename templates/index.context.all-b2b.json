@@ -78,7 +78,7 @@
           "name": "Vorteil",
           "disabled": false,
           "settings": {
-            "image_icon": null,
+            "image_icon": "shopify://shop_images/dicota_p-icon_3_1.png",
             "text_titel": "Trusted since 1992",
             "textarea_text": "DICOTA combines decades of experience with reliable quality, innovative solutions and a deep understanding of professional IT accessory needs."
           }
