@@ -4271,8 +4271,76 @@
         "payment_method_selector_placeholder": "حدد طريقة دفع بديلة (اختياري)",
         "payment_method_selector_no_alternative_payment": "لا توجد طريقة بديلة",
         "replace_method_with_new_method_description": "الخاص بك {{currentPaymentMethodName}} سيتم حذفه واستبداله بـ {{newPaymentMethodName}}.",
-        "error_when_deleting": "نعتذر ولكن حدث خطأ ما ولم نتمكن من حذف طريقة الدفع هذه. يرجى المحاولة مرة أخرى لاحقًا أو تحديث الصفحة."
+        "error_when_deleting": "نعتذر ولكن حدث خطأ ما ولم نتمكن من حذف طريقة الدفع هذه. يرجى المحاولة مرة أخرى لاحقًا أو تحديث الصفحة.",
+        "delete_and_replace_button": "حذف واستبدال",
+        "delete_and_replace_button_accessibility_label": "حذف {{currentPaymentMethodName}} واستبدال ب {{newPaymentMethodName}}.",
+        "deleted_successfully": "تم حذف طريقة الدفع بنجاح.",
+        "loading_available_payment_methods_accessibility_label": "جارٍ تحميل طرق الدفع المتاحة"
+      },
+      "add_payment_method": {
+        "title": "أضف طريقة الدفع",
+        "button_title": "أضف",
+        "payment_method_added_confirmation": "تمت إضافة طريقة الدفع",
+        "missing_customer_error": "حدث خطأ ما. يرجى المحاولة مرة أخرى أو الاتصال بالدعم.",
+        "replace_mode_warning": "سيؤثر حذف طريقة الدفع هذه على الاشتراكات أو الطلبات المسبقة. استبدلها بطريقة دفع بديلة لمواصلة تلقي الطلبات القادمة.",
+        "choose_from_list": "اختر من القائمة",
+        "add_new_button": "أضف جديدا",
+        "billing_address": {
+          "title": "عنوان إرسال الفواتير",
+          "add_billing_address_button": "أضف جديدا",
+          "add_billing_address_button_accessibility_label": "أضف عنوان إرسال الفواتير الجديد",
+          "choose_billing_address_from_list_button": "اختر من القائمة",
+          "choose_billing_address_from_list_button_accessibility_label": "اختر عنوان إرسال الفواتير من القائمة",
+          "missing_billing_address_error_message": "يرجى تحديد عنوان إرسال الفواتير",
+          "default_checkbox": "تعيين كطريقة الدفع الافتراضية"
+        },
+        "subscription_contracts": {
+          "title": "استخدم طريقة الدفع للطلبات المتكررة",
+          "more_items": {
+            "one": "{{count}} المزيد من المنتج",
+            "other": "{{count}} المزيد من المنتجات"
+          },
+          "product_count": {
+            "one": "{{count}} المنتج",
+            "other": "{{count}} المنتجات"
+          },
+          "product_details": "تفاصيل المنتج",
+          "load_more": "عرض المزيد"
+        },
+        "updating_contracts": {
+          "one": "تحديث {{count}} عقد الاشتراك...",
+          "other": "تحديث {{count}} عقود الاشتراك..."
+        },
+        "contracts_updated": {
+          "one": "تم التحديث بنجاح {{count}} عقد الاشتراك",
+          "other": "تم التحديث بنجاح {{count}} عقود الاشتراك"
+        },
+        "contracts_update_failed": "فشل في تحديث بعض عقود الاشتراك",
+        "subscription_contracts_updated": "تم التحديث {{succeeded}} من {{total}} الاشتراكات",
+        "invalid_wallet_type_error": "نوع المحفظة غير صالح."
+      },
+      "three_d_secure": {
+        "title": "تأمين ثلاثي الأبعاد",
+        "verification_failed": "لا يمكن التحقق من دفعتك. حاول مرة أخرى أو استخدم طريقة دفع مختلفة."
       }
+    },
+    "payment_method_brands": {
+      "visa": "تأشيرة",
+      "mastercard": "ماستركارد",
+      "americanexpress": "أمريكان إكسبريس",
+      "discover": "اكتشف",
+      "dinersclub": "نادي داينرز",
+      "jcb": "جي سي بي",
+      "elo": "إيلو",
+      "visaelectron": "فيزا إلكترون",
+      "maestro": "مايسترو",
+      "forbrugsforeningen": "فوربروجسفورينينجن",
+      "dankort": "دانكورت",
+      "hipercard": "هيبركارد",
+      "unionpay": "يونيون باي",
+      "laser": "الليزر",
+      "shoppay": "متجر الدفع",
+      "applepay": "أبل الدفع"
     }
   }
 }
