@@ -18,6 +18,7 @@
           "type": "usp",
           "name": "USP: Free Shipping",
           "settings": {
+            "image_icon": "shopify://shop_images/Icon_delivery_truck_speed.png",
             "text_text": "Free shipping to GER/CH on order over €49"
           },
           "blocks": {}
@@ -26,6 +27,7 @@
           "type": "usp",
           "name": "USP: Returns",
           "settings": {
+            "image_icon": "shopify://shop_images/Icon_return.png",
             "text_text": "30-day free returns"
           },
           "blocks": {}
@@ -34,6 +36,7 @@
           "type": "usp",
           "name": "USP: Warranty",
           "settings": {
+            "image_icon": "shopify://shop_images/Icon_warranty.png",
             "text_text": "Lifetime warranty on bags & packs"
           },
           "blocks": {}
