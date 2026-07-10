@@ -1,12 +1,28 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
-    "sections": {
-        "certificates_list": {
-            "type": "certificates_list"
-        }
-    },
-    "layout": "theme",
-    "wrapper": "main.main-wrapper",
-    "order": [
-        "certificates_list"
-    ]
+  "sections": {
+    "certificates_list": {
+      "type": "certificates_list",
+      "settings": {
+        "text_heading": "Certificates",
+        "richtext_text": "<p>All DICOTA products with a Letter of Conformity (CE) — filtered by SKU or product title.</p>",
+        "download_collection": "all-products",
+        "padding_top": 2.5,
+        "padding_bottom": 5
+      }
+    }
+  },
+  "layout": "theme",
+  "wrapper": "main.main-wrapper",
+  "order": [
+    "certificates_list"
+  ]
 }
