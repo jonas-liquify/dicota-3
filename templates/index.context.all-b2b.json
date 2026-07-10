@@ -73,6 +73,16 @@
         "bg_color": "#f4f4f4"
       },
       "blocks": {
+        "vorteil_CTFWp": {
+          "type": "vorteil",
+          "name": "Vorteil",
+          "disabled": false,
+          "settings": {
+            "image_icon": null,
+            "text_titel": "Trusted since 1992",
+            "textarea_text": "DICOTA combines decades of experience with reliable quality, innovative solutions and a deep understanding of professional IT accessory needs."
+          }
+        },
         "vorteil_mV9DA": {
           "type": "vorteil",
           "name": "Vorteil",
@@ -104,6 +114,7 @@
         }
       },
       "block_order": [
+        "vorteil_CTFWp",
         "vorteil_mV9DA",
         "vorteil_UGKnf",
         "vorteil_rae8i"
