@@ -1,0 +1,186 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "product_breadcrumb_98ixPN": {
+      "type": "product_breadcrumb",
+      "name": "Product Breadcrumb",
+      "settings": {
+        "text_home_label": "Home",
+        "text_kollektionen_label": "Collections",
+        "text_suche_label": "Search",
+        "text_warenkorb_label": "Cart",
+        "text_404_label": "Page not found",
+        "padding_top": 0.5,
+        "padding_bottom": 0.5,
+        "bg_color": "#ffffff",
+        "text_color": "#0f0f0f"
+      }
+    },
+    "collection_image_her_AFpLEK": {
+      "type": "collection_image_her",
+      "name": "Collection Image Her",
+      "settings": {
+        "image_hintergrundbild": "shopify://shop_images/4_CTw_Backpacks_01_ccdce5ac-b79b-4e78-98c6-e551c6bee153.jpg",
+        "textarea_text": "Designed for business and everyday life, combining reliable protection, smart organization and all-day comfort.",
+        "padding_top": 2.5,
+        "padding_bottom": 2.5
+      }
+    },
+    "collection_hero_8TRwPe": {
+      "type": "collection_hero",
+      "disabled": true,
+      "name": "Collection Hero",
+      "settings": {
+        "url_button_link": "",
+        "text_button_text": "Learn more",
+        "show_button": true,
+        "padding_top": 4,
+        "padding_bottom": 6,
+        "bg_color": "#ffffff",
+        "text_color": "#0f0f0f"
+      }
+    },
+    "featured_product_qe68Cr": {
+      "type": "featured_product",
+      "disabled": true,
+      "name": "Featured Product",
+      "settings": {
+        "text_produkt_titel": "Blickschutzfilter 2-fach magnetisch Universal (16:10)",
+        "textarea_beschreibung": "Der DICOTA 2-Wege-Blickschutzfilter ist ideal für die Arbeit in öffentlichen Umgebungen wie Bibliotheken, Großraumbüros, Flughäfen und Zügen. Er schützt persönliche und vertrauliche Daten, indem er die rechte und linke Seite des Bildschirms in einem Winkel von +/- 30 Grad abdunkelt.",
+        "url_button_link": "",
+        "text_button_text": "Mehr erfahren",
+        "padding_top": 4,
+        "padding_bottom": 6,
+        "bg_color": "#ffffff",
+        "text_color": "#0f0f0f",
+        "card_bg": "#f6f6f6"
+      }
+    },
+    "collection_intro": {
+      "type": "collection_intro",
+      "blocks": {
+        "kategorie_bild_hiEEbP": {
+          "type": "kategorie-bild",
+          "name": "Kategorie-Bild",
+          "settings": {
+            "url_link": "",
+            "image_bild": "shopify://shop_images/5_SCT1c_BP_EntryLevel.jpg",
+            "text_titel": "ENTRY LEVEL OR EVERYDAY",
+            "textarea_text": "Everything you need at an exceptional price – reliable protection, practical organization and everyday comfort."
+          },
+          "blocks": {}
+        },
+        "kategorie_bild_3YJtex": {
+          "type": "kategorie-bild",
+          "name": "Kategorie-Bild",
+          "settings": {
+            "url_link": "",
+            "image_bild": "shopify://shop_images/compressed-Backpack_Commuter_All.png",
+            "text_titel": "Students & Urban",
+            "textarea_text": "Fresh designs, practical features and reliable protection for study, work and everyday adventures."
+          },
+          "blocks": {}
+        },
+        "kategorie-bild": {
+          "type": "kategorie-bild",
+          "name": "Kategorie-Bild",
+          "settings": {
+            "url_link": "",
+            "image_bild": "shopify://shop_images/CT1c_Backpack.png",
+            "text_titel": "Business Professional",
+            "textarea_text": "Premium backpacks for professionals, combining sophisticated design, high protection and smart organization."
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "kategorie_bild_hiEEbP",
+        "kategorie_bild_3YJtex",
+        "kategorie-bild"
+      ],
+      "settings": {
+        "padding_top": 2.5,
+        "padding_bottom": 2.5,
+        "bg_color": "#ffffff",
+        "text_color": "#0f0f0f"
+      }
+    },
+    "collection_products": {
+      "type": "collection_products",
+      "settings": {
+        "image_promo_1_bild": "shopify://shop_images/5_SCT1c_BP_BusinessProfessional.jpg",
+        "text_promo_1_headline": "SEVEN Backpack",
+        "textarea_promo_1_text": "Raffiniertes Design. Recycelte Materialien.",
+        "url_promo_1_link": "",
+        "text_promo_1_button": "Explore Now",
+        "text_promo_2_headline": "Lorem Ipsum",
+        "textarea_promo_2_text": "Raffiniertes Design. Recycelte Materialien.",
+        "url_promo_2_link": "",
+        "text_promo_2_button": "Explore Now",
+        "promo1_position": 0,
+        "promo1_large": true,
+        "promo1_bg": "#162040",
+        "promo1_bg_opacity": 1,
+        "promo2_position": 0,
+        "promo2_large": true,
+        "promo2_bg": "#162040",
+        "promo2_bg_opacity": 1,
+        "padding_top": 0,
+        "padding_bottom": 5,
+        "text_download_titel": "Processing images…"
+      }
+    },
+    "testimonials": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial": {
+          "type": "testimonial",
+          "name": "Testimonial",
+          "settings": {
+            "text_kurz_headline": "I absolutely love the produc...",
+            "textarea_bewertungs_text": "I absolutely love the product that i bougt. Also i had a very good…",
+            "url_read_more_link": "",
+            "text_read_more_label": "Read more",
+            "text_name": "Louisa Maierhover",
+            "text_zeitpunkt": "vor 5 Stunden",
+            "rating": 5,
+            "verified": true
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "testimonial"
+      ],
+      "disabled": true,
+      "settings": {
+        "text_uberschrift": "Was unsere Kund:innen sagen",
+        "text_bewertung_zahl": "4,83",
+        "text_bewertung_label": "Hervorragend",
+        "text_anzahl_bewertungen": "17 982 Bewertungen",
+        "padding_top": 4,
+        "padding_bottom": 4,
+        "show_rating": true
+      }
+    }
+  },
+  "layout": "theme",
+  "wrapper": "main.main-wrapper",
+  "order": [
+    "product_breadcrumb_98ixPN",
+    "collection_image_her_AFpLEK",
+    "collection_hero_8TRwPe",
+    "featured_product_qe68Cr",
+    "collection_intro",
+    "collection_products",
+    "testimonials"
+  ]
+}
