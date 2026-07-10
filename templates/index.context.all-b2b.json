@@ -80,7 +80,16 @@
           "settings": {
             "image_icon": "shopify://shop_images/Icon_Products_png_black.png",
             "text_titel": "More than 1200 SKUs",
-            "textarea_text": "(Placeholder) trade in your current device. Get credit toward a new one."
+            "textarea_text": "Across a comprehensive portfolio of laptop bags, backpacks, sleeves, screen filters, screen filters, docking, chargers, locks, webcams and many more IT accessories."
+          }
+        },
+        "vorteil_UGKnf": {
+          "type": "vorteil",
+          "disabled": false,
+          "settings": {
+            "image_icon": "shopify://shop_images/delivery_truck_speed.png",
+            "text_titel": "PERSONAL SALES TEAM",
+            "textarea_text": "Benefit from a dedicated sales team that understands your business and supports you with expert advice, tailored solutions and fast, reliable service."
           }
         },
         "vorteil_rae8i": {
@@ -92,21 +101,12 @@
             "text_titel": "SUPPLIER OF THE TOP 100",
             "textarea_text": "Trusted by many of the world's top 100 companies, DICOTA is your reliable partner for premium IT accessories."
           }
-        },
-        "vorteil_UGKnf": {
-          "type": "vorteil",
-          "disabled": false,
-          "settings": {
-            "image_icon": "shopify://shop_images/delivery_truck_speed.png",
-            "text_titel": "PERSONAL SALES TEAM",
-            "textarea_text": "Benefit from a dedicated sales team that understands your business and supports you with expert advice, tailored solutions and fast, reliable service."
-          }
         }
       },
       "block_order": [
         "vorteil_mV9DA",
-        "vorteil_rae8i",
-        "vorteil_UGKnf"
+        "vorteil_UGKnf",
+        "vorteil_rae8i"
       ],
       "name": "The Dicota Differenc"
     },
