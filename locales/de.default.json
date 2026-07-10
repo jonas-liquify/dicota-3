@@ -37,7 +37,8 @@
   "collection": {
     "no_items": "Keine Artikel gefunden.",
     "no_matches": "Es gibt keine Produkte, die diesen Filtern entsprechen.",
-    "no_products": "Keine Produkte gefunden."
+    "no_products": "Keine Produkte gefunden.",
+    "show_results": "Ergebnisse anzeigen"
   },
   "general": {
     "back": "Zurück",

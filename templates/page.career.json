@@ -11,17 +11,65 @@
   "sections": {
     "two_column_hero": {
       "type": "two_column_hero",
-      "settings": {}
+      "settings": {
+        "text_heading": "At DICOTA, you are more than an employee.",
+        "textarea_text": "People make the famous difference. Top performance can only be achieved by motivated and reliable colleagues. The individual task area plays less of a role than the daily motivation to make everything just that little bit better. This is what we live at DICOTA. We prioritize understanding your needs, fostering collaboration, and creating a workplace where your contributions truly matter.",
+        "url_button_link": "",
+        "text_button_text": ""
+      }
     },
     "boxed_image": {
       "type": "boxed_image",
-      "settings": {}
+      "settings": {
+        "image_image_full": "shopify://shop_images/Team_April_2025.jpg"
+      }
+    },
+    "boxed_image_2": {
+      "type": "boxed_image",
+      "settings": {
+        "image_image_full": "shopify://shop_images/Career.jpg"
+      }
     },
     "team_grid": {
       "type": "team_grid",
-      "blocks": {},
-      "block_order": [],
-      "settings": {}
+      "blocks": {
+        "team_karte_1": {
+          "type": "team-karte",
+          "settings": {
+            "image_icon": "shopify://shop_images/Michael.png",
+            "text_heading": "Seeing the passion of our employees makes me incredibly proud every day!",
+            "textarea_text": "Michael Mühlenbruch (CMO DICOTA)"
+          }
+        },
+        "team_karte_2": {
+          "type": "team-karte",
+          "settings": {
+            "image_icon": "shopify://shop_images/star_half.svg",
+            "text_heading": "From people for people.",
+            "textarea_text": "More than an employer, we strive to be your reliable partner, always there when you need us."
+          }
+        },
+        "team_karte_3": {
+          "type": "team-karte",
+          "settings": {
+            "image_icon": "shopify://shop_images/star_half.svg",
+            "text_heading": "Think global. Act local.",
+            "textarea_text": "Value quality and integrity in everything we do. At all times. No exceptions."
+          }
+        }
+      },
+      "block_order": [
+        "team_karte_1",
+        "team_karte_2",
+        "team_karte_3"
+      ],
+      "settings": {
+        "text_heading": "One for all. All for you.",
+        "textarea_text": "As a trusted leader in premium bag solutions, we deliver innovative products with a strong commitment to our customers. Our employees are the heart of our success, and we empower them to excel with pride and passion, consistently surpassing expectations.",
+        "image_bild": "shopify://shop_images/One-for-all_03.jpg",
+        "url_button_link": "",
+        "text_button_text": "Read more"
+      }
     },
     "4_up_card_slider": {
       "type": "4_up_card_slider",
@@ -40,16 +88,47 @@
     "benefits_grid": {
       "type": "benefits_grid",
       "blocks": {
-        "benefit": {
+        "benefit_1": {
           "type": "benefit",
-          "name": "Benefit",
-          "settings": {}
+          "settings": {
+            "image_icon": "shopify://shop_images/fairness_white.png",
+            "text_heading": "Fairness"
+          }
+        },
+        "benefit_2": {
+          "type": "benefit",
+          "settings": {
+            "image_icon": "shopify://shop_images/serviceorientiert.png",
+            "text_heading": "Service-oriented"
+          }
+        },
+        "benefit_3": {
+          "type": "benefit",
+          "settings": {
+            "image_icon": "shopify://shop_images/leistung_6d753fb5-a3c6-416f-88e2-f727eb38bf9d.png",
+            "text_heading": "Performance"
+          }
+        },
+        "benefit_4": {
+          "type": "benefit",
+          "settings": {
+            "image_icon": "shopify://shop_images/instagram_white.svg",
+            "text_heading": "Responsibility"
+          }
         }
       },
       "block_order": [
-        "benefit"
+        "benefit_1",
+        "benefit_2",
+        "benefit_3",
+        "benefit_4"
       ],
-      "settings": {}
+      "settings": {
+        "text_subline": "More about DICOTA",
+        "text_heading": "Swiss heart. German mind. Customer centric.",
+        "url_button_link": "shopify://pages/about-us",
+        "text_button_text": "More about DICOTA"
+      }
     },
     "value_tabs": {
       "type": "value_tabs",
@@ -83,6 +162,7 @@
   "order": [
     "two_column_hero",
     "boxed_image",
+    "boxed_image_2",
     "team_grid",
     "4_up_card_slider",
     "benefits_grid",
