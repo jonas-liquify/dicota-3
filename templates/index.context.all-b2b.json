@@ -19,11 +19,11 @@
       "settings": {
         "image_hintergrundbild": null,
         "text_headline": "Welcome to the DICOTA Reseller Portal",
-        "textarea_subtext": "Welcome to the DICOTA Reseller Portal. Benefit from attractive reseller pricing, exclusive offers and everything you need to support your customers.",
+        "textarea_subtext": "Benefit from attractive reseller pricing, exclusive offers and dedicated services and tools to help you provide the best solutions for your customers.",
         "text_kategorie_label": "Kategorien",
-        "header-94f20835a6dd9306107eb7cd2dde5f54": null,
+        "header-9bab03067a96315d01ac4f9203a2dd70": null,
         "min_height": 78,
-        "header-b60acea8a9ac969541a67f8bf874adbc": null,
+        "header-7917eb31bd30e40b5e77c1c0897d0a12": null,
         "text_color": "#ffffff"
       },
       "blocks": {},
@@ -34,7 +34,7 @@
       "type": "reseller_category_ro",
       "disabled": false,
       "settings": {
-        "header-ec13254780abf2faa00c575b8f7f85f5": null,
+        "header-17646af42782e2b8163c33f2d5678765": null,
         "padding_top": 4,
         "padding_bottom": 4
       },
@@ -66,10 +66,10 @@
         "text_button_1_text": "Einloggen",
         "url_button_2_link": "",
         "text_button_2_text": "Registrieren",
-        "header-362bd28fa282b0b827ebf543dd1eeef3": null,
+        "header-11614c2ef05148fdc9688e714bf2ae24": null,
         "padding_top": 5,
         "padding_bottom": 5,
-        "header-d9b634a6dfc726e1c5abcb8f1cb93efd": null,
+        "header-73c619734c4fd7187c519df4be4d00fc": null,
         "bg_color": "#f4f4f4"
       },
       "blocks": {
@@ -108,10 +108,10 @@
         "textarea_text": "(Platzhalter) Seit 1992 wurden mehr als 12 Millionen PET-Flaschen verarbeitet, um Abfall zu minimieren - DCT (DICOTA Cushion Technology) ist ein strukturiertes Dämpfungssystem, das Stösse, Schläge und Druck aus verschiedenen Winkeln absorbieren kann.",
         "url_button_link": "",
         "text_button_text": "Learn more",
-        "header-dbed7bfe9ad6e6bd0a85f13345a8e808": null,
+        "header-0da284ede56c3764f280a76075719d56": null,
         "padding_top": 2.5,
         "padding_bottom": 4,
-        "header-4c345a1d4ae6eec06ee43c370cae50a8": null,
+        "header-c0e5df61377bdb26d1d144e19170bbdc": null,
         "bg_color": "#f6f6f6"
       },
       "blocks": {},
