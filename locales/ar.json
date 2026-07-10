@@ -3395,7 +3395,65 @@
         "delivery_estimate_backed_by": "مدعومة ب",
         "delivery_estimate_delayed_description": "عمليات التسليم إلى منطقتك أبطأ من المعتاد. قد يصل طلبك متأخرًا.",
         "delivery_estimate_delayed_title": "تأخر",
-        "delivery_estimate_early_description": "عمليات التسليم إلى منطقتك أسرع من المعتاد. قد يصل هذا الطلب مبكرًا."
+        "delivery_estimate_early_description": "عمليات التسليم إلى منطقتك أسرع من المعتاد. قد يصل هذا الطلب مبكرًا.",
+        "delivery_exception_action_required": "الإجراء مطلوب",
+        "delivery_exception_attempted_action": "جدولة تسليم جديد",
+        "delivery_exception_attempted_description": "{{link}} مع {{carrier}} أو التحقق من وجود إشعار التسليم",
+        "delivery_exception_attempted_description_unknown": "{{link}} أو التحقق من وجود إشعار التسليم",
+        "delivery_exception_attempted_title": "تمت محاولة التسليم",
+        "delivery_exception_delivery_failed": "فشل التسليم",
+        "delivery_exception_failed_action": "تحقق مع {{carrier}}",
+        "delivery_exception_failed_description": "{{link}} أو اتصل بنا لمزيد من المعلومات",
+        "delivery_exception_failed_description_unknown": "اتصل بالناقل لمزيد من المعلومات",
+        "delivery_exception_failed_title": "لم يتم تسليمها",
+        "delivery_exception_on_hold_action": "تحديث تفاصيل التسليم",
+        "delivery_exception_on_hold_description": "{{link}} مع {{carrier}} لتحريك طلبك مرة أخرى",
+        "delivery_exception_on_hold_description_unknown": "{{link}} لتحريك طلبك مرة أخرى",
+        "delivery_exception_on_hold_title": "في الانتظار",
+        "delivery_exception_returning_to_sender_action": "الاتصال {{carrier}}",
+        "delivery_exception_returning_to_sender_description": "{{link}} لمزيد من المعلومات",
+        "delivery_exception_returning_to_sender_description_unknown": "اتصل بالناقل لمزيد من المعلومات",
+        "delivery_exception_returning_to_sender_title": "لم يتم تسليمها",
+        "delivery_exception_shop_promise_delivered_late_description": "طلبك مدعوم من Shop Promise. منذ أن وصلت متأخرة، المطالبة {{amount}} في متجر النقدية.",
+        "delivery_exception_shop_promise_delivered_late_title": "تسليمها في وقت متأخر",
+        "predicted_by_shop": "تنبأ بها المتجر"
+      },
+      "status_mark_as_delivered": "وضع علامة على أنه تم التسليم",
+      "fulfillment_status_title": "حالة الاستيفاء: {{status}}",
+      "buy_again": "شراء مرة أخرى",
+      "buy_again_accessibility_label": "شراء مرة أخرى للطلب {{orderId}}",
+      "manage": "إدارة",
+      "manage_accessiblity_label": "إدارة النظام {{orderId}}",
+      "group_title_label": "جزء من: {{groupTitle}}",
+      "group_title_label_with_parent": "ل: {{groupTitle}}"
+    },
+    "order_details": {
+      "shipment_timeline": {
+        "expand_events_label": "إظهار التفاصيل",
+        "expand_events_accessibility_label": "إظهار تفاصيل شحن الطلب",
+        "hide_events_label": "إخفاء التفاصيل",
+        "hide_events_accessibility_label": "إخفاء تفاصيل شحنة الطلب"
+      },
+      "addresses_section_title": "الفواتير والشحن",
+      "order_details": "تفاصيل الطلب",
+      "order_details_skeleton_accessibility_label": "قم بتسجيل الدخول لعرض كافة تفاصيل الطلب.",
+      "billing_address": "عنوان إرسال الفواتير",
+      "card_ending_with": "تنتهي ب {{lastDigits}}",
+      "contact": "الاتصال",
+      "contact_information": "معلومات الاتصال",
+      "company": "الشركة",
+      "company_and_location": "الشركة والموقع",
+      "fully_refunded_label": "تم رد المبلغ المدفوع",
+      "group_title_label": "جزء من: {{groupTitle}}",
+      "group_title_label_with_parent": "ل: {{groupTitle}}",
+      "view_controls": {
+        "gallery": "معرض",
+        "list": "قائمة"
+      },
+      "grouped_view_components": {
+        "expand_line_items": "عرض {{count}} العناصر",
+        "collapse_line_items": "إخفاء {{count}} العناصر",
+        "line_item_summary": "{{refundableQuantity}} س {{productTitle}}"
       }
     }
   }
