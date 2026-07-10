@@ -483,11 +483,11 @@
     "sustainability_banne": {
       "type": "sustainability_banne",
       "settings": {
-        "image_hintergrundbild": "shopify://shop_images/Dicota_Plastik_c7450c5e-a440-4662-8c05-972c458eb3e7.avif",
-        "text_uberschrift": "Verarbeitete Flaschen",
-        "textarea_beschreibung": "Seit 1992 wurden mehr als 12 Millionen PET-Flaschen verarbeitet, um Abfall zu minimieren und Nachhaltigkeit zu fördern",
-        "url_button_link": "",
-        "text_button_text": "Mehr zur Nachhaltigkeit",
+        "image_hintergrundbild": "shopify://shop_images/Sustainable_Materials.png",
+        "text_uberschrift": "Bottles processed",
+        "textarea_beschreibung": "Since 1992, more than 12 million PET bottles have been recycled to minimise waste and promote sustainability.",
+        "url_button_link": "shopify://pages/sustainability",
+        "text_button_text": "More About Responsibility",
         "counter": "12.483.129",
         "min_height": 70,
         "overlay_strength": 30
