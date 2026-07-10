@@ -24,5 +24,84 @@
     "sort_by": "Sorter efter",
     "submit": "Indsend",
     "trending": "Trending"
+  },
+  "cart": {
+    "heading": "Vogn",
+    "empty": "Din indkøbskurv er tom",
+    "get_free_shipping": "Lås op for gratis forsendelse",
+    "still": "Kun",
+    "to_free_shipping": "væk fra gratis forsendelse",
+    "free_shipping_heading": "Gratis forsendelse ulåst",
+    "free_shipping_text": "Du er kvalificeret til gratis forsendelse på denne ordre.",
+    "total_price": "Subtotal",
+    "shipping_fee": "Forsendelse",
+    "free": "Gratis",
+    "go_to_checkout": "Checkout",
+    "note": "Bemærk"
+  },
+  "blog": {
+    "no_posts": "Ingen indlæg fundet."
+  },
+  "certificates": {
+    "intro": "Alle DICOTA-produkter med et Letter of Conformity (CE) — filtreret efter SKU eller produkttitel."
+  },
+  "data_sheets": {
+    "intro": "Alle DICOTA-produkter med et datablad — filtreret efter SKU eller produkttitel."
+  },
+  "manuals": {
+    "intro": "Alle DICOTA-produkter med en produktmanual — filtreret efter SKU eller produkttitel."
+  },
+  "collection": {
+    "no_items": "Ingen varer fundet.",
+    "no_matches": "Der er ingen produkter, der matcher disse filtre.",
+    "no_products": "Ingen produkter fundet.",
+    "show_results": "Vis resultater"
+  },
+  "jobs": {
+    "about_role": "Om rollen",
+    "open_application": "Ingen passende stilling for dig? Vi vil stadig gerne høre fra dig."
+  },
+  "loyalty": {
+    "cashback": {
+      "account_holder": "Kontohaver",
+      "bank": "Bank",
+      "bank_match": "Bankoplysningerne skal stemme overens med firmanavnet",
+      "conversion": "Omregningskurs: 50 point = 1 EUR/CHF",
+      "disclaimer": "DICOTA forbeholder sig retten til at anmode om yderligere oplysninger eller at afvise udbetalinger i tilfælde af bekymringer. Omregningskursen kan ændres uden forudgående varsel.",
+      "iban": "Kontonummer / IBAN",
+      "min_points": "Der kræves mindst 10.000 point",
+      "payout": "Kvartalsvis udbetaling via bankoverførsel",
+      "points_label": "Point at udbetale (min. 10.000)"
+    },
+    "club": {
+      "benefit_cashback": "Cashback fra 10.000 point",
+      "benefit_early": "Tidlig adgang til nye produkter",
+      "benefit_earn": "Optjen point ved hvert køb",
+      "benefit_rewards": "Eksklusive belønninger og bundter",
+      "benefit_support": "Personlig klubstøtte"
+    },
+    "reward": "Belønning"
+  },
+  "marketing": {
+    "press": "Tryk på",
+    "product_imgs": {
+      "meta_line": "Varenr. · Forgængermodel · EAN-kode · Tilgængelighed · Konstruktionstype · Farve"
+    }
+  },
+  "products": {
+    "add_to_cart": "Tilføj til kurv",
+    "on_sale": "På udsalg"
+  },
+  "reseller": {
+    "form": {
+      "contact_person": "Kontaktperson*",
+      "email": "E-mailadresse*",
+      "heading": "Indtast forhandleroplysninger",
+      "phone": "Telefon"
+    }
+  },
+  "reviews": {
+    "body": "Din anmeldelse",
+    "email": "E-mail"
   }
 }
