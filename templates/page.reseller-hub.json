@@ -230,21 +230,38 @@
         "padding_bottom": 5
       }
     },
-    "the_dicota_differenc": {
-      "type": "the_dicota_differenc",
-      "settings": {
-        "text_heading": "The Dicota Difference. Even more reasons to become a reseller.",
-        "url_button_1_link": "",
-        "text_button_1_text": "Einloggen",
-        "url_button_2_link": "",
-        "text_button_2_text": "Registrieren",
-        "padding_top": 5,
-        "padding_bottom": 5,
-        "bg_color": "#f4f4f4"
-      }
-    },
     "reseller_promo_grid": {
       "type": "reseller_promo_grid",
+      "blocks": {
+        "reseller_promo_banner_qxJynp": {
+          "type": "reseller-promo-banner",
+          "name": "Reseller Promo Banner",
+          "settings": {
+            "image_bild": "shopify://shop_images/6_LPI_TravellerRollerSeven_7.jpg",
+            "text_titel": "One",
+            "textarea_text": "Give your friends 15% off their first order, and get a 15% off for each successful referral",
+            "url_button_link": "",
+            "text_button_text": "Invite a friend"
+          },
+          "blocks": {}
+        },
+        "reseller_promo_banner_ABLt4c": {
+          "type": "reseller-promo-banner",
+          "name": "Reseller Promo Banner",
+          "settings": {
+            "image_bild": "shopify://shop_images/6_LPI_TravellerRollerSeven_7.jpg",
+            "text_titel": "One",
+            "textarea_text": "Give your friends 15% off their first order, and get a 15% off for each successful referral",
+            "url_button_link": "",
+            "text_button_text": "Invite a friend"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "reseller_promo_banner_qxJynp",
+        "reseller_promo_banner_ABLt4c"
+      ],
       "settings": {}
     },
     "b2b_news_highlight": {
@@ -280,7 +297,6 @@
     "reseller_category_ro",
     "reseller_hub",
     "the_latest",
-    "the_dicota_differenc",
     "reseller_promo_grid",
     "b2b_news_highlight",
     "b2b_news_updates"

@@ -43,11 +43,11 @@
           "name": "Slide",
           "settings": {
             "image_hintergrundbild": "shopify://shop_images/3_MT_Urban.webp",
-            "text_headline_zeile_1": "Weigh Darker™",
-            "text_headline_zeile_2": "Moon Bag Ruffle",
-            "text_subtext": "Raffiniertes Design. Recycelte moderne Materialien.",
-            "url_button_link": "",
-            "text_button_text": "Jetzt shoppen test"
+            "text_headline_zeile_1": "DAILY COMMUTING",
+            "text_headline_zeile_2": "Fresh color for every day life",
+            "text_subtext": "Fresh colours, smart organization and reliable protection for every journey.",
+            "url_button_link": "shopify://collections/commuters",
+            "text_button_text": "Explore Now"
           },
           "blocks": {}
         },
