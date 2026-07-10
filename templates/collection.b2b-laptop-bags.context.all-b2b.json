@@ -65,7 +65,8 @@
         "text_promo_2_headline": "",
         "textarea_promo_2_text": "",
         "promo1_position": 6,
-        "promo2_position": 0
+        "promo2_position": 0,
+        "text_promo_1_button": "Shop Now"
       },
       "blocks": {}
     },
