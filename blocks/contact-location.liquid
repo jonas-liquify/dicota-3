@@ -1,7 +1,8 @@
 <div li-block="Contact Location" style="display:contents" {{ block.shopify_attributes }}>
-                    <div class="footer_contact-item"><div class="text-size-medium">
+                    <div class="footer_contact-label text-size-medium">
 {{ block.settings.text_location }}
-</div><a href="{{ block.settings.url_link }}" class="w-inline-block"> <div class="footer_contact-link">{{ block.settings.text_contact_info }}</div> </a></div>
+</div>
+                    <a href="{{ block.settings.url_link }}" class="footer_contact-link-wrap w-inline-block"> <div class="footer_contact-link">{{ block.settings.text_contact_info }}</div> </a>
                 </div> {% schema %} {
     "name": "Contact Location",
     "settings": [
@@ -9,7 +10,7 @@
             "id": "text_location",
             "type": "text",
             "label": "Location",
-            "default": "Headquarters"
+            "default": "Switzerland"
         },
         {
             "id": "url_link",
@@ -20,7 +21,7 @@
             "id": "text_contact_info",
             "type": "text",
             "label": "Contact Info",
-            "default": "info@dicota.com"
+            "default": "+41 55 416 50 30"
         }
     ],
     "presets": [
