@@ -1,0 +1,46 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "context": {
+    "market": "all-b2b"
+  },
+  "parent": "page.b2b-brand-materials.json",
+  "sections": {
+    "b2b_solution_header_7iKBX": {
+      "type": "b2b_solution_header",
+      "disabled": false,
+      "settings": {
+        "text_subline": "Marketing Support",
+        "text_heading_1": "BRAND MATERIAL",
+        "textarea_subheading_1": "Access all essential DICOTA brand materials and marketing assets in one place. Download the latest company presentations, LinkedIn headers, Microsoft Teams backgrounds, brand imagery and other ready-to-use resources to ensure a consistent and professional DICOTA brand presence across all channels.",
+        "url_hero_button_link": "",
+        "text_hero_button_text": "",
+        "header-7031ee5c7dfab1062747e3acaf1fd4cd": null,
+        "padding_top": 4,
+        "padding_bottom": 2
+      },
+      "blocks": {},
+      "block_order": [],
+      "name": "B2B Solution Header"
+    }
+  },
+  "order": [
+    "b2b_subnav",
+    "product_breadcrumb_yTFBNe",
+    "b2b_solution_header_7iKBX",
+    "b2b_mkt_presentation_fFaWf4",
+    "b2b_tpl_banner_1x_J9FinR",
+    "b2b_mkt_presentation_bPPeAP",
+    "b2b_tpl_banner_1x_6GCTj8",
+    "b2b_mkt_documents",
+    "b2b_tpl_banner_1x_XVeFWX",
+    "b2b_tpl_banner_1x_WLyWz7"
+  ]
+}

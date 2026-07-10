@@ -1,0 +1,29 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "context": {
+    "market": "all-b2b"
+  },
+  "parent": "page.b2b-sol-sustainability.json",
+  "sections": {
+    "owner_spotlight_68NmAp": {
+      "settings": {
+        "image_image": "shopify://shop_images/Image_Management_01_hoizontal.png"
+      },
+      "blocks": {
+        "zitat_bqKnHU": {
+          "settings": {
+            "text_block_heading": "Sustainability can account for 20–30% of tender scores. DICOTA helps you meet these criteria with verifiable proof."
+          }
+        }
+      }
+    }
+  }
+}

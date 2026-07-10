@@ -1,0 +1,25 @@
+<div li-block="Nav Search Suggestion" style="display:contents" {{ block.shopify_attributes }}>
+                    <a href="{{ block.settings.url_link }}" class="nav_search-pill-item"> <span>{{ block.settings.text_text }}</span> </a>
+                </div> {% schema %} {
+    "name": "Nav Search Suggestion",
+    "settings": [
+        {
+            "id": "url_link",
+            "type": "url",
+            "label": "Link"
+        },
+        {
+            "id": "text_text",
+            "type": "text",
+            "label": "Text",
+            "default": "Backpacks"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Nav Search Suggestion",
+            "blocks": []
+        }
+    ],
+    "tag": null
+} {% endschema %}

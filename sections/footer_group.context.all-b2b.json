@@ -1,0 +1,28 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "context": {
+    "market": "all-b2b"
+  },
+  "parent": "footer_group.json",
+  "sections": {
+    "footer_newsletter_ULQtmR": {
+      "settings": {
+        "text_promo_1_text": "",
+        "text_promo_2_text": "",
+        "text_headline": "Benefit now",
+        "textarea_subtext": "Sign up for our newsletter and enjoy exclusive offers, early access to new products and many more benefits.",
+        "text_button_text": "",
+        "show_form": true
+      },
+      "blocks": {}
+    }
+  }
+}

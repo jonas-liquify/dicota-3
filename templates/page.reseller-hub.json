@@ -22,6 +22,87 @@
     },
     "reseller_category_ro": {
       "type": "reseller_category_ro",
+      "blocks": {
+        "reseller_kategorie_DJap3y": {
+          "type": "reseller-kategorie",
+          "name": "Reseller Kategorie",
+          "settings": {
+            "url_link": "",
+            "image_bild": "shopify://shop_images/D3260101_productshot_01.png",
+            "text_titel": "Backpacks"
+          },
+          "blocks": {}
+        },
+        "reseller_kategorie_4tCC6k": {
+          "type": "reseller-kategorie",
+          "name": "Reseller Kategorie",
+          "settings": {
+            "url_link": "",
+            "image_bild": "shopify://shop_images/D3250801_05.webp",
+            "text_titel": "Laptop Bags"
+          },
+          "blocks": {}
+        },
+        "reseller_kategorie_WHUACj": {
+          "type": "reseller-kategorie",
+          "name": "Reseller Kategorie",
+          "settings": {
+            "url_link": "shopify://collections/b2b-sleeves-all",
+            "image_bild": "shopify://shop_images/D3250502_01.webp",
+            "text_titel": "Sleeves"
+          },
+          "blocks": {}
+        },
+        "reseller_kategorie_eEKrVf": {
+          "type": "reseller-kategorie",
+          "name": "Reseller Kategorie",
+          "settings": {
+            "url_link": "shopify://collections/b2b-trolleys",
+            "image_bild": "shopify://shop_images/D3250901_01.webp",
+            "text_titel": "Trolleys"
+          },
+          "blocks": {}
+        },
+        "reseller_kategorie_VP94bM": {
+          "type": "reseller-kategorie",
+          "name": "Reseller Kategorie",
+          "settings": {
+            "url_link": "shopify://collections/b2b-screen-filters-all",
+            "image_bild": "shopify://shop_images/dicota_Privacy_Screen_Protectors.png",
+            "text_titel": "Screen Filters"
+          },
+          "blocks": {}
+        },
+        "reseller_kategorie_AAnBFj": {
+          "type": "reseller-kategorie",
+          "name": "Reseller Kategorie",
+          "settings": {
+            "url_link": "shopify://collections/b2b-accessories-all",
+            "image_bild": "shopify://shop_images/d32062_02.jpg",
+            "text_titel": "Accessories"
+          },
+          "blocks": {}
+        },
+        "reseller_kategorie_EEmb6c": {
+          "type": "reseller-kategorie",
+          "name": "Reseller Kategorie",
+          "settings": {
+            "url_link": "shopify://collections/d2c-safety-at-work",
+            "image_bild": "shopify://shop_images/P20471-05-V2_01.webp",
+            "text_titel": "Safety at Work"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "reseller_kategorie_DJap3y",
+        "reseller_kategorie_4tCC6k",
+        "reseller_kategorie_WHUACj",
+        "reseller_kategorie_eEKrVf",
+        "reseller_kategorie_VP94bM",
+        "reseller_kategorie_AAnBFj",
+        "reseller_kategorie_EEmb6c"
+      ],
       "settings": {
         "padding_top": 4,
         "padding_bottom": 4
@@ -29,8 +110,63 @@
     },
     "reseller_hub": {
       "type": "reseller_hub",
+      "blocks": {
+        "reseller_vorteil_XVxPay": {
+          "type": "reseller-vorteil",
+          "name": "Reseller Vorteil",
+          "settings": {
+            "text_titel": "Solutions for your individual business",
+            "textarea_text": "From run-rate business to global device rollouts, DICOTA delivers tailored solutions for modern workplaces, sustainability requirements and enterprise procurement."
+          },
+          "blocks": {}
+        },
+        "reseller_vorteil_pPLGfd": {
+          "type": "reseller-vorteil",
+          "name": "Reseller Vorteil",
+          "settings": {
+            "text_titel": "Volume Pricing: Get your Quote",
+            "textarea_text": "Use the club's tools and resources to present your range at its best — both online and on the sales floor!"
+          },
+          "blocks": {}
+        },
+        "reseller_vorteil_mNi8ba": {
+          "type": "reseller-vorteil",
+          "name": "Reseller Vorteil",
+          "settings": {
+            "text_titel": "Marketing Support & Assets",
+            "textarea_text": "Use the club's tools and resources to present your range at its best — both online and on the sales floor!"
+          },
+          "blocks": {}
+        },
+        "reseller_vorteil_WiwhaU": {
+          "type": "reseller-vorteil",
+          "name": "Reseller Vorteil",
+          "settings": {
+            "text_titel": "Services & Tools",
+            "textarea_text": "Use the club's tools and resources to present your range at its best — both online and on the sales floor!"
+          },
+          "blocks": {}
+        },
+        "reseller_vorteil_bdUeH8": {
+          "type": "reseller-vorteil",
+          "name": "Reseller Vorteil",
+          "settings": {
+            "text_titel": "Excluisve Sale% Offers",
+            "textarea_text": "Use the club's tools and resources to present your range at its best — both online and on the sales floor!"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "reseller_vorteil_XVxPay",
+        "reseller_vorteil_pPLGfd",
+        "reseller_vorteil_mNi8ba",
+        "reseller_vorteil_WiwhaU",
+        "reseller_vorteil_bdUeH8"
+      ],
       "settings": {
-        "text_heading": "DICOTA Reseller Hub. A no-brainer for everyone who wants to enjoy the benefits",
+        "image_bild": "shopify://shop_images/5_SCT1c_SF_People.png",
+        "text_heading": "DICOTA Reseller Hub.",
         "url_button_1_link": "",
         "text_button_1_text": "Log in",
         "url_button_2_link": "",
@@ -39,52 +175,134 @@
     },
     "the_latest": {
       "type": "the_latest",
+      "blocks": {
+        "latest_slide_LgFCMe": {
+          "type": "latest-slide",
+          "name": "Latest Slide",
+          "settings": {
+            "image_hintergrundbild": "shopify://shop_images/8_GB2c_ProductPromotion_TopTravSeven_01.jpg",
+            "url_link": "",
+            "text_badge": "NEW",
+            "text_titel": "Seven",
+            "textarea_text": "The SEVEN Family combines sophisticated design, premium protection and smart functionality for demanding business professionals."
+          },
+          "blocks": {}
+        },
+        "latest_slide_DUGywR": {
+          "type": "latest-slide",
+          "name": "Latest Slide",
+          "settings": {
+            "image_hintergrundbild": "shopify://shop_images/5_SCT1c_LB_EntryLevel_a9adcf05-9e2c-46b7-b1a2-c9c2ff2bb93f.jpg",
+            "url_link": "",
+            "text_badge": "NEW",
+            "text_titel": "TWO",
+            "textarea_text": "Designed for everyday business and project rollouts, the TWO Family delivers trusted DICOTA quality, reliable protection and exceptional value."
+          },
+          "blocks": {}
+        },
+        "latest_slide_dEkH9A": {
+          "type": "latest-slide",
+          "name": "Latest Slide",
+          "disabled": true,
+          "settings": {
+            "image_hintergrundbild": "shopify://shop_images/5_SCT1c_BP_EntryLevel.jpg",
+            "url_link": "",
+            "text_badge": "NEW",
+            "text_titel": "Seven",
+            "textarea_text": "(Placeholder) Since 1992, more than 12 million PET bottles have been processed to minimize waste -"
+          },
+          "blocks": {}
+        },
+        "latest_slide_JejWdU": {
+          "type": "latest-slide",
+          "name": "Latest Slide",
+          "disabled": true,
+          "settings": {
+            "image_hintergrundbild": "shopify://shop_images/8_GB2c_ProductPromotion_TopTravSeven_01.jpg",
+            "url_link": "",
+            "text_badge": "NEW",
+            "text_titel": "Seven",
+            "textarea_text": "(Placeholder) Since 1992, more than 12 million PET bottles have been processed to minimize waste -"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "latest_slide_LgFCMe",
+        "latest_slide_DUGywR",
+        "latest_slide_dEkH9A",
+        "latest_slide_JejWdU"
+      ],
       "settings": {
         "text_heading": "The Latest. Take a look at what's new, right now.",
         "padding_top": 5,
         "padding_bottom": 5
       }
     },
-    "the_dicota_differenc": {
-      "type": "the_dicota_differenc",
+    "featured_products_AHYneJ": {
+      "type": "featured_products",
+      "name": "Featured Products",
       "settings": {
-        "text_heading": "The Dicota Difference. Even more reasons to become a reseller.",
-        "url_button_1_link": "",
-        "text_button_1_text": "Einloggen",
-        "url_button_2_link": "",
-        "text_button_2_text": "Registrieren",
-        "padding_top": 5,
+        "text_uberschrift": "You may also like",
+        "url_button_link": "",
+        "text_button_text": "All new releases",
+        "collection_kollektion": "b2b-backpacks-all",
+        "collection_kollektion_limit": 6,
+        "show_view_all": true,
+        "padding_top": 2.5,
         "padding_bottom": 5,
-        "bg_color": "#f4f4f4"
+        "bg_color": "#ffffff",
+        "text_color": "#0f0f0f"
       }
     },
     "reseller_promo_grid": {
       "type": "reseller_promo_grid",
+      "blocks": {
+        "reseller_promo_banner_qxJynp": {
+          "type": "reseller-promo-banner",
+          "name": "Reseller Promo Banner",
+          "settings": {
+            "image_bild": "shopify://shop_images/6_LPI_TravellerRollerSeven_7.jpg",
+            "text_titel": "SEVEN Family",
+            "textarea_text": "The premium choice for business professionals, combining elegant design, outstanding protection, intelligent organization and lasting comfort.",
+            "url_button_link": "shopify://collections/seven",
+            "text_button_text": "explore Now"
+          },
+          "blocks": {}
+        },
+        "reseller_promo_banner_ABLt4c": {
+          "type": "reseller-promo-banner",
+          "name": "Reseller Promo Banner",
+          "settings": {
+            "image_bild": "shopify://shop_images/6_LPI_BackpackOne_3.jpg",
+            "text_titel": "One Family",
+            "textarea_text": "Offering dependable protection, practical organization and excellent value, the ONE Family is the smart choice for business professionals and project deployments.",
+            "url_button_link": "shopify://products/backpack-one-13-16",
+            "text_button_text": "Explore Now"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "reseller_promo_banner_qxJynp",
+        "reseller_promo_banner_ABLt4c"
+      ],
       "settings": {}
     },
-    "b2b_news_highlight": {
-      "type": "b2b_news_highlight",
+    "featured_products_CMBfxg": {
+      "type": "featured_products",
+      "name": "Featured Products",
       "settings": {
-        "text_badge": "NEW",
-        "text_kategorie": "Company News",
-        "text_datum": "May 5, 2026",
-        "text_uberschrift": "Dicota is opening another Office-Complex in Dubai",
-        "textarea_text": "(Placeholder) Since 1992, more than 12 million PET bottles have been processed to minimize waste - DCT (DICOTA Cushion Technology) is a structured cushioning system that absorbs impacts, knocks and pressure from various angles.",
+        "text_uberschrift": "You may also like",
         "url_button_link": "",
-        "text_button_text": "Learn more",
-        "padding_top": 4,
-        "padding_bottom": 4,
-        "bg_color": "#f6f6f6"
-      }
-    },
-    "b2b_news_updates": {
-      "type": "b2b_news_updates",
-      "settings": {
-        "text_titel_fett": "Not enough yet?",
-        "text_titel_normal": "More news hot off the press",
-        "padding_top": 4,
-        "padding_bottom": 4,
-        "bg_color": "#f6f6f6"
+        "text_button_text": "All new releases",
+        "collection_kollektion": "b2b-backpacks-all",
+        "collection_kollektion_limit": 6,
+        "show_view_all": true,
+        "padding_top": 2.5,
+        "padding_bottom": 5,
+        "bg_color": "#ffffff",
+        "text_color": "#0f0f0f"
       }
     }
   },
@@ -95,9 +313,8 @@
     "reseller_category_ro",
     "reseller_hub",
     "the_latest",
-    "the_dicota_differenc",
+    "featured_products_AHYneJ",
     "reseller_promo_grid",
-    "b2b_news_highlight",
-    "b2b_news_updates"
+    "featured_products_CMBfxg"
   ]
 }

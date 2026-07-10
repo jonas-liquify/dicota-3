@@ -16,25 +16,28 @@
       "blocks": {
         "usp_UjjLKy": {
           "type": "usp",
-          "name": "USP",
+          "name": "USP: Free Shipping",
           "settings": {
-            "text_text": "Free shipping over 49 EUR"
+            "image_icon": "shopify://shop_images/Icon_delivery_truck_speed.png",
+            "text_text": "Free shipping to GER/CH on order over €49"
           },
           "blocks": {}
         },
         "usp_XJyaDj": {
           "type": "usp",
-          "name": "USP",
+          "name": "USP: Returns",
           "settings": {
-            "text_text": "Free shipping over 100 EUR"
+            "image_icon": "shopify://shop_images/Icon_return.png",
+            "text_text": "30-day free returns"
           },
           "blocks": {}
         },
         "usp_Cw4kWR": {
           "type": "usp",
-          "name": "USP",
+          "name": "USP: Warranty",
           "settings": {
-            "text_text": "Free shipping over 100 EUR"
+            "image_icon": "shopify://shop_images/Icon_warranty.png",
+            "text_text": "Lifetime warranty on bags & packs"
           },
           "blocks": {}
         },
@@ -42,16 +45,18 @@
           "type": "rechte-seite",
           "static": true,
           "settings": {
-            "text_reseller_button": "Für Reseller",
-            "url_reseller_button_link": ""
+            "text_reseller_button": "For Resellers",
+            "url_reseller_button_link": "shopify://pages/b2b-reseller-hub"
           },
           "blocks": {
             "link_bmpV8z": {
               "type": "link",
               "name": "Link",
+              "disabled": true,
               "settings": {
                 "url_link_url": "",
                 "text_link_text": "About DICOTA",
+                "link_list": "",
                 "highlighted": false
               },
               "blocks": {}
@@ -59,9 +64,11 @@
             "link_enBgib": {
               "type": "link",
               "name": "Link",
+              "disabled": true,
               "settings": {
                 "url_link_url": "",
                 "text_link_text": "About DICOTA",
+                "link_list": "dicota-about-us-menue",
                 "highlighted": false
               },
               "blocks": {}
@@ -158,10 +165,10 @@
       "name": "Header",
       "settings": {
         "image_logo": "shopify://shop_images/DICOTA_Logo_Black.png",
-        "url_promo_link": "",
-        "text_promo_headline": "Weigh Darker™ Moon Bag Ruffle",
-        "textarea_promo_text": "Refined design. Recycled materials.",
         "text_promo_button_text": "Shop now",
+        "url_promo_link": "",
+        "text_promo_headline": "Test Headline",
+        "textarea_promo_text": "Refined design. Recycled materials.",
         "text_suche_placeholder": "Search for bags, size...",
         "text_such_tipp": "Tip: Search by products, categories or use case",
         "collection_search_recent": "",
@@ -171,11 +178,28 @@
         "transparent_over_first": false,
         "free_shipping_threshold": 50
       }
+    },
+    "product_breadcrumb_GCGP9D": {
+      "type": "product_breadcrumb",
+      "disabled": true,
+      "name": "Product Breadcrumb",
+      "settings": {
+        "text_home_label": "Home",
+        "text_kollektionen_label": "Collections",
+        "text_suche_label": "Search",
+        "text_warenkorb_label": "Cart",
+        "text_404_label": "Page not found",
+        "padding_top": 0.5,
+        "padding_bottom": 0.5,
+        "bg_color": "#ffffff",
+        "text_color": "#0f0f0f"
+      }
     }
   },
   "order": [
     "announcement_bar_YPJcxP",
     "reseller_header_UNKmKg",
-    "header_a83nJp"
+    "header_a83nJp",
+    "product_breadcrumb_GCGP9D"
   ]
 }

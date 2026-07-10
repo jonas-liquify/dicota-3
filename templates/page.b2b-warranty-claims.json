@@ -9,19 +9,42 @@
  */
 {
   "sections": {
-    "b2b_subnav": {
-      "type": "b2b_subnav",
-      "settings": {}
-    },
-    "contact_form": {
-      "type": "contact_form",
-      "settings": {}
+    "faq_accordion_gC6r9q": {
+      "type": "faq_accordion",
+      "blocks": {
+        "forms_inline_i46Anh": {
+          "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
+          "settings": {
+            "form_id": "547627",
+            "text_color": "#202020",
+            "button_background_color": "#202020",
+            "button_label_color": "#FFFFFF",
+            "links_color": "#1878B9",
+            "errors_color": "#E02229",
+            "text_alignment": "center",
+            "form_alignment": "center",
+            "padding_top": 0,
+            "padding_bottom": 24,
+            "padding_right": 0,
+            "padding_left": 0
+          }
+        }
+      },
+      "block_order": [
+        "forms_inline_i46Anh"
+      ],
+      "name": "FAQ Accordion",
+      "settings": {
+        "text_heading": "Frequently asked questions",
+        "textarea_text": "If you have questions about applying, the selection process or getting started — we have answers.",
+        "padding_top": 5,
+        "padding_bottom": 5
+      }
     }
   },
   "layout": "b2b",
   "wrapper": "main.main-wrapper",
   "order": [
-    "b2b_subnav",
-    "contact_form"
+    "faq_accordion_gC6r9q"
   ]
 }

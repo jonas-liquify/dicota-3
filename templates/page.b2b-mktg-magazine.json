@@ -58,11 +58,69 @@
     },
     "b2b_mkt_campaigns": {
       "type": "b2b_mkt_campaigns",
+      "disabled": true,
       "name": "Magazine",
       "settings": {
-        "text_breadcrumb": "DICOTA Magazine",
         "text_heading": "DICOTA Magazine",
-        "textarea_subheading": "Explore the DICOTA Magazine in your preferred language and download the latest edition with just one click."
+        "textarea_subheading": "Explore the DICOTA Magazine in your preferred language and download the latest edition with just one click.",
+        "padding_top": 4,
+        "padding_bottom": 4
+      }
+    },
+    "b2b_mkt_presentation_egKLYK": {
+      "type": "b2b_mkt_presentation",
+      "blocks": {
+        "produkt_kategorie_gk63Mf": {
+          "type": "produkt-kategorie",
+          "settings": {
+            "text_kategorie_name": "Category"
+          },
+          "blocks": {
+            "prasentation_myDYPq": {
+              "type": "prasentation",
+              "settings": {
+                "text_titel": "Download the latest DICOTA Magazine",
+                "text_datei_info": "PDF · 19 MB",
+                "url_de_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/DICOTA_Magazine_4.0_DE_compressed.pdf?v=1783069516",
+                "url_en_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/DICOTA_Magazine_3.0_EN.pdf?v=1783067335",
+                "url_fr_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/DICOTA_Magazine_4.0_FR_compressed.pdf?v=1783069623"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "prasentation_myDYPq"
+          ]
+        }
+      },
+      "block_order": [
+        "produkt_kategorie_gk63Mf"
+      ],
+      "name": "B2B Mkt Presentation",
+      "settings": {
+        "text_uberschrift": "DICOTA Magazine",
+        "textarea_einleitung": "Explore the DICOTA Magazine in your preferred language and download the latest edition with just one click.",
+        "padding_top": 4,
+        "padding_bottom": 4
+      }
+    },
+    "image_banner_394gED": {
+      "type": "image_banner",
+      "name": "Image Banner",
+      "settings": {
+        "image_hintergrundbild": "shopify://shop_images/DICOTA_Magazine_4.0_Web_Banner_Clean_10s_2048x570_babccfd4-8818-4acb-975b-504df7981d16.gif",
+        "text_headline_zeile_1": "",
+        "text_headline_zeile_2": "",
+        "textarea_subtext": "",
+        "url_button_link": "",
+        "text_button_text": "",
+        "min_height": 45,
+        "full_bleed": true,
+        "content_horizontal": "flex-start",
+        "content_vertical": "center",
+        "text_align": "left",
+        "text_color": "#ffffff",
+        "overlay_strength": 0
       }
     },
     "triple_cards_HEViiP": {
@@ -107,6 +165,7 @@
         "karte_pWQixU",
         "karte_Vqt49F"
       ],
+      "disabled": true,
       "name": "Download as PDF",
       "settings": {
         "text_heading": "Download as PDF",
@@ -121,39 +180,105 @@
       "blocks": {
         "produkt_kategorie_DKq9ND": {
           "type": "produkt-kategorie",
-          "name": "SEVEN",
+          "name": "Cut & Sew",
           "settings": {
-            "text_kategorie_name": "SEVEN family"
+            "text_kategorie_name": "Laptop Bags & Packs"
           },
           "blocks": {
             "prasentation_fUmTDn": {
               "type": "prasentation",
-              "name": "Präsentation",
+              "name": "SEVEN Family",
               "settings": {
-                "text_titel": "Product Presentation PDF",
-                "text_datei_info": "PDF · 25 MB",
-                "url_de_datei": "",
-                "url_en_datei": "",
-                "url_fr_datei": ""
+                "text_titel": "SEVEN Family",
+                "text_datei_info": "PDF · 2.3 MB",
+                "url_de_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/PRODUCT_CATALOG_4.0_SEVEN_DE.pdf?v=1781682102",
+                "url_en_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/PRODUCT_CATALOG_4.0_SEVEN_EN.pdf?v=1781682120",
+                "url_fr_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/PRODUCT_CATALOG_4.0_SEVEN_FR.pdf?v=1781682129"
               },
               "blocks": {}
             },
             "prasentation_CRDBRi": {
               "type": "prasentation",
-              "name": "Präsentation",
+              "name": "FIVE Family",
               "settings": {
-                "text_titel": "Product Presentation PDF",
-                "text_datei_info": "PDF · 25 MB",
-                "url_de_datei": "",
-                "url_en_datei": "",
-                "url_fr_datei": ""
+                "text_titel": "FIVE Family",
+                "text_datei_info": "PDF · 2.7 MB",
+                "url_de_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/PRODUCT_CATALOG_4.0_FIVE_DE.pdf?v=1781682111",
+                "url_en_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/PRODUCT_CATALOG_4.0_SEVEN_EN.pdf?v=1781682120",
+                "url_fr_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/PRODUCT_CATALOG_4.0_FIVE_FR.pdf?v=1781682088"
               },
               "blocks": {}
             },
             "prasentation_hgYTQ3": {
               "type": "prasentation",
+              "name": "CORE Family",
               "settings": {
-                "text_titel": "Product Presentation PDF",
+                "text_titel": "Core Family",
+                "text_datei_info": "PDF · 2.1 MB",
+                "url_de_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/PRODUCT_CATALOG_4.0_CORE_DE.pdf?v=1783593469",
+                "url_en_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/PRODUCT_CATALOG_4.0_CORE_EN.pdf?v=1783593463",
+                "url_fr_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/PRODUCT_CATALOG_4.0_CORE_FR.pdf?v=1783593475"
+              },
+              "blocks": {}
+            },
+            "prasentation_ifF6wz": {
+              "type": "prasentation",
+              "name": "TWO Family",
+              "settings": {
+                "text_titel": "TWO Family",
+                "text_datei_info": "PDF · 1.9 MB",
+                "url_de_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/PRODUCT_CATALOG_4.0_TWO_DE.pdf?v=1783594697",
+                "url_en_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/PRODUCT_CATALOG_4.0_TWO_EN.pdf?v=1783594699",
+                "url_fr_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/PRODUCT_CATALOG_4.0_TWO_FR.pdf?v=1783594698"
+              },
+              "blocks": {}
+            },
+            "prasentation_TXL6L6": {
+              "type": "prasentation",
+              "name": "ONE Family",
+              "settings": {
+                "text_titel": "ONE Family",
+                "text_datei_info": "PDF · 2 MB",
+                "url_de_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/PRODUCT_CATALOG_4.0_ONE_DE.pdf?v=1783594699",
+                "url_en_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/PRODUCT_CATALOG_4.0_ONE_EN.pdf?v=1783594699",
+                "url_fr_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/PRODUCT_CATALOG_4.0_ONE_FR.pdf?v=1783594699"
+              },
+              "blocks": {}
+            },
+            "prasentation_33w4xh": {
+              "type": "prasentation",
+              "name": "MOTION Family",
+              "settings": {
+                "text_titel": "MOTION Family",
+                "text_datei_info": "PDF · 3.4 MB",
+                "url_de_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/PRODUCT_CATALOG_4.0_MOTION_DE.pdf?v=1783594768",
+                "url_en_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/PRODUCT_CATALOG_4.0_MOTION_EN.pdf?v=1783594766",
+                "url_fr_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/PRODUCT_CATALOG_4.0_MOTION_FR.pdf?v=1783594769"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "prasentation_fUmTDn",
+            "prasentation_CRDBRi",
+            "prasentation_hgYTQ3",
+            "prasentation_ifF6wz",
+            "prasentation_TXL6L6",
+            "prasentation_33w4xh"
+          ]
+        },
+        "produkt_kategorie_tL9Vid": {
+          "type": "produkt-kategorie",
+          "name": "Screen Filters",
+          "settings": {
+            "text_kategorie_name": "Screen Filters"
+          },
+          "blocks": {
+            "prasentation_9FwQKa": {
+              "type": "prasentation",
+              "name": "Screen Filters",
+              "settings": {
+                "text_titel": "Screen Filters",
                 "text_datei_info": "PDF · 25 MB",
                 "url_de_datei": "",
                 "url_en_datei": "",
@@ -163,19 +288,58 @@
             }
           },
           "block_order": [
-            "prasentation_fUmTDn",
-            "prasentation_CRDBRi",
-            "prasentation_hgYTQ3"
+            "prasentation_9FwQKa"
+          ]
+        },
+        "produkt_kategorie_fFwDeB": {
+          "type": "produkt-kategorie",
+          "name": "Accessories",
+          "settings": {
+            "text_kategorie_name": "Accessories"
+          },
+          "blocks": {
+            "prasentation_LmQULk": {
+              "type": "prasentation",
+              "name": "Accessories",
+              "settings": {
+                "text_titel": "Accessories",
+                "text_datei_info": "PDF · 1.4 MB",
+                "url_de_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/PRODUCT_CATALOG_4.0_ACCESSORIES_DE.pdf?v=1783594178",
+                "url_en_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/PRODUCT_CATALOG_4.0_ACCESSORIES_EN.pdf?v=1783594178",
+                "url_fr_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/PRODUCT_CATALOG_4.0_ACCESSORIES_FR.pdf?v=1783594178"
+              },
+              "blocks": {}
+            },
+            "prasentation_mkaFGN": {
+              "type": "prasentation",
+              "name": "Locks",
+              "settings": {
+                "text_titel": "Locks",
+                "text_datei_info": "PDF · 1.3 MB",
+                "url_de_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/PRODUCT_CATALOG_4.0_LOCKS_DE.pdf?v=1783593949",
+                "url_en_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/PRODUCT_CATALOG_4.0_LOCKS_EN.pdf?v=1783593948",
+                "url_fr_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/PRODUCT_CATALOG_4.0_LOCKS_FR.pdf?v=1783593949"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "prasentation_LmQULk",
+            "prasentation_mkaFGN"
           ]
         }
       },
       "block_order": [
-        "produkt_kategorie_DKq9ND"
+        "produkt_kategorie_DKq9ND",
+        "produkt_kategorie_tL9Vid",
+        "produkt_kategorie_fFwDeB"
       ],
       "name": "B2B Mkt Presentation",
       "settings": {
         "text_uberschrift": "Product Family Bulletins",
-        "textarea_einleitung": "Discover our dedicated product family bulletins, featuring all key information, highlights, and insights from the latest DICOTA Magazine — available for download."
+        "textarea_einleitung": "Discover our dedicated product family bulletins, featuring all key information, highlights, and insights from the latest DICOTA Magazine — available for download.",
+        "padding_top": 4,
+        "padding_bottom": 4
       }
     },
     "b2b_tpl_banner_1x_x3qWc4": {
@@ -188,7 +352,24 @@
         "text_heading": "TEAMS Background",
         "textarea_text": "Download our new standardized DICOTA brand background for Microsoft Teams and use it for all external Teams meetings.",
         "url_button_link": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/Background_Teams_2026.jpg?v=1783272705",
-        "text_button_text": "Discover now"
+        "text_button_text": "Discover now",
+        "padding_top": 4,
+        "padding_bottom": 4
+      }
+    },
+    "product_breadcrumb_4fEP6r": {
+      "type": "product_breadcrumb",
+      "name": "Product Breadcrumb",
+      "settings": {
+        "text_home_label": "Home",
+        "text_kollektionen_label": "Collections",
+        "text_suche_label": "Search",
+        "text_warenkorb_label": "Cart",
+        "text_404_label": "Page not found",
+        "padding_top": 0.5,
+        "padding_bottom": 0.5,
+        "bg_color": "#ffffff",
+        "text_color": "#0f0f0f"
       }
     }
   },
@@ -196,8 +377,11 @@
   "wrapper": "main.main-wrapper",
   "order": [
     "b2b_subnav",
+    "product_breadcrumb_4fEP6r",
     "b2b_mkt_overview",
     "b2b_mkt_campaigns",
+    "b2b_mkt_presentation_egKLYK",
+    "image_banner_394gED",
     "triple_cards_HEViiP",
     "b2b_mkt_presentation_9ttTMF",
     "b2b_tpl_banner_1x_x3qWc4"

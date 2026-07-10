@@ -1,5 +1,7 @@
 <div li-block="Preis" {{ block.shopify_attributes }}>
-                    <div class="ph_price-row"><div class="ph_price-col"><div class="ph_price-amount"><span li-js-price="product.selected_or_first_available_variant.price" class="ph_price-value" x-text="LiquifyHelper.moneyFormat(product.selected_or_first_available_variant.price, true, '{{ shop.money_with_currency_format }}')">109,90 €</span><template x-if="product.selected_or_first_available_variant.compare_at_price > product.selected_or_first_available_variant.price">
+                    <div class="ph_price-row"><div class="ph_price-col"><div class="ph_price-amount"><span class="ph_price-value" li-object:text="product.selected_or_first_available_variant.price | money">
+{{ product.selected_or_first_available_variant.price | money }}
+</span><template x-if="product.selected_or_first_available_variant.compare_at_price > product.selected_or_first_available_variant.price">
             <div li-js-if="product.selected_or_first_available_variant.compare_at_price > product.selected_or_first_available_variant.price">
         <span li-js-price="product.selected_or_first_available_variant.compare_at_price" class="ph_price-compare" x-text="LiquifyHelper.moneyFormat(product.selected_or_first_available_variant.compare_at_price, true, '{{ shop.money_with_currency_format }}')"></span>        </div>
     </template></div><p class="ph_price-note">Incl. VAT, plus <a href="/policies/shipping-policy" class="ph_price-link">shipping</a></p></div>{% if product.metafields.judgeme.review_count.value > 0 %}    <a li-if="product.metafields.judgeme.review_count.value > 0" href="#bewertungen" class="ph_rating">

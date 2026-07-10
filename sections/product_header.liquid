@@ -24,9 +24,10 @@
         {% for image in product.metafields.custom.images_product_measurement.value %}                            <img li-object:src="image | image_url: width: 900" src="{{ image | image_url: width: 900 }}" loading="lazy" alt="" class="ph-dim-modal_image">
                     {% endfor %}    </div><div class="ph-dim_specs w-embed">{% assign ph_spec_set = product.metafields.custom.technical_specification_set.value %}{% if ph_spec_set != blank %}{% for definition in ph_spec_set.specifications.value %}{% assign mf_parts = definition.metafield_key | split: '.' %}{% if mf_parts[1] %}{% assign mf_value = product.metafields[mf_parts[0]][mf_parts[1]] %}{% else %}{% assign mf_value = product.metafields.custom[mf_parts[0]] %}{% endif %}<div class="ph-dim_row"><span class="ph-dim_label">{{ definition.titel }}</span><span class="ph-dim_value">{{ mf_value }}</span></div>{% endfor %}{% endif %}</div></div><div class="ph-dim-modal_footer"><a href="#" data-ph-dim-downloads="" class="ph-dim-modal_downloads"><span>Downloads</span><span class="ph-dim-modal_downloads-icon"><svg width="100%" height="100%" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="1.5" fill="none"></path></svg></span></a></div></aside></div><div li-content-for-theme-blocks="" class="product-header_details">
 {% content_for 'blocks' %}
-</div></div><div class="hide w-embed w-script"><script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script><script>(function(){function __phInit(){
+</div></div><div class="hide w-embed w-script"><script>(function(){function __phInit(){
 var galleryEl = document.querySelector(".swiper.is-product-gallery");
 var gallerySwiper = null;
+function ensureSwiperLib(cb) { if (typeof Swiper !== "undefined") return cb(); if (window.__swiperLoading) return window.__swiperLoading.then(cb); var s = document.createElement("script"); s.src = "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"; var link = document.createElement("link"); link.rel = "stylesheet"; link.href = "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"; document.head.appendChild(link); window.__swiperLoading = new Promise(function(res) { s.onload = res; }); document.head.appendChild(s); window.__swiperLoading.then(cb); }
 function isDesktop() { return window.matchMedia("(min-width: 992px)").matches; }
 function galleryWrapperEl() { return galleryEl ? galleryEl.querySelector(".swiper-wrapper.is-product-gallery") : null; }
 function galleryRootEl() { return galleryEl ? (galleryEl.closest(".product-header_gallery") || galleryEl.parentNode) : null; }
@@ -53,24 +54,29 @@ function addGalleryMoreIfNeeded() {
     for (var k = 0; k < ex.length; k++) ex[k].classList.remove("is-extra");
     btn.remove();
   });
-  wrap.insertBefore(btn, slides[1] || null);
+  wrap.insertBefore(btn, slides[4] || null);
 }
 function initGallerySwipers() {
   if (!galleryEl) return;
   /* Desktop: gestapeltes Layout per CSS &mdash; kein Swiper, ab 5. Bild "Mehr erfahren".
      Mobile: 1-Slide-Swiper mit Progressbar, kein Button. */
   if (isDesktop()) {
-    if (gallerySwiper) { try { gallerySwiper.destroy(true, true); } catch(e){} gallerySwiper = null; }
+    if (gallerySwiper && typeof gallerySwiper.destroy === "function") { try { gallerySwiper.destroy(true, true); } catch(e){} }
+    gallerySwiper = null;
     addGalleryMoreIfNeeded();
     return;
   }
   removeGalleryMore();
   if (gallerySwiper) return;
-  gallerySwiper = new Swiper(galleryEl, {
-    slidesPerView: 1,
-    spaceBetween: 0,
-    keyboard: { enabled: true, onlyInViewport: true },
-    pagination: { el: galleryEl.querySelector(".ph_gallery-progress"), type: "progressbar" }
+  gallerySwiper = "pending";
+  ensureSwiperLib(function() {
+    if (!galleryEl || isDesktop() || gallerySwiper !== "pending") return;
+    gallerySwiper = new Swiper(galleryEl, {
+      slidesPerView: 1,
+      spaceBetween: 0,
+      keyboard: { enabled: true, onlyInViewport: true },
+      pagination: { el: galleryEl.querySelector(".ph_gallery-progress"), type: "progressbar" }
+    });
   });
 }
 initGallerySwipers();
@@ -83,7 +89,7 @@ window.addEventListener("resize", function() {
     if (nowDesktop !== lastDesktop) { lastDesktop = nowDesktop; initGallerySwipers(); }
   }, 150);
 });
-new Swiper(".swiper.is-we-care", {slidesPerView: 1, loop: true,autoplay: { delay: 5000, disableOnInteraction: false },pagination: { el: ".ph_we-care-dots", clickable: true }});new Swiper(".swiper.is-upsell", {slidesPerView: 1,navigation: { nextEl: ".ph_upsell-next", prevEl: ".ph_upsell-prev" }});var tabs = document.querySelectorAll(".ph_tab");var dynPanels = document.querySelectorAll(".ph_tab-panels > .ph_tab-panel");var dlPanel = document.querySelector(".ph_tab-panel-downloads");var seeMoreLink = document.querySelector(".ph_see-more");function activateTab(key) {tabs.forEach(function(t){ t.classList.toggle("is-active", t.getAttribute("data-tab") === key); });dynPanels.forEach(function(p,i){ p.style.display = (String(i) === key) ? "block" : "none"; });if (dlPanel) dlPanel.style.display = (key === "downloads") ? "block" : "none";if (seeMoreLink) seeMoreLink.style.display = (key === "downloads") ? "none" : "";}(function(){ var dm = document.querySelector("[data-ph-dim-modal]"); if(dm && dm.parentNode !== document.body) document.body.appendChild(dm); window.__phOpenDim = function(){ if(!dm) return; dm.classList.add("is-open"); dm.setAttribute("aria-hidden","false"); document.documentElement.style.overflow="hidden"; }; window.__phCloseDim = function(){ if(!dm) return; dm.classList.remove("is-open"); dm.setAttribute("aria-hidden","true"); document.documentElement.style.overflow=""; }; if(dm){ dm.querySelectorAll("[data-ph-dim-close]").forEach(function(b){ b.addEventListener("click", window.__phCloseDim); }); dm.addEventListener("click", function(e){ if(e.target===dm) window.__phCloseDim(); }); document.addEventListener("keydown", function(e){ if(e.key==="Escape" && dm.classList.contains("is-open")) window.__phCloseDim(); }); } })();tabs.forEach(function(tab) { tab.addEventListener("click", function(e){ var key = tab.getAttribute("data-tab"); if (key === "dimensions") { if(e && e.preventDefault) e.preventDefault(); if(window.__phOpenDim) window.__phOpenDim(); return; } activateTab(key); }); });(function(){ var active = document.querySelector(".ph_tab.is-active"); activateTab(active ? active.getAttribute("data-tab") : "0"); })();var seeMore = document.querySelector(".ph_see-more");if (seeMore) {seeMore.addEventListener("click", function(e) {e.preventDefault();var panel = document.querySelector(".ph_tab-panel[style*='block']") || document.querySelector(".ph_tab-panel");if (panel) { panel.classList.toggle("is-expanded"); }this.textContent = panel && panel.classList.contains("is-expanded") ? "Show less" : "Show more";});}}if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",__phInit);}else{__phInit();}})();</script></div><div class="hide w-embed w-script"><script type="application/json" id="pdf-datasheet-data">{% liquid
+ensureSwiperLib(function() { var weCareEl = document.querySelector(".swiper.is-we-care"); if (weCareEl && !weCareEl.swiper) new Swiper(weCareEl, {slidesPerView: 1, loop: true,autoplay: { delay: 5000, disableOnInteraction: false },pagination: { el: ".ph_we-care-dots", clickable: true }}); var upsellEl = document.querySelector(".swiper.is-upsell"); if (upsellEl && !upsellEl.swiper) new Swiper(upsellEl, {slidesPerView: 1,navigation: { nextEl: ".ph_upsell-next", prevEl: ".ph_upsell-prev" }}); });var tabs = document.querySelectorAll(".ph_tab");var dynPanels = document.querySelectorAll(".ph_tab-panels > .ph_tab-panel");var dlPanel = document.querySelector(".ph_tab-panel-downloads");var seeMoreLink = document.querySelector(".ph_see-more");function activateTab(key) {tabs.forEach(function(t){ t.classList.toggle("is-active", t.getAttribute("data-tab") === key); });dynPanels.forEach(function(p,i){ p.style.display = (String(i) === key) ? "block" : "none"; });if (dlPanel) dlPanel.style.display = (key === "downloads") ? "block" : "none";if (seeMoreLink) seeMoreLink.style.display = (key === "downloads") ? "none" : "";}(function(){ var dm = document.querySelector("[data-ph-dim-modal]"); if(dm && dm.parentNode !== document.body) document.body.appendChild(dm); window.__phOpenDim = function(){ if(!dm) return; dm.classList.add("is-open"); dm.setAttribute("aria-hidden","false"); document.documentElement.style.overflow="hidden"; }; window.__phCloseDim = function(){ if(!dm) return; dm.classList.remove("is-open"); dm.setAttribute("aria-hidden","true"); document.documentElement.style.overflow=""; }; if(dm){ dm.querySelectorAll("[data-ph-dim-close]").forEach(function(b){ b.addEventListener("click", window.__phCloseDim); }); dm.addEventListener("click", function(e){ if(e.target===dm) window.__phCloseDim(); }); document.addEventListener("keydown", function(e){ if(e.key==="Escape" && dm.classList.contains("is-open")) window.__phCloseDim(); }); } })();tabs.forEach(function(tab) { tab.addEventListener("click", function(e){ var key = tab.getAttribute("data-tab"); if (key === "dimensions") { if(e && e.preventDefault) e.preventDefault(); if(window.__phOpenDim) window.__phOpenDim(); return; } activateTab(key); }); });(function(){ var active = document.querySelector(".ph_tab.is-active"); activateTab(active ? active.getAttribute("data-tab") : "0"); })();var seeMore = document.querySelector(".ph_see-more");if (seeMore) {seeMore.addEventListener("click", function(e) {e.preventDefault();var panel = document.querySelector(".ph_tab-panel[style*='block']") || document.querySelector(".ph_tab-panel");if (panel) { panel.classList.toggle("is-expanded"); }this.textContent = panel && panel.classList.contains("is-expanded") ? "Show less" : "Show more";});}}if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",__phInit);}else{__phInit();}})();</script></div><div class="hide w-embed w-script"><script type="application/json" id="pdf-datasheet-data">{% liquid
   assign nutshell_found = false
   assign nutshell_url = ''
   assign spec_image_url = ''

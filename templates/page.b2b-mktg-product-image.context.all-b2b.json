@@ -14,11 +14,22 @@
   "parent": "page.b2b-mktg-product-image.json",
   "sections": {
     "b2b_mkt_product_imgs": {
-      "settings": {},
+      "settings": {
+        "text_liste_heading": "Product Portfolio",
+        "text_liste_subheading": "A table showing all available items."
+      },
       "blocks": {
         "b2b_mkt_download_NcHJ8B": {
           "settings": {
-            "text_subheading": "All our current cut & sew products (48 folders · 121 MB)"
+            "url_download_link": "https://www.dicota.com/collections/cut-sew?download=true",
+            "text_heading": "Bags & Packs",
+            "text_subheading": "All our current cut & sew products"
+          }
+        },
+        "b2b_mkt_download_9Ci9mX": {
+          "settings": {
+            "url_download_link": "https://www.dicota.com/collections/accessories?download=true",
+            "text_subheading": "All our current accessory products"
           }
         }
       }

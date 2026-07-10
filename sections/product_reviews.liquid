@@ -1,6 +1,27 @@
-<div id="bewertungen" class="padding-global" style="padding-top:{{ section.settings.padding_top }}rem;padding-bottom:{{ section.settings.padding_bottom }}rem;background-color:{{ section.settings.bg_color }};color:{{ section.settings.text_color }};"><div class="container-large"><div data-jm-reviews="" class="hide w-embed" data-jm-proxy="{{ section.settings.proxy_url }}" data-jm-per-page="{{ section.settings.per_page }}" data-jm-product-id="{{ product.id }}" data-jm-handle="{{ product.handle }}" data-jm-product-url="{{ product.url }}"></div><div data-jm-badge="" class="hide w-embed">{{ product.metafields.judgeme.badge }}</div><div class="product-reviews_layout"><div class="product-reviews_summary"><div class="product-reviews_rating-block"><div class="product-reviews_stars" data-jm-summary-stars=""><svg width="16" height="16" viewbox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg><svg width="16" height="16" viewbox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg><svg width="16" height="16" viewbox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg><svg width="16" height="16" viewbox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg><svg width="16" height="16" viewbox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg></div><p class="product-reviews_score" data-jm-score="">4.9/5.0 rating</p><p class="product-reviews_count" data-jm-count="">Based on 11 reviews</p></div><div class="product-reviews_breakdown"><p class="product-reviews_breakdown-title">
+<div id="bewertungen" class="padding-global" style="padding-top:{{ section.settings.padding_top }}rem;padding-bottom:{{ section.settings.padding_bottom }}rem;background-color:{{ section.settings.bg_color }};color:{{ section.settings.text_color }};"><div class="container-large"><div class="li-tag w-embed">{% assign jm_data = product.metafields.judgeme.review_widget_data.value %}</div><div data-jm-reviews="" class="hide w-embed" data-jm-proxy="{{ section.settings.proxy_url }}" data-jm-per-page="{{ section.settings.per_page }}" data-jm-product-id="{{ product.id }}" data-jm-handle="{{ product.handle }}" data-jm-product-url="{{ product.url }}" data-jm-next-page="{{ jm_data.pagination.current_page | default: 1 | plus: 1 }}" data-jm-has-more="{% if jm_data.pagination.total_pages > jm_data.pagination.current_page %}true{% else %}false{% endif %}"></div><div class="product-reviews_layout"><div class="product-reviews_summary"><div class="product-reviews_rating-block"><div class="product-reviews_stars"><div li-for:inside="n in (1..5)" style="display:contents">
+        {% for n in (1..5) %}                            <svg width="16" height="16" viewbox="0 0 24 24" fill="currentColor" class="product-reviews_star{% unless n <= jm_data.average_rating %} is-empty{% endunless %}"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                    {% endfor %}    </div></div><p class="product-reviews_score" li-object="jm_data.average_rating">{{ jm_data.average_rating }}</p><p class="product-reviews_count" li-object="jm_data.review_summary_text">{{ jm_data.review_summary_text }}</p></div><div class="product-reviews_breakdown"><p class="product-reviews_breakdown-title">
 {{ section.settings.text_breakdown_titel }}
-</p><div class="product-reviews_bars"><div class="product-reviews_bar-row"><span class="product-reviews_bar-label">5</span><div class="product-reviews_bar-track"><div class="product-reviews_bar-fill" data-jm-bar="5" style="width:0%"></div></div></div><div class="product-reviews_bar-row"><span class="product-reviews_bar-label">4</span><div class="product-reviews_bar-track"><div class="product-reviews_bar-fill" data-jm-bar="4" style="width:0%"></div></div></div><div class="product-reviews_bar-row"><span class="product-reviews_bar-label">3</span><div class="product-reviews_bar-track"><div class="product-reviews_bar-fill" data-jm-bar="3" style="width:0%"></div></div></div><div class="product-reviews_bar-row"><span class="product-reviews_bar-label">2</span><div class="product-reviews_bar-track"><div class="product-reviews_bar-fill" data-jm-bar="2" style="width:0%"></div></div></div><div class="product-reviews_bar-row"><span class="product-reviews_bar-label">1</span><div class="product-reviews_bar-track"><div class="product-reviews_bar-fill" data-jm-bar="1" style="width:0%"></div></div></div></div></div><button type="button" class="button product-reviews_write-btn" data-jm-open="">Write a review</button></div><div class="product-reviews_list"><div class="product-reviews_items" data-jm-list=""></div><p class="product-reviews_empty" data-jm-empty="" style="display:none">No reviews yet. Be the first to write one.</p><a href="#" class="button is-secondary product-reviews_more-btn" data-jm-more="" style="display:none">Load more reviews</a></div></div><div class="hide" data-jm-template=""><div class="product-reviews_item"><div class="product-reviews_item-stars" data-stars=""></div><h3 class="product-reviews_item-hl" data-hl=""></h3><p class="product-reviews_item-text" data-text=""></p><div class="product-reviews_item-footer"><span class="product-reviews_item-author" data-author=""></span><span class="product-reviews_item-date" data-date=""></span></div></div></div><div data-jm-review-modal="" class="jm-review-modal" aria-hidden="true"><div class="jm-review-modal_overlay" data-jm-close=""></div><div class="jm-review-modal_panel" role="dialog" aria-modal="true" aria-label="Write a review"><div class="jm-review-modal_header"><h3 class="jm-review-modal_title">Write a review</h3><button type="button" class="jm-review-modal_close" data-jm-close="" aria-label="Close"><svg width="20" height="20" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 6L18 18M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg></button></div><form class="jm-review-form" data-jm-form="" novalidate=""><div class="jm-review-form_field"><label>Your rating</label><div class="jm-review-stars-input" data-jm-rating-input=""><button type="button" aria-label="1 star"><svg width="28" height="28" viewbox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg></button><button type="button" aria-label="2 stars"><svg width="28" height="28" viewbox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg></button><button type="button" aria-label="3 stars"><svg width="28" height="28" viewbox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg></button><button type="button" aria-label="4 stars"><svg width="28" height="28" viewbox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg></button><button type="button" aria-label="5 stars"><svg width="28" height="28" viewbox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg></button></div></div><div class="jm-review-form_field"><label for="jm-rv-name">Name</label><input id="jm-rv-name" name="name" type="text" required=""></div><div class="jm-review-form_field"><label for="jm-rv-email">Email</label><input id="jm-rv-email" name="email" type="email" required=""></div><div class="jm-review-form_field"><label for="jm-rv-title">Review title</label><input id="jm-rv-title" name="title" type="text"></div><div class="jm-review-form_field"><label for="jm-rv-body">Your review</label><textarea id="jm-rv-body" name="body" rows="5" required=""></textarea></div><button type="submit" class="button jm-review-form_submit">Submit review</button><p class="jm-review-form_msg" data-jm-msg=""></p></form></div></div></div></div><div class="hide w-embed w-script"><script>document.addEventListener("DOMContentLoaded", function(){
+</p><div class="product-reviews_bars">{% for row in jm_data.histogram %}    <div class="product-reviews_bar-row" li-for="row in jm_data.histogram">
+                                    <span li-object="row.rating" class="product-reviews_bar-label">{{ row.rating }}</span>
+                            <div class="product-reviews_bar-track"><div class="product-reviews_bar-fill" style="width: {{ row.percentage }}%;"></div></div>
+                        </div>
+{% endfor %}</div></div><button type="button" class="button product-reviews_write-btn" data-jm-open="">Write a review</button></div><div class="product-reviews_list"><div class="product-reviews_items" data-jm-list=""><div li-for:inside="review in jm_data.reviews" class="product-reviews_item">
+        {% for review in jm_data.reviews %}                            <div class="product-reviews_item-stars"><div li-for:inside="n in (1..5)" style="display:contents">
+        {% for n in (1..5) %}                            <svg width="16" height="16" viewbox="0 0 24 24" fill="currentColor" class="product-reviews_star{% unless n <= review.rating %} is-empty{% endunless %}"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                    {% endfor %}    </div></div>
+                            {% if review.title != blank %}    <div class="li-guard" li-if="review.title != blank">
+    <h3 class="product-reviews_item-hl" li-object="review.title">{{ review.title }}</h3>    </div>
+{% endif %}
+                            <p class="product-reviews_item-text" li-object="review.body">{{ review.body }}</p>
+                            <div class="product-reviews_item-footer"><span class="product-reviews_item-author" li-object="review.reviewer_name">{{ review.reviewer_name }}</span>{% if review.verified_buyer %}    <span class="li-guard" li-if="review.verified_buyer">
+    <span class="product-reviews_item-verified">Verified buyer</span>    </span>
+{% endif %}<span class="product-reviews_item-date" li-object="review.created_at | date: '%b %d, %Y'">{{ review.created_at | date: '%b %d, %Y' }}</span></div>
+                    {% endfor %}    </div></div>{% if jm_data.reviews == blank %}    <p class="product-reviews_empty" li-if="jm_data.reviews == blank">
+    No reviews yet. Be the first to write one.    </p>
+{% endif %}{% if jm_data.pagination.total_pages > jm_data.pagination.current_page %}    <a href="#" li-if="jm_data.pagination.total_pages > jm_data.pagination.current_page" class="button is-secondary product-reviews_more-btn" data-jm-more="">
+    Load more reviews    </a>
+{% endif %}</div></div></div></div><div data-jm-review-modal="" class="jm-review-modal" aria-hidden="true"><div class="jm-review-modal_overlay" data-jm-close=""></div><div class="jm-review-modal_panel" role="dialog" aria-modal="true" aria-label="Write a review"><div class="jm-review-modal_header"><h3 class="jm-review-modal_title">Write a review</h3><button type="button" class="jm-review-modal_close" data-jm-close="" aria-label="Close"><svg width="20" height="20" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 6L18 18M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg></button></div><form class="jm-review-form" data-jm-form="" novalidate=""><div class="jm-review-form_field"><label>Your rating</label><div class="jm-review-stars-input" data-jm-rating-input=""><button type="button" aria-label="1 star"><svg width="28" height="28" viewbox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg></button><button type="button" aria-label="2 stars"><svg width="28" height="28" viewbox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg></button><button type="button" aria-label="3 stars"><svg width="28" height="28" viewbox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg></button><button type="button" aria-label="4 stars"><svg width="28" height="28" viewbox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg></button><button type="button" aria-label="5 stars"><svg width="28" height="28" viewbox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg></button></div></div><div class="jm-review-form_field"><label for="jm-rv-name">Name</label><input id="jm-rv-name" name="name" type="text" required=""></div><div class="jm-review-form_field"><label for="jm-rv-email">Email</label><input id="jm-rv-email" name="email" type="email" required=""></div><div class="jm-review-form_field"><label for="jm-rv-title">Review title</label><input id="jm-rv-title" name="title" type="text"></div><div class="jm-review-form_field"><label for="jm-rv-body">Your review</label><textarea id="jm-rv-body" name="body" rows="5" required=""></textarea></div><button type="submit" class="button jm-review-form_submit">Submit review</button><p class="jm-review-form_msg" data-jm-msg=""></p></form></div></div><div class="hide w-embed w-script"><script>document.addEventListener("DOMContentLoaded", function(){
   var root = document.querySelector(".section_product-reviews");
   if(!root) return;
   var cfg = root.querySelector("[data-jm-reviews]");
@@ -10,36 +31,14 @@
   var productId = cfg.getAttribute("data-jm-product-id");
   var handle = cfg.getAttribute("data-jm-handle");
   var productUrl = cfg.getAttribute("data-jm-product-url");
+  var nextPage = parseInt(cfg.getAttribute("data-jm-next-page"),10) || 2;
+  var hasMore = cfg.getAttribute("data-jm-has-more") === "true";
 
   var STAR = '<path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z">';
-  function stars(rating){ var n=Math.round(rating||0),out=""; for(var i=1;i<=5;i++){ out+='<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="'+(i<=n?"":"is-empty")+'">'+STAR+''; } return out; }
+  function stars(rating){ var n=Math.round(rating||0),out=""; for(var i=1;i<=5;i++){ out+='<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="product-reviews_star'+(i<=n?"":" is-empty")+'">'+STAR+''; } return out; }
   function fmtDate(s){ try { return new Date(s).toLocaleDateString(undefined,{year:"numeric",month:"short",day:"numeric"}); } catch(e){ return ""; } }
   function q(p){ return Object.keys(p).filter(function(k){ return p[k]!=null && p[k]!==""; }).map(function(k){ return encodeURIComponent(k)+"="+encodeURIComponent(p[k]); }).join("&"); }
   function jget(url){ return fetch(url,{headers:{"Accept":"application/json"}}).then(function(r){ if(!r.ok) throw new Error("HTTP "+r.status); return r.json(); }); }
-
-  var summaryStars = root.querySelector("[data-jm-summary-stars]");
-  var scoreEl = root.querySelector("[data-jm-score]");
-  var countEl = root.querySelector("[data-jm-count]");
-
-  /* Authoritative aggregate from the Judge.me badge metafield (server-side, no token) */
-  var badgeEl = root.querySelector("[data-jm-badge] [data-average-rating]");
-  var badgeAvg = badgeEl ? parseFloat(badgeEl.getAttribute("data-average-rating")) : NaN;
-  var badgeCount = badgeEl ? parseInt(badgeEl.getAttribute("data-number-of-reviews"),10) : NaN;
-
-  var all = [];
-  var distribution = null;
-  function renderSummary(){
-    var n = all.length;
-    var count = !isNaN(badgeCount) ? badgeCount : n;
-    var avg = !isNaN(badgeAvg) ? badgeAvg : (n ? all.reduce(function(a,r){ return a + (r.rating||0); }, 0) / n : 0);
-    if(countEl) countEl.textContent = "Based on " + count + " review" + (count===1?"":"s");
-    if(scoreEl) scoreEl.textContent = (Math.round(avg*10)/10).toFixed(1) + "/5.0 rating";
-    if(summaryStars) summaryStars.innerHTML = stars(avg);
-    var dist = distribution;
-    if(!dist){ dist = {1:0,2:0,3:0,4:0,5:0}; all.forEach(function(r){ var k=Math.round(r.rating); if(dist[k]!=null) dist[k]++; }); }
-    var total = 0; [1,2,3,4,5].forEach(function(k){ total += dist[k]||0; });
-    [5,4,3,2,1].forEach(function(k){ var bar = root.querySelector('[data-jm-bar="'+k+'"]'); if(bar) bar.style.width = (total ? Math.round((dist[k]||0)/total*100) : 0) + "%"; });
-  }
 
   /* ---- Write-review modal (Submit ueber Proxy; kein shop/token im Browser) ---- */
   (function(){
@@ -82,50 +81,42 @@
     }
   })();
 
-  /* Summary sofort aus dem Badge-Metafeld (auch ohne Proxy) */
-  if(!isNaN(badgeAvg) || !isNaN(badgeCount)) renderSummary();
-
-  /* ---- Read & render review list (ueber Proxy) ---- */
-  if(!proxy) return;
+  /* ---- Load more (Seite 1 kommt bereits server-seitig aus dem Metafeld) ---- */
+  if(!proxy || !hasMore) return;
   var listEl = root.querySelector("[data-jm-list]");
-  var tplEl = root.querySelector("[data-jm-template] .product-reviews_item");
   var moreBtn = root.querySelector("[data-jm-more]");
-  var emptyEl = root.querySelector("[data-jm-empty]");
-  if(!listEl || !tplEl) return;
-  var page = 0, loading = false, done = false;
-  function render(revs){
-    revs.forEach(function(r){
-      var node = tplEl.cloneNode(true);
-      node.querySelector("[data-stars]").innerHTML = stars(r.rating);
-      var hl = node.querySelector("[data-hl]");
-      if(r.title){ hl.textContent = r.title; } else { hl.parentNode.removeChild(hl); }
-      node.querySelector("[data-text]").textContent = r.body || "";
-      var name = (r.reviewer && r.reviewer.name) || r.reviewer_name || r.name || "Anonymous";
-      node.querySelector("[data-author]").textContent = name;
-      node.querySelector("[data-date]").textContent = fmtDate(r.created_at);
-      listEl.appendChild(node);
-    });
-  }
-  function loadPage(){
-    if(loading || done) return;
-    loading = true; page++;
+  if(!listEl || !moreBtn) return;
+  var page = nextPage, loading = false;
+  moreBtn.addEventListener("click", function(e){
+    e.preventDefault();
+    if(loading) return;
+    loading = true;
     jget(proxy + "/reviews?" + q({ product_id:productId, handle:handle, page:page, per_page:perPage }))
       .then(function(d){
         loading = false;
         var revs = (d && d.reviews) || [];
-        if(d && d.distribution) distribution = d.distribution;
-        all = all.concat(revs);
-        render(revs);
-        renderSummary();
-        var hasMore = d && (typeof d.has_more !== "undefined" ? d.has_more : revs.length === perPage);
-        if(!hasMore) done = true;
-        if(moreBtn) moreBtn.style.display = hasMore ? "" : "none";
-        if(!all.length && emptyEl) emptyEl.style.display = "";
+        revs.forEach(function(r){
+          var item = document.createElement("div");
+          item.className = "product-reviews_item";
+          var starsWrap = document.createElement("div");
+          starsWrap.className = "product-reviews_item-stars";
+          starsWrap.innerHTML = stars(r.rating);
+          item.appendChild(starsWrap);
+          if(r.title){ var hl=document.createElement("h3"); hl.className="product-reviews_item-hl"; hl.textContent=r.title; item.appendChild(hl); }
+          var text=document.createElement("p"); text.className="product-reviews_item-text"; text.textContent=r.body||""; item.appendChild(text);
+          var footer=document.createElement("div"); footer.className="product-reviews_item-footer";
+          var author=document.createElement("span"); author.className="product-reviews_item-author"; author.textContent=(r.reviewer&&r.reviewer.name)||r.reviewer_name||r.name||"Anonymous"; footer.appendChild(author);
+          if(r.verified_buyer){ var v=document.createElement("span"); v.className="product-reviews_item-verified"; v.textContent="Verified buyer"; footer.appendChild(v); }
+          var date=document.createElement("span"); date.className="product-reviews_item-date"; date.textContent=fmtDate(r.created_at); footer.appendChild(date);
+          item.appendChild(footer);
+          listEl.appendChild(item);
+        });
+        page++;
+        var more = d && (typeof d.has_more !== "undefined" ? d.has_more : revs.length === perPage);
+        if(!more) moreBtn.style.display = "none";
       })
-      .catch(function(err){ loading=false; if(window.console) console.warn("[Judge.me] reviews failed:", err.message); });
-  }
-  loadPage();
-  if(moreBtn){ moreBtn.addEventListener("click", function(e){ e.preventDefault(); loadPage(); }); }
+      .catch(function(err){ loading=false; if(window.console) console.warn("[Judge.me] load more failed:", err.message); });
+  });
 });</script></div> {% schema %} {
     "tag": "section",
     "name": "Product Reviews",
@@ -145,7 +136,7 @@
             "type": "text",
             "id": "proxy_url",
             "label": "Reviews-Proxy-URL",
-            "info": "Server-Endpoint, der den Judge.me-Token serverseitig haelt (z.B. https:\/\/reviews.dicota.workers.dev oder App-Proxy \/apps\/reviews). NIE den Judge.me-Token direkt hier eintragen."
+            "info": "Server-Endpoint, der den Judge.me-Token serverseitig haelt (z.B. https:\/\/reviews.dicota.workers.dev oder App-Proxy \/apps\/reviews). NIE den Judge.me-Token direkt hier eintragen. Wird nur noch fuer 'Load more' (Seite 2+) und den Schreiben-Dialog gebraucht \u2014 Seite 1 kommt direkt aus dem Metafeld."
         },
         {
             "type": "number",
@@ -155,7 +146,7 @@
         },
         {
             "type": "paragraph",
-            "content": "Reviews laufen ueber einen serverseitigen Proxy, der den Judge.me API-Token haelt (Token kommt NIE ins Theme). Nur die Proxy-URL eintragen. Summary (Durchschnitt + Anzahl) kommt aus dem Judge.me Badge-Metafeld. Proxy-Referenz + Contract: tools\/judgeme-proxy\/."
+            "content": "Zusammenfassung, Sternebalken und die erste Review-Seite kommen direkt aus dem Judge.me-Metafeld judgeme.review_widget_data (JSON, wird von Judge.me automatisch synchronisiert) \u2014 kein API-Call fuer die Anzeige noetig. Der serverseitige Proxy (tools\/judgeme-proxy\/) wird nur noch fuer 'Load more' (weitere Seiten) und das Schreiben-Formular gebraucht."
         },
         {
             "type": "header",

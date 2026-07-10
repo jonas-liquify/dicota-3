@@ -1,0 +1,74 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "context": {
+    "market": "all-b2b"
+  },
+  "parent": "page.b2b-mktg-magazine.json",
+  "sections": {
+    "video_rHdVN": {
+      "type": "video",
+      "disabled": false,
+      "settings": {
+        "text_headline": "",
+        "header-b4d435ad8505e897ff8b26d78269405a": null,
+        "video_upload": "shopify://files/videos/DICOTA_Magazine_4.0_Web_Banner_2048x570.mp4",
+        "header-5554e5a75efc227b695df8fd7c7a5a11": null,
+        "padding_top": 0,
+        "padding_bottom": 0
+      },
+      "blocks": {},
+      "block_order": [],
+      "name": "Video"
+    },
+    "b2b_mkt_campaigns": {
+      "disabled": false,
+      "settings": {
+        "padding_bottom": 2
+      },
+      "blocks": {}
+    },
+    "b2b_mkt_presentation_egKLYK": {
+      "settings": {
+        "text_uberschrift": "",
+        "textarea_einleitung": "",
+        "padding_top": 0
+      },
+      "blocks": {
+        "produkt_kategorie_gk63Mf": {
+          "blocks": {
+            "prasentation_myDYPq": {
+              "settings": {
+                "text_titel": "DICOTA Magazine (2026)"
+              }
+            }
+          },
+          "settings": {
+            "text_kategorie_name": "DOWNLOAD"
+          }
+        }
+      }
+    },
+    "b2b_mkt_presentation_9ttTMF": {
+      "settings": {
+        "padding_top": 2
+      },
+      "blocks": {}
+    }
+  },
+  "order": [
+    "b2b_subnav",
+    "product_breadcrumb_4fEP6r",
+    "b2b_mkt_campaigns",
+    "video_rHdVN",
+    "b2b_mkt_presentation_egKLYK",
+    "b2b_mkt_presentation_9ttTMF"
+  ]
+}

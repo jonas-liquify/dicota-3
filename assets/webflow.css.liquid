@@ -401,10 +401,9 @@ textarea.w-select {
   line-height: normal;
   float: left;
   margin-left: -20px;
-}
-.w-radio-input {
   margin-top: 3px;
 }
+
 .w-file-upload {
   display: block;
   margin-bottom: 10px;
@@ -638,6 +637,12 @@ textarea.w-select {
     left: auto;
     right: auto;
   }
+  .w-nav[data-collapse='medium'] .w-nav-menu {
+    display: none;
+  }
+  .w-nav[data-collapse='medium'] .w-nav-button {
+    display: block;
+  }
 }
 @media screen and (max-width: 767px) {
   .w-hidden-main {
@@ -695,6 +700,15 @@ textarea.w-select {
   .w-col-small-12 {
     width: 100%;
   }
+  .w-nav-brand {
+    padding-left: 10px;
+  }
+  .w-nav[data-collapse='small'] .w-nav-menu {
+    display: none;
+  }
+  .w-nav[data-collapse='small'] .w-nav-button {
+    display: block;
+  }
 }
 @media screen and (max-width: 479px) {
   .w-container {
@@ -750,6 +764,15 @@ textarea.w-select {
   }
   .w-col-tiny-12 {
     width: 100%;
+  }
+  .w-nav[data-collapse='tiny'] .w-nav-menu {
+    display: none;
+  }
+  .w-nav[data-collapse='tiny'] .w-nav-button {
+    display: block;
+  }
+  .w-tab-link {
+    display: block;
   }
 }
 .w-widget {
@@ -1078,7 +1101,6 @@ textarea.w-select {
   vertical-align: top;
   text-decoration: none;
   color: #222222;
-  padding: 20px;
   text-align: left;
   margin-left: auto;
   margin-right: auto;
@@ -1123,11 +1145,7 @@ textarea.w-select {
 .w-dropdown-link:focus {
   outline: 0;
 }
-@media screen and (max-width: 767px) {
-  .w-nav-brand {
-    padding-left: 10px;
-  }
-}
+
 /**
  * ## Note
  * Safari (on both iOS and OS X) does not handle viewport units (vh, vw) well.
@@ -1680,33 +1698,7 @@ textarea.w-select {
  * NOTE: These rules are overridden in site-designer.less to use container queries instead of media queries
  * when the navbar is inside a Frame on the Open Canvas.
  */
-@media screen and (max-width: 991px) {
-  .w-nav[data-collapse='medium'] .w-nav-menu {
-    display: none;
-  }
-  .w-nav[data-collapse='medium'] .w-nav-button {
-    display: block;
-  }
-}
-@media screen and (max-width: 767px) {
-  .w-nav[data-collapse='small'] .w-nav-menu {
-    display: none;
-  }
-  .w-nav[data-collapse='small'] .w-nav-button {
-    display: block;
-  }
-  .w-nav-brand {
-    padding-left: 10px;
-  }
-}
-@media screen and (max-width: 479px) {
-  .w-nav[data-collapse='tiny'] .w-nav-menu {
-    display: none;
-  }
-  .w-nav[data-collapse='tiny'] .w-nav-button {
-    display: block;
-  }
-}
+
 .w-tabs {
   position: relative;
 }
@@ -1754,11 +1746,7 @@ textarea.w-select {
 .w--tab-active {
   display: block;
 }
-@media screen and (max-width: 479px) {
-  .w-tab-link {
-    display: block;
-  }
-}
+
 .w-ix-emptyfix:after {
   content: "";
 }

@@ -1,0 +1,289 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "context": {
+    "market": "all-b2b"
+  },
+  "parent": "page.b2b-mktg-campaigns.json",
+  "sections": {
+    "product_breadcrumb_VCMwB": {
+      "type": "product_breadcrumb",
+      "disabled": false,
+      "settings": {
+        "text_home_label": "Home",
+        "text_kollektionen_label": "Collections",
+        "text_suche_label": "Search",
+        "text_warenkorb_label": "Cart",
+        "text_404_label": "Page not found",
+        "header-df93ab45a8ffbfa54893afc913d57c7b": null,
+        "paragraph-5e6a4243e2d8b89512aeca758292d372": null,
+        "header-2d0cca51e4305ac28b56571cf70af388": null,
+        "padding_top": 0.5,
+        "padding_bottom": 0.5,
+        "header-e6d2a6e686220ec1bdf708864beb1d4d": null,
+        "bg_color": "#ffffff",
+        "text_color": "#0f0f0f"
+      },
+      "blocks": {},
+      "block_order": [],
+      "name": "Product Breadcrumb"
+    },
+    "b2b_solution_header_tnCbq": {
+      "type": "b2b_solution_header",
+      "disabled": false,
+      "settings": {
+        "text_subline": "Marketing Support",
+        "text_heading_1": "Marketing & Product Campaigns",
+        "textarea_subheading_1": "Discover ready-to-use marketing and product campaigns designed to support your communication and sales activities. Access campaign imagery, pre-written content, product highlights, translation sheets and additional marketing assets for fast, consistent and effective implementation across all channels.",
+        "url_hero_button_link": "",
+        "text_hero_button_text": "",
+        "header-5e18e1ddc8cb136e5151fc00e6540c65": null,
+        "padding_top": 4,
+        "padding_bottom": 2
+      },
+      "blocks": {},
+      "block_order": [],
+      "name": "B2B Solution Header"
+    },
+    "b2b_mkt_presentation_ptYHt": {
+      "type": "b2b_mkt_presentation",
+      "disabled": false,
+      "settings": {
+        "text_uberschrift": "TWO Family",
+        "textarea_einleitung": "",
+        "header-c9b16d6c6c08fb6cdd49494a9d54ada8": null,
+        "paragraph-40acf3f5986597eba4bbdfe744d40801": null,
+        "header-c6346367f6f5ef5b99a5822ecd6a877b": null,
+        "padding_top": 4,
+        "padding_bottom": 4
+      },
+      "blocks": {
+        "produkt_kategorie_bwJKj": {
+          "type": "produkt-kategorie",
+          "disabled": false,
+          "blocks": {
+            "prasentation_NrNLG": {
+              "type": "prasentation",
+              "name": "Print",
+              "disabled": false,
+              "settings": {
+                "text_titel": "Transition Sheet for Print",
+                "text_datei_info": "PDF · 3.9 MB",
+                "url_de_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/TWO_transition_sheet_DE_print.pdf?v=1783606016",
+                "url_en_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/TWO_key_visual_scaled.jpg?v=1783606049",
+                "url_fr_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/TWO_transition_sheet_FR_print.pdf?v=1783606016"
+              }
+            },
+            "prasentation_Rqw76": {
+              "type": "prasentation",
+              "name": "Online",
+              "disabled": false,
+              "settings": {
+                "text_titel": "Transition Sheet for Online",
+                "text_datei_info": "PDF · 814 KB",
+                "url_de_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/TWO_transition_sheet_DE_online.pdf?v=1783606012",
+                "url_en_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/TWO_transition_sheet_EN_online.pdf?v=1783606012",
+                "url_fr_datei": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/TWO_transition_sheet_FR_online.pdf?v=1783606012"
+              }
+            }
+          },
+          "block_order": [
+            "prasentation_NrNLG",
+            "prasentation_Rqw76"
+          ],
+          "settings": {
+            "text_kategorie_name": "TRANSITION SHEETS"
+          }
+        }
+      },
+      "block_order": [
+        "produkt_kategorie_bwJKj"
+      ],
+      "name": "B2B Mkt Presentation"
+    },
+    "b2b_mkt_documents_Hibiy": {
+      "type": "b2b_mkt_documents",
+      "disabled": false,
+      "settings": {
+        "text_uberschrift": "TWO family Marketing Assets",
+        "paragraph-7ec0ad06a20adcb8e1247341457edaca": null,
+        "header-33756db97a84b91ee085be7b1d5ba5f1": null,
+        "padding_top": 4,
+        "padding_bottom": 4
+      },
+      "blocks": {
+        "b2b_mkt_dokument_qEQ8t": {
+          "type": "b2b-mkt-dokument",
+          "disabled": false,
+          "settings": {
+            "url_datei_link": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/TWO_key_visual_scaled.jpg?v=1783606049",
+            "text_titel": "Key Visual",
+            "text_datei_info": "JPG · 188 KB"
+          }
+        },
+        "b2b_mkt_dokument_6aXWa": {
+          "type": "b2b-mkt-dokument",
+          "name": "B2B Mkt Dokument",
+          "disabled": false,
+          "settings": {
+            "url_datei_link": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/TWO_product_brief.pdf?v=1783606011",
+            "text_titel": "Product Brief",
+            "text_datei_info": "PDF · 313 KB"
+          }
+        },
+        "b2b_mkt_dokument_qCPYC": {
+          "type": "b2b-mkt-dokument",
+          "name": "B2B Mkt Dokument",
+          "disabled": false,
+          "settings": {
+            "url_datei_link": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/TWO_product_shots.zip?v=1783607886",
+            "text_titel": "Product Images",
+            "text_datei_info": "ZIP · 18.3 MB"
+          }
+        }
+      },
+      "block_order": [
+        "b2b_mkt_dokument_qEQ8t",
+        "b2b_mkt_dokument_6aXWa",
+        "b2b_mkt_dokument_qCPYC"
+      ],
+      "name": "B2B Mkt Documents"
+    },
+    "b2b_mkt_presentation_HzWpea": {
+      "settings": {
+        "text_uberschrift": "SEVEN FAMILY",
+        "textarea_einleitung": "Download our latest product and marketing campaigns as PDF or PPT — <br>mostly available in German, English and French."
+      },
+      "blocks": {
+        "produkt_kategorie_94R3xy": {
+          "blocks": {
+            "prasentation_QhV4U": {
+              "type": "prasentation",
+              "disabled": true,
+              "name": "Präsentation",
+              "settings": {
+                "text_titel": "Product Presentation PDF",
+                "text_datei_info": "PDF · 25 MB",
+                "url_de_datei": "",
+                "url_en_datei": "",
+                "url_fr_datei": ""
+              }
+            }
+          },
+          "block_order": [
+            "prasentation_QhV4U",
+            "prasentation_BH4WbR",
+            "prasentation_LAPDG9"
+          ],
+          "settings": {
+            "text_kategorie_name": "TRANSITION SHEETS"
+          }
+        }
+      }
+    },
+    "b2b_mkt_documents": {
+      "settings": {
+        "text_uberschrift": "SEVEN family Marketing Assets"
+      },
+      "blocks": {
+        "b2b_mkt_dokument_DfU3a": {
+          "type": "b2b-mkt-dokument",
+          "name": "Product Images",
+          "disabled": false,
+          "settings": {
+            "url_datei_link": "https://www.dicota.com/collections/seven?download=true",
+            "text_titel": "Product Images",
+            "text_datei_info": "ZIP · 136.4 MB"
+          }
+        },
+        "b2b_mkt_dokument_4T9m6": {
+          "type": "b2b-mkt-dokument",
+          "name": "Product Lifestyle Images",
+          "disabled": false,
+          "settings": {
+            "url_datei_link": "https://cdn.shopify.com/s/files/1/0707/9208/5641/files/SEVEN_Product_Lifestyle_Images.zip?v=1783605473",
+            "text_titel": "Product Lifestyle Images",
+            "text_datei_info": "ZIP · 15.5 MB"
+          }
+        }
+      },
+      "block_order": [
+        "b2b_mkt_dokument_ApQcqA",
+        "b2b_mkt_dokument_VqpRee",
+        "b2b_mkt_dokument_DfU3a",
+        "b2b_mkt_dokument_4T9m6"
+      ]
+    },
+    "b2b_hub_quicklinks_jAdMA": {
+      "type": "b2b_hub_quicklinks",
+      "disabled": false,
+      "settings": {
+        "text_heading": "Other Marketing assets",
+        "textarea_subheading": "Please don't oversee our other marketing assets ready to use.",
+        "header-3a65064534bb6ecf2087a8944689545c": null,
+        "padding_top": 2,
+        "padding_bottom": 4
+      },
+      "blocks": {
+        "b2b_quicklink_WMN7m": {
+          "type": "b2b-quicklink",
+          "disabled": false,
+          "settings": {
+            "image_icon": null,
+            "text_heading": "DICOTA Product Presentations",
+            "richtext_text": "",
+            "url_button_link": "shopify://pages/b2b-product-presentations",
+            "text_button_text": "more"
+          }
+        },
+        "b2b_quicklink_mTJPQ": {
+          "type": "b2b-quicklink",
+          "name": "B2B Quicklink",
+          "disabled": false,
+          "settings": {
+            "image_icon": null,
+            "text_heading": "Product Images & Contents",
+            "richtext_text": "",
+            "url_button_link": "shopify://pages/b2b-product-images-contents",
+            "text_button_text": "more"
+          }
+        },
+        "b2b_quicklink_CNYQ3": {
+          "type": "b2b-quicklink",
+          "name": "B2B Quicklink",
+          "disabled": false,
+          "settings": {
+            "image_icon": null,
+            "text_heading": "DCT Academy",
+            "richtext_text": "",
+            "url_button_link": "shopify://pages/b2b-dicota-academy",
+            "text_button_text": "more"
+          }
+        }
+      },
+      "block_order": [
+        "b2b_quicklink_WMN7m",
+        "b2b_quicklink_mTJPQ",
+        "b2b_quicklink_CNYQ3"
+      ],
+      "name": "B2B Hub Quicklinks"
+    }
+  },
+  "order": [
+    "b2b_subnav",
+    "product_breadcrumb_VCMwB",
+    "b2b_solution_header_tnCbq",
+    "b2b_mkt_presentation_HzWpea",
+    "b2b_mkt_documents",
+    "b2b_mkt_presentation_ptYHt",
+    "b2b_mkt_documents_Hibiy",
+    "b2b_hub_quicklinks_jAdMA"
+  ]
+}

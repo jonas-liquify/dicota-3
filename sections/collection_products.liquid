@@ -1,43 +1,52 @@
-<div class="coll_filter-bar-outer"><div class="padding-global" style="padding-top: {{ section.settings.padding_top }}rem;"><div class="container-large"><div class="coll_filter-bar"><div class="coll_filter-pills" li-for:inside="filter in collection.filters">
-        {% for filter in collection.filters %}                            <div class="coll_filter-pill-group" x-data="{ open: false }"><button type="button" class="coll_filter-pill" x-on:click.prevent="open = !open"><span li-object="filter.label" class="coll_filter-pill-label">{{ filter.label }}</span><div class="icon-embed-xsmall w-embed"><svg width="100%" height="100%" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2.55806 6.29544C2.46043 6.19781 2.46043 6.03952 2.55806 5.94189L3.44195 5.058C3.53958 4.96037 3.69787 4.96037 3.7955 5.058L8.00001 9.26251L12.2045 5.058C12.3021 4.96037 12.4604 4.96037 12.5581 5.058L13.4419 5.94189C13.5396 6.03952 13.5396 6.19781 13.4419 6.29544L8.17678 11.5606C8.07915 11.6582 7.92086 11.6582 7.82323 11.5606L2.55806 6.29544Z" fill="currentColor"></path></svg></div></button><div class="coll_filter-dropdown" x-show="open" x-on:click.outside="open = false" style="display: none">{% for filter_value in filter.values %}    <div li-for="filter_value in filter.values" class="coll_filter-option">
+<div data-section-rendering="collection-products" data-section-id="{{ section.id }}"><div class="coll_filter-bar-outer" x-data="{ filterModalOpen: false }"><div class="padding-global" style="padding-top: {{ section.settings.padding_top }}rem;"><div class="container-large"><div class="coll_filter-bar"><button type="button" class="coll_filter-mobile-btn" x-on:click="filterModalOpen = true"><div class="icon-embed-xsmall w-embed"><svg width="100%" height="100%" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5H21M6 12H18M10 19H14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path></svg></div><span li-object="'general.filters' | t">{{ 'general.filters' | t }}</span></button><div class="coll_filter-pills" li-for:inside="filter in collection.filters">
+        {% for filter in collection.filters %}                            <div class="coll_filter-pill-group" x-data="{ open: false, ddTop: 0, ddLeft: 0 }"><button type="button" class="coll_filter-pill" x-on:click.prevent="open = !open; if (open) { const r = $el.getBoundingClientRect(); ddTop = r.bottom; ddLeft = r.left; }"><span li-object="filter.label" class="coll_filter-pill-label">{{ filter.label }}</span>{% if filter.active_values.size > 0 %}    <span class="li-guard" li-if="filter.active_values.size > 0">
+    <span class="coll_filter-active-dot"></span>    </span>
+{% endif %}<div class="icon-embed-xsmall w-embed"><svg width="100%" height="100%" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2.55806 6.29544C2.46043 6.19781 2.46043 6.03952 2.55806 5.94189L3.44195 5.058C3.53958 4.96037 3.69787 4.96037 3.7955 5.058L8.00001 9.26251L12.2045 5.058C12.3021 4.96037 12.4604 4.96037 12.5581 5.058L13.4419 5.94189C13.5396 6.03952 13.5396 6.19781 13.4419 6.29544L8.17678 11.5606C8.07915 11.6582 7.92086 11.6582 7.82323 11.5606L2.55806 6.29544Z" fill="currentColor"></path></svg></div></button><div class="coll_filter-dropdown" x-show="open" x-on:click.outside="open = false" x-bind:style="'top: ' + ddTop + 'px; left: ' + ddLeft + 'px;'" style="display: none">{% for filter_value in filter.values %}    <div li-for="filter_value in filter.values" class="coll_filter-option">
                                     <a href="{% if filter_value.active %}{{ filter_value.url_to_remove }}{% else %}{{ filter_value.url_to_add }}{% endif %}" class="{% if filter_value.active %}coll_filter-checkbox is-active{% else %}coll_filter-checkbox{% endif %}" data-coll-filter=""><div class="coll_filter-checkbox-box"></div><span li-object="filter_value.label" class="coll_filter-checkbox-label">{{ filter_value.label }}</span><span class="coll_filter-count">(<span li-object="filter_value.count">{{ filter_value.count }}</span>)</span></a>
                         </div>
 {% endfor %}</div></div>
                     {% endfor %}    </div><div class="coll_sort-wrap"><span li-object="'general.sort_by' | t" class="coll_sort-label">{{ 'general.sort_by' | t }}</span><div class="coll_sort-inner"><select id="sort-by-coll" li-for:inside="option in collection.sort_options" class="coll_sort-select" data-coll-sort="">
-        {% for option in collection.sort_options %}                            <option value="{{ option.value }}" {% if option.value == collection.sort_by %}selected{% elsif option.value == collection.default_sort_by %}selected{% endif %}>{{ option.name }}</option>
-                    {% endfor %}    </select><div class="icon-embed-xsmall w-embed"><svg width="100%" height="100%" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2.55806 6.29544C2.46043 6.19781 2.46043 6.03952 2.55806 5.94189L3.44195 5.058C3.53958 4.96037 3.69787 4.96037 3.7955 5.058L8.00001 9.26251L12.2045 5.058C12.3021 4.96037 12.4604 4.96037 12.5581 5.058L13.4419 5.94189C13.5396 6.03952 13.5396 6.19781 13.4419 6.29544L8.17678 11.5606C8.07915 11.6582 7.92086 11.6582 7.82323 11.5606L2.55806 6.29544Z" fill="currentColor"></path></svg></div></div></div></div></div></div></div><div class="padding-global" style="padding-bottom: {{ section.settings.padding_bottom }}rem;"><div class="container-large">{% paginate collection.products by 24 %}
+        {% for option in collection.sort_options %}                            <option value="{{ option.value }}" selected="{% if option.value == collection.sort_by %}selected{% elsif option.value == collection.default_sort_by %}selected{% endif %}">{{ option.name }}</option>
+                    {% endfor %}    </select><div class="icon-embed-xsmall w-embed"><svg width="100%" height="100%" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2.55806 6.29544C2.46043 6.19781 2.46043 6.03952 2.55806 5.94189L3.44195 5.058C3.53958 4.96037 3.69787 4.96037 3.7955 5.058L8.00001 9.26251L12.2045 5.058C12.3021 4.96037 12.4604 4.96037 12.5581 5.058L13.4419 5.94189C13.5396 6.03952 13.5396 6.19781 13.4419 6.29544L8.17678 11.5606C8.07915 11.6582 7.92086 11.6582 7.82323 11.5606L2.55806 6.29544Z" fill="currentColor"></path></svg></div></div></div></div><div class="coll-filter-modal" x-show="filterModalOpen" x-cloak="" x-on:keydown.escape.window="filterModalOpen = false" style="display:none"><div class="coll-filter-modal_overlay" x-on:click="filterModalOpen = false"></div><div class="coll-filter-modal_panel"><div class="coll-filter-modal_header"><span li-object="'general.filters' | t" class="coll-filter-modal_title">{{ 'general.filters' | t }}</span><button type="button" aria-label="Close" class="coll-filter-modal_close" x-on:click="filterModalOpen = false">{% render 'icon_close' %}</button></div><div class="coll-filter-modal_body no-scrollbar">{% for filter in collection.filters %}    <div li-for="filter in collection.filters" class="coll-filter-modal_group">
+                                    <div li-object="filter.label" class="coll-filter-modal_group-title">{{ filter.label }}</div>
+                            <div class="coll-filter-modal_options">{% for filter_value in filter.values %}    <div li-for="filter_value in filter.values" class="coll_filter-option">
+                                    <a href="{% if filter_value.active %}{{ filter_value.url_to_remove }}{% else %}{{ filter_value.url_to_add }}{% endif %}" class="{% if filter_value.active %}coll_filter-checkbox is-active{% else %}coll_filter-checkbox{% endif %}" data-coll-filter=""><div class="coll_filter-checkbox-box"></div><span li-object="filter_value.label" class="coll_filter-checkbox-label">{{ filter_value.label }}</span><span class="coll_filter-count">(<span li-object="filter_value.count">{{ filter_value.count }}</span>)</span></a>
+                        </div>
+{% endfor %}</div>
+                        </div>
+{% endfor %}</div><div class="coll-filter-modal_footer"><a li-object:href="collection.url" href="{{ collection.url }}" class="text-style-link coll-filter-modal_clear"><span li-object="'general.clear' | t">{{ 'general.clear' | t }}</span></a><button type="button" class="button is-blue coll-filter-modal_apply" x-on:click="filterModalOpen = false"><span li-object="'collection.show_results' | t">{{ 'collection.show_results' | t }}</span></button></div></div></div></div></div></div><div class="padding-global" style="padding-bottom: {{ section.settings.padding_bottom }}rem;"><div class="container-large">{% paginate collection.products by 24 %}
     <div li-paginate="collection.products" li-paginate:by="24" by="24"><div class="coll_grid" li-for:inside="product in collection.products">
         {% for product in collection.products %}                            <div class="coll_grid-item">{% render 'product_card', product: product %}</div>
                             <div li-if:inside="forloop.index == section.settings.promo1_position" style="display:contents" inside="1">
         {% if forloop.index == section.settings.promo1_position %}
-            <div class="coll_grid-item coll_promo-card" style="background-color: {{ section.settings.promo1_bg }};"><div class="coll_promo-card_inner"><div class="coll_promo-card_content"><h3 class="coll_promo-card_title">
+            <div class="coll_grid-item coll_promo-card{% unless section.settings.promo1_large %} is-normal{% endunless %}" style="background-color: {{ section.settings.promo1_bg }};"><div class="coll_promo-card_inner"><div class="coll_promo-card_media">{% if section.settings.image_promo_1_bild != blank %}    <span class="li-guard" li-if="section.settings.image_promo_1_bild != blank">
+    {% if section.settings.image_promo_1_bild %}
+{{ section.settings.image_promo_1_bild | image_url: width: 1200 | image_tag: loading: 'lazy', class: 'coll_promo-card_image' }}
+{% else %}
+<img src="{{ 'placeholder.svg' | asset_url }}" loading="lazy" alt="" class="coll_promo-card_image">
+{% endif %}    </span>
+{% endif %}</div><div class="coll_promo-card_overlay" style="background-color: {{ section.settings.promo1_bg | color_modify: 'alpha', section.settings.promo1_bg_opacity }};"></div><div class="coll_promo-card_content"><h3 class="coll_promo-card_title">
 {{ section.settings.text_promo_1_headline }}
 </h3>{% if section.settings.textarea_promo_1_text != blank %}    <div class="li-guard" li-if="section.settings.textarea_promo_1_text != blank">
     <p class="coll_promo-card_desc text-size-regular"> {{ section.settings.textarea_promo_1_text }} </p>    </div>
 {% endif %}{% if section.settings.text_promo_1_button != blank %}    <span class="li-guard" li-if="section.settings.text_promo_1_button != blank">
     <a href="{{ section.settings.url_promo_1_link }}" class="coll_promo-card_cta w-button"> <span>{{ section.settings.text_promo_1_button }}</span> </a>    </span>
-{% endif %}</div><div class="coll_promo-card_media">{% if section.settings.image_promo_1_bild != blank %}    <span class="li-guard" li-if="section.settings.image_promo_1_bild != blank">
-    {% if section.settings.image_promo_1_bild %}
-{{ section.settings.image_promo_1_bild | image_url: width: 500 | image_tag: loading: 'lazy', class: 'coll_promo-card_image' }}
-{% else %}
-<img src="{{ 'placeholder.svg' | asset_url }}" loading="lazy" alt="" class="coll_promo-card_image">
-{% endif %}    </span>
 {% endif %}</div></div></div>        {% endif %}
     </div>
                             <div li-if:inside="forloop.index == section.settings.promo2_position" style="display:contents" inside="1">
         {% if forloop.index == section.settings.promo2_position %}
-            <div class="coll_grid-item coll_promo-card" style="background-color: {{ section.settings.promo2_bg }};"><div class="coll_promo-card_inner"><div class="coll_promo-card_content"><h3 class="coll_promo-card_title">
+            <div class="coll_grid-item coll_promo-card{% unless section.settings.promo2_large %} is-normal{% endunless %}" style="background-color: {{ section.settings.promo2_bg }};"><div class="coll_promo-card_inner"><div class="coll_promo-card_media">{% if section.settings.image_promo_2_bild != blank %}    <span class="li-guard" li-if="section.settings.image_promo_2_bild != blank">
+    {% if section.settings.image_promo_2_bild %}
+{{ section.settings.image_promo_2_bild | image_url: width: 1200 | image_tag: loading: 'lazy', class: 'coll_promo-card_image' }}
+{% else %}
+<img src="{{ 'placeholder.svg' | asset_url }}" loading="lazy" alt="" class="coll_promo-card_image">
+{% endif %}    </span>
+{% endif %}</div><div class="coll_promo-card_overlay" style="background-color: {{ section.settings.promo2_bg | color_modify: 'alpha', section.settings.promo2_bg_opacity }};"></div><div class="coll_promo-card_content"><h3 class="coll_promo-card_title">
 {{ section.settings.text_promo_2_headline }}
 </h3>{% if section.settings.textarea_promo_2_text != blank %}    <div class="li-guard" li-if="section.settings.textarea_promo_2_text != blank">
     <p class="coll_promo-card_desc text-size-regular"> {{ section.settings.textarea_promo_2_text }} </p>    </div>
 {% endif %}{% if section.settings.text_promo_2_button != blank %}    <span class="li-guard" li-if="section.settings.text_promo_2_button != blank">
     <a href="{{ section.settings.url_promo_2_link }}" class="coll_promo-card_cta w-button"> <span>{{ section.settings.text_promo_2_button }}</span> </a>    </span>
-{% endif %}</div><div class="coll_promo-card_media">{% if section.settings.image_promo_2_bild != blank %}    <span class="li-guard" li-if="section.settings.image_promo_2_bild != blank">
-    {% if section.settings.image_promo_2_bild %}
-{{ section.settings.image_promo_2_bild | image_url: width: 500 | image_tag: loading: 'lazy', class: 'coll_promo-card_image' }}
-{% else %}
-<img src="{{ 'placeholder.svg' | asset_url }}" loading="lazy" alt="" class="coll_promo-card_image">
-{% endif %}    </span>
 {% endif %}</div></div></div>        {% endif %}
     </div>
                     {% endfor %}    </div>{% if collection.products == blank %}    <div li-if="collection.products == blank" class="coll_empty">
@@ -57,7 +66,7 @@
     <a li-object:href="paginate.next.url" href="{{ paginate.next.url }}" class="button is-secondary is-icon w-inline-block"><div li-object="'general.next' | t">{{ 'general.next' | t }}</div></a>    </li>
 {% endif %}</ul>    </nav>
 {% endif %}</div>{% endpaginate %}</div></div><div class="hide w-embed w-script"><script>(function(){
-  var SELECTOR='section[data-section-rendering="collection-products"]';
+  var SELECTOR='[data-section-rendering="collection-products"]';
   var DEBUG=true;
   var inflight=null;
   function log(){if(DEBUG&&window.console)console.info.apply(console,['[CollSR]'].concat([].slice.call(arguments)));}
@@ -122,16 +131,21 @@
   window.addEventListener('popstate',function(){log('popstate');renderFromUrl(location.href);});
 })();</script></div><div class="hide w-embed"><script type="application/json" id="collection-download-data">{% paginate collection.products by 50 %}{ "collection": {{ collection.title | handle | json }}, "pages": {{ paginate.pages }}, "images": [{% assign cd_first = true %}{% for product in collection.products %}{% assign cd_sku = product.selected_or_first_available_variant.sku | default: product.handle %}{% for image in product.images %}{% assign image_url = image.src | image_url %}{% if image_url contains '_01' or image_url contains '_02' or image_url contains '_03' or image_url contains '_04' or image_url contains '_05' or image_url contains '_06' or image_url contains '_07' or image_url contains '_08' or image_url contains '_09' or image_url contains '_10' or image_url contains '_11' or image_url contains '_12' or image_url contains '_13' or image_url contains '_14' or image_url contains '_15' or image_url contains '_16' or image_url contains '_17' or image_url contains '_18' or image_url contains '_19' %}{% unless cd_first %},{% endunless %}{ "url": "https:{{ image.src | image_url: width: 2000 }}", "sku": {{ cd_sku | json }}, "filename": "{{ cd_sku }}_{{ forloop.index }}.jpg" }{% assign cd_first = false %}{% endif %}{% endfor %}{% endfor %}] }{% endpaginate %}</script></div><div id="collection-download-overlay" class="coll-dl-overlay"><div class="coll-dl-spinner"></div><p class="coll-dl-title text-weight-medium">
 {{ section.settings.text_download_titel }}
-</p><p id="collection-download-progress" class="coll-dl-progress text-style-muted">Please wait, the ZIP file is being created.</p></div><div class="hide w-embed w-script"><script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script><script>(function(){function init(){var params=new URLSearchParams(window.location.search);if(params.get('download')!=='true')return;var el=document.getElementById('collection-download-data');if(!el)return;var meta;try{meta=JSON.parse(el.textContent);}catch(e){return;}var section=document.querySelector('section[data-section-rendering="collection-products"]');var sectionId=section&&section.dataset.sectionId;if(sectionId&&sectionId.indexOf('{'+'{')!==-1)sectionId=null;var pages=(meta&&meta.pages)||1;var overlay=document.getElementById('collection-download-overlay');var prog=document.getElementById('collection-download-progress');if(overlay)overlay.style.display='flex';var all=[];function collect(a){if(a&&a.length)all=all.concat(a);}function fetchPage(n){var u=new URL(window.location.href);u.searchParams.set('page',n);u.searchParams.delete('download');if(sectionId)u.searchParams.set('section_id',sectionId);return fetch(u.toString(),{headers:{'Accept':'text/html'}}).then(function(r){return r.text();}).then(function(html){var doc=new DOMParser().parseFromString(html,'text/html');var d=doc.getElementById('collection-download-data');if(d){try{var pd=JSON.parse(d.textContent);collect(pd.images);}catch(e){}}}).catch(function(){});}var chain=Promise.resolve();if(sectionId){for(var p=1;p<=pages;p++){(function(pg){chain=chain.then(function(){if(prog)prog.textContent='Reading page '+pg+' of '+pages+'&hellip;';return fetchPage(pg);});})(p);}}else{collect(meta.images);}chain.then(function(){var seen={},images=[];all.forEach(function(im){if(im&&im.url&&!seen[im.url]){seen[im.url]=1;images.push(im);}});if(!images.length){if(overlay)overlay.style.display='none';return;}var zip=new JSZip();var loaded=0;var tasks=images.map(function(img){var uu=img.url;if(uu.indexOf('//')===0)uu='https:'+uu;return fetch(uu).then(function(r){if(!r.ok)throw new Error('net');return r.blob();}).then(function(blob){zip.folder(img.sku).file(img.filename,blob);loaded++;if(prog)prog.textContent='Loading image '+loaded+' of '+images.length+'&hellip;';}).catch(function(){});});return Promise.all(tasks).then(function(){if(prog)prog.textContent='Generating ZIP&hellip;';return zip.generateAsync({type:'blob'});}).then(function(content){saveAs(content,'Collection_'+(meta.collection||'images')+'.zip');});}).catch(function(e){if(window.console)console.error('Download error:',e);}).finally(function(){if(overlay)overlay.style.display='none';});}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();})();</script></div> {% schema %} {
+</p><p id="collection-download-progress" class="coll-dl-progress text-style-muted">Please wait, the ZIP file is being created.</p></div><div class="hide w-embed w-script"><script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script><script>(function(){function init(){var params=new URLSearchParams(window.location.search);if(params.get('download')!=='true')return;var el=document.getElementById('collection-download-data');if(!el)return;var meta;try{meta=JSON.parse(el.textContent);}catch(e){return;}var section=document.querySelector('[data-section-rendering="collection-products"]');var sectionId=section&&section.dataset.sectionId;if(sectionId&&sectionId.indexOf('{'+'{')!==-1)sectionId=null;var pages=(meta&&meta.pages)||1;var overlay=document.getElementById('collection-download-overlay');var prog=document.getElementById('collection-download-progress');if(overlay)overlay.style.display='flex';var all=[];function collect(a){if(a&&a.length)all=all.concat(a);}function fetchPage(n){var u=new URL(window.location.href);u.searchParams.set('page',n);u.searchParams.delete('download');if(sectionId)u.searchParams.set('section_id',sectionId);return fetch(u.toString(),{headers:{'Accept':'text/html'}}).then(function(r){return r.text();}).then(function(html){var doc=new DOMParser().parseFromString(html,'text/html');var d=doc.getElementById('collection-download-data');if(d){try{var pd=JSON.parse(d.textContent);collect(pd.images);}catch(e){}}}).catch(function(){});}var chain=Promise.resolve();if(sectionId){for(var p=1;p<=pages;p++){(function(pg){chain=chain.then(function(){if(prog)prog.textContent='Reading page '+pg+' of '+pages+'&hellip;';return fetchPage(pg);});})(p);}}else{collect(meta.images);}chain.then(function(){var seen={},images=[];all.forEach(function(im){if(im&&im.url&&!seen[im.url]){seen[im.url]=1;images.push(im);}});if(!images.length){if(overlay)overlay.style.display='none';return;}var zip=new JSZip();var loaded=0;var tasks=images.map(function(img){var uu=img.url;if(uu.indexOf('//')===0)uu='https:'+uu;return fetch(uu).then(function(r){if(!r.ok)throw new Error('net');return r.blob();}).then(function(blob){zip.folder(img.sku).file(img.filename,blob);loaded++;if(prog)prog.textContent='Loading image '+loaded+' of '+images.length+'&hellip;';}).catch(function(){});});return Promise.all(tasks).then(function(){if(prog)prog.textContent='Generating ZIP&hellip;';return zip.generateAsync({type:'blob'});}).then(function(content){saveAs(content,'Collection_'+(meta.collection||'images')+'.zip');});}).catch(function(e){if(window.console)console.error('Download error:',e);}).finally(function(){if(overlay)overlay.style.display='none';});}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();})();</script></div></div> {% schema %} {
     "tag": "section",
     "name": "Collection Products",
     "class": "section_collection-products",
     "settings": [
         {
+            "id": "image_promo_1_bild",
+            "type": "image_picker",
+            "label": "Promo 1 Bild"
+        },
+        {
             "id": "text_promo_1_headline",
             "type": "text",
             "label": "Promo 1 Headline",
-            "default": "WEIGH DARKER\u2122 MOON BAG RUFFLE"
+            "default": "Placeholder"
         },
         {
             "id": "textarea_promo_1_text",
@@ -151,15 +165,15 @@
             "default": "SHOP NOW"
         },
         {
-            "id": "image_promo_1_bild",
+            "id": "image_promo_2_bild",
             "type": "image_picker",
-            "label": "Promo 1 Bild"
+            "label": "Promo 2 Bild"
         },
         {
             "id": "text_promo_2_headline",
             "type": "text",
             "label": "Promo 2 Headline",
-            "default": "WEIGH DARKER\u2122 MOON BAG RUFFLE"
+            "default": "PLACEHOLDER"
         },
         {
             "id": "textarea_promo_2_text",
@@ -179,11 +193,6 @@
             "default": "SHOP NOW"
         },
         {
-            "id": "image_promo_2_bild",
-            "type": "image_picker",
-            "label": "Promo 2 Bild"
-        },
-        {
             "type": "header",
             "content": "Promo-Karten"
         },
@@ -194,10 +203,26 @@
             "default": 10
         },
         {
+            "type": "checkbox",
+            "id": "promo1_large",
+            "label": "Promo 1 gro\u00df (\u00fcber 2 Kacheln)",
+            "default": true
+        },
+        {
             "type": "color",
             "id": "promo1_bg",
             "label": "Promo 1 Hintergrundfarbe",
             "default": "#162040"
+        },
+        {
+            "type": "range",
+            "id": "promo1_bg_opacity",
+            "min": 0,
+            "max": 1,
+            "step": 0.1,
+            "label": "Promo 1 Deckkraft",
+            "info": "0 = transparent, 1 = deckend",
+            "default": 1
         },
         {
             "type": "number",
@@ -206,10 +231,26 @@
             "default": 22
         },
         {
+            "type": "checkbox",
+            "id": "promo2_large",
+            "label": "Promo 2 gro\u00df (\u00fcber 2 Kacheln)",
+            "default": true
+        },
+        {
             "type": "color",
             "id": "promo2_bg",
             "label": "Promo 2 Hintergrundfarbe",
             "default": "#162040"
+        },
+        {
+            "type": "range",
+            "id": "promo2_bg_opacity",
+            "min": 0,
+            "max": 1,
+            "step": 0.1,
+            "label": "Promo 2 Deckkraft",
+            "info": "0 = transparent, 1 = deckend",
+            "default": 1
         },
         {
             "type": "header",

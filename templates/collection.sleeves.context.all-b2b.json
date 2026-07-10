@@ -1,0 +1,64 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "context": {
+    "market": "all-b2b"
+  },
+  "parent": "collection.sleeves.json",
+  "sections": {
+    "collection_image_her_mMmMA": {
+      "type": "collection_image_her",
+      "disabled": false,
+      "settings": {
+        "image_hintergrundbild": "shopify://shop_images/4_CTw_Sleeves_01_1bc69a79-c88e-4fe5-b874-c1854f53aa3e.jpg",
+        "textarea_text": "Slim protection for your device, wherever you go. Discover our Laptop Sleeves.",
+        "header-c2858f94cf4f3528925556e53b740ab8": null,
+        "padding_top": 2.5,
+        "padding_bottom": 2.5
+      },
+      "blocks": {},
+      "block_order": [],
+      "name": "Collection Image Her"
+    },
+    "collection_hero_8TRwPe": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    },
+    "featured_product_qe68Cr": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    },
+    "collection_intro": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    },
+    "collection_products": {
+      "settings": {
+        "text_promo_1_headline": "Lorem Ipsum",
+        "text_promo_1_button": "Shop Now",
+        "text_promo_2_headline": "Lorem Ipsum",
+        "promo1_position": 0,
+        "promo2_position": 0
+      },
+      "blocks": {}
+    }
+  },
+  "order": [
+    "collection_image_her_mMmMA",
+    "collection_hero_8TRwPe",
+    "featured_product_qe68Cr",
+    "collection_intro",
+    "collection_products",
+    "testimonials"
+  ]
+}

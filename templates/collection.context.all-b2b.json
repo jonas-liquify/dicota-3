@@ -1,0 +1,73 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "context": {
+    "market": "all-b2b"
+  },
+  "parent": "collection.json",
+  "sections": {
+    "collection_hero_8TRwPe": {
+      "settings": {
+        "show_button": false
+      },
+      "blocks": {}
+    },
+    "featured_product_qe68Cr": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    },
+    "collection_intro": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    },
+    "collection_image_her_BEfd7": {
+      "type": "collection_image_her",
+      "disabled": true,
+      "settings": {
+        "image_hintergrundbild": null,
+        "textarea_text": "Refined design. Recycled modern materials.",
+        "header-c0afcf6a3d424d351b6e1f6c1fd6ab13": null,
+        "padding_top": 2.5,
+        "padding_bottom": 2.5
+      },
+      "blocks": {},
+      "block_order": [],
+      "name": "Collection Image Her"
+    },
+    "testimonials": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    },
+    "collection_products": {
+      "settings": {
+        "text_promo_1_headline": "",
+        "textarea_promo_1_text": "",
+        "text_promo_1_button": "",
+        "text_promo_2_headline": "",
+        "textarea_promo_2_text": "",
+        "text_promo_2_button": "",
+        "promo1_position": 0,
+        "promo2_position": 0
+      },
+      "blocks": {}
+    }
+  },
+  "order": [
+    "collection_hero_8TRwPe",
+    "collection_image_her_BEfd7",
+    "featured_product_qe68Cr",
+    "collection_intro",
+    "collection_products",
+    "testimonials"
+  ]
+}

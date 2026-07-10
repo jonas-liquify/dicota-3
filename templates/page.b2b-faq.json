@@ -19,6 +19,32 @@
     },
     "faq_accordion": {
       "type": "faq_accordion",
+      "blocks": {
+        "faq_kategorie_TzWQF6": {
+          "type": "faq-kategorie",
+          "name": "FAQ Kategorie",
+          "settings": {
+            "text_kategorie_titel": "General questions",
+            "faq_set": "privacy-filters-magnatic",
+            "faq_entries": []
+          },
+          "blocks": {}
+        },
+        "faq_kategorie_iVK8J8": {
+          "type": "faq-kategorie",
+          "name": "FAQ Kategorie",
+          "settings": {
+            "text_kategorie_titel": "General questions",
+            "faq_set": "shipping",
+            "faq_entries": []
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "faq_kategorie_TzWQF6",
+        "faq_kategorie_iVK8J8"
+      ],
       "settings": {
         "text_heading": "Frequently asked questions",
         "textarea_text": "If you have questions about applying, the selection process or getting started — we have answers.",

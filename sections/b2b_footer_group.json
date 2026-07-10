@@ -19,10 +19,12 @@
         "text_promo_1_text": "Tell a friend + get 10%",
         "url_promo_2_link": "",
         "text_promo_2_text": "Earn 10 EUR Store Credit",
-        "text_headline": "Get free products &amp; exclusive rewards",
+        "text_headline": "Get free products & exclusive rewards",
         "textarea_subtext": "Collect Dicota points and redeem them for exclusive rewards",
         "url_button_link": "",
         "text_button_text": "Sign up now",
+        "padding_top": 4,
+        "padding_bottom": 0,
         "show_form": false,
         "placeholder_text": "Deine E-Mail-Adresse",
         "footer_menu": "footer"
@@ -32,6 +34,8 @@
       "type": "footer_bottom",
       "settings": {
         "text_copyright": "©2026 DCT Group AG",
+        "padding_top": 2.5,
+        "padding_bottom": 0,
         "legal_menu": "footer"
       }
     }

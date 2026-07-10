@@ -1,0 +1,62 @@
+<div class="collection-image-hero_media">{% if section.settings.image_hintergrundbild != blank %}    <span class="li-guard" li-if="section.settings.image_hintergrundbild != blank">
+    {% if section.settings.image_hintergrundbild %}
+{{ section.settings.image_hintergrundbild | image_url: width: 2000 | image_tag: loading: 'eager', class: 'collection-image-hero_image' }}
+{% else %}
+<img src="{{ 'placeholder.svg' | asset_url }}" loading="eager" alt="" class="collection-image-hero_image">
+{% endif %}    </span>
+{% endif %}<div class="collection-image-hero_overlay"></div></div><div class="padding-global" style="padding-top: {{ section.settings.padding_top }}rem; padding-bottom: {{ section.settings.padding_bottom }}rem;"><div class="container-large"><div class="collection-image-hero_content"><h1 li-object="collection.metafields.custom.collection_name | default: collection.title" class="collection-image-hero_title heading-style-h2">{{ collection.metafields.custom.collection_name | default: collection.title }}</h1>{% if section.settings.textarea_text != blank %}    <div class="li-guard" li-if="section.settings.textarea_text != blank">
+    <p class="collection-image-hero_text"> {{ section.settings.textarea_text }} </p>    </div>
+{% endif %}</div></div></div> {% schema %} {
+    "tag": "section",
+    "name": "Collection Image Her",
+    "class": "section_collection-image-hero",
+    "settings": [
+        {
+            "id": "image_hintergrundbild",
+            "type": "image_picker",
+            "label": "Hintergrundbild"
+        },
+        {
+            "id": "textarea_text",
+            "type": "textarea",
+            "label": "Text",
+            "default": "Refined design. Recycled modern materials."
+        },
+        {
+            "type": "header",
+            "content": "Abst\u00e4nde"
+        },
+        {
+            "type": "range",
+            "id": "padding_top",
+            "min": 0,
+            "max": 12,
+            "step": 0.5,
+            "unit": "rem",
+            "label": "Abstand oben (Text)",
+            "default": 2.5
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom",
+            "min": 0,
+            "max": 12,
+            "step": 0.5,
+            "unit": "rem",
+            "label": "Abstand unten (Text)",
+            "default": 2.5
+        }
+    ],
+    "presets": [
+        {
+            "name": "Collection Image Her",
+            "category": "Hero",
+            "blocks": []
+        }
+    ],
+    "enabled_on": {
+        "templates": [
+            "collection"
+        ]
+    }
+} {% endschema %}

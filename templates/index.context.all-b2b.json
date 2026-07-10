@@ -17,15 +17,13 @@
       "type": "reseller_hero",
       "disabled": false,
       "settings": {
-        "image_hintergrundbild": null,
-        "text_headline": "Willkommen bei DICOTA myDCT",
-        "textarea_subtext": "Profitieren Sie von attraktiven Preisen und Angeboten für Ihre Endkunden",
-        "text_kategorie_label": "Kategorien",
-        "url_link": "",
-        "text_text": "Summer Release",
-        "header-7f750169dc2f74344287dacf4ce6c9e3": null,
+        "image_hintergrundbild": "shopify://shop_images/B2B_Main_Header_Image_Trolley.png",
+        "text_headline": "Welcome to the DICOTA Reseller Portal",
+        "textarea_subtext": "Benefit from attractive reseller pricing, exclusive offers and dedicated services and tools to help you provide the best solutions for your customers.",
+        "text_kategorie_label": "Categories",
+        "header-49e09860e6ab9302a084fcc836e8f4f5": null,
         "min_height": 78,
-        "header-f58bb5bee3fd12c2e99ceda2964015dc": null,
+        "header-5bd79cc3f5200a7ff1b2aebce6de6aca": null,
         "text_color": "#ffffff"
       },
       "blocks": {},
@@ -36,15 +34,25 @@
       "type": "reseller_category_ro",
       "disabled": false,
       "settings": {
-        "url_link": "",
-        "image_bild": null,
-        "text_titel": "Backpacks",
-        "header-ca3e6ef08f09e4fcea45300e0f5abcd8": null,
+        "header-accefc9165feeb5c9e84910826a863cf": null,
         "padding_top": 4,
         "padding_bottom": 4
       },
-      "blocks": {},
-      "block_order": [],
+      "blocks": {
+        "reseller_kategorie_wA44E": {
+          "type": "reseller-kategorie",
+          "name": "Reseller Kategorie",
+          "disabled": false,
+          "settings": {
+            "url_link": "shopify://collections/b2b-backpacks-all",
+            "image_bild": "shopify://shop_images/5_SCT1c_BP_EntryLevel.jpg",
+            "text_titel": "Backpacks"
+          }
+        }
+      },
+      "block_order": [
+        "reseller_kategorie_wA44E"
+      ],
       "name": "Reseller Category Ro"
     },
     "reseller_hub_EwB6Y": {
@@ -52,11 +60,11 @@
       "disabled": false,
       "settings": {
         "image_bild": null,
-        "text_heading": "DICOTA Reseller Hub. Ein No-Brainer, für alle die Vorteile geniessen wollen",
+        "text_heading": "DICOTA Reseller Hub. Enjoy exclusive benefits, added convenience and everything you need in one place.",
         "url_button_1_link": "",
-        "text_button_1_text": "Einloggen",
+        "text_button_1_text": "Login",
         "url_button_2_link": "",
-        "text_button_2_text": "Registrieren"
+        "text_button_2_text": "Register"
       },
       "blocks": {},
       "block_order": [],
@@ -68,27 +76,61 @@
       "settings": {
         "text_heading": "The Dicota Difference. Even more reasons to become a reseller.",
         "url_button_1_link": "",
-        "text_button_1_text": "Einloggen",
+        "text_button_1_text": "",
         "url_button_2_link": "",
-        "text_button_2_text": "Registrieren",
-        "header-1b0a6d73820bb000e7e09e4eb6bfd72c": null,
+        "text_button_2_text": "",
+        "header-fd1437fabf77a5e6b789aa09b69a6822": null,
         "padding_top": 5,
         "padding_bottom": 5,
-        "header-ce37ceb3736315638f4c05251a27c7e6": null,
+        "header-576e89bb03536cafa6ae20637f728cac": null,
         "bg_color": "#f4f4f4"
       },
       "blocks": {
+        "vorteil_CTFWp": {
+          "type": "vorteil",
+          "name": "Vorteil",
+          "disabled": false,
+          "settings": {
+            "image_icon": "shopify://shop_images/dicota_p-icon_3_1.png",
+            "text_titel": "Trusted since 1992",
+            "textarea_text": "DICOTA combines decades of experience with reliable quality, innovative solutions and a deep understanding of professional IT accessory needs."
+          }
+        },
+        "vorteil_mV9DA": {
+          "type": "vorteil",
+          "name": "Vorteil",
+          "disabled": false,
+          "settings": {
+            "image_icon": "shopify://shop_images/Icon_Products_png_black.png",
+            "text_titel": "More than 1200 SKUs",
+            "textarea_text": "Across a comprehensive portfolio of laptop bags, backpacks, sleeves, screen filters, screen filters, docking, chargers, locks, webcams and many more IT accessories."
+          }
+        },
         "vorteil_UGKnf": {
           "type": "vorteil",
           "disabled": false,
           "settings": {
-            "text_titel": "Marketing &amp; Sales",
-            "textarea_text": "Nutzen Sie die Tools und Ressourcen des Clubs für eine optimale Präsentation Ihres Sortiments — sowohl online als auch auf der Verkaufsfläche!"
+            "image_icon": "shopify://shop_images/delivery_truck_speed.png",
+            "text_titel": "PERSONAL SALES TEAM",
+            "textarea_text": "Benefit from a dedicated sales team that understands your business and supports you with expert advice, tailored solutions and fast, reliable service."
+          }
+        },
+        "vorteil_rae8i": {
+          "type": "vorteil",
+          "name": "Vorteil",
+          "disabled": false,
+          "settings": {
+            "image_icon": "shopify://shop_images/dicota_p-icon_1_1.png",
+            "text_titel": "SUPPLIER OF THE TOP 100",
+            "textarea_text": "Trusted by the world’s top 100 companies, DICOTA is a reliable partner for premium IT accessories, delivering proven quality, innovative solutions and professional support."
           }
         }
       },
       "block_order": [
-        "vorteil_UGKnf"
+        "vorteil_CTFWp",
+        "vorteil_mV9DA",
+        "vorteil_UGKnf",
+        "vorteil_rae8i"
       ],
       "name": "The Dicota Differenc"
     },
@@ -96,13 +138,41 @@
       "type": "reseller_promo_grid",
       "disabled": false,
       "settings": {},
-      "blocks": {},
-      "block_order": [],
+      "blocks": {
+        "reseller_promo_banner_iCb9i": {
+          "type": "reseller-promo-banner",
+          "name": "Reseller Promo Banner",
+          "disabled": false,
+          "settings": {
+            "image_bild": "shopify://shop_images/6_LPI_TravellerRollerSeven_7.jpg",
+            "text_titel": "SEVEN",
+            "textarea_text": "Our premium collection for demanding business professionals, combining sophisticated design, premium protection and smart functionality.",
+            "url_button_link": "shopify://collections/seven",
+            "text_button_text": "explore"
+          }
+        },
+        "reseller_promo_banner_mU9PB": {
+          "type": "reseller-promo-banner",
+          "name": "Reseller Promo Banner",
+          "disabled": false,
+          "settings": {
+            "image_bild": "shopify://shop_images/6_LPI_MultiTwo_3.jpg",
+            "text_titel": "One",
+            "textarea_text": "the perfect choice for your next project tender, combining reliability, quality and outstanding value.",
+            "url_button_link": "shopify://products/multi-one-14-16",
+            "text_button_text": "explore"
+          }
+        }
+      },
+      "block_order": [
+        "reseller_promo_banner_iCb9i",
+        "reseller_promo_banner_mU9PB"
+      ],
       "name": "Reseller Promo Grid"
     },
     "b2b_news_highlight_LhrNM": {
       "type": "b2b_news_highlight",
-      "disabled": false,
+      "disabled": true,
       "settings": {
         "image_bild": null,
         "text_badge": "NEW",
@@ -112,10 +182,10 @@
         "textarea_text": "(Platzhalter) Seit 1992 wurden mehr als 12 Millionen PET-Flaschen verarbeitet, um Abfall zu minimieren - DCT (DICOTA Cushion Technology) ist ein strukturiertes Dämpfungssystem, das Stösse, Schläge und Druck aus verschiedenen Winkeln absorbieren kann.",
         "url_button_link": "",
         "text_button_text": "Learn more",
-        "header-9a74bd3b6bf03dd73659e1a00e2b9c0e": null,
+        "header-703192fb0c79bc5839d124716f350412": null,
         "padding_top": 2.5,
         "padding_bottom": 4,
-        "header-a70a634049c2424a5e47d416c01069ec": null,
+        "header-02e1a027abefa538549b43d85882abb8": null,
         "bg_color": "#f6f6f6"
       },
       "blocks": {},
@@ -126,8 +196,8 @@
   "order": [
     "reseller_hero_97i8b",
     "reseller_category_ro_WCArV",
-    "reseller_hub_EwB6Y",
     "the_dicota_differenc_JXxMG",
+    "reseller_hub_EwB6Y",
     "reseller_promo_grid_ydyLg",
     "b2b_news_highlight_LhrNM"
   ]

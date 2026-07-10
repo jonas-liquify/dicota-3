@@ -1,0 +1,68 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "context": {
+    "market": "all-b2b"
+  },
+  "parent": "collection.b2b-product-catalog.json",
+  "sections": {
+    "collection_image_her_aPVXw": {
+      "type": "collection_image_her",
+      "disabled": false,
+      "settings": {
+        "image_hintergrundbild": "shopify://shop_images/DICOTA_smf_25-24.png",
+        "textarea_text": "Equip your team with solutions that boost performance, reduce risk and ensure long.-term productivity.",
+        "header-ec543006d4ae8f235f6e907eaddc64c4": null,
+        "padding_top": 2.5,
+        "padding_bottom": 2.5
+      },
+      "blocks": {},
+      "block_order": [],
+      "name": "Collection Image Her"
+    },
+    "featured_product_qe68Cr": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    },
+    "collection_intro": {
+      "settings": {},
+      "blocks": {
+        "kategorie_bild_hiEEbP": {
+          "settings": {
+            "image_bild": "shopify://shop_images/5_SCT1c_ALL_SEVEN.png",
+            "text_titel": "Laptop Bags & Backpacks",
+            "textarea_text": "Reliable protection, smart organization and everyday comfort. Discover our Laptop Bags & Backpacks."
+          }
+        },
+        "kategorie_bild_3YJtex": {
+          "settings": {
+            "image_bild": "shopify://shop_images/5_SCT1c_SF_People.png",
+            "text_titel": "Screen Filters",
+            "textarea_text": "Protect sensitive data, reduce glare and safeguard your screen. Discover our Screen Filter solutions."
+          }
+        },
+        "kategorie-bild": {
+          "settings": {
+            "text_titel": "ACCESSORIES",
+            "textarea_text": "Stay connected, powered and secure. Discover our smart accessories for a more productive workspace."
+          }
+        }
+      }
+    }
+  },
+  "order": [
+    "collection_image_her_aPVXw",
+    "featured_product_qe68Cr",
+    "collection_intro",
+    "collection_products",
+    "testimonials"
+  ]
+}

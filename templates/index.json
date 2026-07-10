@@ -29,12 +29,12 @@
           "type": "slide",
           "name": "Slide",
           "settings": {
-            "image_hintergrundbild": "shopify://shop_images/2_PITw_Filter_b6157506-bf05-4037-b4c5-78007bf08f3f.jpg",
-            "text_headline_zeile_1": "Weigh Darker™",
-            "text_headline_zeile_2": "Moon Bag Ruffle",
-            "text_subtext": "Raffiniertes Design. Recycelte moderne Materialien.",
-            "url_button_link": "",
-            "text_button_text": "Jetzt shoppen test"
+            "image_hintergrundbild": "shopify://shop_images/4_MT_PrivacyFilter.jpg",
+            "text_headline_zeile_1": "SCREEN FILTERS",
+            "text_headline_zeile_2": "By DICOTA",
+            "text_subtext": "Protection, privacy and visual comfort for every screen.",
+            "url_button_link": "shopify://collections/d2c-screen-filters-all",
+            "text_button_text": "Explore Now"
           },
           "blocks": {}
         },
@@ -43,24 +43,11 @@
           "name": "Slide",
           "settings": {
             "image_hintergrundbild": "shopify://shop_images/3_MT_Urban.webp",
-            "text_headline_zeile_1": "Weigh Darker™",
-            "text_headline_zeile_2": "Moon Bag Ruffle",
-            "text_subtext": "Raffiniertes Design. Recycelte moderne Materialien.",
-            "url_button_link": "",
-            "text_button_text": "Jetzt shoppen test"
-          },
-          "blocks": {}
-        },
-        "slide_qcqnMF": {
-          "type": "slide",
-          "name": "Slide",
-          "settings": {
-            "image_hintergrundbild": "shopify://shop_images/4_MT_PrivacyFilter.webp",
-            "text_headline_zeile_1": "Weigh Darker™",
-            "text_headline_zeile_2": "Moon Bag Ruffle",
-            "text_subtext": "Raffiniertes Design. Recycelte moderne Materialien.",
-            "url_button_link": "",
-            "text_button_text": "Jetzt shoppen test"
+            "text_headline_zeile_1": "DAILY COMMUTING",
+            "text_headline_zeile_2": "Fresh color for every day life",
+            "text_subtext": "Fresh colours, smart organization and reliable protection for every journey.",
+            "url_button_link": "shopify://collections/commuters",
+            "text_button_text": "Explore Now"
           },
           "blocks": {}
         },
@@ -69,11 +56,11 @@
           "name": "Slide",
           "settings": {
             "image_hintergrundbild": "shopify://shop_images/5_MT_OneMore.webp",
-            "text_headline_zeile_1": "Weigh Darker™",
-            "text_headline_zeile_2": "Moon Bag Ruffle",
-            "text_subtext": "Raffiniertes Design. Recycelte moderne Materialien.",
-            "url_button_link": "",
-            "text_button_text": "Jetzt shoppen test"
+            "text_headline_zeile_1": "OCEAN BREEZE",
+            "text_headline_zeile_2": "made out of recycled fishing nets",
+            "text_subtext": "A fresh, urban collection made from recycled fishing nets – combining modern style, smart organization and reliable protection.",
+            "url_button_link": "shopify://products/tote-backpack-ocean-breeze-14-16",
+            "text_button_text": "Explore Now"
           },
           "blocks": {}
         }
@@ -82,7 +69,6 @@
         "slide_XCDh4f",
         "slide_riGQW3",
         "slide",
-        "slide_qcqnMF",
         "slide_KednW8"
       ],
       "settings": {
@@ -113,7 +99,7 @@
       "settings": {
         "text_vortitel": "[DI:CO:TA]",
         "text_uberschrift": "Die Computer Tasche",
-        "textarea_beschreibung": "Taschen gibt es wie Sand am Meer. Taschen mit Laptopfach ebenso. Aber wirkliche Computer Taschen, die gibt es nur bei Dicota.",
+        "textarea_beschreibung": "DICOTA was born in 1992\nFrom the simple idea of carrying computers safely, conveniently and efficiently from A to B.\nOur journey began when computers became mobile in the early 1990s. For over three decades, DICOTA has stood for continuous innovation and the highest quality.",
         "padding_top": 5,
         "padding_bottom": 2.5,
         "text_align": "center",
@@ -143,8 +129,9 @@
           "type": "usp-block",
           "name": "USP Block",
           "settings": {
-            "text_uberschrift": "Free Shipping ab 80 EUR",
-            "textarea_beschreibung": "Free standard shipping available in the European Union"
+            "image_icon": "shopify://shop_images/delivery_truck_speed.png",
+            "text_uberschrift": "Free Shipping",
+            "textarea_beschreibung": "To Germany and Switzerland on orders over €49."
           },
           "blocks": {}
         },
@@ -152,8 +139,9 @@
           "type": "usp-block",
           "name": "USP Block",
           "settings": {
-            "text_uberschrift": "Free Shipping ab 80 EUR",
-            "textarea_beschreibung": "Free standard shipping available in the European Union"
+            "image_icon": "shopify://shop_images/box.png",
+            "text_uberschrift": "Free & easy Returns",
+            "textarea_beschreibung": "Shop with confidence with 30 days returns or exchanges"
           },
           "blocks": {}
         },
@@ -161,8 +149,9 @@
           "type": "usp-block",
           "name": "USP Block",
           "settings": {
-            "text_uberschrift": "Free Shipping ab 80 EUR",
-            "textarea_beschreibung": "Free standard shipping available in the European Union"
+            "image_icon": "shopify://shop_images/dicota_p-icon_1_1.png",
+            "text_uberschrift": "1 Million per year",
+            "textarea_beschreibung": "More than one million products sold every year."
           },
           "blocks": {}
         },
@@ -170,8 +159,9 @@
           "type": "usp-block",
           "name": "USP Block",
           "settings": {
-            "text_uberschrift": "Free Shipping ab 80 EUR",
-            "textarea_beschreibung": "Free standard shipping available in the European Union"
+            "image_icon": "shopify://shop_images/dicota_p-icon_3_1.png",
+            "text_uberschrift": "Lifetime Warranty",
+            "textarea_beschreibung": "Lifetime / 30 years’ warranty on all bags and backpacks."
           },
           "blocks": {}
         }
@@ -195,7 +185,7 @@
         "image_hintergrundbild": "shopify://shop_images/2_PITw_Filter_b6157506-bf05-4037-b4c5-78007bf08f3f.jpg",
         "text_headline_zeile_1": "DICOTA",
         "text_headline_zeile_2": "MAGNETIC PRIVACY FILTERS",
-        "textarea_subtext": "Raffiniertes Design. Recycelte Materialien.",
+        "textarea_subtext": "Attach in seconds, remove just as easily – magnetic privacy filters for flexible screen protection and personal data security.",
         "url_button_link": "",
         "text_button_text": "Explore Now",
         "min_height": 55,
@@ -265,6 +255,7 @@
           "name": "Accessories",
           "settings": {
             "url_link": "",
+            "image_bild": "shopify://shop_images/5_SCT1c_Charger.jpg",
             "text_titel": "Accessories"
           },
           "blocks": {}
@@ -294,10 +285,10 @@
           "name": "Banner",
           "settings": {
             "image_hintergrundbild": "shopify://shop_images/Dicota_Roller_c25f3e77-721b-45f9-8e7c-7aaf5d6930f3.avif",
-            "text_uberschrift": "Tell A Friend & Get 15% Off",
-            "textarea_subtext": "Give your friends 15% off their first order, and get a 15% off for each successful referral",
+            "text_uberschrift": "SEVEN Family",
+            "textarea_subtext": "Engineered to Protect. Built to Last.",
             "url_button_link": "",
-            "text_button_text": "Freund einladen"
+            "text_button_text": "Explore Now"
           },
           "blocks": {}
         },
@@ -306,10 +297,10 @@
           "name": "Banner",
           "settings": {
             "image_hintergrundbild": "shopify://shop_images/Dicota_B2B_2756dd4f-7290-4be4-8489-408333a5a0d8.avif",
-            "text_uberschrift": "Tell A Friend & Get 15% Off",
-            "textarea_subtext": "Give your friends 15% off their first order, and get a 15% off for each successful referral",
+            "text_uberschrift": "Tailor Made",
+            "textarea_subtext": "Custom-designed solutions that combine your requirements with DICOTA quality and expertise.",
             "url_button_link": "",
-            "text_button_text": "Freund einladen"
+            "text_button_text": "Let's Talk"
           },
           "blocks": {}
         }
@@ -341,7 +332,7 @@
           "type": "kategorie-wrapper",
           "name": "Kategorie Wrapper",
           "settings": {
-            "collection_kollektion": "bags-and-backpacks",
+            "collection_kollektion": "d2c-accessories-all",
             "collection_kollektion_limit": 6
           },
           "blocks": {}
@@ -352,7 +343,7 @@
         "kategorie_wrapper_iENcFb"
       ],
       "settings": {
-        "text_uberschrift": "Zubehör & Accessories",
+        "text_uberschrift": "Accessories for your Business life",
         "padding_top": 4,
         "padding_bottom": 4,
         "bg_color": "#ffffff",
@@ -367,7 +358,7 @@
           "name": "Image+Link List Link",
           "settings": {
             "url_link_ziel": "",
-            "text_label": "Mobile Working"
+            "text_label": "Everday Life"
           },
           "blocks": {}
         },
@@ -385,7 +376,7 @@
           "name": "Image+Link List Link",
           "settings": {
             "url_link_ziel": "",
-            "text_label": "Mobile Working"
+            "text_label": "Data Protection"
           },
           "blocks": {}
         },
@@ -394,7 +385,7 @@
           "name": "Image+Link List Link",
           "settings": {
             "url_link_ziel": "",
-            "text_label": "Mobile Working"
+            "text_label": "Business Solutions"
           },
           "blocks": {}
         },
@@ -403,7 +394,7 @@
           "name": "Image+Link List Link",
           "settings": {
             "url_link_ziel": "",
-            "text_label": "Mobile Working"
+            "text_label": "Safety at Work"
           },
           "blocks": {}
         }
@@ -417,9 +408,9 @@
       ],
       "settings": {
         "image_bild": "shopify://shop_images/2_MT_Five.webp",
-        "text_subtitle": "Wonach suchst du?",
+        "text_subtitle": "What are you looking for?",
         "url_button_link": "",
-        "text_button_text": "Zum Product-Finder",
+        "text_button_text": "Find your Solution",
         "image_position": "left",
         "bg_color": "#0f0f0f",
         "text_color": "#ffffff"
@@ -493,11 +484,11 @@
     "sustainability_banne": {
       "type": "sustainability_banne",
       "settings": {
-        "image_hintergrundbild": "shopify://shop_images/Dicota_Plastik_c7450c5e-a440-4662-8c05-972c458eb3e7.avif",
-        "text_uberschrift": "Verarbeitete Flaschen",
-        "textarea_beschreibung": "Seit 1992 wurden mehr als 12 Millionen PET-Flaschen verarbeitet, um Abfall zu minimieren und Nachhaltigkeit zu fördern",
-        "url_button_link": "",
-        "text_button_text": "Mehr zur Nachhaltigkeit",
+        "image_hintergrundbild": "shopify://shop_images/Sustainable_Materials.png",
+        "text_uberschrift": "Bottles processed",
+        "textarea_beschreibung": "Since 1992, more than 12 million PET bottles have been recycled to minimise waste and promote sustainability.",
+        "url_button_link": "shopify://pages/sustainability",
+        "text_button_text": "More About Responsibility",
         "counter": "12.483.129",
         "min_height": 70,
         "overlay_strength": 30
@@ -564,15 +555,36 @@
             "faq_entries": []
           },
           "blocks": {}
+        },
+        "faq_kategorie_RYpH6n": {
+          "type": "faq-kategorie",
+          "name": "FAQ Kategorie",
+          "settings": {
+            "text_kategorie_titel": "General questions",
+            "faq_set": "shipping",
+            "faq_entries": []
+          },
+          "blocks": {}
         }
       },
       "block_order": [
-        "faq_kategorie_GzfQQt"
+        "faq_kategorie_GzfQQt",
+        "faq_kategorie_RYpH6n"
       ],
       "name": "FAQ Accordion",
       "settings": {
         "text_heading": "Frequently asked questions",
         "textarea_text": "If you have questions about applying, the selection process or getting started — we have answers.",
+        "padding_top": 5,
+        "padding_bottom": 5
+      }
+    },
+    "video_6CVi9g": {
+      "type": "video",
+      "name": "Video",
+      "settings": {
+        "text_headline": "Video Headline",
+        "video_upload": "shopify://files/videos/DICOTA_Magazine_4.0_Web_Banner_2048x570.mp4",
         "padding_top": 5,
         "padding_bottom": 5
       }
@@ -594,6 +606,7 @@
     "loved_by_customers",
     "sustainability_banne",
     "testimonials",
-    "faq_accordion_6xnCFe"
+    "faq_accordion_6xnCFe",
+    "video_6CVi9g"
   ]
 }

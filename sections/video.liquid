@@ -1,0 +1,59 @@
+<div class="padding-global" style="padding-top: {{ section.settings.padding_top }}rem; padding-bottom: {{ section.settings.padding_bottom }}rem;"><div class="container-large">{% if section.settings.text_headline != blank %}    <div class="li-guard" li-if="section.settings.text_headline != blank">
+    <h2 class="video_headline heading-style-h2">
+{{ section.settings.text_headline }}
+</h2>    </div>
+{% endif %}{% if section.settings.video_upload != blank %}    <div class="li-guard" li-if="section.settings.video_upload != blank">
+    <div li-object="section.settings.video_upload | video_tag: controls: true, image_size: '1600x'" class="video_player">{{ section.settings.video_upload | video_tag: controls: true, image_size: '1600x' }}</div>    </div>
+{% endif %}</div></div> {% schema %} {
+    "tag": "section",
+    "name": "Video",
+    "class": "section_video",
+    "settings": [
+        {
+            "id": "text_headline",
+            "type": "text",
+            "label": "Headline",
+            "default": "Video Headline"
+        },
+        {
+            "type": "header",
+            "content": "Video"
+        },
+        {
+            "type": "video",
+            "id": "video_upload",
+            "label": "Video"
+        },
+        {
+            "type": "header",
+            "content": "Abst\u00e4nde"
+        },
+        {
+            "type": "range",
+            "id": "padding_top",
+            "min": 0,
+            "max": 12,
+            "step": 0.5,
+            "unit": "rem",
+            "label": "Abstand oben",
+            "default": 5
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom",
+            "min": 0,
+            "max": 12,
+            "step": 0.5,
+            "unit": "rem",
+            "label": "Abstand unten",
+            "default": 5
+        }
+    ],
+    "presets": [
+        {
+            "name": "Video",
+            "category": "Content",
+            "blocks": []
+        }
+    ]
+} {% endschema %}

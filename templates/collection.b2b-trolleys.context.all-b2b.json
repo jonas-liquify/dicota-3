@@ -1,0 +1,66 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "context": {
+    "market": "all-b2b"
+  },
+  "parent": "collection.b2b-trolleys.json",
+  "sections": {
+    "collection_image_her_Qqprn": {
+      "type": "collection_image_her",
+      "disabled": false,
+      "settings": {
+        "image_hintergrundbild": "shopify://shop_images/4_CTw_Trolleys_01_a4165280-2aa0-4816-a40b-489a4e06db23.jpg",
+        "textarea_text": "Travel smart with durable protection and effortless mobility. Discover our Rollers.",
+        "header-d5ba9dc17f98a92d5b34f81edb45bb5d": null,
+        "padding_top": 2.5,
+        "padding_bottom": 2.5
+      },
+      "blocks": {},
+      "block_order": [],
+      "name": "Collection Image Her"
+    },
+    "collection_hero_8TRwPe": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    },
+    "featured_product_qe68Cr": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    },
+    "collection_intro": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    },
+    "collection_products": {
+      "settings": {
+        "text_promo_2_headline": "Lorem Ipsum",
+        "textarea_promo_2_text": "Sublime",
+        "text_promo_2_button": "Shop now",
+        "promo1_position": 0,
+        "promo2_position": 0,
+        "text_promo_1_headline": "Lorem Ipsum",
+        "textarea_promo_1_text": "Subline"
+      },
+      "blocks": {}
+    }
+  },
+  "order": [
+    "collection_image_her_Qqprn",
+    "collection_hero_8TRwPe",
+    "featured_product_qe68Cr",
+    "collection_intro",
+    "collection_products",
+    "testimonials"
+  ]
+}
