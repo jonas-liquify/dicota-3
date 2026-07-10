@@ -407,7 +407,7 @@
       ],
       "settings": {
         "image_bild": "shopify://shop_images/2_MT_Five.webp",
-        "text_subtitle": "Wonach suchst du?",
+        "text_subtitle": "What are you looking for?",
         "url_button_link": "",
         "text_button_text": "Zum Product-Finder",
         "image_position": "left",
