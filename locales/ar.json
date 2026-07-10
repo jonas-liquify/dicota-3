@@ -1942,7 +1942,89 @@
         "runtime_error": "حدثت مشكلة أثناء معالجة طلبك. اتصل بصاحب المتجر."
       },
       "no_address_location": {
-        "title": "الموقع بدون عنوان"
+        "title": "الموقع بدون عنوان",
+        "header": "ليس لديك عنوان شحن لهذا الموقع",
+        "alt_header": "عنوان الشحن مفقود",
+        "message": "اتصل بنا لإضافة عنوان لهذا الموقع لإكمال عملية الدفع.",
+        "email_us_button_label": "أرسل لنا رسالة بالبريد الإلكتروني"
+      },
+      "order_errors": {
+        "creation_failure": "حدثت مشكلة أثناء إنشاء طلبك. حاول مرة أخرى، أو اتصل بنا لمزيد من التفاصيل.",
+        "network_failure": "لا يمكن إرسال طلبك بسبب خطأ في الشبكة. تحقق من اتصالك وحاول مرة أخرى.",
+        "inventory_reservation_failure": "بعض العناصر لم تعد متوفرة."
+      },
+      "session_errors": {
+        "session_not_unique": "حدثت مشكلة أثناء معالجة طلبك. قم بتحديث هذه الصفحة للعودة إلى المتجر.",
+        "session_already_finished": "لقد تم تقديم هذا الطلب بالفعل. يمكنك العودة إلى المتجر لبدء طلب جديد."
+      },
+      "artifact_errors": {
+        "artifact_dissatisfaction_without_violation": "حدثت مشكلة أثناء معالجة طلبك. حاول مرة أخرى خلال بضع دقائق."
+      },
+      "pickup_point": {
+        "location_is_currently_closed": "مغلق",
+        "business_hours": "ساعات العمل",
+        "no_business_hours": "لا توجد ساعات العمل المتاحة",
+        "open_twenty_four_hours": "مفتوح 24/7",
+        "title": "نقطة الالتقاء",
+        "or": "أو",
+        "search_button": "بحث",
+        "address_label": "العنوان",
+        "selector_tabs": "محدد نقطة الالتقاط",
+        "selector_tab_map": "خريطة",
+        "selector_tab_list": "قائمة",
+        "could_not_resolve_address": "لا يمكن تحديد موقع عنوانك. حاول مرة أخرى أو استخدم عنوانًا مختلفًا",
+        "no_pickup_points_near_you": "لم يتم العثور على نقاط الالتقاط بالقرب من العنوان المحدد",
+        "no_pickup_points_near_location": "لم يتم العثور على نقاط الالتقاط بالقرب من موقعك",
+        "pickup_unavailable_banner_title": {
+          "one": "لا توجد نقاط الالتقاط المتاحة للسلعة الخاصة بك",
+          "other": "لا توجد نقاط الالتقاط المتاحة للسلع الخاصة بك"
+        },
+        "no_pickup_points_found": "لم يتم العثور على نقاط الالتقاط",
+        "paginator": {
+          "next_accessibility_label": "الصفحة التالية",
+          "previous_accessibility_label": "الصفحة السابقة",
+          "header": {
+            "one": "عرض %{first} - %{last} من %{count} نقطة",
+            "other": "عرض %{first} - %{last} من %{count} نقاط"
+          },
+          "selected_pickup_point_label": {
+            "one": "%{pickup_point_index} من %{count} نقطة",
+            "other": "%{pickup_point_index} من %{count} نقاط"
+          },
+          "selected_page": {
+            "one": "%{first} - %{last} من %{count} نقطة",
+            "other": "%{first} - %{last} من %{count} نقاط"
+          }
+        },
+        "number_of_pickup_points_near_location": {
+          "one": "%{count} نقطة الالتقاط بالقرب من موقعك",
+          "other": "%{count} نقاط الالتقاط القريبة من موقعك"
+        },
+        "change": "تغيير الموقع",
+        "waiting_on_pickup_point_location_notice": "جاري البحث عن نقاط التجمع...",
+        "geolocation": {
+          "shared_location_button": "استخدم موقعي",
+          "errors": {
+            "unsuported_by_browser": "الحصول على الموقع الجغرافي غير مدعوم من قبل متصفحك. حاول مرة أخرى أو استخدم متصفحًا مختلفًا.",
+            "permission_not_allowed": "السماح بمشاركة موقعك.",
+            "permission_denied": "تعذر الحصول على موقعك. حاول ثانية."
+          }
+        }
+      },
+      "error_page": {
+        "terminal": {
+          "title": "كانت هناك مشكلة في الخروج لدينا",
+          "message": "قم بتحديث هذه الصفحة أو حاول مرة أخرى خلال بضع دقائق",
+          "action": {
+            "cta": "تحديث الصفحة"
+          },
+          "request_id": "معرف الطلب: {{requestId}}"
+        },
+        "embed_errors": {
+          "storefront_password_required": "هذا المتجر محمي بكلمة مرور",
+          "customer_account_required": "مطلوب حساب العميل لإكمال الخروج",
+          "cart_completed": "لقد تم بالفعل الانتهاء من هذا الخروج"
+        }
       }
     }
   }
