@@ -3905,9 +3905,83 @@
           },
           "draft": {
             "description": "يتم تحديد تفاصيل الدفع عند تأكيد الطلب.",
-            "title": "الدفع لم يحين موعده بعد"
-          }
+            "title": "الدفع لم يحين موعده بعد",
+            "in_review": {
+              "description": "يتم تحديد تفاصيل الدفع عند تأكيد الطلب.",
+              "title": "الدفع لم يحين موعده بعد"
+            },
+            "submitted": {
+              "description": "أرسل الدفع لتأكيد هذا الطلب.",
+              "title": "ادفع للتأكيد",
+              "deposit": {
+                "title": "الدفع مستحق",
+                "due_later": "الرصيد قيد التشغيل {{translatedName}} الشروط ومن المقرر على {{dueDate}}.",
+                "due_on_fulfillment": "يصبح الرصيد مستحقًا بمجرد استيفاء جميع العناصر الموجودة في هذا الطلب.",
+                "due_on_receipt": "ستتلقى فاتورة بالرصيد المتبقي.",
+                "due_on_date": "الرصيد مستحق على {{dueDate}}."
+              }
+            },
+            "deposit": {
+              "due_later": "{{depositAmount}} سيكون مستحقًا عند تأكيد طلبك. الرصيد سيكون على {{translatedName}} الشروط.",
+              "due_on_fulfillment": "{{depositAmount}} سيكون مستحقًا عند تأكيد طلبك. سيكون الرصيد مستحقًا عند تنفيذ الطلب.",
+              "due_on_receipt": "{{depositAmount}} سيكون مستحقًا عند تأكيد طلبك. سيتم استحقاق الرصيد في وقت لاحق.",
+              "due_on_date": "{{depositAmount}} سيكون مستحقًا عند تأكيد طلبك. سوف يكون الرصيد مستحقا على {{dueDate}}."
+            }
+          },
+          "paid": {
+            "title": "مدفوعة",
+            "title_with_date": "مدفوعة {{date}}",
+            "description": "طلبك مدفوع بالكامل."
+          },
+          "refund": {
+            "title": "ردها",
+            "title_with_date": "ردها {{date}}",
+            "description_full_refund": "لقد تلقيت استردادًا كاملاً لهذا الطلب.",
+            "description_single_refund": "لقد تلقيت استردادًا جزئيًا لهذا الطلب.",
+            "description_multiple_refunds": "لقد تلقيت مبالغ مستردة جزئيًا مقابل هذا الطلب."
+          },
+          "canceled": {
+            "title": "تم إلغاء الدفع",
+            "description": "لم يتم محاسبتك."
+          },
+          "due_date": "مستحق {{date}}",
+          "total_balance": "الرصيد الإجمالي",
+          "pay_now": "ادفع الآن",
+          "pay_now_accessibility_label": "ادفع الآن للطلب {{orderName}}",
+          "title": "حالة الدفع"
+        },
+        "order_timeline": {
+          "expand_events_label": "إظهار التفاصيل",
+          "expand_events_accessibility_label": "عرض تفاصيل أمر المسودة",
+          "hide_events_label": "إخفاء التفاصيل",
+          "hide_events_accessibility_label": "إخفاء تفاصيل أمر المسودة"
+        },
+        "subtitle": "تم الإرسال {{date}}",
+        "title": "النظام {{name}}"
+      },
+      "payment_methods": {
+        "payment_delete": {
+          "description_without_replacement": "لن تكون طريقة الدفع هذه متاحة لعمليات الشراء المستقبلية من هذا الموقع.",
+          "description_with_replacement": "سيؤثر حذف طريقة الدفع هذه على المدفوعات المصرح بها مسبقًا لهذا الموقع. استبدلها بطريقة دفع بديلة لمواصلة تلقي الطلبات القادمة."
+        },
+        "payment_details": {
+          "order_label": "النظام {{name}}",
+          "draft_label": "مشروع النظام {{name}}"
         }
+      },
+      "purchase_order_number": {
+        "add_accessibility_label": "أضف رقم طلب الشراء",
+        "add_modal_title": "أضف رقم طلب الشراء",
+        "cancel": "إلغاء",
+        "close_modal_accessibility_label": "إغلاق رقم أمر الشراء المشروط",
+        "discard": "تجاهل",
+        "discard_changes_modal_title": "هل تريد تجاهل التغييرات؟",
+        "edit_accessibility_label": "تعديل رقم أمر الشراء",
+        "edit_modal_title": "تعديل رقم أمر الشراء",
+        "empty_state": "لا يوجد رقم أمر الشراء",
+        "modal_po_number_input_label": "رقم أمر الشراء",
+        "modal_po_number_input_max_length_error": "أرقام أمر الشراء لها حد أقصى {{maxLength}} الشخصيات.",
+        "save": "يحفظ"
       }
     }
   }
