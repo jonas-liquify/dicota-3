@@ -357,7 +357,7 @@
           "name": "Image+Link List Link",
           "settings": {
             "url_link_ziel": "",
-            "text_label": "Mobile Working"
+            "text_label": "Everday Life"
           },
           "blocks": {}
         },
@@ -375,7 +375,7 @@
           "name": "Image+Link List Link",
           "settings": {
             "url_link_ziel": "",
-            "text_label": "Mobile Working"
+            "text_label": "Data Protection"
           },
           "blocks": {}
         },
@@ -384,7 +384,7 @@
           "name": "Image+Link List Link",
           "settings": {
             "url_link_ziel": "",
-            "text_label": "Mobile Working"
+            "text_label": "Business Solutions"
           },
           "blocks": {}
         },
@@ -393,7 +393,7 @@
           "name": "Image+Link List Link",
           "settings": {
             "url_link_ziel": "",
-            "text_label": "Mobile Working"
+            "text_label": "Safety at Work"
           },
           "blocks": {}
         }
@@ -409,7 +409,7 @@
         "image_bild": "shopify://shop_images/2_MT_Five.webp",
         "text_subtitle": "What are you looking for?",
         "url_button_link": "",
-        "text_button_text": "Zum Product-Finder",
+        "text_button_text": "Find your Solution",
         "image_position": "left",
         "bg_color": "#0f0f0f",
         "text_color": "#ffffff"
