@@ -45,7 +45,8 @@
     "collection_products": {
       "settings": {
         "text_promo_1_headline": "Lorem Ipsum",
-        "text_promo_1_button": "Shop Now"
+        "text_promo_1_button": "Shop Now",
+        "promo1_position": 0
       },
       "blocks": {}
     }
