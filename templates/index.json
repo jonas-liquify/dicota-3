@@ -341,7 +341,7 @@
           "type": "kategorie-wrapper",
           "name": "Kategorie Wrapper",
           "settings": {
-            "collection_kollektion": "bags-and-backpacks",
+            "collection_kollektion": "d2c-accessories-all",
             "collection_kollektion_limit": 6
           },
           "blocks": {}
@@ -352,7 +352,7 @@
         "kategorie_wrapper_iENcFb"
       ],
       "settings": {
-        "text_uberschrift": "The Accessories for your Business life",
+        "text_uberschrift": "Accessories for your Business life",
         "padding_top": 4,
         "padding_bottom": 4,
         "bg_color": "#ffffff",
