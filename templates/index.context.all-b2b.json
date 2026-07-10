@@ -125,13 +125,28 @@
       "type": "reseller_promo_grid",
       "disabled": false,
       "settings": {},
-      "blocks": {},
-      "block_order": [],
+      "blocks": {
+        "reseller_promo_banner_mU9PB": {
+          "type": "reseller-promo-banner",
+          "name": "Reseller Promo Banner",
+          "disabled": false,
+          "settings": {
+            "image_bild": "shopify://shop_images/6_LPI_MultiTwo_3.jpg",
+            "text_titel": "One",
+            "textarea_text": "the perfect choice for your next project tender, combining reliability, quality and outstanding value.",
+            "url_button_link": "",
+            "text_button_text": "explore"
+          }
+        }
+      },
+      "block_order": [
+        "reseller_promo_banner_mU9PB"
+      ],
       "name": "Reseller Promo Grid"
     },
     "b2b_news_highlight_LhrNM": {
       "type": "b2b_news_highlight",
-      "disabled": false,
+      "disabled": true,
       "settings": {
         "image_bild": null,
         "text_badge": "NEW",
