@@ -168,6 +168,62 @@
     },
     "the_latest": {
       "type": "the_latest",
+      "blocks": {
+        "latest_slide_LgFCMe": {
+          "type": "latest-slide",
+          "name": "Latest Slide",
+          "settings": {
+            "image_hintergrundbild": "shopify://shop_images/8_GB2c_ProductPromotion_TopTravSeven_01.jpg",
+            "url_link": "",
+            "text_badge": "NEW",
+            "text_titel": "Seven",
+            "textarea_text": "(Placeholder) Since 1992, more than 12 million PET bottles have been processed to minimize waste -"
+          },
+          "blocks": {}
+        },
+        "latest_slide_DUGywR": {
+          "type": "latest-slide",
+          "name": "Latest Slide",
+          "settings": {
+            "image_hintergrundbild": "shopify://shop_images/5_SCT1c_LB_Student.jpg",
+            "url_link": "",
+            "text_badge": "NEW",
+            "text_titel": "Seven",
+            "textarea_text": "(Placeholder) Since 1992, more than 12 million PET bottles have been processed to minimize waste -"
+          },
+          "blocks": {}
+        },
+        "latest_slide_dEkH9A": {
+          "type": "latest-slide",
+          "name": "Latest Slide",
+          "settings": {
+            "image_hintergrundbild": "shopify://shop_images/5_SCT1c_BP_EntryLevel.jpg",
+            "url_link": "",
+            "text_badge": "NEW",
+            "text_titel": "Seven",
+            "textarea_text": "(Placeholder) Since 1992, more than 12 million PET bottles have been processed to minimize waste -"
+          },
+          "blocks": {}
+        },
+        "latest_slide_JejWdU": {
+          "type": "latest-slide",
+          "name": "Latest Slide",
+          "settings": {
+            "image_hintergrundbild": "shopify://shop_images/8_GB2c_ProductPromotion_TopTravSeven_01.jpg",
+            "url_link": "",
+            "text_badge": "NEW",
+            "text_titel": "Seven",
+            "textarea_text": "(Placeholder) Since 1992, more than 12 million PET bottles have been processed to minimize waste -"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "latest_slide_LgFCMe",
+        "latest_slide_DUGywR",
+        "latest_slide_dEkH9A",
+        "latest_slide_JejWdU"
+      ],
       "settings": {
         "text_heading": "The Latest. Take a look at what's new, right now.",
         "padding_top": 5,
