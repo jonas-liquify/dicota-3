@@ -16,6 +16,10 @@
 {{ section.settings.text_name_label }}
 </label></div><div class="form_field-wrapper"><input class="form_input w-input" maxlength="256" name="contact_email" placeholder=" " type="email" id="contact_email" required="" value="{{ customer.email }}"><label for="contact_email" class="form_label">
 {{ section.settings.text_email_label }}
+</label></div><div class="form_field-wrapper"><input class="form_input w-input" maxlength="256" name="contact_company" placeholder=" " type="text" id="contact_company" value="{{ customer.default_address.company | escape }}"><label for="contact_company" class="form_label">
+{{ section.settings.text_contact_company_label }}
+</label></div><div class="form_field-wrapper"><input class="form_input w-input" name="contact_phone" placeholder=" " type="tel" id="contact_phone" value="{{ customer.default_address.phone | default: customer.phone | escape }}"><label for="contact_phone" class="form_label">
+{{ section.settings.text_contact_phone_label }}
 </label></div></div></div><div class="multi-form_form-content"><div class="text-size-medium text-weight-medium">
 {{ section.settings.text_shipping_heading }}
 </div>{% if section.settings.text_shipping_hint != blank %}    <div class="li-guard" li-if="section.settings.text_shipping_hint != blank">
@@ -104,6 +108,18 @@
             "type": "text",
             "label": "Email Label",
             "default": "Email address*"
+        },
+        {
+            "id": "text_contact_company_label",
+            "type": "text",
+            "label": "Contact Company Label",
+            "default": "Company"
+        },
+        {
+            "id": "text_contact_phone_label",
+            "type": "text",
+            "label": "Contact Phone Label",
+            "default": "Phone"
         },
         {
             "id": "text_shipping_heading",

@@ -13,7 +13,23 @@
 {{ section.settings.text_spalte_menge }}
 </span></div></div><div li-cf-theme-blocks="" class="mkt-order_tbody">
 {% content_for 'blocks' %}
-</div></div><div class="mkt-order_card"><div class="mkt-order_field"><label for="mkt-order-date" class="mkt-order_label">{{ section.settings.field_date_label | default: 'Preferred delivery date:' }}<span class="mkt-order_required" aria-hidden="true">*</span></label><p class="mkt-order_help"> {{ section.settings.textarea_datum_hinweistext }} </p><input type="date" id="mkt-order-date" name="contact[Lieferdatum]" required="" class="mkt-order_input"></div></div><div class="mkt-order_card"><div class="mkt-order_field"><label for="mkt-order-event" class="mkt-order_label">{{ section.settings.field_event_label | default: 'Event/Activity:' }}<span class="mkt-order_required" aria-hidden="true">*</span></label><p class="mkt-order_help"> {{ section.settings.textarea_event_hinweistext }} </p><textarea id="mkt-order-event" name="contact[Event/Aktivität]" placeholder="Write to us…" rows="4" required="" class="mkt-order_textarea"></textarea></div></div><div class="mkt-order_submit-row"><button type="submit" class="button mkt-order_submit w-button"><span>
+</div></div><div class="mkt-order_card"><div class="multi-form_double"><div class="mkt-order_field"><label for="mkt-order-name" class="mkt-order_label">
+{{ section.settings.text_name_label }}
+</label><input type="text" id="mkt-order-name" name="contact[Name]" required="" class="mkt-order_input" value="{{ customer.name | escape }}"></div><div class="mkt-order_field"><label for="mkt-order-email" class="mkt-order_label">
+{{ section.settings.text_email_label }}
+</label><input type="email" id="mkt-order-email" name="contact[email]" required="" class="mkt-order_input" value="{{ customer.email }}"></div></div></div><div class="mkt-order_card"><div class="multi-form_double"><div class="mkt-order_field"><label for="mkt-order-company" class="mkt-order_label">
+{{ section.settings.text_company_label }}
+</label><input type="text" id="mkt-order-company" name="contact[Firma]" class="mkt-order_input" value="{{ customer.default_address.company | escape }}"></div><div class="mkt-order_field"><label for="mkt-order-phone" class="mkt-order_label">
+{{ section.settings.text_phone_label }}
+</label><input type="tel" id="mkt-order-phone" name="contact[Telefon]" class="mkt-order_input" value="{{ customer.default_address.phone | default: customer.phone | escape }}"></div></div></div><div class="mkt-order_card"><div class="mkt-order_field"><label for="mkt-order-street" class="mkt-order_label">
+{{ section.settings.text_street_label }}
+</label><input type="text" id="mkt-order-street" name="contact[Straße]" required="" class="mkt-order_input" value="{{ customer.default_address.address1 | escape }}"></div></div><div class="mkt-order_card"><div class="multi-form_double"><div class="mkt-order_field"><label for="mkt-order-zip" class="mkt-order_label">
+{{ section.settings.text_zip_label }}
+</label><input type="text" id="mkt-order-zip" name="contact[PLZ]" required="" class="mkt-order_input" value="{{ customer.default_address.zip | escape }}"></div><div class="mkt-order_field"><label for="mkt-order-city" class="mkt-order_label">
+{{ section.settings.text_city_label }}
+</label><input type="text" id="mkt-order-city" name="contact[Stadt]" required="" class="mkt-order_input" value="{{ customer.default_address.city | escape }}"></div></div></div><div class="mkt-order_card"><div class="mkt-order_field"><label for="mkt-order-country" class="mkt-order_label">
+{{ section.settings.text_country_label }}
+</label><input type="text" id="mkt-order-country" name="contact[Land]" required="" class="mkt-order_input" value="{{ customer.default_address.country | escape }}"></div></div><div class="mkt-order_card"><div class="mkt-order_field"><label for="mkt-order-date" class="mkt-order_label">{{ section.settings.field_date_label | default: 'Preferred delivery date:' }}<span class="mkt-order_required" aria-hidden="true">*</span></label><p class="mkt-order_help"> {{ section.settings.textarea_datum_hinweistext }} </p><input type="date" id="mkt-order-date" name="contact[Lieferdatum]" required="" class="mkt-order_input"></div></div><div class="mkt-order_card"><div class="mkt-order_field"><label for="mkt-order-event" class="mkt-order_label">{{ section.settings.field_event_label | default: 'Event/Activity:' }}<span class="mkt-order_required" aria-hidden="true">*</span></label><p class="mkt-order_help"> {{ section.settings.textarea_event_hinweistext }} </p><textarea id="mkt-order-event" name="contact[Event/Aktivität]" placeholder="Write to us…" rows="4" required="" class="mkt-order_textarea"></textarea></div></div><div class="mkt-order_submit-row"><button type="submit" class="button mkt-order_submit w-button"><span>
 {{ section.settings.text_submit_button }}
 </span></button></div>{% endform %}</div></div></div></div> {% schema %} {
     "tag": "section",
@@ -69,6 +85,54 @@
             "type": "text",
             "label": "Spalte Menge",
             "default": "Amount"
+        },
+        {
+            "id": "text_name_label",
+            "type": "text",
+            "label": "Name Label",
+            "default": "Name<span class=\"mkt-order_required\" aria-hidden=\"true\">*<\/span>"
+        },
+        {
+            "id": "text_email_label",
+            "type": "text",
+            "label": "Email Label",
+            "default": "Email<span class=\"mkt-order_required\" aria-hidden=\"true\">*<\/span>"
+        },
+        {
+            "id": "text_company_label",
+            "type": "text",
+            "label": "Company Label",
+            "default": "Company"
+        },
+        {
+            "id": "text_phone_label",
+            "type": "text",
+            "label": "Phone Label",
+            "default": "Phone"
+        },
+        {
+            "id": "text_street_label",
+            "type": "text",
+            "label": "Street Label",
+            "default": "Street &amp; house number<span class=\"mkt-order_required\" aria-hidden=\"true\">*<\/span>"
+        },
+        {
+            "id": "text_zip_label",
+            "type": "text",
+            "label": "Zip Label",
+            "default": "Postal code<span class=\"mkt-order_required\" aria-hidden=\"true\">*<\/span>"
+        },
+        {
+            "id": "text_city_label",
+            "type": "text",
+            "label": "City Label",
+            "default": "City<span class=\"mkt-order_required\" aria-hidden=\"true\">*<\/span>"
+        },
+        {
+            "id": "text_country_label",
+            "type": "text",
+            "label": "Country Label",
+            "default": "Country<span class=\"mkt-order_required\" aria-hidden=\"true\">*<\/span>"
         },
         {
             "id": "textarea_datum_hinweistext",
