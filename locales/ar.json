@@ -3119,7 +3119,73 @@
         "empty_state_redesign_subtitle": "على استعداد للتسوق؟",
         "empty_state_redesign_welcome": "مرحبًا",
         "empty_state_redesign_welcome_with_name": "مرحباً، {{firstName}}",
-        "empty_state_subtitle": "اذهب إلى المتجر لتقديم الطلب."
+        "empty_state_subtitle": "اذهب إلى المتجر لتقديم الطلب.",
+        "empty_state_title": "لا توجد أوامر حتى الآن",
+        "empty_state_with_location_title": "لا توجد أوامر ل {{locationName}}",
+        "empty_state_title_for_pending_orders": "لا توجد أوامر معلقة",
+        "no_order_banner": "لاختبار الامتداد الخاص بك في صفحة حالة الطلب، قم بإنشاء طلب.",
+        "estimated_shortform": "EST. {{date}}",
+        "estimated_delivery": "متوقع {{date}}",
+        "one_images_accessibility_label": "يتضمن الطلب {{lineItemName1}}",
+        "two_images_accessibility_label": "يتضمن الطلب {{lineItemName1}}, {{lineItemName2}}",
+        "three_images_accessibility_label": "يتضمن الطلب {{lineItemName1}}, {{lineItemName2}}, {{lineItemName3}}",
+        "four_images_accessibility_label": "يتضمن الطلب {{lineItemName1}}, {{lineItemName2}}, {{lineItemName3}}, {{lineItemName4}}",
+        "more_than_three_products_accessibility_label": "يتضمن الطلب {{lineItemName1}}, {{lineItemName2}}, و {{numberOfAdditionalProducts}} المزيد من المنتجات",
+        "more_than_four_products_accessibility_label": "يتضمن الطلب {{lineItemName1}}, {{lineItemName2}}, {{lineItemName3}}, و {{numberOfAdditionalProducts}} المزيد من المنتجات",
+        "plus_more": "+{{numberOfAdditionalProducts}}",
+        "plus_more_products": "+{{numberOfAdditionalProducts}} المنتجات",
+        "carousel": {
+          "one_products_accessibility_label": "يتضمن الطلب {{lineItemName1}} الكمية {{lineItemQuantity1}}",
+          "two_products_accessibility_label": "يتضمن الطلب {{lineItemName1}} الكمية {{lineItemQuantity1}}, {{lineItemName2}} الكمية {{lineItemQuantity2}}",
+          "three_products_accessibility_label": "يتضمن الطلب {{lineItemName1}} الكمية {{lineItemQuantity1}}, {{lineItemName2}} الكمية {{lineItemQuantity2}}, {{lineItemName3}} الكمية {{lineItemQuantity3}}",
+          "four_products_accessibility_label": "يتضمن الطلب {{lineItemName1}} الكمية {{lineItemQuantity1}}, {{lineItemName2}} الكمية {{lineItemQuantity2}}, {{lineItemName3}} الكمية {{lineItemQuantity3}}, {{lineItemName4}} الكمية {{lineItemQuantity4}}",
+          "five_products_accessibility_label": "يتضمن الطلب {{lineItemName1}} الكمية {{lineItemQuantity1}}, {{lineItemName2}} الكمية {{lineItemQuantity2}}, {{lineItemName3}} الكمية {{lineItemQuantity3}}, {{lineItemName4}} الكمية {{lineItemQuantity4}}, {{lineItemName5}} الكمية {{lineItemQuantity5}}",
+          "six_products_accessibility_label": "يتضمن الطلب {{lineItemName1}} الكمية {{lineItemQuantity1}}, {{lineItemName2}} الكمية {{lineItemQuantity2}}, {{lineItemName3}} الكمية {{lineItemQuantity3}}, {{lineItemName4}} الكمية {{lineItemQuantity4}}, {{lineItemName5}} الكمية {{lineItemQuantity5}}, {{lineItemName6}} الكمية {{lineItemQuantity6}}",
+          "six_and_more_products_accessibility_label": "يتضمن الطلب {{lineItemName1}} الكمية {{lineItemQuantity1}}, {{lineItemName2}} الكمية {{lineItemQuantity2}}, {{lineItemName3}} الكمية {{lineItemQuantity3}}, {{lineItemName4}} الكمية {{lineItemQuantity4}}, {{lineItemName5}} الكمية {{lineItemQuantity5}}, {{lineItemName6}} الكمية {{lineItemQuantity6}} وأكثر",
+          "view_order_details": "عرض تفاصيل الطلب",
+          "previous": "السابق",
+          "next": "التالي"
+        },
+        "items": {
+          "one": "{{count}} البند",
+          "other": "{{count}} العناصر"
+        },
+        "no_filtered_results_description": "قم بإزالة المرشحات أو تعديلها لرؤية طلباتك",
+        "no_filtered_results_title": "لا توجد نتائج تمت تصفيتها",
+        "order_link": "عرض الطلب {{name}}",
+        "order_number": "النظام {{name}}",
+        "orders_title": "تم التأكيد",
+        "pagination": {
+          "nav_accessibility_label": "أوامر أزرار التنقل",
+          "next": "التالي",
+          "next_accessibility_label": "الطلبات القادمة",
+          "previous": "السابق",
+          "previous_accessibility_label": "الطلبات السابقة",
+          "load_more": "عرض المزيد",
+          "load_more_accessibility_label": "عرض المزيد من الطلبات"
+        },
+        "order_status_message": {
+          "list_view": {
+            "view_order_for_details": "عرض الطلب للحصول على التفاصيل",
+            "estimated_delivery": "متوقع {{date}}",
+            "last_updated": "آخر تحديث {{date}}"
+          },
+          "table_view": {
+            "estimated_delivery": "مؤسسة. تسليم {{date}}",
+            "last_updated": "{{date}}"
+          }
+        },
+        "payment_status": {
+          "gallery_view": {
+            "overdue": "تأخر السداد",
+            "due": "الدفع مستحق {{date}}",
+            "due_today": "الدفع مستحق اليوم",
+            "due_without_date": "الدفع مستحق",
+            "due_on_fulfillment": "الدفع مستحق عند الوفاء",
+            "pay_to_confirm": "ادفع للتأكيد",
+            "payment_not_due": "الدفع لم يحين موعده بعد"
+          }
+        }
       }
     }
   }
