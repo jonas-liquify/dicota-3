@@ -17,7 +17,13 @@
       "settings": {
         "image_image": "shopify://shop_images/Image_Management_01_hoizontal.png"
       },
-      "blocks": {}
+      "blocks": {
+        "zitat_bqKnHU": {
+          "settings": {
+            "text_block_heading": "Sustainability criteria can account for 20–30% of tender scores. DICOTA helps you meet them with documented, verifiable proof."
+          }
+        }
+      }
     }
   }
 }
