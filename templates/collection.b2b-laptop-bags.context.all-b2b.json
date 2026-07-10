@@ -18,8 +18,8 @@
       "disabled": false,
       "settings": {
         "image_hintergrundbild": "shopify://shop_images/4_CTw_LaptopBag_01_56509e46-e639-42dd-a3cf-5a60110e0791.jpg",
-        "textarea_text": "Refined design. Recycled modern materials.",
-        "header-d130c1aac5afbc3a1a0c62abbe1f6507": null,
+        "textarea_text": "Protect your device with smart organization, reliable protection and everyday comfort. Discover our Laptop Bags.",
+        "header-40fec2cb35a90ab3032fb6d5f77a813f": null,
         "padding_top": 2.5,
         "padding_bottom": 2.5
       },
@@ -62,10 +62,10 @@
         "text_promo_1_headline": "Engineered to Protect. Built to Last.",
         "textarea_promo_1_text": "The SEVEN Top Traveller is designed for professionals who demand more, it combines decades of expertise with cutting-edge innovation to make mobile working safer, smarter, and more sustainable.",
         "url_promo_1_link": "shopify://products/top-traveller-seven-14-16",
+        "text_promo_2_headline": "",
         "textarea_promo_2_text": "",
         "promo1_position": 6,
-        "promo2_position": 0,
-        "text_promo_2_headline": ""
+        "promo2_position": 0
       },
       "blocks": {}
     },
