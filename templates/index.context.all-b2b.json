@@ -134,7 +134,7 @@
             "image_bild": "shopify://shop_images/6_LPI_MultiTwo_3.jpg",
             "text_titel": "One",
             "textarea_text": "the perfect choice for your next project tender, combining reliability, quality and outstanding value.",
-            "url_button_link": "",
+            "url_button_link": "shopify://products/multi-one-14-16",
             "text_button_text": "explore"
           }
         }
