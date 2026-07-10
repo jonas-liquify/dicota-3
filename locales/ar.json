@@ -877,8 +877,68 @@
           "shipping_credential_cn": "رقم هوية المقيم",
           "tax_credential_it": "الكوديس المالي (اختياري)",
           "tax_email_it": "بيك (اختياري)",
-          "tax_credential_cl": "روت"
+          "tax_credential_cl": "روت",
+          "shipping_credential_cl": "روت",
+          "tax_credential_co": "سيدولا/إيفا",
+          "tax_credential_type_co": "تيبو سيدولا",
+          "shipping_credential_co": "سيدولا/إيفا",
+          "shipping_credential_type_co": "تيبو سيدولا",
+          "tax_credential_cr": "رقم التعريف/RUT",
+          "shipping_credential_cr": "رقم التعريف/RUT",
+          "tax_credential_ec": "سي آي/آر يو سي/إيفا",
+          "shipping_credential_ec": "سي آي/آر يو سي/إيفا",
+          "tax_credential_gt": "نيت/إيفا",
+          "shipping_credential_gt": "نيت/إيفا",
+          "tax_credential_id": "NPWP",
+          "shipping_credential_id": "NPWP",
+          "tax_credential_my": "رقم التعريف الضريبي/رقم التسجيل",
+          "shipping_credential_my": "رقم التعريف الضريبي/رقم التسجيل",
+          "shipping_credential_mx": "RFC",
+          "tax_credential_mx": "RFC",
+          "tax_credential_type_mx": "النظام المالي",
+          "tax_credential_use_mx": "استخدام CFDI",
+          "tax_credential_py": "سي آي/آر يو سي/إيفا",
+          "shipping_credential_py": "سي آي/آر يو سي/إيفا",
+          "tax_credential_pe": "DNI/RUC/CE",
+          "shipping_credential_pe": "DNI/RUC/CE",
+          "tax_credential_pt": "نيف/إيفا",
+          "shipping_credential_pt": "نيف/إيفا",
+          "tax_credential_es": "DNI/NIF",
+          "shipping_credential_es": "DNI/NIF",
+          "shipping_credential_tw": "رقم الهوية الوطنية/ضريبة القيمة المضافة",
+          "tax_credential_tr": "Türkiye Cumhuriyeti Kimlik Numarası/KDV",
+          "shipping_credential_tr": "Türkiye Cumhuriyeti Kimlik Numarası/KDV"
         }
+      },
+      "payment": {
+        "network_card_payment_options": "اختر شبكة البطاقة",
+        "network_card_persistence_description": "سيتم حفظ الشبكة المحددة بطريقة الدفع الخاصة بك للمعاملات المستقبلية.",
+        "amazon_payments_label": "أمازون الدفع",
+        "amazon_payments_login_hint": "سيُطلب منك تسجيل الدخول باستخدام أمازون.",
+        "amazon_payments_logout": "تسجيل الخروج من أمازون باي",
+        "amazon_payments_failed_mfa_challenge": "لا يمكن استخدام طريقة الدفع المحددة. حدد طريقة مختلفة أو اتصل بالبنك أو جهة إصدار البطاقة.",
+        "amazon_payments_abandoned_mfa_challenge": "لا يمكن إكمال دفعتك. جرّب طريقة دفع مختلفة أو اتصل بالمصرف الذي تتعامل معه أو جهة إصدار البطاقة.",
+        "amazon_payments_could_not_enqueue_authorize": "حدثت مشكلة أثناء معالجة دفعتك. حاول مرة أخرى أو استخدم طريقة دفع مختلفة.",
+        "title": "الدفع",
+        "amount_left_to_pay_label": "الدفع المستحق:",
+        "discount_button_action_label": "تطبيق رمز الخصم",
+        "discount_codes_removed_summary": {
+          "one": "%{count} تمت إزالة رمز الخصم",
+          "other": "%{count} تمت إزالة رموز الخصم"
+        },
+        "discount_codes_modified_summary": {
+          "one": "%{count} تم تعديل كود الخصم",
+          "other": "%{count} تم تعديل رموز الخصم"
+        },
+        "discount_codes_removed_or_modified_summary": {
+          "one": "%{count} تمت إزالة رمز الخصم أو تعديله",
+          "other": "%{count} تمت إزالة رموز الخصم أو تعديلها"
+        },
+        "discount_show_more_warnings": {
+          "one": "عرض %{count} المزيد",
+          "other": "عرض %{count} المزيد"
+        },
+        "gift_card_code_label": "رمز بطاقة الهدايا"
       }
     }
   }
