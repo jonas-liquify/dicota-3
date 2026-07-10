@@ -1,0 +1,28 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "general": {
+    "back": "Tilbage",
+    "clear": "Ryd",
+    "filters": "Filtre",
+    "form": {
+      "error": "Ups! Noget gik galt under indsendelsen.",
+      "success": "Tak! Din indsendelse er modtaget."
+    },
+    "home": "Hjem",
+    "next": "Næste",
+    "previous": "Forrige",
+    "product": "Produkt",
+    "search": "Søg",
+    "sort_by": "Sorter efter",
+    "submit": "Indsend",
+    "trending": "Trending"
+  }
+}
