@@ -4,7 +4,7 @@
     <div class="text-size-medium max-width-large"> {{ section.settings.textarea_subheading }} </div>    </div>
 {% endif %}</div><div class="acc-card"><div class="default-flex-tiny"><h2 class="heading-style-h4">
 {{ section.settings.text_manager_heading }}
-</h2></div><div class="club-support_grid">{% for contact in company.metafields.custom.dicota_account_manager.value | default: localization.market.metafields.custom.dicota_account_manager.value %}    <div li-for="contact in company.metafields.custom.dicota_account_manager.value | default: localization.market.metafields.custom.dicota_account_manager.value" class="club-support_card">
+</h2></div><div class="club-support_grid">{% assign dicota_account_managers = company.metafields.custom.dicota_account_manager.value | default: localization.market.metafields.custom.dicota_account_manager.value %}{% for contact in dicota_account_managers %}    <div li-for="contact in dicota_account_managers" class="club-support_card">
                                     <img li-object:src="contact.image.value | image_url: width: 400" src="{{ contact.image.value | image_url: width: 400 }}" loading="lazy" alt="" class="club-support_img">
                             <div class="club-support_info"><div class="club-support_info-row"><div class="club-support_info-text"><div li-object="contact.dicota_account_manager.value" class="club-support_name">{{ contact.dicota_account_manager.value }}</div><div class="club-support_contacts">{% if contact.email.value != blank %}    <span class="li-guard" li-if="contact.email.value != blank">
     <a li-object="contact.email.value" href="'mailto:' | append: contact.email.value" class="club-support_link">{{ contact.email.value }}</a>    </span>
