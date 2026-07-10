@@ -47,8 +47,9 @@
           "type": "reseller-kategorie",
           "name": "Reseller Kategorie",
           "settings": {
-            "url_link": "",
-            "text_titel": "Backpacks"
+            "url_link": "shopify://collections/b2b-sleeves-all",
+            "image_bild": "shopify://shop_images/D3250502_05.webp",
+            "text_titel": "Sleeves"
           },
           "blocks": {}
         },
