@@ -2096,7 +2096,93 @@
       },
       "marketplaces": {
         "legal_notice": {
-          "legal_text": "مراجعة"
+          "legal_text": "مراجعة",
+          "link_label": "{{partnerDisplayName}} الشروط والأحكام"
+        }
+      },
+      "online_store_chat": {
+        "title": "أسئلة؟ الدردشة معنا"
+      },
+      "local_pickup": {
+        "title": "الموقع",
+        "location_address_search_label": "العنوان",
+        "location_address_search_placeholder": "%{postal_code_label} أو العنوان",
+        "location_closest": "أقرب موقع مع العنصر الخاص بك",
+        "location_closest_one_item": "أقرب موقع مع العنصر الخاص بك",
+        "location_closest_other_items": "أقرب موقع مع العناصر الخاصة بك",
+        "location_selected": "موقعك المحدد",
+        "location_information": {
+          "one": "هناك %{count} الموقع مع المخزون قريب منك",
+          "other": "هناك %{count} المواقع مع الأسهم قريبة منك"
+        },
+        "location_information_far_away": {
+          "one": "هناك %{count} الموقع مع البند الخاص بك",
+          "other": "هناك %{count} المواقع مع العنصر الخاص بك"
+        },
+        "location_information_far_away_one_item": {
+          "one": "هناك %{count} الموقع مع البند الخاص بك",
+          "other": "هناك %{count} المواقع مع العنصر الخاص بك"
+        },
+        "location_information_far_away_other_items": {
+          "one": "هناك %{count} الموقع مع العناصر الخاصة بك",
+          "other": "هناك %{count} المواقع مع العناصر الخاصة بك"
+        },
+        "location_nearby": {
+          "one": "هناك %{count} موقع قريب مع العنصر الخاص بك",
+          "other": "هناك %{count} المواقع القريبة مع العنصر الخاص بك"
+        },
+        "location_nearby_one_item": {
+          "one": "هناك %{count} موقع قريب مع العنصر الخاص بك",
+          "other": "هناك %{count} المواقع القريبة مع العنصر الخاص بك"
+        },
+        "location_nearby_other_items": {
+          "one": "هناك %{count} موقع قريب مع العناصر الخاصة بك",
+          "other": "هناك %{count} المواقع القريبة مع العناصر الخاصة بك"
+        },
+        "location_nearby_short": {
+          "one": "%{count} موقع قريب مع العنصر الخاص بك",
+          "other": "%{count} المواقع القريبة مع العنصر الخاص بك"
+        },
+        "location_nearby_short_one_item": {
+          "one": "%{count} موقع قريب مع العنصر الخاص بك",
+          "other": "%{count} المواقع القريبة مع العنصر الخاص بك"
+        },
+        "location_nearby_short_other_items": {
+          "one": "%{count} موقع قريب مع العناصر الخاصة بك",
+          "other": "%{count} المواقع القريبة مع العناصر الخاصة بك"
+        },
+        "location_far_away": {
+          "one": "%{count} الموقع مع البند الخاص بك",
+          "other": "%{count} المواقع مع العنصر الخاص بك"
+        },
+        "location_far_away_one_item": {
+          "one": "%{count} الموقع مع البند الخاص بك",
+          "other": "%{count} المواقع مع العنصر الخاص بك"
+        },
+        "location_far_away_other_items": {
+          "one": "%{count} الموقع مع العناصر الخاصة بك",
+          "other": "%{count} المواقع مع العناصر الخاصة بك"
+        },
+        "toggle_location": "تغيير الموقع",
+        "toggle_more_locations": {
+          "one": "%{count} المزيد من الموقع",
+          "other": "%{count} المزيد من المواقع"
+        },
+        "toggle_multiple_locations": "%{count}+ المزيد من المواقع",
+        "or": "أو",
+        "cancel": "إلغاء",
+        "your_location": "موقعك",
+        "search_button": "البحث عن المتاجر",
+        "no_stores_found": "لم يتم العثور على متاجر",
+        "all_stores_far_away": {
+          "title": "أقرب المواقع هي أكثر من %{distance} بعيدا",
+          "title_with_item": {
+            "one": "أقرب موقع مع العنصر الخاص بك هو أكثر من %{distance} من %{location}",
+            "other": "أقرب موقع مع العناصر الخاصة بك هو أكثر من %{distance} من %{location}"
+          },
+          "title_with_specific_location": "أقرب موقع مع العنصر الخاص بك هو أكثر من %{distance} بعيدا عن %{location}",
+          "description": "حدد الموقع أو %{ship_to_address_link}",
+          "ship_to_address_link": "السفينة إلى العنوان"
         }
       }
     }
