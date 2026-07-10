@@ -330,8 +330,134 @@
             "wordConnector": "{{previousWords}}, {{anotherWord}}",
             "lastWordConnector": "{{previousWords}}, و {{lastWord}}",
             "twoWordConnector": "{{firstWord}} و {{secondWord}}"
+          },
+          "or": {
+            "wordConnector": "{{previousWords}}, {{anotherWord}}",
+            "lastWordConnector": "{{previousWords}}, أو {{lastWord}}",
+            "twoWordConnector": "{{firstWord}} أو {{secondWord}}"
+          },
+          "narrow": {
+            "wordConnector": "{{previousWords}}, {{anotherWord}}",
+            "lastWordConnector": "{{previousWords}}, {{lastWord}}",
+            "twoWordConnector": "{{firstWord}}, {{secondWord}}"
           }
+        },
+        "map": {
+          "cluster_title": {
+            "one": "مجموعة من {{number}} علامة",
+            "other": "مجموعة من {{number}} علامات"
+          }
+        },
+        "sheet": {
+          "expand": "توسيع"
+        },
+        "dropzone": {
+          "add_file": "إضافة ملف",
+          "invalid_file_type": "نوع الملف غير مدعوم",
+          "dragged_over": "قم بإسقاط الملف للتحميل"
         }
+      },
+      "embed": {
+        "header": {
+          "review_order": "قم بمراجعة طلبك"
+        },
+        "shipping": {
+          "shipping_options": "اطلع على جميع خيارات الشحن"
+        },
+        "payment": {
+          "payment_options": "شاهد جميع خيارات الدفع"
+        }
+      },
+      "payment_collection": {
+        "cancelled": "لم تعد هذه الدفعة مطلوبة. قم بزيارة صفحة الطلب للحصول على التفاصيل.",
+        "paid": "لقد تم بالفعل تقديم هذه الدفعة. قم بزيارة صفحة الطلب للحصول على التفاصيل."
+      },
+      "contact": {
+        "title": "معلومات",
+        "address_title": "العنوان",
+        "shipping_used_as_billing_notice": "سيتم استخدام هذا أيضًا كعنوان إرسال الفواتير لهذا الطلب.",
+        "delivery_option_title": "طريقة التسليم",
+        "contact_method_title": "الاتصال",
+        "email_label": "البريد الإلكتروني",
+        "email_rollup_accessibility_label": "خيارات البريد الإلكتروني",
+        "email_placeholder": "البريد الإلكتروني",
+        "email_or_phone_label": "البريد الإلكتروني أو رقم الهاتف المحمول",
+        "email_or_phone_placeholder": "البريد الإلكتروني أو رقم الهاتف المحمول",
+        "field_saved_label": "تم الحفظ",
+        "field_tooltip_helper_text": "يستخدم لتأكيد طلبك وتذكير سلة التسوق",
+        "field_tooltip_accessibility_label": "مزيد من المعلومات حول كيفية استخدام معلومات الاتصال الخاصة بك",
+        "stored_addresses_label": "العناوين المحفوظة",
+        "available_addresses_label": "العناوين المتاحة",
+        "new_address_label": "استخدم عنوانًا جديدًا",
+        "first_name_label": "الاسم الأول",
+        "optional_first_name_label": "الاسم الأول (اختياري)",
+        "last_name_label": "الاسم الأخير",
+        "company_label": "الشركة",
+        "storefront_link": "موقع التاجر",
+        "company_attention_label": "الشركة/انتباه",
+        "optional_company_attention_label": "الشركة/الانتباه (اختياري)",
+        "optional_company_label": "الشركة (اختياري)",
+        "address1_label": "العنوان",
+        "optional_street_name_label": "الشارع (اختياري)",
+        "address2_label": "شقة، جناح، الخ.",
+        "optional_address2_label": "شقة، جناح، الخ (اختياري)",
+        "subdistrict_label": "منطقة فرعية",
+        "optional_subdistrict_label": "المنطقة الفرعية (اختياري)",
+        "city_label": "المدينة",
+        "suburb_label": "ضاحية",
+        "country_label": "البلد/المنطقة",
+        "country_code": "رمز البلد/المنطقة",
+        "province_label": "مقاطعة",
+        "province_placeholder": "مقاطعة",
+        "county_label": "مقاطعة",
+        "county_placeholder": "مقاطعة",
+        "state_label": "الدولة",
+        "state_placeholder": "الدولة",
+        "region_label": "المنطقة",
+        "region_placeholder": "المنطقة",
+        "region_none": "لم يتم تحديد أي شيء",
+        "prefecture_label": "المحافظة",
+        "prefecture_placeholder": "المحافظة",
+        "governorate_label": "المحافظة",
+        "governorate_placeholder": "المحافظة",
+        "emirate_label": "الإمارة",
+        "emirate_placeholder": "الإمارة",
+        "state_and_territory_label": "الولاية/الإقليم",
+        "state_and_territory_placeholder": "الولاية/الإقليم",
+        "phone_label": "الهاتف",
+        "phone_rollup_accessibility_label": "خيارات الهاتف",
+        "phone_country_code_label": "رمز البلد رقم الهاتف",
+        "optional_phone_label": "الهاتف (اختياري)",
+        "phone_placeholder": "الهاتف",
+        "phone_tooltip": "في حال احتجنا إلى الاتصال بك بخصوص طلبك",
+        "zip_code_label": "الرمز البريدي",
+        "optional_zip_code_label": "الرمز البريدي (اختياري)",
+        "zip_code_placeholder": "الرمز البريدي",
+        "postal_code_label": "الرمز البريدي",
+        "optional_postal_code_label": "الرمز البريدي (اختياري)",
+        "postal_code_placeholder": "الرمز البريدي",
+        "postcode_label": "الرمز البريدي",
+        "optional_postcode_label": "الرمز البريدي (اختياري)",
+        "postcode_placeholder": "الرمز البريدي",
+        "pincode_label": "رمز التعريف الشخصي",
+        "optional_pincode_label": "رمز PIN (اختياري)",
+        "pincode_placeholder": "رمز التعريف الشخصي",
+        "civic_number_warning": "أضف رقم المنزل إذا كان لديك واحد",
+        "optional_last_name_label": "الاسم الأخير (اختياري)",
+        "company_contact_info": "{{companyName}} · {{contact}}",
+        "different_shipping_address_label": "الشحن إلى عنوان مختلف",
+        "different_shipping_address_text": "استخدم عنوانًا لمرة واحدة لهذا الطلب",
+        "change_company_location_link_label": "تغيير موقع الشركة",
+        "change_location_link_label": "تغيير الموقع",
+        "ship_to_company": "السفينة الى {{companyName}}"
+      },
+      "delivery_options": {
+        "free_total_label": "مجاني",
+        "ship": "سفينة",
+        "ship_to_address": "الشحن إلى العنوان",
+        "shipping_address": "عنوان الشحن",
+        "pick_up": "التقط",
+        "pick_up_from_store": "الاستلام من المتجر"
       }
     }
   }
