@@ -3833,7 +3833,81 @@
         "add_shipping_address_button": "أضف عنوان الشحن",
         "add_shipping_address_section_accessibility_label": "أضف عنوان الشحن",
         "billing_address_card_title": "عنوان إرسال الفواتير",
-        "no_billing_address_banner": "لم تتم إضافة عنوان إرسال الفواتير"
+        "no_billing_address_banner": "لم تتم إضافة عنوان إرسال الفواتير",
+        "cancel_adding_billing_address_accessibility_label": "إلغاء إضافة عنوان إرسال الفواتير",
+        "cancel_adding_shipping_address_accessibility_label": "إلغاء إضافة عنوان الشحن",
+        "save_new_billing_address_accessibility_label": "حفظ عنوان الفواتير",
+        "save_new_shipping_address_accessibility_label": "حفظ عنوان الشحن",
+        "shipping_address_card_title": "عنوان الشحن"
+      },
+      "orders": {
+        "draft_order_list": {
+          "hide_all": "إخفاء الكل",
+          "show_all": "إظهار الكل",
+          "hide_all_accessibility_label": "إخفاء جميع الطلبات قيد المراجعة",
+          "show_all_accessibility_label": "عرض جميع الطلبات قيد المراجعة",
+          "show_all_orders_in_review": "عرض جميع الطلبات قيد المراجعة",
+          "show_less_orders_in_review": "عرض طلبات أقل قيد المراجعة",
+          "title": "في انتظار",
+          "pending_tab_accessibility_label": {
+            "no_pending_orders": "ليس لديك أي أوامر معلقة",
+            "pending_orders": {
+              "one": "لديك {{count}} في انتظار النظام",
+              "other": "لديك {{count}} الأوامر المعلقة"
+            },
+            "more_than_pagination_length": "لديك أكثر من {{count}} الأوامر المعلقة"
+          },
+          "pending_orders_count_more_than_pagination_length": "{{count}}+",
+          "pagination": {
+            "nav_accessibility_label": "أوامر في أزرار التنقل المراجعة"
+          }
+        },
+        "order_list_column_headers_location": "الموقع",
+        "order_list_column_headers_contact": "الاتصال",
+        "order_list_column_headers_status": "الحالة",
+        "removed_company_contact_tooltip": "تمت إزالته من الشركة"
+      },
+      "draft_order_details": {
+        "draft_order_subtitle": "تم التأكيد {{date}} من النظام {{draftOrderName}}",
+        "loading": "جارٍ تحميل تفاصيل الطلب",
+        "loading_finished_accessibility_message": "تم تحميل تفاصيل الطلب",
+        "payment_status": {
+          "pending": {
+            "banner_overdue": {
+              "one": "الدفع الخاص بك هو {{count}} يوم متأخر",
+              "other": "الدفع الخاص بك هو {{count}} أيام متأخرة"
+            },
+            "banner_due": {
+              "one": "الدفع الخاص بك مستحق {{count}} يوم",
+              "other": "الدفع الخاص بك مستحق {{count}} أيام"
+            },
+            "banner_due_today": "الدفع الخاص بك يستحق اليوم",
+            "banner_due_today_for_single_fulfillment": "{{amount}} الدفع مستحق اليوم. {{link}}",
+            "banner_due_today_for_multiple_fulfillments": "الدفع مستحق اليوم ل {{count}} الإنجازات",
+            "banner_overdue_for_single_fulfillment": {
+              "one": "{{amount}} الدفع هو {{count}} يوم متأخر. {{link}}",
+              "other": "{{amount}} الدفع هو {{count}} أيام متأخرة. {{link}}"
+            },
+            "banner_overdue_for_multiple_fulfillments": "الدفع المستحق ل {{count}} الإنجازات",
+            "title": "الدفع مستحق",
+            "title_with_date": "الدفع مستحق {{date}}",
+            "title_due_on_receipt": "الدفع غير مستحق بعد",
+            "title_due_on_fulfillment": "الدفع مستحق عند الوفاء",
+            "description_overdue": "الدفع الخاص بك متأخر.",
+            "description_partially_paid": "تم دفع هذا الطلب جزئيًا. لديك الرصيد المتبقي.",
+            "description_authorized": "سيتم تحصيل الرسوم من طريقة الدفع الخاصة بك في تاريخ الاستحقاق، أو يمكنك الدفع الآن.",
+            "description_waiting_for_manual_payment": "يحتوي هذا الطلب على دفعة معلقة. سيتم تحديث الرصيد عند استلام الدفع.",
+            "description_due_on_receipt": "ستتلقى فاتورة عندما يحين موعد الدفع.",
+            "description_due_on_receipt_partially_paid": "تم دفع هذا الطلب جزئيًا. لديك الرصيد المتبقي. ستتلقى فاتورة عندما يحين موعد الدفع.",
+            "description_due_on_fulfillment": "يكون الدفع مستحقًا بمجرد استيفاء جميع العناصر الموجودة في هذا الطلب.",
+            "description_due_on_fulfillment_partially_paid": "تم دفع هذا الطلب جزئيًا. لديك الرصيد المتبقي. يكون الدفع مستحقًا بمجرد استيفاء جميع العناصر الموجودة في هذا الطلب.",
+            "description_due_on_fulfillment_partially_paid_next": "تم دفع هذا الطلب جزئيًا. لديك الرصيد المتبقي."
+          },
+          "draft": {
+            "description": "يتم تحديد تفاصيل الدفع عند تأكيد الطلب.",
+            "title": "الدفع لم يحين موعده بعد"
+          }
+        }
       }
     }
   }
