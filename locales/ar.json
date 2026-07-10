@@ -2182,7 +2182,101 @@
           },
           "title_with_specific_location": "أقرب موقع مع العنصر الخاص بك هو أكثر من %{distance} بعيدا عن %{location}",
           "description": "حدد الموقع أو %{ship_to_address_link}",
-          "ship_to_address_link": "السفينة إلى العنوان"
+          "ship_to_address_link": "السفينة إلى العنوان",
+          "change_location_link": "قم بتغيير موقعك"
+        },
+        "selected_pickup_option_no_longer_available": {
+          "title": "موقعك الذي حددته مسبقًا لم يعد متاحًا",
+          "description": "لقد اخترنا أقرب موقع به العناصر الموجودة في المخزون"
+        },
+        "could_not_resolve_address": "لا يمكن تحديد موقع عنوانك. حاول مرة أخرى أو استخدم عنوانًا مختلفًا",
+        "paginator": {
+          "accessibility_label": "صفحة الالتقاط المحلية",
+          "previous": "الصفحة السابقة",
+          "next": "الصفحة التالية",
+          "label": {
+            "one": "%{first} - %{last} من %{count} متجر",
+            "other": "%{first} - %{last} من %{count} مخازن"
+          }
+        },
+        "reveal_more_label": {
+          "one": "عرض %{count} المزيد من الموقع",
+          "other": "عرض %{count} المزيد من المواقع"
+        },
+        "pickup_unavailable_banner_title": {
+          "one": "لا توجد مواقع مع العنصر الخاص بك",
+          "other": "لا توجد مواقع مع العناصر الخاصة بك"
+        },
+        "pickup_unavailable_banner_title_with_country": {
+          "one": "لا توجد مواقع في %{country} مع البند الخاص بك",
+          "other": "لا توجد مواقع في %{country} مع العناصر الخاصة بك"
+        },
+        "pickup_unavailable_banner_body": {
+          "ship_items": "شحن العناصر الخاصة بك",
+          "search_elsewhere": "البحث في مكان آخر",
+          "search_elsewhere_standalone": "البحث في مكان آخر",
+          "ship_items_or_search_elsewhere": "%{ship_items} أو %{search_elsewhere}"
+        }
+      },
+      "split_delivery": {
+        "accessibility": {
+          "status": {
+            "ship_separately": "%{items} سوف السفينة بشكل منفصل.",
+            "pickup_in_store": "%{items} سيتم التقاطها في المتجر.",
+            "remove_items": "%{items} تمت إزالتها من العربة."
+          }
+        },
+        "pickup_all_items": "التقاط كافة العناصر",
+        "items_for_pickup": "عناصر للاستلام",
+        "items_for_shipping": "العناصر للشحن",
+        "items_moved_to_shipping_toast": "تم نقل العناصر التي لا يمكن التقاطها إلى الشحن",
+        "delivery_method": "طريقة التسليم المقسمة",
+        "delivery_method_menu": "تقسيم قائمة طريقة التسليم",
+        "inventory_issue_banner": {
+          "heading": {
+            "cannot_be_picked_up": {
+              "one": "%{count} لا يمكن التقاط العنصر",
+              "other": "%{count} لا يمكن التقاط العناصر"
+            },
+            "cannot_be_shipped": {
+              "one": "%{count} لا يمكن شحن السلعة",
+              "other": "%{count} لا يمكن شحن العناصر"
+            }
+          },
+          "remove_item": {
+            "one": "إزالة العنصر",
+            "other": "إزالة العناصر"
+          },
+          "remove_item_only": {
+            "one": "إزالة العنصر",
+            "other": "إزالة العناصر"
+          },
+          "ship_separately": {
+            "one": "شحنها بشكل منفصل",
+            "other": "شحنها بشكل منفصل"
+          },
+          "pick_them_up_in_store": {
+            "one": "احصل عليه في المتجر",
+            "other": "استلمها في المتجر"
+          },
+          "remove_items_or_ship": "%{ship_separately_link} أو %{remove_items_link}",
+          "remove_items_or_pickup": "%{pickup_in_store_link} أو %{remove_items_link}",
+          "merchandise_line_with_quantity": "%{title} (×%{quantity})"
+        },
+        "cross_border": {
+          "modal": {
+            "heading": "تغيير البلد؟",
+            "content": "يجب أن تكون مواقع الاستلام والشحن في نفس البلد. سيؤدي تغيير البلد إلى إعادة تعيين كافة العناصر للشحن.",
+            "country_changed_heading": "تغيرت البلاد",
+            "change_country": "تغيير البلد"
+          },
+          "banner": "تم تحديث طريقة التسليم الخاصة بك"
+        }
+      },
+      "captcha": {
+        "title": "أكمل اختبار CAPTCHA للمتابعة",
+        "errors": {
+          "not_solved": "أكمل اختبار CAPTCHA للمتابعة"
         }
       }
     }
