@@ -149,8 +149,9 @@
           "type": "usp-block",
           "name": "USP Block",
           "settings": {
-            "text_uberschrift": "Free Shipping ab 80 EUR",
-            "textarea_beschreibung": "Free standard shipping available in the European Union"
+            "image_icon": "shopify://shop_images/dicota_p-icon_1_1.png",
+            "text_uberschrift": "1 Million per year",
+            "textarea_beschreibung": "More than one million products sold every year."
           },
           "blocks": {}
         },
