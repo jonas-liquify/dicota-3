@@ -24,6 +24,7 @@
     },
     "featured_product_qe68Cr": {
       "type": "featured_product",
+      "disabled": true,
       "name": "Featured Product",
       "settings": {
         "text_produkt_titel": "Blickschutzfilter 2-fach magnetisch Universal (16:10)",
@@ -132,6 +133,7 @@
       "block_order": [
         "testimonial"
       ],
+      "disabled": true,
       "settings": {
         "text_uberschrift": "Was unsere Kund:innen sagen",
         "text_bewertung_zahl": "4,83",
