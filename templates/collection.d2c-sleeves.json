@@ -24,15 +24,26 @@
         "text_color": "#0f0f0f"
       }
     },
+    "collection_image_her_AFpLEK": {
+      "type": "collection_image_her",
+      "name": "Collection Image Her",
+      "settings": {
+        "image_hintergrundbild": "shopify://shop_images/4_CTw_Sleeves_01_0f3165b8-fc55-47aa-9cab-16d96dd36a20.jpg",
+        "textarea_text": "Professional laptop sleeves designed for business and everyday life, combining slim protection, lightweight portability and a perfect fit.",
+        "padding_top": 2.5,
+        "padding_bottom": 2.5
+      }
+    },
     "collection_hero_8TRwPe": {
       "type": "collection_hero",
+      "disabled": true,
       "name": "Collection Hero",
       "settings": {
         "url_button_link": "",
         "text_button_text": "Learn more",
-        "show_button": false,
+        "show_button": true,
         "padding_top": 4,
-        "padding_bottom": 3,
+        "padding_bottom": 6,
         "bg_color": "#ffffff",
         "text_color": "#0f0f0f"
       }
@@ -60,9 +71,9 @@
           "type": "kategorie-bild",
           "name": "Kategorie-Bild",
           "settings": {
-            "url_link": "",
-            "image_bild": "shopify://shop_images/5_SCT1c_BP_EntryLevel.jpg",
-            "text_titel": "ENTRY LEVEL OR EVERYDAY",
+            "url_link": "shopify://collections/d2c-laptop-bags-entry-level",
+            "image_bild": "shopify://shop_images/5_SCT1c_LB_EntryLevel_099203e0-ef97-454a-8d2b-a6a551421443.jpg",
+            "text_titel": "VALUE FOR PRICE & EVERYDAY",
             "textarea_text": "Everything you need at an exceptional price – reliable protection, practical organization and everyday comfort."
           },
           "blocks": {}
@@ -71,8 +82,8 @@
           "type": "kategorie-bild",
           "name": "Kategorie-Bild",
           "settings": {
-            "url_link": "",
-            "image_bild": "shopify://shop_images/compressed-Backpack_Commuter_All.png",
+            "url_link": "shopify://collections/d2c-laptop-bags-student-urban",
+            "image_bild": "shopify://shop_images/5_SCT1c_LB_Student_e5236afd-f18d-4a32-9490-9ffc9576a7a1.jpg",
             "text_titel": "Students & Urban",
             "textarea_text": "Fresh designs, practical features and reliable protection for study, work and everyday adventures."
           },
@@ -82,10 +93,10 @@
           "type": "kategorie-bild",
           "name": "Kategorie-Bild",
           "settings": {
-            "url_link": "",
-            "image_bild": "shopify://shop_images/CT1c_Backpack.png",
+            "url_link": "shopify://collections/d2c-laptop-bags-business-professional",
+            "image_bild": "shopify://shop_images/5_SCT1c_LB_BusinessProfessional.jpg",
             "text_titel": "Business Professional",
-            "textarea_text": "Premium backpacks for professionals, combining sophisticated design, high protection and smart organization."
+            "textarea_text": "Premium Laptop bags for professionals, combining sophisticated design, high protection and smart organization."
           },
           "blocks": {}
         }
@@ -95,7 +106,6 @@
         "kategorie_bild_3YJtex",
         "kategorie-bild"
       ],
-      "disabled": true,
       "settings": {
         "padding_top": 2.5,
         "padding_bottom": 2.5,
@@ -166,6 +176,7 @@
   "wrapper": "main.main-wrapper",
   "order": [
     "product_breadcrumb_98ixPN",
+    "collection_image_her_AFpLEK",
     "collection_hero_8TRwPe",
     "featured_product_qe68Cr",
     "collection_intro",
