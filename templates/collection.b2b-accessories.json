@@ -35,6 +35,7 @@
     },
     "featured_product_qe68Cr": {
       "type": "featured_product",
+      "disabled": true,
       "name": "Featured Product",
       "settings": {
         "text_produkt_titel": "Blickschutzfilter 2-fach magnetisch Universal (16:10)",
@@ -87,6 +88,7 @@
         "kategorie_bild_3YJtex",
         "kategorie-bild"
       ],
+      "disabled": true,
       "settings": {
         "padding_top": 2.5,
         "padding_bottom": 2.5,
