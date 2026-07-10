@@ -28,17 +28,17 @@
       "name": "Collection Image Her"
     },
     "collection_hero_8TRwPe": {
-      "disabled": true,
+      "disabled": false,
       "settings": {},
       "blocks": {}
     },
     "featured_product_qe68Cr": {
-      "disabled": true,
+      "disabled": false,
       "settings": {},
       "blocks": {}
     },
     "collection_intro": {
-      "disabled": true,
+      "disabled": false,
       "settings": {},
       "blocks": {}
     }
