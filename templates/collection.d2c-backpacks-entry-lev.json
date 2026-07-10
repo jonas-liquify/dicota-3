@@ -24,24 +24,13 @@
         "text_color": "#0f0f0f"
       }
     },
-    "collection_image_her_AFpLEK": {
-      "type": "collection_image_her",
-      "name": "Collection Image Her",
-      "settings": {
-        "image_hintergrundbild": "shopify://shop_images/4_CTw_Backpacks_01_ccdce5ac-b79b-4e78-98c6-e551c6bee153.jpg",
-        "textarea_text": "Designed for business and everyday life, combining reliable protection, smart organization and all-day comfort.",
-        "padding_top": 2.5,
-        "padding_bottom": 2.5
-      }
-    },
     "collection_hero_8TRwPe": {
       "type": "collection_hero",
-      "disabled": true,
       "name": "Collection Hero",
       "settings": {
         "url_button_link": "",
         "text_button_text": "Learn more",
-        "show_button": true,
+        "show_button": false,
         "padding_top": 4,
         "padding_bottom": 6,
         "bg_color": "#ffffff",
@@ -106,6 +95,7 @@
         "kategorie_bild_3YJtex",
         "kategorie-bild"
       ],
+      "disabled": true,
       "settings": {
         "padding_top": 2.5,
         "padding_bottom": 2.5,
@@ -176,7 +166,6 @@
   "wrapper": "main.main-wrapper",
   "order": [
     "product_breadcrumb_98ixPN",
-    "collection_image_her_AFpLEK",
     "collection_hero_8TRwPe",
     "featured_product_qe68Cr",
     "collection_intro",
