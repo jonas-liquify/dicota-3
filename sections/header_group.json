@@ -88,7 +88,7 @@
       "name": "Announcement Bar",
       "settings": {
         "text_reseller_button": "Für Reseller",
-        "url_reseller_button_link": "shopify://pages/b2b-reseller-hub"
+        "url_reseller_button_link": ""
       }
     },
     "reseller_header_UNKmKg": {
