@@ -73,6 +73,16 @@
         "bg_color": "#f4f4f4"
       },
       "blocks": {
+        "vorteil_mV9DA": {
+          "type": "vorteil",
+          "name": "Vorteil",
+          "disabled": false,
+          "settings": {
+            "image_icon": "shopify://shop_images/Icon_Products_png_black.png",
+            "text_titel": "More than 1200 SKUs",
+            "textarea_text": "(Placeholder) trade in your current device. Get credit toward a new one."
+          }
+        },
         "vorteil_rae8i": {
           "type": "vorteil",
           "name": "Vorteil",
@@ -87,13 +97,14 @@
           "type": "vorteil",
           "disabled": false,
           "settings": {
-            "image_icon": null,
-            "text_titel": "Marketing &amp; Sales",
-            "textarea_text": "Nutzen Sie die Tools und Ressourcen des Clubs für eine optimale Präsentation Ihres Sortiments — sowohl online als auch auf der Verkaufsfläche!"
+            "image_icon": "shopify://shop_images/delivery_truck_speed.png",
+            "text_titel": "PERSONAL SALES TEAM",
+            "textarea_text": "Benefit from a dedicated sales team that understands your business and supports you with expert advice, tailored solutions and fast, reliable service."
           }
         }
       },
       "block_order": [
+        "vorteil_mV9DA",
         "vorteil_rae8i",
         "vorteil_UGKnf"
       ],
