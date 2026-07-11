@@ -122,15 +122,33 @@
             "text_upsell_titel": "Pairs well together"
           },
           "blocks": {
+            "upsell_produkt_iN6pBY": {
+              "type": "upsell-produkt",
+              "name": "Upsell Produkt",
+              "settings": {
+                "upsell_product": "universal-rain-cover"
+              },
+              "blocks": {}
+            },
+            "upsell_produkt_khwywG": {
+              "type": "upsell-produkt",
+              "name": "Upsell Produkt",
+              "settings": {
+                "upsell_product": "usb-c-10-in-1-docking-station-8k-hdmi-pd-100w"
+              },
+              "blocks": {}
+            },
             "upsell_produkt_4iW66f": {
               "type": "upsell-produkt",
               "settings": {
-                "upsell_product": "{{ closest.product }}"
+                "upsell_product": "backpack-waist-belt"
               },
               "blocks": {}
             }
           },
           "block_order": [
+            "upsell_produkt_iN6pBY",
+            "upsell_produkt_khwywG",
             "upsell_produkt_4iW66f"
           ]
         }
