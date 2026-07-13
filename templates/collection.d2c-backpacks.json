@@ -14,7 +14,7 @@
       "name": "Product Breadcrumb",
       "settings": {
         "text_home_label": "Home",
-        "text_kollektionen_label": "Collections",
+        "text_kollektionen_label": "Product Category",
         "text_suche_label": "Search",
         "text_warenkorb_label": "Cart",
         "text_404_label": "Page not found",
