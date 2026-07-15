@@ -1,32 +1,32 @@
 <div class="padding-global" style="padding-top:{{ section.settings.padding_top }}rem;padding-bottom:{{ section.settings.padding_bottom }}rem;background-color:{{ section.settings.bg_color }};color:{{ section.settings.text_color }};"><div class="container-large"><nav class="product-breadcrumb_nav" aria-label="Breadcrumb"><a href="{{ routes.root_url }}" li-object:href="routes.root_url" class="product-breadcrumb_link"><span>
 {{ section.settings.text_home_label }}
-</span></a>{% if template == 'product' %}    <span li-if="template == 'product'">
-    <span class="product-breadcrumb_sep">›</span>{% if product.collections.first != blank %}    <span li-if="product.collections.first != blank">
-    <a li-object:href="product.collections.first.url" href="{{ product.collections.first.url }}" class="product-breadcrumb_link"><span li-object="product.collections.first.metafields.custom.collection_name | default: product.collections.first.title">{{ product.collections.first.metafields.custom.collection_name | default: product.collections.first.title }}</span></a><span class="product-breadcrumb_sep">›</span>    </span>
+</span></a>{% if template.name == 'product' %}    <span li-if="template.name == 'product'">
+    <span class="product-breadcrumb_sep">›</span>{% if collection.url != blank %}    <span li-if="collection.url != blank">
+    <a li-object:href="collection.url" href="{{ collection.url }}" class="product-breadcrumb_link"><span li-object="collection.metafields.custom.collection_name | default: collection.title">{{ collection.metafields.custom.collection_name | default: collection.title }}</span></a><span class="product-breadcrumb_sep">›</span>    </span>
 {% endif %}<span class="product-breadcrumb_current" li-object="product.title">{{ product.title }}</span>    </span>
-{% endif %}{% if template == 'collection' %}    <span li-if="template == 'collection'">
+{% endif %}{% if template.name == 'collection' %}    <span li-if="template.name == 'collection'">
     <span class="product-breadcrumb_sep">›</span><a href="{{ routes.collections_url }}" li-object:href="routes.collections_url" class="product-breadcrumb_link"><span>
 {{ section.settings.text_kollektionen_label }}
 </span></a><span class="product-breadcrumb_sep">›</span><span class="product-breadcrumb_current" li-object="collection.metafields.custom.collection_name | default: collection.title">{{ collection.metafields.custom.collection_name | default: collection.title }}</span>    </span>
-{% endif %}{% if template == 'list-collections' %}    <span li-if="template == 'list-collections'">
+{% endif %}{% if template.name == 'list-collections' %}    <span li-if="template.name == 'list-collections'">
     <span class="product-breadcrumb_sep">›</span><span class="product-breadcrumb_current"><span>
 {{ section.settings.text_kollektionen_label }}
 </span></span>    </span>
-{% endif %}{% if template == 'article' %}    <span li-if="template == 'article'">
+{% endif %}{% if template.name == 'article' %}    <span li-if="template.name == 'article'">
     <span class="product-breadcrumb_sep">›</span><a li-object:href="blog.url" href="{{ blog.url }}" class="product-breadcrumb_link"><span li-object="blog.title">{{ blog.title }}</span></a><span class="product-breadcrumb_sep">›</span><span class="product-breadcrumb_current" li-object="article.title">{{ article.title }}</span>    </span>
-{% endif %}{% if template == 'blog' %}    <span li-if="template == 'blog'">
+{% endif %}{% if template.name == 'blog' %}    <span li-if="template.name == 'blog'">
     <span class="product-breadcrumb_sep">›</span><span class="product-breadcrumb_current" li-object="blog.title">{{ blog.title }}</span>    </span>
-{% endif %}{% if template contains 'page' %}    <span li-if="template contains 'page'">
+{% endif %}{% if template.name == 'page' %}    <span li-if="template.name == 'page'">
     <span class="product-breadcrumb_sep">›</span><span class="product-breadcrumb_current" li-object="page.title">{{ page.title }}</span>    </span>
-{% endif %}{% if template == 'search' %}    <span li-if="template == 'search'">
+{% endif %}{% if template.name == 'search' %}    <span li-if="template.name == 'search'">
     <span class="product-breadcrumb_sep">›</span><span class="product-breadcrumb_current"><span>
 {{ section.settings.text_suche_label }}
 </span></span>    </span>
-{% endif %}{% if template == 'cart' %}    <span li-if="template == 'cart'">
+{% endif %}{% if template.name == 'cart' %}    <span li-if="template.name == 'cart'">
     <span class="product-breadcrumb_sep">›</span><span class="product-breadcrumb_current"><span>
 {{ section.settings.text_warenkorb_label }}
 </span></span>    </span>
-{% endif %}{% if template == '404' %}    <span li-if="template == '404'">
+{% endif %}{% if template.name == '404' %}    <span li-if="template.name == '404'">
     <span class="product-breadcrumb_sep">›</span><span class="product-breadcrumb_current"><span>
 {{ section.settings.text_404_label }}
 </span></span>    </span>

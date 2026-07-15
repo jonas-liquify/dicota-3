@@ -2,7 +2,7 @@
                     <template x-teleport="#accessories-tabs"></template>
                     <div class="accessories_swiper swiper"><div role="list" class="swiper-wrapper accessories_list">{% for product in block.settings.collection_kollektion.products limit: block.settings.collection_kollektion_limit %}
 <div role="listitem" class="swiper-slide accessories_item">
-    {% render 'product_card', product: product %}
+    {% render 'product_card', product: product, collection: block.settings.collection_kollektion %}
 </div>
 {% endfor %}</div><div class="accessories_scrollbar swiper-scrollbar"></div></div>
                 </div> {% schema %} {
