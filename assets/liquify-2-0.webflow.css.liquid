@@ -181,7 +181,8 @@ h6 {
 }
 
 p {
-  margin-bottom: 0;
+  margin-bottom: 0rem;
+  margin-top: 0rem;
 }
 
 a {
@@ -2618,7 +2619,7 @@ figcaption {
   padding: 2.5rem;
   padding-top: 10rem;
   color: inherit;
-  justify-content: flex-end;
+  justify-content: flex-start;
   width: 100%;
 }
 
@@ -3741,12 +3742,13 @@ figcaption {
     flex-direction: column;
     align-items: stretch;
   }
-  /* Columns stack here — sticky only makes sense side-by-side (desktop).
-     Boosted selector: the unboosted base rule sits later in this file and
-     would otherwise win at equal specificity (see project_css_media_specificity_bug). */
   .product-header_details.product-header_details {
     position: static;
     top: auto;
+    padding: 2rem 2.5rem;
+    width: 100%;
+    max-width: 100%;
+    flex: 1 1 auto;
   }
   .product-header_product-details {
     padding-left: 0;
@@ -4586,8 +4588,14 @@ figcaption {
   .mkt-order_cell-desc {
     font-weight: 500;
   }
-  .mkt-order_cell-art::before { content: "Art.: "; color: #6b6b6b; }
-  .mkt-order_cell-price::before { content: "Preis: "; color: #6b6b6b; }
+  .mkt-order_cell-art::before {
+    content: "Art.: ";
+    color: #6b6b6b;
+  }
+  .mkt-order_cell-price::before {
+    content: "Preis: ";
+    color: #6b6b6b;
+  }
   .mkt-order_cell-qty {
     margin-top: 0.5rem;
   }
@@ -5048,12 +5056,6 @@ figcaption {
   .accessories_tabs.accessories_tabs {
     flex-wrap: nowrap;
   }
-  .product-header_details.product-header_details {
-    padding: 2rem 2.5rem;
-    width: 100%;
-    max-width: 100%;
-    flex: 1 1 auto;
-  }
   .coll_filter-pills.coll_filter-pills {
     display: none;
   }
@@ -5457,9 +5459,6 @@ figcaption {
   }
   .announcement-bar_text {
     display: none;
-  }
-  .section-headline_pretitle,
-  .section-headline_title {
   }
   .section-headline_subtext {
     font-size: 1rem;
@@ -7262,6 +7261,8 @@ figcaption {
 .hero_bg-image {
   object-fit: cover;
   object-position: center;
+  overflow: auto;
+  margin-left: 0px;
 }
 
 .hero_overlay {
@@ -7296,6 +7297,10 @@ figcaption {
   align-items: stretch;
   display: flex;
   flex-direction: row;
+  margin-top: 0px;
+  margin-left: 0rem;
+  margin-bottom: 0rem;
+  margin-right: 0rem;
 }
 
 .hero_subtext {
@@ -7436,7 +7441,9 @@ figcaption {
   cursor: pointer;
   transition: background-color .2s ease;
 }
-.hero_autoplay-toggle:hover { background-color: rgba(255, 255, 255, .35); }
+.hero_autoplay-toggle:hover {
+  background-color: rgba(255, 255, 255, .35);
+}
 .hero_autoplay-icon {
   display: inline-flex;
   align-items: center;
@@ -9724,7 +9731,9 @@ button.li-lang_dd-link {
   color: inherit;
   text-decoration: none;
 }
-.product-breadcrumb_link:hover { text-decoration: underline; }
+.product-breadcrumb_link:hover {
+  text-decoration: underline;
+}
 .product-breadcrumb_sep {
   display: inline-flex;
   align-items: center;
@@ -10021,7 +10030,9 @@ button.li-lang_dd-link {
   border-bottom: 1px solid rgba(255,255,255,0.08);
   padding: 0;
 }
-.product-comparison_trow:last-child { border-bottom: none; }
+.product-comparison_trow:last-child {
+  border-bottom: none;
+}
 .product-comparison_tcell {
   padding: 1rem 1.25rem;
   font-size: 1rem;
@@ -10183,7 +10194,9 @@ button.li-lang_dd-link {
   padding: 2rem 0;
   border-bottom: 1px solid #eeeeee;
 }
-.product-reviews_item:first-child { padding-top: 0; }
+.product-reviews_item:first-child {
+  padding-top: 0;
+}
 .product-reviews_item-stars {
   display: flex;
   gap: 0.25rem;
@@ -10352,7 +10365,9 @@ button.li-lang_dd-link {
   border-radius: 0.25rem;
   transition: background 0.18s;
 }
-.product-add-to-kit_btn:hover { background-color: #333; }
+.product-add-to-kit_btn:hover {
+  background-color: #333;
+}
 
 /* =============================================================
    DICOTA PDP — Product Hero (ph_*)
@@ -10585,7 +10600,9 @@ button.li-lang_dd-link {
   cursor: pointer;
   border: none;
 }
-.ph_atc-btn:hover { background-color: #333; }
+.ph_atc-btn:hover {
+  background-color: #333;
+}
 .ph_atc-btn.is-disabled {
   background-color: #d0d0d0;
   color: #888;
@@ -10694,7 +10711,9 @@ button.li-lang_dd-link {
   overflow-x: auto;
   scrollbar-width: none;
 }
-.ph_tabs-nav::-webkit-scrollbar { display: none; }
+.ph_tabs-nav::-webkit-scrollbar {
+  display: none;
+}
 .ph_tab {
   padding: 0.75rem 1rem 0.6rem;
   font-size: 0.8125rem;
@@ -10708,7 +10727,9 @@ button.li-lang_dd-link {
   transition: color 0.15s, border-color 0.15s;
   margin-bottom: -1px;
 }
-.ph_tab:hover { color: #111; }
+.ph_tab:hover {
+  color: #111;
+}
 .ph_tab.is-active {
   color: #111;
   font-weight: 700;
@@ -10736,7 +10757,9 @@ button.li-lang_dd-link {
   background: linear-gradient(to bottom, transparent, #fff);
   pointer-events: none;
 }
-.ph_tab-panel.is-expanded::after { display: none; }
+.ph_tab-panel.is-expanded::after {
+  display: none;
+}
 .ph_see-more {
   display: inline-block;
   margin-top: 0.5rem;
@@ -10835,7 +10858,9 @@ button.li-lang_dd-link {
   border-radius: 2px;
   transition: background 0.15s;
 }
-.ph_upsell-btn:hover { background: #333; }
+.ph_upsell-btn:hover {
+  background: #333;
+}
 /* Form-Wrapper transparent halten, damit der Button im Flow bleibt wie zuvor */
 .ph_upsell-form {
   display: contents;
@@ -11003,7 +11028,9 @@ button.li-lang_dd-link {
   transition: background 0.15s;
   margin-top: 0.5rem;
 }
-.we-care-banner_cta:hover { background-color: #e8e8e8; }
+.we-care-banner_cta:hover {
+  background-color: #e8e8e8;
+}
 .we-care-banner_badge {
   position: absolute;
   top: 0;
@@ -12117,7 +12144,9 @@ button.li-lang_dd-link {
   transition: color 0.15s, border-color 0.15s, background-color 0.15s;
   border-left: 2px solid transparent;
 }
-.value-tabs_link:hover { color: #0f0f0f; }
+.value-tabs_link:hover {
+  color: #0f0f0f;
+}
 .value-tabs_link.is-active {
   color: #0f0f0f;
   border-left-color: #0f0f0f;
@@ -13489,7 +13518,7 @@ button.li-lang_dd-link {
    ============================================================= */
 
 /* Product Finder Page */
-.section_product-finder-page {
+.section_product-finder {
   width: 100%;
 }
 .product-finder_intro {
@@ -13725,7 +13754,9 @@ button.li-lang_dd-link {
   color: inherit;
   outline: 0;
 }
-.nav_search-overlay-input::placeholder { color: #6b6b6b; }
+.nav_search-overlay-input::placeholder {
+  color: #6b6b6b;
+}
 .nav_search-overlay-close {
   background: transparent;
   border: 0;
@@ -13784,7 +13815,9 @@ button.li-lang_dd-link {
   text-decoration: none;
   transition: background-color 0.15s;
 }
-.nav_search-pill-item:hover { background-color: #ebebeb; }
+.nav_search-pill-item:hover {
+  background-color: #ebebeb;
+}
 .nav_search-recent {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -13827,7 +13860,9 @@ button.li-lang_dd-link {
   text-decoration: none;
   font-size: 0.9375rem;
 }
-.nav_search-suggestion-link:hover { text-decoration: underline; }
+.nav_search-suggestion-link:hover {
+  text-decoration: underline;
+}
 .nav_search-product-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -13892,9 +13927,12 @@ button.li-lang_dd-link {
   z-index: 90;
 }
 .section_navbar .nav_component.is-transparent::before {
-  content: ""; position: absolute; inset: 0;
+  content: "";
+  position: absolute;
+  inset: 0;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0));
-  pointer-events: none; z-index: -1;
+  pointer-events: none;
+  z-index: -1;
 }
 /* Nav links use opacity .7 → 1 as the hover affordance (see comment near
    .nav_menu-dropdown .nav_dropdown-toggle). Over a busy hero image that
@@ -13921,7 +13959,9 @@ button.li-lang_dd-link {
   position: sticky;
   top: 0;
 }
-.section_navbar .nav_component.is-transparent.is-scrolled::before { display: none; }
+.section_navbar .nav_component.is-transparent.is-scrolled::before {
+  display: none;
+}
 .section_navbar .nav_component.is-transparent.is-scrolled .nav_logo {
   filter: none;
 }
@@ -14042,7 +14082,10 @@ button.li-lang_dd-link {
   padding: 0 1.25rem;
   height: 100%;
 }
-.reseller-hero_search-input::placeholder { color: #0f0f0f; opacity: .5; }
+.reseller-hero_search-input::placeholder {
+  color: #0f0f0f;
+  opacity: .5;
+}
 .reseller-hero_search-btn {
   flex: none;
   width: 2.75rem;
@@ -14058,7 +14101,9 @@ button.li-lang_dd-link {
   justify-content: center;
   transition: opacity .2s;
 }
-.reseller-hero_search-btn:hover { opacity: .6; }
+.reseller-hero_search-btn:hover {
+  opacity: .6;
+}
 .reseller-hero_search-btn-icon {
   width: 1.5rem;
   height: 1.5rem;
@@ -14099,7 +14144,9 @@ button.li-lang_dd-link {
   text-decoration: none;
   transition: background-color .15s;
 }
-.reseller-hero_trend:hover { background-color: rgba(255,255,255,.22); }
+.reseller-hero_trend:hover {
+  background-color: rgba(255,255,255,.22);
+}
 
 /* ---- Reseller Category Row ---- */
 .section_category-row {
@@ -14856,7 +14903,9 @@ button.li-lang_dd-link {
   justify-content: center;
   transition: background-color .2s;
 }
-.news-updates_arrow:hover { background-color: rgba(15, 15, 15, .9); }
+.news-updates_arrow:hover {
+  background-color: rgba(15, 15, 15, .9);
+}
 .news-updates_arrow.is-prev {
   right: auto;
   left: 0;
@@ -14917,7 +14966,9 @@ button.li-lang_dd-link {
   display: inline-flex;
   transition: color .15s;
 }
-.ph_id-copy:hover { color: #0f0f0f; }
+.ph_id-copy:hover {
+  color: #0f0f0f;
+}
 
 /* Mengenrabatt / volume pricing */
 .ph_volume {
@@ -15033,7 +15084,10 @@ button.li-lang_dd-link {
   font-weight: 500;
   transition: color .2s, background-color .2s;
 }
-.ph_quote-btn:hover { background-color: #0f0f0f; color: #ffffff; }
+.ph_quote-btn:hover {
+  background-color: #0f0f0f;
+  color: #ffffff;
+}
 .ph_buy-actions {
   display: flex;
   align-items: center;
@@ -15049,7 +15103,9 @@ button.li-lang_dd-link {
   color: #0f0f0f;
   text-decoration: none;
 }
-.ph_buy-action:hover { text-decoration: underline; }
+.ph_buy-action:hover {
+  text-decoration: underline;
+}
 .ph_buy-action-icon {
   width: .85rem;
   height: .85rem;
@@ -15303,7 +15359,9 @@ button.li-lang_dd-link {
   text-decoration: none;
   white-space: nowrap;
 }
-.article_crumb:hover { color: #0f0f0f; }
+.article_crumb:hover {
+  color: #0f0f0f;
+}
 .article_crumb.is-current {
   color: #0f0f0f;
   overflow: hidden;
@@ -15542,7 +15600,9 @@ button.li-lang_dd-link {
   justify-content: center;
   transition: background-color .2s;
 }
-.ph-lightbox_nav:hover { background-color: rgba(255, 255, 255, .25); }
+.ph-lightbox_nav:hover {
+  background-color: rgba(255, 255, 255, .25);
+}
 .ph-lightbox_nav.is-prev {
   left: 1.5rem;
 }
@@ -15626,7 +15686,7 @@ button.li-lang_dd-link {
 .nav_mega-cols {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
+  gap: 54px;
   padding: 2.5rem 1.5rem 2.5rem 2.5rem;
   align-content: start;
 }
@@ -15651,7 +15711,9 @@ button.li-lang_dd-link {
   text-decoration: none;
   padding: 0;
 }
-.nav_mega-col-header:hover { opacity: .7; }
+.nav_mega-col-header:hover {
+  opacity: .7;
+}
 .nav_mega-col-list {
   list-style: none;
   padding: 0;
@@ -15678,7 +15740,9 @@ button.li-lang_dd-link {
   text-decoration: none;
   padding: .5rem 0;
 }
-.nav_mega-col-link:hover { opacity: .7; }
+.nav_mega-col-link:hover {
+  opacity: .7;
+}
 
 /* Promo panel on the right */
 .nav_mega-promo {
@@ -15794,7 +15858,9 @@ button.li-lang_dd-link {
   align-self: center;
 }
 /* Hover on highlighted variant: don't fade opacity */
-.announcement-bar_link.is-highlighted:hover { opacity: 1; }
+.announcement-bar_link.is-highlighted:hover {
+  opacity: 1;
+}
 
 /* Link block as a Shopify-menu dropdown trigger (hover, native w-dropdown) */
 .announcement-bar_link-dropdown {
@@ -16051,7 +16117,9 @@ button.li-lang_dd-link {
   text-decoration: none;
   white-space: nowrap;
 }
-.reseller-header_link:hover { opacity: 0.7; }
+.reseller-header_link:hover {
+  opacity: 0.7;
+}
 .reseller-header_chevron {
   width: 1rem;
   height: 1rem;
@@ -16240,7 +16308,9 @@ button.li-lang_dd-link {
   justify-content: center;
   transition: background-color 0.15s ease;
 }
-.mkt-order_qty-btn:hover { background-color: #f4f4f4; }
+.mkt-order_qty-btn:hover {
+  background-color: #f4f4f4;
+}
 .mkt-order_qty-input {
   width: 2.5rem;
   height: 2.25rem;
@@ -16259,7 +16329,9 @@ button.li-lang_dd-link {
   -webkit-appearance: none;
   margin: 0;
 }
-.mkt-order_qty-input:focus { outline: none; }
+.mkt-order_qty-input:focus {
+  outline: none;
+}
 
 /* Form fields (date + textarea cards) */
 .mkt-order_field {
@@ -16372,8 +16444,12 @@ button.li-lang_dd-link {
   text-decoration: none;
   transition: background-color 0.15s ease;
 }
-.mkt-collection_row:first-child { border-top: none; }
-.mkt-collection_row:hover { background-color: #fafafa; }
+.mkt-collection_row:first-child {
+  border-top: none;
+}
+.mkt-collection_row:hover {
+  background-color: #fafafa;
+}
 .mkt-collection_thumb {
   width: 5.5rem;
   height: 3.5rem;
@@ -16543,7 +16619,9 @@ button.li-lang_dd-link {
   text-decoration: none;
   transition: background-color 0.15s ease;
 }
-.mkt-doc_card:hover { background-color: #f0f0f0; }
+.mkt-doc_card:hover {
+  background-color: #f0f0f0;
+}
 .mkt-doc_icon {
   width: 2rem;
   height: 2rem;
@@ -17122,9 +17200,32 @@ button.li-lang_dd-link {
   text-transform: uppercase;
   color: #0f0f0f;
 }
+.ph-dim-modal_tabs {
+  display: flex;
+  gap: 1.5rem;
+}
+.ph-dim-modal_tab {
+  background: none;
+  border: none;
+  padding: 0 0 .5rem;
+  font-family: "Futura PT", sans-serif;
+  font-size: .875rem;
+  font-weight: 500;
+  color: #6e6e6e;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+}
+.ph-dim-modal_tab.is-active {
+  color: #0f0f0f;
+  border-bottom-color: #0f0f0f;
+}
 .ph-dim-modal_media {
   width: 100%;
   aspect-ratio: 254 / 286;
+  display: none;
+}
+.ph-dim-modal_media.is-active {
+  display: block;
 }
 .ph-dim-modal_image {
   width: 100%;
@@ -17262,7 +17363,9 @@ img.product-header_gallery-image {
   cursor: pointer;
   text-align: left;
 }
-.multi-form_product-result-btn:hover { background: #f6f6f6; }
+.multi-form_product-result-btn:hover {
+  background: #f6f6f6;
+}
 .multi-form_product-result-img {
   width: 2.5rem;
   height: 2.5rem;
@@ -17314,7 +17417,9 @@ img.product-header_gallery-image {
   display: flex;
   padding: .25rem;
 }
-.multi-form_product-row-remove:hover { color: #0f0f0f; }
+.multi-form_product-row-remove:hover {
+  color: #0f0f0f;
+}
 .multi-form_product-empty {
   color: #9a9a9a;
   font-size: .875rem;
@@ -17369,7 +17474,9 @@ img.product-header_gallery-image {
   padding: 1.25rem 1.5rem;
   border-bottom: 2px solid #fff;
 }
-.presentations_row:last-child { border-bottom: 0; }
+.presentations_row:last-child {
+  border-bottom: 0;
+}
 .presentations_row-left {
   display: flex;
   align-items: center;
@@ -17400,7 +17507,9 @@ img.product-header_gallery-image {
   text-underline-offset: .2em;
   color: #0f0f0f;
 }
-.presentations_lang:hover { opacity: .6; }
+.presentations_lang:hover {
+  opacity: .6;
+}
 
 /* =============================================================
    DICOTA — Collection: ZIP-Download aller Produktbilder
@@ -18571,4 +18680,8 @@ img.product-header_gallery-image {
 .swiper-pagination.ph_we-care-dots {
   position: absolute;
   right: 0px;
+}
+
+.shop-by-category_scrollbar.swiper-scrollbar {
+  color: rgb(15, 15, 15);
 }
