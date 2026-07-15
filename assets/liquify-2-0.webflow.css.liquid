@@ -9310,6 +9310,22 @@ figcaption {
   color: rgba(255, 255, 255, .6);
 }
 
+/* Boosted: .form_input.w-input (shared multi-step form base, 2 classes) sets
+   color: #0f0f0f and :focus border-color: #0f0f0f. A same-specificity 2-class
+   selector here would still lose to it on source order (it sits later in the
+   file), so this needs 3 classes worth of specificity to definitely win. */
+.section_footer-newsletter .footer-newsletter_form-input.footer-newsletter_form-input {
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, .3);
+}
+.section_footer-newsletter .footer-newsletter_form-input.footer-newsletter_form-input:focus {
+  outline: 0;
+  border-color: #ffffff;
+}
+.section_footer-newsletter .footer-newsletter_form-input.footer-newsletter_form-input::placeholder {
+  color: rgba(255, 255, 255, .6);
+}
+
 .footer-newsletter_form-submit {
   background-color: var(--base-color-neutral--white);
   color: var(--base-color-neutral--black);
@@ -11210,6 +11226,8 @@ button.li-lang_dd-link {
 .coll_filter-dropdown {
   position: fixed;
   min-width: 14rem;
+  max-height: min(24rem, calc(100vh - 6rem));
+  overflow-y: auto;
   background-color: #ffffff;
   border: 1px solid #e8e8e8;
   box-shadow: 0 4px 16px rgba(0,0,0,0.1);
