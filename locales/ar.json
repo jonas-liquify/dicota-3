@@ -332,7 +332,11 @@
           "description": "لم تعد هذه العناصر متوفرة وسيتم إزالتها من سلة التسوق الخاصة بك.",
           "items_unavailable": "بعض العناصر لم تعد متوفرة وسيتم إزالتها من سلة التسوق الخاصة بك."
         },
-        "out_of_stock_in_context_label": "هذا المنتج غير متوفر في بلدك/منطقتك."
+        "out_of_stock_in_context_label": "هذا المنتج غير متوفر في بلدك/منطقتك.",
+        "removed_from_cart_notice": "تمت إزالتها من سلة التسوق",
+        "sold_out_label": "بيعت بالكامل",
+        "reduced_label": "مخفض",
+        "reduced_with_quantity_label": "فقط %{quantity_available} اليسار"
       },
       "contextual_availability": {
         "title": {
