@@ -628,7 +628,11 @@
         "alternative_payment_currency_total": "مشحونة كما %{amount_due}",
         "alternative_payment_currency_chinese_yuan": "تأكيد إجمالي اليوان الصيني النهائي في %{wallet} التطبيق.",
         "pay_merchant_label": "ادفع %{merchant_name}",
-        "discount_applies_to_subscription_items_only": "ينطبق هذا الخصم فقط على عناصر الاشتراك"
+        "discount_applies_to_subscription_items_only": "ينطبق هذا الخصم فقط على عناصر الاشتراك",
+        "alternative_payment_currency_total_disclosure": "%{shop_name} يعالج المدفوعات في %{shop_currency} (%{amount_due}).",
+        "settlement_currency_note": "%{shop_name} يعالج المدفوعات في %{processing_currency}. لقد تسوقت %{original_currency}.",
+        "settlement_currency_note_wallet": "%{shop_name} يعالج المدفوعات في %{processing_currency}. لقد تسوقت %{original_currency} ودفعت مع %{wallet} باليوان الصيني. تحقق الخاص بك %{wallet_app} التطبيق للمبلغ النهائي.",
+        "settlement_currency_note_wallet_no_conversion": "لقد دفعت مع %{wallet} باليوان الصيني. تحقق الخاص بك %{wallet_app} التطبيق للمبلغ النهائي."
       },
       "shipping": {
         "title": "الشحن",
