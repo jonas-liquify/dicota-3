@@ -2562,6 +2562,11 @@
       },
       "address_management": {
         "saved_with_store": "تم الحفظ مع هذا المتجر"
+      },
+      "ucp": {
+        "standard_errors": {
+          "item_unavailable": "لا يمكن شراء السلعة"
+        }
       }
     },
     "pagination": {
