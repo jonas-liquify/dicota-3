@@ -117,14 +117,16 @@ ensureSwiperLib(function() { var weCareEl = document.querySelector(".swiper.is-w
   if spec_image_default
     assign spec_image_url = product.images[2] | image_url: width: 600
   endif
-  assign ph_highlights = product.metafields.custom.sales_arguments.value
+  assign ph_highlights = product.metafields.custom.filter_image_set.value.sales_arguements | default: product.metafields.custom.sales_arguments.value
   assign ph_spec_set = product.metafields.custom.filter_image_set.value.product_specification_set.value | default: product.metafields.custom.technical_specification_set.value
+  assign ph_tagline_pdf = product.metafields.custom.filter_image_set.value.product_tagline | default: product.metafields.custom.product_tagline
+  assign ph_description_pdf = product.metafields.custom.filter_image_set.value.product_description_text | default: product.metafields.custom.product_description
 %}{
   "title": {{ product.title | json }},
-  "subtitle": {{ product.metafields.custom.product_tagline | json }},
+  "subtitle": {{ ph_tagline_pdf | json }},
   "est_text": {{ section.settings.text_est | default: 'Est. in Germany 1992' | json }},
   "product_images": ["https:{{ product.images[0] | image_url: width: 1000 }}","https:{{ product.images[1] | image_url: width: 1000 }}"],
-  "description": {{ product.metafields.custom.product_description | metafield_tag | strip_html | json }},
+  "description": {{ ph_description_pdf | metafield_tag | strip_html | json }},
   "characteristics_title": {{ section.settings.text_characteristics | default: 'Characteristics' | json }},
   "highlights": [{% for tag in ph_highlights %}{{ tag | strip_html | strip | json }}{% unless forloop.last %},{% endunless %}{% endfor %}],
   "specifications_title": {{ section.settings.text_specifications | default: 'Specifications' | json }},
