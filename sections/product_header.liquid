@@ -117,7 +117,7 @@ ensureSwiperLib(function() { var weCareEl = document.querySelector(".swiper.is-w
   if spec_image_default
     assign spec_image_url = product.images[2] | image_url: width: 600
   endif
-  assign ph_highlights = product.metafields.custom.filter_image_set.value.sales_arguements | default: product.metafields.custom.sales_arguments.value
+  assign ph_highlights = product.metafields.custom.filter_image_set.value.sales_arguements.value | default: product.metafields.custom.sales_arguments.value
   assign ph_spec_set = product.metafields.custom.filter_image_set.value.product_specification_set.value | default: product.metafields.custom.technical_specification_set.value
   assign ph_tagline_pdf = product.metafields.custom.filter_image_set.value.product_tagline | default: product.metafields.custom.product_tagline
   assign ph_description_pdf = product.metafields.custom.filter_image_set.value.product_description_text | default: product.metafields.custom.product_description

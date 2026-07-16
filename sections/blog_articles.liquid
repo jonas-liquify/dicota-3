@@ -1,18 +1,8 @@
 {% paginate blog.articles by 9 %}
-    <div li-paginate:by="9" li-paginate="blog.articles" class="padding-global blog-list_padding" by="9"><div class="container-large"><div class="blog-list_bar"><div class="blog-list_filters">{% if section.settings.text_filter_1 != blank %}    <span class="li-guard" li-if="section.settings.text_filter_1 != blank">
-    <a href="{{ section.settings.url_filter_1_link }}" class="blog-list_filter w-inline-block"> <span>{{ section.settings.text_filter_1 }}</span><span class="blog-list_filter-chev w-embed"><svg width="100%" height="100%" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="1.5" fill="none"></path></svg></span> </a>    </span>
-{% endif %}{% if section.settings.text_filter_2 != blank %}    <span class="li-guard" li-if="section.settings.text_filter_2 != blank">
-    <a href="{{ section.settings.url_filter_2_link }}" class="blog-list_filter w-inline-block"> <span>{{ section.settings.text_filter_2 }}</span><span class="blog-list_filter-chev w-embed"><svg width="100%" height="100%" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="1.5" fill="none"></path></svg></span> </a>    </span>
-{% endif %}{% if section.settings.text_filter_3 != blank %}    <span class="li-guard" li-if="section.settings.text_filter_3 != blank">
-    <a href="{{ section.settings.url_filter_3_link }}" class="blog-list_filter w-inline-block"> <span>{{ section.settings.text_filter_3 }}</span><span class="blog-list_filter-chev w-embed"><svg width="100%" height="100%" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="1.5" fill="none"></path></svg></span> </a>    </span>
-{% endif %}</div><div class="blog-list_sort"><span li-object="'general.sort_by' | t" class="blog-list_sort-label">{{ 'general.sort_by' | t }}</span><span class="blog-list_sort-value"><span>
-{{ section.settings.text_sortierung }}
-</span><span class="blog-list_filter-chev w-embed"><svg width="100%" height="100%" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="1.5" fill="none"></path></svg></span></span></div></div>{% if blog.articles != blank %}    <div li-if="blog.articles != blank" role="list" class="blog-grid w-dyn-items">
-    {% for article in blog.articles %}    <a li-for="article in blog.articles" li-object:href="article.url" href="#" role="listitem" class="blog-card w-inline-block">
-                                    <div class="blog-card_image-wrap"><img li-object:src="article.image | image_url: width: 700" li-object:alt="article.image.alt" src="{{ article.image | image_url: width: 700 }}" loading="lazy" alt="{{ article.image.alt }}" class="blog-card_image"></div>
-                            <div class="blog-card_body"><div class="blog-card_head"><div class="blog-card_meta"><span li-object="article.tags.first">{{ article.tags.first }}</span><span class="blog-meta_dot">·</span><span li-object="article.published_at | date: '%-d. %B %Y'">{{ article.published_at | date: '%-d. %B %Y' }}</span></div><h3 li-object="article.title" class="blog-card_title">{{ article.title }}</h3></div><p li-object="article.excerpt" class="blog-card_excerpt">{{ article.excerpt }}</p><span class="blog-card_link">Learn more</span></div>
-                        </a>
-{% endfor %}    </div>
+    <div li-paginate:by="9" li-paginate="blog.articles" class="padding-global blog-list_padding" by="9"><div class="container-large">{% if blog.articles != blank %}    <div li-if="blog.articles != blank" role="list" class="blog-grid w-dyn-items">
+    <div li-for:inside="article in blog.articles" style="display:contents">
+        {% for article in blog.articles %}                            <a li-object:href="article.url" href="{{ article.url }}" role="listitem" class="blog-card w-inline-block"><div class="blog-card_image-wrap"><img li-object:src="article.image | image_url: width: 700" li-object:alt="article.image.alt" src="{{ article.image | image_url: width: 700 }}" loading="lazy" alt="{{ article.image.alt }}" class="blog-card_image"></div><div class="blog-card_body"><div class="blog-card_head"><div class="blog-card_meta"><span li-object="article.tags.first">{{ article.tags.first }}</span><span class="blog-meta_dot">·</span><span li-object="article.published_at | date: '%-d. %B %Y'">{{ article.published_at | date: '%-d. %B %Y' }}</span></div><h3 li-object="article.title" class="blog-card_title">{{ article.title }}</h3></div><p li-object="article.excerpt" class="blog-card_excerpt">{{ article.excerpt }}</p><span class="blog-card_link">Learn more</span></div></a>
+                    {% endfor %}    </div>    </div>
 {% endif %}{% if blog.articles == blank %}    <div li-if="blog.articles == blank" class="blog-grid-empty w-dyn-empty">
     <div li-object="'blog.no_posts' | t">{{ 'blog.no_posts' | t }}</div>    </div>
 {% endif %}{% if paginate.pages > 1 %}    <nav li-if="paginate.pages > 1" class="pagination_component">
@@ -38,45 +28,6 @@
     "name": "Blog Articles",
     "class": "section_blog-list",
     "settings": [
-        {
-            "id": "url_filter_1_link",
-            "type": "url",
-            "label": "Filter 1 Link"
-        },
-        {
-            "id": "text_filter_1",
-            "type": "text",
-            "label": "Filter 1",
-            "default": "Filter"
-        },
-        {
-            "id": "url_filter_2_link",
-            "type": "url",
-            "label": "Filter 2 Link"
-        },
-        {
-            "id": "text_filter_2",
-            "type": "text",
-            "label": "Filter 2",
-            "default": "Filter"
-        },
-        {
-            "id": "url_filter_3_link",
-            "type": "url",
-            "label": "Filter 3 Link"
-        },
-        {
-            "id": "text_filter_3",
-            "type": "text",
-            "label": "Filter 3",
-            "default": "Filter"
-        },
-        {
-            "id": "text_sortierung",
-            "type": "text",
-            "label": "Sortierung",
-            "default": "Newest first"
-        },
         {
             "type": "header",
             "content": "Abst\u00e4nde"
