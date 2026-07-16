@@ -1759,7 +1759,8 @@
           "ship_items_to": {
             "one": "سفينة %{count} البند ل",
             "other": "سفينة %{count} العناصر ل"
-          }
+          },
+          "no_purchase_order_number_long": "لا يوجد رقم أمر الشراء"
         },
         "block_title": "قم بمراجعة معلوماتك",
         "item_header": {
