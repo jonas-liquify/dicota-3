@@ -960,8 +960,7 @@
           "approved_transaction": "{{card_number}} لمحاكاة معاملة تمت الموافقة عليها",
           "declined_transaction": "{{card_number}} لمحاكاة معاملة مرفوضة",
           "gateway_failure": "{{card_number}} لمحاكاة فشل البوابة",
-          "additional_instructions": "استخدم أي تاريخ انتهاء صلاحية مستقبلي وأي رمز أمان مكون من 3 أرقام.",
-          "support_link": "احصل على الدعم"
+          "additional_instructions": "استخدم أي تاريخ انتهاء صلاحية مستقبلي وأي رمز أمان مكون من 3 أرقام."
         },
         "card_pay_with": "الدفع باستخدام:",
         "card_security_notice": "جميع المعاملات آمنة ومشفرة.",
