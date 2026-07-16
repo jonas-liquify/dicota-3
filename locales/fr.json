@@ -102,6 +102,29 @@
   },
   "reviews": {
     "body": "Votre avis",
-    "email": "Courriel"
+    "email": "Courriel",
+    "empty": "Aucun avis pour l'instant. Soyez le premier à en écrire un.",
+    "load_more": "Charger plus d'avis",
+    "name": "Nom",
+    "submit": "Envoyer l'avis",
+    "title": "Titre de l'avis",
+    "write": "Écrire un avis",
+    "your_rating": "Votre note"
+  },
+  "sales": {
+    "product_list": {
+      "meta_line": "Numéro d'article. · Modèle prédécesseur · Code EAN · Disponibilité · Niveaux de prix · Type de construction · Couleur"
+    }
+  },
+  "search": {
+    "heading": "Rechercher des produits",
+    "no_results": "Aucun résultat trouvé.",
+    "no_results_hint": "Il n'y a aucun résultat avec ce critère. Essayez de modifier votre recherche.",
+    "no_suggestions": "Aucune suggestion",
+    "popular": "Recherches populaires",
+    "recently_viewed": "Récemment consulté",
+    "searching": "Recherche…",
+    "suggestions": "Suggestions",
+    "view_all": "Voir tous les produits"
   }
 }
