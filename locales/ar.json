@@ -1206,7 +1206,20 @@
         "must_use_available_shipping_rate": "يجب اختيار سعر الشحن من أسعار الشحن المتوفرة.",
         "split_by_delivery_method_not_allowed": "لا يسمح بالتقسيم حسب طريقة التسليم لهذه الجلسة أو المتجر.",
         "split_by_delivery_method_requires_merchandise_from_single_location": "يتطلب التقسيم حسب طريقة التسليم تنفيذ بنود البضائع الفردية من موقع واحد.",
-        "split_by_delivery_method_unsupported_method_type": "تمت محاولة التقسيم حسب طريقة التسليم باستخدام نوع طريقة تسليم غير مدعوم."
+        "split_by_delivery_method_unsupported_method_type": "تمت محاولة التقسيم حسب طريقة التسليم باستخدام نوع طريقة تسليم غير مدعوم.",
+        "address_first_name_contains_mathematical_symbols": "لا يمكن أن يحتوي الاسم الأول على رموز رياضية",
+        "address_last_name_blank": "أدخل اسم العائلة",
+        "address_last_name_too_long": "الاسم الأخير طويل جدًا (الحد الأقصى هو 255 حرفًا)",
+        "address_last_name_contains_emojis": "لا يمكن أن يحتوي الاسم الأخير على رموز تعبيرية",
+        "address_last_name_contains_html_tags": "لا يمكن أن يحتوي الاسم الأخير على علامات HTML.",
+        "address_last_name_contains_url": "لا يمكن أن يحتوي الاسم الأخير على عنوان URL",
+        "address_last_name_contains_mathematical_symbols": "لا يمكن أن يحتوي الاسم الأخير على رموز رياضية",
+        "address_address1_blank": "أدخل عنوانا",
+        "address_address1_too_long": "سطر العنوان الأول طويل جدًا (الحد الأقصى هو 255 حرفًا)",
+        "address_address1_contains_emojis": "لا يمكن أن يحتوي العنوان 1 على رموز تعبيرية",
+        "address_address1_contains_html_tags": "لا يمكن أن يحتوي العنوان 1 على علامات HTML.",
+        "address_address1_contains_mathematical_symbols": "لا يمكن أن يحتوي سطر العنوان الأول على رموز رياضية",
+        "address_address2_blank": "أدخل شقة أو جناحًا أو ما إلى ذلك."
       },
       "store_credit_errors": {
         "generic_error": "حدثت مشكلة في رصيد متجرك. حاول مرة أخرى أو أعد تحميل الصفحة."
