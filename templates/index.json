@@ -316,6 +316,18 @@
         "overlay_start": 50
       }
     },
+    "two_column_hero_dyg9ca": {
+      "type": "two_column_hero",
+      "name": "Two-Column Hero",
+      "settings": {
+        "text_heading": "DICOTA Blog – Insights for Smarter Work.",
+        "textarea_text": "Discover the latest news, product innovations and inspiring stories from the world of DICOTA. Explore expert insights, sustainable solutions and practical ideas designed to make mobile working safer, smarter and more comfortable.",
+        "url_button_link": "shopify://blogs/news",
+        "text_button_text": "Explore the DICOTA Blog",
+        "padding_top": 5,
+        "padding_bottom": 2.5
+      }
+    },
     "accessories_slider": {
       "type": "accessories_slider",
       "blocks": {
@@ -592,6 +604,7 @@
     "image_banner",
     "shop_by_category",
     "two_column_banner",
+    "two_column_hero_dyg9ca",
     "accessories_slider",
     "image_link_list",
     "loved_by_customers",

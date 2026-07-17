@@ -15,13 +15,25 @@
     },
     "blog_articles": {
       "type": "blog_articles",
-      "settings": {}
+      "settings": {
+        "padding_bottom": 5
+      }
+    },
+    "blog_featured_YWDDkr": {
+      "type": "blog_featured",
+      "name": "Blog Featured",
+      "settings": {
+        "text_button_text": "Learn more",
+        "padding_top": 4,
+        "padding_bottom": 3
+      }
     }
   },
   "layout": "theme",
   "wrapper": "main.main-wrapper",
   "order": [
     "blog_hero",
+    "blog_featured_YWDDkr",
     "blog_articles"
   ]
 }
