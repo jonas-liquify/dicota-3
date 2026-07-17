@@ -34,6 +34,92 @@
     "free_shipping_heading": "Odemčeno: doprava zdarma",
     "free_shipping_text": "Na tuto objednávku se vztahuje doprava zdarma.",
     "total_price": "Mezisoučet",
-    "shipping_fee": "Doprava"
+    "shipping_fee": "Doprava",
+    "free": "Zdarma",
+    "go_to_checkout": "Pokladna",
+    "note": "Poznámka"
+  },
+  "blog": {
+    "no_posts": "Nebyly nalezeny žádné příspěvky."
+  },
+  "certificates": {
+    "intro": "Všechny produkty značky DICOTA s prohlášením o shodě (CE) – filtrované podle SKU nebo názvu produktu."
+  },
+  "data_sheets": {
+    "intro": "Všechny produkty značky DICOTA s technickým listem – filtrované podle SKU nebo názvu produktu."
+  },
+  "manuals": {
+    "intro": "Všechny produkty značky DICOTA s návodem k použití – filtrované podle SKU nebo názvu produktu."
+  },
+  "collection": {
+    "no_items": "Nebyly nalezeny žádné položky.",
+    "no_matches": "Žádné produkty neodpovídají těmto filtrům.",
+    "no_products": "Nebyly nalezeny žádné produkty.",
+    "show_results": "Zobrazit výsledky"
+  },
+  "jobs": {
+    "about_role": "O této pozici",
+    "open_application": "Nenašli jste pro sebe vhodnou pozici? I tak se na vás těšíme."
+  },
+  "loyalty": {
+    "cashback": {
+      "account_holder": "Majitel účtu",
+      "bank": "Banka",
+      "bank_match": "Bankovní údaje se musí shodovat s názvem společnosti",
+      "conversion": "Přepočítací kurz: 50 bodů = 1 EUR/CHF",
+      "disclaimer": "Společnost DICOTA si vyhrazuje právo v případě pochybností požadovat dodatečné informace nebo odmítnout výplatu. Směnný kurz se může změnit bez předchozího upozornění.",
+      "iban": "Číslo účtu / IBAN",
+      "min_points": "Je třeba získat alespoň 10 000 bodů",
+      "payout": "Čtvrtletní výplata bankovním převodem",
+      "points_label": "Body k výplatě (min. 10 000)"
+    },
+    "club": {
+      "benefit_cashback": "Vrácení peněz od 10 000 bodů",
+      "benefit_early": "Přednostní přístup k novým produktům",
+      "benefit_earn": "Za každý nákup získáte body",
+      "benefit_rewards": "Exkluzivní odměny a balíčky",
+      "benefit_support": "Individuální podpora klubu"
+    },
+    "reward": "Odměna"
+  },
+  "marketing": {
+    "press": "Tisk",
+    "product_imgs": {
+      "meta_line": "Číslo položky · Předchozí model · Kód EAN · Dostupnost · Typ konstrukce · Barva"
+    }
+  },
+  "products": {
+    "add_to_cart": "Přidat do košíku",
+    "on_sale": "V akci"
+  },
+  "reseller": {
+    "form": {
+      "contact_person": "Kontaktní osoba*",
+      "email": "E-mailová adresa*",
+      "heading": "Zadejte údaje o prodejci",
+      "phone": "Telefon"
+    }
+  },
+  "reviews": {
+    "body": "Vaše recenze",
+    "email": "E-mail",
+    "empty": "Zatím žádné recenze. Buďte první, kdo napíše recenzi.",
+    "load_more": "Načíst další recenze",
+    "name": "Jméno",
+    "submit": "Odeslat recenzi",
+    "title": "Název recenze",
+    "write": "Napište recenzi",
+    "your_rating": "Vaše hodnocení"
+  },
+  "sales": {
+    "product_list": {
+      "meta_line": "Číslo položky · Předchozí model · Kód EAN · Dostupnost · Cenové kategorie · Typ konstrukce · Barva"
+    }
+  },
+  "search": {
+    "heading": "Vyhledávání produktů",
+    "no_results": "Nebyly nalezeny žádné výsledky.",
+    "no_results_hint": "Podle těchto kritérií nebyly nalezeny žádné výsledky. Zkuste změnit vyhledávací dotaz.",
+    "no_suggestions": "Žádné návrhy"
   }
 }
