@@ -24,5 +24,16 @@
     "sort_by": "Seřadit podle",
     "submit": "Odeslat",
     "trending": "Trendy"
+  },
+  "cart": {
+    "heading": "Nákupní košík",
+    "empty": "Váš košík je prázdný",
+    "get_free_shipping": "Získejte dopravu zdarma",
+    "still": "Pouze",
+    "to_free_shipping": "bez dopravy zdarma",
+    "free_shipping_heading": "Odemčeno: doprava zdarma",
+    "free_shipping_text": "Na tuto objednávku se vztahuje doprava zdarma.",
+    "total_price": "Mezisoučet",
+    "shipping_fee": "Doprava"
   }
 }
