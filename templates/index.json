@@ -362,6 +362,18 @@
         "text_color": "#0f0f0f"
       }
     },
+    "two_column_hero_wafJU9": {
+      "type": "two_column_hero",
+      "name": "Two-Column Hero",
+      "settings": {
+        "text_heading": "Product Finder – Find Your Perfect Match.",
+        "textarea_text": "Find exactly what you need—whether it’s the right screen filter for your device, the perfect bag for your laptop, or a practical accessory for your everyday setup. The DICOTA Product Finder guides you to the ideal solution in just a few simple steps.",
+        "url_button_link": "shopify://pages/product-finder",
+        "text_button_text": "Product Finder",
+        "padding_top": 5,
+        "padding_bottom": 2.5
+      }
+    },
     "image_link_list": {
       "type": "image_link_list",
       "blocks": {
@@ -606,6 +618,7 @@
     "two_column_banner",
     "two_column_hero_dyg9ca",
     "accessories_slider",
+    "two_column_hero_wafJU9",
     "image_link_list",
     "loved_by_customers",
     "sustainability_banne",
