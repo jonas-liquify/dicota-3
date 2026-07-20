@@ -7,13 +7,37 @@
       }(window, document);
     </script>
   <!-- Google Tag Manager -->
-    <script type="text/plain" data-cookieconsent="statistics, marketing">
-      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer','GTM-MF5WT4ZG');
-    </script>
+    <script>
+  window.dataLayer = window.dataLayer || [];
+
+  // Funktion, die den GTM aktiv in die Seite lädt
+  function loadGTM() {
+    if (window.gtmIsLoaded) return; // Verhindert doppeltes Laden
+    window.gtmIsLoaded = true;
+
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MF5WT4ZG');
+    
+    console.log("GTM wurde erfolgreich geladen!");
+  }
+
+  // 1. Fall: Nutzer hat BEREITS auf einer vorherigen Seite zugestimmt (Seitenaufruf)
+  window.addEventListener('CookiebotOnConsentReady', function() {
+    if (window.Cookiebot && (window.Cookiebot.consent.statistics || window.Cookiebot.consent.marketing)) {
+      loadGTM();
+    }
+  });
+
+  // 2. Fall: Nutzer klickt in DIESEM MOMENT auf "Akzeptieren" (Live-Event)
+  window.addEventListener('CookiebotOnAccept', function() {
+    if (window.Cookiebot && (window.Cookiebot.consent.statistics || window.Cookiebot.consent.marketing)) {
+      loadGTM();
+    }
+  });
+</script>
   <!-- End Google Tag Manager -->
             {% if settings.favicon == blank %}
               <link href="{{ 'favicon.png' | asset_url }}" rel="shortcut icon" type="image/x-icon">
