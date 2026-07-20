@@ -11,34 +11,34 @@
   window.dataLayer = window.dataLayer || [];
 
   function loadGTM() {
-    if (window.gtmIsLoaded) return; // Verhindert doppeltes Laden
+    if (window.gtmIsLoaded) return; 
     window.gtmIsLoaded = true;
 
-    // 1. PAGE VIEW EVENT
-    window.dataLayer.push({
-      event: "page_view",
-      page_location: window.location.href,
-      page_title: document.title
-    });
-
-    // 2. GTM LADEN
+    // 1. ZUERST DEN GTM STARTEN
     (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-MF5WT4ZG');
     
-    console.log("GTM & page_view wurden erfolgreich geladen!");
+    // 2. DANN DEN PAGE_VIEW PUSHEN (Mit 100ms Delay für absolute Sicherheit)
+    setTimeout(function() {
+      window.dataLayer.push({
+        event: "page_view",
+        page_location: window.location.href,
+        page_title: document.title
+      });
+      console.log("GTM und page_view erfolgreich gefeuert!");
+    }, 100);
   }
 
-  // 1. Fall: Nutzer hat BEREITS zugestimmt
+  // Listener für Consent
   window.addEventListener('CookiebotOnConsentReady', function() {
     if (window.Cookiebot && (window.Cookiebot.consent.statistics || window.Cookiebot.consent.marketing)) {
       loadGTM();
     }
   });
 
-  // 2. Fall: Nutzer klickt in DIESEM MOMENT auf "Akzeptieren"
   window.addEventListener('CookiebotOnAccept', function() {
     if (window.Cookiebot && (window.Cookiebot.consent.statistics || window.Cookiebot.consent.marketing)) {
       loadGTM();
