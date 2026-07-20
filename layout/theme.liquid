@@ -6,6 +6,20 @@
         n.className += t + "js", ("ontouchstart" in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch")
       }(window, document);
     </script>
+<script>
+  window.addEventListener("CookiebotOnAccept", function() {
+    if (window.Shopify && window.Shopify.customerPrivacy && window.Cookiebot) {
+      window.Shopify.customerPrivacy.setTrackingConsent({
+        analytics: window.Cookiebot.consent.statistics,
+        marketing: window.Cookiebot.consent.marketing,
+        preferences: window.Cookiebot.consent.preferences,
+        sale_of_data: window.Cookiebot.consent.marketing
+      }, function() {
+        console.log("Shopify Customer Privacy via Cookiebot erfolgreich aktualisiert.");
+      });
+    }
+  });
+</script>
             {% if settings.favicon == blank %}
               <link href="{{ 'favicon.png' | asset_url }}" rel="shortcut icon" type="image/x-icon">
             {% else %}
