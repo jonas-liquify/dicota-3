@@ -7,31 +7,38 @@
       }(window, document);
     </script>
   <!-- Google Tag Manager -->
-    <script>
+<script>
   window.dataLayer = window.dataLayer || [];
 
-  // Funktion, die den GTM aktiv in die Seite lädt
   function loadGTM() {
     if (window.gtmIsLoaded) return; // Verhindert doppeltes Laden
     window.gtmIsLoaded = true;
 
+    // 1. PAGE VIEW EVENT
+    window.dataLayer.push({
+      event: "page_view",
+      page_location: window.location.href,
+      page_title: document.title
+    });
+
+    // 2. GTM LADEN
     (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-MF5WT4ZG');
     
-    console.log("GTM wurde erfolgreich geladen!");
+    console.log("GTM & page_view wurden erfolgreich geladen!");
   }
 
-  // 1. Fall: Nutzer hat BEREITS auf einer vorherigen Seite zugestimmt (Seitenaufruf)
+  // 1. Fall: Nutzer hat BEREITS zugestimmt
   window.addEventListener('CookiebotOnConsentReady', function() {
     if (window.Cookiebot && (window.Cookiebot.consent.statistics || window.Cookiebot.consent.marketing)) {
       loadGTM();
     }
   });
 
-  // 2. Fall: Nutzer klickt in DIESEM MOMENT auf "Akzeptieren" (Live-Event)
+  // 2. Fall: Nutzer klickt in DIESEM MOMENT auf "Akzeptieren"
   window.addEventListener('CookiebotOnAccept', function() {
     if (window.Cookiebot && (window.Cookiebot.consent.statistics || window.Cookiebot.consent.marketing)) {
       loadGTM();
