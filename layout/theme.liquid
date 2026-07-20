@@ -7,18 +7,30 @@
       }(window, document);
     </script>
 <script>
-  window.addEventListener("CookiebotOnAccept", function() {
-    if (window.Shopify && window.Shopify.customerPrivacy && window.Cookiebot) {
-      window.Shopify.customerPrivacy.setTrackingConsent({
-        analytics: window.Cookiebot.consent.statistics,
-        marketing: window.Cookiebot.consent.marketing,
-        preferences: window.Cookiebot.consent.preferences,
-        sale_of_data: window.Cookiebot.consent.marketing
-      }, function() {
-        console.log("Shopify Customer Privacy via Cookiebot erfolgreich aktualisiert.");
-      });
+  function syncCookiebotToShopify() {
+    if (window.Cookiebot && window.Cookiebot.consent && window.Shopify) {
+      // Shopify Customer Privacy API explizit laden
+      window.Shopify.loadFeatures(
+        [{ name: 'consent-tracking-api', version: '0.1' }],
+        function(error) {
+          if (error) return;
+          
+          window.Shopify.customerPrivacy.setTrackingConsent({
+            analytics: window.Cookiebot.consent.statistics,
+            marketing: window.Cookiebot.consent.marketing,
+            preferences: window.Cookiebot.consent.preferences,
+            sale_of_data: window.Cookiebot.consent.marketing
+          }, function() {
+            console.log("Cookiebot Consent erfolgreich an Shopify übergeben.");
+          });
+        }
+      );
     }
-  });
+  }
+
+  // Listener für Live-Klick UND bereits erteilten Consent
+  window.addEventListener("CookiebotOnAccept", syncCookiebotToShopify);
+  window.addEventListener("CookiebotOnConsentReady", syncCookiebotToShopify);
 </script>
             {% if settings.favicon == blank %}
               <link href="{{ 'favicon.png' | asset_url }}" rel="shortcut icon" type="image/x-icon">
