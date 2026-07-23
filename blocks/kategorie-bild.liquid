@@ -1,4 +1,4 @@
-<div li-block="Kategorie-Bild" class="collection-intro_tile" {{ block.shopify_attributes }}>
+<div li-block="Kategorie-Bild" class="collection-intro_tile swiper-slide is-collection-intro" {{ block.shopify_attributes }}>
                     <a href="{{ block.settings.url_link }}" class="collection-intro_tile-link"> {% if block.settings.image_bild != blank %} <div li-if="block.settings.image_bild != blank" class="collection-intro_tile-media"> {% if block.settings.image_bild %} {{ block.settings.image_bild | image_url: width: 500 | image_tag: loading: 'lazy', class: 'collection-intro_tile-image' }} {% else %} <img src="{{ 'placeholder.svg' | asset_url }}" loading="lazy" alt="" class="collection-intro_tile-image"> {% endif %} </div>{% endif %}<div class="collection-intro_tile-caption"><p class="collection-intro_tile-title">{{ block.settings.text_titel }}</p><p class="collection-intro_tile-text"> {{ block.settings.textarea_text }} </p></div> </a>
                 </div> {% schema %} {
     "name": "Kategorie-Bild",

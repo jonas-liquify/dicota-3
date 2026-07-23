@@ -1371,11 +1371,12 @@ figcaption {
 }
 
 .mini-cart_line-item_img {
-  border: 1px solid var(--base-color-neutral--neutral-lighter);
   background-color: var(--base-color-neutral--neutral-lightest);
   object-fit: contain;
-  width: 5rem;
-  height: 5rem;
+  mix-blend-mode: darken;
+  width: 6.625rem;
+  height: 8.0625rem;
+  flex-shrink: 0;
 }
 
 .mini-cart_full {
@@ -4113,7 +4114,9 @@ figcaption {
   .product-loved-by_grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  .product-loved-by_col:nth-child(even) { margin-top: 1.5rem; }
+  .product-loved-by_col:nth-child(even) {
+    margin-top: 1.5rem;
+  }
   .product-comparison_layout.product-comparison_layout {
     grid-template-columns: 1fr;
   }
@@ -4193,9 +4196,6 @@ figcaption {
   .collection-intro_layout {
     grid-template-columns: 1fr;
     gap: 2rem;
-  }
-  .collection-intro_tiles.collection-intro_tiles {
-    grid-template-columns: repeat(3, 1fr);
   }
   .coll_filter-bar-outer {
     top: 0;
@@ -4814,9 +4814,6 @@ figcaption {
     justify-content: center;
     flex-wrap: wrap;
     gap: .75rem 1rem;
-  }
-  .ph_gallery-more {
-    display: none;
   }
   .sol-feature {
     grid-template-columns: 1fr;
@@ -5627,7 +5624,13 @@ figcaption {
     font-size: 1.5rem;
   }
   .collection-intro_tiles.collection-intro_tiles {
-    grid-template-columns: 1fr;
+    flex-direction: column;
+  }
+  .collection-intro_tile.collection-intro_tile {
+    width: 100%;
+  }
+  .collection-intro_arrow.collection-intro_arrow {
+    display: none;
   }
   .coll_grid {
     grid-template-columns: repeat(2, 1fr);
@@ -6291,7 +6294,13 @@ figcaption {
     font-size: 1.25rem;
   }
   .collection-intro_tiles.collection-intro_tiles {
-    grid-template-columns: 1fr;
+    flex-direction: column;
+  }
+  .collection-intro_tile.collection-intro_tile {
+    width: 100%;
+  }
+  .collection-intro_arrow.collection-intro_arrow {
+    display: none;
   }
   .coll_grid {
     grid-template-columns: repeat(2, 1fr);
@@ -10781,6 +10790,12 @@ button.li-lang_dd-link {
 .ph_tab-panel.is-expanded::after {
   display: none;
 }
+.ph_tab-panel.ph_tab-panel-downloads {
+  max-height: none;
+}
+.ph_tab-panel.ph_tab-panel-downloads::after {
+  display: none;
+}
 .ph_see-more {
   display: inline-block;
   margin-top: 0.5rem;
@@ -11102,14 +11117,59 @@ button.li-lang_dd-link {
   color: #3a3a3a;
 }
 
+.collection-intro_slider-wrapper {
+  position: relative;
+}
+
+.collection-intro_swiper {
+  width: 100%;
+  overflow: hidden;
+}
+
 .collection-intro_tiles {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
   gap: 1.25rem;
 }
 
 .collection-intro_tile {
   display: block;
+  width: calc((100% - 2.5rem) / 3);
+  flex-shrink: 0;
+}
+
+.collection-intro_arrow {
+  position: absolute;
+  top: 40%;
+  right: -1.25rem;
+  z-index: 3;
+  width: 3rem;
+  height: 3rem;
+  padding: 0;
+  border: none;
+  border-radius: 62.4375rem;
+  background-color: rgba(15, 15, 15, .7);
+  backdrop-filter: blur(.3125rem);
+  color: var(--base-color-neutral--white);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-50%);
+  transition: background-color .2s ease;
+}
+.collection-intro_arrow:hover {
+  background-color: rgba(15, 15, 15, .9);
+}
+.collection-intro_arrow.is-prev {
+  left: -1.25rem;
+  right: auto;
+}
+.collection-intro_arrow.swiper-button-disabled {
+  opacity: .3;
+  pointer-events: none;
+}
+.collection-intro_arrow.swiper-button-lock {
+  display: none;
 }
 
 .collection-intro_tile-link {
@@ -11165,7 +11225,6 @@ button.li-lang_dd-link {
   top: 4.5rem;
   z-index: 30;
   background-color: #ffffff;
-  border-bottom: 1px solid #e8e8e8;
 }
 
 .coll_filter-bar-outer > .padding-global {
@@ -11206,7 +11265,6 @@ button.li-lang_dd-link {
   padding: 0.875rem 1rem;
   background: none;
   border: none;
-  border-right: 1px solid #e8e8e8;
   cursor: pointer;
   font-family: "Futura PT", sans-serif;
   font-size: 0.875rem;
@@ -11219,6 +11277,10 @@ button.li-lang_dd-link {
 .coll_filter-pill:hover,
 .coll_filter-pill.is-open {
   background-color: #f6f6f6;
+}
+
+.coll_filter-pill:has(.coll_filter-active-count) .coll_filter-pill-label {
+  font-weight: 700;
 }
 
 .coll_filter-pill .icon-embed-xsmall {
@@ -11293,7 +11355,6 @@ button.li-lang_dd-link {
   gap: 0.5rem;
   flex-shrink: 0;
   padding: 0.875rem 0 0.875rem 1rem;
-  border-left: 1px solid #e8e8e8;
 }
 
 .coll_sort-label {
@@ -16720,12 +16781,124 @@ button.li-lang_dd-link {
   display: flex;
 }
 
-/* Kreisrunder X-Button */
+/* Schließen-Icon (schlicht, kein Kreis-Hintergrund) */
 .mini-cart_close {
   cursor: pointer;
   justify-content: center;
   align-items: center;
+  width: 1.75rem;
+  height: 1.75rem;
   display: flex;
+}
+
+/* Item-Count in der Header-Überschrift */
+.mini-cart_header-count {
+  display: inline;
+}
+
+/* Social-Proof-Banner unter dem Header */
+.mini-cart_trust-banner {
+  background-color: var(--base-color-brand--blue);
+  padding: .25rem 1.5rem;
+  display: flex;
+}
+.mini-cart_trust-text {
+  color: #fff;
+  font-size: .625rem;
+  line-height: 1.66;
+  letter-spacing: -.00625rem;
+  margin: 0;
+}
+
+/* Titel in der Warenkorb-Zeile: uppercase wie im Figma-Design */
+.mini-cart_line-item_title {
+  text-transform: uppercase;
+}
+
+/* Cross-Sell "Das könnte dazu passen" */
+.mini-cart_crosssell {
+  background-color: #e5e5e54d;
+  flex-direction: column;
+  padding: 1.5rem 0;
+  display: flex;
+}
+.mini-cart_crosssell.hide {
+  display: none;
+}
+.mini-cart_crosssell-title {
+  text-align: center;
+  margin: 0 0 .25rem;
+  padding: 0 1.5rem;
+  font-size: .875rem;
+}
+.mini-cart_crosssell-list {
+  grid-column-gap: .25rem;
+  grid-row-gap: .25rem;
+  padding: 0 1.5rem;
+  display: flex;
+}
+.mini-cart_crosssell-item {
+  background-color: var(--base-color-neutral--white);
+  align-items: center;
+  display: flex;
+}
+.mini-cart_crosssell-img {
+  object-fit: cover;
+  mix-blend-mode: darken;
+  width: 5.4375rem;
+  height: 6.125rem;
+  flex-shrink: 0;
+}
+.mini-cart_crosssell-info {
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  padding: 0 .5rem;
+  display: flex;
+}
+.mini-cart_crosssell-text {
+  flex-direction: column;
+  display: flex;
+}
+.mini-cart_crosssell-name {
+  font-family: "Futura PT", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+}
+.mini-cart_crosssell-price {
+  opacity: .7;
+  font-size: .875rem;
+}
+.mini-cart_crosssell-form {
+  margin: 0;
+}
+.mini-cart_crosssell-add {
+  cursor: pointer;
+  background-color: var(--base-color-neutral--black);
+  color: #fff;
+  border: 0;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  width: 1.875rem;
+  height: 1.875rem;
+  padding: .5rem;
+  display: flex;
+}
+.mini-cart_crosssell-add:hover {
+  opacity: .8;
+}
+
+/* Zahlarten-Icons + Vertrauens-Text im Footer */
+.mini-cart_payments {
+  justify-content: center;
+  display: flex;
+}
+.mini-cart_guarantee-text {
+  text-align: center;
+  opacity: .7;
+  margin: 0;
+  font-size: .625rem;
 }
 
 /* Leerer Warenkorb */
@@ -16791,17 +16964,15 @@ button.li-lang_dd-link {
 
 /* Progress-Bar Spur */
 .mini-cart_footer_progress-bar {
-  background-color: var(--base-color-neutral--neutral-lightest);
-  border-radius: 6.25rem;
+  background-color: #0f0f0f33;
   width: 100%;
-  height: .375rem;
+  height: .1875rem;
   overflow: hidden;
 }
 
 /* Progress-Bar Füllung */
 .mini-cart_footer_progress-bar-innner {
   background-color: var(--base-color-brand--blue);
-  border-radius: 6.25rem;
   height: 100%;
   max-width: 100%;
   transition: width .4s ease;
@@ -16915,39 +17086,6 @@ button.li-lang_dd-link {
 .ph_buy-action.is-active .ph_buy-action-icon svg path {
   fill: currentColor;
   stroke: currentColor;
-}
-
-/* =============================================================
-   DICOTA PDP — Galerie "Mehr erfahren" (Desktop ab 5. Bild)
-   Desktop: nur Hauptbild + 3 Thumbs; ab dem 5. Bild eine
-   "Mehr erfahren"-Kachel (per JS injiziert, oeffnet Lightbox).
-   Mobile: alle Bilder im Swiper, keine Kachel.
-   ============================================================= */
-@media screen and (min-width: 992px) {
-  .swiper-slide.is-product-gallery.is-extra {
-    display: none;
-  }
-  .ph_gallery-more {
-    display: block;
-    width: 36.4%;
-    margin-left: auto;
-    box-sizing: border-box;
-    margin-top: .75rem;
-    padding: .25rem 0;
-    background: none;
-    border: 0;
-    cursor: pointer;
-    text-align: center;
-    font-family: "Futura PT", sans-serif;
-    font-weight: 600;
-    font-size: .875rem;
-    color: #0f0f0f;
-    text-decoration: underline;
-    text-underline-offset: .2em;
-  }
-  .ph_gallery-more:hover {
-    opacity: .65;
-  }
 }
 
 /* =============================================================
@@ -18160,13 +18298,35 @@ img.product-header_gallery-image {
 }
 
 /* =============================================================
-   DICOTA — Filter-Pill: blauer Punkt bei aktivem Filter
+   DICOTA — Filter-Pill: Zähler-Badge bei aktivem Filter
    ============================================================= */
-.coll_filter-pill .coll_filter-active-dot {
-  width: 0.4375rem;
-  height: 0.4375rem;
+.coll_filter-active-count {
+  min-width: 1.1rem;
+  height: 1.1rem;
+  padding: 0 0.25rem;
   border-radius: 50%;
-  background-color: var(--base-color-brand--blue, #2d62ff);
+  background-color: var(--base-color-neutral--black, #0f0f0f);
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.1rem;
+  text-align: center;
+  flex-shrink: 0;
+  display: inline-block;
+}
+
+/* Globaler Aktiv-Indikator auf dem mobilen Filter-Button */
+.coll_filter-mobile-badge {
+  min-width: 1.1rem;
+  height: 1.1rem;
+  padding: 0 0.25rem;
+  border-radius: 50%;
+  background-color: var(--base-color-neutral--black, #0f0f0f);
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.1rem;
+  text-align: center;
   flex-shrink: 0;
   display: inline-block;
 }
@@ -18573,6 +18733,7 @@ img.product-header_gallery-image {
 /* Collection Filters: mobiler Trigger-Button + Modal (ab Tablet statt Dropdowns) */
 .coll_filter-mobile-btn {
   display: none;
+  position: relative;
   align-items: center;
   gap: 0.5rem;
   padding: 0.625rem 1rem;
@@ -18698,11 +18859,6 @@ img.product-header_gallery-image {
 
 .announcement-bar_link-toggle.announcement-bar_link.w-dropdown-toggle {
   padding-right: 0px;
-}
-
-.swiper-pagination.ph_we-care-dots {
-  position: absolute;
-  right: 0px;
 }
 
 .shop-by-category_scrollbar.swiper-scrollbar {

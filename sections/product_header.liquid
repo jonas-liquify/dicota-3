@@ -40,43 +40,15 @@ var gallerySwiper = null;
 function ensureSwiperLib(cb) { if (typeof Swiper !== "undefined") return cb(); if (window.__swiperLoading) return window.__swiperLoading.then(cb); var s = document.createElement("script"); s.src = "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"; var link = document.createElement("link"); link.rel = "stylesheet"; link.href = "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"; document.head.appendChild(link); window.__swiperLoading = new Promise(function(res) { s.onload = res; }); document.head.appendChild(s); window.__swiperLoading.then(cb); }
 function isDesktop() { return window.matchMedia("(min-width: 992px)").matches; }
 function galleryWrapperEl() { return galleryEl ? galleryEl.querySelector(".swiper-wrapper.is-product-gallery") : null; }
-function galleryRootEl() { return galleryEl ? (galleryEl.closest(".product-header_gallery") || galleryEl.parentNode) : null; }
-function removeGalleryMore() { var root = galleryRootEl(); if (!root) return; var b = root.querySelector(".ph_gallery-more"); if (b) b.remove(); root.classList.remove("is-expanded"); }
-function addGalleryMoreIfNeeded() {
-  /* Desktop: ab dem 5. Bild ein "More Images"-Text-Link DIREKT UNTER dem
-     Hauptbild (linke Spalte). Klick blendet die restlichen Bilder inline ein
-     (keine Lightbox). Mobile: per CSS ausgeblendet. */
-  var wrap = galleryWrapperEl();
-  var root = galleryRootEl();
-  if (!wrap || !root) return;
-  removeGalleryMore();
-  var slides = wrap.querySelectorAll(".swiper-slide.is-product-gallery");
-  for (var j = 0; j < slides.length; j++) slides[j].classList.remove("is-extra");
-  if (slides.length <= 4) return;
-  for (var i = 4; i < slides.length; i++) slides[i].classList.add("is-extra");
-  var btn = document.createElement("button");
-  btn.type = "button";
-  btn.className = "ph_gallery-more";
-  btn.textContent = "More Images";
-  btn.addEventListener("click", function(e) {
-    e.preventDefault();
-    var ex = wrap.querySelectorAll(".swiper-slide.is-product-gallery.is-extra");
-    for (var k = 0; k < ex.length; k++) ex[k].classList.remove("is-extra");
-    btn.remove();
-  });
-  wrap.insertBefore(btn, slides[4] || null);
-}
 function initGallerySwipers() {
   if (!galleryEl) return;
-  /* Desktop: gestapeltes Layout per CSS &mdash; kein Swiper, ab 5. Bild "Mehr erfahren".
-     Mobile: 1-Slide-Swiper mit Progressbar, kein Button. */
+  /* Desktop: gestapeltes Layout per CSS &mdash; kein Swiper, alle Bilder sichtbar.
+     Mobile: 1-Slide-Swiper mit Progressbar. */
   if (isDesktop()) {
     if (gallerySwiper && typeof gallerySwiper.destroy === "function") { try { gallerySwiper.destroy(true, true); } catch(e){} }
     gallerySwiper = null;
-    addGalleryMoreIfNeeded();
     return;
   }
-  removeGalleryMore();
   if (gallerySwiper) return;
   gallerySwiper = "pending";
   ensureSwiperLib(function() {
