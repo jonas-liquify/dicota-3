@@ -13,7 +13,7 @@
       "type": "two_column_hero",
       "settings": {
         "text_heading": "About us",
-        "textarea_text": "We design products that make everyday life safer, simpler and more sustainable for mobile professionals — engineered in Switzerland for over 30 years.",
+        "textarea_text": "We design products that make everyday life safer, simpler and more sustainable for mobile professionals — engineered in Germany for over 30 years.",
         "url_button_link": "",
         "text_button_text": "Learn more",
         "padding_top": 5,
@@ -22,9 +22,7 @@
     },
     "boxed_image": {
       "type": "boxed_image",
-      "settings": {
-        "layout": "full"
-      }
+      "settings": {}
     },
     "feature_card_grid": {
       "type": "feature_card_grid",
@@ -40,7 +38,7 @@
               "name": "Feature Karte",
               "settings": {
                 "text_heading": "Swiss quality",
-                "textarea_text": "Designed and tested in Switzerland to meet the highest standards.",
+                "textarea_text": "Designed and tested in Germany to meet the highest standards.",
                 "url_button_link": "",
                 "text_button_text": "Learn more"
               },
