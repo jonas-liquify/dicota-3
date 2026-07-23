@@ -99,7 +99,7 @@
       "settings": {
         "text_vortitel": "[DI:CO:TA]",
         "text_uberschrift": "Die Computer Tasche",
-        "textarea_beschreibung": "DICOTA was born in 1992\nFrom the simple idea of carrying computers safely, conveniently and efficiently from A to B.\nOur journey began when computers became mobile in the early 1990s. For over three decades, DICOTA has stood for continuous innovation and the highest quality.",
+        "textarea_beschreibung": "DICOTA was born in 1992.\nFrom the simple idea of carrying computers safely, conveniently and efficiently from A to B.\nOur journey began when computers became mobile in the early 1990s. For over three decades, DICOTA has stood for continuous innovation and the highest quality.",
         "padding_top": 5,
         "padding_bottom": 2.5,
         "text_align": "center",
@@ -112,7 +112,7 @@
       "settings": {
         "text_uberschrift": "New Releases",
         "url_button_link": "shopify://collections/d2c-new-releases",
-        "text_button_text": "Alle New Releases",
+        "text_button_text": "All New Releases",
         "collection_kollektion": "d2c-new-releases",
         "collection_kollektion_limit": 16,
         "show_view_all": true,
