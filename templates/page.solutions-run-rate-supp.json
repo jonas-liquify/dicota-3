@@ -37,7 +37,7 @@
               "type": "feature-karte",
               "name": "Feature Karte",
               "settings": {
-                "text_heading": "Swiss quality",
+                "text_heading": "Quality",
                 "textarea_text": "Designed and tested in Germany to meet the highest standards.",
                 "url_button_link": "",
                 "text_button_text": "Learn more"
