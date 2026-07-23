@@ -186,12 +186,12 @@
     "owner_spotlight": {
       "type": "owner_spotlight",
       "blocks": {
-        "zitat_1": {
+        "zitat_3": {
           "type": "zitat",
           "name": "Zitat",
           "settings": {
-            "text_block_heading": "Stephan Meyer",
-            "text_block_text": "CPO"
+            "text_block_heading": "Ruedi Nauer",
+            "text_block_text": "CEO"
           },
           "blocks": {}
         },
@@ -204,20 +204,20 @@
           },
           "blocks": {}
         },
-        "zitat_3": {
+        "zitat_1": {
           "type": "zitat",
           "name": "Zitat",
           "settings": {
-            "text_block_heading": "Ruedi Nauer",
-            "text_block_text": "CEO"
+            "text_block_heading": "Stephan Meyer",
+            "text_block_text": "CPO"
           },
           "blocks": {}
         }
       },
       "block_order": [
-        "zitat_1",
+        "zitat_3",
         "zitat_2",
-        "zitat_3"
+        "zitat_1"
       ],
       "settings": {
         "text_heading": "Then, Now, Next",
