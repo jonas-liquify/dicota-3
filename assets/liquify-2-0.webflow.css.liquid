@@ -9063,7 +9063,6 @@ figcaption {
 .testimonials_list {
   display: flex;
   gap: .25rem;
-  /* autoHeight misst die Karten — sie dürfen sich dafür nicht strecken */
   align-items: flex-start;
 }
 
@@ -10496,7 +10495,7 @@ button.li-lang_dd-link {
 .product-header_details {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
   padding: 2.5rem 2.25rem;
   flex: 0 0 auto;
   width: 100%;
@@ -10617,7 +10616,7 @@ button.li-lang_dd-link {
 .ph_form {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
 }
 .ph_options {
   display: flex;
@@ -10759,7 +10758,8 @@ button.li-lang_dd-link {
 .ph_we-care-row .swiper.is-we-care {
   flex: 1 1 auto;
   min-width: 0;
-  overflow: visible;
+  /* clipped, sonst schiebt sich der nächste Slide unter die Dots rechts */
+  overflow: hidden;
 }
 .ph_we-care-slide {
   display: flex;
@@ -11336,14 +11336,16 @@ button.li-lang_dd-link {
    ============================================================= */
 .coll_filter-bar-outer {
   position: sticky;
-  top: 4.5rem;
+  /* muss >= Navigationshöhe sein (.nav_component min-height 5rem),
+     sonst schiebt sich die Nav über die Pills und schneidet sie oben ab */
+  top: 5rem;
   z-index: 30;
   background-color: #ffffff;
 }
 
 .coll_filter-bar-outer > .padding-global {
-  padding-top: 0;
-  padding-bottom: 0;
+  padding-top: .75rem;
+  padding-bottom: .75rem;
 }
 
 .coll_filter-bar {
@@ -15296,7 +15298,6 @@ button.li-lang_dd-link {
 .ph_quote-btn {
   display: block;
   width: 100%;
-  margin-top: .75rem;
   padding: .65rem 1.5rem;
   text-align: center;
   border: 1px solid #0f0f0f;
