@@ -391,7 +391,8 @@
           "name": "Image+Link List Link",
           "settings": {
             "url_link_ziel": "",
-            "text_label": "Mobile Working"
+            "text_label": "Mobile Working",
+            "image_hover_bild": "shopify://shop_images/product-feature_149.jpg"
           },
           "blocks": {}
         },
@@ -559,12 +560,13 @@
       "disabled": true,
       "settings": {
         "text_uberschrift": "Was unsere Kund:innen sagen",
-        "text_bewertung_zahl": "4,83",
         "text_bewertung_label": "Hervorragend",
-        "text_anzahl_bewertungen": "17 982 Bewertungen",
         "padding_top": 5,
         "padding_bottom": 5,
-        "show_rating": true
+        "select_quelle": "judgeme",
+        "show_rating": true,
+        "text_bewertung_zahl": "4,83",
+        "text_anzahl_bewertungen": "17 982 Bewertungen"
       }
     },
     "faq_accordion_6xnCFe": {
