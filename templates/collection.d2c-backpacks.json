@@ -107,6 +107,8 @@
         "kategorie-bild"
       ],
       "settings": {
+        "text_headline": "",
+        "textarea_beschreibung": "",
         "padding_top": 2.5,
         "padding_bottom": 2.5,
         "bg_color": "#ffffff",
@@ -129,7 +131,7 @@
         "promo1_position": 6,
         "promo1_large": true,
         "promo1_bg": "#162040",
-        "promo1_bg_opacity": 1,
+        "promo1_bg_opacity": 0.4,
         "show_promo2": false,
         "promo2_position": 0,
         "promo2_large": true,
@@ -162,15 +164,15 @@
       "block_order": [
         "testimonial"
       ],
-      "disabled": true,
       "settings": {
         "text_uberschrift": "Was unsere Kund:innen sagen",
-        "text_bewertung_zahl": "4,83",
         "text_bewertung_label": "Hervorragend",
-        "text_anzahl_bewertungen": "17 982 Bewertungen",
         "padding_top": 4,
         "padding_bottom": 4,
-        "show_rating": true
+        "select_quelle": "judgeme",
+        "show_rating": true,
+        "text_bewertung_zahl": "4,83",
+        "text_anzahl_bewertungen": "17 982 Bewertungen"
       }
     }
   },
