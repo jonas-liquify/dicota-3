@@ -22,11 +22,7 @@
                             <div li-if:inside="section.settings.show_promo1 and forloop.index == section.settings.promo1_position" style="display:contents" inside="1">
         {% if section.settings.show_promo1 and forloop.index == section.settings.promo1_position %}
             <div class="coll_grid-item coll_promo-card{% unless section.settings.promo1_large %} is-normal{% endunless %}" style="background-color: {{ section.settings.promo1_bg }};"><div class="coll_promo-card_inner"><div class="coll_promo-card_media">{% if section.settings.image_promo_1_bild != blank %}    <span class="li-guard" li-if="section.settings.image_promo_1_bild != blank">
-    {% if section.settings.image_promo_1_bild %}
-{{ section.settings.image_promo_1_bild | image_url: width: 1200 | image_tag: loading: 'lazy', class: 'coll_promo-card_image' }}
-{% else %}
-<img src="{{ 'placeholder.svg' | asset_url }}" loading="lazy" alt="" class="coll_promo-card_image">
-{% endif %}    </span>
+    <img li-object:src="section.settings.image_promo_1_bild | image_url: width: 1200" src="{{ section.settings.image_promo_1_bild | image_url: width: 1200 }}" loading="lazy" alt="" class="coll_promo-card_image">    </span>
 {% endif %}</div><div class="coll_promo-card_overlay" style="background-color: {{ section.settings.promo1_bg | color_modify: 'alpha', section.settings.promo1_bg_opacity }};"></div><div class="coll_promo-card_content"><h3 class="coll_promo-card_title">
 {{ section.settings.text_promo_1_headline }}
 </h3>{% if section.settings.textarea_promo_1_text != blank %}    <div class="li-guard" li-if="section.settings.textarea_promo_1_text != blank">
@@ -38,11 +34,7 @@
                             <div li-if:inside="section.settings.show_promo2 and forloop.index == section.settings.promo2_position" style="display:contents" inside="1">
         {% if section.settings.show_promo2 and forloop.index == section.settings.promo2_position %}
             <div class="coll_grid-item coll_promo-card{% unless section.settings.promo2_large %} is-normal{% endunless %}" style="background-color: {{ section.settings.promo2_bg }};"><div class="coll_promo-card_inner"><div class="coll_promo-card_media">{% if section.settings.image_promo_2_bild != blank %}    <span class="li-guard" li-if="section.settings.image_promo_2_bild != blank">
-    {% if section.settings.image_promo_2_bild %}
-{{ section.settings.image_promo_2_bild | image_url: width: 1200 | image_tag: loading: 'lazy', class: 'coll_promo-card_image' }}
-{% else %}
-<img src="{{ 'placeholder.svg' | asset_url }}" loading="lazy" alt="" class="coll_promo-card_image">
-{% endif %}    </span>
+    <img li-object:src="section.settings.image_promo_2_bild | image_url: width: 1200" src="{{ section.settings.image_promo_2_bild | image_url: width: 1200 }}" loading="lazy" alt="" class="coll_promo-card_image">    </span>
 {% endif %}</div><div class="coll_promo-card_overlay" style="background-color: {{ section.settings.promo2_bg | color_modify: 'alpha', section.settings.promo2_bg_opacity }};"></div><div class="coll_promo-card_content"><h3 class="coll_promo-card_title">
 {{ section.settings.text_promo_2_headline }}
 </h3>{% if section.settings.textarea_promo_2_text != blank %}    <div class="li-guard" li-if="section.settings.textarea_promo_2_text != blank">
@@ -139,11 +131,6 @@
     "class": "section_collection-products",
     "settings": [
         {
-            "id": "image_promo_1_bild",
-            "type": "image_picker",
-            "label": "Promo 1 Bild"
-        },
-        {
             "id": "text_promo_1_headline",
             "type": "text",
             "label": "Promo 1 Headline",
@@ -165,11 +152,6 @@
             "type": "text",
             "label": "Promo 1 Button",
             "default": "SHOP NOW"
-        },
-        {
-            "id": "image_promo_2_bild",
-            "type": "image_picker",
-            "label": "Promo 2 Bild"
         },
         {
             "id": "text_promo_2_headline",
@@ -217,6 +199,12 @@
             "default": true
         },
         {
+            "type": "image_picker",
+            "id": "image_promo_1_bild",
+            "label": "Promo 1 Bild",
+            "info": "Leer lassen = nur Hintergrundfarbe."
+        },
+        {
             "type": "color",
             "id": "promo1_bg",
             "label": "Promo 1 Hintergrundfarbe",
@@ -249,6 +237,12 @@
             "id": "promo2_large",
             "label": "Promo 2 gro\u00df (\u00fcber 2 Kacheln)",
             "default": true
+        },
+        {
+            "type": "image_picker",
+            "id": "image_promo_2_bild",
+            "label": "Promo 2 Bild",
+            "info": "Leer lassen = nur Hintergrundfarbe."
         },
         {
             "type": "color",
