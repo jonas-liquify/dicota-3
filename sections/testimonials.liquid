@@ -1,22 +1,26 @@
-<div class="padding-global" style="padding-top: {{ section.settings.padding_top }}rem; padding-bottom: {{ section.settings.padding_bottom }}rem;"><div class="container-large"><header class="testimonials_header"><h2 class="testimonials_title heading-style-h2">
+<div class="li-tag w-embed">{% assign jm_store = shop.metafields.judgeme.reviews_grid.value.store_reviews.reviews %}{% assign jm_store_rating = shop.metafields.judgeme.shop_reviews_rating %}{% assign jm_store_count = shop.metafields.judgeme.shop_reviews_count %}</div><div class="padding-global" style="padding-top: {{ section.settings.padding_top }}rem; padding-bottom: {{ section.settings.padding_bottom }}rem;"><div class="container-large"><header class="testimonials_header"><h2 class="testimonials_title heading-style-h2">
 {{ section.settings.text_uberschrift }}
 </h2>{% if section.settings.show_rating %}    <div li-if="section.settings.show_rating" class="testimonials_rating">
-    <div class="testimonials_rating-stars" aria-hidden="true"><svg viewbox="0 0 100 20" xmlns="http://www.w3.org/2000/svg"><g fill="#479ef8"><polygon points="10,0 12.3,7.2 20,7.2 13.9,11.6 16.2,18.8 10,14.4 3.8,18.8 6.1,11.6 0,7.2 7.7,7.2"></polygon><polygon points="30,0 32.3,7.2 40,7.2 33.9,11.6 36.2,18.8 30,14.4 23.8,18.8 26.1,11.6 20,7.2 27.7,7.2"></polygon><polygon points="50,0 52.3,7.2 60,7.2 53.9,11.6 56.2,18.8 50,14.4 43.8,18.8 46.1,11.6 40,7.2 47.7,7.2"></polygon><polygon points="70,0 72.3,7.2 80,7.2 73.9,11.6 76.2,18.8 70,14.4 63.8,18.8 66.1,11.6 60,7.2 67.7,7.2"></polygon><polygon points="90,0 92.3,7.2 100,7.2 93.9,11.6 96.2,18.8 90,14.4 83.8,18.8 86.1,11.6 80,7.2 87.7,7.2"></polygon></g></svg></div><span class="testimonials_rating-score">
-{{ section.settings.text_bewertung_zahl }}
-</span><span class="testimonials_rating-label">
+    <div class="testimonials_rating-stars" aria-hidden="true"><svg viewbox="0 0 100 20" xmlns="http://www.w3.org/2000/svg"><g fill="#479ef8"><polygon points="10,0 12.3,7.2 20,7.2 13.9,11.6 16.2,18.8 10,14.4 3.8,18.8 6.1,11.6 0,7.2 7.7,7.2"></polygon><polygon points="30,0 32.3,7.2 40,7.2 33.9,11.6 36.2,18.8 30,14.4 23.8,18.8 26.1,11.6 20,7.2 27.7,7.2"></polygon><polygon points="50,0 52.3,7.2 60,7.2 53.9,11.6 56.2,18.8 50,14.4 43.8,18.8 46.1,11.6 40,7.2 47.7,7.2"></polygon><polygon points="70,0 72.3,7.2 80,7.2 73.9,11.6 76.2,18.8 70,14.4 63.8,18.8 66.1,11.6 60,7.2 67.7,7.2"></polygon><polygon points="90,0 92.3,7.2 100,7.2 93.9,11.6 96.2,18.8 90,14.4 83.8,18.8 86.1,11.6 80,7.2 87.7,7.2"></polygon></g></svg></div><span li-object="section.settings.text_bewertung_zahl | default: jm_store_rating" class="testimonials_rating-score">{{ section.settings.text_bewertung_zahl | default: jm_store_rating }}</span><span class="testimonials_rating-label">
 {{ section.settings.text_bewertung_label }}
-</span><span class="testimonials_rating-count">
-{{ section.settings.text_anzahl_bewertungen }}
-</span>{% if section.settings.image_provider_logo != blank %}    <span class="li-guard" li-if="section.settings.image_provider_logo != blank">
+</span><span li-object="section.settings.text_anzahl_bewertungen | default: jm_store_count" class="testimonials_rating-count">{{ section.settings.text_anzahl_bewertungen | default: jm_store_count }}</span>{% if section.settings.image_provider_logo != blank %}    <span class="li-guard" li-if="section.settings.image_provider_logo != blank">
     {% if section.settings.image_provider_logo %}
 {{ section.settings.image_provider_logo | image_url: width: 60 | image_tag: loading: 'lazy', class: 'testimonials_rating-logo' }}
 {% else %}
 <img src="{{ 'placeholder.svg' | asset_url }}" loading="lazy" alt="" class="testimonials_rating-logo">
 {% endif %}    </span>
 {% endif %}    </div>
-{% endif %}</header><div class="testimonials_slider-wrapper"><div class="testimonials_swiper swiper"><div li-cf-theme-blocks="" class="swiper-wrapper testimonials_list">
+{% endif %}</header><div class="testimonials_slider-wrapper"><div class="li-tag w-embed">{% unless section.settings.select_quelle == 'judgeme' %}</div><div class="testimonials_swiper swiper"><div li-cf-theme-blocks="" class="swiper-wrapper testimonials_list">
 {% content_for 'blocks' %}
-</div><button type="button" class="testimonials_arrow swiper-button-next" aria-label="Next"><div class="icon-embed-xsmall w-embed">{% render 'icon_chevron_right' %}</div></button><button type="button" class="testimonials_arrow is-prev swiper-button-prev" aria-label="Previous"><div class="icon-embed-xsmall w-embed">{% render 'icon_chevron_left' %}</div></button></div></div></div></div><div class="hide w-embed w-script"><script>document.addEventListener("DOMContentLoaded", function() { var ensure = function(cb) { if (typeof Swiper !== "undefined") return cb(); if (window.__swiperLoading) return window.__swiperLoading.then(cb); var s = document.createElement("script"); s.src = "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"; var link = document.createElement("link"); link.rel = "stylesheet"; link.href = "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"; document.head.appendChild(link); window.__swiperLoading = new Promise(function(res) { s.onload = res; }); document.head.appendChild(s); window.__swiperLoading.then(cb); }; ensure(function() { document.querySelectorAll(".testimonials_swiper.swiper").forEach(function(el) { if (el.swiper) return; var root = el.closest(".section_testimonials") || document; new Swiper(el, { slidesPerView: 1.1, spaceBetween: 16, breakpoints: { 480: { slidesPerView: 2.2 }, 768: { slidesPerView: 3 }, 992: { slidesPerView: 4 } }, navigation: { nextEl: root.querySelector(".testimonials_arrow.swiper-button-next"), prevEl: root.querySelector(".testimonials_arrow.is-prev"), disabledClass: "swiper-button-disabled" } }); }); }); });</script></div> {% schema %} {
+</div></div><div class="li-tag w-embed">{% endunless %}</div><div class="li-tag w-embed">{% if section.settings.select_quelle == 'judgeme' %}</div><div class="testimonials_swiper swiper"><div class="swiper-wrapper testimonials_list">{% for review in jm_store %}    <article li-for="review in jm_store" class="swiper-slide testimonials_card">
+                                    <div class="testimonials_card-body"><div class="testimonials_card-stars" aria-hidden="true"><div class="testimonials_card-star-mask" style="--rating: {{ review.rating }}"></div></div>{% if review.title != blank %}    <div class="li-guard" li-if="review.title != blank">
+    <h3 li-object="review.title" class="testimonials_card-headline">{{ review.title }}</h3>    </div>
+{% endif %}<div class="testimonials_card-text"><p li-object="review.body" class="testimonials_card-quote">{{ review.body }}</p></div></div>
+                            <footer class="testimonials_card-footer"><div class="testimonials_card-author"><span li-object="review.reviewer_name" class="testimonials_card-author-name">{{ review.reviewer_name }}</span>{% if review.verified_buyer %}    <span li-if="review.verified_buyer" class="testimonials_card-author-badge" aria-label="Verified">
+    <svg width="11" height="22" viewbox="0 0 11 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.5 4L1 6V11C1 14 3 16.5 5.5 17.5C8 16.5 10 14 10 11V6L5.5 4Z" fill="currentColor" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"></path><path d="M3.5 10.5L4.8 12L8 8.5" stroke="white" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path></svg>    </span>
+{% endif %}</div><span li-object="review.created_at | date: '%-d. %B %Y'" class="testimonials_card-time">{{ review.created_at | date: '%-d. %B %Y' }}</span></footer>
+                        </article>
+{% endfor %}</div></div><div class="li-tag w-embed">{% endif %}</div><button type="button" class="testimonials_arrow swiper-button-next" aria-label="Next"><div class="icon-embed-xsmall w-embed">{% render 'icon_chevron_right' %}</div></button><button type="button" class="testimonials_arrow is-prev swiper-button-prev" aria-label="Previous"><div class="icon-embed-xsmall w-embed">{% render 'icon_chevron_left' %}</div></button></div></div></div><div class="hide w-embed w-script"><script>document.addEventListener("DOMContentLoaded", function() { var ensure = function(cb) { if (typeof Swiper !== "undefined") return cb(); if (window.__swiperLoading) return window.__swiperLoading.then(cb); var s = document.createElement("script"); s.src = "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"; var link = document.createElement("link"); link.rel = "stylesheet"; link.href = "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"; document.head.appendChild(link); window.__swiperLoading = new Promise(function(res) { s.onload = res; }); document.head.appendChild(s); window.__swiperLoading.then(cb); }; ensure(function() { document.querySelectorAll(".testimonials_swiper.swiper").forEach(function(el) { if (el.swiper) return; var root = el.closest(".section_testimonials") || document; new Swiper(el, { slidesPerView: 1.1, spaceBetween: 16, breakpoints: { 480: { slidesPerView: 2.2 }, 768: { slidesPerView: 3 }, 992: { slidesPerView: 4 } }, navigation: { nextEl: root.querySelector(".testimonials_arrow.swiper-button-next"), prevEl: root.querySelector(".testimonials_arrow.is-prev"), disabledClass: "swiper-button-disabled" } }); }); }); });</script></div> {% schema %} {
     "tag": "section",
     "name": "Testimonials",
     "class": "section_testimonials",
@@ -36,22 +40,10 @@
             "default": "What our customers say"
         },
         {
-            "id": "text_bewertung_zahl",
-            "type": "text",
-            "label": "Bewertung (Zahl)",
-            "default": "4,83"
-        },
-        {
             "id": "text_bewertung_label",
             "type": "text",
             "label": "Bewertung (Label)",
             "default": "Excellent"
-        },
-        {
-            "id": "text_anzahl_bewertungen",
-            "type": "text",
-            "label": "Anzahl Bewertungen",
-            "default": "17,982 reviews"
         },
         {
             "id": "image_provider_logo",
@@ -84,6 +76,27 @@
         },
         {
             "type": "header",
+            "content": "Inhalts-Quelle"
+        },
+        {
+            "type": "select",
+            "id": "select_quelle",
+            "label": "Quelle der Testimonials",
+            "options": [
+                {
+                    "value": "judgeme",
+                    "label": "judge.me Store-Bewertungen (automatisch)"
+                },
+                {
+                    "value": "blocks",
+                    "label": "Manuell gepflegte Bl\u00f6cke"
+                }
+            ],
+            "default": "judgeme",
+            "info": "\u201ejudge.me\" zieht die Shop-Bewertungen aus dem Metafeld judgeme.reviews_grid (store_reviews). \u201eManuell\" nutzt die unten gepflegten Testimonial-Bl\u00f6cke."
+        },
+        {
+            "type": "header",
             "content": "Gesamt-Bewertung"
         },
         {
@@ -91,6 +104,18 @@
             "id": "show_rating",
             "label": "Gesamt-Bewertungs-Zeile unter dem Titel anzeigen",
             "default": true
+        },
+        {
+            "type": "text",
+            "id": "text_bewertung_zahl",
+            "label": "Bewertung (Zahl)",
+            "info": "Leer lassen = Wert aus judge.me (shop_reviews_rating)."
+        },
+        {
+            "type": "text",
+            "id": "text_anzahl_bewertungen",
+            "label": "Anzahl Bewertungen",
+            "info": "Leer lassen = Wert aus judge.me (shop_reviews_count)."
         }
     ],
     "presets": [

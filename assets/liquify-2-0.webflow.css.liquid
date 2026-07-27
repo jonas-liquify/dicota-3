@@ -1371,11 +1371,12 @@ figcaption {
 }
 
 .mini-cart_line-item_img {
-  border: 1px solid var(--base-color-neutral--neutral-lighter);
   background-color: var(--base-color-neutral--neutral-lightest);
   object-fit: contain;
-  width: 5rem;
-  height: 5rem;
+  mix-blend-mode: darken;
+  width: 6.625rem;
+  height: 8.0625rem;
+  flex-shrink: 0;
 }
 
 .mini-cart_full {
@@ -4113,7 +4114,9 @@ figcaption {
   .product-loved-by_grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  .product-loved-by_col:nth-child(even) { margin-top: 1.5rem; }
+  .product-loved-by_col:nth-child(even) {
+    margin-top: 1.5rem;
+  }
   .product-comparison_layout.product-comparison_layout {
     grid-template-columns: 1fr;
   }
@@ -4193,9 +4196,6 @@ figcaption {
   .collection-intro_layout {
     grid-template-columns: 1fr;
     gap: 2rem;
-  }
-  .collection-intro_tiles.collection-intro_tiles {
-    grid-template-columns: repeat(3, 1fr);
   }
   .coll_filter-bar-outer {
     top: 0;
@@ -4618,8 +4618,14 @@ figcaption {
     height: 3rem;
   }
   #w-node-_5eccf730-c887-5204-0e0c-693f99a732bf-99a7328f, #w-node-_5eccf730-c887-5204-0e0c-693f99a732d3-99a7328f { justify-self: start; }
-  .section_collection-header > .padding-global { padding-top: 3rem; padding-bottom: 4rem; }
-  .section_feature-product > .padding-global { padding-top: 3rem; padding-bottom: 4rem; }
+  .section_collection-header > .padding-global {
+    padding-top: 3rem;
+    padding-bottom: 4rem;
+  }
+  .section_feature-product > .padding-global {
+    padding-top: 3rem;
+    padding-bottom: 4rem;
+  }
   .icon-cards_card.is-line-right,
   .icon-cards_card.is-line-left { border-right: none; border-left: none; }
   .solutions_grid,
@@ -4630,7 +4636,12 @@ figcaption {
   .split-image_content-wrapper.is-right-image { padding: 3rem 1.5rem; max-width: 100%; }
   .reseller-header_btn-outline,
   .reseller-header_btn-solid { padding: 0.625rem 1rem; font-size: 0.8125rem; }
-  .product-header_gallery > .swiper.is-product-gallery { width: 100%; aspect-ratio: 1 / 1; height: auto !important; max-height: 32.5rem; }
+  .product-header_gallery > .swiper.is-product-gallery {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    height: auto !important;
+    max-height: 32.5rem;
+  }
   .nav_container > .nav_menu-button {
     order: 1;
   }
@@ -4815,9 +4826,6 @@ figcaption {
     flex-wrap: wrap;
     gap: .75rem 1rem;
   }
-  .ph_gallery-more {
-    display: none;
-  }
   .sol-feature {
     grid-template-columns: 1fr;
   }
@@ -4856,8 +4864,14 @@ figcaption {
   .nav_menu-dropdown .nav_dropdown-toggle.nav_dropdown-toggle {
     opacity: 1;
   }
-  .section_collection-header > .padding-global { padding-bottom: 4rem; padding-top: 3rem; }
-  .section_feature-product > .padding-global { padding-bottom: 4rem; padding-top: 3rem; }
+  .section_collection-header > .padding-global {
+    padding-bottom: 4rem;
+    padding-top: 3rem;
+  }
+  .section_feature-product > .padding-global {
+    padding-bottom: 4rem;
+    padding-top: 3rem;
+  }
   .hero_headline.hero_headline {
     font-size: 1.75rem;
   }
@@ -4903,14 +4917,20 @@ figcaption {
   .coll_grid.coll_grid {
     grid-template-columns: repeat(3, 1fr);
   }
-  .section_collection-header > .padding-global.padding-global { padding-top: 3rem; padding-bottom: 4rem; }
+  .section_collection-header > .padding-global.padding-global {
+    padding-top: 3rem;
+    padding-bottom: 4rem;
+  }
   .collection-header_title.collection-header_title {
     font-size: 2.25rem;
   }
   .collection-header_layout.collection-header_layout {
     gap: 2rem;
   }
-  .section_feature-product > .padding-global.padding-global { padding-top: 3rem; padding-bottom: 4rem; }
+  .section_feature-product > .padding-global.padding-global {
+    padding-top: 3rem;
+    padding-bottom: 4rem;
+  }
   .feature-product_card.feature-product_card {
     grid-template-columns: 1fr;
     aspect-ratio: auto;
@@ -5627,7 +5647,13 @@ figcaption {
     font-size: 1.5rem;
   }
   .collection-intro_tiles.collection-intro_tiles {
-    grid-template-columns: 1fr;
+    flex-direction: column;
+  }
+  .collection-intro_tile.collection-intro_tile {
+    width: 100%;
+  }
+  .collection-intro_arrow.collection-intro_arrow {
+    display: none;
   }
   .coll_grid {
     grid-template-columns: repeat(2, 1fr);
@@ -5767,7 +5793,9 @@ figcaption {
     top: 0;
     bottom: auto;
   }
-  .section_collection-image-hero > .padding-global { min-height: 25rem; }
+  .section_collection-image-hero > .padding-global {
+    min-height: 25rem;
+  }
   .swiper-slide.recommended-products_item {
     width: 16rem;
   }
@@ -5883,7 +5911,9 @@ figcaption {
     grid-template-columns: 1fr;
     gap: 1rem;
   }
-  .section_collection-image-hero > .padding-global.padding-global { min-height: 25rem; }
+  .section_collection-image-hero > .padding-global.padding-global {
+    min-height: 25rem;
+  }
   .collection-image-hero_content.collection-image-hero_content {
     max-width: 100%;
   }
@@ -6291,7 +6321,13 @@ figcaption {
     font-size: 1.25rem;
   }
   .collection-intro_tiles.collection-intro_tiles {
-    grid-template-columns: 1fr;
+    flex-direction: column;
+  }
+  .collection-intro_tile.collection-intro_tile {
+    width: 100%;
+  }
+  .collection-intro_arrow.collection-intro_arrow {
+    display: none;
   }
   .coll_grid {
     grid-template-columns: repeat(2, 1fr);
@@ -6516,8 +6552,14 @@ figcaption {
   #w-node-a6506aa7-2131-c33e-ed5e-bebd7fad867a-7fad8674, #w-node-a6506aa7-2131-c33e-ed5e-bebd7fad8683-7fad8674 { grid-area: span 1 / span 1 / span 1 / span 1; }
   .produkt_swatch-item,
   .produkt_swatch-link { width: 4.5rem; }
-  .section_collection-header > .padding-global { padding-top: 2rem; padding-bottom: 3rem; }
-  .section_feature-product > .padding-global { padding-top: 2rem; padding-bottom: 3rem; }
+  .section_collection-header > .padding-global {
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+  }
+  .section_feature-product > .padding-global {
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+  }
   .solutions_grid,
   .solutions_grid.is-3-columns { grid-template-columns: 1fr; }
   .split-image_content-wrapper.is-left-image,
@@ -6546,8 +6588,14 @@ figcaption {
     grid-auto-flow: row;
     grid-template-columns: 1fr;
   }
-  .section_collection-header > .padding-global { padding-bottom: 3rem; padding-top: 2rem; }
-  .section_feature-product > .padding-global { padding-bottom: 3rem; padding-top: 2rem; }
+  .section_collection-header > .padding-global {
+    padding-bottom: 3rem;
+    padding-top: 2rem;
+  }
+  .section_feature-product > .padding-global {
+    padding-bottom: 3rem;
+    padding-top: 2rem;
+  }
   .hero_headline.hero_headline {
     font-size: 1.5rem;
   }
@@ -6564,11 +6612,17 @@ figcaption {
     grid-template-columns: repeat(2, 1fr);
     gap: 0.75rem 0.5rem;
   }
-  .section_collection-header > .padding-global.padding-global { padding-top: 2rem; padding-bottom: 3rem; }
+  .section_collection-header > .padding-global.padding-global {
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+  }
   .collection-header_title.collection-header_title {
     font-size: 1.75rem;
   }
-  .section_feature-product > .padding-global.padding-global { padding-top: 2rem; padding-bottom: 3rem; }
+  .section_feature-product > .padding-global.padding-global {
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+  }
   .feature-product_content.feature-product_content {
     padding: 1.5rem 1rem;
   }
@@ -6686,6 +6740,19 @@ figcaption {
   }
   .footer_contact-list {
     grid-row-gap: 1.5rem;
+  }
+  .ph_id-copy.ph_id-copy {
+    min-width: 2rem;
+  }
+  .ph_id-copy.w-embed {
+    min-width: 0.8rem;
+  }
+  .ph_price-row {
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .product-header_details {
+    column-gap: 0;
   }
 }
 
@@ -7385,7 +7452,7 @@ figcaption {
   position: static;
   display: flex;
   align-items: center;
-  gap: .75rem;       /* .75rem between bullets */
+  gap: .75rem;
   width: auto;
   bottom: auto;
   left: auto;
@@ -7632,10 +7699,18 @@ figcaption {
   color: inherit;
 }
 
+/* Wrapper exakt auf die Content-Box des Links legen (inset == dessen padding).
+   Vorher: height:100% — eine Prozent-Höhe gegen ein Elternelement, dessen Höhe
+   nur aus aspect-ratio kommt. Das löst je nach Rendering-Kontext (Builder-Canvas
+   vs. Browser) unterschiedlich auf; im Builder wurde der Wrapper dadurch höher
+   als der sichtbare Bildbereich, sodass die daran verankerten Overlays (Badge,
+   Rating, Hover-CTA) unten aus dem overflow:hidden herausliefen und abgeschnitten
+   wurden. Mit inset ist die Box in jedem Kontext identisch. */
 .product-card_image-wrapper {
-  position: relative;
-  width: 100%;
-  height: 100%;
+  position: absolute;
+  inset: .625rem;
+  width: auto;
+  height: auto;
   background-color: #f4f4f4;
 }
 
@@ -7671,7 +7746,7 @@ figcaption {
   left: 0;
   background-color: #cc0404;
   filter: drop-shadow(0 1px 1px rgba(0, 0, 0, .1));
-  padding: .25rem .5rem;
+  padding: .125rem .5rem;
   z-index: 2;
 }
 
@@ -7680,7 +7755,8 @@ figcaption {
   font-family: "Futura PT", sans-serif;
   font-weight: 500;
   font-size: .6875rem;
-  line-height: 1.5;
+  line-height: 1.3;
+  display: block;
   white-space: nowrap;
 }
 
@@ -8719,7 +8795,7 @@ figcaption {
     rgba(255, 255, 255, .25) calc(var(--rating, 5) * 20%)
   );
   -webkit-mask: url(data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 12'><g fill='black'><polygon points='6,0 7.4,4.3 12,4.3 8.3,7 9.7,11.3 6,8.6 2.3,11.3 3.7,7 0,4.3 4.6,4.3'/><polygon points='18,0 19.4,4.3 24,4.3 20.3,7 21.7,11.3 18,8.6 14.3,11.3 15.7,7 12,4.3 16.6,4.3'/><polygon points='30,0 31.4,4.3 36,4.3 32.3,7 33.7,11.3 30,8.6 26.3,11.3 27.7,7 24,4.3 28.6,4.3'/><polygon points='42,0 43.4,4.3 48,4.3 44.3,7 45.7,11.3 42,8.6 38.3,11.3 39.7,7 36,4.3 40.6,4.3'/><polygon points='54,0 55.4,4.3 60,4.3 56.3,7 57.7,11.3 54,8.6 50.3,11.3 51.7,7 48,4.3 52.6,4.3'/></g></svg>) center/contain no-repeat;
-          mask: url(data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 12'><g fill='black'><polygon points='6,0 7.4,4.3 12,4.3 8.3,7 9.7,11.3 6,8.6 2.3,11.3 3.7,7 0,4.3 4.6,4.3'/><polygon points='18,0 19.4,4.3 24,4.3 20.3,7 21.7,11.3 18,8.6 14.3,11.3 15.7,7 12,4.3 16.6,4.3'/><polygon points='30,0 31.4,4.3 36,4.3 32.3,7 33.7,11.3 30,8.6 26.3,11.3 27.7,7 24,4.3 28.6,4.3'/><polygon points='42,0 43.4,4.3 48,4.3 44.3,7 45.7,11.3 42,8.6 38.3,11.3 39.7,7 36,4.3 40.6,4.3'/><polygon points='54,0 55.4,4.3 60,4.3 56.3,7 57.7,11.3 54,8.6 50.3,11.3 51.7,7 48,4.3 52.6,4.3'/></g></svg>) center/contain no-repeat;
+  mask: url(data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 12'><g fill='black'><polygon points='6,0 7.4,4.3 12,4.3 8.3,7 9.7,11.3 6,8.6 2.3,11.3 3.7,7 0,4.3 4.6,4.3'/><polygon points='18,0 19.4,4.3 24,4.3 20.3,7 21.7,11.3 18,8.6 14.3,11.3 15.7,7 12,4.3 16.6,4.3'/><polygon points='30,0 31.4,4.3 36,4.3 32.3,7 33.7,11.3 30,8.6 26.3,11.3 27.7,7 24,4.3 28.6,4.3'/><polygon points='42,0 43.4,4.3 48,4.3 44.3,7 45.7,11.3 42,8.6 38.3,11.3 39.7,7 36,4.3 40.6,4.3'/><polygon points='54,0 55.4,4.3 60,4.3 56.3,7 57.7,11.3 54,8.6 50.3,11.3 51.7,7 48,4.3 52.6,4.3'/></g></svg>) center/contain no-repeat;
 }
 
 .loved-by_product-review-count {
@@ -9836,10 +9912,12 @@ button.li-lang_dd-link {
   width: calc(25% - 1.5rem);
   flex-shrink: 0;
 }
+/* Abstand Bild -> Headline: 1.5rem wirkte gegenüber der großen
+   Uppercase-Headline zu gedrängt. */
 .product-features_item {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 2.25rem;
 }
 .product-features_img-wrap {
   aspect-ratio: 3 / 4;
@@ -9937,7 +10015,9 @@ button.li-lang_dd-link {
   height: clamp(28rem, 50vw, 44rem);
 }
 /* Wrappers from li-if:inside are transparent — let img act as the grid child */
-.product-loved-by_grid > div { display: contents; }
+.product-loved-by_grid > div {
+  display: contents;
+}
 .product-loved-by_img {
   width: 100%;
   height: 100%;
@@ -10467,7 +10547,7 @@ button.li-lang_dd-link {
 /* ── Block: Preis ─────────────────────────────────────────── */
 .ph_price-row {
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 1rem;
 }
@@ -10531,7 +10611,7 @@ button.li-lang_dd-link {
 .ph_form {
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
+  gap: 2rem;
 }
 .ph_options {
   display: flex;
@@ -10759,9 +10839,11 @@ button.li-lang_dd-link {
 .ph_tab-panels {
   padding-top: 1.25rem;
 }
+/* Eingeklappte Höhe: 8.75rem entsprachen ~5,5 Zeilen (Zeilenhöhe 1.6rem).
+   +6 Zeilen = +9.6rem -> 18.35rem, aufgerundet auf 18.5rem (~11,5 Zeilen). */
 .ph_tab-panel {
   display: none;
-  max-height: 8.75rem;
+  max-height: 18.5rem;
   overflow: hidden;
   position: relative;
 }
@@ -10779,6 +10861,12 @@ button.li-lang_dd-link {
   pointer-events: none;
 }
 .ph_tab-panel.is-expanded::after {
+  display: none;
+}
+.ph_tab-panel.ph_tab-panel-downloads {
+  max-height: none;
+}
+.ph_tab-panel.ph_tab-panel-downloads::after {
   display: none;
 }
 .ph_see-more {
@@ -11102,14 +11190,59 @@ button.li-lang_dd-link {
   color: #3a3a3a;
 }
 
+.collection-intro_slider-wrapper {
+  position: relative;
+}
+
+.collection-intro_swiper {
+  width: 100%;
+  overflow: hidden;
+}
+
 .collection-intro_tiles {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
   gap: 1.25rem;
 }
 
 .collection-intro_tile {
   display: block;
+  width: calc((100% - 2.5rem) / 3);
+  flex-shrink: 0;
+}
+
+.collection-intro_arrow {
+  position: absolute;
+  top: 40%;
+  right: -1.25rem;
+  z-index: 3;
+  width: 3rem;
+  height: 3rem;
+  padding: 0;
+  border: none;
+  border-radius: 62.4375rem;
+  background-color: rgba(15, 15, 15, .7);
+  backdrop-filter: blur(.3125rem);
+  color: var(--base-color-neutral--white);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-50%);
+  transition: background-color .2s ease;
+}
+.collection-intro_arrow:hover {
+  background-color: rgba(15, 15, 15, .9);
+}
+.collection-intro_arrow.is-prev {
+  left: -1.25rem;
+  right: auto;
+}
+.collection-intro_arrow.swiper-button-disabled {
+  opacity: .3;
+  pointer-events: none;
+}
+.collection-intro_arrow.swiper-button-lock {
+  display: none;
 }
 
 .collection-intro_tile-link {
@@ -11122,7 +11255,7 @@ button.li-lang_dd-link {
 
 .collection-intro_tile-media {
   width: 100%;
-  aspect-ratio: 3 / 4;
+  aspect-ratio: 1 / 1;
   overflow: hidden;
   background-color: #f6f6f6;
 }
@@ -11165,7 +11298,6 @@ button.li-lang_dd-link {
   top: 4.5rem;
   z-index: 30;
   background-color: #ffffff;
-  border-bottom: 1px solid #e8e8e8;
 }
 
 .coll_filter-bar-outer > .padding-global {
@@ -11206,7 +11338,6 @@ button.li-lang_dd-link {
   padding: 0.875rem 1rem;
   background: none;
   border: none;
-  border-right: 1px solid #e8e8e8;
   cursor: pointer;
   font-family: "Futura PT", sans-serif;
   font-size: 0.875rem;
@@ -11219,6 +11350,10 @@ button.li-lang_dd-link {
 .coll_filter-pill:hover,
 .coll_filter-pill.is-open {
   background-color: #f6f6f6;
+}
+
+.coll_filter-pill:has(.coll_filter-active-count) .coll_filter-pill-label {
+  font-weight: 700;
 }
 
 .coll_filter-pill .icon-embed-xsmall {
@@ -11293,7 +11428,6 @@ button.li-lang_dd-link {
   gap: 0.5rem;
   flex-shrink: 0;
   padding: 0.875rem 0 0.875rem 1rem;
-  border-left: 1px solid #e8e8e8;
 }
 
 .coll_sort-label {
@@ -14308,7 +14442,11 @@ button.li-lang_dd-link {
 .reseller-hub_btn {
   width: 100%;
 }
-.reseller-hub_btn:not(.is-on-dark) { background-color: #ffffff; border-color: #ffffff; color: #0f0f0f; }
+.reseller-hub_btn:not(.is-on-dark) {
+  background-color: #ffffff;
+  border-color: #ffffff;
+  color: #0f0f0f;
+}
 
 /* ---- The Latest (editorial card slider) ---- */
 .section_the-latest {
@@ -14947,7 +15085,7 @@ button.li-lang_dd-link {
    ============================================================= */
 .ph_title-row {
   display: flex;
-  align-items: flex-start;
+  align-items: flex-end;
   justify-content: space-between;
   gap: 1.5rem;
   width: 100%;
@@ -14959,6 +15097,7 @@ button.li-lang_dd-link {
   align-items: flex-end;
   gap: .25rem;
   padding-top: .35rem;
+  margin-bottom: 0.5rem;
 }
 .ph_id-row {
   display: flex;
@@ -15457,8 +15596,12 @@ button.li-lang_dd-link {
   max-width: 47.5rem;
   color: #0f0f0f;
 }
-.article_body > * { margin: 0 0 1.5rem; }
-.article_body > *:last-child { margin-bottom: 0; }
+.article_body > * {
+  margin: 0 0 1.5rem;
+}
+.article_body > *:last-child {
+  margin-bottom: 0;
+}
 .article_body h2, .article_body h3 {
   font-family: "Futura PT", sans-serif;
   font-size: 2rem;
@@ -15771,13 +15914,14 @@ button.li-lang_dd-link {
 .nav_mega-promo {
   position: relative;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   min-height: 28rem;
   padding: 2.5rem;
   overflow: hidden;
   background-color: #1a2a4a;
   text-decoration: none;
   color: #ffffff;
+  justify-content: flex-start;
 }
 .nav_mega-promo::after {
   content: "";
@@ -15998,8 +16142,12 @@ button.li-lang_dd-link {
 .section_rating-bar .container-large {
   text-align: center;
 }
-.section_rating-bar .container-large:has(.rating-bar_inner.is-align-left) { text-align: left; }
-.section_rating-bar .container-large:has(.rating-bar_inner.is-align-right) { text-align: right; }
+.section_rating-bar .container-large:has(.rating-bar_inner.is-align-left) {
+  text-align: left;
+}
+.section_rating-bar .container-large:has(.rating-bar_inner.is-align-right) {
+  text-align: right;
+}
 
 .rating-bar_stars {
   width: 6.25rem;
@@ -16720,12 +16868,124 @@ button.li-lang_dd-link {
   display: flex;
 }
 
-/* Kreisrunder X-Button */
+/* Schließen-Icon (schlicht, kein Kreis-Hintergrund) */
 .mini-cart_close {
   cursor: pointer;
   justify-content: center;
   align-items: center;
+  width: 1.75rem;
+  height: 1.75rem;
   display: flex;
+}
+
+/* Item-Count in der Header-Überschrift */
+.mini-cart_header-count {
+  display: inline;
+}
+
+/* Social-Proof-Banner unter dem Header */
+.mini-cart_trust-banner {
+  background-color: var(--base-color-brand--blue);
+  padding: .25rem 1.5rem;
+  display: flex;
+}
+.mini-cart_trust-text {
+  color: #fff;
+  font-size: .625rem;
+  line-height: 1.66;
+  letter-spacing: -.00625rem;
+  margin: 0;
+}
+
+/* Titel in der Warenkorb-Zeile: uppercase wie im Figma-Design */
+.mini-cart_line-item_title {
+  text-transform: uppercase;
+}
+
+/* Cross-Sell "Das könnte dazu passen" */
+.mini-cart_crosssell {
+  background-color: #e5e5e54d;
+  flex-direction: column;
+  padding: 1.5rem 0;
+  display: flex;
+}
+.mini-cart_crosssell.hide {
+  display: none;
+}
+.mini-cart_crosssell-title {
+  text-align: center;
+  margin: 0 0 .25rem;
+  padding: 0 1.5rem;
+  font-size: .875rem;
+}
+.mini-cart_crosssell-list {
+  grid-column-gap: .25rem;
+  grid-row-gap: .25rem;
+  padding: 0 1.5rem;
+  display: flex;
+}
+.mini-cart_crosssell-item {
+  background-color: var(--base-color-neutral--white);
+  align-items: center;
+  display: flex;
+}
+.mini-cart_crosssell-img {
+  object-fit: cover;
+  mix-blend-mode: darken;
+  width: 5.4375rem;
+  height: 6.125rem;
+  flex-shrink: 0;
+}
+.mini-cart_crosssell-info {
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  padding: 0 .5rem;
+  display: flex;
+}
+.mini-cart_crosssell-text {
+  flex-direction: column;
+  display: flex;
+}
+.mini-cart_crosssell-name {
+  font-family: "Futura PT", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+}
+.mini-cart_crosssell-price {
+  opacity: .7;
+  font-size: .875rem;
+}
+.mini-cart_crosssell-form {
+  margin: 0;
+}
+.mini-cart_crosssell-add {
+  cursor: pointer;
+  background-color: var(--base-color-neutral--black);
+  color: #fff;
+  border: 0;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  width: 1.875rem;
+  height: 1.875rem;
+  padding: .5rem;
+  display: flex;
+}
+.mini-cart_crosssell-add:hover {
+  opacity: .8;
+}
+
+/* Zahlarten-Icons + Vertrauens-Text im Footer */
+.mini-cart_payments {
+  justify-content: center;
+  display: flex;
+}
+.mini-cart_guarantee-text {
+  text-align: center;
+  opacity: .7;
+  margin: 0;
+  font-size: .625rem;
 }
 
 /* Leerer Warenkorb */
@@ -16791,17 +17051,15 @@ button.li-lang_dd-link {
 
 /* Progress-Bar Spur */
 .mini-cart_footer_progress-bar {
-  background-color: var(--base-color-neutral--neutral-lightest);
-  border-radius: 6.25rem;
+  background-color: #0f0f0f33;
   width: 100%;
-  height: .375rem;
+  height: .1875rem;
   overflow: hidden;
 }
 
 /* Progress-Bar Füllung */
 .mini-cart_footer_progress-bar-innner {
   background-color: var(--base-color-brand--blue);
-  border-radius: 6.25rem;
   height: 100%;
   max-width: 100%;
   transition: width .4s ease;
@@ -16915,39 +17173,6 @@ button.li-lang_dd-link {
 .ph_buy-action.is-active .ph_buy-action-icon svg path {
   fill: currentColor;
   stroke: currentColor;
-}
-
-/* =============================================================
-   DICOTA PDP — Galerie "Mehr erfahren" (Desktop ab 5. Bild)
-   Desktop: nur Hauptbild + 3 Thumbs; ab dem 5. Bild eine
-   "Mehr erfahren"-Kachel (per JS injiziert, oeffnet Lightbox).
-   Mobile: alle Bilder im Swiper, keine Kachel.
-   ============================================================= */
-@media screen and (min-width: 992px) {
-  .swiper-slide.is-product-gallery.is-extra {
-    display: none;
-  }
-  .ph_gallery-more {
-    display: block;
-    width: 36.4%;
-    margin-left: auto;
-    box-sizing: border-box;
-    margin-top: .75rem;
-    padding: .25rem 0;
-    background: none;
-    border: 0;
-    cursor: pointer;
-    text-align: center;
-    font-family: "Futura PT", sans-serif;
-    font-weight: 600;
-    font-size: .875rem;
-    color: #0f0f0f;
-    text-decoration: underline;
-    text-underline-offset: .2em;
-  }
-  .ph_gallery-more:hover {
-    opacity: .65;
-  }
 }
 
 /* =============================================================
@@ -17134,11 +17359,13 @@ button.li-lang_dd-link {
   flex-direction: column;
   gap: .5rem;
 }
+/* 1rem statt .9375rem — damit alle Tab-Inhalte (Description, Features,
+   Care, Downloads) auf derselben Schriftgröße sitzen. */
 .ph_features-item {
   position: relative;
   padding-left: 1.5rem;
-  font-size: .9375rem;
-  line-height: 1.45;
+  font-size: 1rem;
+  line-height: 1.5;
   color: #0f0f0f;
 }
 .ph_features-item::before {
@@ -17374,7 +17601,9 @@ img.product-header_gallery-image {
   overflow-y: auto;
   box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
 }
-.multi-form_product-result + .multi-form_product-result { border-top: 1px solid #f0f0f0; }
+.multi-form_product-result + .multi-form_product-result {
+  border-top: 1px solid #f0f0f0;
+}
 .multi-form_product-result-btn {
   display: flex;
   align-items: center;
@@ -17780,7 +18009,9 @@ img.product-header_gallery-image {
   align-items: flex-start;
   gap: 1.25rem;
 }
-.headline-text_right > * + * { margin-top: 1rem; }
+.headline-text_right > * + * {
+  margin-top: 1rem;
+}
 
 /* =============================================================
    Password (Under Construction) — Hintergrundbild, Logo-Box,
@@ -18160,13 +18391,35 @@ img.product-header_gallery-image {
 }
 
 /* =============================================================
-   DICOTA — Filter-Pill: blauer Punkt bei aktivem Filter
+   DICOTA — Filter-Pill: Zähler-Badge bei aktivem Filter
    ============================================================= */
-.coll_filter-pill .coll_filter-active-dot {
-  width: 0.4375rem;
-  height: 0.4375rem;
+.coll_filter-active-count {
+  min-width: 1.1rem;
+  height: 1.1rem;
+  padding: 0 0.25rem;
   border-radius: 50%;
-  background-color: var(--base-color-brand--blue, #2d62ff);
+  background-color: var(--base-color-neutral--black, #0f0f0f);
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.1rem;
+  text-align: center;
+  flex-shrink: 0;
+  display: inline-block;
+}
+
+/* Globaler Aktiv-Indikator auf dem mobilen Filter-Button */
+.coll_filter-mobile-badge {
+  min-width: 1.1rem;
+  height: 1.1rem;
+  padding: 0 0.25rem;
+  border-radius: 50%;
+  background-color: var(--base-color-neutral--black, #0f0f0f);
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.1rem;
+  text-align: center;
   flex-shrink: 0;
   display: inline-block;
 }
@@ -18430,7 +18683,9 @@ img.product-header_gallery-image {
     width: 7rem;
     height: 3rem;
   }
-  .nav_container > .nav_menu-button.nav_menu-button { order: 1; }
+  .nav_container > .nav_menu-button.nav_menu-button {
+    order: 1;
+  }
   .nav_wishlist.nav_wishlist {
     display: none;
   }
@@ -18573,6 +18828,7 @@ img.product-header_gallery-image {
 /* Collection Filters: mobiler Trigger-Button + Modal (ab Tablet statt Dropdowns) */
 .coll_filter-mobile-btn {
   display: none;
+  position: relative;
   align-items: center;
   gap: 0.5rem;
   padding: 0.625rem 1rem;
@@ -18700,12 +18956,413 @@ img.product-header_gallery-image {
   padding-right: 0px;
 }
 
-.swiper-pagination.ph_we-care-dots {
-  position: absolute;
-  right: 0px;
-}
-
 .shop-by-category_scrollbar.swiper-scrollbar {
   color: rgb(15, 15, 15);
 }
 
+/* =============================================================
+   DICOTA — Collection Simple Hero
+   Titel + Beschreibung + Kategorie-Kacheln (Theme Blocks).
+   Kacheln werden zum Slider, sobald sie nicht mehr in eine
+   Zeile passen (watchOverflow blendet die Pfeile sonst aus).
+   ============================================================= */
+.section_collection-simple-hero > .padding-global {
+  padding-top: 4rem;
+  padding-bottom: 2.5rem;
+  background-color: #ffffff;
+  color: #0f0f0f;
+}
+
+.coll-simple-hero_title {
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.coll-simple-hero_text {
+  margin-top: 1rem;
+  max-width: 38rem;
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+.coll-simple-hero_slider-wrapper {
+  position: relative;
+  margin-top: 2.5rem;
+}
+
+.coll-simple-hero_swiper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.coll-simple-hero_tiles {
+  display: flex;
+  gap: 1rem;
+}
+
+.coll-simple-hero_tile {
+  width: 16.25rem;
+  flex-shrink: 0;
+}
+
+.coll-simple-hero_tile-link {
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+  color: inherit;
+  text-decoration: none;
+}
+
+.coll-simple-hero_tile-media {
+  width: 100%;
+  aspect-ratio: 26 / 29;
+  overflow: hidden;
+  background-color: #f4f4f4;
+}
+
+.coll-simple-hero_tile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.coll-simple-hero_tile-title {
+  font-family: "Futura PT", sans-serif;
+  font-size: .875rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: #0f0f0f;
+}
+
+.coll-simple-hero_tile-title.is-highlight {
+  color: #cc0404;
+}
+
+.coll-simple-hero_arrow {
+  position: absolute;
+  top: 40%;
+  right: -1.25rem;
+  z-index: 3;
+  width: 3rem;
+  height: 3rem;
+  padding: 0;
+  border: none;
+  border-radius: 62.4375rem;
+  background-color: rgba(15, 15, 15, .7);
+  backdrop-filter: blur(.3125rem);
+  color: #ffffff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-50%);
+  transition: background-color .2s ease;
+}
+.coll-simple-hero_arrow:hover {
+  background-color: rgba(15, 15, 15, .9);
+}
+.coll-simple-hero_arrow.is-prev {
+  left: -1.25rem;
+  right: auto;
+}
+.coll-simple-hero_arrow.swiper-button-disabled {
+  opacity: .3;
+  pointer-events: none;
+}
+.coll-simple-hero_arrow.swiper-button-lock {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .coll-simple-hero_tile {
+    width: 11.25rem;
+  }
+  .coll-simple-hero_text {
+    font-size: 1rem;
+  }
+  .coll-simple-hero_arrow {
+    display: none;
+  }
+}
+
+/* =============================================================
+   DICOTA — Transparenter Header: Burger-Icon + Menü-offen-Zustand
+   Die Burger-Linien sind per .menu-icon_line-*.menu-icon_line-*
+   (2 Klassen, in einer Media Query) hart auf Schwarz gesetzt. Über
+   einem dunklen Hero waren sie damit unsichtbar. Die Regeln hier haben
+   bewusst mehr Selektor-Teile, damit sie unabhängig von der
+   Source-Order gewinnen (vgl. Breakpoint-Fixes weiter oben).
+
+   Zustandslogik:
+   - transparent + nicht gescrollt + Menü zu  -> Linien weiß
+   - Menü offen (oder gescrollt)              -> Header solide weiß,
+                                                 alles wieder dunkel
+   :has() wird im Projekt bereits genutzt (z.B. .section_announcement-bar).
+   ============================================================= */
+.section_navbar .nav_component.is-transparent:not(.is-scrolled):not(:has(.nav_menu-button.w--open)) .menu-icon_line-top,
+.section_navbar .nav_component.is-transparent:not(.is-scrolled):not(:has(.nav_menu-button.w--open)) .menu-icon_line-middle,
+.section_navbar .nav_component.is-transparent:not(.is-scrolled):not(:has(.nav_menu-button.w--open)) .menu-icon_line-bottom {
+  background-color: #ffffff;
+}
+
+/* Menü offen: Header wird solide weiß */
+.section_navbar .nav_component.is-transparent:has(.nav_menu-button.w--open) {
+  background-color: #ffffff;
+  color: #0f0f0f;
+}
+.section_navbar .nav_component.is-transparent:has(.nav_menu-button.w--open)::before {
+  display: none;
+}
+.section_navbar .nav_component.is-transparent:has(.nav_menu-button.w--open) .nav_logo {
+  filter: none;
+}
+.section_navbar .nav_component.is-transparent:has(.nav_menu-button.w--open) .menu-icon_line-top,
+.section_navbar .nav_component.is-transparent:has(.nav_menu-button.w--open) .menu-icon_line-middle,
+.section_navbar .nav_component.is-transparent:has(.nav_menu-button.w--open) .menu-icon_line-bottom {
+  background-color: var(--base-color-neutral--black);
+}
+/* Shop-Icons erben currentColor -> werden über color oben mit invertiert.
+   Such-Pill zusätzlich auf den hellen Ruhezustand zurücksetzen. */
+.section_navbar .nav_component.is-transparent:has(.nav_menu-button.w--open) .nav_search-pill {
+  background-color: #f4f4f4;
+}
+.section_navbar .nav_component.is-transparent:has(.nav_menu-button.w--open) .nav_search-placeholder {
+  color: #6b6b6b;
+}
+
+/* =============================================================
+   DICOTA — Image + Link List: Bildwechsel beim Hover (Desktop)
+   Zweites Bild liegt deckungsgleich über dem Standardbild und wird
+   per Opacity eingeblendet -> echter Cross-Fade ohne Layout-Sprung.
+   .image-link-list_image-side hat bereits position:relative +
+   overflow:hidden, daher reicht inset:0.
+   ============================================================= */
+.image-link-list_hover-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .35s ease;
+  z-index: 1;
+}
+.image-link-list_hover-image.is-visible {
+  opacity: 1;
+}
+
+@media screen and (max-width: 991px) {
+  .image-link-list_hover-image {
+    display: none;
+  }
+}
+
+/* =============================================================
+   DICOTA — Product Sticky Bar (PDP)
+   Fixe Leiste unter der Navigation, erscheint sobald der Product
+   Hero nach oben aus dem Viewport gescrollt ist. --product-sticky-top
+   wird per JS auf die aktuelle Navigationshöhe gesetzt, damit die
+   Leiste nicht unter dem Header verschwindet.
+   ============================================================= */
+.section_product-sticky {
+  position: fixed;
+  top: var(--product-sticky-top, 0px);
+  left: 0;
+  right: 0;
+  z-index: 80;
+  transform: translateY(-120%);
+  opacity: 0;
+  visibility: hidden;
+  transition: transform .3s ease, opacity .3s ease, visibility .3s;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, .08);
+}
+.section_product-sticky.is-visible {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.product-sticky_bar {
+  padding-top: .375rem;
+  padding-bottom: .375rem;
+  background-color: #ffffff;
+  color: #0f0f0f;
+}
+
+.product-sticky_inner {
+  display: flex;
+  align-items: center;
+  gap: .625rem;
+}
+
+.product-sticky_media {
+  flex: none;
+  width: 6.3125rem;
+  height: 5.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.product-sticky_image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+  display: block;
+}
+
+.product-sticky_info {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+.product-sticky_title {
+  margin: 0;
+  font-family: "Futura PT", sans-serif;
+  font-size: 1.375rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 1.15;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.product-sticky_meta {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+}
+.product-sticky_price {
+  font-family: "Futura PT", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.3;
+  white-space: nowrap;
+}
+.product-sticky_rating {
+  display: flex;
+  align-items: center;
+  gap: .25rem;
+  text-decoration: none;
+  color: inherit;
+}
+.product-sticky_rating-score {
+  font-family: "Futura PT", sans-serif;
+  font-size: .75rem;
+  font-weight: 600;
+  letter-spacing: .015rem;
+}
+.product-sticky_rating-count {
+  font-size: .75rem;
+  letter-spacing: .015rem;
+  opacity: .7;
+  text-decoration: underline;
+}
+
+.product-sticky_action {
+  flex: none;
+}
+.product-sticky_form {
+  margin: 0;
+}
+.product-sticky_btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: .75rem 2.5rem;
+  border: none;
+  background-color: var(--base-color-brand--blue, #479ef8);
+  color: #ffffff;
+  font-family: "Futura PT", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+  white-space: nowrap;
+  cursor: pointer;
+  filter: drop-shadow(0 2px 1px rgba(0, 0, 0, .1));
+  transition: opacity .2s ease;
+}
+.product-sticky_btn:hover {
+  opacity: .9;
+}
+.product-sticky_btn.is-disabled {
+  background-color: #d0d0d0;
+  color: #888;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+@media screen and (max-width: 767px) {
+  .product-sticky_media {
+    width: 3.25rem;
+    height: 3.25rem;
+  }
+  .product-sticky_title {
+    font-size: 1rem;
+  }
+  .product-sticky_rating {
+    display: none;
+  }
+  .product-sticky_btn {
+    padding: .625rem 1rem;
+    font-size: .875rem;
+  }
+}
+
+/* =============================================================
+   DICOTA — Product Feature Gallery: Slider-Arrows
+   Wrapper als Positions-Kontext; Buttons liegen als Siblings
+   NEBEN dem .swiper (nicht darin), damit Swiper sie nicht als
+   Slide behandelt. lockClass blendet sie aus, wenn alle Slides
+   ohnehin sichtbar sind (watchOverflow).
+   ============================================================= */
+.product-features_slider-wrapper {
+  position: relative;
+}
+
+.product-features_arrow {
+  position: absolute;
+  top: 35%;
+  right: -1.25rem;
+  z-index: 3;
+  width: 3.5rem;
+  height: 3.5rem;
+  padding: 0;
+  border: none;
+  border-radius: 62.4375rem;
+  background-color: rgba(15, 15, 15, .7);
+  backdrop-filter: blur(.3125rem);
+  color: var(--base-color-neutral--white);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-50%);
+  transition: background-color .2s ease;
+}
+.product-features_arrow:hover {
+  background-color: rgba(15, 15, 15, .9);
+}
+.product-features_arrow.is-prev {
+  left: -1.25rem;
+  right: auto;
+}
+.product-features_arrow.swiper-button-disabled {
+  opacity: .3;
+  pointer-events: none;
+}
+.product-features_arrow.swiper-button-lock {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .product-features_arrow {
+    display: none;
+  }
+}
