@@ -24,6 +24,54 @@
         "text_color": "#0f0f0f"
       }
     },
+    "collection_simple_he_887pMx": {
+      "type": "collection_simple_he",
+      "blocks": {
+        "hero_kategorie_7dxi4i": {
+          "type": "hero-kategorie",
+          "name": "Hero Kategorie",
+          "settings": {
+            "url_link": "",
+            "text_titel": "Backpacks",
+            "checkbox_hervorheben": false
+          },
+          "blocks": {}
+        },
+        "hero_kategorie_eKLP67": {
+          "type": "hero-kategorie",
+          "name": "Hero Kategorie",
+          "settings": {
+            "url_link": "",
+            "text_titel": "Backpacks",
+            "checkbox_hervorheben": false
+          },
+          "blocks": {}
+        },
+        "hero_kategorie_fL3LBi": {
+          "type": "hero-kategorie",
+          "settings": {
+            "url_link": "",
+            "text_titel": "Backpacks",
+            "checkbox_hervorheben": false
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "hero_kategorie_7dxi4i",
+        "hero_kategorie_eKLP67",
+        "hero_kategorie_fL3LBi"
+      ],
+      "name": "Collection Simple He",
+      "settings": {
+        "text_headline": "",
+        "textarea_beschreibung": "",
+        "padding_top": 4,
+        "padding_bottom": 2.5,
+        "bg_color": "#ffffff",
+        "text_color": "#0f0f0f"
+      }
+    },
     "collection_hero_8TRwPe": {
       "type": "collection_hero",
       "name": "Collection Hero",
@@ -97,6 +145,8 @@
       ],
       "disabled": true,
       "settings": {
+        "text_headline": "",
+        "textarea_beschreibung": "",
         "padding_top": 2.5,
         "padding_bottom": 2.5,
         "bg_color": "#ffffff",
@@ -115,10 +165,12 @@
         "textarea_promo_2_text": "Raffiniertes Design. Recycelte Materialien.",
         "url_promo_2_link": "",
         "text_promo_2_button": "Explore Now",
+        "show_promo1": false,
         "promo1_position": 0,
         "promo1_large": true,
         "promo1_bg": "#162040",
         "promo1_bg_opacity": 1,
+        "show_promo2": false,
         "promo2_position": 0,
         "promo2_large": true,
         "promo2_bg": "#162040",
@@ -153,12 +205,13 @@
       "disabled": true,
       "settings": {
         "text_uberschrift": "Was unsere Kund:innen sagen",
-        "text_bewertung_zahl": "4,83",
         "text_bewertung_label": "Hervorragend",
-        "text_anzahl_bewertungen": "17 982 Bewertungen",
         "padding_top": 4,
         "padding_bottom": 4,
-        "show_rating": true
+        "select_quelle": "judgeme",
+        "show_rating": true,
+        "text_bewertung_zahl": "4,83",
+        "text_anzahl_bewertungen": "17 982 Bewertungen"
       }
     }
   },
@@ -166,6 +219,7 @@
   "wrapper": "main.main-wrapper",
   "order": [
     "product_breadcrumb_98ixPN",
+    "collection_simple_he_887pMx",
     "collection_hero_8TRwPe",
     "featured_product_qe68Cr",
     "collection_intro",
