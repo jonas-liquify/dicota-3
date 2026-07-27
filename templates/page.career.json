@@ -15,7 +15,9 @@
         "text_heading": "At DICOTA, you are more than an employee.",
         "textarea_text": "People make the famous difference. Top performance can only be achieved by motivated and reliable colleagues. The individual task area plays less of a role than the daily motivation to make everything just that little bit better. This is what we live at DICOTA. We prioritize understanding your needs, fostering collaboration, and creating a workplace where your contributions truly matter.",
         "url_button_link": "",
-        "text_button_text": ""
+        "text_button_text": "",
+        "padding_top": 5,
+        "padding_bottom": 2.5
       }
     },
     "boxed_image": {
@@ -39,7 +41,8 @@
             "image_icon": "shopify://shop_images/Michael.png",
             "text_heading": "Seeing the passion of our employees makes me incredibly proud every day!",
             "textarea_text": "Michael Mühlenbruch (CMO DICOTA)"
-          }
+          },
+          "blocks": {}
         },
         "team_karte_2": {
           "type": "team-karte",
@@ -47,7 +50,8 @@
             "image_icon": "shopify://shop_images/star_half.svg",
             "text_heading": "From people for people.",
             "textarea_text": "More than an employer, we strive to be your reliable partner, always there when you need us."
-          }
+          },
+          "blocks": {}
         },
         "team_karte_3": {
           "type": "team-karte",
@@ -55,7 +59,8 @@
             "image_icon": "shopify://shop_images/star_half.svg",
             "text_heading": "Think global. Act local.",
             "textarea_text": "Value quality and integrity in everything we do. At all times. No exceptions."
-          }
+          },
+          "blocks": {}
         }
       },
       "block_order": [
@@ -68,7 +73,9 @@
         "textarea_text": "As a trusted leader in premium bag solutions, we deliver innovative products with a strong commitment to our customers. Our employees are the heart of our success, and we empower them to excel with pride and passion, consistently surpassing expectations.",
         "image_bild": "shopify://shop_images/One-for-all_03.jpg",
         "url_button_link": "",
-        "text_button_text": "Read more"
+        "text_button_text": "Read more",
+        "padding_top": 5,
+        "padding_bottom": 5
       }
     },
     "4_up_card_slider": {
@@ -77,13 +84,22 @@
         "4-up-karte": {
           "type": "4-up-karte",
           "name": "4-up Karte",
-          "settings": {}
+          "settings": {
+            "url_card_link": "",
+            "text_card_heading": "Innovation",
+            "text_card_button_text": "Learn more"
+          },
+          "blocks": {}
         }
       },
       "block_order": [
         "4-up-karte"
       ],
-      "settings": {}
+      "settings": {
+        "text_heading": "Our values",
+        "padding_top": 5,
+        "padding_bottom": 5
+      }
     },
     "benefits_grid": {
       "type": "benefits_grid",
@@ -92,29 +108,37 @@
           "type": "benefit",
           "settings": {
             "image_icon": "shopify://shop_images/fairness_white.png",
-            "text_heading": "Fairness"
-          }
+            "text_heading": "Fairness",
+            "textarea_text": "As an amfori BSCI member, DICOTA is committed to fair working conditions throughout the supply chain — from worker protection and safety to equality and the exclusion of child labour. Every partner commits to fully complying with our Code of Conduct."
+          },
+          "blocks": {}
         },
         "benefit_2": {
           "type": "benefit",
           "settings": {
             "image_icon": "shopify://shop_images/serviceorientiert.png",
-            "text_heading": "Service-oriented"
-          }
+            "text_heading": "Service-oriented",
+            "textarea_text": "From the first product idea to final quality control, everything we do is geared towards customer satisfaction. As an owner-managed company with partners in over 60 markets, we stay close to our customers — with short decision paths and personal contacts."
+          },
+          "blocks": {}
         },
         "benefit_3": {
           "type": "benefit",
           "settings": {
             "image_icon": "shopify://shop_images/leistung_6d753fb5-a3c6-416f-88e2-f727eb38bf9d.png",
-            "text_heading": "Performance"
-          }
+            "text_heading": "Performance",
+            "textarea_text": "Reliability and perfection down to the last detail are the core values our brand is built on. Independent institutes test our products to ensure they withstand daily use, meet all legal requirements and are free from hazardous substances."
+          },
+          "blocks": {}
         },
         "benefit_4": {
           "type": "benefit",
           "settings": {
             "image_icon": "shopify://shop_images/instagram_white.svg",
-            "text_heading": "Responsibility"
-          }
+            "text_heading": "Responsibility",
+            "textarea_text": "Sustainability is one of DICOTA's five strategic goals — our Eco collections are made from 100% mechanically recycled PET. And with Labdoo, we give used notebooks a second life in schools and educational projects worldwide."
+          },
+          "blocks": {}
         }
       },
       "block_order": [
@@ -127,7 +151,9 @@
         "text_subline": "More about DICOTA",
         "text_heading": "Swiss heart. German mind. Customer centric.",
         "url_button_link": "shopify://pages/about-us",
-        "text_button_text": "More about DICOTA"
+        "text_button_text": "More about DICOTA",
+        "padding_top": 5,
+        "padding_bottom": 5
       }
     },
     "value_tabs": {
@@ -136,25 +162,61 @@
         "tab": {
           "type": "tab",
           "name": "Tab",
-          "settings": {}
+          "settings": {
+            "text_tab_label": "Trust",
+            "text_tab_heading": "Trust",
+            "textarea_tab_text": "We build on long-term relationships — with customers, partners and colleagues alike."
+          },
+          "blocks": {}
         }
       },
       "block_order": [
         "tab"
       ],
-      "settings": {}
+      "settings": {
+        "text_heading": "Our values",
+        "padding_top": 5,
+        "padding_bottom": 5
+      }
     },
     "job_listings": {
       "type": "job_listings",
-      "settings": {}
+      "settings": {
+        "text_heading": "Open positions",
+        "text_filter_label": "Filter",
+        "text_alle_loschen": "Clear all",
+        "text_filter_1_label": "Location",
+        "text_filter_2_label": "Department",
+        "text_cta_heading": "Speculative application",
+        "richtext_cta_text": "<p>No suitable position for you? We'd still love to hear from you.</p>",
+        "url_cta_button_link": "",
+        "text_cta_button_text": "Apply now",
+        "show_cta": true,
+        "padding_top": 5,
+        "padding_bottom": 5
+      }
     },
     "faq_accordion": {
       "type": "faq_accordion",
-      "settings": {}
+      "settings": {
+        "text_heading": "Frequently asked questions",
+        "textarea_text": "If you have questions about applying, the selection process or getting started — we have answers.",
+        "padding_top": 5,
+        "padding_bottom": 5
+      }
     },
     "job_detail_article": {
       "type": "job_detail_article",
-      "settings": {}
+      "settings": {
+        "url_zuruck_link": "",
+        "text_zuruck_text": "All positions",
+        "text_heading": "Job title",
+        "text_tag_1": "Full-time",
+        "text_tag_2": "Location",
+        "richtext_beschreibung": "<p>About the roleDescribe the responsibilities, requirements and benefits here.</p>",
+        "padding_top": 2.5,
+        "padding_bottom": 5
+      }
     }
   },
   "layout": "theme",
