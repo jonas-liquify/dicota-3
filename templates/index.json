@@ -391,8 +391,7 @@
           "name": "Image+Link List Link",
           "settings": {
             "url_link_ziel": "",
-            "text_label": "Mobile Working",
-            "image_hover_bild": "shopify://shop_images/product-feature_149.jpg"
+            "text_label": "Mobile Working"
           },
           "blocks": {}
         },
