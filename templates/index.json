@@ -382,7 +382,8 @@
           "name": "Image+Link List Link",
           "settings": {
             "url_link_ziel": "",
-            "text_label": "Everday Life"
+            "text_label": "Everday Life",
+            "image_hover_bild": "shopify://shop_images/VDF0cU0fcArIZ0-9FQ0ibw.jpg"
           },
           "blocks": {}
         },
