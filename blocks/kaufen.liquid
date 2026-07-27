@@ -5,9 +5,13 @@
     <div class="product-header_option-heading"><div class="text-size-regular text-weight-medium">
 {{ block.settings.text_label_construction_type }}
 </div></div><div li-for:inside="pair in type_pairs" class="produkt_swatch-wrapper">
-        {% for pair in type_pairs %}                            <div class="hide w-embed">{% assign parts = pair | split: '::' %}{% assign type = parts[0] %}{% assign url = parts[1] %}{% assign available = parts[2] %}{% assign image = parts[3] %}</div>
+        {% for pair in type_pairs %}                            <div class="hide w-embed">{% assign parts = pair | split: '::' %}{% assign type = parts[0] %}{% assign url = parts[1] %}{% assign available = parts[2] %}{% assign image = parts[3] %}{% assign fam_key = type | append: '' | strip | downcase %}{% assign fam_icon_src = '' %}{% for fi in shop.metaobjects.product_family_icon.values %}{% assign fi_key = fi.family | append: '' | strip | downcase %}{% if fi_key != blank and fi_key == fam_key %}{% assign fam_icon_src = fi.icon.url | default: fi.icon.value.url %}{% if fam_icon_src == blank %}{% assign fam_icon_src = fi.icon | image_url: width: 200 %}{% endif %}{% break %}{% endif %}{% endfor %}</div>
                             {% unless type == blank or url == blank %}    <div li-unless="type == blank or url == blank" class="produkt_swatch-item">
-    <a li-object:href="url" href="{{ url }}" class="produkt_swatch-link" style="{% if product.metafields.sl_ART.extra_CONSTRUCTIONTYPE.value == type %}border-style: solid; border-width: 2px; border-color: black;{% endif %}{% unless available == 'true' %}opacity: 0.5;{% endunless %}"><img li-object:src="image | file_url" loading="lazy" alt="" class="produkt_swatch-img is-darken" src="{{ image | file_url }}"></a><div class="produkt_swatch-lable is-max"><div li-object="type">{{ type }}</div></div>    </div>
+    <a li-object:href="url" href="{{ url }}" aria-label="{{ type }}" class="produkt_swatch-link" style="{% if product.metafields.sl_ART.extra_CONSTRUCTIONTYPE.value == type %}border-style: solid; border-width: 2px; border-color: black;{% endif %}{% unless available == 'true' %}opacity: 0.5;{% endunless %}">{% if fam_icon_src != blank %}    <span class="li-guard" li-if="fam_icon_src != blank">
+    <img li-object:src="fam_icon_src" loading="lazy" alt="" class="produkt_swatch-icon" src="{{ fam_icon_src }}">    </span>
+{% endif %}{% unless fam_icon_src != blank %}    <span class="li-guard" li-unless="fam_icon_src != blank">
+    <img li-object:src="image | file_url" loading="lazy" alt="" class="produkt_swatch-img is-darken" src="{{ image | file_url }}">    </span>
+{% endunless %}</a><div class="produkt_swatch-lable is-max"><div li-object="type">{{ type }}</div></div>    </div>
 {% endunless %}
                     {% endfor %}    </div>    </div>
 {% endif %}{% if combo_pairs.size > 1 %}    <div li-if="combo_pairs.size > 1" class="produkt_swatch-component">
@@ -34,9 +38,13 @@
     <div class="product-header_option-heading"><div class="text-size-regular text-weight-medium">
 {{ block.settings.text_label_produktfamilie }}
 </div></div><div li-for:inside="pair in type_pairs" class="produkt_swatch-wrapper">
-        {% for pair in type_pairs %}                            <div class="hide w-embed">{% assign parts = pair | split: '::' %}{% assign type = parts[0] %}{% assign url = parts[1] %}{% assign available = parts[2] %}{% assign image = parts[3] %}</div>
+        {% for pair in type_pairs %}                            <div class="hide w-embed">{% assign parts = pair | split: '::' %}{% assign type = parts[0] %}{% assign url = parts[1] %}{% assign available = parts[2] %}{% assign image = parts[3] %}{% assign fam_key = type | append: '' | strip | downcase %}{% assign fam_icon_src = '' %}{% for fi in shop.metaobjects.product_family_icon.values %}{% assign fi_key = fi.family | append: '' | strip | downcase %}{% if fi_key != blank and fi_key == fam_key %}{% assign fam_icon_src = fi.icon.url | default: fi.icon.value.url %}{% if fam_icon_src == blank %}{% assign fam_icon_src = fi.icon | image_url: width: 200 %}{% endif %}{% break %}{% endif %}{% endfor %}</div>
                             {% unless type == blank or url == blank %}    <div li-unless="type == blank or url == blank" class="produkt_swatch-item">
-    <a li-object:href="url" href="{{ url }}" class="produkt_swatch-link" style="{% if product.metafields.sl_ART.extra_PRODUCTFAMILY.value == type %}border-style: solid; border-width: 2px; border-color: black;{% endif %}{% unless available == 'true' %}opacity: 0.5;{% endunless %}"><img li-object:src="image | file_url" loading="lazy" alt="" class="produkt_swatch-img is-darken" src="{{ image | file_url }}"></a><div class="produkt_swatch-lable"><div li-object="type">{{ type }}</div></div>    </div>
+    <a li-object:href="url" href="{{ url }}" aria-label="{{ type }}" class="produkt_swatch-link" style="{% if product.metafields.sl_ART.extra_PRODUCTFAMILY.value == type %}border-style: solid; border-width: 2px; border-color: black;{% endif %}{% unless available == 'true' %}opacity: 0.5;{% endunless %}">{% if fam_icon_src != blank %}    <span class="li-guard" li-if="fam_icon_src != blank">
+    <img li-object:src="fam_icon_src" loading="lazy" alt="" class="produkt_swatch-icon" src="{{ fam_icon_src }}">    </span>
+{% endif %}{% unless fam_icon_src != blank %}    <span class="li-guard" li-unless="fam_icon_src != blank">
+    <img li-object:src="image | file_url" loading="lazy" alt="" class="produkt_swatch-img is-darken" src="{{ image | file_url }}">    </span>
+{% endunless %}</a><div class="produkt_swatch-lable"><div li-object="type">{{ type }}</div></div>    </div>
 {% endunless %}
                     {% endfor %}    </div>    </div>
 {% endif %}{% if segment_pairs.size > 1 %}    <div li-if="segment_pairs.size > 1" class="produkt_swatch-component">

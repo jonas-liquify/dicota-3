@@ -1,0 +1,91 @@
+<div class="padding-global coll-simple-hero_padding" style="padding-top: {{ section.settings.padding_top }}rem; padding-bottom: {{ section.settings.padding_bottom }}rem; background-color: {{ section.settings.bg_color }}; color: {{ section.settings.text_color }};"><div class="container-large"><h1 li-object="section.settings.text_headline | default: collection.metafields.custom.collection_name | default: collection.title" class="coll-simple-hero_title heading-style-h1">{{ section.settings.text_headline | default: collection.metafields.custom.collection_name | default: collection.title }}</h1>{% if section.settings.textarea_beschreibung != blank or collection.description != blank %}    <div class="li-guard" li-if="section.settings.textarea_beschreibung != blank or collection.description != blank">
+    <div li-object="section.settings.textarea_beschreibung | default: collection.description" class="coll-simple-hero_text">{{ section.settings.textarea_beschreibung | default: collection.description }}</div>    </div>
+{% endif %}<div class="coll-simple-hero_slider-wrapper"><div class="coll-simple-hero_swiper swiper is-coll-simple-hero"><div li-cf-theme-blocks="" class="coll-simple-hero_tiles swiper-wrapper is-coll-simple-hero">
+{% content_for 'blocks' %}
+</div></div><button type="button" class="coll-simple-hero_arrow is-prev swiper-button-prev" aria-label="Previous"><div class="icon-embed-xsmall w-embed">{% render 'icon_chevron_left' %}</div></button><button type="button" class="coll-simple-hero_arrow swiper-button-next" aria-label="Next"><div class="icon-embed-xsmall w-embed">{% render 'icon_chevron_right' %}</div></button></div></div></div><div class="hide w-embed w-script"><script>(function(){function ensure(cb){if(typeof Swiper!=="undefined")return cb();if(window.__swiperLoading)return window.__swiperLoading.then(cb);var s=document.createElement("script");s.src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js";var link=document.createElement("link");link.rel="stylesheet";link.href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css";document.head.appendChild(link);window.__swiperLoading=new Promise(function(res){s.onload=res;});document.head.appendChild(s);window.__swiperLoading.then(cb);}function initAll(){document.querySelectorAll(".coll-simple-hero_swiper.swiper").forEach(function(el){if(el.swiper)return;var root=el.closest(".coll-simple-hero_slider-wrapper")||document;ensure(function(){if(el.swiper)return;new Swiper(el,{slidesPerView:"auto",spaceBetween:16,watchOverflow:true,navigation:{nextEl:root.querySelector(".coll-simple-hero_arrow.swiper-button-next"),prevEl:root.querySelector(".coll-simple-hero_arrow.is-prev"),disabledClass:"swiper-button-disabled",lockClass:"swiper-button-lock"}});});});}if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",initAll);}else{initAll();}})();</script></div> {% schema %} {
+    "tag": "section",
+    "name": "Collection Simple He",
+    "class": "section_collection-simple-hero",
+    "blocks": [
+        {
+            "type": "hero-kategorie"
+        },
+        {
+            "type": "@app"
+        }
+    ],
+    "settings": [
+        {
+            "type": "header",
+            "content": "Inhalt"
+        },
+        {
+            "type": "text",
+            "id": "text_headline",
+            "label": "Headline",
+            "info": "Leer lassen = Metafeld \u201eCollection Name\u201c, sonst der Kollektions-Titel."
+        },
+        {
+            "type": "textarea",
+            "id": "textarea_beschreibung",
+            "label": "Beschreibung",
+            "info": "Leer lassen = Beschreibungstext der Kollektion."
+        },
+        {
+            "type": "header",
+            "content": "Abst\u00e4nde"
+        },
+        {
+            "type": "range",
+            "id": "padding_top",
+            "min": 0,
+            "max": 12,
+            "step": 0.5,
+            "unit": "rem",
+            "label": "Abstand oben",
+            "default": 4
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom",
+            "min": 0,
+            "max": 12,
+            "step": 0.5,
+            "unit": "rem",
+            "label": "Abstand unten",
+            "default": 2.5
+        },
+        {
+            "type": "header",
+            "content": "Farben"
+        },
+        {
+            "type": "color",
+            "id": "bg_color",
+            "label": "Hintergrundfarbe",
+            "default": "#ffffff"
+        },
+        {
+            "type": "color",
+            "id": "text_color",
+            "label": "Textfarbe",
+            "default": "#0f0f0f"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Collection Simple He",
+            "category": "Hero",
+            "blocks": [
+                {
+                    "type": "hero-kategorie"
+                }
+            ]
+        }
+    ],
+    "enabled_on": {
+        "templates": [
+            "collection"
+        ]
+    }
+} {% endschema %}

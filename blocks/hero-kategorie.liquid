@@ -1,0 +1,37 @@
+<div li-block="Hero Kategorie" class="coll-simple-hero_tile swiper-slide is-coll-simple-hero" {{ block.shopify_attributes }}>
+                    <a href="{{ block.settings.url_link }}" class="coll-simple-hero_tile-link w-inline-block"> {% if block.settings.image_bild != blank %} <div li-if="block.settings.image_bild != blank" class="coll-simple-hero_tile-media"> {% if block.settings.image_bild %} {{ block.settings.image_bild | image_url: width: 600 | image_tag: loading: 'lazy', class: 'coll-simple-hero_tile-image' }} {% else %} <img src="{{ 'placeholder.svg' | asset_url }}" loading="lazy" alt="" class="coll-simple-hero_tile-image"> {% endif %} </div>{% endif %}<span class="coll-simple-hero_tile-title{% if block.settings.checkbox_hervorheben %} is-highlight{% endif %}">{{ block.settings.text_titel }}</span> </a>
+                    
+                </div> {% schema %} {
+    "name": "Hero Kategorie",
+    "settings": [
+        {
+            "id": "url_link",
+            "type": "url",
+            "label": "Link"
+        },
+        {
+            "id": "image_bild",
+            "type": "image_picker",
+            "label": "Bild"
+        },
+        {
+            "id": "text_titel",
+            "type": "text",
+            "label": "Titel",
+            "default": "Backpacks"
+        },
+        {
+            "type": "checkbox",
+            "id": "checkbox_hervorheben",
+            "label": "Titel rot hervorheben",
+            "default": false
+        }
+    ],
+    "presets": [
+        {
+            "name": "Hero Kategorie",
+            "blocks": []
+        }
+    ],
+    "tag": null
+} {% endschema %}
