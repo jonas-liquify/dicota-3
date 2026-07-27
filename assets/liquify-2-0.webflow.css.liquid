@@ -9063,7 +9063,8 @@ figcaption {
 .testimonials_list {
   display: flex;
   gap: .25rem;
-  align-items: stretch;
+  /* autoHeight misst die Karten — sie dürfen sich dafür nicht strecken */
+  align-items: flex-start;
 }
 
 .testimonials_card {
@@ -9075,6 +9076,11 @@ figcaption {
   flex-direction: column;
   gap: 1.5rem;
   color: var(--base-color-neutral--black);
+  height: auto;
+}
+/* Swipers CSS kommt zur Laufzeit nach dem Projekt-CSS und würde die Karte
+   mit .swiper-slide{height:100%} strecken — dann misst autoHeight falsch. */
+.swiper-slide.testimonials_card {
   height: auto;
 }
 
@@ -10791,6 +10797,18 @@ button.li-lang_dd-link {
   gap: .3125rem;
   flex-shrink: 0;
   width: auto;
+}
+/* Swipers .swiper-pagination(-horizontal) wird zur Laufzeit NACH dem
+   Projekt-CSS geladen und würde die Dots absolut über den Text legen.
+   Doppelter Selektor = höhere Spezifität, unabhängig von der Ladereihenfolge. */
+.swiper-pagination.ph_we-care-dots {
+  position: static;
+  width: auto;
+  top: auto;
+  bottom: auto;
+  left: auto;
+  right: auto;
+  transform: none;
 }
 .ph_we-care-dots .swiper-pagination-bullet {
   width: .375rem;
