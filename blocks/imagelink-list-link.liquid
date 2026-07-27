@@ -1,5 +1,6 @@
 <li li-block="Image+Link List Link" class="image-link-list_link-item" {{ block.shopify_attributes }}>
-                    <a href="{{ block.settings.url_link_ziel }}" class="image-link-list_link"> <span class="image-link-list_link-label">{{ block.settings.text_label }}</span><span class="image-link-list_link-arrow" aria-hidden="true"><svg width="100%" height="100%" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 12H20M20 12L14 6M20 12L14 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></span> </a>
+                    <a href="{{ block.settings.url_link_ziel }}" class="image-link-list_link" data-hover-img="{{ block.settings.image_hover_bild | image_url: width: 1400 }}"> <span class="image-link-list_link-label">{{ block.settings.text_label }}</span><span class="image-link-list_link-arrow" aria-hidden="true"><svg width="100%" height="100%" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 12H20M20 12L14 6M20 12L14 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></span> </a>
+                    
                 </li> {% schema %} {
     "name": "Image+Link List Link",
     "settings": [
@@ -13,6 +14,12 @@
             "type": "text",
             "label": "Label",
             "default": "Mobile Working"
+        },
+        {
+            "type": "image_picker",
+            "id": "image_hover_bild",
+            "label": "Hover-Bild",
+            "info": "Wird auf Desktop beim \u00dcberfahren dieses Links links eingeblendet. Leer lassen = Standardbild bleibt."
         }
     ],
     "presets": [

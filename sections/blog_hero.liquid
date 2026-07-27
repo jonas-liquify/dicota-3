@@ -1,17 +1,12 @@
-<div class="padding-global padding-section-medium"><div class="container-small"><div class="text-align-center"><div class="max-width-xlarge align-center"><h1 li-object="blog.title" class="heading-style-h1">{{ blog.title }}</h1></div></div></div></div> {% schema %} {
+<div class="padding-global padding-section-medium" style="background-color: {{ section.settings.bg_color }}; color: {{ section.settings.text_color }};"><div class="container-small"><div class="text-align-center"><div class="max-width-xlarge align-center"><h1 li-object="blog.title" class="heading-style-h1">{{ blog.title }}</h1></div></div></div></div> {% schema %} {
     "tag": "header",
-    "name": "Blog-Hero",
-    "class": "section_small-hero",
+    "name": "Blog Hero",
+    "class": "section_small-hero section_blog-hero",
     "presets": [
         {
-            "name": "Blog-Hero",
-            "category": "Liquify",
+            "name": "Blog Hero",
+            "category": "Hero",
             "blocks": []
         }
-    ],
-    "enabled_on": {
-        "templates": [
-            "blog"
-        ]
-    }
+    ]
 } {% endschema %}
