@@ -163,7 +163,9 @@
       ],
       "name": "Product Header",
       "settings": {
-        "text_modal_titel": "Dimensions"
+        "text_modal_titel": "Dimensions",
+        "text_tab_masse": "Dimensions",
+        "text_tab_proportion": "Proportion"
       }
     },
     "product_usp_bar": {
@@ -188,6 +190,16 @@
         "padding_bottom": 4,
         "bg_color": "#ffffff",
         "text_color": "#000000"
+      }
+    },
+    "product_sticky_bar_iytGhc": {
+      "type": "product_sticky_bar",
+      "name": "Product Sticky Bar",
+      "settings": {
+        "text_button_text": "In den Warenkorb",
+        "text_nicht_verfugbar_text": "Out of stock",
+        "bg_color": "#ffffff",
+        "text_color": "#0f0f0f"
       }
     },
     "product_feature_gall": {
@@ -311,6 +323,7 @@
     "product_breadcrumb",
     "product_header_bqWCq3",
     "product_usp_bar",
+    "product_sticky_bar_iytGhc",
     "product_feature_gall",
     "product_family",
     "product_loved_by_gal",

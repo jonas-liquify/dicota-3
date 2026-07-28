@@ -176,7 +176,8 @@
         "url_wishlist_link": "",
         "menu": "main-menu-d2c",
         "transparent_over_first": true,
-        "free_shipping_threshold": 50
+        "free_shipping_threshold": 50,
+        "text_sucheingabe_placeholder": "What are you looking for?"
       }
     }
   },
