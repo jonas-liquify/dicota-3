@@ -66,7 +66,7 @@
 {% endunless %}
                     {% endfor %}    </div>    </div>
 {% endif %}    </div>
-{% endif %}{% if product.selected_or_first_available_variant.quantity_price_breaks_configured? %}    <div li-if="product.selected_or_first_available_variant.quantity_price_breaks_configured?" class="ph_volume">
+{% endif %}{% if product.quantity_price_breaks_configured? %}    <div li-if="product.selected_or_first_available_variant.quantity_price_breaks_configured?" class="ph_volume">
     <div class="ph_volume-head"><span class="ph_volume-title">Volume discount</span><span class="ph_volume-unit">Unit price</span></div><div class="ph_volume-tiers"><label class="ph_volume-tier is-active"><input type="radio" name="volume" checked="checked" class="ph_volume-radio"><span class="ph_volume-qty"><span li-object="product.selected_or_first_available_variant.quantity_rule.min">{{ product.selected_or_first_available_variant.quantity_rule.min }}</span>+</span><span class="ph_volume-prices"><span class="ph_volume-price-col"><span li-object="product.selected_or_first_available_variant.price | money" class="ph_volume-price">{{ product.selected_or_first_available_variant.price | money }}</span></span></span></label>{% for price_break in product.selected_or_first_available_variant.quantity_price_breaks %}    <label li-for="price_break in product.selected_or_first_available_variant.quantity_price_breaks" class="ph_volume-tier">
                                     <input type="radio" name="volume" class="ph_volume-radio">
                             <span class="ph_volume-qty"><span li-object="price_break.minimum_quantity">{{ price_break.minimum_quantity }}</span>+</span>
