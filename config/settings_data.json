@@ -11,6 +11,8 @@
   "current": {
     "favicon": "shopify://shop_images/favicon-dicota.png",
     "apple_touch_icon": "shopify://shop_images/favicon-dicota.png",
+    "text_add_to_cart": "Add to Cart",
+    "text_unavailable": "Not available",
     "content_for_index": [],
     "blocks": {
       "14060646107696862457": {
@@ -26,11 +28,6 @@
       "7924418359578431505": {
         "type": "shopify://apps/seoant-ai-seo/blocks/seoant-core/8e57283b-dcb0-4f7b-a947-fb5c57a0d59d",
         "disabled": false,
-        "settings": {}
-      },
-      "2647664283302970701": {
-        "type": "shopify://apps/cookiebot-cmp/blocks/uc-banner/42d95aba-03be-478d-adf0-7bb4f5efae78",
-        "disabled": true,
         "settings": {}
       }
     }
