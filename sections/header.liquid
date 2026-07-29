@@ -3,7 +3,7 @@
 {% else %}
 <img src="{{ 'liquify-logo-white.svg' | asset_url }}" loading="lazy" alt="" class="nav_logo">
 {% endif %}</a><nav role="navigation" id="w-node-_9132635a-7891-b0d1-9b20-ecb0d5a86dfd-d5a86df8" class="nav_menu is-page-height-tablet w-nav-menu">{% for link in linklists[section.settings.menu].links %}    <div data-hover="true" data-delay="200" li-for="link in linklists[section.settings.menu].links" class="nav_menu-dropdown w-dropdown">
-                                    <div class="nav_dropdown-toggle w-dropdown-toggle"><a li-object:href="link.url" href="{{ link.url }}" class="w-inline-block"><div><div li-object="link.title">{{ link.title }}</div></div></a>{% if link.links.size > 0 %}    <div li-if="link.links.size > 0" class="dropdown-icon w-embed">
+                                    <div class="nav_dropdown-toggle w-dropdown-toggle"><a li-object:href="link.url" href="{{ link.url }}" class="w-inline-block"><div><div li-object="link.title" data-label="{{ link.title }}" class="nav_menu-label">{{ link.title }}</div></div></a>{% if link.links.size > 0 %}    <div li-if="link.links.size > 0" class="dropdown-icon w-embed">
     {% render 'icon_chevron_down' %}    </div>
 {% endif %}</div>
                             {% if link.links.size > 0 %}    <nav li-if="link.links.size > 0" class="nav_dropdown-list nav_mega no-scrollbar w-dropdown-list">
