@@ -10,7 +10,7 @@
 {
   "general": {
     "back": "Indietro",
-    "clear": "Chiaro",
+    "clear": "Cancella",
     "filters": "Filtri",
     "form": {
       "error": "Ops! Qualcosa è andato storto durante l'invio.",
