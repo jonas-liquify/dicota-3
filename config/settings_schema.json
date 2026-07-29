@@ -4,7 +4,7 @@
         "theme_name": "theme_name",
         "theme_author": "Your Name",
         "theme_version": "1.0.0",
-        "theme_documentation_url": "https:\/\/www.yoursite.com",
+        "theme_documentation_url": "https://www.yoursite.com",
         "theme_support_email": "your@email.com"
     },
     {
@@ -21,6 +21,25 @@
                 "id": "apple_touch_icon",
                 "label": "Apple touch icon image",
                 "info": "Will be scaled down to 120x120px"
+            }
+        ]
+    },
+    {
+        "name": "Produkt",
+        "settings": [
+            {
+                "type": "text",
+                "id": "text_add_to_cart",
+                "label": "Button „In den Warenkorb\"",
+                "default": "In den Warenkorb",
+                "info": "Gilt global für Product Hero und Sticky Bar. Pro Sprache über die Shopify-Übersetzungen pflegbar."
+            },
+            {
+                "type": "text",
+                "id": "text_unavailable",
+                "label": "Button „Nicht verfügbar\"",
+                "default": "Nicht verfügbar",
+                "info": "Wird angezeigt, wenn die gewählte Variante nicht bestellbar ist."
             }
         ]
     }
