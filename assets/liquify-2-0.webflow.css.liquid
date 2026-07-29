@@ -6438,6 +6438,15 @@ button.li-lang_dd-link {
   color: #888;
   margin: 0;
 }
+/* Der Inhalt kommt aus einem Shopify-richtext-Setting — dort sind keine
+   class-Attribute erlaubt. Deshalb über Nachfahren-Selektoren stylen
+   statt über .ph_price-link. */
+.ph_price-note p {
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+}
+.ph_price-note a,
 .ph_price-link {
   color: #888;
   text-decoration: underline;
