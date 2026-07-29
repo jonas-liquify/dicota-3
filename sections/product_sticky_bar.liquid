@@ -3,31 +3,15 @@
 {% endif %}</div></div><div class="product-sticky_action"><template x-if="selected_or_first_available_variant.available">
             <div li-js-if="selected_or_first_available_variant.available">
         <form method="post" action="/cart/add" class="product-sticky_form"><input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}"><script src="{{ 'li_custom.js' | asset_url }}" type="text/javascript"></script>
-<button type="submit" li-element="direct-add-to-cart" class="product-sticky_btn" x-data="handleVariant({{ product | json | escape }}, {{ product.options_by_name | json | escape }}, {{ product.selected_or_first_available_variant | json | escape }})" @click="addToCart($event, true)"><span>
-{{ section.settings.text_button_text }}
-</span></button></form>        </div>
+<button type="submit" li-element="direct-add-to-cart" class="product-sticky_btn" x-data="handleVariant({{ product | json | escape }}, {{ product.options_by_name | json | escape }}, {{ product.selected_or_first_available_variant | json | escape }})" @click="addToCart($event, true)"><span li-object="settings.text_add_to_cart | default: 'In den Warenkorb'">{{ settings.text_add_to_cart | default: 'In den Warenkorb' }}</span></button></form>        </div>
     </template><template x-if="!selected_or_first_available_variant.available">
             <div li-js-if="!selected_or_first_available_variant.available">
-        <span class="product-sticky_btn is-disabled">
-{{ section.settings.text_nicht_verfugbar_text }}
-</span>        </div>
+        <span li-object="settings.text_unavailable | default: 'Nicht verfügbar'" class="product-sticky_btn is-disabled">{{ settings.text_unavailable | default: 'Nicht verfügbar' }}</span>        </div>
     </template></div></div></div><div class="hide w-embed w-script"><script>(function(){function init(){var bar=document.querySelector("[data-product-sticky]");var hero=document.querySelector(".section_product-header");if(!bar||!hero)return;var nav=document.querySelector(".section_navbar .nav_component");function syncTop(){var h=nav?Math.round(nav.getBoundingClientRect().height):0;bar.style.setProperty("--product-sticky-top",h+"px");}syncTop();window.addEventListener("resize",syncTop);function setVisible(v){bar.classList.toggle("is-visible",v);bar.setAttribute("aria-hidden",v?"false":"true");}if("IntersectionObserver" in window){var io=new IntersectionObserver(function(entries){entries.forEach(function(e){setVisible(!e.isIntersecting&&e.boundingClientRect.top<0);});},{rootMargin:"0px",threshold:0});io.observe(hero);}else{window.addEventListener("scroll",function(){var r=hero.getBoundingClientRect();setVisible(r.bottom<0);},{passive:true});}}if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",init);}else{init();}})();</script></div> {% schema %} {
     "tag": "section",
     "name": "Product Sticky Bar",
     "class": "section_product-sticky",
     "settings": [
-        {
-            "id": "text_button_text",
-            "type": "text",
-            "label": "Button Text",
-            "default": "In den Warenkorb"
-        },
-        {
-            "id": "text_nicht_verfugbar_text",
-            "type": "text",
-            "label": "Nicht verf\u00fcgbar Text",
-            "default": "Out of stock"
-        },
         {
             "type": "header",
             "content": "Farben"

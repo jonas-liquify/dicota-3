@@ -4,12 +4,19 @@
 </span><template x-if="product.selected_or_first_available_variant.compare_at_price > product.selected_or_first_available_variant.price">
             <div li-js-if="product.selected_or_first_available_variant.compare_at_price > product.selected_or_first_available_variant.price">
         <span li-js-price="product.selected_or_first_available_variant.compare_at_price" class="ph_price-compare" x-text="LiquifyHelper.moneyFormat(product.selected_or_first_available_variant.compare_at_price, true, '{{ shop.money_with_currency_format }}')"></span>        </div>
-    </template></div><p class="ph_price-note">Incl. VAT, plus <a href="/policies/shipping-policy" class="ph_price-link">shipping</a></p></div>{% if product.metafields.judgeme.review_widget_data.value.number_of_reviews > 0 %}    <a li-if="product.metafields.judgeme.review_widget_data.value.number_of_reviews > 0" href="#bewertungen" class="ph_rating">
+    </template></div><div class="ph_price-note"> {{ block.settings.richtext_vat_text }} </div></div>{% if product.metafields.judgeme.review_widget_data.value.number_of_reviews > 0 %}    <a li-if="product.metafields.judgeme.review_widget_data.value.number_of_reviews > 0" href="#bewertungen" class="ph_rating">
     <span class="ph_stars" aria-hidden="true" style="--rating: {{ product.metafields.judgeme.review_widget_data.value.average_rating }}"></span><strong li-object="product.metafields.judgeme.review_widget_data.value.average_rating | times: 1 | round: 1" class="ph_rating-score">{{ product.metafields.judgeme.review_widget_data.value.average_rating | times: 1 | round: 1 }}</strong><span class="ph_rating-count">(<span li-object="product.metafields.judgeme.review_widget_data.value.number_of_reviews">{{ product.metafields.judgeme.review_widget_data.value.number_of_reviews }}</span>)</span>    </a>
 {% endif %}</div>
                 </div> {% schema %} {
     "name": "Preis",
-    "settings": [],
+    "settings": [
+        {
+            "id": "richtext_vat_text",
+            "type": "richtext",
+            "label": "VAT Text",
+            "default": "<p>Incl. VAT, plus <a href=\"\/policies\/shipping-policy\" class=\"ph_price-link\">shipping<\/a><\/p>"
+        }
+    ],
     "presets": [
         {
             "name": "Preis",
