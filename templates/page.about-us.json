@@ -402,6 +402,7 @@
         "karte_2",
         "karte_3"
       ],
+      "disabled": true,
       "settings": {
         "text_heading": "The World of DICOTA",
         "url_button_link": "shopify://collections/all",
