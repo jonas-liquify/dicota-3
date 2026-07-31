@@ -1,0 +1,31 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "b2b_login": {
+      "type": "b2b_login",
+      "settings": {
+        "text_subline": "B2B partner",
+        "text_heading": "Welcome to the DICOTA Partner Area",
+        "textarea_text": "Log in to access volume pricing, marketing materials and exclusive partner content.",
+        "url_login_link": "",
+        "text_button_text": "Log in to partner area",
+        "image_bild": "shopify://shop_images/5_SCT1c_LB_Student_e5236afd-f18d-4a32-9490-9ffc9576a7a1.jpg",
+        "padding_top": 4,
+        "padding_bottom": 4
+      }
+    }
+  },
+  "layout": "b2b",
+  "wrapper": "main.main-wrapper",
+  "order": [
+    "b2b_login"
+  ]
+}
