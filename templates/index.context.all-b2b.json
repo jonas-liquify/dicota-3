@@ -18,12 +18,13 @@
       "disabled": false,
       "settings": {
         "image_hintergrundbild": "shopify://shop_images/B2B_Main_Header_Image_Trolley.png",
+        "text_headline_eingeloggt": "Welcome back",
         "text_headline": "Welcome to the DICOTA Reseller Portal",
         "textarea_subtext": "Benefit from attractive reseller pricing, exclusive offers and dedicated services and tools to help you provide the best solutions for your customers.",
         "text_kategorie_label": "Categories",
-        "header-49e09860e6ab9302a084fcc836e8f4f5": null,
+        "header-eb4bec0b6a3adc2e6afe3a5602897963": null,
         "min_height": 78,
-        "header-5bd79cc3f5200a7ff1b2aebce6de6aca": null,
+        "header-fe4e9b2e1c98c000f715ac81eb3e56cb": null,
         "text_color": "#ffffff"
       },
       "blocks": {},
@@ -34,7 +35,7 @@
       "type": "reseller_category_ro",
       "disabled": false,
       "settings": {
-        "header-accefc9165feeb5c9e84910826a863cf": null,
+        "header-81783632c3e88d684c1e0ad811311b18": null,
         "padding_top": 4,
         "padding_bottom": 4
       },
@@ -55,21 +56,6 @@
       ],
       "name": "Reseller Category Ro"
     },
-    "reseller_hub_EwB6Y": {
-      "type": "reseller_hub",
-      "disabled": false,
-      "settings": {
-        "image_bild": null,
-        "text_heading": "DICOTA Reseller Hub. Enjoy exclusive benefits, added convenience and everything you need in one place.",
-        "url_button_1_link": "",
-        "text_button_1_text": "Login",
-        "url_button_2_link": "",
-        "text_button_2_text": "Register"
-      },
-      "blocks": {},
-      "block_order": [],
-      "name": "Reseller Hub"
-    },
     "the_dicota_differenc_JXxMG": {
       "type": "the_dicota_differenc",
       "disabled": false,
@@ -79,10 +65,10 @@
         "text_button_1_text": "",
         "url_button_2_link": "",
         "text_button_2_text": "",
-        "header-fd1437fabf77a5e6b789aa09b69a6822": null,
+        "header-61ed531b26d68090cf7e650dd723b902": null,
         "padding_top": 5,
         "padding_bottom": 5,
-        "header-576e89bb03536cafa6ae20637f728cac": null,
+        "header-584ec1150ce093c65fb88f175025eab7": null,
         "bg_color": "#f4f4f4"
       },
       "blocks": {
@@ -134,6 +120,21 @@
       ],
       "name": "The Dicota Differenc"
     },
+    "reseller_hub_EwB6Y": {
+      "type": "reseller_hub",
+      "disabled": false,
+      "settings": {
+        "image_bild": null,
+        "text_heading": "DICOTA Reseller Hub. Enjoy exclusive benefits, added convenience and everything you need in one place.",
+        "url_button_1_link": "",
+        "text_button_1_text": "Login",
+        "url_button_2_link": "",
+        "text_button_2_text": "Register"
+      },
+      "blocks": {},
+      "block_order": [],
+      "name": "Reseller Hub"
+    },
     "reseller_promo_grid_ydyLg": {
       "type": "reseller_promo_grid",
       "disabled": false,
@@ -182,15 +183,93 @@
         "textarea_text": "(Platzhalter) Seit 1992 wurden mehr als 12 Millionen PET-Flaschen verarbeitet, um Abfall zu minimieren - DCT (DICOTA Cushion Technology) ist ein strukturiertes Dämpfungssystem, das Stösse, Schläge und Druck aus verschiedenen Winkeln absorbieren kann.",
         "url_button_link": "",
         "text_button_text": "Learn more",
-        "header-703192fb0c79bc5839d124716f350412": null,
+        "header-905e44ab48831ae4452a007eee06fb46": null,
         "padding_top": 2.5,
         "padding_bottom": 4,
-        "header-02e1a027abefa538549b43d85882abb8": null,
+        "header-a861670a5c534fdc4c4871d85800bcba": null,
         "bg_color": "#f6f6f6"
       },
       "blocks": {},
       "block_order": [],
       "name": "B2B News Highlight"
+    },
+    "b2b_news_updates_V3jwg": {
+      "type": "b2b_news_updates",
+      "disabled": false,
+      "settings": {
+        "text_titel_fett": "Not enough yet?",
+        "text_titel_normal": "More news hot off the press",
+        "header-ceee53a82424ef89d590ad4377f8aa23": null,
+        "padding_top": 4,
+        "padding_bottom": 4,
+        "header-12d3785aea845f2a64c5196aa1b4914a": null,
+        "bg_color": "#f6f6f6"
+      },
+      "blocks": {
+        "updates_card_f8C4F": {
+          "type": "updates-card",
+          "disabled": false,
+          "blocks": {
+            "update_ahzej": {
+              "type": "update",
+              "disabled": false,
+              "settings": {
+                "url_link": "",
+                "text_titel": "New price list",
+                "text_untertitel": "Everyting you need to advertise"
+              }
+            },
+            "update_33c4G": {
+              "type": "update",
+              "name": "Update",
+              "disabled": false,
+              "settings": {
+                "url_link": "",
+                "text_titel": "New price list",
+                "text_untertitel": "Everyting you need to advertise"
+              }
+            }
+          },
+          "block_order": [
+            "update_ahzej",
+            "update_33c4G"
+          ],
+          "settings": {
+            "text_titel": "Latest Updates",
+            "url_button_link": "",
+            "text_button_text": "more News in our DICOTA Bog"
+          }
+        },
+        "news_card_UW49c": {
+          "type": "news-card",
+          "disabled": false,
+          "settings": {
+            "image_bild": null,
+            "url_link": "",
+            "text_badge": "NEW",
+            "text_titel": "Seven",
+            "textarea_text": "(Placeholder) Since 1992, more than 12 million PET bottles have been processed to minimize waste -"
+          }
+        },
+        "news_card_Lg46R": {
+          "type": "news-card",
+          "name": "News Card",
+          "disabled": false,
+          "settings": {
+            "image_bild": null,
+            "url_link": "",
+            "text_badge": "NEW",
+            "text_titel": "Seven",
+            "textarea_text": "(Placeholder) Since 1992, more than 12 million PET bottles have been processed to minimize waste -"
+          }
+        }
+      },
+      "block_order": [
+        "updates_card_f8C4F",
+        "news_card_UW49c",
+        "news_card_Lg46R"
+      ],
+      "name": "B2B News Updates"
     }
   },
   "order": [
@@ -199,6 +278,7 @@
     "the_dicota_differenc_JXxMG",
     "reseller_hub_EwB6Y",
     "reseller_promo_grid_ydyLg",
-    "b2b_news_highlight_LhrNM"
+    "b2b_news_highlight_LhrNM",
+    "b2b_news_updates_V3jwg"
   ]
 }
