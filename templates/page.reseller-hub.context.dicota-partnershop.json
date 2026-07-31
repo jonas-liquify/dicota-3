@@ -12,5 +12,16 @@
     "market": "dicota-partnershop"
   },
   "parent": "page.reseller-hub.json",
-  "sections": {}
+  "sections": {
+    "reseller_hub": {
+      "disabled": false,
+      "settings": {},
+      "blocks": {}
+    },
+    "reseller_promo_grid": {
+      "disabled": false,
+      "settings": {},
+      "blocks": {}
+    }
+  }
 }

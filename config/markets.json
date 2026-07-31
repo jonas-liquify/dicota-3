@@ -17,6 +17,9 @@
     },
     "baloise": {
       "parent": "all-b2b"
+    },
+    "dicota-partnershop": {
+      "parent": "all-b2b"
     }
   }
 }
