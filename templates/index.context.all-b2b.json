@@ -236,8 +236,8 @@
           ],
           "settings": {
             "text_titel": "Latest Updates",
-            "url_button_link": "",
-            "text_button_text": "more News in our DICOTA Bog"
+            "url_button_link": "shopify://blogs/news",
+            "text_button_text": "more News in our DICOTA Blog"
           }
         },
         "news_card_UW49c": {
