@@ -9,7 +9,7 @@
 {% endfor %}</div></div>
                     {% endfor %}    </div>{% if coll_active_filter_count > 0 %}    <span class="li-guard" li-if="coll_active_filter_count > 0">
     <a li-object:href="collection.url" href="{{ collection.url }}" data-coll-filter="" class="coll_filter-clear"><span li-object="'general.clear' | t">{{ 'general.clear' | t }}</span></a>    </span>
-{% endif %}<div class="coll_sort-wrap"><span li-object="'general.sort_by' | t" class="coll_sort-label">{{ 'general.sort_by' | t }}</span><div class="coll_sort-inner w-embed">{% assign coll_sort = collection.sort_by | default: collection.default_sort_by %}<select id="sort-by-coll" class="coll_sort-select" data-coll-sort="">{% for option in collection.sort_options %}<option value="{{ option.value }}" if="" option.value="=" coll_sort="" selected="selected" endif="">{{ option.name }}</option>{% endfor %}</select><div class="icon-embed-xsmall"><svg width="100%" height="100%" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2.55806 6.29544C2.46043 6.19781 2.46043 6.03952 2.55806 5.94189L3.44195 5.058C3.53958 4.96037 3.69787 4.96037 3.7955 5.058L8.00001 9.26251L12.2045 5.058C12.3021 4.96037 12.4604 4.96037 12.5581 5.058L13.4419 5.94189C13.5396 6.03952 13.5396 6.19781 13.4419 6.29544L8.17678 11.5606C8.07915 11.6582 7.92086 11.6582 7.82323 11.5606L2.55806 6.29544Z" fill="currentColor"></path></svg></div></div></div></div><div class="coll-filter-modal" x-show="filterModalOpen" x-cloak="" x-on:keydown.escape.window="filterModalOpen = false" style="display:none"><div class="coll-filter-modal_overlay" x-on:click="filterModalOpen = false"></div><div class="coll-filter-modal_panel"><div class="coll-filter-modal_header"><span li-object="'general.filters' | t" class="coll-filter-modal_title">{{ 'general.filters' | t }}</span><button type="button" aria-label="Close" class="coll-filter-modal_close" x-on:click="filterModalOpen = false">{% render 'icon_close' %}</button></div><div class="coll-filter-modal_body no-scrollbar">{% for filter in collection.filters %}    <div li-for="filter in collection.filters" class="coll-filter-modal_group">
+{% endif %}<div class="coll_sort-wrap"><span li-object="'general.sort_by' | t" class="coll_sort-label">{{ 'general.sort_by' | t }}</span><div class="coll_sort-inner w-embed">{% assign coll_sort = collection.sort_by | default: collection.default_sort_by %}<select id="sort-by-coll" class="coll_sort-select" data-coll-sort="" data-active-sort="{{ coll_sort }}">{% for option in collection.sort_options %}{% if option.value == coll_sort %}<option value="{{ option.value }}" selected="selected">{{ option.name }}</option>{% else %}<option value="{{ option.value }}">{{ option.name }}</option>{% endif %}{% endfor %}</select><div class="icon-embed-xsmall"><svg width="100%" height="100%" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2.55806 6.29544C2.46043 6.19781 2.46043 6.03952 2.55806 5.94189L3.44195 5.058C3.53958 4.96037 3.69787 4.96037 3.7955 5.058L8.00001 9.26251L12.2045 5.058C12.3021 4.96037 12.4604 4.96037 12.5581 5.058L13.4419 5.94189C13.5396 6.03952 13.5396 6.19781 13.4419 6.29544L8.17678 11.5606C8.07915 11.6582 7.92086 11.6582 7.82323 11.5606L2.55806 6.29544Z" fill="currentColor"></path></svg></div></div></div></div><div class="coll-filter-modal" x-show="filterModalOpen" x-cloak="" x-on:keydown.escape.window="filterModalOpen = false" style="display:none"><div class="coll-filter-modal_overlay" x-on:click="filterModalOpen = false"></div><div class="coll-filter-modal_panel"><div class="coll-filter-modal_header"><span li-object="'general.filters' | t" class="coll-filter-modal_title">{{ 'general.filters' | t }}</span><button type="button" aria-label="Close" class="coll-filter-modal_close" x-on:click="filterModalOpen = false">{% render 'icon_close' %}</button></div><div class="coll-filter-modal_body no-scrollbar">{% for filter in collection.filters %}    <div li-for="filter in collection.filters" class="coll-filter-modal_group">
                                     <div li-object="filter.label" class="coll-filter-modal_group-title">{{ filter.label }}</div>
                             <div class="coll-filter-modal_options">{% for filter_value in filter.values %}    <div li-for="filter_value in filter.values" class="coll_filter-option">
                                     <a href="{% if filter_value.active %}{{ filter_value.url_to_remove }}{% else %}{{ filter_value.url_to_add }}{% endif %}" class="{% if filter_value.active %}coll_filter-checkbox is-active{% else %}coll_filter-checkbox{% endif %}" data-coll-filter=""><div class="coll_filter-checkbox-box"></div><span li-object="filter_value.label" class="coll_filter-checkbox-label">{{ filter_value.label }}</span><span class="coll_filter-count">(<span li-object="filter_value.count">{{ filter_value.count }}</span>)</span></a>
@@ -66,7 +66,23 @@
   function log(){if(DEBUG&&window.console)console.info.apply(console,['[CollSR]'].concat([].slice.call(arguments)));}
   function warn(){if(window.console)console.warn.apply(console,['[CollSR]'].concat([].slice.call(arguments)));}
   function getSection(){return document.querySelector(SELECTOR);}
+  /* Absicherung: die aktive Sortierung steht serverseitig als data-active-sort
+     am Select (Attributwert, wird vom Build nicht angetastet). Falls das
+     selected-Attribut im Markup verloren geht, wird die Auswahl hier gesetzt. */
+  function syncSort(){
+    var root=getSection();if(!root)return;
+    var sel=root.querySelector('[data-coll-sort]');if(!sel)return;
+    var want=sel.getAttribute('data-active-sort')||'';
+    if(!want||want.indexOf('{'+'{')!==-1)return;
+    for(var i=0;i<sel.options.length;i++){
+      if(sel.options[i].value===want){
+        if(sel.selectedIndex!==i){log('sort select korrigiert auf',want);sel.selectedIndex=i;}
+        return;
+      }
+    }
+  }
   log('script loaded');
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',syncSort);else syncSort();
   function renderFromUrl(url){
     var section=getSection();
     if(!section){warn('no section in DOM');return;}
@@ -88,6 +104,7 @@
         if(!fresh)throw new Error('section not in response html');
         getSection().replaceWith(fresh);
         log('section replaced');
+        syncSort();
         target.searchParams.delete('section_id');
         history.pushState({},'',target.toString());
         if(window.Alpine){try{window.Alpine.initTree(getSection());}catch(e){warn('Alpine init err',e);}}
