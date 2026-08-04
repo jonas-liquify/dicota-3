@@ -20,7 +20,7 @@
                         </div>
 {% endfor %}
                         </div>
-{% endfor %}</div><div class="sort_select-embed w-embed">{% assign search_sort = search.sort_by | default: search.default_sort_by %}<select id="sort-by" class="sort_select filter_checkbox">{% for option in search.sort_options %}<option value="{{ option.value }}" if="" option.value="=" search_sort="" selected="selected" endif="">{{ option.name }}</option>{% endfor %}</select></div></div><div class="filter_product-list-wrapper w-dyn-list"><div role="list" class="filter_product-list w-dyn-items">{% for product in search.results %}    <div li-for="product in search.results" role="listitem" class="filter_product-list-item w-dyn-item">
+{% endfor %}</div><div class="sort_select-embed w-embed">{% assign search_sort = search.sort_by | default: search.default_sort_by %}<select id="sort-by" class="sort_select filter_checkbox" data-active-sort="{{ search_sort }}">{% for option in search.sort_options %}{% if option.value == search_sort %}<option value="{{ option.value }}" selected="selected">{{ option.name }}</option>{% else %}<option value="{{ option.value }}">{{ option.name }}</option>{% endif %}{% endfor %}</select></div></div><div class="filter_product-list-wrapper w-dyn-list"><div role="list" class="filter_product-list w-dyn-items">{% for product in search.results %}    <div li-for="product in search.results" role="listitem" class="filter_product-list-item w-dyn-item">
                                     {% render 'product_item', product: product %}
                         </div>
 {% endfor %}</div>{% if search.results == blank %}    <div li-if="search.results == blank" class="filter_empty w-dyn-empty">
@@ -58,6 +58,17 @@
                   }
                 }
               }
+              /* Absicherung: aktive Sortierung aus data-active-sort setzen,
+                 falls das selected-Attribut im Markup verloren geht. */
+              (function(){
+                var s = document.querySelector('#sort-by');
+                if (!s) return;
+                var want = s.getAttribute('data-active-sort') || '';
+                if (!want || want.indexOf('{'+'{') !== -1) return;
+                for (var i = 0; i < s.options.length; i++) {
+                  if (s.options[i].value === want) { s.selectedIndex = i; return; }
+                }
+              })();
               /* Update sort_by query parameter on select change */
               document.querySelector('#sort-by').addEventListener('change', function(e) {
                 var value = e.target.value;
