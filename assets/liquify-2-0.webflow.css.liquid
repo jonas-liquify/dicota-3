@@ -18278,3 +18278,207 @@ img.product-header_gallery-image {
     margin-top: 0rem;
   }
 }
+
+/* =============================================================
+   DICOTA — Product Finder Native (Figma 6454-5882)
+   Blaues Panel mit drei Kaskaden-Selects; Ergebnisse kommen aus
+   der Ergebnis-Section und tragen dieselben Produktkachel-Klassen
+   wie die Kollektionsseite.
+   Werte hier spiegeln die JSON-Defaults der Section (padding
+   3.5 / 6 rem), damit der Builder-Canvas dem Design entspricht.
+   ============================================================= */
+.section_pf > .padding-global {
+  padding-top: 3.5rem;
+  padding-bottom: 6rem;
+}
+
+.pf_panel {
+  display: flex;
+  flex-direction: column;
+  gap: 1.875rem;
+  padding: 2.5rem;
+  background-color: #479ef8;
+  color: #ffffff;
+}
+
+.pf_head {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+.pf_head-icon {
+  width: 1.875rem;
+  height: 1.875rem;
+  flex-shrink: 0;
+  color: #ffffff;
+}
+.pf_title {
+  margin: 0;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.pf_form {
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+}
+.pf_selects {
+  display: flex;
+  gap: .75rem;
+}
+.pf_field {
+  display: flex;
+  flex: 1 1 0;
+  min-width: 0;
+  flex-direction: column;
+  gap: .25rem;
+}
+.pf_label {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #ffffff;
+}
+
+.pf_select-wrap {
+  position: relative;
+  width: 100%;
+}
+.pf_select {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 3.375rem;
+  margin: 0;
+  padding: .5rem 2.5rem .5rem 1rem;
+  border: 1px solid rgba(255, 255, 255, .3);
+  border-radius: 0;
+  background-color: transparent;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 1.5;
+  cursor: pointer;
+}
+.pf_select:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: -2px;
+}
+.pf_select:disabled {
+  opacity: .55;
+  cursor: not-allowed;
+}
+/* Native Dropdown-Listen erben die weiße Schrift nicht vom Panel —
+   ohne dunkle Option-Farbe wären die Einträge unlesbar. */
+.pf_select option {
+  color: #0f0f0f;
+  background-color: #ffffff;
+}
+.pf_select-icon {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  width: 1rem;
+  height: 1rem;
+  transform: translateY(-50%);
+  color: #ffffff;
+  pointer-events: none;
+}
+
+.pf_submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 3.375rem;
+  padding: .75rem 1.5rem;
+  border: none;
+  background-color: #ffffff;
+  color: #0f0f0f;
+  font-family: inherit;
+  font-size: .875rem;
+  font-weight: 500;
+  letter-spacing: .0525rem;
+  text-transform: uppercase;
+  box-shadow: 0 2px 1px rgba(0, 0, 0, .1);
+  cursor: pointer;
+}
+.pf_submit:hover {
+  background-color: #f6f6f6;
+}
+
+.pf_status {
+  margin-top: 1.5rem;
+  font-size: .9375rem;
+  color: #686868;
+}
+.pf_results {
+  margin-top: 2.5rem;
+}
+/* Grid-Abstand aus dem Design (5px) — .coll_grid bringt 1.5rem/1rem mit,
+   doppelte Klasse damit die spätere Basisregel nicht gewinnt. */
+.pf_grid.pf_grid {
+  gap: .3125rem;
+}
+.pf_empty {
+  padding: 2rem 0;
+  color: #686868;
+}
+.pf_more {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 767px) {
+  .pf_panel {
+    gap: 1.25rem;
+    padding: 1.5rem 1.25rem;
+  }
+  .pf_selects {
+    flex-direction: column;
+  }
+  .pf_results {
+    margin-top: 1.5rem;
+  }
+}
+
+/* =============================================================
+   DICOTA — judge.me Sterne (Rating Bar + Loved by Customers)
+   Die Sterne waren statisch gefuellte SVGs. Jetzt Maske + Gradient,
+   damit --rating (aus shop.metafields.judgeme.all_reviews_rating)
+   den Fuellstand steuert. Fuellfarbe = currentColor, damit die
+   bestehende Sternenfarbe (Setting bzw. Vererbung) 1:1 erhalten bleibt.
+   Groesse kommt weiterhin vom Eltern-Element, auch im Mobile-Override.
+   ============================================================= */
+.rating-bar_star-mask {
+  flex: none;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    currentColor calc(var(--rating, 5) * 20%),
+    rgba(15, 15, 15, .18) calc(var(--rating, 5) * 20%)
+  );
+  -webkit-mask: url(data:image/svg+xml;utf8,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20viewBox=%270%200%20100%2020%27%3E%3Cg%20fill=%27black%27%3E%3Cpolygon%20points=%2710,0%2012.3,7.2%2020,7.2%2013.9,11.6%2016.2,18.8%2010,14.4%203.8,18.8%206.1,11.6%200,7.2%207.7,7.2%27/%3E%3Cpolygon%20points=%2730,0%2032.3,7.2%2040,7.2%2033.9,11.6%2036.2,18.8%2030,14.4%2023.8,18.8%2026.1,11.6%2020,7.2%2027.7,7.2%27/%3E%3Cpolygon%20points=%2750,0%2052.3,7.2%2060,7.2%2053.9,11.6%2056.2,18.8%2050,14.4%2043.8,18.8%2046.1,11.6%2040,7.2%2047.7,7.2%27/%3E%3Cpolygon%20points=%2770,0%2072.3,7.2%2080,7.2%2073.9,11.6%2076.2,18.8%2070,14.4%2063.8,18.8%2066.1,11.6%2060,7.2%2067.7,7.2%27/%3E%3Cpolygon%20points=%2790,0%2092.3,7.2%20100,7.2%2093.9,11.6%2096.2,18.8%2090,14.4%2083.8,18.8%2086.1,11.6%2080,7.2%2087.7,7.2%27/%3E%3C/g%3E%3C/svg%3E) center/contain no-repeat;
+  mask: url(data:image/svg+xml;utf8,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20viewBox=%270%200%20100%2020%27%3E%3Cg%20fill=%27black%27%3E%3Cpolygon%20points=%2710,0%2012.3,7.2%2020,7.2%2013.9,11.6%2016.2,18.8%2010,14.4%203.8,18.8%206.1,11.6%200,7.2%207.7,7.2%27/%3E%3Cpolygon%20points=%2730,0%2032.3,7.2%2040,7.2%2033.9,11.6%2036.2,18.8%2030,14.4%2023.8,18.8%2026.1,11.6%2020,7.2%2027.7,7.2%27/%3E%3Cpolygon%20points=%2750,0%2052.3,7.2%2060,7.2%2053.9,11.6%2056.2,18.8%2050,14.4%2043.8,18.8%2046.1,11.6%2040,7.2%2047.7,7.2%27/%3E%3Cpolygon%20points=%2770,0%2072.3,7.2%2080,7.2%2073.9,11.6%2076.2,18.8%2070,14.4%2063.8,18.8%2066.1,11.6%2060,7.2%2067.7,7.2%27/%3E%3Cpolygon%20points=%2790,0%2092.3,7.2%20100,7.2%2093.9,11.6%2096.2,18.8%2090,14.4%2083.8,18.8%2086.1,11.6%2080,7.2%2087.7,7.2%27/%3E%3C/g%3E%3C/svg%3E) center/contain no-repeat;
+}
+.loved-by_star-mask {
+  flex: none;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    currentColor calc(var(--rating, 5) * 20%),
+    rgba(15, 15, 15, .2) calc(var(--rating, 5) * 20%)
+  );
+  -webkit-mask: url(data:image/svg+xml;utf8,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20viewBox=%270%200%2060%2012%27%3E%3Cg%20fill=%27black%27%3E%3Cpolygon%20points=%276,0%207.4,4.3%2012,4.3%208.3,7%209.7,11.3%206,8.6%202.3,11.3%203.7,7%200,4.3%204.6,4.3%27/%3E%3Cpolygon%20points=%2718,0%2019.4,4.3%2024,4.3%2020.3,7%2021.7,11.3%2018,8.6%2014.3,11.3%2015.7,7%2012,4.3%2016.6,4.3%27/%3E%3Cpolygon%20points=%2730,0%2031.4,4.3%2036,4.3%2032.3,7%2033.7,11.3%2030,8.6%2026.3,11.3%2027.7,7%2024,4.3%2028.6,4.3%27/%3E%3Cpolygon%20points=%2742,0%2043.4,4.3%2048,4.3%2044.3,7%2045.7,11.3%2042,8.6%2038.3,11.3%2039.7,7%2036,4.3%2040.6,4.3%27/%3E%3Cpolygon%20points=%2754,0%2055.4,4.3%2060,4.3%2056.3,7%2057.7,11.3%2054,8.6%2050.3,11.3%2051.7,7%2048,4.3%2052.6,4.3%27/%3E%3C/g%3E%3C/svg%3E) center/contain no-repeat;
+  mask: url(data:image/svg+xml;utf8,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20viewBox=%270%200%2060%2012%27%3E%3Cg%20fill=%27black%27%3E%3Cpolygon%20points=%276,0%207.4,4.3%2012,4.3%208.3,7%209.7,11.3%206,8.6%202.3,11.3%203.7,7%200,4.3%204.6,4.3%27/%3E%3Cpolygon%20points=%2718,0%2019.4,4.3%2024,4.3%2020.3,7%2021.7,11.3%2018,8.6%2014.3,11.3%2015.7,7%2012,4.3%2016.6,4.3%27/%3E%3Cpolygon%20points=%2730,0%2031.4,4.3%2036,4.3%2032.3,7%2033.7,11.3%2030,8.6%2026.3,11.3%2027.7,7%2024,4.3%2028.6,4.3%27/%3E%3Cpolygon%20points=%2742,0%2043.4,4.3%2048,4.3%2044.3,7%2045.7,11.3%2042,8.6%2038.3,11.3%2039.7,7%2036,4.3%2040.6,4.3%27/%3E%3Cpolygon%20points=%2754,0%2055.4,4.3%2060,4.3%2056.3,7%2057.7,11.3%2054,8.6%2050.3,11.3%2051.7,7%2048,4.3%2052.6,4.3%27/%3E%3C/g%3E%3C/svg%3E) center/contain no-repeat;
+}
+
+/* Der Sortier-Select liegt jetzt in einem Embed (nur so laesst sich das
+   Boolean-Attribut "selected" bedingt ausgeben). Der Wrapper darf das
+   Flex-Layout von .filter_feed-header nicht veraendern. */
+.sort_select-embed {
+  display: contents;
+}

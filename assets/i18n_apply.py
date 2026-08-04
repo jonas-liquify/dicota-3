@@ -49,6 +49,7 @@ EXACT = {
  'Write a review':'reviews.write','No reviews yet. Be the first to write one.':'reviews.empty',
  'Load more reviews':'reviews.load_more','Your rating':'reviews.your_rating','Name':'reviews.name',
  'Email':'reviews.email','Review title':'reviews.title','Your review':'reviews.body','Submit review':'reviews.submit',
+ 'reviews':'reviews.count_label',
  'Enter reseller details':'reseller.form.heading','Contact person*':'reseller.form.contact_person',
  'Email address*':'reseller.form.email','Phone':'reseller.form.phone',
  'Account holder':'loyalty.cashback.account_holder','Account number / IBAN':'loyalty.cashback.iban','Bank':'loyalty.cashback.bank',

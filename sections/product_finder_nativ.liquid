@@ -1,0 +1,185 @@
+<div class="padding-global" style="padding-top: {{ section.settings.padding_top }}rem; padding-bottom: {{ section.settings.padding_bottom }}rem;"><div class="container-large"><div class="pf_panel" data-pf-root="" data-proxy="{{ section.settings.text_proxy_url }}" data-lang="{{ request.locale.iso_code }}" data-search-url="{{ routes.search_url }}" data-t-loading="{{ section.settings.text_status_loading }}" data-t-error="{{ section.settings.text_status_error }}" data-t-choose="{{ section.settings.text_status_choose }}" data-t-none="{{ 'collection.no_products' | t }}"><div class="pf_head"><div class="pf_head-icon w-embed"><svg width="100%" height="100%" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.75" stroke="currentColor" stroke-width="2"></circle><path d="M15.6 15.6L20.25 20.25" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg></div><h2 class="pf_title heading-style-h2">
+{{ section.settings.text_uberschrift }}
+</h2></div><div class="pf_form"><div class="pf_selects"><div class="pf_field"><label class="pf_label" for="pf-manufacturer">
+{{ section.settings.text_label_hersteller }}
+</label><div class="pf_select-wrap"><select id="pf-manufacturer" data-pf-manufacturer="" class="pf_select"><option value="" data-all="1">Alle</option></select><span class="pf_select-icon w-embed"><svg width="100%" height="100%" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M2.5 5.9L8 11.4L13.5 5.9" stroke="currentColor" stroke-width="1.6" fill="none"></path></svg></span></div></div><div class="pf_field"><label class="pf_label" for="pf-type">
+{{ section.settings.text_label_modelltyp }}
+</label><div class="pf_select-wrap"><select id="pf-type" data-pf-type="" class="pf_select" disabled="disabled" data-placeholder="{{ section.settings.text_placeholder_locked }}"><option value="">Bitte zuerst Hersteller wählen</option></select><span class="pf_select-icon w-embed"><svg width="100%" height="100%" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M2.5 5.9L8 11.4L13.5 5.9" stroke="currentColor" stroke-width="1.6" fill="none"></path></svg></span></div></div><div class="pf_field"><label class="pf_label" for="pf-model">
+{{ section.settings.text_label_modell }}
+</label><div class="pf_select-wrap"><select id="pf-model" data-pf-model="" class="pf_select" disabled="disabled" data-placeholder="{{ section.settings.text_placeholder_locked }}"><option value="">Bitte zuerst Hersteller wählen</option></select><span class="pf_select-icon w-embed"><svg width="100%" height="100%" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M2.5 5.9L8 11.4L13.5 5.9" stroke="currentColor" stroke-width="1.6" fill="none"></path></svg></span></div></div></div><button type="button" data-pf-submit="" class="pf_submit"><span>
+{{ section.settings.text_button_text }}
+</span></button></div></div><div class="pf_status" data-pf-status="" role="status" aria-live="polite" hidden=""></div><div class="pf_results" data-pf-results=""></div><div class="pf_more" data-pf-more-wrap="" hidden=""><button type="button" data-pf-more="" class="button is-secondary"><span>
+{{ section.settings.text_mehr_laden }}
+</span></button></div></div></div><div class="hide w-embed w-script"><script>(function(){
+  /* Product Finder Native &mdash; Kaskade ueber den upgradebox-Proxy, Ergebnisse ueber
+     Shopifys Suche + Section Rendering. Keine //-Kommentare: falls der Sync die
+     Zeilen kollabiert, wuerde das den Rest der Zeile auskommentieren. */
+  function init(){
+    var root=document.querySelector("[data-pf-root]");if(!root)return;
+    var scope=root.closest(".container-large")||document;
+    var status=scope.querySelector("[data-pf-status]"),results=scope.querySelector("[data-pf-results]");
+    var moreWrap=scope.querySelector("[data-pf-more-wrap]"),moreBtn=scope.querySelector("[data-pf-more]");
+    var selM=root.querySelector("[data-pf-manufacturer]"),selT=root.querySelector("[data-pf-type]"),selMo=root.querySelector("[data-pf-model]");
+    var btn=root.querySelector("[data-pf-submit]");
+    function attr(el,n,fb){var v=el?el.getAttribute(n):"";if(!v||v.indexOf("{"+"{")!==-1)return fb;return v;}
+    var proxy=attr(root,"data-proxy","").replace(/\/+$/,"");
+    var lang=attr(root,"data-lang","en").toLowerCase();
+    var searchUrl=attr(root,"data-search-url","/search");
+    var T={loading:attr(root,"data-t-loading","&hellip;"),error:attr(root,"data-t-error","Fehler"),choose:attr(root,"data-t-choose","Bitte Modell w&auml;hlen."),none:attr(root,"data-t-none","Keine Produkte gefunden.")};
+    if(!proxy){root.setAttribute("data-pf-unconfigured","");return;}
+    var refs=[],shown=0,BATCH=24,token=0;
+    function say(m){if(status){status.textContent=m||"";status.hidden=!m;}}
+    function api(path,params){var u=proxy+path+"?lang="+encodeURIComponent(lang);for(var k in params){if(params[k])u+="&"+k+"="+encodeURIComponent(params[k]);}
+      return fetch(u,{headers:{"Accept":"application/json"}}).then(function(r){if(!r.ok)throw new Error("HTTP "+r.status);return r.json();});}
+    function lock(sel){if(!sel)return;sel.innerHTML="";var o=document.createElement("option");o.value="";
+      o.textContent=sel.getAttribute("data-placeholder")||"";sel.appendChild(o);sel.disabled=true;}
+    function fill(sel,items,firstLabel){if(!sel)return;sel.innerHTML="";var o=document.createElement("option");o.value="";
+      o.textContent=firstLabel;sel.appendChild(o);
+      items.forEach(function(it){var op=document.createElement("option");op.value=it.value;op.textContent=it.label;sel.appendChild(op);});
+      sel.disabled=items.length===0;}
+    function norm(list){return (list||[]).map(function(i){return (typeof i==="string")?{value:i,label:i}:{value:i.value,label:i.label||i.value};});}
+    function loadManufacturers(){var first=selM&&selM.options[0]?selM.options[0].textContent:"Alle";
+      api("/manufacturers",{}).then(function(d){fill(selM,norm(d.items),first);}).catch(function(){say(T.error);});}
+    if(selM){selM.addEventListener("change",function(){lock(selT);lock(selMo);if(!selM.value)return;
+      api("/types",{manufacturer:selM.value}).then(function(d){fill(selT,norm(d.items),selT.getAttribute("data-placeholder")||"");}).catch(function(){say(T.error);});});}
+    if(selT){selT.addEventListener("change",function(){lock(selMo);if(!selT.value)return;
+      api("/models",{manufacturer:selM.value,type:selT.value}).then(function(d){fill(selMo,norm(d.items),selMo.getAttribute("data-placeholder")||"");}).catch(function(){say(T.error);});});}
+    function renderBatch(append){var slice=refs.slice(shown,shown+BATCH);if(!slice.length)return Promise.resolve();
+      var u=searchUrl+"?type=product&section_id=product_finder_results&q="+encodeURIComponent(slice.join(" OR "));
+      var mine=token;
+      return fetch(u,{headers:{"Accept":"text/html"}}).then(function(r){if(!r.ok)throw new Error("HTTP "+r.status);return r.text();})
+        .then(function(html){if(mine!==token)return;
+          var doc=new DOMParser().parseFromString(html,"text/html");
+          var fresh=doc.querySelector(".pf_results-inner");
+          if(!fresh){var w=doc.querySelector("[id^=\"shopify-section-\"]");if(w)fresh=w.querySelector(".pf_results-inner");}
+          if(!fresh)throw new Error("section not in response");
+          if(append){var grid=results.querySelector(".pf_grid"),incoming=fresh.querySelector(".pf_grid");
+            if(grid&&incoming){while(incoming.firstChild){grid.appendChild(incoming.firstChild);}}}
+          else{results.innerHTML=fresh.innerHTML;}
+          shown+=slice.length;
+          if(window.Alpine){try{window.Alpine.initTree(results);}catch(e){}}
+          if(moreWrap){moreWrap.hidden=shown>=refs.length;}
+          say(results.querySelector(".pf_grid-item, .coll_grid-item")?"":T.none);});}
+    if(btn){btn.addEventListener("click",function(){
+      if(!selMo||!selMo.value){say(T.choose);return;}
+      token++;refs=[];shown=0;if(results)results.innerHTML="";if(moreWrap)moreWrap.hidden=true;say(T.loading);
+      api("/articles",{manufacturer:selM.value,model:selMo.value}).then(function(d){
+        refs=(d.references||[]).filter(Boolean);
+        if(!refs.length){say(T.none);return;}
+        say("");return renderBatch(false);}).catch(function(){say(T.error);});});}
+    if(moreBtn){moreBtn.addEventListener("click",function(){say(T.loading);renderBatch(true).then(function(){say("");}).catch(function(){say(T.error);});});}
+    /* Herstellerliste erst laden, wenn die Sektion sichtbar wird &mdash; jeder API-Call
+       zaehlt gegen das Rate-Limit des Anbieters. */
+    if("IntersectionObserver" in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(e.isIntersecting){io.disconnect();loadManufacturers();}});},{rootMargin:"200px"});io.observe(root);}
+    else{loadManufacturers();}
+  }
+  if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",init);}else{init();}
+})();</script></div> {% schema %} {
+    "tag": "section",
+    "name": "Product Finder Nativ",
+    "class": "section_pf",
+    "settings": [
+        {
+            "id": "text_uberschrift",
+            "type": "text",
+            "label": "\u00dcberschrift",
+            "default": "Find the perfect fit for your individual device"
+        },
+        {
+            "id": "text_label_hersteller",
+            "type": "text",
+            "label": "Label Hersteller",
+            "default": "Select Manufacturer"
+        },
+        {
+            "id": "text_label_modelltyp",
+            "type": "text",
+            "label": "Label Modelltyp",
+            "default": "Select model type"
+        },
+        {
+            "id": "text_label_modell",
+            "type": "text",
+            "label": "Label Modell",
+            "default": "Select model"
+        },
+        {
+            "id": "text_button_text",
+            "type": "text",
+            "label": "Button Text",
+            "default": "Produkte finden"
+        },
+        {
+            "id": "text_mehr_laden",
+            "type": "text",
+            "label": "Mehr laden",
+            "default": "Mehr laden"
+        },
+        {
+            "type": "header",
+            "content": "Product Finder"
+        },
+        {
+            "type": "text",
+            "id": "text_proxy_url",
+            "label": "Product-Finder-Proxy-URL",
+            "info": "URL des Cloudflare Workers aus tools\/upgradebox-proxy (z. B. https:\/\/dicota-productfinder.xyz.workers.dev). Leer lassen = Sektion bleibt still, es werden keine API-Calls gemacht."
+        },
+        {
+            "type": "text",
+            "id": "text_placeholder_locked",
+            "label": "Platzhalter gesperrte Auswahl",
+            "default": "Bitte zuerst Hersteller w\u00e4hlen"
+        },
+        {
+            "type": "text",
+            "id": "text_status_loading",
+            "label": "Status: l\u00e4dt",
+            "default": "Passende Produkte werden geladen \u2026"
+        },
+        {
+            "type": "text",
+            "id": "text_status_error",
+            "label": "Status: Fehler",
+            "default": "Der Produktfinder ist gerade nicht erreichbar. Bitte sp\u00e4ter erneut versuchen."
+        },
+        {
+            "type": "text",
+            "id": "text_status_choose",
+            "label": "Status: Modell fehlt",
+            "default": "Bitte ein Modell ausw\u00e4hlen."
+        },
+        {
+            "type": "header",
+            "content": "Abst\u00e4nde"
+        },
+        {
+            "type": "range",
+            "id": "padding_top",
+            "min": 0,
+            "max": 12,
+            "step": 0.5,
+            "unit": "rem",
+            "label": "Abstand oben",
+            "default": 3.5
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom",
+            "min": 0,
+            "max": 12,
+            "step": 0.5,
+            "unit": "rem",
+            "label": "Abstand unten",
+            "default": 6
+        }
+    ],
+    "presets": [
+        {
+            "name": "Product Finder Nativ",
+            "category": "Content",
+            "blocks": []
+        }
+    ]
+} {% endschema %}
