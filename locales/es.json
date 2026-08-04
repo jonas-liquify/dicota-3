@@ -101,6 +101,7 @@
     }
   },
   "reviews": {
+    "count_label": "reseñas",
     "body": "Tu reseña",
     "email": "Correo electrónico",
     "empty": "Aún no hay reseñas. Sé el primero en escribir uno.",

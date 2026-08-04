@@ -101,6 +101,7 @@
     }
   },
   "reviews": {
+    "count_label": "avis",
     "body": "Votre avis",
     "email": "Courriel",
     "empty": "Aucun avis pour l'instant. Soyez le premier à en écrire un.",

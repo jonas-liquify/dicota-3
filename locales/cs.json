@@ -101,6 +101,7 @@
     }
   },
   "reviews": {
+    "count_label": "recenzí",
     "body": "Vaše recenze",
     "email": "E-mail",
     "empty": "Zatím žádné recenze. Buďte první, kdo napíše recenzi.",

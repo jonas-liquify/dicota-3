@@ -101,6 +101,7 @@
     }
   },
   "reviews": {
+    "count_label": "Bewertungen",
     "body": "Deine Bewertung",
     "email": "E-Mail",
     "empty": "Noch keine Bewertungen. Schreibe die erste.",

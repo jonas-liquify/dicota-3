@@ -101,6 +101,7 @@
     }
   },
   "reviews": {
+    "count_label": "beoordelingen",
     "body": "Jouw recensie",
     "email": "E-mail",
     "empty": "Nog geen beoordelingen. Wees de eerste die er een schrijft.",

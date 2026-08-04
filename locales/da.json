@@ -101,6 +101,7 @@
     }
   },
   "reviews": {
+    "count_label": "anmeldelser",
     "body": "Din anmeldelse",
     "email": "E-mail"
   }
