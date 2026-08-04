@@ -1,124 +1,196 @@
 /**
- * DICOTA — Judge.me Reviews Proxy (Cloudflare Worker reference)
+ * DICOTA — Upgradebox Product Finder Proxy (Cloudflare Worker)
  * ------------------------------------------------------------------
- * Hält den privaten Judge.me API-Token SERVERSEITIG. Das Theme spricht
- * nur diesen Proxy an (Setting "Reviews-Proxy-URL" in der Product-Reviews-
- * Section) — der Token verlässt nie den Server.
+ * Die upgbAPI (upgradebox.eu) erwartet einen HTTP-POST mit XML-Body, der
+ * userid, subid UND das PASSWORT IM KLARTEXT enthält, und antwortet in XML.
+ * Sie ist damit prinzipiell nicht clientseitig nutzbar — ein Aufruf aus dem
+ * Theme würde das Passwort im Seitenquelltext offenlegen (und CORS fehlt).
+ *
+ * Dieser Worker hält die Credentials serverseitig und übersetzt die API in
+ * schlanke JSON-GETs. Das Theme (_sections/Product Finder Native.html)
+ * spricht nur diesen Proxy an — über das Setting "Product-Finder-Proxy-URL".
  *
  * Endpoints (Contract, den das Theme erwartet):
- *   GET  {proxy}/reviews?product_id=<shopify_id>&handle=<handle>&page=<n>&per_page=<m>
- *        -> { "reviews": [ {rating,title,body,reviewer:{name},created_at}, ... ],
- *             "has_more": bool }               // NUR veröffentlichte Reviews, OHNE E-Mails/PII
- *   POST {proxy}/reviews   (JSON: {product_id,url,handle,name,email,rating,title,body})
- *        -> { "ok": true }                     // öffentliche Review-Einreichung (Moderation via Judge.me)
+ *   GET {proxy}/manufacturers?lang=de
+ *       -> { "items": ["Acer", "Apple", ...] }
+ *   GET {proxy}/types?manufacturer=Apple&lang=de
+ *       -> { "items": [ {"value":"NOTEBOOK","label":"Notebook"}, ... ] }
+ *   GET {proxy}/models?manufacturer=Apple&type=NOTEBOOK&lang=de
+ *       -> { "items": ["MacBook Pro 16 M3", ...] }
+ *   GET {proxy}/articles?manufacturer=Apple&model=MacBook%20Pro%2016%20M3&lang=de
+ *       -> { "items": [ {"reference":"D31839","name":"…","group":"…",
+ *                        "subgroup":"…","manufacturer":"DICOTA"}, ... ],
+ *            "references": ["D31839", ...] }     // Convenience für die SKU-Suche
  *
- * Secrets (als Worker-Variablen/Secrets setzen, NICHT hier hardcoden):
- *   JUDGEME_API_TOKEN   = <privater Judge.me API Token>
- *   JUDGEME_SHOP_DOMAIN = dicota.myshopify.com
- *   ALLOWED_ORIGIN      = https://www.dicota.com   (Storefront-Origin; für CORS)
+ * Secrets (NICHT hier hardcoden — `wrangler secret put`):
+ *   UPGRADEBOX_USERID   = <userID von upgradebox.eu>
+ *   UPGRADEBOX_PASS     = <Passwort>
+ * Vars (wrangler.toml):
+ *   UPGRADEBOX_SUBID    = 0000
+ *   UPGRADEBOX_VERSION  = v1            (Pfadsegment: https://api.upgradebox.net/<VERSION>/)
+ *   ALLOWED_ORIGIN      = https://www.dicota.com,...
  *
  * Deploy: siehe README.md
  */
 
-const JM = "https://judge.me/api/v1";
+const API_HOST = "https://api.upgradebox.net";
+
+/* Die API kennt laut Doku (Tab. 2) diese Sprachen. Shop-Locales ohne
+   Gegenstück (ar, hi) fallen bewusst auf EN zurück. */
+const LANGS = {
+  cs: "CZ", da: "DK", de: "DE", en: "EN", es: "ES", fr: "FR",
+  hu: "HU", it: "IT", nl: "NL", pl: "PL", pt: "PT", sk: "SL", sv: "SK", uk: "UA"
+};
+
+/* Cache-Dauer je Endpoint. Die Doku kündigt Rate-Limits an ("e.g. 10/min,
+   1000/day") — Caching ist hier Pflicht, nicht Optimierung. */
+const TTL = { manufacturers: 86400, types: 86400, models: 21600, articles: 3600 };
+
+const ROUTES = {
+  manufacturers: { type: "ModelManufacturers",        params: [] },
+  types:         { type: "ModelTypes",                params: ["manufacturer"] },
+  models:        { type: "ModelListManufacturerType", params: ["manufacturer", "type"] },
+  articles:      { type: "ModelArticles",             params: ["manufacturer", "model"] }
+};
 
 export default {
-  async fetch(request, env) {
+  async fetch(request, env, ctx) {
     const url = new URL(request.url);
     const cors = corsHeaders(request, env);
 
     if (request.method === "OPTIONS") return new Response(null, { status: 204, headers: cors });
-    if (!url.pathname.replace(/\/+$/, "").endsWith("/reviews")) {
-      return json({ error: "not found" }, 404, cors);
+    if (request.method !== "GET") return json({ error: "method not allowed" }, 405, cors);
+
+    const route = url.pathname.replace(/\/+$/, "").split("/").pop();
+    if (!ROUTES[route]) return json({ error: "not found" }, 404, cors);
+
+    const lang = LANGS[str(url.searchParams.get("lang")).toLowerCase()] || "EN";
+    const manufacturer = str(url.searchParams.get("manufacturer"));
+    const modeltype    = str(url.searchParams.get("type"));
+    const model        = str(url.searchParams.get("model"));
+
+    /* Pflichtparameter prüfen, damit keine sinnlosen Upstream-Calls entstehen
+       (jeder Call zählt gegen das Rate-Limit). */
+    const need = ROUTES[route].params;
+    if (need.indexOf("manufacturer") !== -1 && !manufacturer) return json({ error: "manufacturer required" }, 400, cors);
+    if (need.indexOf("type") !== -1 && !modeltype) return json({ error: "type required" }, 400, cors);
+    if (need.indexOf("model") !== -1 && !model) return json({ error: "model required" }, 400, cors);
+
+    /* Cache-Key ohne Origin/Credentials — nur die fachlichen Parameter. */
+    const cacheKey = new Request(
+      `${url.origin}/__ub/${route}?l=${enc(lang)}&ma=${enc(manufacturer)}&t=${enc(modeltype)}&mo=${enc(model)}`,
+      { method: "GET" }
+    );
+    const cache = caches.default;
+    const hit = await cache.match(cacheKey);
+    if (hit) {
+      const body = await hit.text();
+      return new Response(body, { status: 200, headers: Object.assign({ "Content-Type": "application/json", "X-Proxy-Cache": "HIT" }, cors) });
     }
 
+    let payload;
     try {
-      if (request.method === "GET")  return await handleList(url, env, cors);
-      if (request.method === "POST") return await handleCreate(request, env, cors);
-      return json({ error: "method not allowed" }, 405, cors);
+      const xml = await callApi(env, ROUTES[route].type, lang, { manufacturer, modeltype, model });
+      payload = parse(route, xml);
     } catch (err) {
-      return json({ error: "upstream error" }, 502, cors); // generisch — keine Upstream-Details/Token leaken
+      return json({ error: "upstream error" }, 502, cors); // generisch — keine Upstream-Details, keine Credentials
     }
+
+    const body = JSON.stringify(payload);
+    ctx.waitUntil(cache.put(cacheKey, new Response(body, {
+      headers: { "Content-Type": "application/json", "Cache-Control": `public, max-age=${TTL[route]}` }
+    })));
+
+    return new Response(body, { status: 200, headers: Object.assign({ "Content-Type": "application/json", "X-Proxy-Cache": "MISS" }, cors) });
   }
 };
 
-/* ---- GET /reviews : veröffentlichte Reviews, PII entfernt ---- */
-async function handleList(url, env, cors) {
-  const productId = url.searchParams.get("product_id") || "";
-  const handle    = url.searchParams.get("handle") || "";
-  const page      = clampInt(url.searchParams.get("page"), 1, 1, 1000);
-  const perPage   = clampInt(url.searchParams.get("per_page"), 10, 1, 50);
+/* ---- Upstream: XML-POST an die upgbAPI ---- */
+async function callApi(env, requesttype, lang, p) {
+  const version = str(env.UPGRADEBOX_VERSION) || "v1";
+  let extra = "";
+  if (p.manufacturer) extra += `<modelmanufacturer>${esc(p.manufacturer)}</modelmanufacturer>`;
+  if (p.modeltype)    extra += `<modeltypesystemname>${esc(p.modeltype)}</modeltypesystemname>`;
+  if (p.model)        extra += `<modelname>${esc(p.model)}</modelname>`;
 
-  // 1) Shopify-external_id -> Judge.me interne Produkt-ID auflösen
-  let jmId = null;
-  try {
-    const pr = await jmGet(env, "/products/-1", { external_id: productId, handle });
-    jmId = pr && pr.product && pr.product.id;
-  } catch (_) { /* fällt unten auf handle zurück */ }
+  const xml =
+    `<?xml version="1.0" encoding="UTF-8"?>` +
+    `<upgradeboxrequest>` +
+      `<authorization>` +
+        `<userid>${esc(env.UPGRADEBOX_USERID)}</userid>` +
+        `<subid>${esc(str(env.UPGRADEBOX_SUBID) || "0000")}</subid>` +
+        `<pass>${esc(env.UPGRADEBOX_PASS)}</pass>` +
+      `</authorization>` +
+      `<request>` +
+        `<requesttype>${requesttype}</requesttype>` +
+        `<requestlanguage>${lang}</requestlanguage>` +
+        `<requestformat>XML</requestformat>` +
+        extra +
+      `</request>` +
+    `</upgradeboxrequest>`;
 
-  // 2) Reviews holen (nur published)
-  const params = { per_page: perPage, page, published: "true" };
-  if (jmId) params.product_id = jmId; else params.handle = handle;
-  const d = await jmGet(env, "/reviews", params);
-  const raw = (d && d.reviews) || [];
-
-  // 3) Auf sichere Felder reduzieren (KEINE E-Mail, keine IDs/IP)
-  const reviews = raw
-    .filter(r => r && (r.published === undefined || r.published === true) && r.hidden !== true)
-    .map(r => ({
-      rating: r.rating,
-      title: r.title || "",
-      body: r.body || "",
-      reviewer: { name: (r.reviewer && r.reviewer.name) || r.reviewer_name || "Anonymous" },
-      created_at: r.created_at
-    }));
-
-  return json({ reviews, has_more: raw.length === perPage }, 200, cors);
+  const r = await fetch(`${API_HOST}/${version}/`, {
+    method: "POST",
+    headers: { "Content-Type": "text/xml; charset=UTF-8", "Accept": "text/xml" },
+    body: xml
+  });
+  if (!r.ok) throw new Error("upgradebox " + r.status);
+  return r.text();
 }
 
-/* ---- POST /reviews : öffentliche Einreichung (Token bleibt serverseitig) ---- */
-async function handleCreate(request, env, cors) {
-  let b;
-  try { b = await request.json(); } catch (_) { return json({ error: "bad request" }, 400, cors); }
-
-  const rating = parseInt(b.rating, 10);
-  const name  = str(b.name), email = str(b.email), body = str(b.body);
-  const title = str(b.title), pid = str(b.product_id), purl = str(b.url);
-  if (!(rating >= 1 && rating <= 5) || !name || !isEmail(email) || !body) {
-    return json({ error: "invalid input" }, 422, cors);
+/* ---- XML -> JSON. Bewusst per Regex: die Antworten sind flach und
+   Cloudflare Workers haben keinen DOMParser. ---- */
+function parse(route, xml) {
+  if (route === "manufacturers") {
+    return { items: tags(xml, "modelmanufacturer") };
   }
-  if (name.length > 120 || title.length > 200 || body.length > 5000) {
-    return json({ error: "too long" }, 422, cors);
+  if (route === "types") {
+    const items = blocks(xml, "modeltype").map(b => ({
+      value: tag(b, "modeltypesystemname"),
+      label: tag(b, "modeltypedisplay") || tag(b, "modeltypesystemname")
+    })).filter(i => i.value);
+    return { items };
   }
-  // TODO optional: Rate-Limit (z.B. per Cloudflare KV/Turnstile) gegen Review-Spam.
+  if (route === "models") {
+    /* ModelListManufacturerType liefert flache <modelname>-Elemente. */
+    return { items: tags(xml, "modelname") };
+  }
+  // articles
+  const items = blocks(xml, "article").map(b => ({
+    reference:    tag(b, "articlereference"),
+    name:         tag(b, "articlename"),
+    group:        tag(b, "articlegroup"),
+    subgroup:     tag(b, "articlesubgroup"),
+    manufacturer: tag(b, "articlemanufacturer"),
+    compattype:   tag(b, "articlecompattype")
+  })).filter(a => a.reference);
+  return { items, references: items.map(a => a.reference) };
+}
 
-  const form = new URLSearchParams();
-  form.set("shop_domain", env.JUDGEME_SHOP_DOMAIN);
-  form.set("platform", "shopify");
-  if (pid)  form.set("id", pid);
-  if (purl) form.set("url", purl);
-  form.set("name", name); form.set("email", email);
-  form.set("rating", String(rating));
-  if (title) form.set("title", title);
-  form.set("body", body);
-
-  const r = await fetch(JM + "/reviews", {
-    method: "POST",
-    headers: { "Content-Type": "application/x-www-form-urlencoded", "Accept": "application/json" },
-    body: form.toString()
-  });
-  return json({ ok: r.ok }, r.ok ? 200 : 502, cors);
+function blocks(xml, name) {
+  const out = [];
+  const re = new RegExp(`<${name}>([\\s\\S]*?)</${name}>`, "gi");
+  let m;
+  while ((m = re.exec(xml)) !== null) out.push(m[1]);
+  return out;
+}
+function tags(xml, name) {
+  return blocks(xml, name).map(v => unesc(v).trim()).filter(Boolean);
+}
+function tag(block, name) {
+  const m = new RegExp(`<${name}>([\\s\\S]*?)</${name}>`, "i").exec(block);
+  return m ? unesc(m[1]).trim() : "";
 }
 
 /* ---- helpers ---- */
-async function jmGet(env, path, params) {
-  const u = new URL(JM + path);
-  u.searchParams.set("api_token", env.JUDGEME_API_TOKEN);
-  u.searchParams.set("shop_domain", env.JUDGEME_SHOP_DOMAIN);
-  for (const k in params) if (params[k] != null && params[k] !== "") u.searchParams.set(k, params[k]);
-  const r = await fetch(u.toString(), { headers: { "Accept": "application/json" } });
-  if (!r.ok) throw new Error("judgeme " + r.status);
-  return r.json();
+function esc(v) {
+  return str(v).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+               .replace(/"/g, "&quot;").replace(/'/g, "&apos;");
+}
+function unesc(v) {
+  return String(v).replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, "$1")
+                  .replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"')
+                  .replace(/&apos;/g, "'").replace(/&amp;/g, "&");
 }
 function corsHeaders(request, env) {
   const origin = request.headers.get("Origin") || "";
@@ -126,7 +198,7 @@ function corsHeaders(request, env) {
   const ok = allow && (allow === "*" || allow.split(",").map(s => s.trim()).indexOf(origin) !== -1);
   return {
     "Access-Control-Allow-Origin": ok ? origin : allow.split(",")[0] || "null",
-    "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+    "Access-Control-Allow-Methods": "GET, OPTIONS",
     "Access-Control-Allow-Headers": "Content-Type, Accept",
     "Vary": "Origin"
   };
@@ -135,5 +207,4 @@ function json(obj, status, cors) {
   return new Response(JSON.stringify(obj), { status, headers: Object.assign({ "Content-Type": "application/json" }, cors) });
 }
 function str(v) { return (v == null ? "" : String(v)).trim(); }
-function isEmail(v) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v); }
-function clampInt(v, def, min, max) { var n = parseInt(v, 10); if (isNaN(n)) n = def; return Math.max(min, Math.min(max, n)); }
+function enc(v) { return encodeURIComponent(str(v)); }

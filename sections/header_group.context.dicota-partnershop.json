@@ -8,18 +8,16 @@
  * ------------------------------------------------------------
  */
 {
-  "markets": {
-    "all-b2b": {
-      "parent": "@default"
-    },
-    "b2b-euro": {
-      "parent": "all-b2b"
-    },
-    "baloise": {
-      "parent": "all-b2b"
-    },
-    "dicota-partnershop": {
-      "parent": "all-b2b"
+  "context": {
+    "market": "dicota-partnershop"
+  },
+  "parent": "header_group.json",
+  "sections": {
+    "header_a83nJp": {
+      "settings": {
+        "menu": "main-menu-helvetia"
+      },
+      "blocks": {}
     }
   }
 }

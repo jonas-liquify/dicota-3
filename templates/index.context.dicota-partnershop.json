@@ -1,0 +1,72 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "context": {
+    "market": "dicota-partnershop"
+  },
+  "parent": "index.json",
+  "sections": {
+    "reseller_category_ro_WCArV": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    },
+    "reseller_hub_EwB6Y": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    },
+    "hero_slider_VaMHH": {
+      "type": "hero_slider",
+      "disabled": false,
+      "settings": {
+        "header-b8df661f059a8669b2ffcdb4e002df28": null,
+        "autoplay": true,
+        "autoplay_delay": 6000,
+        "header-469e5ceb686dcba92f8dba4f7b4d7303": null,
+        "min_height": 90,
+        "header-1ab54c37ba0fb5094c44616f2d1e8c8f": null,
+        "text_color": "#ffffff"
+      },
+      "blocks": {
+        "slide_QnET6": {
+          "type": "slide",
+          "disabled": false,
+          "settings": {
+            "image_hintergrundbild": null,
+            "text_headline_zeile_1": "Screen Filters",
+            "text_headline_zeile_2": "By Dicota",
+            "text_subtext": "Refined design. Recycled modern materials.",
+            "url_button_link": "",
+            "text_button_text": "Shop now"
+          }
+        }
+      },
+      "block_order": [
+        "slide_QnET6"
+      ],
+      "name": "Hero Slider"
+    },
+    "reseller_hero_97i8b": {
+      "disabled": true,
+      "settings": {},
+      "blocks": {}
+    }
+  },
+  "order": [
+    "reseller_hero_97i8b",
+    "hero_slider_VaMHH",
+    "reseller_category_ro_WCArV",
+    "the_dicota_differenc_JXxMG",
+    "reseller_hub_EwB6Y",
+    "reseller_promo_grid_ydyLg",
+    "b2b_news_highlight_LhrNM"
+  ]
+}

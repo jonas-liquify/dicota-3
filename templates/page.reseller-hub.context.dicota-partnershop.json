@@ -8,18 +8,20 @@
  * ------------------------------------------------------------
  */
 {
-  "markets": {
-    "all-b2b": {
-      "parent": "@default"
+  "context": {
+    "market": "dicota-partnershop"
+  },
+  "parent": "page.reseller-hub.json",
+  "sections": {
+    "reseller_hub": {
+      "disabled": false,
+      "settings": {},
+      "blocks": {}
     },
-    "b2b-euro": {
-      "parent": "all-b2b"
-    },
-    "baloise": {
-      "parent": "all-b2b"
-    },
-    "dicota-partnershop": {
-      "parent": "all-b2b"
+    "reseller_promo_grid": {
+      "disabled": false,
+      "settings": {},
+      "blocks": {}
     }
   }
 }

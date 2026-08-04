@@ -95,6 +95,7 @@
       "block_order": [
         "4-up-karte"
       ],
+      "disabled": true,
       "settings": {
         "text_heading": "Our values",
         "padding_top": 5,

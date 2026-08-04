@@ -20,9 +20,7 @@
                         </div>
 {% endfor %}
                         </div>
-{% endfor %}</div><select id="sort-by" li-for:inside="option in search.sort_options" class="sort_select filter_checkbox">
-        {% for option in search.sort_options %}                            <option value="{{ option.value }}" {% if option.value == search.sort_by %}selected{% elsif option.value == search.default_sort_by %}selected{% endif %}>{{ option.name }}</option>
-                    {% endfor %}    </select></div><div class="filter_product-list-wrapper w-dyn-list"><div role="list" class="filter_product-list w-dyn-items">{% for product in search.results %}    <div li-for="product in search.results" role="listitem" class="filter_product-list-item w-dyn-item">
+{% endfor %}</div><div class="sort_select-embed w-embed">{% assign search_sort = search.sort_by | default: search.default_sort_by %}<select id="sort-by" class="sort_select filter_checkbox">{% for option in search.sort_options %}<option value="{{ option.value }}" if="" option.value="=" search_sort="" selected="selected" endif="">{{ option.name }}</option>{% endfor %}</select></div></div><div class="filter_product-list-wrapper w-dyn-list"><div role="list" class="filter_product-list w-dyn-items">{% for product in search.results %}    <div li-for="product in search.results" role="listitem" class="filter_product-list-item w-dyn-item">
                                     {% render 'product_item', product: product %}
                         </div>
 {% endfor %}</div>{% if search.results == blank %}    <div li-if="search.results == blank" class="filter_empty w-dyn-empty">
@@ -48,9 +46,9 @@
     <a li-object:href="paginate.next.url" href="{{ paginate.next.url }}" class="button is-secondary is-icon w-inline-block"><div li-object="'general.next' | t">{{ 'general.next' | t }}</div><div class="pagination_arrow is-right w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 13 8" fill="none" preserveaspectratio="xMidYMid meet" aria-hidden="true" role="img"><path d="M1.67318 0.589844L6.26318 5.16984L10.8532 0.589844L12.2632 1.99984L6.26318 7.99984L0.263184 1.99984L1.67318 0.589844Z" fill="currentColor"></path></svg></div></a>    </li>
 {% endif %}</ul>    </nav>
 {% endif %}</div></div>{% endpaginate %}</div></div><div class="hide w-embed w-script"><script>
-              //sortierung
+              /* sortierung */
               Shopify.queryParams = {};
-              // Preserve existing query parameters
+              /* Preserve existing query parameters */
               if (location.search.length) {
                 var params = location.search.substr(1).split('&');
                 for (var i = 0; i < params.length; i++) {
@@ -60,7 +58,7 @@
                   }
                 }
               }
-              // Update sort_by query parameter on select change
+              /* Update sort_by query parameter on select change */
               document.querySelector('#sort-by').addEventListener('change', function(e) {
                 var value = e.target.value;
                 Shopify.queryParams.sort_by = value;

@@ -1,0 +1,22 @@
+<div class="pf_results-inner"><div class="coll_grid pf_grid" li-for:inside="product in search.results">
+        {% for product in search.results %}                            <div class="coll_grid-item">{% render 'product_card', product: product %}</div>
+                    {% endfor %}    </div>{% if search.performed and search.results_count == 0 %}    <div li-if="search.performed and search.results_count == 0" class="pf_empty">
+    <span li-object="'collection.no_products' | t">{{ 'collection.no_products' | t }}</span>    </div>
+{% endif %}<div class="hide w-embed" data-pf-meta="" data-count="{{ search.results_count | default: 0 }}"></div></div> {% schema %} {
+    "tag": "section",
+    "name": "Product Finder Resul",
+    "class": "section_pf-results",
+    "settings": [
+        {
+            "type": "paragraph",
+            "content": "Reine Ergebnis-Section fuer den Product Finder Native. Wird nicht direkt bespielt, sondern per Section Rendering API aufgerufen (\/search?type=product&amp;q=SKU1 OR SKU2\u00a7ion_id=product_finder_results) und rendert die Treffer mit demselben Produktkachel-Snippet wie die Kollektionsseite. Ohne Suchkontext bleibt sie leer."
+        }
+    ],
+    "presets": [
+        {
+            "name": "Product Finder Resul",
+            "category": "Content",
+            "blocks": []
+        }
+    ]
+} {% endschema %}
