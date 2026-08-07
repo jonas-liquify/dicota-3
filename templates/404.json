@@ -1,12 +1,26 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
-    "sections": {
-        "404": {
-            "type": "404"
-        }
-    },
-    "layout": "theme",
-    "wrapper": "main.main-wrapper",
-    "order": [
-        "404"
-    ]
+  "sections": {
+    "404": {
+      "type": "404",
+      "settings": {
+        "text_heading": "This page doesn't exist",
+        "text_paragraph": "The link is outdated or the page has moved. Feel free to browse our range instead.",
+        "text_button_text": "Back to Home"
+      }
+    }
+  },
+  "layout": "theme",
+  "wrapper": "main.main-wrapper",
+  "order": [
+    "404"
+  ]
 }
