@@ -10,8 +10,11 @@ account_id = "3d4c4c4eea68ecd4cd31e3509d481839"   # Jonas@halbstark.de's Account
 # Öffentliche (nicht-geheime) Variablen — hier anpassen:
 [vars]
 UPGRADEBOX_SUBID = "0000"                 # Haupt-Account laut Doku Kap. 3
+ARTICLE_MANUFACTURER = "DICOTA"           # ModelArticles kann Fremdhersteller liefern (Kingston, Origin Storage…).
+                                          # Nur Artikel dieses articlemanufacturer landen in der SKU-Suche.
+                                          # Leer = nicht filtern. Exakter Name laut API-Antwort (Feld "manufacturers").
 UPGRADEBOX_VERSION = "v1"                 # Pfadsegment: https://api.upgradebox.net/<VERSION>/
-ALLOWED_ORIGIN = "https://www.dicota.com,https://dicota.com,https://dicotaestore.myshopify.com"   # Live-Domain(s) + Theme-Preview; kommagetrennt
+ALLOWED_ORIGIN = "https://www.dicota.com,https://dicota.com,https://en.shopify.dicota.com,https://dicotaestore.myshopify.com"   # Live-Domain(s) + Theme-Preview; kommagetrennt
 
 # userID und PASSWORT gehören NICHT hierher (wären im Repo sichtbar).
 # Einmalig als verschlüsselte Secrets setzen:
