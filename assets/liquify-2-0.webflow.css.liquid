@@ -8370,12 +8370,6 @@ button.li-lang_dd-link {
   width: 100%;
   background-color: #ffffff;
 }
-.article_grid {
-  display: grid;
-  grid-template-columns: 2.5fr 1fr;
-  gap: 5rem;
-  align-items: start;
-}
 .article_button-wrapper {
   display: flex;
   align-items: center;
@@ -8406,6 +8400,10 @@ button.li-lang_dd-link {
   max-width: 47.5rem;
   text-align: center;
 }
+.article_header.is-job {
+  align-items: flex-start;
+  text-align: left;
+}
 .blog-hero_top-row {
   display: flex;
   flex-wrap: wrap;
@@ -8418,6 +8416,9 @@ button.li-lang_dd-link {
 }
 .blog_tag.is-large.is-dark {
   background-color: #f4f4f4;
+  /* .blog_tag erbt color:#fff (gedacht fuer Tags ueber einem Foto im Blog-Hero).
+     Auf dem hellen Grau war das weiss auf #f4f4f4 = Kontrast 1.07:1. */
+  color: #0f0f0f;
 }
 /* Rich text (used on Job Details) */
 .text-rich-text h1,
@@ -15778,13 +15779,11 @@ img.product-header_gallery-image {
   .faq_wrapper {
     grid-template-columns: 1fr;
   }
-  .article_grid.article_grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-  .section_image-hero {
-    min-height: 50vh;
-  }
+  /* Hier stand `.article_grid  .section_image-hero { min-height: 50vh }`.
+     .section_image-hero ist eine eigenstaendige Section und lag nie in einem
+     .article_grid — die Regel hat also nie gegriffen (vermutlich ein verlorenes
+     Komma). Basis + 479px-Breakpoint setzen beide 60vh; wenn auf Tablet 50vh
+     gewollt ist, hier `.section_image-hero { min-height: 50vh; }` eintragen. */
   .section_split-image-left,
   .section_split-image-right {
     grid-template-columns: 1fr;

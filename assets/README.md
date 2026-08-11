@@ -26,19 +26,67 @@ Der Proxy löst alle drei Punkte: Credentials bleiben serverseitig, XML wird zu 
 Treffer mit dem bestehenden `product-card`-Snippet rendern. Dass Shopifys Volltextsuche
 Varianten-SKUs indexiert und `OR` korrekt verknüpft, ist am Live-Shop verifiziert.
 
+## Zuordnung der Zugangsdaten
+
+Was upgradebox als „API ID" und „API PW" herausgibt, heißt in der XML-Auth (Doku Kap. 3):
+
+| upgradebox nennt es | XML-Feld | Wo es hingehört |
+|---|---|---|
+| API ID | `<userid>` | Secret `UPGRADEBOX_USERID` |
+| API PW | `<pass>` | Secret `UPGRADEBOX_PASS` |
+| — | `<subid>` | Var `UPGRADEBOX_SUBID` = `0000` (Haupt-Account) |
+
+Der Zugang ist auf **en.shopify.dicota.com** ausgestellt — diese Origin steht deshalb mit in
+`ALLOWED_ORIGIN`.
+
+## Schritt 0 — Zugang prüfen, bevor irgendwas deployed wird
+
+Die Doku nennt eine Testumgebung unter `https://api.upgradebox.net/[VERSION]/test.php`, in der
+XML-Requests von Hand abgeschickt werden. Das klärt **in zwei Minuten** die zwei Dinge, die noch
+offen sind — ohne Deploy, ohne Secrets:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<upgradeboxrequest>
+  <authorization>
+    <userid>DEINE_API_ID</userid>
+    <subid>0000</subid>
+    <pass>DEIN_API_PW</pass>
+  </authorization>
+  <request>
+    <requesttype>ModelArticles</requesttype>
+    <requestlanguage>DE</requestlanguage>
+    <requestformat>XML</requestformat>
+    <modelmanufacturer>Apple</modelmanufacturer>
+    <modelname>EIN_MODELL_AUS_ModelListManufacturerType</modelname>
+  </request>
+</upgradeboxrequest>
+```
+
+Worauf zu achten ist:
+
+1. **Welche `[VERSION]` funktioniert** — der Wert gehört danach in `UPGRADEBOX_VERSION`.
+2. **Was in `<articlereference>` steht.** Kommen dort **DICOTA-Artikelnummern** (`D31839`,
+   `D32163-RPET`)? Dann greift die SKU-Suche und alles ist fertig. Kommen Fremdhersteller-Nummern,
+   braucht es eine Mapping-Ebene — das ist der einzige Punkt, der den Finder noch aufhalten kann.
+
 ## Deploy (~5 Min)
 
 1. `npm i -g wrangler && wrangler login` (einmalig).
-2. Secrets setzen — **nur so, nie in `wrangler.toml`**:
+2. `UPGRADEBOX_VERSION` in `wrangler.toml` auf den in Schritt 0 bestätigten Wert setzen.
+3. Secrets setzen — **nur so, nie in `wrangler.toml`**. Beide Befehle fragen den Wert interaktiv ab:
    ```bash
-   cd tools/upgradebox-proxy
-   wrangler secret put UPGRADEBOX_USERID
-   wrangler secret put UPGRADEBOX_PASS
+   cd tools/upgradebox-proxy && wrangler secret put UPGRADEBOX_USERID
    ```
-3. Ggf. `UPGRADEBOX_VERSION` in `wrangler.toml` anpassen (die Doku schreibt den Pfad als
-   `https://api.upgradebox.net/[VERSION]/` — die konkrete Version nennt euer upgradebox-Kontakt).
+   ```bash
+   cd tools/upgradebox-proxy && wrangler secret put UPGRADEBOX_PASS
+   ```
 4. `wrangler deploy` → URL, z. B. `https://dicota-productfinder.<account>.workers.dev`.
-5. Im Theme-Editor → Section **Product Finder Native** → **Product-Finder-Proxy-URL** eintragen.
+5. Endpoints durchklicken, `X-Proxy-Cache` sollte beim zweiten Aufruf `HIT` sein:
+   ```bash
+   curl -s -D- "https://dicota-productfinder.<account>.workers.dev/manufacturers?lang=de" | head -20
+   ```
+6. Im Theme-Editor → Section **Product Finder Native** → **Product-Finder-Proxy-URL** eintragen.
 
 ## Rate-Limits — Caching ist Pflicht
 
@@ -59,22 +107,22 @@ Herstellerliste zudem erst, wenn sie ins Viewport kommt — nicht bei jedem Seit
 Die API kennt CZ, DK, NL, EN, FR, DE, HU, IT, PL, PT, SL, ES, SK, UA (Tab. 2). Die Shop-Locales
 `ar` und `hi` haben dort kein Gegenstück und fallen auf **EN** zurück.
 
-## Testen ohne Produktiv-Zugang
+## Ohne eigenen Zugang testen
 
-Die Doku nennt eine Testumgebung unter `https://api.upgradebox.net/[VERSION]/test.php`, in der
-XML-Requests von Hand abgeschickt werden können; die userid `12873` ist dort die des allgemeinen
-upgradebox-Bestands. Damit lässt sich die **Struktur** der Antworten prüfen — der Artikelbestand
-ist aber nicht der des DICOTA-Kontos, das SKU-Mapping bleibt so unverifiziert.
+Die userid `12873` ist in `test.php` die des allgemeinen upgradebox-Bestands — damit lässt sich die
+**Struktur** der Antworten ansehen, der Artikelbestand ist aber nicht der des DICOTA-Kontos.
 
 Lokal gegen Mocks: `wrangler dev` starten und `API_HOST` in `worker.js` temporär auf einen
 lokalen Mock-Endpoint zeigen lassen.
 
 ## Wichtig
 
-- Zugangsdaten **niemals** in ein Theme-Setting oder in `wrangler.toml` eintragen.
+- Zugangsdaten **niemals** in ein Theme-Setting, in `wrangler.toml`, in diese README oder in einen
+  Commit. Ausschließlich als Worker-Secret (`wrangler secret put`) — dort sind sie verschlüsselt und
+  auch im Cloudflare-Dashboard nicht mehr lesbar.
+- Sind die Daten irgendwo im Klartext gelandet (Chat, Ticket, Mail), nach dem Setup bei upgradebox
+  **rotieren lassen**. Das ist billiger als jede nachträgliche Aufräumaktion.
 - `worker.js` gibt bei Fehlern bewusst nur `{"error":"upstream error"}` zurück — keine
-  Upstream-Details, keine Credentials.
-- Noch **unbestätigt**: dass `ModelArticles.articlereference` tatsächlich DICOTA-SKUs liefert.
-  Die Doku legt es nahe (»your article numbers are presented, if these are stored within the
-  upgradebox.eu«), belegen lässt es sich erst mit echten Zugangsdaten. Das ist der erste Punkt,
-  der nach dem Deploy zu prüfen ist.
+  Upstream-Details, keine Credentials. Bei einem Auth-Fehler steht also nichts Verräterisches in der
+  Antwort; zur Diagnose stattdessen `wrangler tail` mitlaufen lassen.
+- Noch **unbestätigt**: dass `ModelArticles.articlereference` DICOTA-SKUs liefert (siehe Schritt 0).

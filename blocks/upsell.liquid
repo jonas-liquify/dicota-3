@@ -1,19 +1,16 @@
 <div li-block="Upsell" {{ block.shopify_attributes }}>
-                    <div class="ph_upsell"><div class="ph_upsell-header"><span class="ph_upsell-title">
+                    {% if product.metafields.shopify--discovery--product_recommendation.complementary_products != blank %}    <div class="li-guard" li-if="product.metafields.shopify--discovery--product_recommendation.complementary_products != blank">
+    <div class="ph_upsell"><div class="ph_upsell-header"><span class="ph_upsell-title">
 {{ block.settings.text_upsell_titel }}
-</span><div class="ph_upsell-nav"><button class="ph_upsell-prev" aria-label="Previous"><svg width="16" height="16" viewbox="0 0 16 16" fill="none"><path d="M10 3L5 8L10 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></button><button class="ph_upsell-next" aria-label="Next"><svg width="16" height="16" viewbox="0 0 16 16" fill="none"><path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></button></div></div><div class="swiper is-upsell"><div li-cf-theme-blocks="" class="swiper-wrapper">
-{% content_for 'blocks' %}
-</div></div></div>
+</span><div class="ph_upsell-nav"><button class="ph_upsell-prev" aria-label="Previous"><svg width="16" height="16" viewbox="0 0 16 16" fill="none"><path d="M10 3L5 8L10 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></button><button class="ph_upsell-next" aria-label="Next"><svg width="16" height="16" viewbox="0 0 16 16" fill="none"><path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></button></div></div><div class="swiper is-upsell"><div class="swiper-wrapper">{% for upsell_product in product.metafields.shopify--discovery--product_recommendation.complementary_products.value %}    <div li-for="upsell_product in product.metafields.shopify--discovery--product_recommendation.complementary_products.value" class="swiper-slide ph_upsell-card">
+                                    <img li-object:src="upsell_product.featured_image | image_url: width: 140" li-object:alt="upsell_product.title" src="{{ upsell_product.featured_image | image_url: width: 140 }}" loading="lazy" alt="{{ upsell_product.title }}" class="ph_upsell-img">
+                            <div class="ph_upsell-info"><a li-object:href="upsell_product.url" href="{{ upsell_product.url }}" class="ph_upsell-name-link w-inline-block"><span li-object="upsell_product.title" class="ph_upsell-name">{{ upsell_product.title }}</span></a><span li-object="upsell_product.price | money" class="ph_upsell-price">{{ upsell_product.price | money }}</span><form method="post" action="/cart/add" class="ph_upsell-form"><input type="hidden" name="id" value="{{ upsell_product.selected_or_first_available_variant.id }}"><script src="{{ 'li_custom.js' | asset_url }}" type="text/javascript"></script>
+<button class="ph_upsell-btn" li-element="direct-add-to-cart" x-data="handleVariant({{ product | json | escape }}, {{ product.options_by_name | json | escape }}, {{ product.selected_or_first_available_variant | json | escape }})" @click="addToCart($event, true)">Add</button></form></div>
+                        </div>
+{% endfor %}</div></div></div>    </div>
+{% endif %}
                 </div> {% schema %} {
     "name": "Upsell",
-    "blocks": [
-        {
-            "type": "upsell-produkt"
-        },
-        {
-            "type": "@app"
-        }
-    ],
     "settings": [
         {
             "id": "text_upsell_titel",
@@ -25,11 +22,7 @@
     "presets": [
         {
             "name": "Upsell",
-            "blocks": [
-                {
-                    "type": "upsell-produkt"
-                }
-            ]
+            "blocks": []
         }
     ],
     "tag": null
