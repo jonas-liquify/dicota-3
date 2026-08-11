@@ -121,8 +121,7 @@
           "settings": {
             "text_upsell_titel": "Pairs well together"
           },
-          "blocks": {},
-          "block_order": []
+          "blocks": {}
         }
       },
       "block_order": [
@@ -168,8 +167,6 @@
       "type": "product_sticky_bar",
       "name": "Product Sticky Bar",
       "settings": {
-        "text_button_text": "In den Warenkorb",
-        "text_nicht_verfugbar_text": "Out of stock",
         "bg_color": "#ffffff",
         "text_color": "#0f0f0f"
       }
