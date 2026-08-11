@@ -205,19 +205,6 @@
         "padding_top": 5,
         "padding_bottom": 5
       }
-    },
-    "job_detail_article": {
-      "type": "job_detail_article",
-      "settings": {
-        "url_zuruck_link": "",
-        "text_zuruck_text": "All positions",
-        "text_heading": "Job title",
-        "text_tag_1": "Full-time",
-        "text_tag_2": "Location",
-        "richtext_beschreibung": "<p>About the roleDescribe the responsibilities, requirements and benefits here.</p>",
-        "padding_top": 2.5,
-        "padding_bottom": 5
-      }
     }
   },
   "layout": "theme",
@@ -231,7 +218,6 @@
     "benefits_grid",
     "value_tabs",
     "job_listings",
-    "faq_accordion",
-    "job_detail_article"
+    "faq_accordion"
   ]
 }

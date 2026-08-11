@@ -1,0 +1,16 @@
+{
+  "sections": {
+    "job_detail_article": {
+      "type": "job_detail_article",
+      "settings": {
+        "url_zuruck_link": "/pages/karriere",
+        "text_zuruck_text": "Alle Stellen",
+        "padding_top": 2.5,
+        "padding_bottom": 5
+      }
+    }
+  },
+  "order": [
+    "job_detail_article"
+  ]
+}
