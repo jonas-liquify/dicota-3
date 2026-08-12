@@ -4,10 +4,8 @@
 {% else %}
 <img src="{{ 'placeholder.svg' | asset_url }}" loading="lazy" alt="" class="we-care-banner_bg-img">
 {% endif %}    </span>
-{% endif %}<div class="we-care-banner_overlay"></div></div><div class="we-care-banner_content">{% if section.settings.text_zahler != blank %}    <span class="li-guard" li-if="section.settings.text_zahler != blank">
-    <span class="we-care-banner_counter-num">
-{{ section.settings.text_zahler }}
-</span>    </span>
+{% endif %}<div class="we-care-banner_overlay"></div></div><div class="we-care-banner_content">{% if section.settings.counter_start > 0 %}    <span class="li-guard" li-if="section.settings.counter_start > 0">
+    <span class="we-care-banner_counter-num" data-wcb-counter="" data-start="{{ section.settings.counter_start }}" data-epoch="{{ section.settings.counter_epoch }}" data-rate="{{ section.settings.counter_rate }}">12.483.129</span>    </span>
 {% endif %}<h2 class="we-care-banner_headline">
 {{ section.settings.text_headline }}
 </h2><p class="we-care-banner_desc"> {{ section.settings.textarea_beschreibung }} </p>{% if section.settings.text_cta_text != blank %}    <span class="li-guard" li-if="section.settings.text_cta_text != blank">
@@ -18,7 +16,37 @@
 {% else %}
 <img src="{{ 'placeholder.svg' | asset_url }}" loading="lazy" alt="" class="we-care-banner_badge-img">
 {% endif %}    </div>
-{% endif %}</div></div> {% schema %} {
+{% endif %}</div></div><div class="hide w-embed w-script"><script>
+(function(){
+  /* Der Zaehler haengt an der echten Uhrzeit, nicht am Seitenaufruf: Wert =
+     Startwert + Rate * Sekunden seit dem Startzeitpunkt. Dadurch sieht jeder
+     Besucher denselben Stand und er waechst ueber Reloads hinweg weiter. */
+  var els = document.querySelectorAll("[data-wcb-counter]");
+  if (!els.length) return;
+  var lang = document.documentElement.getAttribute("lang") || "de";
+  var fmt;
+  try { fmt = new Intl.NumberFormat(lang); } catch (e) { fmt = null; }
+  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  function tick(){
+    for (var i = 0; i < els.length; i++) {
+      var el = els[i];
+      var raw = el.getAttribute("data-start") || "";
+      if (raw.indexOf("{" + "{") !== -1) continue; /* Builder-Preview: Liquid unausgewertet */
+      var start = parseFloat(raw);
+      var rate  = parseFloat(el.getAttribute("data-rate"));
+      var t0    = Date.parse(el.getAttribute("data-epoch"));
+      if (isNaN(start) || isNaN(rate) || isNaN(t0)) continue;
+      var secs = (Date.now() - t0) / 1000;
+      if (secs < 0) secs = 0;
+      var val = Math.floor(start + rate * secs);
+      el.textContent = fmt ? fmt.format(val) : String(val);
+    }
+  }
+  tick();
+  if (!reduce) setInterval(tick, 250);
+  document.addEventListener("shopify:section:load", function(){ els = document.querySelectorAll("[data-wcb-counter]"); tick(); });
+})();
+</script></div> {% schema %} {
     "tag": "section",
     "name": "We Care Banner",
     "class": "section_we-care-banner",
@@ -27,12 +55,6 @@
             "id": "image_hintergrundbild",
             "type": "image_picker",
             "label": "Hintergrundbild"
-        },
-        {
-            "id": "text_zahler",
-            "type": "text",
-            "label": "Z\u00e4hler",
-            "default": "12.483.129"
         },
         {
             "id": "text_headline",
@@ -71,6 +93,34 @@
             "id": "bg_color",
             "label": "Hintergrundfarbe",
             "default": "#0a1628"
+        },
+        {
+            "type": "header",
+            "content": "Z\u00e4hler"
+        },
+        {
+            "type": "number",
+            "id": "counter_start",
+            "label": "Startwert",
+            "default": 12483129,
+            "info": "Stand der verarbeiteten Flaschen zum Startzeitpunkt. 0 blendet den Z\u00e4hler aus."
+        },
+        {
+            "type": "text",
+            "id": "counter_epoch",
+            "label": "Startzeitpunkt",
+            "default": "2026-08-11T00:00:00Z",
+            "info": "ISO-Zeitstempel, auf den sich der Startwert bezieht. Der Z\u00e4hler rechnet von hier aus hoch \u2014 jeder Besucher sieht denselben Stand."
+        },
+        {
+            "type": "range",
+            "id": "counter_rate",
+            "min": 0,
+            "max": 5,
+            "step": 0.1,
+            "unit": "\/s",
+            "label": "Flaschen pro Sekunde",
+            "default": 0.8
         }
     ],
     "presets": [
