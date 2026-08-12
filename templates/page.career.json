@@ -190,7 +190,7 @@
         "text_filter_2_label": "Department",
         "text_cta_heading": "Speculative application",
         "richtext_cta_text": "<p>No suitable position for you? We'd still love to hear from you.</p>",
-        "url_cta_button_link": "",
+        "url_cta_button_link": "mailto:jobs@dct.group?subject=Job%20Application",
         "text_cta_button_text": "Apply now",
         "show_cta": true,
         "padding_top": 5,
