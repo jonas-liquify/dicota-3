@@ -1098,6 +1098,11 @@ figcaption {
 }
 .mini-cart_component {
   background-color: var(--base-color-neutral--white);
+  /* Der Drawer liegt im .nav_component. Auf der Startseite setzt
+     .nav_component.is-transparent color:#ffffff — der Text im weissen Drawer
+     wurde dadurch unsichtbar. Eine direkte Deklaration schlaegt Vererbung,
+     unabhaengig von der Spezifitaet des Transparent-Zustands. */
+  color: var(--base-color-neutral--black, #0f0f0f);
   flex-direction: column;
   align-items: stretch;
   width: 28rem;
@@ -12618,201 +12623,6 @@ button.li-lang_dd-link {
   padding: 2rem 1.5rem;
   background-color: #fff;
 }
-/* =============================================================
-   MINI-CART — Fehlende & aliasierte Styles
-   ============================================================= */
-
-/* Header-Zeile (CART-Titel + Schließen-Button) */
-.nav_dropdown-header {
-  border-bottom: 1px solid var(--base-color-neutral--neutral-lightest);
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.25rem 1.5rem;
-  display: flex;
-}
-/* Schließen-Icon (schlicht, kein Kreis-Hintergrund) */
-.mini-cart_close {
-  cursor: pointer;
-  justify-content: center;
-  align-items: center;
-  width: 1.75rem;
-  height: 1.75rem;
-  display: flex;
-}
-/* Item-Count in der Header-Überschrift */
-.mini-cart_header-count {
-  display: inline;
-}
-/* Social-Proof-Banner unter dem Header */
-.mini-cart_trust-banner {
-  background-color: var(--base-color-brand--blue);
-  padding: .25rem 1.5rem;
-  display: flex;
-}
-.mini-cart_trust-text {
-  color: #fff;
-  font-size: .625rem;
-  line-height: 1.66;
-  letter-spacing: -.00625rem;
-  margin: 0;
-}
-/* Titel in der Warenkorb-Zeile: uppercase wie im Figma-Design */
-.mini-cart_line-item_title {
-  text-transform: uppercase;
-}
-/* Cross-Sell "Das könnte dazu passen" */
-.mini-cart_crosssell {
-  background-color: #e5e5e54d;
-  flex-direction: column;
-  padding: 1.5rem 0;
-  display: flex;
-}
-.mini-cart_crosssell.hide {
-  display: none;
-}
-.mini-cart_crosssell-title {
-  text-align: center;
-  margin: 0 0 .25rem;
-  padding: 0 1.5rem;
-  font-size: .875rem;
-}
-.mini-cart_crosssell-list {
-  grid-column-gap: .25rem;
-  grid-row-gap: .25rem;
-  padding: 0 1.5rem;
-  display: flex;
-}
-.mini-cart_crosssell-item {
-  background-color: var(--base-color-neutral--white);
-  align-items: center;
-  display: flex;
-}
-.mini-cart_crosssell-img {
-  object-fit: cover;
-  mix-blend-mode: darken;
-  width: 5.4375rem;
-  height: 6.125rem;
-  flex-shrink: 0;
-}
-.mini-cart_crosssell-info {
-  justify-content: space-between;
-  align-items: center;
-  flex: 1;
-  padding: 0 .5rem;
-  display: flex;
-}
-.mini-cart_crosssell-text {
-  flex-direction: column;
-  display: flex;
-}
-.mini-cart_crosssell-name {
-  font-family: "Futura PT", sans-serif;
-  font-weight: 600;
-  font-size: 1rem;
-}
-.mini-cart_crosssell-price {
-  opacity: .7;
-  font-size: .875rem;
-}
-.mini-cart_crosssell-form {
-  margin: 0;
-}
-.mini-cart_crosssell-add {
-  cursor: pointer;
-  background-color: var(--base-color-neutral--black);
-  color: #fff;
-  border: 0;
-  border-radius: 50%;
-  justify-content: center;
-  align-items: center;
-  width: 1.875rem;
-  height: 1.875rem;
-  padding: .5rem;
-  display: flex;
-}
-.mini-cart_crosssell-add:hover {
-  opacity: .8;
-}
-/* Zahlarten-Icons + Vertrauens-Text im Footer */
-.mini-cart_payments {
-  justify-content: center;
-  display: flex;
-}
-.mini-cart_guarantee-text {
-  text-align: center;
-  opacity: .7;
-  margin: 0;
-  font-size: .625rem;
-}
-/* Leerer Warenkorb */
-.mini-cart_empty {
-  flex-direction: column;
-  flex: 1;
-  justify-content: flex-start;
-  display: flex;
-}
-/* Zeilen innerhalb product-info (Titel+Preis / Menge+Löschen) */
-.mini-cart_line-item-content {
-  grid-column-gap: .5rem;
-  grid-row-gap: .5rem;
-  justify-content: space-between;
-  align-items: flex-start;
-  width: 100%;
-  display: flex;
-}
-.mini-cart_line-item-content.justify-center {
-  align-items: center;
-}
-/* Löschen-Button */
-.mini-cart_line-item-remove {
-  color: var(--base-color-neutral--neutral-light);
-  cursor: pointer;
-  flex-shrink: 0;
-  justify-content: center;
-  align-items: center;
-  width: 2rem;
-  height: 2rem;
-  display: flex;
-}
-.mini-cart_line-item-remove:hover {
-  color: var(--base-color-neutral--black);
-}
-/* Footer-Summen-Zeile (HTML nutzt _total, CSS hatte -total) */
-.mini-cart_footer_total {
-  justify-content: space-between;
-  align-items: flex-end;
-  display: flex;
-}
-/* Preis-Block in der Footer-Zeile */
-.mini-cart_footer-sum {
-  grid-column-gap: .25rem;
-  grid-row-gap: .25rem;
-  flex-direction: column;
-  align-items: flex-end;
-  display: flex;
-}
-/* Versand-Progress-Bar Container */
-.mini-cart_footer_progress-component {
-  grid-row-gap: .5rem;
-  border-bottom: 1px solid var(--base-color-neutral--neutral-lightest);
-  flex-direction: column;
-  padding: 1rem 1.5rem;
-  display: flex;
-}
-/* Progress-Bar Spur */
-.mini-cart_footer_progress-bar {
-  background-color: #0f0f0f33;
-  width: 100%;
-  height: .1875rem;
-  overflow: hidden;
-}
-/* Progress-Bar Füllung */
-.mini-cart_footer_progress-bar-innner {
-  background-color: var(--base-color-brand--blue);
-  height: 100%;
-  max-width: 100%;
-  transition: width .4s ease;
-}
 /* Checkout-Button in Marken-Blau */
 .button.is-blue {
   background-color: var(--base-color-brand--blue);
@@ -18482,4 +18292,553 @@ img.product-header_gallery-image {
    Flex-Layout von .filter_feed-header nicht veraendern. */
 .sort_select-embed {
   display: contents;
+}
+
+
+/* =============================================================
+   MINI-CART — Drawer 1:1 nach Figma 5404-5613
+   Ersetzt den fruehen (Webflow-generierten) Mini-Cart-Look.
+   Steht bewusst am DATEIENDE: die Basiswerte in den Zeilen ~1099-1240
+   stammen aus dem Webflow-Export und werden hier ueberschrieben, ohne
+   sie dort anzufassen (der Builder regeneriert diesen Bereich).
+   Mobile-Overrides nutzen Klassen-Verdopplung (.foo.foo), weil der
+   Builder @media-Bloecke beim Speichern umsortiert.
+   Masse aus dem Design: Panel 436px, Innenabstand 32px, Typo 22/16/14/10px.
+   ============================================================= */
+
+/* --- Backdrop: abgedunkelte, unscharfe Ebene statt 40%-Schwarzflaeche --- */
+.nav_mini-cart-holder {
+  background-color: #0f0f0f1a;
+  -webkit-backdrop-filter: blur(14.2px);
+  backdrop-filter: blur(14.2px);
+}
+
+/* --- Panel --- */
+.mini-cart_component {
+  background-color: var(--base-color-neutral--white);
+  /* Der Drawer liegt im .nav_component. Auf der Startseite setzt
+     .nav_component.is-transparent color:#ffffff — der Text im weissen Drawer
+     wurde dadurch unsichtbar. Eine direkte Deklaration schlaegt Vererbung,
+     unabhaengig von der Spezifitaet des Transparent-Zustands. */
+  color: var(--base-color-neutral--black, #0f0f0f);
+  flex-direction: column;
+  align-items: stretch;
+  width: 27.25rem;
+  max-width: 100%;
+  height: 100vh;
+  max-height: 100vh;
+  padding-top: 1rem;
+  display: flex;
+  overflow: hidden;
+}
+.mini-cart_full {
+  flex-direction: column;
+  flex: 1;
+  justify-content: flex-start;
+  min-height: 0;
+  max-height: 100%;
+  display: flex;
+}
+/* Scrollbereich: alles ueber dem Footer. Der Footer bleibt stehen und legt
+   seinen Schatten ueber den durchlaufenden Inhalt — wie im Design. */
+.mini-cart_scroll {
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+.mini-cart_scroll::-webkit-scrollbar { display: none; }
+
+/* --- Kopfzeile --- */
+.mini-cart_head {
+  justify-content: space-between;
+  align-items: center;
+  min-height: 2.4375rem;
+  padding: 0 2rem;
+  display: flex;
+}
+.mini-cart_title {
+  font-family: "Futura PT", sans-serif;
+  font-size: 1.375rem;
+  font-weight: 500;
+  line-height: 1.34;
+  margin: 0;
+}
+.mini-cart_title-count { font: inherit; }
+.mini-cart_close {
+  color: var(--base-color-neutral--black, #0f0f0f);
+  cursor: pointer;
+  flex: none;
+  justify-content: center;
+  align-items: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  display: flex;
+}
+.mini-cart_close:hover { opacity: .6; }
+
+/* --- Social-Proof-Streifen --- */
+.mini-cart_trust-banner {
+  background-color: #479ef8;
+  align-items: center;
+  margin-top: .5rem;
+  padding: .25rem 2rem;
+  display: flex;
+}
+.mini-cart_trust-text {
+  color: #fff;
+  font-family: "Futura PT", sans-serif;
+  font-size: .625rem;
+  font-weight: 400;
+  line-height: 1.66;
+  letter-spacing: -.00625rem;
+  margin: 0;
+}
+.mini-cart_trust-strong { font-weight: 500; }
+
+/* --- Fortschritt bis Gratis-Versand --- */
+.mini-cart_progress {
+  grid-row-gap: .625rem;
+  flex-direction: column;
+  align-items: stretch;
+  margin-top: 1.5rem;
+  padding: 0 2rem;
+  display: flex;
+}
+/* Zweite Variante (Schwelle erreicht) startet aus; Alpine schaltet zur
+   Laufzeit per Inline-Style zwischen beiden Bloecken um. */
+.mini-cart_progress.is-unlocked { display: none; }
+/* Der Erreicht-Zustand ist ein Satz, kein Betrag — Versalien waeren hier zu laut. */
+.mini-cart_progress.is-unlocked .mini-cart_progress-amount { text-transform: none; }
+.mini-cart_progress-text {
+  font-family: "Futura PT", sans-serif;
+  font-size: .875rem;
+  font-weight: 400;
+  line-height: 1.34;
+  margin: 0;
+}
+.mini-cart_progress-amount {
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.mini-cart_footer_progress-bar {
+  background-color: #0f0f0f33;
+  width: 100%;
+  height: .1875rem;
+  overflow: hidden;
+}
+/* 60% ist der Builder-Default, damit die Sektion ohne Alpine wie im Design
+   aussieht; live setzt Alpine die tatsaechliche Breite inline. */
+.mini-cart_footer_progress-bar-innner {
+  background-color: #479ef8;
+  width: 60%;
+  max-width: 100%;
+  height: 100%;
+  transition: width .4s ease;
+}
+.mini-cart_footer_progress-bar-innner.is-full { width: 100%; }
+
+/* --- Warenkorb-Positionen --- */
+.mini-cart_line-item {
+  flex: none;
+  max-height: none;
+  margin-top: 1.5rem;
+  padding: 0 2rem;
+  overflow: visible;
+}
+.mini-cart_line-item_list {
+  grid-row-gap: .75rem;
+  flex-direction: column;
+  margin: 0;
+  padding-left: 0;
+  display: flex;
+}
+.mini-cart_line-item_item {
+  grid-column-gap: .75rem;
+  grid-row-gap: .75rem;
+  border-bottom: 0;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.mini-cart_line-item_media {
+  background-color: #f4f4f4;
+  flex: none;
+  justify-content: center;
+  align-items: center;
+  width: 6.65rem;
+  height: 8.09rem;
+  display: flex;
+}
+.mini-cart_line-item_img {
+  background-color: #0000;
+  object-fit: contain;
+  mix-blend-mode: darken;
+  width: 100%;
+  height: 100%;
+  padding: .8125rem .625rem;
+}
+.mini-cart_line-item_product-info {
+  grid-row-gap: .5rem;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+  align-items: stretch;
+  display: flex;
+}
+.mini-cart_line-item-content {
+  grid-column-gap: .5rem;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  display: flex;
+}
+.mini-cart_line-item-content.justify-center { align-items: center; }
+.mini-cart_line-item_title {
+  font-family: "Futura PT", sans-serif;
+  font-size: .875rem;
+  font-weight: 500;
+  line-height: 1.34;
+  text-transform: uppercase;
+  max-width: 10.375rem;
+}
+.mini-cart_line-item_price {
+  grid-column-gap: .375rem;
+  flex: none;
+  align-items: baseline;
+  display: flex;
+}
+.mini-cart_line-item_amount {
+  white-space: nowrap;
+  font-size: .875rem;
+  font-weight: 400;
+  line-height: 1.34;
+}
+.mini-cart_line-item_compare {
+  opacity: .6;
+  text-decoration: line-through;
+  white-space: nowrap;
+  font-size: .75rem;
+}
+
+/* Mengen-Stepper: duenner Rahmen, Icons 14px, Zahl als Text (kein Feld-Look) */
+.mini-cart_line-item_quantity {
+  border: 1px solid #e5e5e5;
+  grid-column-gap: .5rem;
+  align-items: center;
+  padding: .0625rem .5rem;
+  display: flex;
+}
+.mini-cart_line-item_quantity-adjust {
+  color: var(--base-color-neutral--black, #0f0f0f);
+  cursor: pointer;
+  border: 0;
+  flex: none;
+  justify-content: center;
+  align-items: center;
+  width: .875rem;
+  height: .875rem;
+  padding: 0;
+  display: flex;
+}
+.mini-cart_line-item_quantity-adjust:hover { opacity: .6; }
+.mini-cart_qty-icon { width: 100%; height: 100%; display: flex; }
+.mini-cart_line-item_quantity-value {
+  color: var(--base-color-neutral--black, #0f0f0f);
+  text-align: center;
+  background-color: #0000;
+  border: 0;
+  width: 1.5rem;
+  min-height: 0;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  font-family: "Futura PT", sans-serif;
+  font-size: .875rem;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: .0525rem;
+  text-transform: uppercase;
+}
+.mini-cart_line-item_quantity-value:focus { outline: 0; }
+.mini-cart_line-item-remove {
+  color: var(--base-color-neutral--black, #0f0f0f);
+  cursor: pointer;
+  flex: none;
+  justify-content: center;
+  align-items: center;
+  width: 1rem;
+  height: 1rem;
+  display: flex;
+}
+.mini-cart_line-item-remove:hover {
+  color: var(--base-color-neutral--black, #0f0f0f);
+  opacity: .6;
+}
+.mini-cart_trash-icon { width: 100%; height: 100%; display: flex; }
+
+/* --- Cross-Sell „Das koennte dazu passen“ ---
+   margin-top:auto haelt den Streifen unten am Scrollbereich, also direkt
+   ueber dem Footer — wie im Design, aber ohne absolute Positionierung. */
+.mini-cart_crosssell {
+  background-color: #e5e5e54d;
+  flex-direction: column;
+  margin-top: auto;
+  padding: 1.5rem 0;
+  display: flex;
+}
+.mini-cart_crosssell.hide { display: none; }
+.mini-cart_crosssell-title {
+  color: var(--base-color-neutral--black, #0f0f0f);
+  text-align: left;
+  margin: 0 0 .25rem;
+  padding: 0 2rem;
+  font-size: .875rem;
+  font-weight: 400;
+  line-height: 1.34;
+}
+.mini-cart_crosssell-list {
+  grid-column-gap: .25rem;
+  padding: 0 2rem;
+  display: flex;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.mini-cart_crosssell-list::-webkit-scrollbar { display: none; }
+.mini-cart_crosssell-item {
+  background-color: var(--base-color-neutral--white);
+  flex: none;
+  align-items: center;
+  height: 6.125rem;
+  display: flex;
+}
+.mini-cart_crosssell-media {
+  flex: none;
+  justify-content: center;
+  align-items: center;
+  width: 5.4375rem;
+  height: 100%;
+  display: flex;
+}
+.mini-cart_crosssell-img {
+  object-fit: contain;
+  mix-blend-mode: darken;
+  width: 100%;
+  height: 100%;
+  padding: .625rem .25rem;
+}
+.mini-cart_crosssell-info {
+  grid-column-gap: .75rem;
+  justify-content: space-between;
+  align-items: center;
+  width: 15.3125rem;
+  height: 100%;
+  padding: 1.25rem 1.25rem 1.25rem .75rem;
+  display: flex;
+}
+.mini-cart_crosssell-text {
+  color: inherit;
+  flex-direction: column;
+  min-width: 0;
+  text-decoration: none;
+  display: flex;
+}
+.mini-cart_crosssell-name {
+  font-family: "Futura PT", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.34;
+}
+.mini-cart_crosssell-price {
+  opacity: .7;
+  font-size: .875rem;
+  font-weight: 400;
+  line-height: 1.34;
+}
+.mini-cart_crosssell-form { flex: none; margin: 0; }
+.mini-cart_crosssell-add {
+  background-color: var(--base-color-neutral--black, #0f0f0f);
+  cursor: pointer;
+  color: #fff;
+  border: 0;
+  border-radius: 50%;
+  flex: none;
+  justify-content: center;
+  align-items: center;
+  width: 1.875rem;
+  height: 1.875rem;
+  padding: .5rem;
+  display: flex;
+}
+.mini-cart_crosssell-add:hover { opacity: .85; }
+.mini-cart_plus-icon { width: 100%; height: 100%; display: flex; }
+
+/* --- Footer --- */
+.mini-cart_footer {
+  z-index: 2;
+  background-color: var(--base-color-neutral--white);
+  box-shadow: 0 -3px 11.95px #0000001a;
+  border-top: 0;
+  grid-row-gap: 1.5rem;
+  flex-direction: column;
+  flex: none;
+  margin-top: 0;
+  padding: 1rem 2rem;
+  display: flex;
+  position: relative;
+}
+.mini-cart_footer_sums {
+  grid-row-gap: .75rem;
+  flex-direction: column;
+  display: flex;
+}
+.mini-cart_footer_total {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+.mini-cart_footer-label,
+.mini-cart_footer-value {
+  color: var(--base-color-neutral--black, #0f0f0f);
+  opacity: .7;
+  font-family: "Futura PT", sans-serif;
+  font-size: .875rem;
+  font-weight: 400;
+  line-height: 1.34;
+}
+.mini-cart_footer-shipping {
+  grid-column-gap: .25rem;
+  align-items: center;
+  display: flex;
+}
+.mini-cart_footer-info {
+  opacity: .7;
+  flex: none;
+  width: 1rem;
+  height: 1rem;
+  display: flex;
+}
+/* Die Cart-API-Meldung haengt an Alpine (x-show) statt an .hide — .hide steht
+   in dieser Datei VOR .mini-cart_footer-message und verlor deshalb das
+   display-Duell; der leere rote Kasten stand dauerhaft im Footer. */
+.mini-cart_footer-message {
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+  display: flex;
+}
+.mini-cart_footer-message.hide,
+.mini-cart_footer-message[x-cloak] { display: none; }
+.mini-cart_footer-divider {
+  background-color: #e5e5e5;
+  width: 100%;
+  height: 1px;
+}
+.mini-cart_footer_total.is-grand .mini-cart_footer-label,
+.mini-cart_footer_total.is-grand .mini-cart_footer-value {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.34;
+}
+.mini-cart_footer_actions {
+  grid-row-gap: .75rem;
+  flex-direction: column;
+  display: flex;
+}
+.mini-cart_checkout {
+  background-color: var(--base-color-neutral--black, #0f0f0f);
+  color: #fff;
+  border: 0;
+  box-shadow: 0 2px 1px #0000001a;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: .0525rem;
+  width: 100%;
+  padding: .75rem 1.5rem;
+  font-family: "Futura PT", sans-serif;
+  font-size: .875rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+.mini-cart_checkout:hover {
+  background-color: #262626;
+  color: #fff;
+}
+.mini-cart_payments {
+  grid-column-gap: .25rem;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding-left: 0;
+  display: flex;
+}
+.mini-cart_payment-item { flex: none; list-style: none; }
+.mini-cart_payment-svg-wrap {
+  background-color: var(--base-color-neutral--white);
+  border-radius: .25rem;
+  justify-content: center;
+  align-items: center;
+  width: 2.1875rem;
+  height: 1.5rem;
+  display: flex;
+}
+.mini-cart_payment-svg { width: 100%; height: 100%; display: block; }
+.mini-cart_payment-fallback { object-fit: contain; width: 1.5rem; height: 1rem; }
+.mini-cart_guarantee {
+  grid-column-gap: .25rem;
+  color: var(--base-color-neutral--black, #0f0f0f);
+  opacity: .7;
+  justify-content: center;
+  align-items: center;
+  font-size: .625rem;
+  line-height: 1.5;
+  letter-spacing: -.00625rem;
+  display: flex;
+}
+
+/* --- Leerer Warenkorb --- */
+.mini-cart_empty-wrap {
+  grid-row-gap: 1.5rem;
+  flex-direction: column;
+  flex: 1;
+  display: flex;
+}
+.mini-cart_empty {
+  flex: 1;
+  justify-content: flex-start;
+  padding: 0 2rem;
+  display: flex;
+}
+
+/* --- Mobile: schmalere Innenabstaende, Panel ueber die volle Breite.
+   Klassen-Verdopplung, weil der Builder @media-Bloecke umsortiert. --- */
+@media (max-width: 767px) {
+  .mini-cart_component.mini-cart_component {
+    width: 100%;
+    max-width: 100%;
+  }
+  .mini-cart_head.mini-cart_head,
+  .mini-cart_progress.mini-cart_progress,
+  .mini-cart_line-item.mini-cart_line-item,
+  .mini-cart_crosssell-title.mini-cart_crosssell-title,
+  .mini-cart_crosssell-list.mini-cart_crosssell-list,
+  .mini-cart_empty.mini-cart_empty,
+  .mini-cart_trust-banner.mini-cart_trust-banner {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+  .mini-cart_footer.mini-cart_footer {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+  .mini-cart_line-item_media.mini-cart_line-item_media {
+    width: 5.25rem;
+    height: 6.375rem;
+  }
+  .mini-cart_line-item_title.mini-cart_line-item_title { max-width: none; }
+  .mini-cart_crosssell-info.mini-cart_crosssell-info { width: 12.5rem; }
 }
