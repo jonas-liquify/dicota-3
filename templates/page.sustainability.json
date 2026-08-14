@@ -11,7 +11,12 @@
   "sections": {
     "background_image_her": {
       "type": "background_image_her",
-      "settings": {}
+      "settings": {
+        "text_heading": "Sustainability isn't a trend — it's our responsibility",
+        "textarea_text": "We design products from the end backwards: durable, repairable and made with recycled materials. That's the DICOTA way.",
+        "padding_top": 7.5,
+        "padding_bottom": 7.5
+      }
     },
     "stats_strip": {
       "type": "stats_strip",
@@ -19,17 +24,30 @@
         "icon-block": {
           "type": "icon-block",
           "name": "Icon Block",
-          "settings": {}
+          "settings": {
+            "text_zahl": "More than 12M",
+            "text_label": "Recycled PET bottles"
+          },
+          "blocks": {}
         }
       },
       "block_order": [
         "icon-block"
       ],
-      "settings": {}
+      "settings": {
+        "padding_top": 2.5,
+        "padding_bottom": 2.5
+      }
     },
     "image_text": {
       "type": "image_text",
-      "settings": {}
+      "settings": {
+        "text_heading": "Recycled materials",
+        "textarea_text": "Our backpacks are made largely from recycled PET. That's how we give used plastic bottles a second life — as a rugged companion for everyday work.",
+        "url_button_link": "",
+        "text_button_text": "Learn more",
+        "image_position": "left"
+      }
     },
     "triple_cards": {
       "type": "triple_cards",
@@ -37,13 +55,24 @@
         "karte": {
           "type": "karte",
           "name": "Karte",
-          "settings": {}
+          "settings": {
+            "url_card_link": "",
+            "text_card_heading": "Sustainability",
+            "text_card_button_text": "Learn more"
+          },
+          "blocks": {}
         }
       },
       "block_order": [
         "karte"
       ],
-      "settings": {}
+      "settings": {
+        "text_heading": "Discover our world",
+        "url_button_link": "",
+        "text_button_text": "View all",
+        "padding_top": 7.5,
+        "padding_bottom": 7.5
+      }
     }
   },
   "layout": "theme",
