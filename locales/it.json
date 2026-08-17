@@ -36,8 +36,14 @@
     "total_price": "Totale parziale",
     "shipping_fee": "Spedizione",
     "free": "Gratuito",
-    "go_to_checkout": "Check-out",
-    "note": "Nota"
+    "go_to_checkout": "Vai alla cassa in sicurezza",
+    "note": "Nota",
+    "progress_prefix": "Ti mancano",
+    "progress_suffix": "per la spedizione gratuita",
+    "grand_total": "Totale",
+    "shipping_date": "Spedizione standard il",
+    "date_format": "%d/%m/%y",
+    "upsell_heading": "Potrebbe abbinarsi bene"
   },
   "blog": {
     "no_posts": "Nessun post trovato."

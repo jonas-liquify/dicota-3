@@ -36,8 +36,14 @@
     "total_price": "Mezisoučet",
     "shipping_fee": "Doprava",
     "free": "Zdarma",
-    "go_to_checkout": "Pokladna",
-    "note": "Poznámka"
+    "go_to_checkout": "Bezpečně k pokladně",
+    "note": "Poznámka",
+    "progress_prefix": "Jste",
+    "progress_suffix": "od dopravy zdarma",
+    "grand_total": "Celkem",
+    "shipping_date": "Standardní doručení",
+    "date_format": "%d.%m.%y",
+    "upsell_heading": "K tomu by se hodilo"
   },
   "blog": {
     "no_posts": "Nebyly nalezeny žádné příspěvky."

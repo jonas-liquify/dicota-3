@@ -4581,5 +4581,25 @@
     "searching": "البحث…",
     "suggestions": "اقتراحات",
     "view_all": "عرض جميع المنتجات"
+  },
+  "cart": {
+    "heading": "سلة التسوق",
+    "empty": "سلتك فارغة",
+    "total_price": "المجموع الفرعي",
+    "shipping_fee": "الشحن",
+    "free": "مجاني",
+    "note": "ملاحظة",
+    "progress_prefix": "تبقّى",
+    "progress_suffix": "للحصول على شحن مجاني",
+    "grand_total": "الإجمالي",
+    "shipping_date": "الشحن القياسي في",
+    "date_format": "%d/%m/%y",
+    "upsell_heading": "قد يناسب ذلك",
+    "go_to_checkout": "إتمام الشراء بأمان",
+    "get_free_shipping": "احصل على الشحن المجاني",
+    "still": "ما زال",
+    "to_free_shipping": "حتى الشحن المجاني",
+    "free_shipping_heading": "تم تفعيل الشحن المجاني",
+    "free_shipping_text": "تحصل على شحن مجاني لهذا الطلب."
   }
 }

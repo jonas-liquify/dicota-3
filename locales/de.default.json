@@ -19,8 +19,14 @@
     "total_price": "Zwischensumme",
     "shipping_fee": "Versand",
     "free": "Gratis",
-    "go_to_checkout": "Zur Kasse",
-    "note": "Anmerkung"
+    "go_to_checkout": "Sicher zur Kasse",
+    "note": "Anmerkung",
+    "progress_prefix": "Du bist",
+    "progress_suffix": "entfernt für Free Shipping",
+    "grand_total": "Gesamt",
+    "shipping_date": "Standardversand am",
+    "date_format": "%d.%m.%y",
+    "upsell_heading": "Das könnte dazu passen"
   },
   "blog": {
     "no_posts": "Keine Beiträge gefunden."

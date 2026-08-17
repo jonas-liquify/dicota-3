@@ -36,8 +36,14 @@
     "total_price": "Suma częściowa",
     "shipping_fee": "Wysyłka",
     "free": "Bezpłatny",
-    "go_to_checkout": "Kasa",
-    "note": "Uwaga"
+    "go_to_checkout": "Bezpiecznie do kasy",
+    "note": "Uwaga",
+    "progress_prefix": "Brakuje Ci",
+    "progress_suffix": "do darmowej dostawy",
+    "grand_total": "Razem",
+    "shipping_date": "Dostawa standardowa",
+    "date_format": "%d.%m.%y",
+    "upsell_heading": "To może pasować"
   },
   "blog": {
     "no_posts": "Nie znaleziono żadnych postów."

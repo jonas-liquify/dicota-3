@@ -36,8 +36,14 @@
     "total_price": "उप योग",
     "shipping_fee": "शिपिंग",
     "free": "निःशुल्क",
-    "go_to_checkout": "चेकआउट",
-    "note": "नोट"
+    "go_to_checkout": "सुरक्षित चेकआउट",
+    "note": "नोट",
+    "progress_prefix": "आप",
+    "progress_suffix": "दूर हैं मुफ़्त शिपिंग से",
+    "grand_total": "कुल",
+    "shipping_date": "मानक डिलीवरी",
+    "date_format": "%d/%m/%y",
+    "upsell_heading": "यह साथ में अच्छा लगेगा"
   },
   "blog": {
     "no_posts": "कोई पोस्ट नहीं मिली."

@@ -36,8 +36,14 @@
     "total_price": "Subtotal",
     "shipping_fee": "Forsendelse",
     "free": "Gratis",
-    "go_to_checkout": "Checkout",
-    "note": "Bemærk"
+    "go_to_checkout": "Sikkert til kassen",
+    "note": "Bemærk",
+    "progress_prefix": "Du er",
+    "progress_suffix": "fra gratis fragt",
+    "grand_total": "I alt",
+    "shipping_date": "Standardlevering den",
+    "date_format": "%d.%m.%y",
+    "upsell_heading": "Det kunne passe til"
   },
   "blog": {
     "no_posts": "Ingen indlæg fundet."

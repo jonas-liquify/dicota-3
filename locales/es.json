@@ -36,8 +36,14 @@
     "total_price": "Subtotal",
     "shipping_fee": "Envío",
     "free": "Gratis",
-    "go_to_checkout": "Pagar",
-    "note": "Nota"
+    "go_to_checkout": "Pago seguro",
+    "note": "Nota",
+    "progress_prefix": "Te faltan",
+    "progress_suffix": "para el envío gratis",
+    "grand_total": "Total",
+    "shipping_date": "Envío estándar el",
+    "date_format": "%d/%m/%y",
+    "upsell_heading": "Esto podría combinar"
   },
   "blog": {
     "no_posts": "No se encontraron publicaciones."

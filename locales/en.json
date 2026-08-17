@@ -19,8 +19,14 @@
     "total_price": "Subtotal",
     "shipping_fee": "Shipping",
     "free": "Free",
-    "go_to_checkout": "Checkout",
-    "note": "Note"
+    "go_to_checkout": "Secure checkout",
+    "note": "Note",
+    "progress_prefix": "You're",
+    "progress_suffix": "away from free shipping",
+    "grand_total": "Total",
+    "shipping_date": "Standard delivery on",
+    "date_format": "%m/%d/%y",
+    "upsell_heading": "This might go well with it"
   },
   "blog": {
     "no_posts": "No posts found."

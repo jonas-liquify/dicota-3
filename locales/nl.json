@@ -36,8 +36,14 @@
     "total_price": "Subtotaal",
     "shipping_fee": "Verzending",
     "free": "Gratis",
-    "go_to_checkout": "Afrekenen",
-    "note": "Let op"
+    "go_to_checkout": "Veilig afrekenen",
+    "note": "Let op",
+    "progress_prefix": "Je bent",
+    "progress_suffix": "verwijderd van gratis verzending",
+    "grand_total": "Totaal",
+    "shipping_date": "Standaardlevering op",
+    "date_format": "%d-%m-%y",
+    "upsell_heading": "Dit past er misschien bij"
   },
   "blog": {
     "no_posts": "Geen berichten gevonden."
