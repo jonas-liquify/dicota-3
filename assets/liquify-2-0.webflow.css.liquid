@@ -18842,3 +18842,11 @@ img.product-header_gallery-image {
   .mini-cart_line-item_title.mini-cart_line-item_title { max-width: none; }
   .mini-cart_crosssell-info.mini-cart_crosssell-info { width: 12.5rem; }
 }
+
+/* Der Static-Block "Search Suggestions" bringt einen zusaetzlichen Wrapper mit
+   (Liquiflow verschiebt den ganzen Teilbaum in blocks/search-suggestions.liquid).
+   display:contents haelt ihn aus dem Layout heraus, damit .nav_search-pills
+   weiterhin direktes Flex-Kind von .nav_search-empty-col bleibt. */
+.nav_search-pills-holder {
+  display: contents;
+}
