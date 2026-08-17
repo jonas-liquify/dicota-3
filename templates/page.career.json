@@ -73,7 +73,7 @@
         "textarea_text": "As a trusted leader in premium bag solutions, we deliver innovative products with a strong commitment to our customers. Our employees are the heart of our success, and we empower them to excel with pride and passion, consistently surpassing expectations.",
         "image_bild": "shopify://shop_images/One-for-all_03.jpg",
         "url_button_link": "",
-        "text_button_text": "Read more",
+        "text_button_text": "",
         "padding_top": 5,
         "padding_bottom": 5
       }
@@ -174,6 +174,7 @@
       "block_order": [
         "tab"
       ],
+      "disabled": true,
       "settings": {
         "text_heading": "Our values",
         "padding_top": 5,
@@ -190,7 +191,7 @@
         "text_filter_2_label": "Department",
         "text_cta_heading": "Speculative application",
         "richtext_cta_text": "<p>No suitable position for you? We'd still love to hear from you.</p>",
-        "url_cta_button_link": "",
+        "url_cta_button_link": "mailto:jobs@dct.group?subject=Job%20Application",
         "text_cta_button_text": "Apply now",
         "show_cta": true,
         "padding_top": 5,

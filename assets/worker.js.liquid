@@ -90,8 +90,13 @@ export default {
 
     let payload;
     try {
-      const xml = await callApi(env, ROUTES[route].type, lang, { manufacturer, modeltype, model });
-      payload = parse(route, xml);
+      /* Bei /manufacturers wandert ein mitgegebenes ?type= nach
+         <requirehasmodeltype>, nicht nach <modeltypesystemname>. */
+      const p = route === "manufacturers"
+        ? { requiretype: modeltype }
+        : { manufacturer, modeltype, model };
+      const xml = await callApi(env, ROUTES[route].type, lang, p);
+      payload = parse(route, xml, env);
     } catch (err) {
       return json({ error: "upstream error" }, 502, cors); // generisch — keine Upstream-Details, keine Credentials
     }
@@ -112,6 +117,10 @@ async function callApi(env, requesttype, lang, p) {
   if (p.manufacturer) extra += `<modelmanufacturer>${esc(p.manufacturer)}</modelmanufacturer>`;
   if (p.modeltype)    extra += `<modeltypesystemname>${esc(p.modeltype)}</modeltypesystemname>`;
   if (p.model)        extra += `<modelname>${esc(p.model)}</modelname>`;
+  /* Optional bei ModelManufacturers (Kap. 4.1): kürzt die Herstellerliste auf
+     die, für die es zu diesem Modelltyp überhaupt Artikel gibt. Verhindert
+     Hersteller im Dropdown, die am Ende zu 0 Treffern führen. */
+  if (p.requiretype)  extra += `<requirehasmodeltype>${esc(p.requiretype)}</requirehasmodeltype>`;
 
   const xml =
     `<?xml version="1.0" encoding="UTF-8"?>` +
@@ -140,9 +149,14 @@ async function callApi(env, requesttype, lang, p) {
 
 /* ---- XML -> JSON. Bewusst per Regex: die Antworten sind flach und
    Cloudflare Workers haben keinen DOMParser. ---- */
-function parse(route, xml) {
+function parse(route, xml, env) {
   if (route === "manufacturers") {
-    return { items: tags(xml, "modelmanufacturer") };
+    /* Die Doku ist hier widersprüchlich: die Befehlsreferenz (Kap. 4.1) nennt
+       <modelmanufacturer>, die Beispielantwort (Kap. 2) <manufacturer>.
+       Deshalb beide akzeptieren — sonst kommt still eine leere Liste zurück. */
+    let items = tags(xml, "modelmanufacturer");
+    if (!items.length) items = tags(xml, "manufacturer");
+    return { items };
   }
   if (route === "types") {
     const items = blocks(xml, "modeltype").map(b => ({
@@ -164,7 +178,21 @@ function parse(route, xml) {
     manufacturer: tag(b, "articlemanufacturer"),
     compattype:   tag(b, "articlecompattype")
   })).filter(a => a.reference);
-  return { items, references: items.map(a => a.reference) };
+
+  /* ModelArticles kann Artikel FREMDER Hersteller enthalten — die Doku nennt
+     Kingston Technology und Origin Storage ausdrücklich als articlemanufacturer.
+     Deren Referenznummern sind keine Shopify-SKUs; sie würden die Suche nur
+     verwässern. Für die SKU-Suche daher auf den eigenen Hersteller einschränken.
+     ARTICLE_MANUFACTURER leer setzen = nicht filtern.
+     `items` bleibt vollständig, `skipped` macht das Weglassen sichtbar. */
+  const own = str(env && env.ARTICLE_MANUFACTURER).toLowerCase();
+  const mine = own ? items.filter(a => a.manufacturer.toLowerCase() === own) : items;
+  return {
+    items,
+    references: mine.map(a => a.reference),
+    skipped: items.length - mine.length,
+    manufacturers: [...new Set(items.map(a => a.manufacturer).filter(Boolean))]
+  };
 }
 
 function blocks(xml, name) {
