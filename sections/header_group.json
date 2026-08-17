@@ -125,6 +125,12 @@
           "static": true,
           "settings": {},
           "blocks": {}
+        },
+        "search-suggestions": {
+          "type": "search-suggestions",
+          "static": true,
+          "settings": {},
+          "blocks": {}
         }
       },
       "block_order": [
@@ -145,6 +151,7 @@
         "collection_search_recent_limit": 6,
         "url_wishlist_link": "",
         "reseller_menu": "",
+        "text_sucheingabe_placeholder": "What are you looking for?",
         "free_shipping_threshold": 50
       }
     },
@@ -156,7 +163,14 @@
           "settings": {
             "url_link": "",
             "text_text": "Backpacks"
-          }
+          },
+          "blocks": {}
+        },
+        "search-suggestions": {
+          "type": "search-suggestions",
+          "static": true,
+          "settings": {},
+          "blocks": {}
         }
       },
       "block_order": [
@@ -174,9 +188,18 @@
         "collection_search_recent": "",
         "collection_search_recent_limit": 6,
         "url_wishlist_link": "",
+        "text_social_proof_leicht": "Gute Wahl!",
+        "text_social_proof_fett": "Über 350.180 Menschen nutzen DICOTA Produkte",
+        "text_trust_links": "30 Tage Geld-Zurück Garantie",
+        "text_trust_rechts": "Über 350.000 happy Kunden",
         "menu": "main-menu-d2c",
         "transparent_over_first": true,
-        "free_shipping_threshold": 50,
+        "free_shipping_threshold": 200,
+        "shipping_cost": 5,
+        "delivery_days": 3,
+        "show_socialproof": true,
+        "text_upsell_collection": "",
+        "upsell_limit": 4,
         "text_sucheingabe_placeholder": "What are you looking for?"
       }
     }
