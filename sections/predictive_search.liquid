@@ -1,10 +1,4 @@
-<div x-show="!searchQuery || searchQuery.length === 0" class="nav_search-empty-grid"><div class="nav_search-empty-col"><div class="nav_search-empty-header"><div li-object="'search.popular' | t" class="text-style-subline">{{ 'search.popular' | t }}</div></div><div class="nav_search-pills">{% for block in section.blocks %}
-    {% if block.type == "nav-search-suggestion" %}
-                    <div li-block="Nav Search Suggestion" style="display:contents">
-                                    <a href="{{ block.settings.url_link }}" class="nav_search-pill-item"> <span>{{ block.settings.text_text }}</span> </a>
-                            </div>
-            {% endif %}
-{% endfor %}</div></div><div class="nav_search-empty-col"><div class="nav_search-empty-header"><div li-object="'search.recently_viewed' | t" class="text-style-subline">{{ 'search.recently_viewed' | t }}</div><a li-object="'general.clear' | t" href="#" class="text-style-link">{{ 'general.clear' | t }}</a></div><div class="nav_search-recent">{% for product in section.settings.collection_search_recent.products limit: section.settings.collection_search_recent_limit %}
+<div x-show="!searchQuery || searchQuery.length === 0" class="nav_search-empty-grid"><div class="nav_search-empty-col"><div class="nav_search-empty-header"><div li-object="'search.popular' | t" class="text-style-subline">{{ 'search.popular' | t }}</div></div>{% content_for "block", type: "search-suggestions", id: "search-suggestions" %}</div><div class="nav_search-empty-col"><div class="nav_search-empty-header"><div li-object="'search.recently_viewed' | t" class="text-style-subline">{{ 'search.recently_viewed' | t }}</div><a li-object="'general.clear' | t" href="#" class="text-style-link">{{ 'general.clear' | t }}</a></div><div class="nav_search-recent">{% for product in section.settings.collection_search_recent.products limit: section.settings.collection_search_recent_limit %}
 <div class="nav_search-recent-item">
     <a li-object:href="product.url" href="{{ product.url }}" class="nav_search-recent-link"><img li-object:src="product.featured_image | image_url: width: 400" li-object:alt="product.featured_image.alt" src="{{ product.featured_image | image_url: width: 400 }}" loading="lazy" alt="{{ product.featured_image.alt }}" class="nav_search-recent-image"></a>
 </div>
@@ -14,21 +8,10 @@
     "class": "nav_search-overlay-states",
     "blocks": [
         {
-            "name": "Nav Search Suggestion",
-            "type": "nav-search-suggestion",
-            "settings": [
-                {
-                    "id": "url_link",
-                    "type": "url",
-                    "label": "Link"
-                },
-                {
-                    "id": "text_text",
-                    "type": "text",
-                    "label": "Text",
-                    "default": "Backpacks"
-                }
-            ]
+            "type": "nav-search-suggestion"
+        },
+        {
+            "type": "@app"
         }
     ],
     "settings": [
@@ -53,7 +36,14 @@
             "category": "Liquify",
             "blocks": [
                 {
-                    "type": "nav-search-suggestion"
+                    "type": "search-suggestions",
+                    "static": true,
+                    "id": "search-suggestions",
+                    "blocks": [
+                        {
+                            "type": "nav-search-suggestion"
+                        }
+                    ]
                 }
             ]
         }
