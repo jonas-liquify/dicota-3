@@ -19419,3 +19419,69 @@ img.product-header_gallery-image {
   .product-sticky_title.product-sticky_title { font-size: .875rem; }
   .product-sticky_btn.product-sticky_btn { padding: .5rem 1rem; }
 }
+
+/* =============================================================
+   NAVIGATION — Chevron in den Textfluss
+   Der Pfeil lag absolut auf right:-1.1rem, also KOMPLETT ausserhalb
+   der Toggle-Box. Dadurch zaehlte er nicht zur Breite des Links: die
+   Luecke nach einem Dropdown-Punkt wirkte um die Icon-Breite schmaler
+   als nach "Trolleys", das keinen Pfeil hat. Jetzt laeuft er im Fluss
+   mit, die Abstaende werden dadurch gleich.
+   Nur im Hauptmenue — Announcement Bar, Footer und Sprachwahl haben
+   eigene Regeln und bleiben unberuehrt.
+   ============================================================= */
+.nav_menu-dropdown .dropdown-icon {
+  position: static;
+  inset: auto;
+  right: auto;
+  flex: none;
+  margin: 0;
+}
+.section_navbar .nav_dropdown-toggle {
+  grid-column-gap: .25rem;
+  padding-left: .75rem;
+  padding-right: .75rem;
+}
+
+/* Mobile bleibt beim Accordion-Verhalten: Pfeil rechts an der Zeile.
+   Hoehere Spezifitaet, weil die Basisregel oben sonst gewinnt (sie steht
+   spaeter im File als die urspruenglichen @media-Bloecke). */
+@media (max-width: 1080px) {
+  .nav_menu-dropdown .dropdown-icon.dropdown-icon {
+    position: absolute;
+    inset: auto 0% auto auto;
+  }
+  .section_navbar .nav_dropdown-toggle {
+    grid-column-gap: 0;
+  }
+}
+@media (max-width: 991px) {
+  .nav_menu-dropdown .dropdown-icon.dropdown-icon { right: 1rem; }
+}
+
+/* =============================================================
+   RECOMMENDED PRODUCTS — Slider bis zum Rand
+   .section_product-recommended hatte overflow:hidden, wodurch die
+   Slides an der Container-Kante abgeschnitten wurden statt bis zum
+   Viewport-Rand zu laufen. Jetzt darf der Swiper ueberlaufen; das
+   Wegschneiden uebernimmt .page-wrapper (overflow:clip), sodass
+   kein horizontaler Seiten-Scroll entsteht.
+   ============================================================= */
+.section_product-recommended.section_product-recommended {
+  overflow: visible;
+}
+.recommended-products_swiper.recommended-products_swiper {
+  overflow: visible;
+}
+/* Pfeile und Scrollbar duerfen nicht mit ueberlaufen */
+.recommended-products_slider-wrapper.recommended-products_slider-wrapper {
+  position: relative;
+}
+.recommended-products_arrow.recommended-products_arrow { z-index: 3; }
+
+/* Sicherheitsnetz: falls ein Vorfahre doch scrollt, hier abschneiden
+   statt eine Scrollbar zu erzeugen. overflow-x:clip laesst position:sticky
+   im Gegensatz zu hidden unberuehrt. */
+body {
+  overflow-x: clip;
+}

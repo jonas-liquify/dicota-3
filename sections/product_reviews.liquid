@@ -32,8 +32,8 @@
   var nextPage = parseInt(cfg.getAttribute("data-jm-next-page"),10) || 2;
   var hasMore = cfg.getAttribute("data-jm-has-more") === "true";
 
-  var STAR = '<path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z">';
-  function stars(rating){ var n=Math.round(rating||0),out=""; for(var i=1;i<=5;i++){ out+='<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="product-reviews_star'+(i<=n?"":" is-empty")+'">'+STAR+''; } return out; }
+  var STAR = '<path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"><\/path>';
+  function stars(rating){ var n=Math.round(rating||0),out=""; for(var i=1;i<=5;i++){ out+='<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="product-reviews_star'+(i<=n?"":" is-empty")+'">'+STAR+'<\/svg>'; } return out; }
   function fmtDate(s){ try { return new Date(s).toLocaleDateString(undefined,{year:"numeric",month:"short",day:"numeric"}); } catch(e){ return ""; } }
   function q(p){ return Object.keys(p).filter(function(k){ return p[k]!=null && p[k]!==""; }).map(function(k){ return encodeURIComponent(k)+"="+encodeURIComponent(p[k]); }).join("&"); }
   function jget(url){ return fetch(url,{headers:{"Accept":"application/json"}}).then(function(r){ if(!r.ok) throw new Error("HTTP "+r.status); return r.json(); }); }
