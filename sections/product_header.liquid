@@ -157,6 +157,17 @@ ensureSwiperLib(function() { var weCareEl = document.querySelector(".swiper.is-w
             "type": "text",
             "label": "Tab Proportion",
             "default": "Proportion"
+        },
+        {
+            "type": "header",
+            "content": "Kaufbereich"
+        },
+        {
+            "type": "checkbox",
+            "id": "show_quantity",
+            "label": "Mengenauswahl anzeigen",
+            "default": false,
+            "info": "Blendet einen Mengen-Stepper ueber dem Warenkorb-Button ein. Bei Produkten mit Staffelpreisen wird die Menge dort bereits gesteuert \u2014 dann bleibt der Stepper aus."
         }
     ],
     "presets": [
