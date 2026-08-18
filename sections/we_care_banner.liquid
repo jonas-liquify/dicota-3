@@ -35,9 +35,9 @@
     for (var k = 0; k < text.length; k++) {
       var ch = text.charAt(k);
       if (ch >= "0" && ch <= "9") {
-        out += '<span class="we-care-banner_counter-digit">' + ch + "";
+        out += '<span class="we-care-banner_counter-digit">' + ch + "<\/span>";
       } else {
-        out += '<span class="we-care-banner_counter-dot">' + ch + "";
+        out += '<span class="we-care-banner_counter-dot">' + ch + "<\/span>";
       }
     }
     el.innerHTML = out;
