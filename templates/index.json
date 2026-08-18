@@ -587,6 +587,7 @@
         "faq_kategorie_GzfQQt",
         "faq_kategorie_RYpH6n"
       ],
+      "disabled": true,
       "name": "FAQ Accordion",
       "settings": {
         "text_heading": "Frequently asked questions",
