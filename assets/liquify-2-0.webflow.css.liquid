@@ -19202,3 +19202,107 @@ img.product-header_gallery-image {
 @media (prefers-reduced-motion: reduce) {
   .nav_menu-label::after { transition: none; }
 }
+
+/* =============================================================
+   MINI-CART — Zahlarten kleiner und umbrechend
+   Der Shop hat 10 aktive Zahlarten. Bei 35px Breite ergibt das
+   mit Abstaenden ~386px und passt nicht in die 372px Innenbreite
+   des Drawers — die Icons wurden gequetscht. Kleiner + Umbruch.
+   justify-content: center statt space-between, weil eine
+   umgebrochene letzte Reihe sonst auseinandergezogen wird.
+   ============================================================= */
+.mini-cart_payments.mini-cart_payments {
+  flex-wrap: wrap;
+  justify-content: center;
+  grid-column-gap: .3125rem;
+  grid-row-gap: .3125rem;
+}
+.mini-cart_payment-svg-wrap.mini-cart_payment-svg-wrap {
+  width: 1.75rem;
+  height: 1.1875rem;
+}
+.mini-cart_payment-fallback.mini-cart_payment-fallback {
+  width: 1.25rem;
+  height: .875rem;
+}
+@media (max-width: 767px) {
+  .mini-cart_payment-svg-wrap.mini-cart_payment-svg-wrap {
+    width: 1.625rem;
+    height: 1.125rem;
+  }
+}
+
+/* =============================================================
+   MINI-CART — Tooltip am Versand-Info-Icon
+   Bewusst ohne Bibliothek: tippy.js ist im Projekt nicht vorhanden,
+   und ein weiteres Skript im kritischen Pfad waere angesichts der
+   LCP-Lage die falsche Antwort auf einen einzelnen Tooltip.
+   :focus-within haelt ihn per Tastatur erreichbar.
+   ============================================================= */
+.mini-cart_footer-info {
+  position: relative;
+  flex: none;
+  align-items: center;
+  display: inline-flex;
+}
+.mini-cart_info-btn {
+  color: inherit;
+  cursor: pointer;
+  background: none;
+  border: 0;
+  width: 1rem;
+  height: 1rem;
+  padding: 0;
+  display: flex;
+}
+.mini-cart_info-icon { width: 100%; height: 100%; display: flex; }
+.mini-cart_tooltip {
+  background-color: var(--base-color-neutral--black, #0f0f0f);
+  color: #fff;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 5;
+  width: 15rem;
+  padding: .5rem .625rem;
+  font-size: .6875rem;
+  line-height: 1.4;
+  text-transform: none;
+  letter-spacing: 0;
+  position: absolute;
+  bottom: calc(100% + .5rem);
+  left: 50%;
+  transform: translate(-50%, .25rem);
+  transition: opacity .18s ease, transform .18s ease, visibility .18s;
+}
+.mini-cart_tooltip::after {
+  content: "";
+  border: .3125rem solid #0000;
+  border-top-color: var(--base-color-neutral--black, #0f0f0f);
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.mini-cart_footer-info:hover .mini-cart_tooltip,
+.mini-cart_footer-info:focus-within .mini-cart_tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, 0);
+}
+/* Nahe am rechten Panelrand nicht ueber die Kante laufen */
+@media (max-width: 767px) {
+  .mini-cart_tooltip { width: 12rem; }
+}
+
+/* --- Produktkachel: Size-Tag liegt jetzt im Bild bei den Badges --- */
+.product-card_fits.is-on-image {
+  background-color: #ffffffe6;
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+  opacity: 1;
+  margin-top: 0;
+  padding: .1875rem .375rem;
+  position: relative;
+  z-index: 2;
+}
