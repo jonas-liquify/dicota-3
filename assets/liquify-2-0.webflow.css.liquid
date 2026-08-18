@@ -19547,3 +19547,144 @@ body {
 .we-care-banner_overlay {
   background-color: rgba(0, 0, 0, var(--wcb-overlay, .35));
 }
+
+/* =============================================================
+   VARIANTEN-PILLEN — Aktive Pille mit schwarzem Rand
+   Bisher markierte nur ein hellgrauer Hintergrund die Auswahl,
+   waehrend die Bild-Swatches daneben einen 2px-Rahmen bekommen.
+   Jetzt gleiche Sprache. Die Basis hat border:1px solid transparent,
+   deshalb wird das Padding um 1px reduziert — die Pille behaelt in
+   beiden Zustaenden exakt dieselbe Groesse.
+   ============================================================= */
+.product-header_radio[data-active="true"] {
+  border: 2px solid var(--base-color-neutral--black, #0f0f0f);
+  padding: calc(.125rem - 1px) calc(.875rem - 1px);
+  background-color: #fff;
+  color: var(--base-color-neutral--black, #0f0f0f);
+}
+/* Hover darf den Aktivzustand nicht ueberschreiben */
+.product-header_radio[data-active="true"]:hover {
+  border-color: var(--base-color-neutral--black, #0f0f0f);
+  background-color: #f4f4f4;
+}
+@media (max-width: 767px) {
+  .product-header_radio[data-active="true"] {
+    padding: calc(.125rem - 1px) calc(.875rem - 1px);
+  }
+}
+
+/* =============================================================
+   MINI-CART — Empfehlungs-Slot
+   Wird per Section Rendering API befuellt. Leer = kein Platz belegt,
+   damit der Drawer ohne Empfehlungen nicht auseinanderfaellt.
+   margin-top:auto lag vorher auf .mini-cart_crosssell; da der Block
+   jetzt erst zur Laufzeit hineinkommt, muss der Slot ihn halten.
+   ============================================================= */
+.mini-cart_reco-slot {
+  margin-top: auto;
+}
+.mini-cart_reco-slot:empty {
+  display: none;
+}
+.mini-cart_reco-slot .mini-cart_crosssell {
+  margin-top: 0;
+}
+/* Die Section bringt beim Fetch ihren eigenen Wrapper nicht mit — hier
+   ist sie nur Datenquelle, auf einer normalen Seite bleibt sie leer. */
+.section_mc-reco:not(:has(.mini-cart_crosssell)) {
+  display: none;
+}
+
+/* =============================================================
+   SHOPIFY-POLICY-SEITEN (/policies/*)
+   Shopify rendert diese Seiten mit eigenem Markup, das sich im Theme
+   nicht anfassen laesst — nur .shopify-policy__container / __title /
+   __body. Per CSS an die Theme-Sprache angeglichen.
+   Werte gespiegelt von: .article_wrapper (48rem Lesebreite),
+   .padding-global (2.5rem), .padding-section-medium (5rem),
+   .heading-style-h2 (2rem, Futura PT, 500, uppercase).
+   Bewusst KEINE volle Seitenbreite — Fliesstext bleibt lesbar.
+   ============================================================= */
+.shopify-policy__container {
+  width: 100%;
+  max-width: 48rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5rem 2.5rem;
+}
+
+/* Shopify zentriert die Ueberschrift und laesst sie auf 16px stehen */
+.shopify-policy__title {
+  text-align: left;
+  margin-bottom: 2.5rem;
+}
+.shopify-policy__title h1 {
+  font-family: "Futura PT", sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.1;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+/* Fliesstext auf Theme-Typografie */
+.shopify-policy__body {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+.shopify-policy__body .rte > * + * {
+  margin-top: 1rem;
+}
+.shopify-policy__body h2,
+.shopify-policy__body h3,
+.shopify-policy__body h4 {
+  font-family: "Futura PT", sans-serif;
+  font-weight: 500;
+  line-height: 1.2;
+  margin: 2.5rem 0 .75rem;
+}
+.shopify-policy__body h2 { font-size: 1.5rem; text-transform: uppercase; }
+.shopify-policy__body h3 { font-size: 1.25rem; }
+.shopify-policy__body h4 { font-size: 1rem; }
+.shopify-policy__body p { margin: 0 0 1rem; }
+.shopify-policy__body a {
+  color: inherit;
+  text-underline-offset: .15em;
+  text-decoration: underline;
+}
+.shopify-policy__body a:hover { opacity: .7; }
+.shopify-policy__body ul,
+.shopify-policy__body ol { margin: 0 0 1rem; padding-left: 1.25rem; }
+.shopify-policy__body li { margin-bottom: .375rem; }
+.shopify-policy__body strong { font-weight: 500; }
+
+/* Der Editor-Export bringt oft Ketten aus <br> statt Absaetzen mit —
+   die erzeugen sonst riesige Luecken. */
+.shopify-policy__body br + br { display: none; }
+
+@media (max-width: 767px) {
+  .shopify-policy__container.shopify-policy__container {
+    padding: 3rem 1.25rem;
+  }
+  .shopify-policy__title.shopify-policy__title { margin-bottom: 1.5rem; }
+  .shopify-policy__title h1 { font-size: 1.5rem; }
+}
+
+/* =============================================================
+   SUCHSEITE — Filter wie auf der Collection-Page
+   Die Seitenleiste ist entfallen; die Filter sitzen jetzt als
+   horizontale Leiste ueber dem Raster (coll_filter-*), inklusive
+   Modal fuer Tablet/Mobile. Damit faellt die zweispaltige
+   Grid-Aufteilung weg.
+   ============================================================= */
+.filter_layout {
+  grid-template-columns: 1fr;
+  display: block;
+}
+.filter_filters-wrapper { display: none; }
+.section_filter .coll_filter-bar {
+  padding-left: 0;
+  padding-right: 0;
+}
+/* Artikel-Treffer unter dem Produktraster */
+.section_filter .filter_articles { margin-top: 3rem; }
