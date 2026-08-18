@@ -419,7 +419,7 @@
 });
 
 </script>
-<div data-hover="false" data-delay="400" li-element="mini-cart" class="nav_dropdown w-dropdown" x-data="handleMinicart()" x-init="getCart()" @cartupdated.window="getCart()" @setcartitem.window="updateCartItemQuantity($event.detail.product, $event.detail.quantity)" @increasecartitem.window="increaseCartItemQuantity($event.detail.product, $event.detail.quantity)" @decreasecartitem.window="decreaseCartItemQuantity($event.detail.product, $event.detail.quantity)" @toggleminicart.window="toggleMiniCart()" @showcartmessage.window="showCartMessage" @getcartitems.window="returnCartItems"><div aria-label="Cart" li-element="mini-cart-toggle" class="nav_shop-icon nav_shop-icon-cart w-dropdown-toggle" @click="$dispatch('cartupdated.window')"><div class="icon-embed-xsmall w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 24 24" fill="none" aria-hidden="true" role="img"><mask id="mask-mini-cart" style="mask-type:alpha" maskunits="userSpaceOnUse" x="0" y="0" width="24" height="24"><rect width="24" height="24" fill="#D9D9D9"></rect></mask><g mask="url(#mask-mini-cart)"><path d="M6 22C5.45 22 4.97917 21.8042 4.5875 21.4125C4.19583 21.0208 4 20.55 4 20V8C4 7.45 4.19583 6.97917 4.5875 6.5875C4.97917 6.19583 5.45 6 6 6H8C8 4.9 8.39167 3.95833 9.175 3.175C9.95833 2.39167 10.9 2 12 2C13.1 2 14.0417 2.39167 14.825 3.175C15.6083 3.95833 16 4.9 16 6H18C18.55 6 19.0208 6.19583 19.4125 6.5875C19.8042 6.97917 20 7.45 20 8V20C20 20.55 19.8042 21.0208 19.4125 21.4125C19.0208 21.8042 18.55 22 18 22H6Z" fill="currentColor"></path></g></svg></div><div li-element="mini-cart-item-count" class="nav_shop-quantity" x-data="{ items: 0 }" x-text="items" @carttotalitems.window="items = event.detail">0</div></div><nav li-element="mini-cart-container" class="nav_mini-cart-holder w-dropdown-list" :class="open || 'mini-cart-closed'"><div li-element="dropdown-toggle" class="nav_mini-cart-close" data-dropdowntoggle="" @click="LiquifyHelper.triggerClick($event.target.closest('.w-dropdown').querySelector('.w-dropdown-toggle.w--open'))"></div><div data-free-shipping="{{ section.settings.free_shipping_threshold | times: 100 }}" data-shipping-cost="{{ section.settings.shipping_cost | times: 100 }}" x-data="{ shippingFree: 5000, shipCost: 500 }" x-init="shippingFree = isNaN(parseInt($el.dataset.freeShipping, 10)) ? shippingFree : parseInt($el.dataset.freeShipping, 10); shipCost = isNaN(parseInt($el.dataset.shippingCost, 10)) ? shipCost : parseInt($el.dataset.shippingCost, 10)" class="mini-cart_component"><div class="li-tag w-embed">{% assign mc_offset = section.settings.delivery_days | times: 86400 %}{% assign mc_format = 'cart.date_format' | t %}{% assign mc_delivery_date = 'now' | date: '%s' | plus: mc_offset | date: mc_format %}</div><div li-element="mini-cart-full" class="mini-cart_full" :style="total.items < 1 && { display: 'none' }"><div class="mini-cart_scroll"><div class="mini-cart_head"><div class="mini-cart_title"><span li-object="'cart.heading' | t">{{ 'cart.heading' | t }}</span> (<span li-element="mini-cart-item-count" class="mini-cart_title-count" x-data="{ items: 0 }" x-text="items" @carttotalitems.window="items = event.detail">2</span>)</div><div aria-label="Close cart" li-element="dropdown-toggle" role="button" tabindex="0" class="mini-cart_close w-embed" data-dropdowntoggle="" @click="LiquifyHelper.triggerClick($event.target.closest('.w-dropdown').querySelector('.w-dropdown-toggle.w--open'))"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5.5 5.5L18.5 18.5M18.5 5.5L5.5 18.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path></svg></div></div>{% if section.settings.show_socialproof %}    <div li-if="section.settings.show_socialproof" class="mini-cart_trust-banner">
+<div data-hover="false" data-delay="400" li-element="mini-cart" class="nav_dropdown w-dropdown" x-data="handleMinicart()" x-init="getCart()" @cartupdated.window="getCart()" @setcartitem.window="updateCartItemQuantity($event.detail.product, $event.detail.quantity)" @increasecartitem.window="increaseCartItemQuantity($event.detail.product, $event.detail.quantity)" @decreasecartitem.window="decreaseCartItemQuantity($event.detail.product, $event.detail.quantity)" @toggleminicart.window="toggleMiniCart()" @showcartmessage.window="showCartMessage" @getcartitems.window="returnCartItems"><div aria-label="Cart" li-element="mini-cart-toggle" class="nav_shop-icon nav_shop-icon-cart w-dropdown-toggle" @click="$dispatch('cartupdated.window')"><div class="icon-embed-xsmall w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 24 24" fill="none" aria-hidden="true" role="img"><mask id="mask-mini-cart" style="mask-type:alpha" maskunits="userSpaceOnUse" x="0" y="0" width="24" height="24"><rect width="24" height="24" fill="#D9D9D9"></rect></mask><g mask="url(#mask-mini-cart)"><path d="M6 22C5.45 22 4.97917 21.8042 4.5875 21.4125C4.19583 21.0208 4 20.55 4 20V8C4 7.45 4.19583 6.97917 4.5875 6.5875C4.97917 6.19583 5.45 6 6 6H8C8 4.9 8.39167 3.95833 9.175 3.175C9.95833 2.39167 10.9 2 12 2C13.1 2 14.0417 2.39167 14.825 3.175C15.6083 3.95833 16 4.9 16 6H18C18.55 6 19.0208 6.19583 19.4125 6.5875C19.8042 6.97917 20 7.45 20 8V20C20 20.55 19.8042 21.0208 19.4125 21.4125C19.0208 21.8042 18.55 22 18 22H6Z" fill="currentColor"></path></g></svg></div><div li-element="mini-cart-item-count" class="nav_shop-quantity" x-data="{ items: 0 }" x-text="items" @carttotalitems.window="items = event.detail">0</div></div><nav li-element="mini-cart-container" class="nav_mini-cart-holder w-dropdown-list" :class="open || 'mini-cart-closed'"><div li-element="dropdown-toggle" class="nav_mini-cart-close" data-dropdowntoggle="" @click="LiquifyHelper.triggerClick($event.target.closest('.w-dropdown').querySelector('.w-dropdown-toggle.w--open'))"></div><div data-free-shipping="{{ section.settings.free_shipping_threshold | times: 100 }}" data-shipping-cost="{{ section.settings.shipping_cost | times: 100 }}" x-data="{ shippingFree: 5000, shipCost: 500 }" x-init="shippingFree = isNaN(parseInt($el.dataset.freeShipping, 10)) ? shippingFree : parseInt($el.dataset.freeShipping, 10); shipCost = isNaN(parseInt($el.dataset.shippingCost, 10)) ? shipCost : parseInt($el.dataset.shippingCost, 10)" class="mini-cart_component"><div li-element="mini-cart-full" class="mini-cart_full" :style="total.items < 1 && { display: 'none' }"><div class="mini-cart_scroll"><div class="mini-cart_head"><div class="mini-cart_title"><span li-object="'cart.heading' | t">{{ 'cart.heading' | t }}</span> (<span li-element="mini-cart-item-count" class="mini-cart_title-count" x-data="{ items: 0 }" x-text="items" @carttotalitems.window="items = event.detail">2</span>)</div><div aria-label="Close cart" li-element="dropdown-toggle" role="button" tabindex="0" class="mini-cart_close w-embed" data-dropdowntoggle="" @click="LiquifyHelper.triggerClick($event.target.closest('.w-dropdown').querySelector('.w-dropdown-toggle.w--open'))"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5.5 5.5L18.5 18.5M18.5 5.5L5.5 18.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path></svg></div></div>{% if section.settings.show_socialproof %}    <div li-if="section.settings.show_socialproof" class="mini-cart_trust-banner">
     <p class="mini-cart_trust-text"><span>
 {{ section.settings.text_social_proof_leicht }}
 </span><span class="mini-cart_trust-strong">
@@ -459,12 +459,18 @@
         var doc = new DOMParser().parseFromString(html, "text/html");
         var block = doc.querySelector(".mini-cart_crosssell");
         if (!block) { slot.innerHTML = ""; return; }
-        /* Produkte ausblenden, die schon im Warenkorb liegen */
-        var inCart = items.map(function (i) { return i.product_id; });
-        block.querySelectorAll("[data-pid]").forEach(function (el) {
-          if (inCart.indexOf(parseInt(el.getAttribute("data-pid"), 10)) !== -1) el.remove();
-        });
-        if (!block.querySelector("[data-pid]")) { slot.innerHTML = ""; return; }
+        /* Produkte ausblenden, die schon im Warenkorb liegen.
+           Abgleich ueber den Handle aus der Produkt-URL statt ueber ein
+           Datenattribut: Liquiflow verwirft li-attribute:* auf einem Element,
+           das bereits li-for traegt &mdash; das Attribut kaeme nie an. */
+        var inCart = items.map(function (i) { return i.handle; });
+        var tiles = block.querySelectorAll(".mini-cart_crosssell-item");
+        for (var t = tiles.length - 1; t >= 0; t--) {
+          var link = tiles[t].querySelector('a[href*="/products/"]');
+          var handle = link ? link.getAttribute("href").split("/products/")[1].split(/[?#]/)[0] : "";
+          if (handle && inCart.indexOf(handle) !== -1) tiles[t].remove();
+        }
+        if (!block.querySelector(".mini-cart_crosssell-item")) { slot.innerHTML = ""; return; }
         slot.innerHTML = "";
         slot.appendChild(block);
         if (window.Alpine) window.Alpine.initTree(slot);
@@ -475,9 +481,7 @@
   window.addEventListener("currentcartitems", function (e) { render(e.detail); });
   window.addEventListener("cartupdated", function (e) { render(e.detail); });
 })();
-</script></div><div class="mini-cart_footer"><div class="mini-cart_footer_sums"><div class="mini-cart_footer_total"><span li-object="'cart.total_price' | t" class="mini-cart_footer-label">{{ 'cart.total_price' | t }}</span><span li-js-price="total.price" class="mini-cart_footer-value" x-text="LiquifyHelper.moneyFormat(total.price, true, '{{ shop.money_with_currency_format }}')">109,80 EUR</span></div><div class="mini-cart_footer_total"><span class="mini-cart_footer-shipping"><span li-object="'cart.shipping_date' | t" class="mini-cart_footer-label">{{ 'cart.shipping_date' | t }}</span><span li-object="mc_delivery_date" class="mini-cart_footer-label">{{ mc_delivery_date }}</span><span class="mini-cart_footer-info"><button type="button" aria-label="Versandinformation" class="mini-cart_info-btn"><span class="mini-cart_info-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="6.4" stroke="currentColor" stroke-width="1.1"></circle><path d="M8 7.1v4.1" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"></path><circle cx="8" cy="4.9" r=".72" fill="currentColor"></circle></svg></span></button><span role="tooltip" class="mini-cart_tooltip">
-{{ section.settings.text_versand_tooltip }}
-</span></span></span><span class="mini-cart_footer-value"><template x-if="(shippingFree - total.price) < 1">
+</script></div><div class="mini-cart_footer"><div class="mini-cart_footer_sums"><div class="mini-cart_footer_total"><span li-object="'cart.total_price' | t" class="mini-cart_footer-label">{{ 'cart.total_price' | t }}</span><span li-js-price="total.price" class="mini-cart_footer-value" x-text="LiquifyHelper.moneyFormat(total.price, true, '{{ shop.money_with_currency_format }}')">109,80 EUR</span></div><div class="mini-cart_footer_total"><span class="mini-cart_footer-shipping"><span li-object="'cart.shipping_date' | t" class="mini-cart_footer-label">{{ 'cart.shipping_date' | t }}</span></span><span class="mini-cart_footer-value"><template x-if="(shippingFree - total.price) < 1">
             <span li-js-if="(shippingFree - total.price) < 1">
         <span li-object="'cart.free' | t">{{ 'cart.free' | t }}</span>        </span>
     </template><template x-if="!((shippingFree - total.price) < 1)">
@@ -595,12 +599,6 @@
             "default": "\u00dcber 350.180 Menschen nutzen DICOTA Produkte"
         },
         {
-            "id": "text_versand_tooltip",
-            "type": "text",
-            "label": "Versand-Tooltip",
-            "default": "Voraussichtliche Zustellung bei Bestellung heute. Der endg\u00fcltige Versandtermin und die Kosten werden im Checkout berechnet."
-        },
-        {
             "id": "text_trust_links",
             "type": "text",
             "label": "Trust links",
@@ -658,16 +656,6 @@
             "label": "Versandkosten",
             "default": 5,
             "info": "Sch\u00e4tzwert f\u00fcr die Versandzeile im Mini-Cart, solange die Gratis-Schwelle nicht erreicht ist. Der verbindliche Betrag entsteht im Checkout."
-        },
-        {
-            "type": "range",
-            "id": "delivery_days",
-            "min": 1,
-            "max": 21,
-            "step": 1,
-            "label": "Lieferzeit (Tage)",
-            "default": 3,
-            "info": "Bestimmt das angezeigte Lieferdatum: heute + X Tage."
         },
         {
             "type": "checkbox",
