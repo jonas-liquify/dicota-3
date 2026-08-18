@@ -127,6 +127,7 @@
     "heading": "Vyhledávání produktů",
     "no_results": "Nebyly nalezeny žádné výsledky.",
     "no_results_hint": "Podle těchto kritérií nebyly nalezeny žádné výsledky. Zkuste změnit vyhledávací dotaz.",
-    "no_suggestions": "Žádné návrhy"
+    "no_suggestions": "Žádné návrhy",
+    "articles": "Články z blogu"
   }
 }

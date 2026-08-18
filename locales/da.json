@@ -110,5 +110,8 @@
     "count_label": "anmeldelser",
     "body": "Din anmeldelse",
     "email": "E-mail"
+  },
+  "search": {
+    "articles": "Blogindlæg"
   }
 }
