@@ -33,7 +33,9 @@
         },
         "preis_RVzH4L": {
           "type": "preis",
-          "settings": {},
+          "settings": {
+            "richtext_vat_text": "<p>Incl. VAT, plus <a href=\"/policies/shipping-policy\">shipping</a></p>"
+          },
           "blocks": {}
         },
         "kaufen_bLY6zn": {
@@ -48,7 +50,7 @@
             "text_limitiert_text": "Limited stock",
             "text_nicht_verfugbar_text": "Out of stock",
             "url_angebot_link": "",
-            "text_angebot_text": "Request a quote",
+            "text_angebot_text": "",
             "text_merken_text": "Save",
             "url_vergleichen_link": "",
             "text_vergleichen_text": "Compare",
@@ -284,12 +286,21 @@
         "bg_color": "#ffffff",
         "text_color": "#000000"
       }
+    },
+    "product_sticky_bar_BBcYjw": {
+      "type": "product_sticky_bar",
+      "name": "Product Sticky Bar",
+      "settings": {
+        "bg_color": "#ffffff",
+        "text_color": "#0f0f0f"
+      }
     }
   },
   "layout": "theme",
   "wrapper": "main.main-wrapper",
   "order": [
     "product_breadcrumb",
+    "product_sticky_bar_BBcYjw",
     "product_header_bqWCq3",
     "product_usp_bar",
     "product_sticky_bar_iytGhc",

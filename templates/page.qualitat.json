@@ -73,7 +73,7 @@
             "s1": {
               "type": "stats-block",
               "settings": {
-                "text_zahl": "14.2 Mio",
+                "text_zahl": "more than 12 Mio",
                 "text_label": "PET bottles recycled"
               },
               "blocks": {}
