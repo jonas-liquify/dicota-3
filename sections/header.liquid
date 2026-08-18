@@ -436,7 +436,9 @@
 <button type="submit" li-element="direct-add-to-cart" aria-label="In den Warenkorb" class="mini-cart_crosssell-add" x-data="handleVariant({{ product | json | escape }}, {{ product.options_by_name | json | escape }}, {{ product.selected_or_first_available_variant | json | escape }})" @click="addToCart($event, true)"><div class="mini-cart_plus-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 3.2v9.6M3.2 8h9.6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path></svg></div></button></form></div>
                         </div>
 {% endfor %}</div>    </div>
-{% endif %}</div><div class="mini-cart_footer"><div class="mini-cart_footer_sums"><div class="mini-cart_footer_total"><span li-object="'cart.total_price' | t" class="mini-cart_footer-label">{{ 'cart.total_price' | t }}</span><span li-js-price="total.price" class="mini-cart_footer-value" x-text="LiquifyHelper.moneyFormat(total.price, true, '{{ shop.money_with_currency_format }}')">109,80 EUR</span></div><div class="mini-cart_footer_total"><span class="mini-cart_footer-shipping"><span li-object="'cart.shipping_date' | t" class="mini-cart_footer-label">{{ 'cart.shipping_date' | t }}</span><span li-object="mc_delivery_date" class="mini-cart_footer-label">{{ mc_delivery_date }}</span><span class="mini-cart_footer-info w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="6.4" stroke="currentColor" stroke-width="1.1"></circle><path d="M8 7.1v4.1" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"></path><circle cx="8" cy="4.9" r=".72" fill="currentColor"></circle></svg></span></span><span class="mini-cart_footer-value"><template x-if="(shippingFree - total.price) < 1">
+{% endif %}</div><div class="mini-cart_footer"><div class="mini-cart_footer_sums"><div class="mini-cart_footer_total"><span li-object="'cart.total_price' | t" class="mini-cart_footer-label">{{ 'cart.total_price' | t }}</span><span li-js-price="total.price" class="mini-cart_footer-value" x-text="LiquifyHelper.moneyFormat(total.price, true, '{{ shop.money_with_currency_format }}')">109,80 EUR</span></div><div class="mini-cart_footer_total"><span class="mini-cart_footer-shipping"><span li-object="'cart.shipping_date' | t" class="mini-cart_footer-label">{{ 'cart.shipping_date' | t }}</span><span li-object="mc_delivery_date" class="mini-cart_footer-label">{{ mc_delivery_date }}</span><span class="mini-cart_footer-info"><button type="button" aria-label="Versandinformation" class="mini-cart_info-btn"><span class="mini-cart_info-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="6.4" stroke="currentColor" stroke-width="1.1"></circle><path d="M8 7.1v4.1" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"></path><circle cx="8" cy="4.9" r=".72" fill="currentColor"></circle></svg></span></button><span role="tooltip" class="mini-cart_tooltip">
+{{ section.settings.text_versand_tooltip }}
+</span></span></span><span class="mini-cart_footer-value"><template x-if="(shippingFree - total.price) < 1">
             <span li-js-if="(shippingFree - total.price) < 1">
         <span li-object="'cart.free' | t">{{ 'cart.free' | t }}</span>        </span>
     </template><template x-if="!((shippingFree - total.price) < 1)">
@@ -552,6 +554,12 @@
             "type": "text",
             "label": "Social Proof (fett)",
             "default": "\u00dcber 350.180 Menschen nutzen DICOTA Produkte"
+        },
+        {
+            "id": "text_versand_tooltip",
+            "type": "text",
+            "label": "Versand-Tooltip",
+            "default": "Voraussichtliche Zustellung bei Bestellung heute. Der endg\u00fcltige Versandtermin und die Kosten werden im Checkout berechnet."
         },
         {
             "id": "text_trust_links",

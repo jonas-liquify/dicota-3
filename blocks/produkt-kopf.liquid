@@ -1,6 +1,6 @@
 <div li-block="Produkt-Kopf" {{ block.shopify_attributes }}>
                     <div class="li-tag w-embed">{% assign ph_prop = product.metafields.sl_ART.extra_ITEMPROPERTY %}{% assign ph_eol = false %}{% if ph_prop == 'End of Life' or ph_prop == 'EOL' %}{% assign ph_eol = true %}{% endif %}{% assign ph_size_from = product.metafields.sl_ART.extra_COMPDEVSIZEINCHFROM.value %}{% assign ph_size_to = product.metafields.sl_ART.extra_COMPDEVSIZEINCHTO.value %}{% assign ph_fits = '' %}{% if ph_size_from != blank and ph_size_to != blank %}{% assign ph_fits = 'products.fits_devices' | t: from: ph_size_from, to: ph_size_to %}{% endif %}</div>
-                    <div class="ph_title-row"><div class="ph_tag-list">{% if ph_eol %}    <div class="li-guard" li-if="ph_eol">
+                    <div class="ph_tag-list">{% if ph_eol %}    <div class="li-guard" li-if="ph_eol">
     <span class="ph_tag is-dark">
 {{ block.settings.text_tag_auslaufmodell }}
 </span>    </div>
@@ -18,7 +18,8 @@
 </span>        </div>
     </template>{% if ph_fits != blank %}    <div class="li-guard" li-if="ph_fits != blank">
     <span class="ph_tag is-white"><span class="ph_tag-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 13 14" fill="none" aria-hidden="true"><path d="M2.83276 12.3139V11.2874H10.7615V12.3139H2.83276ZM6.79712 10.7742L4.81494 8.72123L5.50871 8.00269L6.30158 8.79822V5.56479L5.50871 6.36031L4.81494 5.64177L6.79712 3.5888L8.7793 5.64177L8.08554 6.36031L7.29267 5.56479V8.79822L8.08554 8.00269L8.7793 8.72123L6.79712 10.7742ZM2.83276 3.07556V2.04907H10.7615V3.07556H2.83276Z" fill="currentColor"></path></svg></span><span li-object="ph_fits">{{ ph_fits }}</span></span>    </div>
-{% endif %}</div><h1 li-object:text="product.title" class="ph_title heading-style-h4">
+{% endif %}</div>
+                    <div class="ph_title-row"><h1 li-object:text="product.title" class="ph_title heading-style-h4">
 {{ product.title }}
 </h1><div class="ph_ids"><div class="ph_id-row"><span class="ph_id-label">SKU</span><span li-object="product.selected_or_first_available_variant.sku" class="ph_id-value">{{ product.selected_or_first_available_variant.sku }}</span><button type="button" onclick="if(navigator.clipboard)navigator.clipboard.writeText(this.previousElementSibling.textContent)" aria-label="Copy SKU" class="ph_id-copy w-embed"><svg width="100%" height="100%" viewbox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"></path></svg></button></div><div class="ph_id-row"><span class="ph_id-label">GTIN</span><span li-object="product.selected_or_first_available_variant.barcode" class="ph_id-value">{{ product.selected_or_first_available_variant.barcode }}</span><button type="button" onclick="if(navigator.clipboard)navigator.clipboard.writeText(this.previousElementSibling.textContent)" aria-label="Copy GTIN" class="ph_id-copy w-embed"><svg width="100%" height="100%" viewbox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"></path></svg></button></div></div></div>
                     <div class="hide w-embed">{% assign ph_tagline = product.metafields.custom.filter_image_set.value.product_tagline | default: product.metafields.custom.product_tagline %}</div>
