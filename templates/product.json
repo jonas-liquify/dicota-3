@@ -23,12 +23,24 @@
         "text_color": "#0f0f0f"
       }
     },
+    "product_sticky_bar_BBcYjw": {
+      "type": "product_sticky_bar",
+      "name": "Product Sticky Bar",
+      "settings": {
+        "bg_color": "#ffffff",
+        "text_color": "#0f0f0f"
+      }
+    },
     "product_header_bqWCq3": {
       "type": "product_header",
       "blocks": {
         "produkt_kopf_CfNxpi": {
           "type": "produkt-kopf",
-          "settings": {},
+          "settings": {
+            "text_tag_auslaufmodell": "Discontinued",
+            "text_tag_nicht_lieferbar": "Out of Stock",
+            "text_tag_sale": "On Sale"
+          },
           "blocks": {}
         },
         "preis_RVzH4L": {
@@ -49,6 +61,11 @@
             "text_verfugbar_text": "In stock",
             "text_limitiert_text": "Limited stock",
             "text_nicht_verfugbar_text": "Out of stock",
+            "richtext_hinweis_nicht_retournierbar": "<p>Dieser Artikel ist vom Umtausch ausgeschlossen.</p>",
+            "richtext_hinweis_lieferzeit": "<p>Bei diesem Artikel kann es zu einer verlaengerten Lieferzeit kommen.</p>",
+            "text_menge_label": "Menge",
+            "text_coming_soon_text": "Coming soon",
+            "text_nicht_bestellbar_text": "Dieser Artikel ist nicht mehr bestellbar",
             "url_angebot_link": "",
             "text_angebot_text": "",
             "text_merken_text": "Save",
@@ -68,7 +85,7 @@
               "type": "we-care-item",
               "name": "Quality & Reliability",
               "settings": {
-                "text_headline": "30 years of German quality & reliability",
+                "text_headline": "34 years of German quality & reliability",
                 "url_link": "shopify://pages/qualitat",
                 "text_linktext": "See our principles"
               },
@@ -138,7 +155,8 @@
       "settings": {
         "text_modal_titel": "Dimensions",
         "text_tab_masse": "Dimensions",
-        "text_tab_proportion": "Proportion"
+        "text_tab_proportion": "Proportion",
+        "show_quantity": false
       }
     },
     "product_usp_bar": {
@@ -180,7 +198,8 @@
         "padding_top": 5,
         "padding_bottom": 5,
         "bg_color": "#ffffff",
-        "text_color": "#000000"
+        "text_color": "#000000",
+        "per_row": 5
       }
     },
     "product_family": {
@@ -238,12 +257,16 @@
       "type": "we_care_banner",
       "settings": {
         "image_hintergrundbild": "shopify://shop_images/Sustainable_Materials.png",
-        "text_zahler": "12.483.129",
         "text_headline": "Bottles processed",
         "textarea_beschreibung": "Since 1992, more than 12 million PET bottles have been recycled to minimise waste and promote sustainability.",
         "url_cta_link": "shopify://pages/sustainability",
         "text_cta_text": "More about Responsibility",
-        "bg_color": "#0a1628"
+        "bg_color": "#0a1628",
+        "min_height": 55,
+        "overlay_strength": 35,
+        "counter_start": 12483129,
+        "counter_epoch": "2026-08-11T00:00:00Z",
+        "counter_rate": 0.8
       }
     },
     "add_to_your_kit": {
@@ -285,14 +308,6 @@
         "padding_bottom": 5,
         "bg_color": "#ffffff",
         "text_color": "#000000"
-      }
-    },
-    "product_sticky_bar_BBcYjw": {
-      "type": "product_sticky_bar",
-      "name": "Product Sticky Bar",
-      "settings": {
-        "bg_color": "#ffffff",
-        "text_color": "#0f0f0f"
       }
     }
   },
