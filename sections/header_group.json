@@ -125,6 +125,12 @@
           "static": true,
           "settings": {},
           "blocks": {}
+        },
+        "search-suggestions": {
+          "type": "search-suggestions",
+          "static": true,
+          "settings": {},
+          "blocks": {}
         }
       },
       "block_order": [
@@ -141,10 +147,11 @@
         "text_login_text": "myDCT Login",
         "text_suche_placeholder": "Search for bags, size...",
         "text_such_tipp": "Tip: Search by products, categories or use case",
-        "collection_search_recent": "",
-        "collection_search_recent_limit": 6,
+        "text_search_recent": "",
+        "search_recent_limit": 6,
         "url_wishlist_link": "",
         "reseller_menu": "",
+        "text_sucheingabe_placeholder": "What are you looking for?",
         "free_shipping_threshold": 50
       }
     },
@@ -156,7 +163,14 @@
           "settings": {
             "url_link": "",
             "text_text": "Backpacks"
-          }
+          },
+          "blocks": {}
+        },
+        "search-suggestions": {
+          "type": "search-suggestions",
+          "static": true,
+          "settings": {},
+          "blocks": {}
         }
       },
       "block_order": [
@@ -171,12 +185,21 @@
         "textarea_promo_text": "Refined design. Recycled materials.",
         "text_suche_placeholder": "Search for bags, size...",
         "text_such_tipp": "Tip: Search by products, categories or use case",
-        "collection_search_recent": "",
-        "collection_search_recent_limit": 6,
+        "text_search_recent": "",
+        "search_recent_limit": 6,
         "url_wishlist_link": "",
+        "text_social_proof_leicht": "Great choice!",
+        "text_social_proof_fett": "Over 350,180 people use DICOTA products.",
+        "text_trust_links": "30-day money-back guarantee",
+        "text_trust_rechts": "Over 350,000 happy customers",
         "menu": "main-menu-d2c",
         "transparent_over_first": true,
         "free_shipping_threshold": 50,
+        "shipping_cost": 5,
+        "delivery_days": 3,
+        "show_socialproof": true,
+        "upsell_collection": "",
+        "upsell_limit": 4,
         "text_sucheingabe_placeholder": "What are you looking for?"
       }
     }
