@@ -96,7 +96,11 @@
   },
   "products": {
     "add_to_cart": "Přidat do košíku",
-    "on_sale": "V akci"
+    "on_sale": "V akci",
+    "fits_devices": "Vhodné pro zařízení {{ from }} – {{ to }} palců",
+    "fits_short": "{{ from }}–{{ to }}\"",
+    "discontinued": "Doprodej",
+    "out_of_stock": "Není skladem"
   },
   "reseller": {
     "form": {

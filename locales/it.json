@@ -96,7 +96,11 @@
   },
   "products": {
     "add_to_cart": "Aggiungi al carrello",
-    "on_sale": "In vendita"
+    "on_sale": "In vendita",
+    "fits_devices": "Adatto a dispositivi da {{ from }} – {{ to }} pollici",
+    "fits_short": "{{ from }}–{{ to }}\"",
+    "discontinued": "Fuori produzione",
+    "out_of_stock": "Non disponibile"
   },
   "reseller": {
     "form": {

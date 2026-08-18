@@ -96,7 +96,11 @@
   },
   "products": {
     "add_to_cart": "Tilføj til kurv",
-    "on_sale": "På udsalg"
+    "on_sale": "På udsalg",
+    "fits_devices": "Passer til {{ from }} – {{ to }} tommer enheder",
+    "fits_short": "{{ from }}–{{ to }}\"",
+    "discontinued": "Udgået",
+    "out_of_stock": "Ikke på lager"
   },
   "reseller": {
     "form": {

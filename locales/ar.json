@@ -4602,5 +4602,11 @@
     "to_free_shipping": "حتى الشحن المجاني",
     "free_shipping_heading": "تم تفعيل الشحن المجاني",
     "free_shipping_text": "تحصل على شحن مجاني لهذا الطلب."
+  },
+  "products": {
+    "fits_devices": "مناسب للأجهزة من {{ from }} إلى {{ to }} بوصة",
+    "fits_short": "{{ from }}–{{ to }}\"",
+    "discontinued": "موقوف",
+    "out_of_stock": "غير متوفر"
   }
 }

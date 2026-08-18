@@ -96,7 +96,11 @@
   },
   "products": {
     "add_to_cart": "In den Warenkorb",
-    "on_sale": "Im Angebot"
+    "on_sale": "Im Angebot",
+    "fits_devices": "Passend für {{ from }} – {{ to }} Zoll Geräte",
+    "fits_short": "{{ from }}–{{ to }}\"",
+    "discontinued": "Auslaufmodell",
+    "out_of_stock": "Nicht lieferbar"
   },
   "reseller": {
     "form": {

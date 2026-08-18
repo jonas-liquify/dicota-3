@@ -96,7 +96,11 @@
   },
   "products": {
     "add_to_cart": "Voeg toe aan winkelwagen",
-    "on_sale": "Te koop"
+    "on_sale": "Te koop",
+    "fits_devices": "Geschikt voor apparaten van {{ from }} – {{ to }} inch",
+    "fits_short": "{{ from }}–{{ to }}\"",
+    "discontinued": "Uit assortiment",
+    "out_of_stock": "Niet op voorraad"
   },
   "reseller": {
     "form": {

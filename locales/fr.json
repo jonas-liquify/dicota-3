@@ -96,7 +96,11 @@
   },
   "products": {
     "add_to_cart": "Ajouter au panier",
-    "on_sale": "En vente"
+    "on_sale": "En vente",
+    "fits_devices": "Compatible avec les appareils de {{ from }} – {{ to }} pouces",
+    "fits_short": "{{ from }}–{{ to }}\"",
+    "discontinued": "Fin de série",
+    "out_of_stock": "Rupture de stock"
   },
   "reseller": {
     "form": {

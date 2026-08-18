@@ -96,7 +96,11 @@
   },
   "products": {
     "add_to_cart": "कार्ट में जोड़ें",
-    "on_sale": "बिक्री पर"
+    "on_sale": "बिक्री पर",
+    "fits_devices": "{{ from }} – {{ to }} इंच डिवाइस के लिए उपयुक्त",
+    "fits_short": "{{ from }}–{{ to }}\"",
+    "discontinued": "बंद किया गया",
+    "out_of_stock": "स्टॉक में नहीं"
   },
   "reseller": {
     "form": {
