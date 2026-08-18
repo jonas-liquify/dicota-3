@@ -196,7 +196,7 @@
         "transparent_over_first": true,
         "free_shipping_threshold": 50,
         "shipping_cost": 5,
-        "delivery_days": 3,
+        "delivery_days": 4,
         "show_socialproof": true,
         "upsell_collection": "",
         "upsell_limit": 4,
