@@ -21,7 +21,8 @@
             "text_headline_zeile_2": "THE TOP LOADER",
             "text_subtext": "When function, design and protection come together – the business companion.",
             "url_button_link": "shopify://collections/seven",
-            "text_button_text": "Explore Now"
+            "text_button_text": "Explore Now",
+            "sofort_laden": true
           },
           "blocks": {}
         },
@@ -34,7 +35,8 @@
             "text_headline_zeile_2": "By DICOTA",
             "text_subtext": "Protection, privacy and visual comfort for every screen.",
             "url_button_link": "shopify://collections/d2c-screen-filters-all",
-            "text_button_text": "Explore Now"
+            "text_button_text": "Explore Now",
+            "sofort_laden": true
           },
           "blocks": {}
         },
@@ -47,7 +49,8 @@
             "text_headline_zeile_2": "Fresh color for every day life",
             "text_subtext": "Fresh colours, smart organization and reliable protection for every journey.",
             "url_button_link": "shopify://collections/commuters",
-            "text_button_text": "Explore Now"
+            "text_button_text": "Explore Now",
+            "sofort_laden": true
           },
           "blocks": {}
         },
@@ -60,7 +63,8 @@
             "text_headline_zeile_2": "made out of recycled fishing nets",
             "text_subtext": "A fresh, urban collection made from recycled fishing nets – combining modern style, smart organization and reliable protection.",
             "url_button_link": "shopify://products/tote-backpack-ocean-breeze-14-16",
-            "text_button_text": "Explore Now"
+            "text_button_text": "Explore Now",
+            "sofort_laden": true
           },
           "blocks": {}
         }
@@ -430,7 +434,6 @@
         "imagelink_list_link_Y9J94a",
         "imagelink_list_link_ACND9D"
       ],
-      "disabled": true,
       "settings": {
         "image_bild": "shopify://shop_images/2_MT_Five.webp",
         "text_subtitle": "What are you looking for?",
@@ -584,7 +587,6 @@
         "faq_kategorie_GzfQQt",
         "faq_kategorie_RYpH6n"
       ],
-      "disabled": true,
       "name": "FAQ Accordion",
       "settings": {
         "text_heading": "Frequently asked questions",
