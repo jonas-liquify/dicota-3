@@ -104,6 +104,7 @@
             "we_care_item_RrHY4f": {
               "type": "we-care-item",
               "name": "We Care Item",
+              "disabled": true,
               "settings": {
                 "text_headline": "30 years of German quality & reliability",
                 "url_link": "",
