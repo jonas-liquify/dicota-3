@@ -82,7 +82,6 @@
       "type": "rating_bar",
       "name": "Rating Bar",
       "settings": {
-        "text_bewertung_zahl": "4.83",
         "text_bewertung_label": "Excellent",
         "text_anzahl_bewertungen": "17,982 reviews",
         "url_provider_link": "",
@@ -91,7 +90,8 @@
         "padding_bottom": 1.5,
         "bg_color": "#ffffff",
         "text_color": "#0f0f0f",
-        "stars_color": "#fd6612"
+        "stars_color": "#fd6612",
+        "text_bewertung_zahl": "4.83"
       }
     },
     "section_headline": {
@@ -512,7 +512,7 @@
         "image_hintergrundbild": "shopify://shop_images/Sustainable_Materials.png",
         "text_uberschrift": "Bottles processed",
         "textarea_beschreibung": "Since 1992, more than 12 million PET bottles have been recycled to minimise waste and promote sustainability.",
-        "url_button_link": "shopify://pages/sustainability",
+        "url_button_link": "",
         "text_button_text": "",
         "counter": "12.483.129",
         "min_height": 70,
