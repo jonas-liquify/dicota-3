@@ -1,0 +1,41 @@
+<div class="li-tag w-embed">{% assign mc_reco = recommendations.products %}{% if mc_reco.size == 0 and section.settings.text_fallback_collection != blank %}{% assign mc_reco = collections[section.settings.text_fallback_collection].products %}{% endif %}</div>{% if mc_reco.size > 0 %}    <div li-if="mc_reco.size > 0" class="mini-cart_crosssell">
+    <div class="mini-cart_crosssell-title"><span li-object="'cart.upsell_heading' | t">{{ 'cart.upsell_heading' | t }}</span></div><div class="mini-cart_crosssell-list">{% for product in mc_reco limit: section.settings.reco_limit %}    <div li-for="product in mc_reco limit: section.settings.reco_limit" class="mini-cart_crosssell-item">
+                                    <div class="mini-cart_crosssell-media"><img li-object:src="product.featured_image | image_url: width: 240" li-object:alt="product.featured_image.alt" src="{{ product.featured_image | image_url: width: 240 }}" loading="lazy" alt="{{ product.featured_image.alt }}" class="mini-cart_crosssell-img"></div>
+                            <div class="mini-cart_crosssell-info"><a li-object:href="product.url" href="{{ product.url }}" class="mini-cart_crosssell-text w-inline-block"><span li-object="product.title" class="mini-cart_crosssell-name">{{ product.title }}</span><span li-object="product.price | money" class="mini-cart_crosssell-price">{{ product.price | money }}</span></a><form method="post" action="/cart/add" class="mini-cart_crosssell-form"><input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}"><script src="{{ 'li_custom.js' | asset_url }}" type="text/javascript"></script>
+<button type="submit" li-element="direct-add-to-cart" aria-label="In den Warenkorb" class="mini-cart_crosssell-add" x-data="handleVariant({{ product | json | escape }}, {{ product.options_by_name | json | escape }}, {{ product.selected_or_first_available_variant | json | escape }})" @click="addToCart($event, true)"><div class="mini-cart_plus-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 3.2v9.6M3.2 8h9.6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path></svg></div></button></form></div>
+                        </div>
+{% endfor %}</div>    </div>
+{% endif %} {% schema %} {
+    "tag": "section",
+    "name": "Mini Cart Reco",
+    "class": "section_mc-reco",
+    "settings": [
+        {
+            "type": "header",
+            "content": "Empfehlungen"
+        },
+        {
+            "type": "range",
+            "id": "reco_limit",
+            "min": 1,
+            "max": 8,
+            "step": 1,
+            "label": "Anzahl",
+            "default": 4,
+            "info": "Jede Kachel bringt \u00fcber den Warenkorb-Button die Produktdaten mit \u2014 nicht zu hoch setzen."
+        },
+        {
+            "type": "text",
+            "id": "text_fallback_collection",
+            "label": "Fallback-Kollektion (Handle)",
+            "info": "Greift nur, wenn f\u00fcr das Produkt im Warenkorb keine complementary products gepflegt sind. Leer = Bereich bleibt aus."
+        }
+    ],
+    "presets": [
+        {
+            "name": "Mini Cart Reco",
+            "category": "Global",
+            "blocks": []
+        }
+    ]
+} {% endschema %}
