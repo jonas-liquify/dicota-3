@@ -19464,8 +19464,8 @@ img.product-header_gallery-image {
    .section_product-recommended hatte overflow:hidden, wodurch die
    Slides an der Container-Kante abgeschnitten wurden statt bis zum
    Viewport-Rand zu laufen. Jetzt darf der Swiper ueberlaufen; das
-   Wegschneiden uebernimmt .page-wrapper (overflow:clip), sodass
-   kein horizontaler Seiten-Scroll entsteht.
+   Wegschneiden uebernimmt die Clipping-Kette unten (page-wrapper +
+   body, beide overflow-x: clip), es entsteht kein Seiten-Scroll.
    ============================================================= */
 .section_product-recommended.section_product-recommended {
   overflow: visible;
@@ -19484,4 +19484,66 @@ img.product-header_gallery-image {
    im Gegensatz zu hidden unberuehrt. */
 body {
   overflow-x: clip;
+}
+
+/* =============================================================
+   PRODUKT-SLIDER — bis zum Rand statt an der Container-Kante
+   Swipers eigenes .swiper { overflow: hidden } schneidet die Slides
+   an der Breite von .container-large ab. Mit overflow:visible laufen
+   sie bis zum Viewport-Rand; abgeschnitten wird an .page-wrapper und
+   body (beide overflow-x: clip), es entsteht also kein horizontaler
+   Seiten-Scroll.
+   Der Hero-Slider bleibt bewusst aussen vor — der zeigt genau ein
+   Slide und braucht sein hidden.
+   ============================================================= */
+.featured-products_swiper.featured-products_swiper,
+.shop-by-category_swiper.shop-by-category_swiper,
+.accessories_swiper.accessories_swiper,
+.the-latest_swiper.the-latest_swiper,
+.recommended-products_swiper.recommended-products_swiper {
+  overflow: visible;
+}
+
+/* Pfeile und Scrollbar bleiben ueber den ueberlaufenden Slides */
+.featured-products_arrow,
+.shop-by-category_arrow,
+.accessories_arrow,
+.the-latest_arrow,
+.recommended-products_arrow {
+  z-index: 3;
+}
+.featured-products_scrollbar,
+.shop-by-category_scrollbar,
+.accessories_scrollbar,
+.recommended-products_scrollbar {
+  position: relative;
+  z-index: 3;
+}
+
+/* =============================================================
+   CLIPPING-KETTE fuer die ueberlaufenden Slider
+   Die Slider stehen auf overflow:visible, damit sie bis zum
+   Viewport-Rand laufen. Abgeschnitten wird hier — bewusst mit
+   overflow-x: CLIP und nicht hidden: hidden macht den Vorfahren zum
+   Scroll-Container und wuerde die sticky Navigation wieder brechen,
+   die wir erst repariert haben. clip laesst sticky unberuehrt.
+   ============================================================= */
+.page-wrapper {
+  overflow-x: clip;
+}
+
+/* =============================================================
+   WE CARE BANNER — Mindesthoehe und Abdunklung
+   Beim Zusammenfuehren mit dem Sustainability Banner habe ich die
+   Settings portiert und als CSS-Variablen auf den Wrapper gelegt,
+   aber die Regeln vergessen, die sie LESEN — .we-care-banner_inner
+   blieb auf seinen fixen 22.5rem stehen.
+   Die var()-Fallbacks spiegeln die JSON-Defaults (55vh / 35 %),
+   damit der Builder ohne Liquid dasselbe zeigt.
+   ============================================================= */
+.we-care-banner_inner {
+  min-height: var(--wcb-min-height, 55vh);
+}
+.we-care-banner_overlay {
+  background-color: rgba(0, 0, 0, var(--wcb-overlay, .35));
 }
