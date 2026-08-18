@@ -82,7 +82,6 @@
       "type": "rating_bar",
       "name": "Rating Bar",
       "settings": {
-        "text_bewertung_zahl": "4.83",
         "text_bewertung_label": "Excellent",
         "text_anzahl_bewertungen": "17,982 reviews",
         "url_provider_link": "",
@@ -91,7 +90,8 @@
         "padding_bottom": 1.5,
         "bg_color": "#ffffff",
         "text_color": "#0f0f0f",
-        "stars_color": "#fd6612"
+        "stars_color": "#fd6612",
+        "text_bewertung_zahl": "4.83"
       }
     },
     "section_headline": {
@@ -430,7 +430,6 @@
         "imagelink_list_link_Y9J94a",
         "imagelink_list_link_ACND9D"
       ],
-      "disabled": true,
       "settings": {
         "image_bild": "shopify://shop_images/2_MT_Five.webp",
         "text_subtitle": "What are you looking for?",
