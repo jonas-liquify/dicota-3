@@ -19306,3 +19306,116 @@ img.product-header_gallery-image {
   position: relative;
   z-index: 2;
 }
+
+/* =============================================================
+   PRODUKTKACHEL — Badges gemeinsam unten links
+   .product-card_badge lag absolut auf bottom:0/left:0; mit mehreren
+   Badges (Sale + Nicht lieferbar + Groesse) stapelten sie sich
+   uebereinander. Ein Flex-Container uebernimmt jetzt die Position,
+   die Badges selbst werden statisch. Rechts bleibt Platz fuers Rating.
+   ============================================================= */
+.product-card_badges {
+  z-index: 2;
+  grid-column-gap: .25rem;
+  grid-row-gap: .25rem;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  max-width: calc(100% - 4.5rem);
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.product-card_badges .product-card_badge {
+  position: static;
+  inset: auto;
+}
+.product-card_fits.is-on-image {
+  position: static;
+  width: auto;
+  margin-top: 0;
+  white-space: nowrap;
+}
+
+/* =============================================================
+   WE CARE BANNER — Ziffern-Kacheln
+   Beim Zusammenfuehren mit dem Sustainability Banner sind die
+   Klassennamen mitgewandert, das Styling hing aber noch an den
+   alten .sustainability_*-Klassen — die Zahl stand deshalb als
+   schlichter Text da. Werte 1:1 vom Original uebernommen.
+   ============================================================= */
+.we-care-banner_counter {
+  grid-column-gap: .25rem;
+  grid-row-gap: .25rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  display: inline-flex;
+}
+.we-care-banner_counter-digit {
+  background-color: #0f0f0f;
+  color: var(--base-color-neutral--white);
+  border-radius: .1875rem;
+  justify-content: center;
+  align-items: center;
+  min-width: 1.75rem;
+  padding: .375rem .5rem;
+  font-family: "Futura PT", sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+  display: inline-flex;
+}
+.we-care-banner_counter-dot {
+  color: var(--base-color-neutral--white);
+  padding: 0 .125rem;
+  font-family: "Futura PT", sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.1;
+}
+@media (max-width: 767px) {
+  .we-care-banner_counter-digit.we-care-banner_counter-digit {
+    min-width: 1.375rem;
+    padding: .25rem .4375rem;
+    font-size: 1.5rem;
+  }
+  .we-care-banner_counter-dot.we-care-banner_counter-dot { font-size: 1.5rem; }
+}
+
+/* =============================================================
+   PRODUCT STICKY BAR — kompaktere Hoehe
+   Die Hoehe kam fast vollstaendig vom Produktbild (92px) plus
+   22px-Titel. Zusammen ~115px, was neben der Navigation zu viel
+   Viewport frisst. Ziel: ~64px, also gut die Haelfte.
+   Klassen-Verdopplung, weil die Basiswerte frueher im File stehen
+   und der Builder Regeln umsortieren kann.
+   ============================================================= */
+.product-sticky_bar.product-sticky_bar {
+  padding-top: .3125rem;
+  padding-bottom: .3125rem;
+}
+.product-sticky_media.product-sticky_media {
+  width: 3.25rem;
+  height: 3.25rem;
+}
+.product-sticky_inner.product-sticky_inner {
+  gap: .75rem;
+}
+.product-sticky_title.product-sticky_title {
+  font-size: 1rem;
+  line-height: 1.2;
+}
+.product-sticky_price.product-sticky_price {
+  font-size: .875rem;
+}
+.product-sticky_btn.product-sticky_btn {
+  padding: .5rem 1.75rem;
+  font-size: .875rem;
+}
+@media (max-width: 767px) {
+  .product-sticky_media.product-sticky_media { width: 2.75rem; height: 2.75rem; }
+  .product-sticky_title.product-sticky_title { font-size: .875rem; }
+  .product-sticky_btn.product-sticky_btn { padding: .5rem 1rem; }
+}
