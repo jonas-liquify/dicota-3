@@ -41,7 +41,7 @@
     "progress_prefix": "Te faltan",
     "progress_suffix": "para el envío gratis",
     "grand_total": "Total",
-    "shipping_date": "Envío estándar el",
+    "shipping_date": "Envío estándar",
     "date_format": "%d/%m/%y",
     "upsell_heading": "Esto podría combinar"
   },

@@ -24,7 +24,7 @@
     "progress_prefix": "You're",
     "progress_suffix": "away from free shipping",
     "grand_total": "Total",
-    "shipping_date": "Standard delivery on",
+    "shipping_date": "Standard delivery",
     "date_format": "%m/%d/%y",
     "upsell_heading": "This might go well with it"
   },

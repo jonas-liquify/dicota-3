@@ -24,7 +24,7 @@
     "progress_prefix": "Du bist",
     "progress_suffix": "entfernt für Free Shipping",
     "grand_total": "Gesamt",
-    "shipping_date": "Standardversand am",
+    "shipping_date": "Standardversand",
     "date_format": "%d.%m.%y",
     "upsell_heading": "Das könnte dazu passen"
   },
