@@ -19202,3 +19202,548 @@ img.product-header_gallery-image {
 @media (prefers-reduced-motion: reduce) {
   .nav_menu-label::after { transition: none; }
 }
+
+/* =============================================================
+   MINI-CART — Zahlarten kleiner und umbrechend
+   Der Shop hat 10 aktive Zahlarten. Bei 35px Breite ergibt das
+   mit Abstaenden ~386px und passt nicht in die 372px Innenbreite
+   des Drawers — die Icons wurden gequetscht. Kleiner + Umbruch.
+   justify-content: center statt space-between, weil eine
+   umgebrochene letzte Reihe sonst auseinandergezogen wird.
+   ============================================================= */
+.mini-cart_payments.mini-cart_payments {
+  flex-wrap: wrap;
+  justify-content: center;
+  grid-column-gap: .3125rem;
+  grid-row-gap: .3125rem;
+}
+.mini-cart_payment-svg-wrap.mini-cart_payment-svg-wrap {
+  width: 1.75rem;
+  height: 1.1875rem;
+}
+.mini-cart_payment-fallback.mini-cart_payment-fallback {
+  width: 1.25rem;
+  height: .875rem;
+}
+@media (max-width: 767px) {
+  .mini-cart_payment-svg-wrap.mini-cart_payment-svg-wrap {
+    width: 1.625rem;
+    height: 1.125rem;
+  }
+}
+
+/* =============================================================
+   MINI-CART — Tooltip am Versand-Info-Icon (AKTUELL UNGENUTZT:
+   Datum und Info-Icon wurden aus der Versandzeile entfernt)
+   Bewusst ohne Bibliothek: tippy.js ist im Projekt nicht vorhanden,
+   und ein weiteres Skript im kritischen Pfad waere angesichts der
+   LCP-Lage die falsche Antwort auf einen einzelnen Tooltip.
+   :focus-within haelt ihn per Tastatur erreichbar.
+   ============================================================= */
+.mini-cart_footer-info {
+  position: relative;
+  flex: none;
+  align-items: center;
+  display: inline-flex;
+}
+.mini-cart_info-btn {
+  color: inherit;
+  cursor: pointer;
+  background: none;
+  border: 0;
+  width: 1rem;
+  height: 1rem;
+  padding: 0;
+  display: flex;
+}
+.mini-cart_info-icon { width: 100%; height: 100%; display: flex; }
+.mini-cart_tooltip {
+  background-color: var(--base-color-neutral--black, #0f0f0f);
+  color: #fff;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 5;
+  width: 15rem;
+  padding: .5rem .625rem;
+  font-size: .6875rem;
+  line-height: 1.4;
+  text-transform: none;
+  letter-spacing: 0;
+  position: absolute;
+  bottom: calc(100% + .5rem);
+  left: 50%;
+  transform: translate(-50%, .25rem);
+  transition: opacity .18s ease, transform .18s ease, visibility .18s;
+}
+.mini-cart_tooltip::after {
+  content: "";
+  border: .3125rem solid #0000;
+  border-top-color: var(--base-color-neutral--black, #0f0f0f);
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.mini-cart_footer-info:hover .mini-cart_tooltip,
+.mini-cart_footer-info:focus-within .mini-cart_tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, 0);
+}
+/* Nahe am rechten Panelrand nicht ueber die Kante laufen */
+@media (max-width: 767px) {
+  .mini-cart_tooltip { width: 12rem; }
+}
+
+/* --- Produktkachel: Size-Tag liegt jetzt im Bild bei den Badges --- */
+.product-card_fits.is-on-image {
+  background-color: #ffffffe6;
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+  opacity: 1;
+  margin-top: 0;
+  padding: .1875rem .375rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* =============================================================
+   PRODUKTKACHEL — Badges gemeinsam unten links
+   .product-card_badge lag absolut auf bottom:0/left:0; mit mehreren
+   Badges (Sale + Nicht lieferbar + Groesse) stapelten sie sich
+   uebereinander. Ein Flex-Container uebernimmt jetzt die Position,
+   die Badges selbst werden statisch. Rechts bleibt Platz fuers Rating.
+   ============================================================= */
+.product-card_badges {
+  z-index: 2;
+  grid-column-gap: .25rem;
+  grid-row-gap: .25rem;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  max-width: calc(100% - 4.5rem);
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.product-card_badges .product-card_badge {
+  position: static;
+  inset: auto;
+}
+.product-card_fits.is-on-image {
+  position: static;
+  width: auto;
+  margin-top: 0;
+  white-space: nowrap;
+}
+
+/* =============================================================
+   WE CARE BANNER — Ziffern-Kacheln
+   Beim Zusammenfuehren mit dem Sustainability Banner sind die
+   Klassennamen mitgewandert, das Styling hing aber noch an den
+   alten .sustainability_*-Klassen — die Zahl stand deshalb als
+   schlichter Text da. Werte 1:1 vom Original uebernommen.
+   ============================================================= */
+.we-care-banner_counter {
+  grid-column-gap: .25rem;
+  grid-row-gap: .25rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  display: inline-flex;
+}
+.we-care-banner_counter-digit {
+  background-color: #0f0f0f;
+  color: var(--base-color-neutral--white);
+  border-radius: .1875rem;
+  justify-content: center;
+  align-items: center;
+  min-width: 1.75rem;
+  padding: .375rem .5rem;
+  font-family: "Futura PT", sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+  display: inline-flex;
+}
+.we-care-banner_counter-dot {
+  color: var(--base-color-neutral--white);
+  padding: 0 .125rem;
+  font-family: "Futura PT", sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.1;
+}
+@media (max-width: 767px) {
+  .we-care-banner_counter-digit.we-care-banner_counter-digit {
+    min-width: 1.375rem;
+    padding: .25rem .4375rem;
+    font-size: 1.5rem;
+  }
+  .we-care-banner_counter-dot.we-care-banner_counter-dot { font-size: 1.5rem; }
+}
+
+/* =============================================================
+   PRODUCT STICKY BAR — kompaktere Hoehe
+   Die Hoehe kam fast vollstaendig vom Produktbild (92px) plus
+   22px-Titel. Zusammen ~115px, was neben der Navigation zu viel
+   Viewport frisst. Ziel: ~64px, also gut die Haelfte.
+   Klassen-Verdopplung, weil die Basiswerte frueher im File stehen
+   und der Builder Regeln umsortieren kann.
+   ============================================================= */
+.product-sticky_bar.product-sticky_bar {
+  padding-top: .3125rem;
+  padding-bottom: .3125rem;
+}
+.product-sticky_media.product-sticky_media {
+  width: 3.25rem;
+  height: 3.25rem;
+}
+.product-sticky_inner.product-sticky_inner {
+  gap: .75rem;
+}
+.product-sticky_title.product-sticky_title {
+  font-size: 1rem;
+  line-height: 1.2;
+}
+.product-sticky_price.product-sticky_price {
+  font-size: .875rem;
+}
+.product-sticky_btn.product-sticky_btn {
+  padding: .5rem 1.75rem;
+  font-size: .875rem;
+}
+@media (max-width: 767px) {
+  .product-sticky_media.product-sticky_media { width: 2.75rem; height: 2.75rem; }
+  .product-sticky_title.product-sticky_title { font-size: .875rem; }
+  .product-sticky_btn.product-sticky_btn { padding: .5rem 1rem; }
+}
+
+/* =============================================================
+   NAVIGATION — Chevron in den Textfluss
+   Der Pfeil lag absolut auf right:-1.1rem, also KOMPLETT ausserhalb
+   der Toggle-Box. Dadurch zaehlte er nicht zur Breite des Links: die
+   Luecke nach einem Dropdown-Punkt wirkte um die Icon-Breite schmaler
+   als nach "Trolleys", das keinen Pfeil hat. Jetzt laeuft er im Fluss
+   mit, die Abstaende werden dadurch gleich.
+   Nur im Hauptmenue — Announcement Bar, Footer und Sprachwahl haben
+   eigene Regeln und bleiben unberuehrt.
+   ============================================================= */
+.nav_menu-dropdown .dropdown-icon {
+  position: static;
+  inset: auto;
+  right: auto;
+  flex: none;
+  margin: 0;
+}
+.section_navbar .nav_dropdown-toggle {
+  grid-column-gap: .25rem;
+  padding-left: .75rem;
+  padding-right: .75rem;
+}
+
+/* Mobile bleibt beim Accordion-Verhalten: Pfeil rechts an der Zeile.
+   Hoehere Spezifitaet, weil die Basisregel oben sonst gewinnt (sie steht
+   spaeter im File als die urspruenglichen @media-Bloecke). */
+@media (max-width: 1080px) {
+  .nav_menu-dropdown .dropdown-icon.dropdown-icon {
+    position: absolute;
+    inset: auto 0% auto auto;
+  }
+  .section_navbar .nav_dropdown-toggle {
+    grid-column-gap: 0;
+  }
+}
+@media (max-width: 991px) {
+  .nav_menu-dropdown .dropdown-icon.dropdown-icon { right: 1rem; }
+}
+
+/* =============================================================
+   RECOMMENDED PRODUCTS — Slider bis zum Rand
+   .section_product-recommended hatte overflow:hidden, wodurch die
+   Slides an der Container-Kante abgeschnitten wurden statt bis zum
+   Viewport-Rand zu laufen. Jetzt darf der Swiper ueberlaufen; das
+   Wegschneiden uebernimmt die Clipping-Kette unten (page-wrapper +
+   body, beide overflow-x: clip), es entsteht kein Seiten-Scroll.
+   ============================================================= */
+.section_product-recommended.section_product-recommended {
+  overflow: visible;
+}
+.recommended-products_swiper.recommended-products_swiper {
+  overflow: visible;
+}
+/* Pfeile und Scrollbar duerfen nicht mit ueberlaufen */
+.recommended-products_slider-wrapper.recommended-products_slider-wrapper {
+  position: relative;
+}
+.recommended-products_arrow.recommended-products_arrow { z-index: 3; }
+
+/* Sicherheitsnetz: falls ein Vorfahre doch scrollt, hier abschneiden
+   statt eine Scrollbar zu erzeugen. overflow-x:clip laesst position:sticky
+   im Gegensatz zu hidden unberuehrt. */
+body {
+  overflow-x: clip;
+}
+
+/* =============================================================
+   PRODUKT-SLIDER — bis zum Rand statt an der Container-Kante
+   Swipers eigenes .swiper { overflow: hidden } schneidet die Slides
+   an der Breite von .container-large ab. Mit overflow:visible laufen
+   sie bis zum Viewport-Rand; abgeschnitten wird an .page-wrapper und
+   body (beide overflow-x: clip), es entsteht also kein horizontaler
+   Seiten-Scroll.
+   Der Hero-Slider bleibt bewusst aussen vor — der zeigt genau ein
+   Slide und braucht sein hidden.
+   ============================================================= */
+.featured-products_swiper.featured-products_swiper,
+.shop-by-category_swiper.shop-by-category_swiper,
+.accessories_swiper.accessories_swiper,
+.the-latest_swiper.the-latest_swiper,
+.recommended-products_swiper.recommended-products_swiper {
+  overflow: visible;
+}
+
+/* Pfeile und Scrollbar bleiben ueber den ueberlaufenden Slides */
+.featured-products_arrow,
+.shop-by-category_arrow,
+.accessories_arrow,
+.the-latest_arrow,
+.recommended-products_arrow {
+  z-index: 3;
+}
+.featured-products_scrollbar,
+.shop-by-category_scrollbar,
+.accessories_scrollbar,
+.recommended-products_scrollbar {
+  position: relative;
+  z-index: 3;
+}
+
+/* =============================================================
+   CLIPPING-KETTE fuer die ueberlaufenden Slider
+   Die Slider stehen auf overflow:visible, damit sie bis zum
+   Viewport-Rand laufen. Abgeschnitten wird hier — bewusst mit
+   overflow-x: CLIP und nicht hidden: hidden macht den Vorfahren zum
+   Scroll-Container und wuerde die sticky Navigation wieder brechen,
+   die wir erst repariert haben. clip laesst sticky unberuehrt.
+   ============================================================= */
+.page-wrapper {
+  overflow-x: clip;
+}
+
+/* =============================================================
+   WE CARE BANNER — Mindesthoehe und Abdunklung
+   Beim Zusammenfuehren mit dem Sustainability Banner habe ich die
+   Settings portiert und als CSS-Variablen auf den Wrapper gelegt,
+   aber die Regeln vergessen, die sie LESEN — .we-care-banner_inner
+   blieb auf seinen fixen 22.5rem stehen.
+   Die var()-Fallbacks spiegeln die JSON-Defaults (55vh / 35 %),
+   damit der Builder ohne Liquid dasselbe zeigt.
+   ============================================================= */
+.we-care-banner_inner {
+  min-height: var(--wcb-min-height, 55vh);
+}
+.we-care-banner_overlay {
+  background-color: rgba(0, 0, 0, var(--wcb-overlay, .35));
+}
+
+/* =============================================================
+   VARIANTEN-PILLEN — Aktive Pille mit schwarzem Rand
+   Bisher markierte nur ein hellgrauer Hintergrund die Auswahl,
+   waehrend die Bild-Swatches daneben einen 2px-Rahmen bekommen.
+   Jetzt gleiche Sprache. Die Basis hat border:1px solid transparent,
+   deshalb wird das Padding um 1px reduziert — die Pille behaelt in
+   beiden Zustaenden exakt dieselbe Groesse.
+   ============================================================= */
+.product-header_radio[data-active="true"] {
+  border: 2px solid var(--base-color-neutral--black, #0f0f0f);
+  padding: calc(.125rem - 1px) calc(.875rem - 1px);
+  background-color: #fff;
+  color: var(--base-color-neutral--black, #0f0f0f);
+}
+/* Hover darf den Aktivzustand nicht ueberschreiben */
+.product-header_radio[data-active="true"]:hover {
+  border-color: var(--base-color-neutral--black, #0f0f0f);
+  background-color: #f4f4f4;
+}
+@media (max-width: 767px) {
+  .product-header_radio[data-active="true"] {
+    padding: calc(.125rem - 1px) calc(.875rem - 1px);
+  }
+}
+
+/* =============================================================
+   MINI-CART — Empfehlungs-Slot
+   Wird per Section Rendering API befuellt. Leer = kein Platz belegt,
+   damit der Drawer ohne Empfehlungen nicht auseinanderfaellt.
+   margin-top:auto lag vorher auf .mini-cart_crosssell; da der Block
+   jetzt erst zur Laufzeit hineinkommt, muss der Slot ihn halten.
+   ============================================================= */
+.mini-cart_reco-slot {
+  margin-top: auto;
+}
+.mini-cart_reco-slot:empty {
+  display: none;
+}
+.mini-cart_reco-slot .mini-cart_crosssell {
+  margin-top: 0;
+}
+/* Die Section bringt beim Fetch ihren eigenen Wrapper nicht mit — hier
+   ist sie nur Datenquelle, auf einer normalen Seite bleibt sie leer. */
+.section_mc-reco:not(:has(.mini-cart_crosssell)) {
+  display: none;
+}
+
+/* =============================================================
+   SHOPIFY-POLICY-SEITEN (/policies/*)
+   Shopify rendert diese Seiten mit eigenem Markup, das sich im Theme
+   nicht anfassen laesst — nur .shopify-policy__container / __title /
+   __body. Per CSS an die Theme-Sprache angeglichen.
+   Werte gespiegelt von: .article_wrapper (48rem Lesebreite),
+   .padding-global (2.5rem), .padding-section-medium (5rem),
+   .heading-style-h2 (2rem, Futura PT, 500, uppercase).
+   Bewusst KEINE volle Seitenbreite — Fliesstext bleibt lesbar.
+   ============================================================= */
+.shopify-policy__container {
+  width: 100%;
+  max-width: 48rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5rem 2.5rem;
+}
+
+/* Shopify zentriert die Ueberschrift und laesst sie auf 16px stehen */
+.shopify-policy__title {
+  text-align: left;
+  margin-bottom: 2.5rem;
+}
+.shopify-policy__title h1 {
+  font-family: "Futura PT", sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.1;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+/* Fliesstext auf Theme-Typografie */
+.shopify-policy__body {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+.shopify-policy__body .rte > * + * {
+  margin-top: 1rem;
+}
+.shopify-policy__body h2,
+.shopify-policy__body h3,
+.shopify-policy__body h4 {
+  font-family: "Futura PT", sans-serif;
+  font-weight: 500;
+  line-height: 1.2;
+  margin: 2.5rem 0 .75rem;
+}
+.shopify-policy__body h2 { font-size: 1.5rem; text-transform: uppercase; }
+.shopify-policy__body h3 { font-size: 1.25rem; }
+.shopify-policy__body h4 { font-size: 1rem; }
+.shopify-policy__body p { margin: 0 0 1rem; }
+.shopify-policy__body a {
+  color: inherit;
+  text-underline-offset: .15em;
+  text-decoration: underline;
+}
+.shopify-policy__body a:hover { opacity: .7; }
+.shopify-policy__body ul,
+.shopify-policy__body ol { margin: 0 0 1rem; padding-left: 1.25rem; }
+.shopify-policy__body li { margin-bottom: .375rem; }
+.shopify-policy__body strong { font-weight: 500; }
+
+/* Der Editor-Export bringt oft Ketten aus <br> statt Absaetzen mit —
+   die erzeugen sonst riesige Luecken. */
+.shopify-policy__body br + br { display: none; }
+
+@media (max-width: 767px) {
+  .shopify-policy__container.shopify-policy__container {
+    padding: 3rem 1.25rem;
+  }
+  .shopify-policy__title.shopify-policy__title { margin-bottom: 1.5rem; }
+  .shopify-policy__title h1 { font-size: 1.5rem; }
+}
+
+/* =============================================================
+   SUCHSEITE — Filter wie auf der Collection-Page
+   Die Seitenleiste ist entfallen; die Filter sitzen jetzt als
+   horizontale Leiste ueber dem Raster (coll_filter-*), inklusive
+   Modal fuer Tablet/Mobile. Damit faellt die zweispaltige
+   Grid-Aufteilung weg.
+   ============================================================= */
+.filter_layout {
+  grid-template-columns: 1fr;
+  display: block;
+}
+.filter_filters-wrapper { display: none; }
+.section_filter .coll_filter-bar {
+  padding-left: 0;
+  padding-right: 0;
+}
+/* Artikel-Treffer unter dem Produktraster */
+.section_filter .filter_articles { margin-top: 3rem; }
+
+/* =============================================================
+   MINI-CART — Empfehlungen als Slider
+   Der Streifen war ein overflow-x-Container; jetzt Swiper mit
+   Pfeilen. Swiper wird erst beim Einhaengen nachgeladen (geteilte
+   Promise mit den uebrigen Slider-Sektionen), auf Seiten ohne
+   Empfehlungen entsteht also kein Request.
+   ============================================================= */
+.mini-cart_reco-slider {
+  position: relative;
+  padding: 0 2rem;
+}
+.mini-cart_reco-swiper.swiper {
+  overflow: hidden;
+  width: 100%;
+}
+.mini-cart_reco-slider .swiper-slide {
+  width: auto;
+  flex: none;
+  height: auto;
+}
+
+/* Pfeile: nur ab Tablet — auf dem Touch-Geraet wischt man ohnehin */
+.mini-cart_reco-arrow {
+  background-color: #fffffff2;
+  color: var(--base-color-neutral--black, #0f0f0f);
+  cursor: pointer;
+  z-index: 3;
+  border: 1px solid #e5e5e5;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  padding: 0;
+  display: flex;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: opacity .15s;
+}
+.mini-cart_reco-arrow.is-prev { left: 1.125rem; }
+.mini-cart_reco-arrow.is-next { right: 1.125rem; }
+.mini-cart_reco-arrow:hover { background-color: #fff; }
+.mini-cart_reco-arrow.is-disabled {
+  opacity: 0;
+  pointer-events: none;
+}
+.mini-cart_reco-arrow-icon {
+  width: .875rem;
+  height: .875rem;
+  display: flex;
+}
+
+@media (max-width: 767px) {
+  .mini-cart_reco-arrow.mini-cart_reco-arrow { display: none; }
+  .mini-cart_reco-slider.mini-cart_reco-slider { padding: 0 1.25rem; }
+}

@@ -25,7 +25,7 @@
                         </div>
 {% endfor %}</nav><div class="nav_shop-icons"><div class="nav_search nav_search-trigger-wrap" x-data="{ searchOpen: false, searchQuery: '', results: [], suggestions: [], loading: false }"><button type="button" aria-label="Open search" class="nav_shop-icon nav_search-pill" x-on:click="searchOpen = true; $nextTick(() => $refs.searchInput && $refs.searchInput.focus())"><div class="icon-embed-xsmall w-embed"><svg width="100%" height="100%" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M19.6 21L13.3 14.7C12.8 15.1 12.225 15.4167 11.575 15.65C10.925 15.8833 10.2333 16 9.5 16C7.68333 16 6.14583 15.3708 4.8875 14.1125C3.62917 12.8542 3 11.3167 3 9.5C3 7.68333 3.62917 6.14583 4.8875 4.8875C6.14583 3.62917 7.68333 3 9.5 3C11.3167 3 12.8542 3.62917 14.1125 4.8875C15.3708 6.14583 16 7.68333 16 9.5C16 10.2333 15.8833 10.925 15.65 11.575C15.4167 12.225 15.1 12.8 14.7 13.3L21 19.6L19.6 21ZM9.5 14C10.75 14 11.8125 13.5625 12.6875 12.6875C13.5625 11.8125 14 10.75 14 9.5C14 8.25 13.5625 7.1875 12.6875 6.3125C11.8125 5.4375 10.75 5 9.5 5C8.25 5 7.1875 5.4375 6.3125 6.3125C5.4375 7.1875 5 8.25 5 9.5C5 10.75 5.4375 11.8125 6.3125 12.6875C7.1875 13.5625 8.25 14 9.5 14Z" fill="currentColor"></path></svg></div><span class="nav_search-placeholder">
 {{ section.settings.text_suche_placeholder }}
-</span></button><div x-cloak="" x-show="searchOpen" class="nav_search-overlay" x-on:click.self="searchOpen = false" x-on:keydown.escape.window="searchOpen = false"><div class="nav_search-overlay-panel"><div class="nav_search-overlay-bar"><div class="nav_search-overlay-icon w-embed"><svg width="100%" height="100%" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M19.6 21L13.3 14.7C12.8 15.1 12.225 15.4167 11.575 15.65C10.925 15.8833 10.2333 16 9.5 16C7.68333 16 6.14583 15.3708 4.8875 14.1125C3.62917 12.8542 3 11.3167 3 9.5C3 7.68333 3.62917 6.14583 4.8875 4.8875C6.14583 3.62917 7.68333 3 9.5 3C11.3167 3 12.8542 3.62917 14.1125 4.8875C15.3708 6.14583 16 7.68333 16 9.5C16 10.2333 15.8833 10.925 15.65 11.575C15.4167 12.225 15.1 12.8 14.7 13.3L21 19.6L19.6 21ZM9.5 14C10.75 14 11.8125 13.5625 12.6875 12.6875C13.5625 11.8125 14 10.75 14 9.5C14 8.25 13.5625 7.1875 12.6875 6.3125C11.8125 5.4375 10.75 5 9.5 5C8.25 5 7.1875 5.4375 6.3125 6.3125C5.4375 7.1875 5 8.25 5 9.5C5 10.75 5.4375 11.8125 6.3125 12.6875C7.1875 13.5625 8.25 14 9.5 14Z" fill="currentColor"></path></svg></div><form action="{{ routes.search_url }}" method="get" role="search" class="nav_search-overlay-form" data-search-url="{{ routes.search_url }}" data-no-suggestions="{{ 'search.no_suggestions' | t }}"><input type="search" name="q" x-model="searchQuery" x-on:input.debounce.300ms="window.__dicotaNavSearch($data)" x-ref="searchInput" placeholder="{{ section.settings.text_sucheingabe_placeholder }}" autocomplete="off" class="nav_search-overlay-input"></form><button type="button" aria-label="Close search" class="nav_search-overlay-close" x-on:click="searchOpen = false">{% render 'icon_close' %}</button></div><p class="nav_search-overlay-tip">
+</span></button><div x-cloak="" x-show="searchOpen" class="nav_search-overlay" x-on:click.self="searchOpen = false" x-on:keydown.escape.window="searchOpen = false"><div class="nav_search-overlay-panel"><div class="nav_search-overlay-bar"><div class="nav_search-overlay-icon w-embed"><svg width="100%" height="100%" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M19.6 21L13.3 14.7C12.8 15.1 12.225 15.4167 11.575 15.65C10.925 15.8833 10.2333 16 9.5 16C7.68333 16 6.14583 15.3708 4.8875 14.1125C3.62917 12.8542 3 11.3167 3 9.5C3 7.68333 3.62917 6.14583 4.8875 4.8875C6.14583 3.62917 7.68333 3 9.5 3C11.3167 3 12.8542 3.62917 14.1125 4.8875C15.3708 6.14583 16 7.68333 16 9.5C16 10.2333 15.8833 10.925 15.65 11.575C15.4167 12.225 15.1 12.8 14.7 13.3L21 19.6L19.6 21ZM9.5 14C10.75 14 11.8125 13.5625 12.6875 12.6875C13.5625 11.8125 14 10.75 14 9.5C14 8.25 13.5625 7.1875 12.6875 6.3125C11.8125 5.4375 10.75 5 9.5 5C8.25 5 7.1875 5.4375 6.3125 6.3125C5.4375 7.1875 5 8.25 5 9.5C5 10.75 5.4375 11.8125 6.3125 12.6875C7.1875 13.5625 8.25 14 9.5 14Z" fill="currentColor"></path></svg></div><form action="{{ routes.search_url }}" method="get" role="search" class="nav_search-overlay-form" data-search-url="{{ routes.search_url }}" data-no-suggestions="{{ 'search.no_suggestions' | t }}"><input type="hidden" name="type" value="product,article"><input type="search" name="q" x-model="searchQuery" x-on:input.debounce.300ms="window.__dicotaNavSearch($data)" x-ref="searchInput" placeholder="{{ section.settings.text_sucheingabe_placeholder }}" autocomplete="off" class="nav_search-overlay-input"></form><button type="button" aria-label="Close search" class="nav_search-overlay-close" x-on:click="searchOpen = false">{% render 'icon_close' %}</button></div><p class="nav_search-overlay-tip">
 {{ section.settings.text_such_tipp }}
 </p><div li-section="predictive_search" class="nav_search-overlay-states"><div x-show="!searchQuery || searchQuery.length === 0" class="nav_search-empty-grid"><div class="nav_search-empty-col"><div class="nav_search-empty-header"><div li-object="'search.popular' | t" class="text-style-subline">{{ 'search.popular' | t }}</div></div>{% content_for "block", type: "search-suggestions", id: "search-suggestions" %}</div><div class="nav_search-empty-col"><div class="nav_search-empty-header"><div li-object="'search.recently_viewed' | t" class="text-style-subline">{{ 'search.recently_viewed' | t }}</div><a li-object="'general.clear' | t" href="#" class="text-style-link">{{ 'general.clear' | t }}</a></div><div class="nav_search-recent">{% for product in collections[section.settings.text_search_recent].products limit: section.settings.search_recent_limit %}    <div li-for="product in collections[section.settings.text_search_recent].products limit: section.settings.search_recent_limit" class="nav_search-recent-item">
                                     <a li-object:href="product.url" href="{{ product.url }}" class="nav_search-recent-link"><img li-object:src="product.featured_image | image_url: width: 400" li-object:alt="product.featured_image.alt" src="{{ product.featured_image | image_url: width: 400 }}" loading="lazy" alt="{{ product.featured_image.alt }}" class="nav_search-recent-image"></a>
@@ -419,7 +419,7 @@
 });
 
 </script>
-<div data-hover="false" data-delay="400" li-element="mini-cart" class="nav_dropdown w-dropdown" x-data="handleMinicart()" x-init="getCart()" @cartupdated.window="getCart()" @setcartitem.window="updateCartItemQuantity($event.detail.product, $event.detail.quantity)" @increasecartitem.window="increaseCartItemQuantity($event.detail.product, $event.detail.quantity)" @decreasecartitem.window="decreaseCartItemQuantity($event.detail.product, $event.detail.quantity)" @toggleminicart.window="toggleMiniCart()" @showcartmessage.window="showCartMessage" @getcartitems.window="returnCartItems"><div aria-label="Cart" li-element="mini-cart-toggle" class="nav_shop-icon nav_shop-icon-cart w-dropdown-toggle" @click="$dispatch('cartupdated.window')"><div class="icon-embed-xsmall w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 24 24" fill="none" aria-hidden="true" role="img"><mask id="mask-mini-cart" style="mask-type:alpha" maskunits="userSpaceOnUse" x="0" y="0" width="24" height="24"><rect width="24" height="24" fill="#D9D9D9"></rect></mask><g mask="url(#mask-mini-cart)"><path d="M6 22C5.45 22 4.97917 21.8042 4.5875 21.4125C4.19583 21.0208 4 20.55 4 20V8C4 7.45 4.19583 6.97917 4.5875 6.5875C4.97917 6.19583 5.45 6 6 6H8C8 4.9 8.39167 3.95833 9.175 3.175C9.95833 2.39167 10.9 2 12 2C13.1 2 14.0417 2.39167 14.825 3.175C15.6083 3.95833 16 4.9 16 6H18C18.55 6 19.0208 6.19583 19.4125 6.5875C19.8042 6.97917 20 7.45 20 8V20C20 20.55 19.8042 21.0208 19.4125 21.4125C19.0208 21.8042 18.55 22 18 22H6Z" fill="currentColor"></path></g></svg></div><div li-element="mini-cart-item-count" class="nav_shop-quantity" x-data="{ items: 0 }" x-text="items" @carttotalitems.window="items = event.detail">0</div></div><nav li-element="mini-cart-container" class="nav_mini-cart-holder w-dropdown-list" :class="open || 'mini-cart-closed'"><div li-element="dropdown-toggle" class="nav_mini-cart-close" data-dropdowntoggle="" @click="LiquifyHelper.triggerClick($event.target.closest('.w-dropdown').querySelector('.w-dropdown-toggle.w--open'))"></div><div data-free-shipping="{{ section.settings.free_shipping_threshold | times: 100 }}" data-shipping-cost="{{ section.settings.shipping_cost | times: 100 }}" x-data="{ shippingFree: 5000, shipCost: 500 }" x-init="shippingFree = isNaN(parseInt($el.dataset.freeShipping, 10)) ? shippingFree : parseInt($el.dataset.freeShipping, 10); shipCost = isNaN(parseInt($el.dataset.shippingCost, 10)) ? shipCost : parseInt($el.dataset.shippingCost, 10)" class="mini-cart_component"><div class="li-tag w-embed">{% assign mc_offset = section.settings.delivery_days | times: 86400 %}{% assign mc_format = 'cart.date_format' | t %}{% assign mc_delivery_date = 'now' | date: '%s' | plus: mc_offset | date: mc_format %}</div><div li-element="mini-cart-full" class="mini-cart_full" :style="total.items < 1 && { display: 'none' }"><div class="mini-cart_scroll"><div class="mini-cart_head"><div class="mini-cart_title"><span li-object="'cart.heading' | t">{{ 'cart.heading' | t }}</span> (<span li-element="mini-cart-item-count" class="mini-cart_title-count" x-data="{ items: 0 }" x-text="items" @carttotalitems.window="items = event.detail">2</span>)</div><div aria-label="Close cart" li-element="dropdown-toggle" role="button" tabindex="0" class="mini-cart_close w-embed" data-dropdowntoggle="" @click="LiquifyHelper.triggerClick($event.target.closest('.w-dropdown').querySelector('.w-dropdown-toggle.w--open'))"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5.5 5.5L18.5 18.5M18.5 5.5L5.5 18.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path></svg></div></div>{% if section.settings.show_socialproof %}    <div li-if="section.settings.show_socialproof" class="mini-cart_trust-banner">
+<div data-hover="false" data-delay="400" li-element="mini-cart" class="nav_dropdown w-dropdown" x-data="handleMinicart()" x-init="getCart()" @cartupdated.window="getCart()" @setcartitem.window="updateCartItemQuantity($event.detail.product, $event.detail.quantity)" @increasecartitem.window="increaseCartItemQuantity($event.detail.product, $event.detail.quantity)" @decreasecartitem.window="decreaseCartItemQuantity($event.detail.product, $event.detail.quantity)" @toggleminicart.window="toggleMiniCart()" @showcartmessage.window="showCartMessage" @getcartitems.window="returnCartItems"><div aria-label="Cart" li-element="mini-cart-toggle" class="nav_shop-icon nav_shop-icon-cart w-dropdown-toggle" @click="$dispatch('cartupdated.window')"><div class="icon-embed-xsmall w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 24 24" fill="none" aria-hidden="true" role="img"><mask id="mask-mini-cart" style="mask-type:alpha" maskunits="userSpaceOnUse" x="0" y="0" width="24" height="24"><rect width="24" height="24" fill="#D9D9D9"></rect></mask><g mask="url(#mask-mini-cart)"><path d="M6 22C5.45 22 4.97917 21.8042 4.5875 21.4125C4.19583 21.0208 4 20.55 4 20V8C4 7.45 4.19583 6.97917 4.5875 6.5875C4.97917 6.19583 5.45 6 6 6H8C8 4.9 8.39167 3.95833 9.175 3.175C9.95833 2.39167 10.9 2 12 2C13.1 2 14.0417 2.39167 14.825 3.175C15.6083 3.95833 16 4.9 16 6H18C18.55 6 19.0208 6.19583 19.4125 6.5875C19.8042 6.97917 20 7.45 20 8V20C20 20.55 19.8042 21.0208 19.4125 21.4125C19.0208 21.8042 18.55 22 18 22H6Z" fill="currentColor"></path></g></svg></div><div li-element="mini-cart-item-count" class="nav_shop-quantity" x-data="{ items: 0 }" x-text="items" @carttotalitems.window="items = event.detail">0</div></div><nav li-element="mini-cart-container" class="nav_mini-cart-holder w-dropdown-list" :class="open || 'mini-cart-closed'"><div li-element="dropdown-toggle" class="nav_mini-cart-close" data-dropdowntoggle="" @click="LiquifyHelper.triggerClick($event.target.closest('.w-dropdown').querySelector('.w-dropdown-toggle.w--open'))"></div><div data-free-shipping="{{ section.settings.free_shipping_threshold | times: 100 }}" data-shipping-cost="{{ section.settings.shipping_cost | times: 100 }}" x-data="{ shippingFree: 5000, shipCost: 500 }" x-init="shippingFree = isNaN(parseInt($el.dataset.freeShipping, 10)) ? shippingFree : parseInt($el.dataset.freeShipping, 10); shipCost = isNaN(parseInt($el.dataset.shippingCost, 10)) ? shipCost : parseInt($el.dataset.shippingCost, 10)" class="mini-cart_component"><div li-element="mini-cart-full" class="mini-cart_full" :style="total.items < 1 && { display: 'none' }"><div class="mini-cart_scroll"><div class="mini-cart_head"><div class="mini-cart_title"><span li-object="'cart.heading' | t">{{ 'cart.heading' | t }}</span> (<span li-element="mini-cart-item-count" class="mini-cart_title-count" x-data="{ items: 0 }" x-text="items" @carttotalitems.window="items = event.detail">2</span>)</div><div aria-label="Close cart" li-element="dropdown-toggle" role="button" tabindex="0" class="mini-cart_close w-embed" data-dropdowntoggle="" @click="LiquifyHelper.triggerClick($event.target.closest('.w-dropdown').querySelector('.w-dropdown-toggle.w--open'))"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5.5 5.5L18.5 18.5M18.5 5.5L5.5 18.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path></svg></div></div>{% if section.settings.show_socialproof %}    <div li-if="section.settings.show_socialproof" class="mini-cart_trust-banner">
     <p class="mini-cart_trust-text"><span>
 {{ section.settings.text_social_proof_leicht }}
 </span><span class="mini-cart_trust-strong">
@@ -429,14 +429,103 @@
     <li li-element="mini-cart-item" class="mini-cart_line-item_item"><div class="mini-cart_line-item_media"><img src="/images/product-apparel-2.svg" loading="lazy" alt="" class="mini-cart_line-item_img" x-bind:src="product.image"></div><div class="mini-cart_line-item_product-info"><div class="mini-cart_line-item-content"><div li-js-object="product.title" class="mini-cart_line-item_title" x-text="product.title">Laptop Rucksack Slim Eco MOTION 13 - 15.6</div><div class="mini-cart_line-item_price"><div li-js-price="product.price" class="mini-cart_line-item_amount" x-text="LiquifyHelper.moneyFormat(product.price, true, '{{ shop.money_with_currency_format }}')">54,90 EUR</div><template x-if="product.price < product.original_price">
             <div li-js-if="product.price < product.original_price">
         <div li-js-price="product.original_price" class="mini-cart_line-item_compare" x-text="LiquifyHelper.moneyFormat(product.original_price, true, '{{ shop.money_with_currency_format }}')">64,90 EUR</div>        </div>
-    </template></div></div><div class="mini-cart_line-item-content justify-center"><div class="mini-cart_line-item_quantity"><a li-element="mini-cart-item-decrease" href="#" aria-label="Menge verringern" class="mini-cart_line-item_quantity-adjust w-inline-block" :productprop="product" @click="$dispatch('decreasecartitem', { product: product.key, quantity: product.quantity, action: 'decrease' })"><div class="mini-cart_qty-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2.6 7h8.8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"></path></svg></div></a><input li-element="mini-cart-item-quantity" class="mini-cart_line-item_quantity-value" value="1" :productprop="product" @input="$dispatch('setcartitem', { product: product.key, quantity: product.quantity })" x-model="product.quantity"><a li-element="mini-cart-item-increase" href="#" aria-label="Menge erhöhen" class="mini-cart_line-item_quantity-adjust w-inline-block" :productprop="product" @click="$dispatch('increasecartitem', { product: product.key, quantity: product.quantity, action: 'increase' })"><div class="mini-cart_qty-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2.6v8.8M2.6 7h8.8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"></path></svg></div></a></div><a aria-label="Remove from cart" li-element="mini-cart-item-remove" href="#" class="mini-cart_line-item-remove w-inline-block" :productprop="product" @click="$dispatch('setcartitem', { product: product.key, quantity: 0 })"><div class="mini-cart_trash-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4.667 14c-.367 0-.681-.131-.942-.392A1.286 1.286 0 0 1 3.333 12.667V4H2.667V2.667H6V2h4v.667h3.333V4h-.666v8.667c0 .366-.131.68-.392.941a1.286 1.286 0 0 1-.942.392H4.667zm6.666-10H4.667v8.667h6.666V4zM6 11.333h1.333v-6H6v6zm2.667 0H10v-6H8.667v6z" fill="currentColor"></path></svg></div></a></div></div></li></template></ul></div>{% if section.settings.upsell_collection.products.size > 0 %}    <div li-if="section.settings.upsell_collection.products.size > 0" class="mini-cart_crosssell">
-    <div class="mini-cart_crosssell-title"><span li-object="'cart.upsell_heading' | t">{{ 'cart.upsell_heading' | t }}</span></div><div class="mini-cart_crosssell-list">{% for product in section.settings.upsell_collection.products limit: section.settings.upsell_limit %}    <div li-for="product in section.settings.upsell_collection.products limit: section.settings.upsell_limit" x-show="!products.some(function (p) { return p.product_id == +$el.dataset.pid })" class="mini-cart_crosssell-item">
-                                    <div class="mini-cart_crosssell-media"><img li-object:src="product.featured_image | image_url: width: 240" li-object:alt="product.featured_image.alt" src="{{ product.featured_image | image_url: width: 240 }}" loading="lazy" alt="{{ product.featured_image.alt }}" class="mini-cart_crosssell-img"></div>
-                            <div class="mini-cart_crosssell-info"><a li-object:href="product.url" href="{{ product.url }}" class="mini-cart_crosssell-text w-inline-block"><span li-object="product.title" class="mini-cart_crosssell-name">{{ product.title }}</span><span li-object="product.price | money" class="mini-cart_crosssell-price">{{ product.price | money }}</span></a><form method="post" action="/cart/add" class="mini-cart_crosssell-form"><input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}"><script src="{{ 'li_custom.js' | asset_url }}" type="text/javascript"></script>
-<button type="submit" li-element="direct-add-to-cart" aria-label="In den Warenkorb" class="mini-cart_crosssell-add" x-data="handleVariant({{ product | json | escape }}, {{ product.options_by_name | json | escape }}, {{ product.selected_or_first_available_variant | json | escape }})" @click="addToCart($event, true)"><div class="mini-cart_plus-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 3.2v9.6M3.2 8h9.6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path></svg></div></button></form></div>
-                        </div>
-{% endfor %}</div>    </div>
-{% endif %}</div><div class="mini-cart_footer"><div class="mini-cart_footer_sums"><div class="mini-cart_footer_total"><span li-object="'cart.total_price' | t" class="mini-cart_footer-label">{{ 'cart.total_price' | t }}</span><span li-js-price="total.price" class="mini-cart_footer-value" x-text="LiquifyHelper.moneyFormat(total.price, true, '{{ shop.money_with_currency_format }}')">109,80 EUR</span></div><div class="mini-cart_footer_total"><span class="mini-cart_footer-shipping"><span li-object="'cart.shipping_date' | t" class="mini-cart_footer-label">{{ 'cart.shipping_date' | t }}</span><span li-object="mc_delivery_date" class="mini-cart_footer-label">{{ mc_delivery_date }}</span><span class="mini-cart_footer-info w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="6.4" stroke="currentColor" stroke-width="1.1"></circle><path d="M8 7.1v4.1" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"></path><circle cx="8" cy="4.9" r=".72" fill="currentColor"></circle></svg></span></span><span class="mini-cart_footer-value"><template x-if="(shippingFree - total.price) < 1">
+    </template></div></div><div class="mini-cart_line-item-content justify-center"><div class="mini-cart_line-item_quantity"><a li-element="mini-cart-item-decrease" href="#" aria-label="Menge verringern" class="mini-cart_line-item_quantity-adjust w-inline-block" :productprop="product" @click="$dispatch('decreasecartitem', { product: product.key, quantity: product.quantity, action: 'decrease' })"><div class="mini-cart_qty-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2.6 7h8.8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"></path></svg></div></a><input li-element="mini-cart-item-quantity" class="mini-cart_line-item_quantity-value" value="1" :productprop="product" @input="$dispatch('setcartitem', { product: product.key, quantity: product.quantity })" x-model="product.quantity"><a li-element="mini-cart-item-increase" href="#" aria-label="Menge erhöhen" class="mini-cart_line-item_quantity-adjust w-inline-block" :productprop="product" @click="$dispatch('increasecartitem', { product: product.key, quantity: product.quantity, action: 'increase' })"><div class="mini-cart_qty-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2.6v8.8M2.6 7h8.8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"></path></svg></div></a></div><a aria-label="Remove from cart" li-element="mini-cart-item-remove" href="#" class="mini-cart_line-item-remove w-inline-block" :productprop="product" @click="$dispatch('setcartitem', { product: product.key, quantity: 0 })"><div class="mini-cart_trash-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4.667 14c-.367 0-.681-.131-.942-.392A1.286 1.286 0 0 1 3.333 12.667V4H2.667V2.667H6V2h4v.667h3.333V4h-.666v8.667c0 .366-.131.68-.392.941a1.286 1.286 0 0 1-.942.392H4.667zm6.666-10H4.667v8.667h6.666V4zM6 11.333h1.333v-6H6v6zm2.667 0H10v-6H8.667v6z" fill="currentColor"></path></svg></div></a></div></div></li></template></ul></div><div data-mc-reco="" class="mini-cart_reco-slot"></div></div><div class="hide w-embed w-script"><script>
+(function () {
+  /* Empfehlungen im Mini-Cart kommen aus Shopifys Recommendations-API mit
+     intent=complementary &mdash; also genau den "complementary products", die im
+     Search-&-Discovery-Setup am Produkt haengen. Gerendert wird die Section
+     "Mini Cart Reco" serverseitig; wir schneiden nur ihren Inhalt heraus.
+     Bezug ist das ZULETZT hinzugefuegte Produkt: der Drawer oeffnet direkt
+     nach dem Hinzufuegen, darauf bezieht sich die Empfehlung sinnvoll. */
+  var SECTION = "mini_cart_reco";
+  var slot = document.querySelector("[data-mc-reco]");
+  if (!slot) return;
+  var lastId = null;
+  var busy = false;
+  var root = (window.Shopify && window.Shopify.routes && window.Shopify.routes.root) || "/";
+
+  function ensureSwiper(cb) {
+    if (typeof window.Swiper !== "undefined") return cb();
+    if (window.__swiperLoading) return window.__swiperLoading.then(cb);
+    var js = document.createElement("script");
+    js.src = "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js";
+    if (!document.getElementById("swiper-css")) {
+      var link = document.createElement("link");
+      link.rel = "stylesheet"; link.id = "swiper-css";
+      link.href = "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css";
+      var head = document.head, first = head.querySelector('link[rel="stylesheet"],style');
+      first ? head.insertBefore(link, first) : head.appendChild(link);
+    }
+    window.__swiperLoading = new Promise(function (res) { js.onload = res; });
+    document.head.appendChild(js);
+    window.__swiperLoading.then(cb);
+  }
+
+  function render(items) {
+    if (!items || !items.length) { slot.innerHTML = ""; lastId = null; return; }
+    var pid = items[items.length - 1].product_id;
+    if (!pid || pid === lastId || busy) return;
+    lastId = pid;
+    busy = true;
+    fetch(root + "recommendations/products?product_id=" + pid +
+          "&intent=complementary&section_id=" + SECTION)
+      .then(function (r) { return r.ok ? r.text() : ""; })
+      .then(function (html) {
+        busy = false;
+        if (!html) { slot.innerHTML = ""; return; }
+        var doc = new DOMParser().parseFromString(html, "text/html");
+        var block = doc.querySelector(".mini-cart_crosssell");
+        if (!block) { slot.innerHTML = ""; return; }
+        /* Produkte ausblenden, die schon im Warenkorb liegen.
+           Abgleich ueber den Handle aus der Produkt-URL statt ueber ein
+           Datenattribut: Liquiflow verwirft li-attribute:* auf einem Element,
+           das bereits li-for traegt &mdash; das Attribut kaeme nie an. */
+        var inCart = items.map(function (i) { return i.handle; });
+        var tiles = block.querySelectorAll(".mini-cart_crosssell-item");
+        for (var t = tiles.length - 1; t >= 0; t--) {
+          var link = tiles[t].querySelector('a[href*="/products/"]');
+          var handle = link ? link.getAttribute("href").split("/products/")[1].split(/[?#]/)[0] : "";
+          if (handle && inCart.indexOf(handle) !== -1) tiles[t].remove();
+        }
+        if (!block.querySelector(".mini-cart_crosssell-item")) { slot.innerHTML = ""; return; }
+        if (slot.__swiper) { try { slot.__swiper.destroy(true, true); } catch (e) {} slot.__swiper = null; }
+        slot.innerHTML = "";
+        slot.appendChild(block);
+        /* li-element="direct-add-to-cart" kompiliert fest zu
+           addToCart($event, true) &mdash; das "true" feuert toggleminicart, und der
+           Toggle SCHLIESST den bereits offenen Drawer. Hier drin soll er offen
+           bleiben, also vor dem Alpine-Init auf false umstellen. */
+        var addBtns = block.querySelectorAll(".mini-cart_crosssell-add");
+        for (var b = 0; b < addBtns.length; b++) {
+          var handler = addBtns[b].getAttribute("@click");
+          if (handler) addBtns[b].setAttribute("@click", handler.replace("$event, true", "$event, false"));
+        }
+        if (window.Alpine) window.Alpine.initTree(slot);
+        /* Swiper wird erst hier nachgeladen &mdash; auf Seiten ohne Empfehlungen
+           entsteht dadurch kein zusaetzlicher Request. Dieselbe geteilte
+           Ladepromise wie in den 17 Slider-Sektionen. */
+        ensureSwiper(function () {
+          var el = slot.querySelector(".mini-cart_reco-swiper");
+          if (!el || el.swiper) return;
+          slot.__swiper = new window.Swiper(el, {
+            slidesPerView: "auto",
+            spaceBetween: 4,
+            watchOverflow: true,
+            navigation: {
+              nextEl: slot.querySelector(".mini-cart_reco-arrow.is-next"),
+              prevEl: slot.querySelector(".mini-cart_reco-arrow.is-prev"),
+              disabledClass: "is-disabled"
+            }
+          });
+        });
+      })
+      .catch(function () { busy = false; slot.innerHTML = ""; });
+  }
+
+  window.addEventListener("currentcartitems", function (e) { render(e.detail); });
+  window.addEventListener("cartupdated", function (e) { render(e.detail); });
+})();
+</script></div><div class="mini-cart_footer"><div class="mini-cart_footer_sums"><div class="mini-cart_footer_total"><span li-object="'cart.total_price' | t" class="mini-cart_footer-label">{{ 'cart.total_price' | t }}</span><span li-js-price="total.price" class="mini-cart_footer-value" x-text="LiquifyHelper.moneyFormat(total.price, true, '{{ shop.money_with_currency_format }}')">109,80 EUR</span></div><div class="mini-cart_footer_total"><span class="mini-cart_footer-shipping"><span li-object="'cart.shipping_date' | t" class="mini-cart_footer-label">{{ 'cart.shipping_date' | t }}</span></span><span class="mini-cart_footer-value"><template x-if="(shippingFree - total.price) < 1">
             <span li-js-if="(shippingFree - total.price) < 1">
         <span li-object="'cart.free' | t">{{ 'cart.free' | t }}</span>        </span>
     </template><template x-if="!((shippingFree - total.price) < 1)">
@@ -613,35 +702,10 @@
             "info": "Sch\u00e4tzwert f\u00fcr die Versandzeile im Mini-Cart, solange die Gratis-Schwelle nicht erreicht ist. Der verbindliche Betrag entsteht im Checkout."
         },
         {
-            "type": "range",
-            "id": "delivery_days",
-            "min": 1,
-            "max": 21,
-            "step": 1,
-            "label": "Lieferzeit (Tage)",
-            "default": 3,
-            "info": "Bestimmt das angezeigte Lieferdatum: heute + X Tage."
-        },
-        {
             "type": "checkbox",
             "id": "show_socialproof",
             "label": "Social-Proof-Streifen anzeigen",
             "default": true
-        },
-        {
-            "type": "collection",
-            "id": "upsell_collection",
-            "label": "Empfehlungen",
-            "info": "Kollektion f\u00fcr \u201eDas k\u00f6nnte dazu passen\u201c. Leer = Bereich ausgeblendet."
-        },
-        {
-            "type": "range",
-            "id": "upsell_limit",
-            "min": 1,
-            "max": 8,
-            "step": 1,
-            "label": "Anzahl Empfehlungen",
-            "default": 4
         },
         {
             "type": "header",

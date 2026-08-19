@@ -1,11 +1,11 @@
-<div class="padding-global" style="background-color: {{ section.settings.bg_color }};"><div class="we-care-banner_inner"><div class="we-care-banner_bg-wrap">{% if section.settings.image_hintergrundbild != blank %}    <span class="li-guard" li-if="section.settings.image_hintergrundbild != blank">
+<div class="padding-global" style="background-color: {{ section.settings.bg_color }}; --wcb-min-height: {{ section.settings.min_height }}vh; --wcb-overlay: {{ section.settings.overlay_strength | divided_by: 100.0 }};"><div class="we-care-banner_inner"><div class="we-care-banner_bg-wrap">{% if section.settings.image_hintergrundbild != blank %}    <span class="li-guard" li-if="section.settings.image_hintergrundbild != blank">
     {% if section.settings.image_hintergrundbild %}
 {{ section.settings.image_hintergrundbild | image_url: width: 1440 | image_tag: loading: 'lazy', class: 'we-care-banner_bg-img' }}
 {% else %}
 <img src="{{ 'placeholder.svg' | asset_url }}" loading="lazy" alt="" class="we-care-banner_bg-img">
 {% endif %}    </span>
 {% endif %}<div class="we-care-banner_overlay"></div></div><div class="we-care-banner_content">{% if section.settings.counter_start > 0 %}    <span class="li-guard" li-if="section.settings.counter_start > 0">
-    <span class="we-care-banner_counter-num" data-wcb-counter="" data-start="{{ section.settings.counter_start }}" data-epoch="{{ section.settings.counter_epoch }}" data-rate="{{ section.settings.counter_rate }}">12.483.129</span>    </span>
+    <span class="we-care-banner_counter" data-wcb-counter="" data-start="{{ section.settings.counter_start }}" data-epoch="{{ section.settings.counter_epoch }}" data-rate="{{ section.settings.counter_rate }}"><span class="we-care-banner_counter-digit">1</span><span class="we-care-banner_counter-digit">2</span><span class="we-care-banner_counter-dot">.</span><span class="we-care-banner_counter-digit">4</span><span class="we-care-banner_counter-digit">8</span><span class="we-care-banner_counter-digit">3</span><span class="we-care-banner_counter-dot">.</span><span class="we-care-banner_counter-digit">1</span><span class="we-care-banner_counter-digit">2</span><span class="we-care-banner_counter-digit">9</span></span>    </span>
 {% endif %}<h2 class="we-care-banner_headline">
 {{ section.settings.text_headline }}
 </h2><p class="we-care-banner_desc"> {{ section.settings.textarea_beschreibung }} </p>{% if section.settings.text_cta_text != blank %}    <span class="li-guard" li-if="section.settings.text_cta_text != blank">
@@ -18,33 +18,44 @@
 {% endif %}    </div>
 {% endif %}</div></div><div class="hide w-embed w-script"><script>
 (function(){
-  /* Der Zaehler haengt an der echten Uhrzeit, nicht am Seitenaufruf: Wert =
-     Startwert + Rate * Sekunden seit dem Startzeitpunkt. Dadurch sieht jeder
-     Besucher denselben Stand und er waechst ueber Reloads hinweg weiter. */
+  /* Der Zaehler haengt an der echten Uhrzeit, nicht am Seitenaufruf:
+     Wert = Startwert + Rate * Sekunden seit dem Startzeitpunkt. Jeder Besucher
+     sieht denselben Stand, und er waechst ueber Reloads hinweg weiter.
+     Die Ziffern werden einzeln gerendert (Kacheln) &mdash; deshalb baut der Tick das
+     Markup neu auf, statt nur textContent zu setzen. */
   var els = document.querySelectorAll("[data-wcb-counter]");
   if (!els.length) return;
   var lang = document.documentElement.getAttribute("lang") || "de";
-  var fmt;
-  try { fmt = new Intl.NumberFormat(lang); } catch (e) { fmt = null; }
-  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  function tick(){
+  var fmt; try { fmt = new Intl.NumberFormat(lang); } catch (e) { fmt = null; }
+  function render(el, value) {
+    var text = fmt ? fmt.format(value) : String(value);
+    if (el.getAttribute("data-wcb-last") === text) return;
+    el.setAttribute("data-wcb-last", text);
+    var out = "";
+    for (var k = 0; k < text.length; k++) {
+      var ch = text.charAt(k);
+      if (ch >= "0" && ch <= "9") {
+        out += '<span class="we-care-banner_counter-digit">' + ch + "<\/span>";
+      } else {
+        out += '<span class="we-care-banner_counter-dot">' + ch + "<\/span>";
+      }
+    }
+    el.innerHTML = out;
+  }
+  function tick() {
     for (var i = 0; i < els.length; i++) {
       var el = els[i];
-      var raw = el.getAttribute("data-start") || "";
-      if (raw.indexOf("{" + "{") !== -1) continue; /* Builder-Preview: Liquid unausgewertet */
-      var start = parseFloat(raw);
-      var rate  = parseFloat(el.getAttribute("data-rate"));
-      var t0    = Date.parse(el.getAttribute("data-epoch"));
-      if (isNaN(start) || isNaN(rate) || isNaN(t0)) continue;
-      var secs = (Date.now() - t0) / 1000;
+      var start = parseFloat(el.getAttribute("data-start"));
+      var rate = parseFloat(el.getAttribute("data-rate"));
+      var epoch = Date.parse(el.getAttribute("data-epoch"));
+      if (isNaN(start) || isNaN(rate) || isNaN(epoch)) continue;
+      var secs = (Date.now() - epoch) / 1000;
       if (secs < 0) secs = 0;
-      var val = Math.floor(start + rate * secs);
-      el.textContent = fmt ? fmt.format(val) : String(val);
+      render(el, Math.floor(start + rate * secs));
     }
   }
   tick();
-  if (!reduce) setInterval(tick, 250);
-  document.addEventListener("shopify:section:load", function(){ els = document.querySelectorAll("[data-wcb-counter]"); tick(); });
+  setInterval(tick, 1000);
 })();
 </script></div> {% schema %} {
     "tag": "section",
@@ -95,6 +106,26 @@
             "default": "#0a1628"
         },
         {
+            "type": "range",
+            "id": "min_height",
+            "min": 20,
+            "max": 90,
+            "step": 5,
+            "unit": "vh",
+            "label": "Mindesth\u00f6he",
+            "default": 55
+        },
+        {
+            "type": "range",
+            "id": "overlay_strength",
+            "min": 0,
+            "max": 100,
+            "step": 5,
+            "unit": "%",
+            "label": "Abdunklung Hintergrundbild",
+            "default": 35
+        },
+        {
             "type": "header",
             "content": "Z\u00e4hler"
         },
@@ -126,13 +157,8 @@
     "presets": [
         {
             "name": "We Care Banner",
-            "category": "Liquify",
+            "category": "Showcase",
             "blocks": []
         }
-    ],
-    "enabled_on": {
-        "templates": [
-            "product"
-        ]
-    }
+    ]
 } {% endschema %}

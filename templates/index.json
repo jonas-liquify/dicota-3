@@ -21,7 +21,8 @@
             "text_headline_zeile_2": "THE TOP LOADER",
             "text_subtext": "When function, design and protection come together – the business companion.",
             "url_button_link": "shopify://collections/seven",
-            "text_button_text": "Explore Now"
+            "text_button_text": "Explore Now",
+            "sofort_laden": true
           },
           "blocks": {}
         },
@@ -34,7 +35,8 @@
             "text_headline_zeile_2": "By DICOTA",
             "text_subtext": "Protection, privacy and visual comfort for every screen.",
             "url_button_link": "shopify://collections/d2c-screen-filters-all",
-            "text_button_text": "Explore Now"
+            "text_button_text": "Explore Now",
+            "sofort_laden": true
           },
           "blocks": {}
         },
@@ -47,7 +49,8 @@
             "text_headline_zeile_2": "Fresh color for every day life",
             "text_subtext": "Fresh colours, smart organization and reliable protection for every journey.",
             "url_button_link": "shopify://collections/commuters",
-            "text_button_text": "Explore Now"
+            "text_button_text": "Explore Now",
+            "sofort_laden": true
           },
           "blocks": {}
         },
@@ -60,7 +63,8 @@
             "text_headline_zeile_2": "made out of recycled fishing nets",
             "text_subtext": "A fresh, urban collection made from recycled fishing nets – combining modern style, smart organization and reliable protection.",
             "url_button_link": "shopify://products/tote-backpack-ocean-breeze-14-16",
-            "text_button_text": "Explore Now"
+            "text_button_text": "Explore Now",
+            "sofort_laden": true
           },
           "blocks": {}
         }
@@ -82,7 +86,6 @@
       "type": "rating_bar",
       "name": "Rating Bar",
       "settings": {
-        "text_bewertung_zahl": "4.83",
         "text_bewertung_label": "Excellent",
         "text_anzahl_bewertungen": "17,982 reviews",
         "url_provider_link": "",
@@ -91,7 +94,8 @@
         "padding_bottom": 1.5,
         "bg_color": "#ffffff",
         "text_color": "#0f0f0f",
-        "stars_color": "#fd6612"
+        "stars_color": "#fd6612",
+        "text_bewertung_zahl": "4.83"
       }
     },
     "section_headline": {
@@ -430,7 +434,6 @@
         "imagelink_list_link_Y9J94a",
         "imagelink_list_link_ACND9D"
       ],
-      "disabled": true,
       "settings": {
         "image_bild": "shopify://shop_images/2_MT_Five.webp",
         "text_subtitle": "What are you looking for?",
@@ -504,19 +507,6 @@
         "padding_top": 4,
         "padding_bottom": 4,
         "bg_color": "#ffffff"
-      }
-    },
-    "sustainability_banne": {
-      "type": "sustainability_banne",
-      "settings": {
-        "image_hintergrundbild": "shopify://shop_images/Sustainable_Materials.png",
-        "text_uberschrift": "Bottles processed",
-        "textarea_beschreibung": "Since 1992, more than 12 million PET bottles have been recycled to minimise waste and promote sustainability.",
-        "url_button_link": "shopify://pages/sustainability",
-        "text_button_text": "",
-        "counter": "12.483.129",
-        "min_height": 70,
-        "overlay_strength": 30
       }
     },
     "testimonials": {
@@ -605,6 +595,23 @@
         "padding_top": 5,
         "padding_bottom": 5
       }
+    },
+    "we_care_banner_FwEXAA": {
+      "type": "we_care_banner",
+      "name": "We Care Banner",
+      "settings": {
+        "image_hintergrundbild": "shopify://shop_images/Sustainable_Materials.png",
+        "text_headline": "Bottles processed",
+        "textarea_beschreibung": "Since 1992, more than 12 million PET bottles have been processed to minimize waste and advance sustainability",
+        "url_cta_link": "",
+        "text_cta_text": "",
+        "bg_color": "#0a1628",
+        "min_height": 55,
+        "overlay_strength": 35,
+        "counter_start": 12483129,
+        "counter_epoch": "2026-08-11T00:00:00Z",
+        "counter_rate": 0.8
+      }
     }
   },
   "layout": "theme",
@@ -623,8 +630,8 @@
     "two_column_hero_wafJU9",
     "image_link_list",
     "loved_by_customers",
-    "sustainability_banne",
     "testimonials",
-    "faq_accordion_6xnCFe"
+    "faq_accordion_6xnCFe",
+    "we_care_banner_FwEXAA"
   ]
 }

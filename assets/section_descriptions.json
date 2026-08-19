@@ -97,6 +97,7 @@
   "List-Collection": "Kollektionsübersicht (Raster aller Kollektionen).",
   "List-Collection-Hero": "Hero der Kollektionsübersicht.",
   "Loved by Customers": "Beliebte Produkte/Reviews-Slider („Loved by Customers\").",
+  "Mini Cart Reco": "Datenquelle für die Mini-Cart-Empfehlungen. Wird nur über die Recommendations-API (intent=complementary) geholt und dort eingehängt; auf einer normalen Seite rendert sie nichts.",
   "Owner Spotlight": "Spotlight/Portrait (z.B. Creator/Owner).",
   "Page Content": "Generischer Rich-Text-Inhalt für statische Seiten.",
   "Password": "Passwortschutz-Seite des Shops.",
