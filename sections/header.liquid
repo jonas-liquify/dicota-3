@@ -444,6 +444,23 @@
   var busy = false;
   var root = (window.Shopify && window.Shopify.routes && window.Shopify.routes.root) || "/";
 
+  function ensureSwiper(cb) {
+    if (typeof window.Swiper !== "undefined") return cb();
+    if (window.__swiperLoading) return window.__swiperLoading.then(cb);
+    var js = document.createElement("script");
+    js.src = "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js";
+    if (!document.getElementById("swiper-css")) {
+      var link = document.createElement("link");
+      link.rel = "stylesheet"; link.id = "swiper-css";
+      link.href = "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css";
+      var head = document.head, first = head.querySelector('link[rel="stylesheet"],style');
+      first ? head.insertBefore(link, first) : head.appendChild(link);
+    }
+    window.__swiperLoading = new Promise(function (res) { js.onload = res; });
+    document.head.appendChild(js);
+    window.__swiperLoading.then(cb);
+  }
+
   function render(items) {
     if (!items || !items.length) { slot.innerHTML = ""; lastId = null; return; }
     var pid = items[items.length - 1].product_id;
@@ -471,9 +488,36 @@
           if (handle && inCart.indexOf(handle) !== -1) tiles[t].remove();
         }
         if (!block.querySelector(".mini-cart_crosssell-item")) { slot.innerHTML = ""; return; }
+        if (slot.__swiper) { try { slot.__swiper.destroy(true, true); } catch (e) {} slot.__swiper = null; }
         slot.innerHTML = "";
         slot.appendChild(block);
+        /* li-element="direct-add-to-cart" kompiliert fest zu
+           addToCart($event, true) &mdash; das "true" feuert toggleminicart, und der
+           Toggle SCHLIESST den bereits offenen Drawer. Hier drin soll er offen
+           bleiben, also vor dem Alpine-Init auf false umstellen. */
+        var addBtns = block.querySelectorAll(".mini-cart_crosssell-add");
+        for (var b = 0; b < addBtns.length; b++) {
+          var handler = addBtns[b].getAttribute("@click");
+          if (handler) addBtns[b].setAttribute("@click", handler.replace("$event, true", "$event, false"));
+        }
         if (window.Alpine) window.Alpine.initTree(slot);
+        /* Swiper wird erst hier nachgeladen &mdash; auf Seiten ohne Empfehlungen
+           entsteht dadurch kein zusaetzlicher Request. Dieselbe geteilte
+           Ladepromise wie in den 17 Slider-Sektionen. */
+        ensureSwiper(function () {
+          var el = slot.querySelector(".mini-cart_reco-swiper");
+          if (!el || el.swiper) return;
+          slot.__swiper = new window.Swiper(el, {
+            slidesPerView: "auto",
+            spaceBetween: 4,
+            watchOverflow: true,
+            navigation: {
+              nextEl: slot.querySelector(".mini-cart_reco-arrow.is-next"),
+              prevEl: slot.querySelector(".mini-cart_reco-arrow.is-prev"),
+              disabledClass: "is-disabled"
+            }
+          });
+        });
       })
       .catch(function () { busy = false; slot.innerHTML = ""; });
   }

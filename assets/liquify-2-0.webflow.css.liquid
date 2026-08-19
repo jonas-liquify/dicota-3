@@ -19689,3 +19689,61 @@ body {
 }
 /* Artikel-Treffer unter dem Produktraster */
 .section_filter .filter_articles { margin-top: 3rem; }
+
+/* =============================================================
+   MINI-CART — Empfehlungen als Slider
+   Der Streifen war ein overflow-x-Container; jetzt Swiper mit
+   Pfeilen. Swiper wird erst beim Einhaengen nachgeladen (geteilte
+   Promise mit den uebrigen Slider-Sektionen), auf Seiten ohne
+   Empfehlungen entsteht also kein Request.
+   ============================================================= */
+.mini-cart_reco-slider {
+  position: relative;
+  padding: 0 2rem;
+}
+.mini-cart_reco-swiper.swiper {
+  overflow: hidden;
+  width: 100%;
+}
+.mini-cart_reco-slider .swiper-slide {
+  width: auto;
+  flex: none;
+  height: auto;
+}
+
+/* Pfeile: nur ab Tablet — auf dem Touch-Geraet wischt man ohnehin */
+.mini-cart_reco-arrow {
+  background-color: #fffffff2;
+  color: var(--base-color-neutral--black, #0f0f0f);
+  cursor: pointer;
+  z-index: 3;
+  border: 1px solid #e5e5e5;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  padding: 0;
+  display: flex;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: opacity .15s;
+}
+.mini-cart_reco-arrow.is-prev { left: 1.125rem; }
+.mini-cart_reco-arrow.is-next { right: 1.125rem; }
+.mini-cart_reco-arrow:hover { background-color: #fff; }
+.mini-cart_reco-arrow.is-disabled {
+  opacity: 0;
+  pointer-events: none;
+}
+.mini-cart_reco-arrow-icon {
+  width: .875rem;
+  height: .875rem;
+  display: flex;
+}
+
+@media (max-width: 767px) {
+  .mini-cart_reco-arrow.mini-cart_reco-arrow { display: none; }
+  .mini-cart_reco-slider.mini-cart_reco-slider { padding: 0 1.25rem; }
+}
