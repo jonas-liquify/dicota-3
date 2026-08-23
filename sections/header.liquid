@@ -511,6 +511,11 @@
             slidesPerView: "auto",
             spaceBetween: 4,
             watchOverflow: true,
+            /* Einzug statt Container-Padding: die Bahn reicht bis zur
+               Panelkante, die erste Kachel fluchtet trotzdem mit der
+               Ueberschrift. Werte spiegeln das Drawer-Padding (2rem / 1.25rem). */
+            slidesOffsetBefore: window.innerWidth <= 767 ? 20 : 32,
+            slidesOffsetAfter: window.innerWidth <= 767 ? 20 : 32,
             navigation: {
               nextEl: slot.querySelector(".mini-cart_reco-arrow.is-next"),
               prevEl: slot.querySelector(".mini-cart_reco-arrow.is-prev"),
