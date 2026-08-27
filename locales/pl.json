@@ -95,6 +95,12 @@
     }
   },
   "products": {
+    "pdf_est": "Założona w Niemczech w 1992",
+    "pdf_characteristics": "Cechy",
+    "pdf_specifications": "Dane techniczne",
+    "pdf_nutshell": "Rodzina produktów w skrócie",
+    "pdf_footer_visit": "Więcej informacji znajdziesz na",
+    "pdf_footer_claim": "Jako wiodąca marka wysokiej jakości rozwiązań do przenoszenia jesteśmy świadomi naszej odpowiedzialności społecznej i ekologicznej – od ludzi dla ludzi.",
     "add_to_cart": "Dodaj do koszyka",
     "on_sale": "W sprzedaży",
     "fits_devices": "Pasuje do urządzeń {{ from }} – {{ to }} cali",

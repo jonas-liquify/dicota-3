@@ -95,6 +95,12 @@
     }
   },
   "products": {
+    "pdf_est": "Grundlagt i Tyskland i 1992",
+    "pdf_characteristics": "Egenskaber",
+    "pdf_specifications": "Tekniske data",
+    "pdf_nutshell": "Produktfamilien i overblik",
+    "pdf_footer_visit": "Find flere oplysninger på",
+    "pdf_footer_claim": "Som førende brand inden for premium bæreløsninger er vi bevidste om vores sociale og økologiske ansvar – fra mennesker til mennesker.",
     "add_to_cart": "Tilføj til kurv",
     "on_sale": "På udsalg",
     "fits_devices": "Passer til {{ from }} – {{ to }} tommer enheder",

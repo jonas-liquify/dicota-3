@@ -4604,6 +4604,12 @@
     "free_shipping_text": "تحصل على شحن مجاني لهذا الطلب."
   },
   "products": {
+    "pdf_est": "تأسست في ألمانيا عام 1992",
+    "pdf_characteristics": "الخصائص",
+    "pdf_specifications": "المواصفات التقنية",
+    "pdf_nutshell": "عائلة المنتجات باختصار",
+    "pdf_footer_visit": "لمزيد من المعلومات يرجى زيارة",
+    "pdf_footer_claim": "بوصفنا علامة رائدة في حلول الحمل الفاخرة، ندرك مسؤوليتنا الاجتماعية والبيئية – من الناس إلى الناس.",
     "fits_devices": "مناسب للأجهزة من {{ from }} إلى {{ to }} بوصة",
     "fits_short": "{{ from }}–{{ to }}\"",
     "discontinued": "موقوف",

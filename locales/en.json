@@ -95,6 +95,12 @@
     }
   },
   "products": {
+    "pdf_est": "Est. in Germany 1992",
+    "pdf_characteristics": "Characteristics",
+    "pdf_specifications": "Specifications",
+    "pdf_nutshell": "In a Nutshell Product Family",
+    "pdf_footer_visit": "For further details, please visit",
+    "pdf_footer_claim": "As a leading brand for premium carry solutions, we are consciously aware of our social and ecological responsibility – from people for people.",
     "add_to_cart": "Add to cart",
     "on_sale": "On sale",
     "fits_devices": "Fits {{ from }} - {{ to }} inch devices",

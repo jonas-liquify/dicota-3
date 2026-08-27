@@ -95,6 +95,12 @@
     }
   },
   "products": {
+    "pdf_est": "Založeno v Německu v roce 1992",
+    "pdf_characteristics": "Vlastnosti",
+    "pdf_specifications": "Technické údaje",
+    "pdf_nutshell": "Produktová řada v kostce",
+    "pdf_footer_visit": "Další informace najdete na",
+    "pdf_footer_claim": "Jako přední značka prémiových řešení pro přenášení si uvědomujeme svou sociální a ekologickou odpovědnost – od lidí pro lidi.",
     "add_to_cart": "Přidat do košíku",
     "on_sale": "V akci",
     "fits_devices": "Vhodné pro zařízení {{ from }} – {{ to }} palců",

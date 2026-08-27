@@ -95,6 +95,12 @@
     }
   },
   "products": {
+    "pdf_est": "Fondée en Allemagne en 1992",
+    "pdf_characteristics": "Caractéristiques",
+    "pdf_specifications": "Caractéristiques techniques",
+    "pdf_nutshell": "La gamme en un coup d’œil",
+    "pdf_footer_visit": "Pour plus d’informations, rendez-vous sur",
+    "pdf_footer_claim": "En tant que marque leader des solutions de transport haut de gamme, nous sommes conscients de notre responsabilité sociale et écologique – par des personnes, pour des personnes.",
     "add_to_cart": "Ajouter au panier",
     "on_sale": "En vente",
     "fits_devices": "Compatible avec les appareils de {{ from }} – {{ to }} pouces",

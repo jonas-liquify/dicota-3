@@ -95,6 +95,12 @@
     }
   },
   "products": {
+    "pdf_est": "Gegründet in Deutschland 1992",
+    "pdf_characteristics": "Eigenschaften",
+    "pdf_specifications": "Technische Daten",
+    "pdf_nutshell": "Die Produktfamilie auf einen Blick",
+    "pdf_footer_visit": "Weitere Informationen finden Sie unter",
+    "pdf_footer_claim": "Als führende Marke für hochwertige Tragelösungen sind wir uns unserer sozialen und ökologischen Verantwortung bewusst – von Menschen für Menschen.",
     "add_to_cart": "In den Warenkorb",
     "on_sale": "Im Angebot",
     "fits_devices": "Passend für {{ from }} – {{ to }} Zoll Geräte",

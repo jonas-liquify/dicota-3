@@ -95,6 +95,12 @@
     }
   },
   "products": {
+    "pdf_est": "Opgericht in Duitsland in 1992",
+    "pdf_characteristics": "Kenmerken",
+    "pdf_specifications": "Technische gegevens",
+    "pdf_nutshell": "De productfamilie in één oogopslag",
+    "pdf_footer_visit": "Ga voor meer informatie naar",
+    "pdf_footer_claim": "Als toonaangevend merk in premium draagoplossingen zijn wij ons bewust van onze sociale en ecologische verantwoordelijkheid – van mensen voor mensen.",
     "add_to_cart": "Voeg toe aan winkelwagen",
     "on_sale": "Te koop",
     "fits_devices": "Geschikt voor apparaten van {{ from }} – {{ to }} inch",
