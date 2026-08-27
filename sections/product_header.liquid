@@ -89,18 +89,26 @@ ensureSwiperLib(function() { var weCareEl = document.querySelector(".swiper.is-w
   if spec_image_default
     assign spec_image_url = product.images[2] | image_url: width: 600
   endif
-  assign ph_highlights = product.metafields.custom.filter_image_set.value.sales_arguements.value | default: product.metafields.custom.sales_arguments.value
+  assign ph_features_pdf = product.metafields.custom.filter_image_set.value.features.value | default: product.metafields.custom.features.value
   assign ph_spec_set = product.metafields.custom.filter_image_set.value.product_specification_set.value | default: product.metafields.custom.technical_specification_set.value
+  assign pdf_amp = '&'
+  assign pdf_e_apos = pdf_amp | append: '#39;'
+  assign pdf_e_quot = pdf_amp | append: 'quot;'
+  assign pdf_e_lt = pdf_amp | append: 'lt;'
+  assign pdf_e_gt = pdf_amp | append: 'gt;'
+  assign pdf_e_amp = pdf_amp | append: 'amp;'
   assign ph_tagline_pdf = product.metafields.custom.filter_image_set.value.product_tagline | default: product.metafields.custom.product_tagline
+  assign pdf_subtitle = ph_tagline_pdf | metafield_tag | strip_html | replace: pdf_e_apos, "'" | replace: pdf_e_quot, '"' | replace: pdf_e_lt, '<' | replace: pdf_e_gt, '>' | replace: pdf_e_amp, pdf_amp | strip
   assign ph_description_pdf = product.metafields.custom.filter_image_set.value.product_description_text | default: product.metafields.custom.product_description
+  assign pdf_description = ph_description_pdf | metafield_tag | strip_html | replace: pdf_e_apos, "'" | replace: pdf_e_quot, '"' | replace: pdf_e_lt, '<' | replace: pdf_e_gt, '>' | replace: pdf_e_amp, pdf_amp | strip
 %}{
   "title": {{ product.title | json }},
-  "subtitle": {{ ph_tagline_pdf | metafield_tag | strip_html | json }},
+  "subtitle": {{ pdf_subtitle | json }},
   "est_text": {{ 'products.pdf_est' | t | json }},
   "product_images": ["https:{{ product.images[0] | image_url: width: 1000 }}","https:{{ product.images[1] | image_url: width: 1000 }}"],
-  "description": {{ ph_description_pdf | metafield_tag | strip_html | json }},
+  "description": {{ pdf_description | json }},
   "characteristics_title": {{ 'products.pdf_characteristics' | t | json }},
-  "highlights": [{% for tag in ph_highlights %}{{ tag | strip_html | strip | json }}{% unless forloop.last %},{% endunless %}{% endfor %}],
+  "highlights": [{% for tag in ph_features_pdf %}{{ tag.headline | strip_html | strip | json }}{% unless forloop.last %},{% endunless %}{% endfor %}],
   "specifications_title": {{ 'products.pdf_specifications' | t | json }},
   "specifications": [{% if ph_spec_set != blank %}{% assign pdf_first = true %}{% for definition in ph_spec_set.specifications.value %}{% assign mf_keys = definition.metafield_key | split: '|' %}{% assign mf_value = '' %}{% assign mf_unit_done = false %}{% for mf_k in mf_keys %}{% assign mf_kt = mf_k | strip %}{% assign mf_kn = mf_kt | downcase %}{% assign mf_np = mf_kn | split: '.' %}{% assign mf_vns = mf_np[0] %}{% assign mf_one = '' %}{% if mf_vns contains 'variant' or mf_vns contains 'wariant' %}{% assign mf_vf = mf_np[1] | default: mf_vns %}{% if mf_vf contains 'sku' %}{% assign mf_one = product.selected_or_first_available_variant.sku %}{% elsif mf_vf contains 'barcode' or mf_vf contains 'ean' %}{% assign mf_one = product.selected_or_first_available_variant.barcode %}{% elsif mf_vf contains 'weight' or mf_vf contains 'gewicht' or mf_vf contains 'poids' or mf_vf contains 'peso' %}{% assign mf_one = product.selected_or_first_available_variant.weight | weight_with_unit: product.selected_or_first_available_variant.weight_unit %}{% assign mf_unit_done = true %}{% endif %}{% else %}{% assign mf_p = mf_kt | split: '.' %}{% assign mf_one = product.metafields[mf_p[0]][mf_p[1]].value %}{% endif %}{% assign mf_one = mf_one | append: '' | strip %}{% if mf_one != blank %}{% if mf_value == '' %}{% assign mf_value = mf_one %}{% else %}{% assign mf_sep = definition.separator | default: ' ' %}{% assign mf_value = mf_value | append: ' ' | append: mf_sep | append: ' ' | append: mf_one %}{% endif %}{% endif %}{% endfor %}{% assign mf_value = mf_value | strip %}{% if mf_value != blank and definition.measurement != blank and mf_unit_done != true %}{% assign mf_value = mf_value | append: ' ' | append: definition.measurement %}{% endif %}{% if mf_value != blank %}{% unless pdf_first %},{% endunless %}{ "label": {{ definition.titel | json }}, "value": {{ mf_value | json }} }{% assign pdf_first = false %}{% endif %}{% endfor %}{% endif %}],
   "spec_image": "https:{{ spec_image_url }}",
