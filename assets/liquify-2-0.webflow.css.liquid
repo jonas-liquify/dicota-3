@@ -9515,7 +9515,11 @@ button.li-lang_dd-link {
   list-style: none;
   padding: 0;
 }
+/* display:contents — Produkte ohne custom.eu_declaration werden per li-guard
+   ausgeblendet; das Loop-Item darf dann keine Flex-Luecke (gap) hinterlassen.
+   role="listitem" sitzt deshalb auf .acc_download-item, nicht hier. */
 .zertifikate_list .w-dyn-item {
+  display: contents;
   list-style: none;
 }
 .zertifikate_img {
@@ -19746,4 +19750,38 @@ body {
 @media (max-width: 767px) {
   .mini-cart_reco-arrow.mini-cart_reco-arrow { display: none; }
   .mini-cart_reco-slider.mini-cart_reco-slider { padding: 0 1.25rem; }
+}
+
+/* =============================================================
+   MINI-CART — Abstand um den Betrag in der Versand-Fortschrittszeile
+   Die Leerzeichen zwischen den Spans ueberleben den Sync nicht
+   ("You're€30,10 EURaway from..."). Deshalb ueber margin statt ueber
+   Whitespace — das ist unabhaengig davon, wie das Markup zusammen-
+   geschoben wird. em, damit es mit der Schriftgroesse skaliert.
+   ============================================================= */
+.mini-cart_progress-amount {
+  margin-left: .25em;
+  margin-right: .25em;
+}
+
+/* =============================================================
+   MINI-CART — Empfehlungs-Slider laeuft bis zum Rand
+   Vorher lag ein 2rem-Padding auf dem Slider, dadurch endete die
+   Bahn vor der Panelkante und die naechste Kachel wurde frueh
+   abgeschnitten. Jetzt spannt die Bahn ueber die volle Breite; den
+   Einzug uebernimmt Swiper per slidesOffsetBefore/After, damit die
+   erste Kachel weiterhin mit der Ueberschrift fluchtet.
+   ============================================================= */
+.mini-cart_reco-slider {
+  padding-left: 0;
+  padding-right: 0;
+}
+.mini-cart_reco-arrow.is-next { right: .75rem; }
+.mini-cart_reco-arrow.is-prev { left: .75rem; }
+
+@media (max-width: 767px) {
+  .mini-cart_reco-slider.mini-cart_reco-slider {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
