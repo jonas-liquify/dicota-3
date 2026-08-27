@@ -7787,11 +7787,18 @@ button.li-lang_dd-link {
   min-width: 18rem;
   height: .25rem;
 }
+/* dragClass: "history_drag" ERSETZT Swipers .swiper-scrollbar-drag, das Element
+   erbt also kein Swiper-CSS und liegt statisch im 0.25rem hohen Track — seine
+   Oberkante fluchtet mit der Track-Oberkante, der Kreis haengt nach unten.
+   Zentrierung per margin-top: (0.25rem - 1.875rem) / 2 = -0.8125rem.
+   NICHT per transform/top: transform setzt Swiper inline fuer die horizontale
+   Position, top wuerde damit kollidieren, sobald jemand dragClass zurueckdreht. */
 .history_drag {
   background-color: #0f0f0f;
   border-radius: 50%;
   width: 1.875rem;
   height: 1.875rem;
+  margin-top: -0.8125rem;
 }
 /* Die Section liegt auf background-color-primary (schwarz) — Track und Griff
    müssen deshalb hell sein, sonst sind beide unsichtbar. Compound-Selektor,
