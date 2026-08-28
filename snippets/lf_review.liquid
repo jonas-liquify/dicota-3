@@ -1,0 +1,21 @@
+<script>
+        // Liquiflow Review &mdash; l&auml;dt das Kommentar-Widget NUR f&uuml;r Designer.
+        // ?lf-review=<token> schaltet an (der Token bleibt im localStorage),
+        // ?lf-review=off schaltet wieder ab. F&uuml;r echte Kunden passiert hier
+        // nichts: kein Request, kein CSS, keine sichtbare UI.
+        (function () {
+          var WIDGET = 'https://gwmoduaaqqhpwvnbiywi.supabase.co/storage/v1/object/public/lf-review/widget.js';
+          try {
+            var q = new URLSearchParams(location.search).get('lf-review');
+            if (q === 'off') { localStorage.removeItem('lfReviewToken'); return; }
+            if (q) localStorage.setItem('lfReviewToken', q);
+            var token = localStorage.getItem('lfReviewToken');
+            if (!token) return;
+            var s = document.createElement('script');
+            s.src = WIDGET;
+            s.defer = true;
+            s.dataset.token = token;
+            document.head.appendChild(s);
+          } catch (e) { /* privater Modus o. &auml;. &mdash; Widget bleibt einfach aus */ }
+        })();
+      </script>
