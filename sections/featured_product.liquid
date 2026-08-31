@@ -4,7 +4,7 @@
 {% else %}
 <img src="{{ 'platzhalter.svg' | asset_url }}" loading="lazy" alt="" class="feature-product_image">
 {% endif %}    </span>
-{% endif %}<button type="button" class="feature-product_favorite" aria-label="Add to wishlist"><div class="icon-embed-xsmall w-embed">{% render 'icon_favorite' %}</div></button></div><div class="feature-product_content"><h2 class="feature-product_title">
+{% endif %}</div><div class="feature-product_content"><h2 class="feature-product_title">
 {{ section.settings.text_produkt_titel }}
 </h2><p class="feature-product_desc"> {{ section.settings.textarea_beschreibung }} </p>{% if section.settings.text_button_text != blank %}    <span class="li-guard" li-if="section.settings.text_button_text != blank">
     <a href="{{ section.settings.url_button_link }}" class="button is-outline feature-product_button w-button"> <span>{{ section.settings.text_button_text }}</span> </a>    </span>

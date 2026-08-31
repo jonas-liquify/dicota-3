@@ -7787,11 +7787,18 @@ button.li-lang_dd-link {
   min-width: 18rem;
   height: .25rem;
 }
+/* dragClass: "history_drag" ERSETZT Swipers .swiper-scrollbar-drag, das Element
+   erbt also kein Swiper-CSS und liegt statisch im 0.25rem hohen Track — seine
+   Oberkante fluchtet mit der Track-Oberkante, der Kreis haengt nach unten.
+   Zentrierung per margin-top: (0.25rem - 1.875rem) / 2 = -0.8125rem.
+   NICHT per transform/top: transform setzt Swiper inline fuer die horizontale
+   Position, top wuerde damit kollidieren, sobald jemand dragClass zurueckdreht. */
 .history_drag {
   background-color: #0f0f0f;
   border-radius: 50%;
   width: 1.875rem;
   height: 1.875rem;
+  margin-top: -0.8125rem;
 }
 /* Die Section liegt auf background-color-primary (schwarz) — Track und Griff
    müssen deshalb hell sein, sonst sind beide unsichtbar. Compound-Selektor,
@@ -9515,7 +9522,11 @@ button.li-lang_dd-link {
   list-style: none;
   padding: 0;
 }
+/* display:contents — Produkte ohne custom.eu_declaration werden per li-guard
+   ausgeblendet; das Loop-Item darf dann keine Flex-Luecke (gap) hinterlassen.
+   role="listitem" sitzt deshalb auf .acc_download-item, nicht hier. */
 .zertifikate_list .w-dyn-item {
+  display: contents;
   list-style: none;
 }
 .zertifikate_img {
@@ -13792,18 +13803,6 @@ img.product-header_gallery-image {
   margin: 0;
   font-size: 1.25rem;
   line-height: 1.26;
-}
-/* =============================================================
-   DICOTA — Wishlist + Vergleichen temporär ausgeblendet
-   Kundenwunsch: Feature erstmal komplett hiden (Header-Icon,
-   Produktkarten-Herz, Vergleichen-Button auf der Produktseite).
-   Rein visuell (CSS) — Markup/Logik bleibt erhalten, einfach
-   rueckgaengig zu machen indem dieser Block entfernt wird.
-   ============================================================= */
-.nav_wishlist.nav_wishlist,
-.product-card_favorite.product-card_favorite,
-.ph_buy-actions.ph_buy-actions {
-  display: none !important;
 }
 /* =============================================================
    DICOTA — Burger-Menü: Mega-Menu Fixes (Figma 5890:5881 Mobile)
@@ -18849,4 +18848,1200 @@ img.product-header_gallery-image {
    weiterhin direktes Flex-Kind von .nav_search-empty-col bleibt. */
 .nav_search-pills-holder {
   display: contents;
+}
+
+/* =============================================================
+   SUCHE — Blogartikel in Predictive Search und auf der Suchseite
+   Bildquelle ist article.image; Artikel haben in Liquid KEIN
+   featured_image (das gibt es nur bei Produkten) — genau daran
+   blieb das Blogbild vorher leer.
+   ============================================================= */
+
+/* --- Predictive Search: kompakte Liste in der linken Spalte --- */
+.nav_search-articles:empty { display: none; }
+.nav_search-article-head {
+  color: var(--base-color-neutral--neutral, #666);
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  margin: 1.5rem 0 .75rem;
+  font-size: .75rem;
+  font-weight: 500;
+}
+.nav_search-article-list {
+  grid-row-gap: .75rem;
+  flex-direction: column;
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+}
+.nav_search-article-item { margin: 0; }
+.nav_search-article-link {
+  grid-column-gap: .75rem;
+  color: inherit;
+  align-items: center;
+  text-decoration: none;
+  display: flex;
+}
+.nav_search-article-link:hover .nav_search-article-title { text-decoration: underline; }
+.nav_search-article-media {
+  background-color: #f4f4f4;
+  flex: none;
+  width: 3.5rem;
+  height: 3.5rem;
+  overflow: hidden;
+}
+.nav_search-article-image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.nav_search-article-info {
+  flex-direction: column;
+  min-width: 0;
+  display: flex;
+}
+.nav_search-article-title {
+  font-size: .875rem;
+  font-weight: 500;
+  line-height: 1.34;
+}
+.nav_search-article-date {
+  opacity: .6;
+  font-size: .75rem;
+  line-height: 1.4;
+}
+
+/* --- Suchseite: Artikel-Kacheln unter den Produkten --- */
+.filter_articles { margin-top: 3rem; }
+.filter_articles-head { margin-bottom: 1rem; }
+.filter_article-list {
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+  display: grid;
+}
+.filter_article-link {
+  color: inherit;
+  flex-direction: column;
+  text-decoration: none;
+  display: flex;
+}
+.filter_article-media {
+  background-color: #f4f4f4;
+  aspect-ratio: 3 / 2;
+  width: 100%;
+  overflow: hidden;
+}
+.filter_article-image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.filter_article-body {
+  grid-row-gap: .25rem;
+  flex-direction: column;
+  padding-top: .75rem;
+  display: flex;
+}
+.filter_article-title {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.34;
+}
+.filter_article-link:hover .filter_article-title { text-decoration: underline; }
+.filter_article-date {
+  opacity: .6;
+  font-size: .875rem;
+}
+
+@media (max-width: 991px) {
+  .filter_article-list.filter_article-list { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 767px) {
+  .filter_article-list.filter_article-list { grid-template-columns: 1fr; }
+}
+
+/* =============================================================
+   PRODUCT FEATURE GALLERY — kleinere Slides
+   Zwei Hebel gegen "die Bilder sind zu gross": flacheres
+   Seitenverhaeltnis (3:4 hochkant -> 1:1) und mehr Bilder pro Reihe,
+   gesteuert ueber das Section-Setting per_row. Der var()-Fallback
+   spiegelt den JSON-Default, damit der Builder dasselbe zeigt.
+   ============================================================= */
+.product-features_img-wrap.product-features_img-wrap {
+  aspect-ratio: 1 / 1;
+}
+.swiper-slide.is-product-features.is-product-features {
+  width: calc(100% / var(--pfg-per-row, 5) - 1.2rem);
+}
+.product-features_item.product-features_item {
+  gap: 1.25rem;
+}
+@media (max-width: 991px) {
+  .swiper-slide.is-product-features.is-product-features { width: calc(33.333% - 1rem); }
+}
+@media (max-width: 767px) {
+  .swiper-slide.is-product-features.is-product-features { width: calc(50% - .75rem); }
+}
+@media (max-width: 479px) {
+  .swiper-slide.is-product-features.is-product-features { width: 70%; }
+}
+
+/* =============================================================
+   VARIANTEN — nicht lieferbar durchgestrichen statt nur blass
+   Die Verfuegbarkeit kommt als data-available vom Liquid-Loop.
+   Frueher stand hier ein inline "opacity: 0.5" — das liess sich
+   nicht nach Variantentyp unterscheiden.
+   ============================================================= */
+
+/* Text-Pills (Groesse, Farbe, Segment, Bauform) */
+.product-header_radio[data-available="false"] {
+  opacity: .45;
+  text-decoration: line-through;
+}
+
+/* Bild-Swatches lassen sich nicht per text-decoration streichen —
+   deshalb eine diagonale Linie ueber die Kachel. */
+.produkt_swatch-link[data-available="false"] {
+  opacity: .55;
+  position: relative;
+}
+.produkt_swatch-link[data-available="false"]::after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top right,
+    #0000 calc(50% - .75px),
+    currentColor calc(50% - .75px),
+    currentColor calc(50% + .75px),
+    #0000 calc(50% + .75px)
+  );
+}
+
+/* =============================================================
+   PRODUCT HEADER — Tags, Hinweise, Mengenauswahl
+   Aus dem alten Theme uebernommen (sections/product_hero.liquid):
+   Auslaufmodell/Out-of-Stock/Sale-Tags, "Passend fuer X Zoll" aus
+   den sl_ART-Metafeldern, Info-Hinweise und die Mengenauswahl.
+   ============================================================= */
+.ph_tag-list {
+  grid-column-gap: .375rem;
+  grid-row-gap: .375rem;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: .625rem;
+  display: flex;
+}
+.ph_tag {
+  grid-column-gap: .3125rem;
+  align-items: center;
+  padding: .1875rem .5rem;
+  font-family: "Futura PT", sans-serif;
+  font-size: .6875rem;
+  font-weight: 500;
+  line-height: 1.3;
+  display: inline-flex;
+}
+.ph_tag.is-dark {
+  background-color: var(--base-color-neutral--black, #0f0f0f);
+  color: #fff;
+}
+.ph_tag.is-red {
+  background-color: #d81f26;
+  color: #fff;
+}
+.ph_tag.is-white {
+  border: 1px solid #e5e5e5;
+  background-color: #fff;
+  color: var(--base-color-neutral--black, #0f0f0f);
+}
+.ph_tag-icon {
+  flex: none;
+  width: .8125rem;
+  height: .875rem;
+  display: flex;
+}
+
+/* Info-Hinweise (nicht retournierbar, laengere Lieferzeit) */
+.ph_notice {
+  grid-column-gap: .5rem;
+  background-color: #f4f4f4;
+  align-items: flex-start;
+  margin-bottom: .75rem;
+  padding: .625rem .75rem;
+  display: flex;
+}
+.ph_notice-icon {
+  flex: none;
+  width: 1rem;
+  height: 1rem;
+  margin-top: .0625rem;
+  display: flex;
+}
+.ph_notice-text,
+.ph_notice-text p {
+  margin: 0;
+  font-size: .8125rem;
+  line-height: 1.45;
+}
+
+/* Mengenauswahl — Stepper wie im Mini-Cart, damit beide gleich aussehen */
+.ph_qty {
+  grid-column-gap: .75rem;
+  align-items: center;
+  margin-bottom: .75rem;
+  display: flex;
+}
+.ph_qty-label {
+  font-size: .875rem;
+  font-weight: 500;
+}
+.ph_qty-stepper {
+  border: 1px solid #e5e5e5;
+  grid-column-gap: .75rem;
+  align-items: center;
+  padding: .25rem .625rem;
+  display: flex;
+}
+.ph_qty-btn {
+  color: var(--base-color-neutral--black, #0f0f0f);
+  cursor: pointer;
+  background: none;
+  border: 0;
+  flex: none;
+  justify-content: center;
+  align-items: center;
+  width: .875rem;
+  height: .875rem;
+  padding: 0;
+  display: flex;
+}
+.ph_qty-btn:hover { opacity: .6; }
+.ph_qty-icon { width: 100%; height: 100%; display: flex; }
+.ph_qty-value {
+  color: var(--base-color-neutral--black, #0f0f0f);
+  text-align: center;
+  -moz-appearance: textfield;
+  appearance: textfield;
+  background: none;
+  border: 0;
+  width: 2rem;
+  min-height: 0;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  font-family: "Futura PT", sans-serif;
+  font-size: .875rem;
+  line-height: 1.5;
+}
+.ph_qty-value::-webkit-outer-spin-button,
+.ph_qty-value::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+.ph_qty-value:focus { outline: 0; }
+
+/* --- Produktkachel: Geraetegroesse + Status-Badges --- */
+.product-card_badge.is-dark {
+  background-color: var(--base-color-neutral--black, #0f0f0f);
+  color: #fff;
+}
+.product-card_fits {
+  grid-column-gap: .25rem;
+  color: var(--base-color-neutral--black, #0f0f0f);
+  opacity: .65;
+  align-items: center;
+  margin-top: .25rem;
+  font-size: .75rem;
+  line-height: 1.3;
+  display: flex;
+}
+.product-card_fits-icon {
+  flex: none;
+  width: .75rem;
+  height: .8125rem;
+  display: flex;
+}
+
+/* =============================================================
+   NAV-HOVER — Unterstrich statt Fettung
+   Fett war breiter als normal und schob die folgenden Menuepunkte
+   horizontal weg. Dagegen lief bisher ein unsichtbarer Bold-Klon im
+   ::after mit, der die Endbreite reservierte — aufwendig und immer
+   noch unruhig. Ein Unterstrich aendert die Textbreite gar nicht,
+   damit entfaellt der Klon ersatzlos.
+   Klassen-Verdopplung, weil der Builder Regeln umsortieren kann.
+   ============================================================= */
+.nav_menu-dropdown:hover .nav_menu-label.nav_menu-label,
+.nav_menu-dropdown.w--open .nav_menu-label.nav_menu-label {
+  font-weight: inherit;
+}
+.nav_menu-label {
+  position: relative;
+}
+/* Ersetzt den frueheren Bold-Klon vollstaendig (content wird zurueckgesetzt). */
+.nav_menu-label::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -.25rem;
+  height: 1px;
+  display: block;
+  visibility: visible;
+  background-color: currentColor;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform .25s ease;
+}
+.nav_menu-dropdown:hover .nav_menu-label::after,
+.nav_menu-dropdown.w--open .nav_menu-label::after {
+  transform: scaleX(1);
+}
+@media (prefers-reduced-motion: reduce) {
+  .nav_menu-label::after { transition: none; }
+}
+
+/* =============================================================
+   MINI-CART — Zahlarten kleiner und umbrechend
+   Der Shop hat 10 aktive Zahlarten. Bei 35px Breite ergibt das
+   mit Abstaenden ~386px und passt nicht in die 372px Innenbreite
+   des Drawers — die Icons wurden gequetscht. Kleiner + Umbruch.
+   justify-content: center statt space-between, weil eine
+   umgebrochene letzte Reihe sonst auseinandergezogen wird.
+   ============================================================= */
+.mini-cart_payments.mini-cart_payments {
+  flex-wrap: wrap;
+  justify-content: center;
+  grid-column-gap: .3125rem;
+  grid-row-gap: .3125rem;
+}
+.mini-cart_payment-svg-wrap.mini-cart_payment-svg-wrap {
+  width: 1.75rem;
+  height: 1.1875rem;
+}
+.mini-cart_payment-fallback.mini-cart_payment-fallback {
+  width: 1.25rem;
+  height: .875rem;
+}
+@media (max-width: 767px) {
+  .mini-cart_payment-svg-wrap.mini-cart_payment-svg-wrap {
+    width: 1.625rem;
+    height: 1.125rem;
+  }
+}
+
+/* =============================================================
+   MINI-CART — Tooltip am Versand-Info-Icon (AKTUELL UNGENUTZT:
+   Datum und Info-Icon wurden aus der Versandzeile entfernt)
+   Bewusst ohne Bibliothek: tippy.js ist im Projekt nicht vorhanden,
+   und ein weiteres Skript im kritischen Pfad waere angesichts der
+   LCP-Lage die falsche Antwort auf einen einzelnen Tooltip.
+   :focus-within haelt ihn per Tastatur erreichbar.
+   ============================================================= */
+.mini-cart_footer-info {
+  position: relative;
+  flex: none;
+  align-items: center;
+  display: inline-flex;
+}
+.mini-cart_info-btn {
+  color: inherit;
+  cursor: pointer;
+  background: none;
+  border: 0;
+  width: 1rem;
+  height: 1rem;
+  padding: 0;
+  display: flex;
+}
+.mini-cart_info-icon { width: 100%; height: 100%; display: flex; }
+.mini-cart_tooltip {
+  background-color: var(--base-color-neutral--black, #0f0f0f);
+  color: #fff;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 5;
+  width: 15rem;
+  padding: .5rem .625rem;
+  font-size: .6875rem;
+  line-height: 1.4;
+  text-transform: none;
+  letter-spacing: 0;
+  position: absolute;
+  bottom: calc(100% + .5rem);
+  left: 50%;
+  transform: translate(-50%, .25rem);
+  transition: opacity .18s ease, transform .18s ease, visibility .18s;
+}
+.mini-cart_tooltip::after {
+  content: "";
+  border: .3125rem solid #0000;
+  border-top-color: var(--base-color-neutral--black, #0f0f0f);
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.mini-cart_footer-info:hover .mini-cart_tooltip,
+.mini-cart_footer-info:focus-within .mini-cart_tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, 0);
+}
+/* Nahe am rechten Panelrand nicht ueber die Kante laufen */
+@media (max-width: 767px) {
+  .mini-cart_tooltip { width: 12rem; }
+}
+
+/* --- Produktkachel: Size-Tag liegt jetzt im Bild bei den Badges --- */
+.product-card_fits.is-on-image {
+  background-color: #ffffffe6;
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+  opacity: 1;
+  margin-top: 0;
+  padding: .1875rem .375rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* =============================================================
+   PRODUKTKACHEL — Badges gemeinsam unten links
+   .product-card_badge lag absolut auf bottom:0/left:0; mit mehreren
+   Badges (Sale + Nicht lieferbar + Groesse) stapelten sie sich
+   uebereinander. Ein Flex-Container uebernimmt jetzt die Position,
+   die Badges selbst werden statisch. Rechts bleibt Platz fuers Rating.
+   ============================================================= */
+.product-card_badges {
+  z-index: 2;
+  grid-column-gap: .25rem;
+  grid-row-gap: .25rem;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  max-width: calc(100% - 4.5rem);
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.product-card_badges .product-card_badge {
+  position: static;
+  inset: auto;
+}
+.product-card_fits.is-on-image {
+  position: static;
+  width: auto;
+  margin-top: 0;
+  white-space: nowrap;
+}
+
+/* =============================================================
+   WE CARE BANNER — Ziffern-Kacheln
+   Beim Zusammenfuehren mit dem Sustainability Banner sind die
+   Klassennamen mitgewandert, das Styling hing aber noch an den
+   alten .sustainability_*-Klassen — die Zahl stand deshalb als
+   schlichter Text da. Werte 1:1 vom Original uebernommen.
+   ============================================================= */
+.we-care-banner_counter {
+  grid-column-gap: .25rem;
+  grid-row-gap: .25rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  display: inline-flex;
+}
+.we-care-banner_counter-digit {
+  background-color: #0f0f0f;
+  color: var(--base-color-neutral--white);
+  border-radius: .1875rem;
+  justify-content: center;
+  align-items: center;
+  min-width: 1.75rem;
+  padding: .375rem .5rem;
+  font-family: "Futura PT", sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+  display: inline-flex;
+}
+.we-care-banner_counter-dot {
+  color: var(--base-color-neutral--white);
+  padding: 0 .125rem;
+  font-family: "Futura PT", sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.1;
+}
+@media (max-width: 767px) {
+  .we-care-banner_counter-digit.we-care-banner_counter-digit {
+    min-width: 1.375rem;
+    padding: .25rem .4375rem;
+    font-size: 1.5rem;
+  }
+  .we-care-banner_counter-dot.we-care-banner_counter-dot { font-size: 1.5rem; }
+}
+
+/* =============================================================
+   PRODUCT STICKY BAR — kompaktere Hoehe
+   Die Hoehe kam fast vollstaendig vom Produktbild (92px) plus
+   22px-Titel. Zusammen ~115px, was neben der Navigation zu viel
+   Viewport frisst. Ziel: ~64px, also gut die Haelfte.
+   Klassen-Verdopplung, weil die Basiswerte frueher im File stehen
+   und der Builder Regeln umsortieren kann.
+   ============================================================= */
+.product-sticky_bar.product-sticky_bar {
+  padding-top: .3125rem;
+  padding-bottom: .3125rem;
+}
+.product-sticky_media.product-sticky_media {
+  width: 3.25rem;
+  height: 3.25rem;
+}
+.product-sticky_inner.product-sticky_inner {
+  gap: .75rem;
+}
+.product-sticky_title.product-sticky_title {
+  font-size: 1rem;
+  line-height: 1.2;
+}
+.product-sticky_price.product-sticky_price {
+  font-size: .875rem;
+}
+.product-sticky_btn.product-sticky_btn {
+  padding: .5rem 1.75rem;
+  font-size: .875rem;
+}
+@media (max-width: 767px) {
+  .product-sticky_media.product-sticky_media { width: 2.75rem; height: 2.75rem; }
+  .product-sticky_title.product-sticky_title { font-size: .875rem; }
+  .product-sticky_btn.product-sticky_btn { padding: .5rem 1rem; }
+}
+
+/* =============================================================
+   NAVIGATION — Chevron in den Textfluss
+   Der Pfeil lag absolut auf right:-1.1rem, also KOMPLETT ausserhalb
+   der Toggle-Box. Dadurch zaehlte er nicht zur Breite des Links: die
+   Luecke nach einem Dropdown-Punkt wirkte um die Icon-Breite schmaler
+   als nach "Trolleys", das keinen Pfeil hat. Jetzt laeuft er im Fluss
+   mit, die Abstaende werden dadurch gleich.
+   Nur im Hauptmenue — Announcement Bar, Footer und Sprachwahl haben
+   eigene Regeln und bleiben unberuehrt.
+   ============================================================= */
+.nav_menu-dropdown .dropdown-icon {
+  position: static;
+  inset: auto;
+  right: auto;
+  flex: none;
+  margin: 0;
+}
+.section_navbar .nav_dropdown-toggle {
+  grid-column-gap: .25rem;
+  padding-left: .75rem;
+  padding-right: .75rem;
+}
+
+/* Mobile bleibt beim Accordion-Verhalten: Pfeil rechts an der Zeile.
+   Hoehere Spezifitaet, weil die Basisregel oben sonst gewinnt (sie steht
+   spaeter im File als die urspruenglichen @media-Bloecke). */
+@media (max-width: 1080px) {
+  .nav_menu-dropdown .dropdown-icon.dropdown-icon {
+    position: absolute;
+    inset: auto 0% auto auto;
+  }
+  .section_navbar .nav_dropdown-toggle {
+    grid-column-gap: 0;
+  }
+}
+@media (max-width: 991px) {
+  .nav_menu-dropdown .dropdown-icon.dropdown-icon { right: 1rem; }
+}
+
+/* =============================================================
+   RECOMMENDED PRODUCTS — Slider bis zum Rand
+   .section_product-recommended hatte overflow:hidden, wodurch die
+   Slides an der Container-Kante abgeschnitten wurden statt bis zum
+   Viewport-Rand zu laufen. Jetzt darf der Swiper ueberlaufen; das
+   Wegschneiden uebernimmt die Clipping-Kette unten (page-wrapper +
+   body, beide overflow-x: clip), es entsteht kein Seiten-Scroll.
+   ============================================================= */
+.section_product-recommended.section_product-recommended {
+  overflow: visible;
+}
+.recommended-products_swiper.recommended-products_swiper {
+  overflow: visible;
+}
+/* Pfeile und Scrollbar duerfen nicht mit ueberlaufen */
+.recommended-products_slider-wrapper.recommended-products_slider-wrapper {
+  position: relative;
+}
+.recommended-products_arrow.recommended-products_arrow { z-index: 3; }
+
+/* Sicherheitsnetz: falls ein Vorfahre doch scrollt, hier abschneiden
+   statt eine Scrollbar zu erzeugen. overflow-x:clip laesst position:sticky
+   im Gegensatz zu hidden unberuehrt. */
+body {
+  overflow-x: clip;
+}
+
+/* =============================================================
+   PRODUKT-SLIDER — bis zum Rand statt an der Container-Kante
+   Swipers eigenes .swiper { overflow: hidden } schneidet die Slides
+   an der Breite von .container-large ab. Mit overflow:visible laufen
+   sie bis zum Viewport-Rand; abgeschnitten wird an .page-wrapper und
+   body (beide overflow-x: clip), es entsteht also kein horizontaler
+   Seiten-Scroll.
+   Der Hero-Slider bleibt bewusst aussen vor — der zeigt genau ein
+   Slide und braucht sein hidden.
+   ============================================================= */
+.featured-products_swiper.featured-products_swiper,
+.shop-by-category_swiper.shop-by-category_swiper,
+.accessories_swiper.accessories_swiper,
+.the-latest_swiper.the-latest_swiper,
+.recommended-products_swiper.recommended-products_swiper {
+  overflow: visible;
+}
+
+/* Pfeile und Scrollbar bleiben ueber den ueberlaufenden Slides */
+.featured-products_arrow,
+.shop-by-category_arrow,
+.accessories_arrow,
+.the-latest_arrow,
+.recommended-products_arrow {
+  z-index: 3;
+}
+.featured-products_scrollbar,
+.shop-by-category_scrollbar,
+.accessories_scrollbar,
+.recommended-products_scrollbar {
+  position: relative;
+  z-index: 3;
+}
+
+/* =============================================================
+   CLIPPING-KETTE fuer die ueberlaufenden Slider
+   Die Slider stehen auf overflow:visible, damit sie bis zum
+   Viewport-Rand laufen. Abgeschnitten wird hier — bewusst mit
+   overflow-x: CLIP und nicht hidden: hidden macht den Vorfahren zum
+   Scroll-Container und wuerde die sticky Navigation wieder brechen,
+   die wir erst repariert haben. clip laesst sticky unberuehrt.
+   ============================================================= */
+.page-wrapper {
+  overflow-x: clip;
+}
+
+/* =============================================================
+   WE CARE BANNER — Mindesthoehe und Abdunklung
+   Beim Zusammenfuehren mit dem Sustainability Banner habe ich die
+   Settings portiert und als CSS-Variablen auf den Wrapper gelegt,
+   aber die Regeln vergessen, die sie LESEN — .we-care-banner_inner
+   blieb auf seinen fixen 22.5rem stehen.
+   Die var()-Fallbacks spiegeln die JSON-Defaults (55vh / 35 %),
+   damit der Builder ohne Liquid dasselbe zeigt.
+   ============================================================= */
+.we-care-banner_inner {
+  min-height: var(--wcb-min-height, 55vh);
+}
+.we-care-banner_overlay {
+  background-color: rgba(0, 0, 0, var(--wcb-overlay, .35));
+}
+
+/* =============================================================
+   VARIANTEN-PILLEN — Aktive Pille mit schwarzem Rand
+   Bisher markierte nur ein hellgrauer Hintergrund die Auswahl,
+   waehrend die Bild-Swatches daneben einen 2px-Rahmen bekommen.
+   Jetzt gleiche Sprache. Die Basis hat border:1px solid transparent,
+   deshalb wird das Padding um 1px reduziert — die Pille behaelt in
+   beiden Zustaenden exakt dieselbe Groesse.
+   ============================================================= */
+.product-header_radio[data-active="true"] {
+  border: 2px solid var(--base-color-neutral--black, #0f0f0f);
+  padding: calc(.125rem - 1px) calc(.875rem - 1px);
+  background-color: #fff;
+  color: var(--base-color-neutral--black, #0f0f0f);
+}
+/* Hover darf den Aktivzustand nicht ueberschreiben */
+.product-header_radio[data-active="true"]:hover {
+  border-color: var(--base-color-neutral--black, #0f0f0f);
+  background-color: #f4f4f4;
+}
+@media (max-width: 767px) {
+  .product-header_radio[data-active="true"] {
+    padding: calc(.125rem - 1px) calc(.875rem - 1px);
+  }
+}
+
+/* =============================================================
+   MINI-CART — Empfehlungs-Slot
+   Wird per Section Rendering API befuellt. Leer = kein Platz belegt,
+   damit der Drawer ohne Empfehlungen nicht auseinanderfaellt.
+   margin-top:auto lag vorher auf .mini-cart_crosssell; da der Block
+   jetzt erst zur Laufzeit hineinkommt, muss der Slot ihn halten.
+   ============================================================= */
+.mini-cart_reco-slot {
+  margin-top: auto;
+}
+.mini-cart_reco-slot:empty {
+  display: none;
+}
+.mini-cart_reco-slot .mini-cart_crosssell {
+  margin-top: 0;
+}
+/* Die Section bringt beim Fetch ihren eigenen Wrapper nicht mit — hier
+   ist sie nur Datenquelle, auf einer normalen Seite bleibt sie leer. */
+.section_mc-reco:not(:has(.mini-cart_crosssell)) {
+  display: none;
+}
+
+/* =============================================================
+   SHOPIFY-POLICY-SEITEN (/policies/*)
+   Shopify rendert diese Seiten mit eigenem Markup, das sich im Theme
+   nicht anfassen laesst — nur .shopify-policy__container / __title /
+   __body. Per CSS an die Theme-Sprache angeglichen.
+   Werte gespiegelt von: .article_wrapper (48rem Lesebreite),
+   .padding-global (2.5rem), .padding-section-medium (5rem),
+   .heading-style-h2 (2rem, Futura PT, 500, uppercase).
+   Bewusst KEINE volle Seitenbreite — Fliesstext bleibt lesbar.
+   ============================================================= */
+.shopify-policy__container {
+  width: 100%;
+  max-width: 48rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5rem 2.5rem;
+}
+
+/* Shopify zentriert die Ueberschrift und laesst sie auf 16px stehen */
+.shopify-policy__title {
+  text-align: left;
+  margin-bottom: 2.5rem;
+}
+.shopify-policy__title h1 {
+  font-family: "Futura PT", sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.1;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+/* Fliesstext auf Theme-Typografie */
+.shopify-policy__body {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+.shopify-policy__body .rte > * + * {
+  margin-top: 1rem;
+}
+.shopify-policy__body h2,
+.shopify-policy__body h3,
+.shopify-policy__body h4 {
+  font-family: "Futura PT", sans-serif;
+  font-weight: 500;
+  line-height: 1.2;
+  margin: 2.5rem 0 .75rem;
+}
+.shopify-policy__body h2 { font-size: 1.5rem; text-transform: uppercase; }
+.shopify-policy__body h3 { font-size: 1.25rem; }
+.shopify-policy__body h4 { font-size: 1rem; }
+.shopify-policy__body p { margin: 0 0 1rem; }
+.shopify-policy__body a {
+  color: inherit;
+  text-underline-offset: .15em;
+  text-decoration: underline;
+}
+.shopify-policy__body a:hover { opacity: .7; }
+.shopify-policy__body ul,
+.shopify-policy__body ol { margin: 0 0 1rem; padding-left: 1.25rem; }
+.shopify-policy__body li { margin-bottom: .375rem; }
+.shopify-policy__body strong { font-weight: 500; }
+
+/* Der Editor-Export bringt oft Ketten aus <br> statt Absaetzen mit —
+   die erzeugen sonst riesige Luecken. */
+.shopify-policy__body br + br { display: none; }
+
+@media (max-width: 767px) {
+  .shopify-policy__container.shopify-policy__container {
+    padding: 3rem 1.25rem;
+  }
+  .shopify-policy__title.shopify-policy__title { margin-bottom: 1.5rem; }
+  .shopify-policy__title h1 { font-size: 1.5rem; }
+}
+
+/* =============================================================
+   SUCHSEITE — Filter wie auf der Collection-Page
+   Die Seitenleiste ist entfallen; die Filter sitzen jetzt als
+   horizontale Leiste ueber dem Raster (coll_filter-*), inklusive
+   Modal fuer Tablet/Mobile. Damit faellt die zweispaltige
+   Grid-Aufteilung weg.
+   ============================================================= */
+.filter_layout {
+  grid-template-columns: 1fr;
+  display: block;
+}
+.filter_filters-wrapper { display: none; }
+.section_filter .coll_filter-bar {
+  padding-left: 0;
+  padding-right: 0;
+}
+/* Artikel-Treffer unter dem Produktraster */
+.section_filter .filter_articles { margin-top: 3rem; }
+
+/* =============================================================
+   MINI-CART — Empfehlungen als Slider
+   Der Streifen war ein overflow-x-Container; jetzt Swiper mit
+   Pfeilen. Swiper wird erst beim Einhaengen nachgeladen (geteilte
+   Promise mit den uebrigen Slider-Sektionen), auf Seiten ohne
+   Empfehlungen entsteht also kein Request.
+   ============================================================= */
+.mini-cart_reco-slider {
+  position: relative;
+  padding: 0 2rem;
+}
+.mini-cart_reco-swiper.swiper {
+  overflow: hidden;
+  width: 100%;
+}
+.mini-cart_reco-slider .swiper-slide {
+  width: auto;
+  flex: none;
+  height: auto;
+}
+
+/* Pfeile: nur ab Tablet — auf dem Touch-Geraet wischt man ohnehin */
+.mini-cart_reco-arrow {
+  background-color: #fffffff2;
+  color: var(--base-color-neutral--black, #0f0f0f);
+  cursor: pointer;
+  z-index: 3;
+  border: 1px solid #e5e5e5;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  padding: 0;
+  display: flex;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: opacity .15s;
+}
+.mini-cart_reco-arrow.is-prev { left: 1.125rem; }
+.mini-cart_reco-arrow.is-next { right: 1.125rem; }
+.mini-cart_reco-arrow:hover { background-color: #fff; }
+.mini-cart_reco-arrow.is-disabled {
+  opacity: 0;
+  pointer-events: none;
+}
+.mini-cart_reco-arrow-icon {
+  width: .875rem;
+  height: .875rem;
+  display: flex;
+}
+
+@media (max-width: 767px) {
+  .mini-cart_reco-arrow.mini-cart_reco-arrow { display: none; }
+  .mini-cart_reco-slider.mini-cart_reco-slider { padding: 0 1.25rem; }
+}
+
+/* =============================================================
+   MINI-CART — Abstand um den Betrag in der Versand-Fortschrittszeile
+   Die Leerzeichen zwischen den Spans ueberleben den Sync nicht
+   ("You're€30,10 EURaway from..."). Deshalb ueber margin statt ueber
+   Whitespace — das ist unabhaengig davon, wie das Markup zusammen-
+   geschoben wird. em, damit es mit der Schriftgroesse skaliert.
+   ============================================================= */
+.mini-cart_progress-amount {
+  margin-left: .25em;
+  margin-right: .25em;
+}
+
+/* =============================================================
+   MINI-CART — Empfehlungs-Slider laeuft bis zum Rand
+   Vorher lag ein 2rem-Padding auf dem Slider, dadurch endete die
+   Bahn vor der Panelkante und die naechste Kachel wurde frueh
+   abgeschnitten. Jetzt spannt die Bahn ueber die volle Breite; den
+   Einzug uebernimmt Swiper per slidesOffsetBefore/After, damit die
+   erste Kachel weiterhin mit der Ueberschrift fluchtet.
+   ============================================================= */
+.mini-cart_reco-slider {
+  padding-left: 0;
+  padding-right: 0;
+}
+.mini-cart_reco-arrow.is-next { right: .75rem; }
+.mini-cart_reco-arrow.is-prev { left: .75rem; }
+
+@media (max-width: 767px) {
+  .mini-cart_reco-slider.mini-cart_reco-slider {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+/* =============================================================
+   DICOTA — Merkliste: Zähler im Header
+   Nutzt die Warenkorb-Badge-Optik (.nav_shop-quantity); hier nur
+   das Ausblenden bei leerer Liste.
+   ============================================================= */
+.nav_wishlist-count.is-empty {
+  display: none;
+}
+/* =============================================================
+   DICOTA — Produktvergleich: Sammelleiste (Product Hero)
+   Sichtbar sobald mindestens ein Produkt gewählt ist. Einstieg ist
+   nur die Produktseite, deshalb lebt die Leiste in der Section und
+   nicht im Layout.
+   ============================================================= */
+.compare-bar {
+  position: fixed;
+  inset: auto 0 0 0;
+  z-index: 900;
+  background-color: var(--base-color-neutral--white, #ffffff);
+  border-top: 1px solid #e4e4e4;
+  box-shadow: 0 -4px 16px rgba(0, 0, 0, .08);
+  transform: translateY(100%);
+  transition: transform .25s ease;
+}
+.compare-bar.is-visible {
+  transform: translateY(0);
+}
+.compare-bar_inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: .75rem 1.5rem;
+}
+.compare-bar_items {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  min-height: 3.5rem;
+  overflow-x: auto;
+}
+.compare-bar_item {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .25rem .5rem .25rem .25rem;
+  border: 1px solid #e4e4e4;
+  border-radius: .25rem;
+  flex: none;
+}
+.compare-bar_item img {
+  width: 2.5rem;
+  height: 2.5rem;
+  object-fit: contain;
+  display: block;
+}
+.compare-bar_item-title {
+  font-size: .8rem;
+  max-width: 9rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.compare-bar_item-remove {
+  border: 0;
+  background: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  line-height: 1;
+  padding: 0 .25rem;
+  color: #6b6b6b;
+}
+.compare-bar_item-remove:hover {
+  color: var(--base-color-neutral--black, #0f0f0f);
+}
+.compare-bar_actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex: none;
+}
+.compare-bar_count {
+  font-size: .875rem;
+  color: #6b6b6b;
+  white-space: nowrap;
+}
+.compare-bar_clear {
+  border: 0;
+  background: none;
+  cursor: pointer;
+  font-size: .875rem;
+  text-decoration: underline;
+  color: #6b6b6b;
+}
+.compare-bar_hint {
+  margin: 0;
+  padding: 0 1.5rem .75rem;
+  font-size: .875rem;
+  color: #cc0404;
+  display: none;
+}
+.compare-bar_hint.is-visible {
+  display: block;
+}
+/* Aktiver Zustand des Vergleichen-Buttons — analog zum Merken-Herz */
+.ph_buy-action.is-active {
+  font-weight: 600;
+}
+/* =============================================================
+   DICOTA — Produktvergleich: Tabelle (/pages/vergleich)
+   Erste Spalte trägt die Merkmalsnamen und bleibt beim seitlichen
+   Scrollen stehen. Der Container scrollt, nie die Seite.
+   ============================================================= */
+.compare_head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+.compare_head-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex: none;
+}
+.compare_diff-toggle {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  font-size: .875rem;
+  cursor: pointer;
+}
+.compare_empty {
+  text-align: center;
+  padding: 4rem 0;
+}
+.compare_grid {
+  overflow-x: auto;
+}
+.compare_table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: .9rem;
+}
+.compare_table th,
+.compare_table td {
+  border-bottom: 1px solid #e4e4e4;
+  padding: .75rem 1rem;
+  text-align: left;
+  vertical-align: top;
+}
+.compare_axis {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  background-color: var(--base-color-neutral--white, #ffffff);
+  font-weight: 500;
+  min-width: 11rem;
+}
+.compare_col {
+  min-width: 14rem;
+  position: relative;
+  vertical-align: bottom;
+}
+.compare_col img {
+  width: 100%;
+  max-width: 10rem;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin-bottom: .75rem;
+}
+.compare_title {
+  display: block;
+  font-weight: 600;
+  margin-bottom: .25rem;
+  color: inherit;
+}
+.compare_price {
+  margin-bottom: .75rem;
+}
+.compare_remove {
+  position: absolute;
+  top: 0;
+  right: .5rem;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  font-size: 1.25rem;
+  line-height: 1;
+  color: #6b6b6b;
+}
+.compare_unavailable {
+  font-size: .875rem;
+  color: #6b6b6b;
+}
+.compare_table tbody tr:nth-child(2n) td,
+.compare_table tbody tr:nth-child(2n) .compare_axis {
+  background-color: #fafafa;
+}
+.compare_table tr.is-diff .compare_axis {
+  font-weight: 700;
+}
+@media (max-width: 767px) {
+  .compare_head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .compare_col {
+    min-width: 11rem;
+  }
+  .compare_axis {
+    min-width: 8rem;
+  }
+  .compare-bar_inner {
+    flex-direction: column;
+    align-items: stretch;
+    gap: .75rem;
+  }
+  .compare-bar_actions {
+    justify-content: space-between;
+  }
+}
+/* =============================================================
+   DICOTA — Druckausgabe des Vergleichs
+   Erste print-Regeln im Projekt. Navigation, Footer, Sammelleiste
+   und alle Bedienelemente fliegen raus; die Tabelle bekommt die
+   volle Breite und darf umbrechen.
+   ============================================================= */
+@media print {
+  .section_navbar,
+  .nav_component,
+  .section_footer,
+  .footer_component,
+  .announcement-bar_component,
+  .compare-bar,
+  .compare_head-actions,
+  .compare_remove,
+  .compare_atc,
+  .nav_wishlist {
+    display: none !important;
+  }
+  .compare_grid {
+    overflow: visible !important;
+  }
+  .compare_table {
+    font-size: 10pt;
+  }
+  .compare_table th,
+  .compare_table td {
+    white-space: normal !important;
+    word-break: break-word;
+  }
+  .compare_table tbody tr:nth-child(2n) td,
+  .compare_table tbody tr:nth-child(2n) .compare_axis {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .compare_col img {
+    max-width: 5rem;
+  }
 }
