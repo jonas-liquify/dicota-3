@@ -1,0 +1,12 @@
+{
+    "sections": {
+        "product_compare": {
+            "type": "product_compare"
+        }
+    },
+    "layout": "theme",
+    "wrapper": "main.main-wrapper",
+    "order": [
+        "product_compare"
+    ]
+}
