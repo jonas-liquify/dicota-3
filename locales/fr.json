@@ -36,8 +36,14 @@
     "total_price": "Sous-total",
     "shipping_fee": "Expédition",
     "free": "Gratuit",
-    "go_to_checkout": "Commander",
-    "note": "Remarque"
+    "go_to_checkout": "Paiement sécurisé",
+    "note": "Remarque",
+    "progress_prefix": "Il vous manque",
+    "progress_suffix": "pour la livraison gratuite",
+    "grand_total": "Total",
+    "shipping_date": "Livraison standard",
+    "date_format": "%d/%m/%y",
+    "upsell_heading": "Cela pourrait vous plaire"
   },
   "blog": {
     "no_posts": "Aucun message trouvé."
@@ -89,8 +95,28 @@
     }
   },
   "products": {
+    "wishlist_title": "Liste d’envies",
+    "wishlist_empty": "Votre liste d’envies est encore vide.",
+    "wishlist_remove": "Retirer de la liste d’envies",
+    "compare_add": "Comparer",
+    "compare_open": "Comparer maintenant",
+    "compare_clear": "Vider",
+    "compare_max": "3 produits maximum – retirez-en un d’abord.",
+    "compare_empty": "Vous n’avez encore sélectionné aucun produit à comparer.",
+    "compare_diff_only": "Afficher uniquement les différences",
+    "compare_print": "Imprimer",
+    "pdf_est": "Fondée en Allemagne en 1992",
+    "pdf_characteristics": "Caractéristiques",
+    "pdf_specifications": "Caractéristiques techniques",
+    "pdf_nutshell": "La gamme en un coup d’œil",
+    "pdf_footer_visit": "Pour plus d’informations, rendez-vous sur",
+    "pdf_footer_claim": "En tant que marque leader des solutions de transport haut de gamme, nous sommes conscients de notre responsabilité sociale et écologique – par des personnes, pour des personnes.",
     "add_to_cart": "Ajouter au panier",
-    "on_sale": "En vente"
+    "on_sale": "En vente",
+    "fits_devices": "Compatible avec les appareils de {{ from }} – {{ to }} pouces",
+    "fits_short": "{{ from }}–{{ to }}\"",
+    "discontinued": "Fin de série",
+    "out_of_stock": "Rupture de stock"
   },
   "reseller": {
     "form": {
@@ -126,6 +152,7 @@
     "recently_viewed": "Récemment consulté",
     "searching": "Recherche…",
     "suggestions": "Suggestions",
-    "view_all": "Voir tous les produits"
+    "view_all": "Voir tous les produits",
+    "articles": "Articles de blog"
   }
 }

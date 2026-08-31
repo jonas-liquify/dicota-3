@@ -36,8 +36,14 @@
     "total_price": "Suma częściowa",
     "shipping_fee": "Wysyłka",
     "free": "Bezpłatny",
-    "go_to_checkout": "Kasa",
-    "note": "Uwaga"
+    "go_to_checkout": "Bezpiecznie do kasy",
+    "note": "Uwaga",
+    "progress_prefix": "Brakuje Ci",
+    "progress_suffix": "do darmowej dostawy",
+    "grand_total": "Razem",
+    "shipping_date": "Dostawa standardowa",
+    "date_format": "%d.%m.%y",
+    "upsell_heading": "To może pasować"
   },
   "blog": {
     "no_posts": "Nie znaleziono żadnych postów."
@@ -89,8 +95,28 @@
     }
   },
   "products": {
+    "wishlist_title": "Lista życzeń",
+    "wishlist_empty": "Twoja lista życzeń jest jeszcze pusta.",
+    "wishlist_remove": "Usuń z listy życzeń",
+    "compare_add": "Porównaj",
+    "compare_open": "Porównaj teraz",
+    "compare_clear": "Wyczyść",
+    "compare_max": "Możesz porównać maksymalnie 3 produkty – usuń najpierw jeden.",
+    "compare_empty": "Nie wybrano jeszcze produktów do porównania.",
+    "compare_diff_only": "Pokaż tylko różnice",
+    "compare_print": "Drukuj",
+    "pdf_est": "Założona w Niemczech w 1992",
+    "pdf_characteristics": "Cechy",
+    "pdf_specifications": "Dane techniczne",
+    "pdf_nutshell": "Rodzina produktów w skrócie",
+    "pdf_footer_visit": "Więcej informacji znajdziesz na",
+    "pdf_footer_claim": "Jako wiodąca marka wysokiej jakości rozwiązań do przenoszenia jesteśmy świadomi naszej odpowiedzialności społecznej i ekologicznej – od ludzi dla ludzi.",
     "add_to_cart": "Dodaj do koszyka",
-    "on_sale": "W sprzedaży"
+    "on_sale": "W sprzedaży",
+    "fits_devices": "Pasuje do urządzeń {{ from }} – {{ to }} cali",
+    "fits_short": "{{ from }}–{{ to }}\"",
+    "discontinued": "Wycofany",
+    "out_of_stock": "Brak w magazynie"
   },
   "reseller": {
     "form": {
@@ -126,6 +152,7 @@
     "recently_viewed": "Ostatnio przeglądane",
     "searching": "Wyszukiwanie…",
     "suggestions": "Sugestie",
-    "view_all": "Zobacz wszystkie produkty"
+    "view_all": "Zobacz wszystkie produkty",
+    "articles": "Artykuły z bloga"
   }
 }

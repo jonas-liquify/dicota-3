@@ -36,8 +36,14 @@
     "total_price": "Subtotaal",
     "shipping_fee": "Verzending",
     "free": "Gratis",
-    "go_to_checkout": "Afrekenen",
-    "note": "Let op"
+    "go_to_checkout": "Veilig afrekenen",
+    "note": "Let op",
+    "progress_prefix": "Je bent",
+    "progress_suffix": "verwijderd van gratis verzending",
+    "grand_total": "Totaal",
+    "shipping_date": "Standaardlevering",
+    "date_format": "%d-%m-%y",
+    "upsell_heading": "Dit past er misschien bij"
   },
   "blog": {
     "no_posts": "Geen berichten gevonden."
@@ -89,8 +95,28 @@
     }
   },
   "products": {
+    "wishlist_title": "Verlanglijst",
+    "wishlist_empty": "Je verlanglijst is nog leeg.",
+    "wishlist_remove": "Verwijderen van verlanglijst",
+    "compare_add": "Vergelijken",
+    "compare_open": "Nu vergelijken",
+    "compare_clear": "Wissen",
+    "compare_max": "Maximaal 3 producten – verwijder er eerst een.",
+    "compare_empty": "Je hebt nog geen producten geselecteerd om te vergelijken.",
+    "compare_diff_only": "Alleen verschillen tonen",
+    "compare_print": "Afdrukken",
+    "pdf_est": "Opgericht in Duitsland in 1992",
+    "pdf_characteristics": "Kenmerken",
+    "pdf_specifications": "Technische gegevens",
+    "pdf_nutshell": "De productfamilie in één oogopslag",
+    "pdf_footer_visit": "Ga voor meer informatie naar",
+    "pdf_footer_claim": "Als toonaangevend merk in premium draagoplossingen zijn wij ons bewust van onze sociale en ecologische verantwoordelijkheid – van mensen voor mensen.",
     "add_to_cart": "Voeg toe aan winkelwagen",
-    "on_sale": "Te koop"
+    "on_sale": "Te koop",
+    "fits_devices": "Geschikt voor apparaten van {{ from }} – {{ to }} inch",
+    "fits_short": "{{ from }}–{{ to }}\"",
+    "discontinued": "Uit assortiment",
+    "out_of_stock": "Niet op voorraad"
   },
   "reseller": {
     "form": {
@@ -126,6 +152,7 @@
     "recently_viewed": "Recent bekeken",
     "searching": "Zoeken…",
     "suggestions": "Suggesties",
-    "view_all": "Bekijk alle producten"
+    "view_all": "Bekijk alle producten",
+    "articles": "Blogartikelen"
   }
 }

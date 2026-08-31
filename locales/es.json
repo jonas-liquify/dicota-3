@@ -36,8 +36,14 @@
     "total_price": "Subtotal",
     "shipping_fee": "Envío",
     "free": "Gratis",
-    "go_to_checkout": "Pagar",
-    "note": "Nota"
+    "go_to_checkout": "Pago seguro",
+    "note": "Nota",
+    "progress_prefix": "Te faltan",
+    "progress_suffix": "para el envío gratis",
+    "grand_total": "Total",
+    "shipping_date": "Envío estándar",
+    "date_format": "%d/%m/%y",
+    "upsell_heading": "Esto podría combinar"
   },
   "blog": {
     "no_posts": "No se encontraron publicaciones."
@@ -89,8 +95,28 @@
     }
   },
   "products": {
+    "wishlist_title": "Lista de deseos",
+    "wishlist_empty": "Tu lista de deseos aún está vacía.",
+    "wishlist_remove": "Quitar de la lista de deseos",
+    "compare_add": "Comparar",
+    "compare_open": "Comparar ahora",
+    "compare_clear": "Vaciar",
+    "compare_max": "Puedes comparar hasta 3 productos: quita uno primero.",
+    "compare_empty": "Aún no has seleccionado productos para comparar.",
+    "compare_diff_only": "Mostrar solo las diferencias",
+    "compare_print": "Imprimir",
+    "pdf_est": "Fundada en Alemania en 1992",
+    "pdf_characteristics": "Características",
+    "pdf_specifications": "Especificaciones técnicas",
+    "pdf_nutshell": "La familia de productos de un vistazo",
+    "pdf_footer_visit": "Para más información, visite",
+    "pdf_footer_claim": "Como marca líder en soluciones de transporte premium, somos conscientes de nuestra responsabilidad social y ecológica – de personas para personas.",
     "add_to_cart": "Añadir al carrito",
-    "on_sale": "En venta"
+    "on_sale": "En venta",
+    "fits_devices": "Compatible con dispositivos de {{ from }} – {{ to }} pulgadas",
+    "fits_short": "{{ from }}–{{ to }}\"",
+    "discontinued": "Descatalogado",
+    "out_of_stock": "Sin stock"
   },
   "reseller": {
     "form": {
@@ -126,6 +152,7 @@
     "recently_viewed": "Visto recientemente",
     "searching": "Buscando…",
     "suggestions": "Sugerencias",
-    "view_all": "Ver todos los productos"
+    "view_all": "Ver todos los productos",
+    "articles": "Artículos del blog"
   }
 }

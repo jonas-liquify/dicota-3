@@ -36,8 +36,14 @@
     "total_price": "Mezisoučet",
     "shipping_fee": "Doprava",
     "free": "Zdarma",
-    "go_to_checkout": "Pokladna",
-    "note": "Poznámka"
+    "go_to_checkout": "Bezpečně k pokladně",
+    "note": "Poznámka",
+    "progress_prefix": "Jste",
+    "progress_suffix": "od dopravy zdarma",
+    "grand_total": "Celkem",
+    "shipping_date": "Standardní doručení",
+    "date_format": "%d.%m.%y",
+    "upsell_heading": "K tomu by se hodilo"
   },
   "blog": {
     "no_posts": "Nebyly nalezeny žádné příspěvky."
@@ -89,8 +95,28 @@
     }
   },
   "products": {
+    "wishlist_title": "Seznam přání",
+    "wishlist_empty": "Váš seznam přání je zatím prázdný.",
+    "wishlist_remove": "Odebrat ze seznamu přání",
+    "compare_add": "Porovnat",
+    "compare_open": "Porovnat nyní",
+    "compare_clear": "Vymazat",
+    "compare_max": "Porovnat lze nejvýše 3 produkty – nejprve jeden odeberte.",
+    "compare_empty": "Zatím jste nevybrali žádné produkty k porovnání.",
+    "compare_diff_only": "Zobrazit jen rozdíly",
+    "compare_print": "Tisk",
+    "pdf_est": "Založeno v Německu v roce 1992",
+    "pdf_characteristics": "Vlastnosti",
+    "pdf_specifications": "Technické údaje",
+    "pdf_nutshell": "Produktová řada v kostce",
+    "pdf_footer_visit": "Další informace najdete na",
+    "pdf_footer_claim": "Jako přední značka prémiových řešení pro přenášení si uvědomujeme svou sociální a ekologickou odpovědnost – od lidí pro lidi.",
     "add_to_cart": "Přidat do košíku",
-    "on_sale": "V akci"
+    "on_sale": "V akci",
+    "fits_devices": "Vhodné pro zařízení {{ from }} – {{ to }} palců",
+    "fits_short": "{{ from }}–{{ to }}\"",
+    "discontinued": "Doprodej",
+    "out_of_stock": "Není skladem"
   },
   "reseller": {
     "form": {
@@ -121,6 +147,7 @@
     "heading": "Vyhledávání produktů",
     "no_results": "Nebyly nalezeny žádné výsledky.",
     "no_results_hint": "Podle těchto kritérií nebyly nalezeny žádné výsledky. Zkuste změnit vyhledávací dotaz.",
-    "no_suggestions": "Žádné návrhy"
+    "no_suggestions": "Žádné návrhy",
+    "articles": "Články z blogu"
   }
 }

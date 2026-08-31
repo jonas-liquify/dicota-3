@@ -36,8 +36,14 @@
     "total_price": "Totale parziale",
     "shipping_fee": "Spedizione",
     "free": "Gratuito",
-    "go_to_checkout": "Check-out",
-    "note": "Nota"
+    "go_to_checkout": "Vai alla cassa in sicurezza",
+    "note": "Nota",
+    "progress_prefix": "Ti mancano",
+    "progress_suffix": "per la spedizione gratuita",
+    "grand_total": "Totale",
+    "shipping_date": "Spedizione standard",
+    "date_format": "%d/%m/%y",
+    "upsell_heading": "Potrebbe abbinarsi bene"
   },
   "blog": {
     "no_posts": "Nessun post trovato."
@@ -89,8 +95,28 @@
     }
   },
   "products": {
+    "wishlist_title": "Lista dei desideri",
+    "wishlist_empty": "La tua lista dei desideri è ancora vuota.",
+    "wishlist_remove": "Rimuovi dalla lista dei desideri",
+    "compare_add": "Confronta",
+    "compare_open": "Confronta ora",
+    "compare_clear": "Svuota",
+    "compare_max": "Puoi confrontare al massimo 3 prodotti – rimuovine uno prima.",
+    "compare_empty": "Non hai ancora selezionato prodotti da confrontare.",
+    "compare_diff_only": "Mostra solo le differenze",
+    "compare_print": "Stampa",
+    "pdf_est": "Fondata in Germania nel 1992",
+    "pdf_characteristics": "Caratteristiche",
+    "pdf_specifications": "Specifiche tecniche",
+    "pdf_nutshell": "La famiglia di prodotti in sintesi",
+    "pdf_footer_visit": "Per maggiori informazioni visita",
+    "pdf_footer_claim": "In qualità di marchio leader nelle soluzioni di trasporto premium, siamo consapevoli della nostra responsabilità sociale ed ecologica – da persone per persone.",
     "add_to_cart": "Aggiungi al carrello",
-    "on_sale": "In vendita"
+    "on_sale": "In vendita",
+    "fits_devices": "Adatto a dispositivi da {{ from }} – {{ to }} pollici",
+    "fits_short": "{{ from }}–{{ to }}\"",
+    "discontinued": "Fuori produzione",
+    "out_of_stock": "Non disponibile"
   },
   "reseller": {
     "form": {
@@ -126,6 +152,7 @@
     "recently_viewed": "Visto di recente",
     "searching": "Ricerca…",
     "suggestions": "Suggerimenti",
-    "view_all": "Visualizza tutti i prodotti"
+    "view_all": "Visualizza tutti i prodotti",
+    "articles": "Articoli del blog"
   }
 }

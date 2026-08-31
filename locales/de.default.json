@@ -19,8 +19,14 @@
     "total_price": "Zwischensumme",
     "shipping_fee": "Versand",
     "free": "Gratis",
-    "go_to_checkout": "Zur Kasse",
-    "note": "Anmerkung"
+    "go_to_checkout": "Sicher zur Kasse",
+    "note": "Anmerkung",
+    "progress_prefix": "Du bist",
+    "progress_suffix": "entfernt für Free Shipping",
+    "grand_total": "Gesamt",
+    "shipping_date": "Standardversand",
+    "date_format": "%d.%m.%y",
+    "upsell_heading": "Das könnte dazu passen"
   },
   "blog": {
     "no_posts": "Keine Beiträge gefunden."
@@ -89,8 +95,28 @@
     }
   },
   "products": {
+    "wishlist_title": "Merkliste",
+    "wishlist_empty": "Deine Merkliste ist noch leer.",
+    "wishlist_remove": "Von der Merkliste entfernen",
+    "compare_add": "Vergleichen",
+    "compare_open": "Jetzt vergleichen",
+    "compare_clear": "Leeren",
+    "compare_max": "Maximal 3 Produkte vergleichbar – entferne zuerst eines.",
+    "compare_empty": "Du hast noch keine Produkte zum Vergleich ausgewählt.",
+    "compare_diff_only": "Nur Unterschiede zeigen",
+    "compare_print": "Drucken",
+    "pdf_est": "Gegründet in Deutschland 1992",
+    "pdf_characteristics": "Eigenschaften",
+    "pdf_specifications": "Technische Daten",
+    "pdf_nutshell": "Die Produktfamilie auf einen Blick",
+    "pdf_footer_visit": "Weitere Informationen finden Sie unter",
+    "pdf_footer_claim": "Als führende Marke für hochwertige Tragelösungen sind wir uns unserer sozialen und ökologischen Verantwortung bewusst – von Menschen für Menschen.",
     "add_to_cart": "In den Warenkorb",
-    "on_sale": "Im Angebot"
+    "on_sale": "Im Angebot",
+    "fits_devices": "Passend für {{ from }} – {{ to }} Zoll Geräte",
+    "fits_short": "{{ from }}–{{ to }}\"",
+    "discontinued": "Auslaufmodell",
+    "out_of_stock": "Nicht lieferbar"
   },
   "reseller": {
     "form": {
@@ -126,6 +152,7 @@
     "recently_viewed": "Zuletzt angesehen",
     "searching": "Suche läuft…",
     "suggestions": "Vorschläge",
-    "view_all": "Alle Produkte ansehen"
+    "view_all": "Alle Produkte ansehen",
+    "articles": "Blogartikel"
   }
 }

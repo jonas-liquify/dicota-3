@@ -36,8 +36,14 @@
     "total_price": "Subtotal",
     "shipping_fee": "Forsendelse",
     "free": "Gratis",
-    "go_to_checkout": "Checkout",
-    "note": "Bemærk"
+    "go_to_checkout": "Sikkert til kassen",
+    "note": "Bemærk",
+    "progress_prefix": "Du er",
+    "progress_suffix": "fra gratis fragt",
+    "grand_total": "I alt",
+    "shipping_date": "Standardlevering",
+    "date_format": "%d.%m.%y",
+    "upsell_heading": "Det kunne passe til"
   },
   "blog": {
     "no_posts": "Ingen indlæg fundet."
@@ -89,8 +95,28 @@
     }
   },
   "products": {
+    "wishlist_title": "Ønskeliste",
+    "wishlist_empty": "Din ønskeliste er stadig tom.",
+    "wishlist_remove": "Fjern fra ønskelisten",
+    "compare_add": "Sammenlign",
+    "compare_open": "Sammenlign nu",
+    "compare_clear": "Ryd",
+    "compare_max": "Du kan sammenligne op til 3 produkter – fjern et først.",
+    "compare_empty": "Du har endnu ikke valgt produkter at sammenligne.",
+    "compare_diff_only": "Vis kun forskelle",
+    "compare_print": "Udskriv",
+    "pdf_est": "Grundlagt i Tyskland i 1992",
+    "pdf_characteristics": "Egenskaber",
+    "pdf_specifications": "Tekniske data",
+    "pdf_nutshell": "Produktfamilien i overblik",
+    "pdf_footer_visit": "Find flere oplysninger på",
+    "pdf_footer_claim": "Som førende brand inden for premium bæreløsninger er vi bevidste om vores sociale og økologiske ansvar – fra mennesker til mennesker.",
     "add_to_cart": "Tilføj til kurv",
-    "on_sale": "På udsalg"
+    "on_sale": "På udsalg",
+    "fits_devices": "Passer til {{ from }} – {{ to }} tommer enheder",
+    "fits_short": "{{ from }}–{{ to }}\"",
+    "discontinued": "Udgået",
+    "out_of_stock": "Ikke på lager"
   },
   "reseller": {
     "form": {
@@ -104,5 +130,8 @@
     "count_label": "anmeldelser",
     "body": "Din anmeldelse",
     "email": "E-mail"
+  },
+  "search": {
+    "articles": "Blogindlæg"
   }
 }

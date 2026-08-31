@@ -19,8 +19,14 @@
     "total_price": "Subtotal",
     "shipping_fee": "Shipping",
     "free": "Free",
-    "go_to_checkout": "Checkout",
-    "note": "Note"
+    "go_to_checkout": "Secure checkout",
+    "note": "Note",
+    "progress_prefix": "You're",
+    "progress_suffix": "away from free shipping",
+    "grand_total": "Total",
+    "shipping_date": "Standard delivery",
+    "date_format": "%m/%d/%y",
+    "upsell_heading": "This might go well with it"
   },
   "blog": {
     "no_posts": "No posts found."
@@ -89,8 +95,28 @@
     }
   },
   "products": {
+    "wishlist_title": "Wishlist",
+    "wishlist_empty": "Your wishlist is still empty.",
+    "wishlist_remove": "Remove from wishlist",
+    "compare_add": "Compare",
+    "compare_open": "Compare now",
+    "compare_clear": "Clear",
+    "compare_max": "You can compare up to 3 products – remove one first.",
+    "compare_empty": "You haven't selected any products to compare yet.",
+    "compare_diff_only": "Show differences only",
+    "compare_print": "Print",
+    "pdf_est": "Est. in Germany 1992",
+    "pdf_characteristics": "Characteristics",
+    "pdf_specifications": "Specifications",
+    "pdf_nutshell": "In a Nutshell Product Family",
+    "pdf_footer_visit": "For further details, please visit",
+    "pdf_footer_claim": "As a leading brand for premium carry solutions, we are consciously aware of our social and ecological responsibility – from people for people.",
     "add_to_cart": "Add to cart",
-    "on_sale": "On sale"
+    "on_sale": "On sale",
+    "fits_devices": "Fits {{ from }} - {{ to }} inch devices",
+    "fits_short": "{{ from }}–{{ to }}\"",
+    "discontinued": "Discontinued",
+    "out_of_stock": "Out of Stock"
   },
   "reseller": {
     "form": {
@@ -126,7 +152,8 @@
     "recently_viewed": "Recently viewed",
     "searching": "Searching…",
     "suggestions": "Suggestions",
-    "view_all": "View all products"
+    "view_all": "View all products",
+    "articles": "Blog articles"
   },
   "shopify": {
     "checkout": {
