@@ -1,0 +1,67 @@
+<div class="padding-global padding-section-medium" style="padding-top: {{ section.settings.padding_top }}rem; padding-bottom: {{ section.settings.padding_bottom }}rem;"><div class="container-large"><div class="wishlist_head"><h1 class="heading-style-h2">
+{{ section.settings.text_heading }}
+</h1>{% if section.settings.text_subline != blank %}    <div class="li-guard" li-if="section.settings.text_subline != blank">
+    <p class="text-size-medium">
+{{ section.settings.text_subline }}
+</p>    </div>
+{% endif %}</div><div class="wishlist_root" data-wishlist-root="" data-label-remove="{{ 'products.wishlist_remove' | t }}"><div class="wishlist_empty" data-wishlist-empty="" hidden=""><p li-object="'products.wishlist_empty' | t" class="text-size-medium">{{ 'products.wishlist_empty' | t }}</p><a href="{{ section.settings.url_weiter_shoppen_link }}" class="button"> <span>{{ section.settings.text_weiter_shoppen_text }}</span> </a></div><div class="coll_grid wishlist_grid" data-wishlist-grid=""></div></div></div></div> {% schema %} {
+    "tag": "section",
+    "name": "Wishlist",
+    "class": "section_wishlist",
+    "settings": [
+        {
+            "id": "text_heading",
+            "type": "text",
+            "label": "Heading",
+            "default": "Merkliste"
+        },
+        {
+            "id": "text_subline",
+            "type": "text",
+            "label": "Subline",
+            "default": "Deine gemerkten Produkte."
+        },
+        {
+            "id": "url_weiter_shoppen_link",
+            "type": "url",
+            "label": "Weiter shoppen Link"
+        },
+        {
+            "id": "text_weiter_shoppen_text",
+            "type": "text",
+            "label": "Weiter shoppen Text",
+            "default": "Produkte entdecken"
+        },
+        {
+            "type": "header",
+            "content": "Abst\u00e4nde"
+        },
+        {
+            "type": "range",
+            "id": "padding_top",
+            "min": 0,
+            "max": 12,
+            "step": 0.5,
+            "unit": "rem",
+            "label": "Abstand oben",
+            "default": 2.5
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom",
+            "min": 0,
+            "max": 12,
+            "step": 0.5,
+            "unit": "rem",
+            "label": "Abstand unten",
+            "default": 5
+        }
+    ],
+    "presets": [
+        {
+            "name": "Wishlist",
+            "category": "Content",
+            "blocks": []
+        }
+    ]
+} {% endschema %}

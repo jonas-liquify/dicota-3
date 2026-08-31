@@ -132,9 +132,9 @@
 </span>    </div>
 {% endif %}{% if section.settings.url_angebot_link != blank %}    <span class="li-guard" li-if="section.settings.url_angebot_link != blank">
     <a href="{{ block.settings.url_angebot_link }}" class="ph_quote-btn w-button"> <span>{{ block.settings.text_angebot_text }}</span> </a>    </span>
-{% endif %}<div class="ph_buy-actions"><button li-element="wishlist-button" type="button" class="ph_buy-action" data-variant-id="{{ product.selected_or_first_available_variant.id }}"><span class="ph_buy-action-icon w-embed"><svg width="100%" height="100%" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 21.35L10.55 20.03C5.4 15.36 2 12.28 2 8.5C2 5.42 4.42 3 7.5 3C9.24 3 10.91 3.81 12 5.09C13.09 3.81 14.76 3 16.5 3C19.58 3 22 5.42 22 8.5C22 12.28 18.6 15.36 13.45 20.04L12 21.35Z" stroke="currentColor" stroke-width="1.8" fill="none"></path></svg></span><span>
+{% endif %}<div class="ph_buy-actions"><button li-element="wishlist-button" x-bind:data-variant-id="selectedVariant" type="button" class="ph_buy-action" data-variant-id="{{ product.selected_or_first_available_variant.id }}" data-product-handle="{{ product.handle }}"><span class="ph_buy-action-icon w-embed"><svg width="100%" height="100%" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 21.35L10.55 20.03C5.4 15.36 2 12.28 2 8.5C2 5.42 4.42 3 7.5 3C9.24 3 10.91 3.81 12 5.09C13.09 3.81 14.76 3 16.5 3C19.58 3 22 5.42 22 8.5C22 12.28 18.6 15.36 13.45 20.04L12 21.35Z" stroke="currentColor" stroke-width="1.8" fill="none"></path></svg></span><span>
 {{ block.settings.text_merken_text }}
-</span></button><a href="{{ block.settings.url_vergleichen_link }}" class="ph_buy-action"> <span class="ph_buy-action-icon w-embed"><svg width="100%" height="100%" viewbox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M9.01 14H2v2h7.01v3L13 15l-3.99-4v3zm5.98-1v-3H22V8h-7.01V5L11 9l3.99 4z"></path></svg></span><span>{{ block.settings.text_vergleichen_text }}</span> </a></div>{% endform %}<div class="hide w-form-done"><div>Successfully added!</div></div><div class="hide w-form-fail"><div>Error adding to cart.</div></div></div>
+</span></button><button type="button" class="ph_buy-action" data-compare-toggle="" data-compare-handle="{{ product.handle }}"><span class="ph_buy-action-icon w-embed"><svg width="100%" height="100%" viewbox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M9.01 14H2v2h7.01v3L13 15l-3.99-4v3zm5.98-1v-3H22V8h-7.01V5L11 9l3.99 4z"></path></svg></span><span li-object="'products.compare_add' | t" data-compare-label="">{{ 'products.compare_add' | t }}</span></button></div>{% endform %}<div class="hide w-form-done"><div>Successfully added!</div></div><div class="hide w-form-fail"><div>Error adding to cart.</div></div></div>
                     <div><div class="ph_trust-grid"><div class="ph_trust-item"><div class="ph_trust-icon w-embed"><svg width="22" height="22" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zm-1.5 1.5 1.96 2.5H17V9.5h1.5zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9 1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z" fill="currentColor"></path></svg></div><span class="ph_trust-label">
 {{ block.settings.text_trust_1 }}
 </span></div><div class="ph_trust-item"><div class="ph_trust-icon w-embed"><svg width="22" height="22" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z" fill="currentColor"></path></svg></div><span class="ph_trust-label">
@@ -239,17 +239,6 @@
             "type": "text",
             "label": "Merken Text",
             "default": "Save"
-        },
-        {
-            "id": "url_vergleichen_link",
-            "type": "url",
-            "label": "Vergleichen Link"
-        },
-        {
-            "id": "text_vergleichen_text",
-            "type": "text",
-            "label": "Vergleichen Text",
-            "default": "Compare"
         },
         {
             "id": "text_trust_1",

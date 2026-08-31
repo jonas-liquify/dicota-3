@@ -13805,18 +13805,6 @@ img.product-header_gallery-image {
   line-height: 1.26;
 }
 /* =============================================================
-   DICOTA — Wishlist + Vergleichen temporär ausgeblendet
-   Kundenwunsch: Feature erstmal komplett hiden (Header-Icon,
-   Produktkarten-Herz, Vergleichen-Button auf der Produktseite).
-   Rein visuell (CSS) — Markup/Logik bleibt erhalten, einfach
-   rueckgaengig zu machen indem dieser Block entfernt wird.
-   ============================================================= */
-.nav_wishlist.nav_wishlist,
-.product-card_favorite.product-card_favorite,
-.ph_buy-actions.ph_buy-actions {
-  display: none !important;
-}
-/* =============================================================
    DICOTA — Burger-Menü: Mega-Menu Fixes (Figma 5890:5881 Mobile)
    Die "Header Mega Menu"-Desktop-Regeln (weiter oben) wurden NACH
    diesen Mobile-Overrides ergänzt und haben sie durch gleiche/
@@ -19790,5 +19778,270 @@ body {
   .mini-cart_reco-slider.mini-cart_reco-slider {
     padding-left: 0;
     padding-right: 0;
+  }
+}
+/* =============================================================
+   DICOTA — Merkliste: Zähler im Header
+   Nutzt die Warenkorb-Badge-Optik (.nav_shop-quantity); hier nur
+   das Ausblenden bei leerer Liste.
+   ============================================================= */
+.nav_wishlist-count.is-empty {
+  display: none;
+}
+/* =============================================================
+   DICOTA — Produktvergleich: Sammelleiste (Product Hero)
+   Sichtbar sobald mindestens ein Produkt gewählt ist. Einstieg ist
+   nur die Produktseite, deshalb lebt die Leiste in der Section und
+   nicht im Layout.
+   ============================================================= */
+.compare-bar {
+  position: fixed;
+  inset: auto 0 0 0;
+  z-index: 900;
+  background-color: var(--base-color-neutral--white, #ffffff);
+  border-top: 1px solid #e4e4e4;
+  box-shadow: 0 -4px 16px rgba(0, 0, 0, .08);
+  transform: translateY(100%);
+  transition: transform .25s ease;
+}
+.compare-bar.is-visible {
+  transform: translateY(0);
+}
+.compare-bar_inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: .75rem 1.5rem;
+}
+.compare-bar_items {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  min-height: 3.5rem;
+  overflow-x: auto;
+}
+.compare-bar_item {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .25rem .5rem .25rem .25rem;
+  border: 1px solid #e4e4e4;
+  border-radius: .25rem;
+  flex: none;
+}
+.compare-bar_item img {
+  width: 2.5rem;
+  height: 2.5rem;
+  object-fit: contain;
+  display: block;
+}
+.compare-bar_item-title {
+  font-size: .8rem;
+  max-width: 9rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.compare-bar_item-remove {
+  border: 0;
+  background: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  line-height: 1;
+  padding: 0 .25rem;
+  color: #6b6b6b;
+}
+.compare-bar_item-remove:hover {
+  color: var(--base-color-neutral--black, #0f0f0f);
+}
+.compare-bar_actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex: none;
+}
+.compare-bar_count {
+  font-size: .875rem;
+  color: #6b6b6b;
+  white-space: nowrap;
+}
+.compare-bar_clear {
+  border: 0;
+  background: none;
+  cursor: pointer;
+  font-size: .875rem;
+  text-decoration: underline;
+  color: #6b6b6b;
+}
+.compare-bar_hint {
+  margin: 0;
+  padding: 0 1.5rem .75rem;
+  font-size: .875rem;
+  color: #cc0404;
+  display: none;
+}
+.compare-bar_hint.is-visible {
+  display: block;
+}
+/* Aktiver Zustand des Vergleichen-Buttons — analog zum Merken-Herz */
+.ph_buy-action.is-active {
+  font-weight: 600;
+}
+/* =============================================================
+   DICOTA — Produktvergleich: Tabelle (/pages/vergleich)
+   Erste Spalte trägt die Merkmalsnamen und bleibt beim seitlichen
+   Scrollen stehen. Der Container scrollt, nie die Seite.
+   ============================================================= */
+.compare_head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+.compare_head-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex: none;
+}
+.compare_diff-toggle {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  font-size: .875rem;
+  cursor: pointer;
+}
+.compare_empty {
+  text-align: center;
+  padding: 4rem 0;
+}
+.compare_grid {
+  overflow-x: auto;
+}
+.compare_table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: .9rem;
+}
+.compare_table th,
+.compare_table td {
+  border-bottom: 1px solid #e4e4e4;
+  padding: .75rem 1rem;
+  text-align: left;
+  vertical-align: top;
+}
+.compare_axis {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  background-color: var(--base-color-neutral--white, #ffffff);
+  font-weight: 500;
+  min-width: 11rem;
+}
+.compare_col {
+  min-width: 14rem;
+  position: relative;
+  vertical-align: bottom;
+}
+.compare_col img {
+  width: 100%;
+  max-width: 10rem;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin-bottom: .75rem;
+}
+.compare_title {
+  display: block;
+  font-weight: 600;
+  margin-bottom: .25rem;
+  color: inherit;
+}
+.compare_price {
+  margin-bottom: .75rem;
+}
+.compare_remove {
+  position: absolute;
+  top: 0;
+  right: .5rem;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  font-size: 1.25rem;
+  line-height: 1;
+  color: #6b6b6b;
+}
+.compare_unavailable {
+  font-size: .875rem;
+  color: #6b6b6b;
+}
+.compare_table tbody tr:nth-child(2n) td,
+.compare_table tbody tr:nth-child(2n) .compare_axis {
+  background-color: #fafafa;
+}
+.compare_table tr.is-diff .compare_axis {
+  font-weight: 700;
+}
+@media (max-width: 767px) {
+  .compare_head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .compare_col {
+    min-width: 11rem;
+  }
+  .compare_axis {
+    min-width: 8rem;
+  }
+  .compare-bar_inner {
+    flex-direction: column;
+    align-items: stretch;
+    gap: .75rem;
+  }
+  .compare-bar_actions {
+    justify-content: space-between;
+  }
+}
+/* =============================================================
+   DICOTA — Druckausgabe des Vergleichs
+   Erste print-Regeln im Projekt. Navigation, Footer, Sammelleiste
+   und alle Bedienelemente fliegen raus; die Tabelle bekommt die
+   volle Breite und darf umbrechen.
+   ============================================================= */
+@media print {
+  .section_navbar,
+  .nav_component,
+  .section_footer,
+  .footer_component,
+  .announcement-bar_component,
+  .compare-bar,
+  .compare_head-actions,
+  .compare_remove,
+  .compare_atc,
+  .nav_wishlist {
+    display: none !important;
+  }
+  .compare_grid {
+    overflow: visible !important;
+  }
+  .compare_table {
+    font-size: 10pt;
+  }
+  .compare_table th,
+  .compare_table td {
+    white-space: normal !important;
+    word-break: break-word;
+  }
+  .compare_table tbody tr:nth-child(2n) td,
+  .compare_table tbody tr:nth-child(2n) .compare_axis {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .compare_col img {
+    max-width: 5rem;
   }
 }
