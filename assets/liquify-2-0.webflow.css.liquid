@@ -1098,10 +1098,6 @@ figcaption {
 }
 .mini-cart_component {
   background-color: var(--base-color-neutral--white);
-  /* Der Drawer liegt im .nav_component. Auf der Startseite setzt
-     .nav_component.is-transparent color:#ffffff — der Text im weissen Drawer
-     wurde dadurch unsichtbar. Eine direkte Deklaration schlaegt Vererbung,
-     unabhaengig von der Spezifitaet des Transparent-Zustands. */
   color: var(--base-color-neutral--black, #0f0f0f);
   flex-direction: column;
   align-items: stretch;
@@ -1345,8 +1341,8 @@ figcaption {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 1rem;
-  height: 1rem;
+  width: 0.75rem;
+  height: 0.75rem;
   margin-top: auto;
   margin-bottom: auto;
   margin-right: 1rem;
@@ -3305,8 +3301,13 @@ figcaption {
 .section_announcement-bar li {
   color: #ffffff;
 }
-.section_announcement-bar a:visited { color: #ffffff; }
-.section_announcement-bar a:hover { color: #ffffff; opacity: .8; }
+.section_announcement-bar a:visited {
+  color: #ffffff;
+}
+.section_announcement-bar a:hover {
+  color: #ffffff;
+  opacity: .8;
+}
 .announcement-bar_container {
   justify-content: space-between;
   align-items: center;
@@ -5188,8 +5189,13 @@ figcaption {
 .section_footer-newsletter label {
   color: #ffffff;
 }
-.section_footer-newsletter a:not(.button):not(.w-button):not(.footer-newsletter_promo):visited { color: #ffffff; }
-.section_footer-newsletter a:not(.button):not(.w-button):not(.footer-newsletter_promo):hover { color: #ffffff; opacity: .7; }
+.section_footer-newsletter a:not(.button):not(.w-button):not(.footer-newsletter_promo):visited {
+  color: #ffffff;
+}
+.section_footer-newsletter a:not(.button):not(.w-button):not(.footer-newsletter_promo):hover {
+  color: #ffffff;
+  opacity: .7;
+}
 /* Buttons keep their own dark text on white background.
    `!important` here overrides the more-specific white-text rule above
    which would otherwise color the spans INSIDE the promo links white. */
@@ -5403,8 +5409,13 @@ figcaption {
 .section_footer-bottom li {
   color: #ffffff;
 }
-.section_footer-bottom a:visited { color: #ffffff; }
-.section_footer-bottom a:hover { color: #ffffff; opacity: .7; }
+.section_footer-bottom a:visited {
+  color: #ffffff;
+}
+.section_footer-bottom a:hover {
+  color: #ffffff;
+  opacity: .7;
+}
 /* Allow intentionally muted elements to override (e.g. legal links, copyright) */
 .section_footer-bottom .text-style-muted,
 .section_footer-bottom .text-color-muted {
@@ -6556,7 +6567,10 @@ button.li-lang_dd-link {
 .ph_delivery.is-low .ph_delivery-dot {
   background-color: #f59e0b;
 }
-.ph_delivery strong { font-weight: 700; color: #22c55e; }
+.ph_delivery strong {
+  font-weight: 700;
+  color: #22c55e;
+}
 .ph_atc-wrap {
   width: 100%;
 }
@@ -6993,7 +7007,6 @@ button.li-lang_dd-link {
   color: #fff;
 }
 .we-care-banner_counter-num {
-  /* Der Zaehler laeuft live hoch — Ziffern gleich breit, sonst zappelt die Zeile. */
   font-variant-numeric: tabular-nums;
   display: inline-block;
   font-family: "Futura PT", sans-serif;
@@ -8430,8 +8443,6 @@ button.li-lang_dd-link {
 }
 .blog_tag.is-large.is-dark {
   background-color: #f4f4f4;
-  /* .blog_tag erbt color:#fff (gedacht fuer Tags ueber einem Foto im Blog-Hero).
-     Auf dem hellen Grau war das weiss auf #f4f4f4 = Kontrast 1.07:1. */
   color: #0f0f0f;
 }
 /* Rich text (used on Job Details) */
@@ -8596,7 +8607,9 @@ button.li-lang_dd-link {
   padding: 6.25rem 2.5rem 6.25rem 6.25rem;
 }
 /* image right: swap grid order + mirror padding */
-.section_split-image .split-image_layout.is-image-right .split-image_image-block { order: 2; }
+.section_split-image .split-image_layout.is-image-right .split-image_image-block {
+  order: 2;
+}
 .section_split-image .split-image_layout.is-image-right .split-image_content-wrapper {
   order: 1;
   margin-left: 0;
@@ -10248,7 +10261,10 @@ button.li-lang_dd-link {
 .reseller-hub_acc-body {
   padding: 0 0 1rem 2.25rem;
 }
-.reseller-hub_acc-body p { color: rgba(255,255,255,.78); margin: 0; }
+.reseller-hub_acc-body p {
+  color: rgba(255,255,255,.78);
+  margin: 0;
+}
 .reseller-hub_actions {
   display: flex;
   flex-direction: column;
@@ -10783,7 +10799,10 @@ button.li-lang_dd-link {
   justify-content: center;
   transition: transform .15s;
 }
-.news-updates_link-arrow svg { width: .9rem; height: .9rem; }
+.news-updates_link-arrow svg {
+  width: .9rem;
+  height: .9rem;
+}
 .news-updates_link:hover .news-updates_link-arrow { transform: translateX(2px); }
 .news-updates_blue-btn {
   width: 100%;
@@ -11401,7 +11420,11 @@ button.li-lang_dd-link {
   line-height: 1.1;
   margin-top: 1rem;
 }
-.article_body p { font-size: 1rem; font-weight: 400; line-height: 1.5; }
+.article_body p {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
 .article_body blockquote {
   border: 0;
   padding: 0;
@@ -11413,8 +11436,14 @@ button.li-lang_dd-link {
   line-height: 1.15;
   text-align: center;
 }
-.article_body a { color: inherit; text-decoration: underline; }
-.article_body img { max-width: 100%; height: auto; }
+.article_body a {
+  color: inherit;
+  text-decoration: underline;
+}
+.article_body img {
+  max-width: 100%;
+  height: auto;
+}
 /* More stories (light article cards) */
 .section_more-stories {
   width: 100%;
@@ -11953,7 +11982,10 @@ button.li-lang_dd-link {
   display: inline-flex;
   color: var(--rating-stars-color, #fd6612);
 }
-.rating-bar_stars svg { width: 100%; height: 100%; }
+.rating-bar_stars svg {
+  width: 100%;
+  height: 100%;
+}
 .rating-bar_score {
   font-weight: 500;
 }
@@ -12835,7 +12867,11 @@ button.li-lang_dd-link {
   flex-direction: column;
   gap: .375rem;
 }
-.jm-review-form_field label { font-size: .8125rem; font-weight: 600; color: #0f0f0f; }
+.jm-review-form_field label {
+  font-size: .8125rem;
+  font-weight: 600;
+  color: #0f0f0f;
+}
 .jm-review-form_field input,
 .jm-review-form_field textarea {
   border: 1px solid #d0d0d0;
@@ -12847,7 +12883,10 @@ button.li-lang_dd-link {
 }
 .jm-review-form_field input:focus,
 .jm-review-form_field textarea:focus { outline: none; border-color: #0f0f0f; }
-.jm-review-form_field textarea { resize: vertical; min-height: 6rem; }
+.jm-review-form_field textarea {
+  resize: vertical;
+  min-height: 6rem;
+}
 .jm-review-stars-input {
   display: flex;
   gap: .25rem;
@@ -12862,7 +12901,9 @@ button.li-lang_dd-link {
   color: #d9d9d9;
   transition: color .12s ease;
 }
-.jm-review-stars-input button.is-active { color: #0f0f0f; }
+.jm-review-stars-input button.is-active {
+  color: #0f0f0f;
+}
 .jm-review-form_submit {
   margin-top: .25rem;
   width: 100%;
@@ -13094,7 +13135,10 @@ button.li-lang_dd-link {
   width: 1rem;
   height: 1rem;
 }
-.ph-dim-modal_downloads-icon svg { width: 100%; height: 100%; }
+.ph-dim-modal_downloads-icon svg {
+  width: 100%;
+  height: 100%;
+}
 /* =============================================================
    DICOTA PDP — Produkt-Shots auf grauem Hintergrund
    Produktfotos haben einen weißen Hintergrund. Per
@@ -13473,7 +13517,10 @@ img.product-header_gallery-image {
   color: #0f0f0f;
   flex-shrink: 0;
 }
-.no-access_icon svg { width: 1.75rem; height: 1.75rem; }
+.no-access_icon svg {
+  width: 1.75rem;
+  height: 1.75rem;
+}
 .no-access_content {
   display: flex;
   flex-direction: column;
@@ -15590,11 +15637,6 @@ img.product-header_gallery-image {
   .faq_wrapper {
     grid-template-columns: 1fr;
   }
-  /* Hier stand `.article_grid  .section_image-hero { min-height: 50vh }`.
-     .section_image-hero ist eine eigenstaendige Section und lag nie in einem
-     .article_grid — die Regel hat also nie gegriffen (vermutlich ein verlorenes
-     Komma). Basis + 479px-Breakpoint setzen beide 60vh; wenn auf Tablet 50vh
-     gewollt ist, hier `.section_image-hero { min-height: 50vh; }` eintragen. */
   .section_split-image-left,
   .section_split-image-right {
     grid-template-columns: 1fr;
@@ -18293,7 +18335,6 @@ img.product-header_gallery-image {
   display: contents;
 }
 
-
 /* =============================================================
    MINI-CART — Drawer 1:1 nach Figma 5404-5613
    Ersetzt den fruehen (Webflow-generierten) Mini-Cart-Look.
@@ -18315,10 +18356,6 @@ img.product-header_gallery-image {
 /* --- Panel --- */
 .mini-cart_component {
   background-color: var(--base-color-neutral--white);
-  /* Der Drawer liegt im .nav_component. Auf der Startseite setzt
-     .nav_component.is-transparent color:#ffffff — der Text im weissen Drawer
-     wurde dadurch unsichtbar. Eine direkte Deklaration schlaegt Vererbung,
-     unabhaengig von der Spezifitaet des Transparent-Zustands. */
   color: var(--base-color-neutral--black, #0f0f0f);
   flex-direction: column;
   align-items: stretch;
@@ -18349,7 +18386,9 @@ img.product-header_gallery-image {
   overflow-y: auto;
   scrollbar-width: none;
 }
-.mini-cart_scroll::-webkit-scrollbar { display: none; }
+.mini-cart_scroll::-webkit-scrollbar {
+  display: none;
+}
 
 /* --- Kopfzeile --- */
 .mini-cart_head {
@@ -18366,7 +18405,9 @@ img.product-header_gallery-image {
   line-height: 1.34;
   margin: 0;
 }
-.mini-cart_title-count { font: inherit; }
+.mini-cart_title-count {
+  font: inherit;
+}
 .mini-cart_close {
   color: var(--base-color-neutral--black, #0f0f0f);
   cursor: pointer;
@@ -18377,7 +18418,9 @@ img.product-header_gallery-image {
   height: 1.75rem;
   display: flex;
 }
-.mini-cart_close:hover { opacity: .6; }
+.mini-cart_close:hover {
+  opacity: .6;
+}
 
 /* --- Social-Proof-Streifen --- */
 .mini-cart_trust-banner {
@@ -18396,7 +18439,9 @@ img.product-header_gallery-image {
   letter-spacing: -.00625rem;
   margin: 0;
 }
-.mini-cart_trust-strong { font-weight: 500; }
+.mini-cart_trust-strong {
+  font-weight: 500;
+}
 
 /* --- Fortschritt bis Gratis-Versand --- */
 .mini-cart_progress {
@@ -18409,9 +18454,13 @@ img.product-header_gallery-image {
 }
 /* Zweite Variante (Schwelle erreicht) startet aus; Alpine schaltet zur
    Laufzeit per Inline-Style zwischen beiden Bloecken um. */
-.mini-cart_progress.is-unlocked { display: none; }
+.mini-cart_progress.is-unlocked {
+  display: none;
+}
 /* Der Erreicht-Zustand ist ein Satz, kein Betrag — Versalien waeren hier zu laut. */
-.mini-cart_progress.is-unlocked .mini-cart_progress-amount { text-transform: none; }
+.mini-cart_progress.is-unlocked .mini-cart_progress-amount {
+  text-transform: none;
+}
 .mini-cart_progress-text {
   font-family: "Futura PT", sans-serif;
   font-size: .875rem;
@@ -18438,7 +18487,9 @@ img.product-header_gallery-image {
   height: 100%;
   transition: width .4s ease;
 }
-.mini-cart_footer_progress-bar-innner.is-full { width: 100%; }
+.mini-cart_footer_progress-bar-innner.is-full {
+  width: 100%;
+}
 
 /* --- Warenkorb-Positionen --- */
 .mini-cart_line-item {
@@ -18496,7 +18547,9 @@ img.product-header_gallery-image {
   width: 100%;
   display: flex;
 }
-.mini-cart_line-item-content.justify-center { align-items: center; }
+.mini-cart_line-item-content.justify-center {
+  align-items: center;
+}
 .mini-cart_line-item_title {
   font-family: "Futura PT", sans-serif;
   font-size: .875rem;
@@ -18544,8 +18597,14 @@ img.product-header_gallery-image {
   padding: 0;
   display: flex;
 }
-.mini-cart_line-item_quantity-adjust:hover { opacity: .6; }
-.mini-cart_qty-icon { width: 100%; height: 100%; display: flex; }
+.mini-cart_line-item_quantity-adjust:hover {
+  opacity: .6;
+}
+.mini-cart_qty-icon {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
 .mini-cart_line-item_quantity-value {
   color: var(--base-color-neutral--black, #0f0f0f);
   text-align: center;
@@ -18563,7 +18622,9 @@ img.product-header_gallery-image {
   letter-spacing: .0525rem;
   text-transform: uppercase;
 }
-.mini-cart_line-item_quantity-value:focus { outline: 0; }
+.mini-cart_line-item_quantity-value:focus {
+  outline: 0;
+}
 .mini-cart_line-item-remove {
   color: var(--base-color-neutral--black, #0f0f0f);
   cursor: pointer;
@@ -18578,7 +18639,11 @@ img.product-header_gallery-image {
   color: var(--base-color-neutral--black, #0f0f0f);
   opacity: .6;
 }
-.mini-cart_trash-icon { width: 100%; height: 100%; display: flex; }
+.mini-cart_trash-icon {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
 
 /* --- Cross-Sell „Das koennte dazu passen“ ---
    margin-top:auto haelt den Streifen unten am Scrollbereich, also direkt
@@ -18590,7 +18655,9 @@ img.product-header_gallery-image {
   padding: 1.5rem 0;
   display: flex;
 }
-.mini-cart_crosssell.hide { display: none; }
+.mini-cart_crosssell.hide {
+  display: none;
+}
 .mini-cart_crosssell-title {
   color: var(--base-color-neutral--black, #0f0f0f);
   text-align: left;
@@ -18607,7 +18674,9 @@ img.product-header_gallery-image {
   overflow-x: auto;
   scrollbar-width: none;
 }
-.mini-cart_crosssell-list::-webkit-scrollbar { display: none; }
+.mini-cart_crosssell-list::-webkit-scrollbar {
+  display: none;
+}
 .mini-cart_crosssell-item {
   background-color: var(--base-color-neutral--white);
   flex: none;
@@ -18658,7 +18727,10 @@ img.product-header_gallery-image {
   font-weight: 400;
   line-height: 1.34;
 }
-.mini-cart_crosssell-form { flex: none; margin: 0; }
+.mini-cart_crosssell-form {
+  flex: none;
+  margin: 0;
+}
 .mini-cart_crosssell-add {
   background-color: var(--base-color-neutral--black, #0f0f0f);
   cursor: pointer;
@@ -18673,8 +18745,14 @@ img.product-header_gallery-image {
   padding: .5rem;
   display: flex;
 }
-.mini-cart_crosssell-add:hover { opacity: .85; }
-.mini-cart_plus-icon { width: 100%; height: 100%; display: flex; }
+.mini-cart_crosssell-add:hover {
+  opacity: .85;
+}
+.mini-cart_plus-icon {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
 
 /* --- Footer --- */
 .mini-cart_footer {
@@ -18775,7 +18853,10 @@ img.product-header_gallery-image {
   padding-left: 0;
   display: flex;
 }
-.mini-cart_payment-item { flex: none; list-style: none; }
+.mini-cart_payment-item {
+  flex: none;
+  list-style: none;
+}
 .mini-cart_payment-svg-wrap {
   background-color: var(--base-color-neutral--white);
   border-radius: .25rem;
@@ -18785,8 +18866,16 @@ img.product-header_gallery-image {
   height: 1.5rem;
   display: flex;
 }
-.mini-cart_payment-svg { width: 100%; height: 100%; display: block; }
-.mini-cart_payment-fallback { object-fit: contain; width: 1.5rem; height: 1rem; }
+.mini-cart_payment-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.mini-cart_payment-fallback {
+  object-fit: contain;
+  width: 1.5rem;
+  height: 1rem;
+}
 .mini-cart_guarantee {
   grid-column-gap: .25rem;
   color: var(--base-color-neutral--black, #0f0f0f);
@@ -18838,8 +18927,12 @@ img.product-header_gallery-image {
     width: 5.25rem;
     height: 6.375rem;
   }
-  .mini-cart_line-item_title.mini-cart_line-item_title { max-width: none; }
-  .mini-cart_crosssell-info.mini-cart_crosssell-info { width: 12.5rem; }
+  .mini-cart_line-item_title.mini-cart_line-item_title {
+    max-width: none;
+  }
+  .mini-cart_crosssell-info.mini-cart_crosssell-info {
+    width: 12.5rem;
+  }
 }
 
 /* Der Static-Block "Search Suggestions" bringt einen zusaetzlichen Wrapper mit
@@ -18858,7 +18951,9 @@ img.product-header_gallery-image {
    ============================================================= */
 
 /* --- Predictive Search: kompakte Liste in der linken Spalte --- */
-.nav_search-articles:empty { display: none; }
+.nav_search-articles:empty {
+  display: none;
+}
 .nav_search-article-head {
   color: var(--base-color-neutral--neutral, #666);
   letter-spacing: .05em;
@@ -18875,7 +18970,9 @@ img.product-header_gallery-image {
   list-style: none;
   display: flex;
 }
-.nav_search-article-item { margin: 0; }
+.nav_search-article-item {
+  margin: 0;
+}
 .nav_search-article-link {
   grid-column-gap: .75rem;
   color: inherit;
@@ -18913,8 +19010,12 @@ img.product-header_gallery-image {
 }
 
 /* --- Suchseite: Artikel-Kacheln unter den Produkten --- */
-.filter_articles { margin-top: 3rem; }
-.filter_articles-head { margin-bottom: 1rem; }
+.filter_articles {
+  margin-top: 3rem;
+}
+.filter_articles-head {
+  margin-bottom: 1rem;
+}
 .filter_article-list {
   grid-column-gap: 1rem;
   grid-row-gap: 1rem;
@@ -18956,10 +19057,14 @@ img.product-header_gallery-image {
 }
 
 @media (max-width: 991px) {
-  .filter_article-list.filter_article-list { grid-template-columns: repeat(2, 1fr); }
+  .filter_article-list.filter_article-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 @media (max-width: 767px) {
-  .filter_article-list.filter_article-list { grid-template-columns: 1fr; }
+  .filter_article-list.filter_article-list {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* =============================================================
@@ -18979,13 +19084,19 @@ img.product-header_gallery-image {
   gap: 1.25rem;
 }
 @media (max-width: 991px) {
-  .swiper-slide.is-product-features.is-product-features { width: calc(33.333% - 1rem); }
+  .swiper-slide.is-product-features.is-product-features {
+    width: calc(33.333% - 1rem);
+  }
 }
 @media (max-width: 767px) {
-  .swiper-slide.is-product-features.is-product-features { width: calc(50% - .75rem); }
+  .swiper-slide.is-product-features.is-product-features {
+    width: calc(50% - .75rem);
+  }
 }
 @media (max-width: 479px) {
-  .swiper-slide.is-product-features.is-product-features { width: 70%; }
+  .swiper-slide.is-product-features.is-product-features {
+    width: 70%;
+  }
 }
 
 /* =============================================================
@@ -19119,8 +19230,14 @@ img.product-header_gallery-image {
   padding: 0;
   display: flex;
 }
-.ph_qty-btn:hover { opacity: .6; }
-.ph_qty-icon { width: 100%; height: 100%; display: flex; }
+.ph_qty-btn:hover {
+  opacity: .6;
+}
+.ph_qty-icon {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
 .ph_qty-value {
   color: var(--base-color-neutral--black, #0f0f0f);
   text-align: center;
@@ -19139,7 +19256,9 @@ img.product-header_gallery-image {
 }
 .ph_qty-value::-webkit-outer-spin-button,
 .ph_qty-value::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
-.ph_qty-value:focus { outline: 0; }
+.ph_qty-value:focus {
+  outline: 0;
+}
 
 /* --- Produktkachel: Geraetegroesse + Status-Badges --- */
 .product-card_badge.is-dark {
@@ -19199,7 +19318,9 @@ img.product-header_gallery-image {
   transform: scaleX(1);
 }
 @media (prefers-reduced-motion: reduce) {
-  .nav_menu-label::after { transition: none; }
+  .nav_menu-label::after {
+    transition: none;
+  }
 }
 
 /* =============================================================
@@ -19255,7 +19376,11 @@ img.product-header_gallery-image {
   padding: 0;
   display: flex;
 }
-.mini-cart_info-icon { width: 100%; height: 100%; display: flex; }
+.mini-cart_info-icon {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
 .mini-cart_tooltip {
   background-color: var(--base-color-neutral--black, #0f0f0f);
   color: #fff;
@@ -19292,7 +19417,9 @@ img.product-header_gallery-image {
 }
 /* Nahe am rechten Panelrand nicht ueber die Kante laufen */
 @media (max-width: 767px) {
-  .mini-cart_tooltip { width: 12rem; }
+  .mini-cart_tooltip {
+    width: 12rem;
+  }
 }
 
 /* --- Produktkachel: Size-Tag liegt jetzt im Bild bei den Badges --- */
@@ -19381,7 +19508,9 @@ img.product-header_gallery-image {
     padding: .25rem .4375rem;
     font-size: 1.5rem;
   }
-  .we-care-banner_counter-dot.we-care-banner_counter-dot { font-size: 1.5rem; }
+  .we-care-banner_counter-dot.we-care-banner_counter-dot {
+    font-size: 1.5rem;
+  }
 }
 
 /* =============================================================
@@ -19415,9 +19544,16 @@ img.product-header_gallery-image {
   font-size: .875rem;
 }
 @media (max-width: 767px) {
-  .product-sticky_media.product-sticky_media { width: 2.75rem; height: 2.75rem; }
-  .product-sticky_title.product-sticky_title { font-size: .875rem; }
-  .product-sticky_btn.product-sticky_btn { padding: .5rem 1rem; }
+  .product-sticky_media.product-sticky_media {
+    width: 2.75rem;
+    height: 2.75rem;
+  }
+  .product-sticky_title.product-sticky_title {
+    font-size: .875rem;
+  }
+  .product-sticky_btn.product-sticky_btn {
+    padding: .5rem 1rem;
+  }
 }
 
 /* =============================================================
@@ -19456,7 +19592,9 @@ img.product-header_gallery-image {
   }
 }
 @media (max-width: 991px) {
-  .nav_menu-dropdown .dropdown-icon.dropdown-icon { right: 1rem; }
+  .nav_menu-dropdown .dropdown-icon.dropdown-icon {
+    right: 1rem;
+  }
 }
 
 /* =============================================================
@@ -19477,7 +19615,9 @@ img.product-header_gallery-image {
 .recommended-products_slider-wrapper.recommended-products_slider-wrapper {
   position: relative;
 }
-.recommended-products_arrow.recommended-products_arrow { z-index: 3; }
+.recommended-products_arrow.recommended-products_arrow {
+  z-index: 3;
+}
 
 /* Sicherheitsnetz: falls ein Vorfahre doch scrollt, hier abschneiden
    statt eine Scrollbar zu erzeugen. overflow-x:clip laesst position:sticky
@@ -19643,31 +19783,52 @@ body {
   line-height: 1.2;
   margin: 2.5rem 0 .75rem;
 }
-.shopify-policy__body h2 { font-size: 1.5rem; text-transform: uppercase; }
-.shopify-policy__body h3 { font-size: 1.25rem; }
-.shopify-policy__body h4 { font-size: 1rem; }
-.shopify-policy__body p { margin: 0 0 1rem; }
+.shopify-policy__body h2 {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+.shopify-policy__body h3 {
+  font-size: 1.25rem;
+}
+.shopify-policy__body h4 {
+  font-size: 1rem;
+}
+.shopify-policy__body p {
+  margin: 0 0 1rem;
+}
 .shopify-policy__body a {
   color: inherit;
   text-underline-offset: .15em;
   text-decoration: underline;
 }
-.shopify-policy__body a:hover { opacity: .7; }
+.shopify-policy__body a:hover {
+  opacity: .7;
+}
 .shopify-policy__body ul,
 .shopify-policy__body ol { margin: 0 0 1rem; padding-left: 1.25rem; }
-.shopify-policy__body li { margin-bottom: .375rem; }
-.shopify-policy__body strong { font-weight: 500; }
+.shopify-policy__body li {
+  margin-bottom: .375rem;
+}
+.shopify-policy__body strong {
+  font-weight: 500;
+}
 
 /* Der Editor-Export bringt oft Ketten aus <br> statt Absaetzen mit —
    die erzeugen sonst riesige Luecken. */
-.shopify-policy__body br + br { display: none; }
+.shopify-policy__body br + br {
+  display: none;
+}
 
 @media (max-width: 767px) {
   .shopify-policy__container.shopify-policy__container {
     padding: 3rem 1.25rem;
   }
-  .shopify-policy__title.shopify-policy__title { margin-bottom: 1.5rem; }
-  .shopify-policy__title h1 { font-size: 1.5rem; }
+  .shopify-policy__title.shopify-policy__title {
+    margin-bottom: 1.5rem;
+  }
+  .shopify-policy__title h1 {
+    font-size: 1.5rem;
+  }
 }
 
 /* =============================================================
@@ -19681,13 +19842,17 @@ body {
   grid-template-columns: 1fr;
   display: block;
 }
-.filter_filters-wrapper { display: none; }
+.filter_filters-wrapper {
+  display: none;
+}
 .section_filter .coll_filter-bar {
   padding-left: 0;
   padding-right: 0;
 }
 /* Artikel-Treffer unter dem Produktraster */
-.section_filter .filter_articles { margin-top: 3rem; }
+.section_filter .filter_articles {
+  margin-top: 3rem;
+}
 
 /* =============================================================
    MINI-CART — Empfehlungen als Slider
@@ -19729,9 +19894,15 @@ body {
   transform: translateY(-50%);
   transition: opacity .15s;
 }
-.mini-cart_reco-arrow.is-prev { left: 1.125rem; }
-.mini-cart_reco-arrow.is-next { right: 1.125rem; }
-.mini-cart_reco-arrow:hover { background-color: #fff; }
+.mini-cart_reco-arrow.is-prev {
+  left: 1.125rem;
+}
+.mini-cart_reco-arrow.is-next {
+  right: 1.125rem;
+}
+.mini-cart_reco-arrow:hover {
+  background-color: #fff;
+}
 .mini-cart_reco-arrow.is-disabled {
   opacity: 0;
   pointer-events: none;
@@ -19743,8 +19914,12 @@ body {
 }
 
 @media (max-width: 767px) {
-  .mini-cart_reco-arrow.mini-cart_reco-arrow { display: none; }
-  .mini-cart_reco-slider.mini-cart_reco-slider { padding: 0 1.25rem; }
+  .mini-cart_reco-arrow.mini-cart_reco-arrow {
+    display: none;
+  }
+  .mini-cart_reco-slider.mini-cart_reco-slider {
+    padding: 0 1.25rem;
+  }
 }
 
 /* =============================================================
@@ -19771,8 +19946,12 @@ body {
   padding-left: 0;
   padding-right: 0;
 }
-.mini-cart_reco-arrow.is-next { right: .75rem; }
-.mini-cart_reco-arrow.is-prev { left: .75rem; }
+.mini-cart_reco-arrow.is-next {
+  right: .75rem;
+}
+.mini-cart_reco-arrow.is-prev {
+  left: .75rem;
+}
 
 @media (max-width: 767px) {
   .mini-cart_reco-slider.mini-cart_reco-slider {
@@ -19781,12 +19960,20 @@ body {
   }
 }
 /* =============================================================
-   DICOTA — Merkliste: Zähler im Header
-   Nutzt die Warenkorb-Badge-Optik (.nav_shop-quantity); hier nur
-   das Ausblenden bei leerer Liste.
+   DICOTA — Merkliste: Herz im Header
+   Das Icon-Snippet ist mit den Produktkacheln geteilt und muss dort
+   outline bleiben (gefüllt = gemerkt). Hier deshalb nur für den
+   Header auf gefüllt gesetzt, passend zu Suche/Konto/Warenkorb.
+   Die Herzform füllt ihre 24er-viewBox breiter aus als die anderen
+   Icons, deshalb eine Stufe kleiner als .icon-embed-xsmall (1.5rem).
    ============================================================= */
-.nav_wishlist-count.is-empty {
-  display: none;
+.nav_wishlist svg path {
+  fill: currentColor;
+  stroke: none;
+}
+.nav_wishlist .icon-embed-xsmall {
+  width: 1.25rem;
+  height: 1.25rem;
 }
 /* =============================================================
    DICOTA — Produktvergleich: Sammelleiste (Product Hero)
@@ -20044,4 +20231,18 @@ body {
   .compare_col img {
     max-width: 5rem;
   }
+}
+/* =============================================================
+   DICOTA — Lagerstatus: Sonderfertigung
+   Vierter Zustand neben grün (verfügbar), orange (is-low) und
+   grau (is-unavailable). Blau grenzt ab, ohne wie ein Fehler zu
+   wirken. flex-start, weil dieser Text mehrzeilig umbricht — sonst
+   schwebte der Punkt mittig neben dem Absatz.
+   ============================================================= */
+.ph_delivery.is-ondemand {
+  align-items: flex-start;
+}
+.ph_delivery.is-ondemand .ph_delivery-dot {
+  background-color: #3b82f6;
+  margin-top: .34rem;
 }
