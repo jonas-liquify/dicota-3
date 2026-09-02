@@ -38,8 +38,8 @@
               "type": "contact-location",
               "name": "Contact Location",
               "settings": {
-                "text_location": "Switzerland",
-                "richtext_address": "<p><strong>Europa</strong><br/>DICOTA GmbH<br/>Fabrikstrasse 18<br/>73277 Owen</p><p>GERMANY<br/>Telephone: +49 7021 72508 0</p><p><br/><strong>MEA & India</strong><br/>DICOTA MEA<br/>30-1-1630<br/>1st Floor, DMCC Business Centre<br/>PO Box: 30562 JLT, Dubai </p><p>UAE<br/>Telephone: +97 14 3214 210</p><p>India<br/>Telephone: +91 99 005 23128<br/><br/><strong>Asia Pacific</strong><br/>DICOTA APAC Limited<br/>Unit 1301, 13/F Arion Commercial Centre<br/>2-12 Queen’s Road West, Sheung Wan<br/>HONG KONG<br/>Telephone: +852 3543 1659<br/><br/><strong>Asia Pacific</strong><br/>DICOTA APAC Limited<br/>Unit 1301, 13/F Arion Commercial Centre<br/>2-12 Queen’s Road West, Sheung Wan<br/>HONG KONG<br/>Telephone: +852 3543 1659</p>"
+                "text_location": "REGIONAL",
+                "richtext_address": "<p><strong>Europa</strong><br/>DICOTA GmbH<br/>Fabrikstrasse 18<br/>73277 Owen</p><p>GERMANY<br/>Telephone: +49 7021 72508 0</p><p><br/><strong>MEA & India</strong><br/>DICOTA MEA<br/>30-1-1630<br/>1st Floor, DMCC Business Centre<br/>PO Box: 30562 JLT, Dubai </p><p>UAE<br/>Telephone: +97 14 3214 210<br/><br/><strong>Asia Pacific</strong><br/>DICOTA APAC Limited<br/>Unit 1301, 13/F Arion Commercial Centre<br/>2-12 Queen’s Road West, Sheung Wan<br/>HONG KONG<br/>Telephone: +852 3543 1659</p>"
               },
               "blocks": {}
             }
@@ -58,8 +58,8 @@
         "image_contact_photo": "shopify://shop_images/3_Mallorca-447x302.jpg",
         "text_contact_name": "DICOTA - always there for you!",
         "text_contact_role": "",
-        "text_address_subline": "Address",
-        "richtext_address_text": "<p>DICOTA SCHWEIZ AG<br/>Churerstrasse 20<br/>8808 Pfäffikon SZ<br/>SWITZERLAND</p>",
+        "text_address_subline": "HEADQUARTERS",
+        "richtext_address_text": "<p>DICOTA SCHWEIZ AG<br/>Churerstrasse 20<br/>8808 Pfäffikon SZ<br/>SWITZERLAND<br/>TELEPHONE: +41 55 416 50 30</p>",
         "text_contact_subline": "Contact",
         "text_opening_hours": ""
       }
