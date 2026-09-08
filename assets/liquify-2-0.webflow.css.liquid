@@ -20235,7 +20235,10 @@ body {
   box-shadow: 0 -3px 11.95px #0000001a;
   padding: 1rem 2rem;
 }
+/* display MUSS mit: .button bringt hier keins mit (nur .w-button ist
+   inline-block), und ein Inline-Element ignoriert width vollstaendig. */
 .li-drawer_footer .button {
+  display: block;
   width: 100%;
   text-align: center;
 }
@@ -20279,19 +20282,25 @@ body {
   font-size: .875rem;
   color: #6b6b6b;
 }
+/* Gestapelt statt nebeneinander: der Warenkorb-Button ist die primaere
+   Aktion und spannt ueber die volle Breite, das Entfernen sitzt darunter. */
 .li-drawer_item-actions {
   display: flex;
-  align-items: center;
-  gap: .75rem;
-  margin-top: .25rem;
+  flex-direction: column;
+  align-items: stretch;
+  gap: .5rem;
+  margin-top: .5rem;
 }
 .li-drawer_item-add {
+  display: block;
+  width: 100%;
   border: 1px solid #0f0f0f;
   background: none;
   cursor: pointer;
-  font-size: .75rem;
-  padding: .3rem .7rem;
+  font-size: .8125rem;
+  padding: .45rem .7rem;
   border-radius: 100vw;
+  text-align: center;
 }
 .li-drawer_item-add:hover {
   background-color: #0f0f0f;
@@ -20308,6 +20317,7 @@ body {
   font-size: .75rem;
   text-decoration: underline;
   color: #6b6b6b;
+  align-self: center;
 }
 /* --- Kopf-Icons --- */
 .nav_compare {
