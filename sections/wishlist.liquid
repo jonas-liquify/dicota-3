@@ -4,7 +4,9 @@
     <p class="text-size-medium">
 {{ section.settings.text_subline }}
 </p>    </div>
-{% endif %}</div><div class="wishlist_root" data-wishlist-root="" data-label-remove="{{ 'products.wishlist_remove' | t }}"><div class="wishlist_empty" data-wishlist-empty="" hidden=""><p li-object="'products.wishlist_empty' | t" class="text-size-medium">{{ 'products.wishlist_empty' | t }}</p><a href="{{ section.settings.url_weiter_shoppen_link }}" class="button"> <span>{{ section.settings.text_weiter_shoppen_text }}</span> </a></div><div class="coll_grid wishlist_grid" data-wishlist-grid=""></div></div></div></div> {% schema %} {
+{% endif %}</div><div class="wishlist_root" data-wishlist-root="" data-label-remove="{{ 'products.wishlist_remove' | t }}"><div class="wishlist_empty" data-wishlist-empty="" hidden=""><p li-object="'products.wishlist_empty' | t" class="text-size-medium">{{ 'products.wishlist_empty' | t }}</p>{% if section.settings.url_weiter_shoppen_link != blank %}    <span class="li-guard" li-if="section.settings.url_weiter_shoppen_link != blank">
+    <a href="{{ section.settings.url_weiter_shoppen_link }}" class="button"> <span>{{ section.settings.text_weiter_shoppen_text }}</span> </a>    </span>
+{% endif %}</div><div class="coll_grid wishlist_grid" data-wishlist-grid=""></div></div></div></div> {% schema %} {
     "tag": "section",
     "name": "Wishlist",
     "class": "section_wishlist",

@@ -77,9 +77,20 @@
 {% endfor %}</div>    </div>
 {% endif %}<div class="hide w-embed">{% liquid
   assign ph_v = product.selected_or_first_available_variant
+  # Sonderfertigung: SelectLine setzt sl_ART.extra_ONDEMAND. Ein typisiertes
+  # Metafeld liefert in Liquid ein Objekt, das IMMER truthy ist - deshalb erst
+  # ueber .value gehen und nur zurueckfallen, wenn das Feld untypisiert ist.
+  assign ph_od = product.metafields.sl_ART.extra_ONDEMAND
+  assign ph_od_val = ph_od.value | default: ph_od
+  assign ph_ondemand = false
+  if ph_od_val == true or ph_od_val == 'true'
+    assign ph_ondemand = true
+  endif
   assign ph_stock = 'out'
   if ph_v.available
-    if ph_v.inventory_management == blank
+    if ph_ondemand and ph_v.inventory_management == blank
+      assign ph_stock = 'ondemand'
+    elsif ph_v.inventory_management == blank
       assign ph_stock = 'high'
     elsif ph_v.inventory_quantity > 100
       assign ph_stock = 'high'
@@ -87,7 +98,11 @@
       assign ph_stock = 'low'
     endif
   endif
-%}</div>{% if ph_stock == 'high' %}    <div li-if="ph_stock == 'high'" class="ph_delivery">
+%}</div>{% if ph_stock == 'ondemand' %}    <div li-if="ph_stock == 'ondemand'" class="ph_delivery is-ondemand">
+    <span class="ph_delivery-dot"></span><span>
+{{ block.settings.text_sonderfertigung_text }}
+</span>    </div>
+{% endif %}{% if ph_stock == 'high' %}    <div li-if="ph_stock == 'high'" class="ph_delivery">
     <span class="ph_delivery-dot"></span><span>
 {{ block.settings.text_verfugbar_text }}
 </span>    </div>
@@ -174,6 +189,12 @@
             "type": "text",
             "label": "Label Segment",
             "default": "Segment"
+        },
+        {
+            "id": "text_sonderfertigung_text",
+            "type": "text",
+            "label": "Sonderfertigung Text",
+            "default": "The Product will be specially produced for you. So, please allow a couple of days longer lead time."
         },
         {
             "id": "text_verfugbar_text",
