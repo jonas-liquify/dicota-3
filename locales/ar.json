@@ -9,6 +9,7 @@
  */
 {
   "general": {
+    "close": "إغلاق",
     "back": "العودة",
     "clear": "مسح",
     "filters": "المرشحات",
@@ -4604,6 +4605,11 @@
     "free_shipping_text": "تحصل على شحن مجاني لهذا الطلب."
   },
   "products": {
+    "compare_title": "المقارنة",
+    "compare_remove": "إزالة",
+    "compare_reco_title": "من الفئة نفسها",
+    "wishlist_add_all": "أضف الكل إلى السلة",
+    "wishlist_added": "تمت الإضافة",
     "wishlist_title": "قائمة الرغبات",
     "wishlist_empty": "قائمة رغباتك فارغة حتى الآن.",
     "wishlist_remove": "إزالة من قائمة الرغبات",

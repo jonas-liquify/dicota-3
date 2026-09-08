@@ -9,6 +9,7 @@
  */
 {
   "general": {
+    "close": "Zamknij",
     "back": "Powrót",
     "clear": "Wyczyść",
     "filters": "Filtry",
@@ -95,6 +96,11 @@
     }
   },
   "products": {
+    "compare_title": "Porównanie",
+    "compare_remove": "Usuń",
+    "compare_reco_title": "Z tej samej kategorii",
+    "wishlist_add_all": "Dodaj wszystko do koszyka",
+    "wishlist_added": "Dodano",
     "wishlist_title": "Lista życzeń",
     "wishlist_empty": "Twoja lista życzeń jest jeszcze pusta.",
     "wishlist_remove": "Usuń z listy życzeń",

@@ -2,6 +2,7 @@
  * DICOTA - Merkliste (Wishlist)
  * ---------------------------------------------------------------------------
  * Rein clientseitig, localStorage. Kein Konto-Sync, kein Backend.
+ * Die Liste lebt in einem Drawer im Header, aufgebaut wie der Mini-Cart.
  *
  * Speicherformat  localStorage["wishListVariants"] = [{ v: <variantId>, h: "<produkt-handle>" }, ...]
  *                 Aeltere Arrays aus reinen IDs ([123, 456]) werden beim Lesen toleriert
@@ -16,14 +17,15 @@
  *
  * Warum delegiert: Collection-Filter, Suche und Predictive Search tauschen ganze
  * Sections per Section Rendering API aus. Einzeln gebundene Listener waeren danach
- * weg; ein delegierter Listener auf document ueberlebt jedes Rerender. Deshalb
- * braucht es hier auch keine Re-Init-Funktion und kein "sections-rendered"-Event.
+ * weg; ein delegierter Listener auf document ueberlebt jedes Rerender.
  */
 (function () {
   "use strict";
 
   var KEY = "wishListVariants";
   var SEL = "[li-element='wishlist-button']";
+  var root = (window.Shopify && window.Shopify.routes && window.Shopify.routes.root) || "/";
+  var cache = {};
 
   /* ----- Speicher ----------------------------------------------------- */
 
@@ -71,16 +73,11 @@
     }
   }
 
-  function updateBadges(count) {
-    var nodes = document.querySelectorAll("[data-wishlist-count]");
-    for (var i = 0; i < nodes.length; i++) {
-      nodes[i].textContent = count;
-      nodes[i].classList.toggle("is-empty", count === 0);
-    }
-  }
-
   function announce(list, addedId) {
-    updateBadges(list.length);
+    var counts = document.querySelectorAll("[data-wishlist-count]");
+    for (var i = 0; i < counts.length; i++) {
+      counts[i].textContent = list.length ? "(" + list.length + ")" : "";
+    }
     document.dispatchEvent(new CustomEvent("liquiflow:wishlist-updated", {
       bubbles: true, detail: { count: list.length }
     }));
@@ -103,6 +100,7 @@
     else { list.splice(at, 1); added = false; }
     write(list);
     refresh();
+    renderDrawer();
     announce(list, added ? id : null);
     return added;
   }
@@ -115,6 +113,7 @@
     list.splice(at, 1);
     write(list);
     refresh();
+    renderDrawer();
     announce(list, null);
     return true;
   }
@@ -129,17 +128,10 @@
     toggle: toggle,
     remove: remove,
     refresh: refresh,
-    clear: function () { write([]); refresh(); announce([], null); }
+    clear: function () { write([]); refresh(); renderDrawer(); announce([], null); }
   };
 
-  /* ----- Merklisten-Seite ------------------------------------------------
-   * Clientseitig aus /products/<handle>.js gerendert. Es werden bewusst die
-   * bestehenden .product-card_*-Klassen verwendet, damit die Kacheln aussehen
-   * wie ueberall sonst - ohne den Umweg ueber eine zweite Liquid-Quelle.
-   */
-
-  var root = (window.Shopify && window.Shopify.routes && window.Shopify.routes.root) || "/";
-  var cache = {};
+  /* ----- Hilfen --------------------------------------------------------- */
 
   function getProduct(handle) {
     if (cache[handle]) return Promise.resolve(cache[handle]);
@@ -162,62 +154,132 @@
       .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
   }
 
-  function renderPage() {
-    var host = document.querySelector("[data-wishlist-root]");
-    if (!host) return;
-    var grid = host.querySelector("[data-wishlist-grid]");
-    var empty = host.querySelector("[data-wishlist-empty]");
+  /* Legt eine oder mehrere Varianten in den Warenkorb.
+     Bewusst OHNE 'toggleminicart': das Event wuerde den Mini-Cart oben auf den
+     offenen Merklisten-Drawer schieben. 'cartupdated' genuegt - darauf hoert der
+     Mini-Cart und aktualisiert Zaehler und Inhalt still im Hintergrund. */
+  function addToCart(items) {
+    if (!items.length) return Promise.resolve(null);
+    return fetch(root + "cart/add.js", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ items: items })
+    }).then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (data) {
+        window.dispatchEvent(new CustomEvent("cartupdated"));
+        return data;
+      })
+      .catch(function (e) {
+        if (window.console) console.error("[Wishlist] add to cart", e);
+        return null;
+      });
+  }
+
+  /* ----- Drawer --------------------------------------------------------- */
+
+  function renderDrawer() {
+    var grid = document.querySelector("[data-wishlist-grid]");
+    if (!grid) return;
+    var empty = document.querySelector("[data-wishlist-empty]");
+    var footer = document.querySelector("[data-wishlist-footer]");
     var list = read().filter(function (i) { return i.h; });
 
     if (!list.length) {
+      grid.innerHTML = "";
       if (empty) empty.hidden = false;
-      if (grid) grid.innerHTML = "";
+      if (footer) footer.hidden = true;
       return;
     }
     if (empty) empty.hidden = true;
 
     Promise.all(list.map(function (i) { return getProduct(i.h); })).then(function (items) {
-      var label = host.getAttribute("data-label-remove") || "Entfernen";
       var html = "";
+      var anyAvailable = false;
       for (var k = 0; k < items.length; k++) {
         var p = items[k];
         if (!p) continue;
-        var img = p.featured_image || (p.images && p.images[0]) || "";
+        var vid = list[k].v;
+        var v = null;
+        for (var x = 0; x < p.variants.length; x++) if (p.variants[x].id === vid) v = p.variants[x];
+        if (!v) v = p.variants[0];
+        var img = (v && v.featured_image && v.featured_image.src) || p.featured_image
+                  || (p.images && p.images[0]) || "";
         var url = root + "products/" + p.handle;
-        html += '<div class="coll_grid-item">'
-              +   '<article class="product-card">'
-              +     '<button type="button" li-element="wishlist-button" class="product-card_favorite is-active"'
-              +       ' data-variant-id="' + esc(list[k].v) + '" data-product-handle="' + esc(p.handle) + '"'
-              +       ' aria-label="' + esc(label) + '" aria-pressed="true"><\/button>'
-              +     '<a class="product-card_image-link w-inline-block" href="' + esc(url) + '">'
-              +       '<div class="product-card_image-wrapper"><img class="product-card_image" loading="lazy"'
-              +         ' src="' + esc(img) + '" alt="' + esc(p.title) + '"><\/div><\/a>'
-              +     '<a class="product-card_text-link w-inline-block" href="' + esc(url) + '">'
-              +       '<h4 class="product-card_title">' + esc(p.title) + "<\/h4>"
-              +       '<div class="product-card_price-row"><span class="product-card_price">'
-              +         esc(money(p.price)) + "<\/span><\/div><\/a>"
-              +   "<\/article><\/div>";
+        var ok = !!(v && v.available);
+        if (ok) anyAvailable = true;
+
+        html += '<div class="li-drawer_item">'
+              +   '<div class="li-drawer_item-media">'
+              +     '<a href="' + esc(url) + '"><img src="' + esc(img) + '" alt="' + esc(p.title)
+              +       '" loading="lazy"><\/a><\/div>'
+              +   '<div class="li-drawer_item-info">'
+              +     '<a class="li-drawer_item-title" href="' + esc(url) + '">' + esc(p.title) + "<\/a>"
+              +     '<span class="li-drawer_item-price">' + esc(money(v ? v.price : p.price)) + "<\/span>"
+              +     '<div class="li-drawer_item-actions">'
+              +       '<button type="button" class="li-drawer_item-add" data-wishlist-add="' + vid + '"'
+              +         (ok ? "" : " disabled") + ">"
+              +         esc(grid.getAttribute("data-label-add") || "In den Warenkorb") + "<\/button>"
+              +       '<button type="button" class="li-drawer_item-remove" data-wishlist-remove="' + vid + '">'
+              +         esc(grid.getAttribute("data-label-remove") || "Entfernen") + "<\/button>"
+              +     "<\/div><\/div><\/div>";
       }
       grid.innerHTML = html;
+      if (footer) footer.hidden = !anyAvailable;
     });
   }
 
   /* ----- Verdrahtung ---------------------------------------------------- */
 
   document.addEventListener("click", function (e) {
-    var btn = e.target.closest ? e.target.closest(SEL) : null;
-    if (!btn) return;
-    e.preventDefault();
-    toggle(btn.getAttribute("data-variant-id"), btn.getAttribute("data-product-handle"));
-  });
+    if (!e.target.closest) return;
 
-  document.addEventListener("liquiflow:wishlist-updated", function () {
-    if (document.querySelector("[data-wishlist-root]")) renderPage();
+    var btn = e.target.closest(SEL);
+    if (btn) {
+      e.preventDefault();
+      toggle(btn.getAttribute("data-variant-id"), btn.getAttribute("data-product-handle"));
+      return;
+    }
+
+    var rm = e.target.closest("[data-wishlist-remove]");
+    if (rm) { e.preventDefault(); remove(rm.getAttribute("data-wishlist-remove")); return; }
+
+    var one = e.target.closest("[data-wishlist-add]");
+    if (one) {
+      e.preventDefault();
+      var id = parseInt(one.getAttribute("data-wishlist-add"), 10);
+      one.disabled = true;
+      addToCart([{ id: id, quantity: 1 }]).then(function () {
+        one.textContent = one.getAttribute("data-label-done")
+          || (document.querySelector("[data-wishlist-grid]")
+              && document.querySelector("[data-wishlist-grid]").getAttribute("data-label-added"))
+          || "✓";
+      });
+      return;
+    }
+
+    var all = e.target.closest("[data-wishlist-add-all]");
+    if (all) {
+      e.preventDefault();
+      var wanted = read().filter(function (i) { return i.h; });
+      Promise.all(wanted.map(function (i) { return getProduct(i.h); })).then(function (prods) {
+        var items = [];
+        for (var k = 0; k < prods.length; k++) {
+          var p = prods[k];
+          if (!p) continue;
+          var v = null;
+          for (var x = 0; x < p.variants.length; x++) if (p.variants[x].id === wanted[k].v) v = p.variants[x];
+          if (v && v.available) items.push({ id: v.id, quantity: 1 });
+        }
+        if (!items.length) return;
+        all.disabled = true;
+        addToCart(items).finally(function () { all.disabled = false; });
+      });
+    }
   });
 
   function boot() {
     refresh();
-    renderPage();
+    renderDrawer();
     announce(read(), null);
   }
 

@@ -47,6 +47,7 @@
     "show_results": "Show results"
   },
   "general": {
+    "close": "Close",
     "back": "Back",
     "clear": "Clear",
     "filters": "Filters",
@@ -95,6 +96,11 @@
     }
   },
   "products": {
+    "compare_title": "Compare",
+    "compare_remove": "Remove",
+    "compare_reco_title": "From the same category",
+    "wishlist_add_all": "Add all to cart",
+    "wishlist_added": "Added",
     "wishlist_title": "Wishlist",
     "wishlist_empty": "Your wishlist is still empty.",
     "wishlist_remove": "Remove from wishlist",

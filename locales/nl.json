@@ -9,6 +9,7 @@
  */
 {
   "general": {
+    "close": "Sluiten",
     "back": "Terug",
     "clear": "Wissen",
     "filters": "Filters",
@@ -95,6 +96,11 @@
     }
   },
   "products": {
+    "compare_title": "Vergelijking",
+    "compare_remove": "Verwijderen",
+    "compare_reco_title": "Uit dezelfde categorie",
+    "wishlist_add_all": "Alles in winkelwagen",
+    "wishlist_added": "Toegevoegd",
     "wishlist_title": "Verlanglijst",
     "wishlist_empty": "Je verlanglijst is nog leeg.",
     "wishlist_remove": "Verwijderen van verlanglijst",

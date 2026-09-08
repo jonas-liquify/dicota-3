@@ -9,6 +9,7 @@
  */
 {
   "general": {
+    "close": "Zavřít",
     "back": "Zpět",
     "clear": "Vymazat",
     "filters": "Filtry",
@@ -95,6 +96,11 @@
     }
   },
   "products": {
+    "compare_title": "Porovnání",
+    "compare_remove": "Odebrat",
+    "compare_reco_title": "Ze stejné kategorie",
+    "wishlist_add_all": "Přidat vše do košíku",
+    "wishlist_added": "Přidáno",
     "wishlist_title": "Seznam přání",
     "wishlist_empty": "Váš seznam přání je zatím prázdný.",
     "wishlist_remove": "Odebrat ze seznamu přání",

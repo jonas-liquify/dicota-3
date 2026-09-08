@@ -2,8 +2,9 @@
  * DICOTA - Produktvergleich
  * ---------------------------------------------------------------------------
  * Zwei Rollen in einer Datei:
- *   1. Auf der Produktseite: Toggle-Button + Sammelleiste (max. 3 Produkte)
- *   2. Auf /pages/vergleich: die Vergleichstabelle
+ *   1. Drawer im Header (aufgebaut wie der Mini-Cart): gewaehlte Produkte,
+ *      Empfehlungen aus derselben Kategorie, Button auf die Vergleichsseite
+ *   2. /pages/vergleich: die eigentliche Vergleichstabelle
  *
  * Speicher   localStorage["compareHandles"] = ["handle-a", "handle-b"]
  *            Handles statt Varianten-IDs, weil sie in der teilbaren URL lesbar
@@ -12,18 +13,26 @@
  * Teilbarkeit  /pages/vergleich?p=handle-a,handle-b,handle-c
  *              Die URL hat beim Laden Vorrang und ueberschreibt den Speicher.
  *
- * Datenquellen - es wird KEINE neue Liquid-Logik gebraucht:
- *   /products/<handle>.js                    Titel, Bild, Preis, Varianten-ID
- *   /products/<handle> -> #pdf-datasheet-data  specifications[{label,value}]
+ * Datenquellen - es wird KEINE neue Liquid-Logik fuer die Specs gebraucht:
+ *   /products/<handle>.js                      Titel, Bild, Preis, Varianten-ID
+ *   /products/<handle> -> #pdf-datasheet-data    specifications[{label,value}]
  * Der zweite Block liegt bereits auf jeder Produktseite (Quelle des Datenblatt-PDF).
+ *
+ * Empfehlungen  /recommendations/products?product_id=..&intent=related&section_id=compare_reco
+ *               Dieselbe Mechanik wie die Mini-Cart-Empfehlungen. "related" ist
+ *               kollektionsbasiert und entspricht damit praktisch der Kategorie;
+ *               strikt auf sl_ART.extra_CATEGORY zu filtern hiesse, ganze
+ *               Kollektionen in Liquid zu durchlaufen.
  */
 (function () {
   "use strict";
 
   var KEY = "compareHandles";
   var MAX = 3;
+  var RECO_SECTION = "compare_reco";
   var root = (window.Shopify && window.Shopify.routes && window.Shopify.routes.root) || "/";
   var cache = {};
+  var recoFor = null;
 
   /* ----- Speicher ----------------------------------------------------- */
 
@@ -94,14 +103,14 @@
       var v = (p.variants || []).filter(function (x) { return x.available; })[0] || (p.variants || [])[0];
       var data = {
         handle: handle,
+        id: p.id,
         title: p.title,
         url: root + "products/" + handle,
         image: p.featured_image || (p.images && p.images[0]) || "",
         price: p.price,
         available: !!p.available,
         variantId: v ? v.id : null,
-        specs: (d && d.specifications) || [],
-        subtitle: (d && typeof d.subtitle === "string") ? d.subtitle : ""
+        specs: (d && d.specifications) || []
       };
       cache[handle] = data;
       return data;
@@ -117,8 +126,7 @@
 
   function esc(s) {
     return String(s == null ? "" : s)
-      .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
-      .replace(/"/g, "&quot;");
+      .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
   }
 
   function thumb(url, w) {
@@ -126,7 +134,7 @@
     return url.indexOf("?") === -1 ? url + "?width=" + w : url + "&width=" + w;
   }
 
-  /* ----- Produktseite: Button + Sammelleiste --------------------------- */
+  /* ----- Drawer --------------------------------------------------------- */
 
   function syncToggles() {
     var list = read();
@@ -140,40 +148,94 @@
     }
   }
 
-  function renderBar() {
-    var bar = document.querySelector("[data-compare-bar]");
-    if (!bar) return;
+  function renderDrawer() {
+    var listEl = document.querySelector("[data-compare-list]");
+    var nav = document.querySelector("[data-compare-nav]");
+    if (!listEl) return;
+    var empty = document.querySelector("[data-compare-empty]");
+    var footer = document.querySelector("[data-compare-footer]");
+    var counts = document.querySelectorAll("[data-compare-count]");
     var list = read();
-    bar.classList.toggle("is-visible", list.length > 0);
 
-    var count = bar.querySelector("[data-compare-count]");
-    if (count) count.textContent = list.length + " / " + MAX;
+    // Das Kopf-Icon erscheint erst, wenn etwas gewaehlt ist - sonst ist es Beiwerk.
+    if (nav) nav.hidden = list.length === 0;
+    for (var c = 0; c < counts.length; c++) {
+      counts[c].textContent = list.length ? "(" + list.length + " / " + MAX + ")" : "";
+    }
 
-    var slot = bar.querySelector("[data-compare-items]");
-    if (!slot) return;
+    if (!list.length) {
+      listEl.innerHTML = "";
+      if (empty) empty.hidden = false;
+      if (footer) footer.hidden = true;
+      var slot0 = document.querySelector("[data-compare-reco]");
+      if (slot0) { slot0.innerHTML = ""; recoFor = null; }
+      return;
+    }
+    if (empty) empty.hidden = true;
+    if (footer) footer.hidden = list.length < 2;
 
-    Promise.all(list.map(getProduct)).then(function (items) {
+    Promise.all(list.map(getProduct)).then(function (raw) {
+      var items = raw.filter(Boolean);
       var html = "";
       for (var i = 0; i < items.length; i++) {
         var p = items[i];
-        if (!p) continue;
-        html += '<div class="compare-bar_item">'
-              +   '<img src="' + esc(thumb(p.image, 120)) + '" alt="' + esc(p.title) + '" loading="lazy">'
-              +   '<span class="compare-bar_item-title">' + esc(p.title) + "<\/span>"
-              +   '<button type="button" class="compare-bar_item-remove" data-compare-remove="'
-              +     esc(p.handle) + '" aria-label="' + esc(p.title) + '">&times;<\/button>'
-              + "<\/div>";
+        html += '<div class="li-drawer_item">'
+              +   '<div class="li-drawer_item-media">'
+              +     '<a href="' + esc(p.url) + '"><img src="' + esc(thumb(p.image, 160))
+              +       '" alt="' + esc(p.title) + '" loading="lazy"><\/a><\/div>'
+              +   '<div class="li-drawer_item-info">'
+              +     '<a class="li-drawer_item-title" href="' + esc(p.url) + '">' + esc(p.title) + "<\/a>"
+              +     '<span class="li-drawer_item-price">' + esc(money(p.price)) + "<\/span>"
+              +     '<div class="li-drawer_item-actions">'
+              +       '<button type="button" class="li-drawer_item-remove" data-compare-remove="'
+              +         esc(p.handle) + '">'
+              +         esc(listEl.getAttribute("data-label-remove") || "Entfernen") + "<\/button>"
+              +     "<\/div><\/div><\/div>";
       }
-      slot.innerHTML = html;
+      listEl.innerHTML = html;
+      if (items.length) loadReco(items[items.length - 1]);
     });
   }
 
+  /* Empfehlungen zum zuletzt gewaehlten Produkt, wie im Mini-Cart. */
+  function loadReco(anchor) {
+    var slot = document.querySelector("[data-compare-reco]");
+    if (!slot || !anchor || !anchor.id) return;
+    if (recoFor === anchor.id) return;
+    recoFor = anchor.id;
+
+    fetch(root + "recommendations/products?product_id=" + anchor.id
+          + "&intent=related&section_id=" + RECO_SECTION)
+      .then(function (r) { return r.ok ? r.text() : ""; })
+      .then(function (html) {
+        if (!html) { slot.innerHTML = ""; return; }
+        var doc = new DOMParser().parseFromString(html, "text/html");
+        var block = doc.querySelector(".cmp-reco");
+        if (!block) { slot.innerHTML = ""; return; }
+
+        // Schon gewaehlte Produkte aus den Empfehlungen entfernen. Der Handle
+        // kommt aus der Produkt-URL, weil li-attribute neben li-for verworfen wird.
+        var chosen = read();
+        var tiles = block.querySelectorAll(".cmp-reco_item");
+        for (var t = tiles.length - 1; t >= 0; t--) {
+          var link = tiles[t].querySelector('a[href*="/products/"]');
+          var h = link ? link.getAttribute("href").split("/products/")[1].split(/[?#]/)[0] : "";
+          if (h && chosen.indexOf(h) !== -1) tiles[t].remove();
+        }
+        if (!block.querySelector(".cmp-reco_item")) { slot.innerHTML = ""; return; }
+        slot.innerHTML = "";
+        slot.appendChild(block);
+      })
+      .catch(function () { slot.innerHTML = ""; recoFor = null; });
+  }
+
   function flashHint() {
+    window.dispatchEvent(new CustomEvent("liquiflow-compare-open"));
     var hint = document.querySelector("[data-compare-hint]");
     if (!hint) return;
     hint.classList.add("is-visible");
     clearTimeout(flashHint._t);
-    flashHint._t = setTimeout(function () { hint.classList.remove("is-visible"); }, 3500);
+    flashHint._t = setTimeout(function () { hint.classList.remove("is-visible"); }, 4000);
   }
 
   /* ----- Vergleichsseite ------------------------------------------------ */
@@ -219,7 +281,6 @@
       var items = raw.filter(Boolean);
       if (!items.length) { if (empty) empty.hidden = false; return; }
 
-      // URL spiegelt die Auswahl, damit der Link teilbar bleibt
       var u = new URL(location.href);
       u.searchParams.set("p", items.map(function (i) { return i.handle; }).join(","));
       history.replaceState({}, "", u.toString());
@@ -252,8 +313,8 @@
         var same = norm.every(function (v) { return v === norm[0]; });
         if (only && same) continue;
         html += '<tr' + (same ? "" : ' class="is-diff"') + '><th class="compare_axis">' + esc(label) + "<\/th>";
-        for (var c = 0; c < vals.length; c++) {
-          html += '<td>' + (vals[c] == null || vals[c] === "" ? "&ndash;" : esc(vals[c])) + "<\/td>";
+        for (var c2 = 0; c2 < vals.length; c2++) {
+          html += "<td>" + (vals[c2] == null || vals[c2] === "" ? "&ndash;" : esc(vals[c2])) + "<\/td>";
         }
         html += "<\/tr>";
       }
@@ -270,8 +331,18 @@
     var t = e.target.closest("[data-compare-toggle]");
     if (t) {
       e.preventDefault();
-      var res = toggle(t.getAttribute("data-compare-handle"));
-      if (res === "full") flashHint();
+      if (toggle(t.getAttribute("data-compare-handle")) === "full") flashHint();
+      return;
+    }
+
+    // "Vergleichen" auf einer Empfehlungs-Kachel: Handle aus der Produkt-URL
+    var tile = e.target.closest("[data-compare-add-tile]");
+    if (tile) {
+      e.preventDefault();
+      var item = tile.closest(".cmp-reco_item");
+      var link = item && item.querySelector('a[href*="/products/"]');
+      var h = link ? link.getAttribute("href").split("/products/")[1].split(/[?#]/)[0] : "";
+      if (h && toggle(h) === "full") flashHint();
       return;
     }
 
@@ -307,13 +378,13 @@
 
   document.addEventListener("liquiflow:compare-updated", function () {
     syncToggles();
-    renderBar();
+    renderDrawer();
     if (document.querySelector("[data-compare-root]")) renderTable();
   });
 
   function boot() {
     syncToggles();
-    renderBar();
+    renderDrawer();
     renderTable();
   }
 

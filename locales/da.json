@@ -9,6 +9,7 @@
  */
 {
   "general": {
+    "close": "Luk",
     "back": "Tilbage",
     "clear": "Ryd",
     "filters": "Filtre",
@@ -95,6 +96,11 @@
     }
   },
   "products": {
+    "compare_title": "Sammenligning",
+    "compare_remove": "Fjern",
+    "compare_reco_title": "Fra samme kategori",
+    "wishlist_add_all": "Tilføj alle til kurv",
+    "wishlist_added": "Tilføjet",
     "wishlist_title": "Ønskeliste",
     "wishlist_empty": "Din ønskeliste er stadig tom.",
     "wishlist_remove": "Fjern fra ønskelisten",

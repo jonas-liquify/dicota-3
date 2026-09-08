@@ -9,6 +9,7 @@
  */
 {
   "general": {
+    "close": "बंद करें",
     "back": "वापस",
     "clear": "साफ़ करें",
     "filters": "फिल्टर",
@@ -95,6 +96,11 @@
     }
   },
   "products": {
+    "compare_title": "तुलना",
+    "compare_remove": "हटाएँ",
+    "compare_reco_title": "इसी श्रेणी से",
+    "wishlist_add_all": "सभी कार्ट में जोड़ें",
+    "wishlist_added": "जोड़ा गया",
     "wishlist_title": "इच्छा-सूची",
     "wishlist_empty": "आपकी इच्छा-सूची अभी खाली है।",
     "wishlist_remove": "इच्छा-सूची से हटाएँ",
