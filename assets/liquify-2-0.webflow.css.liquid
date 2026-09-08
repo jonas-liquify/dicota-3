@@ -19976,108 +19976,6 @@ body {
   height: 1.25rem;
 }
 /* =============================================================
-   DICOTA — Produktvergleich: Sammelleiste (Product Hero)
-   Sichtbar sobald mindestens ein Produkt gewählt ist. Einstieg ist
-   nur die Produktseite, deshalb lebt die Leiste in der Section und
-   nicht im Layout.
-   ============================================================= */
-.compare-bar {
-  position: fixed;
-  inset: auto 0 0 0;
-  z-index: 900;
-  background-color: var(--base-color-neutral--white, #ffffff);
-  border-top: 1px solid #e4e4e4;
-  box-shadow: 0 -4px 16px rgba(0, 0, 0, .08);
-  transform: translateY(100%);
-  transition: transform .25s ease;
-}
-.compare-bar.is-visible {
-  transform: translateY(0);
-}
-.compare-bar_inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1.5rem;
-  max-width: 80rem;
-  margin: 0 auto;
-  padding: .75rem 1.5rem;
-}
-.compare-bar_items {
-  display: flex;
-  align-items: center;
-  gap: .75rem;
-  min-height: 3.5rem;
-  overflow-x: auto;
-}
-.compare-bar_item {
-  display: flex;
-  align-items: center;
-  gap: .5rem;
-  padding: .25rem .5rem .25rem .25rem;
-  border: 1px solid #e4e4e4;
-  border-radius: .25rem;
-  flex: none;
-}
-.compare-bar_item img {
-  width: 2.5rem;
-  height: 2.5rem;
-  object-fit: contain;
-  display: block;
-}
-.compare-bar_item-title {
-  font-size: .8rem;
-  max-width: 9rem;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.compare-bar_item-remove {
-  border: 0;
-  background: none;
-  cursor: pointer;
-  font-size: 1.1rem;
-  line-height: 1;
-  padding: 0 .25rem;
-  color: #6b6b6b;
-}
-.compare-bar_item-remove:hover {
-  color: var(--base-color-neutral--black, #0f0f0f);
-}
-.compare-bar_actions {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  flex: none;
-}
-.compare-bar_count {
-  font-size: .875rem;
-  color: #6b6b6b;
-  white-space: nowrap;
-}
-.compare-bar_clear {
-  border: 0;
-  background: none;
-  cursor: pointer;
-  font-size: .875rem;
-  text-decoration: underline;
-  color: #6b6b6b;
-}
-.compare-bar_hint {
-  margin: 0;
-  padding: 0 1.5rem .75rem;
-  font-size: .875rem;
-  color: #cc0404;
-  display: none;
-}
-.compare-bar_hint.is-visible {
-  display: block;
-}
-/* Aktiver Zustand des Vergleichen-Buttons — analog zum Merken-Herz */
-.ph_buy-action.is-active {
-  font-weight: 600;
-}
-/* =============================================================
    DICOTA — Produktvergleich: Tabelle (/pages/vergleich)
    Erste Spalte trägt die Merkmalsnamen und bleibt beim seitlichen
    Scrollen stehen. Der Container scrollt, nie die Seite.
@@ -20184,14 +20082,6 @@ body {
   .compare_axis {
     min-width: 8rem;
   }
-  .compare-bar_inner {
-    flex-direction: column;
-    align-items: stretch;
-    gap: .75rem;
-  }
-  .compare-bar_actions {
-    justify-content: space-between;
-  }
 }
 /* =============================================================
    DICOTA — Druckausgabe des Vergleichs
@@ -20205,11 +20095,12 @@ body {
   .section_footer,
   .footer_component,
   .announcement-bar_component,
-  .compare-bar,
+  .li-drawer,
   .compare_head-actions,
   .compare_remove,
   .compare_atc,
-  .nav_wishlist {
+  .nav_wishlist,
+  .nav_compare {
     display: none !important;
   }
   .compare_grid {
@@ -20245,4 +20136,313 @@ body {
 .ph_delivery.is-ondemand .ph_delivery-dot {
   background-color: #3b82f6;
   margin-top: .34rem;
+}
+/* =============================================================
+   DICOTA — Drawer-Gerüst (Merkliste, Vergleich)
+   Aufgebaut wie der Mini-Cart: fixes Overlay über die ganze Seite,
+   das Panel rechts. Der Mini-Cart erreicht die Rechtslage über
+   einen Flex-Spacer; hier reicht justify-content, weil kein
+   Webflow-Dropdown im Spiel ist.
+
+   Sichtbarkeit läuft NICHT über display — das liesse sich nicht
+   animieren. Stattdessen visibility + opacity, damit der
+   geschlossene Zustand weder sichtbar noch klickbar ist.
+   ============================================================= */
+.li-drawer {
+  position: fixed;
+  inset: 0;
+  z-index: 10001;
+  display: flex;
+  justify-content: flex-end;
+  background-color: #0f0f0f1a;
+  -webkit-backdrop-filter: blur(14.2px);
+  backdrop-filter: blur(14.2px);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .25s ease, visibility 0s linear .25s;
+}
+.li-drawer.is-open {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity .25s ease, visibility 0s;
+}
+.li-drawer_panel {
+  background-color: var(--base-color-neutral--white, #ffffff);
+  color: var(--base-color-neutral--black, #0f0f0f);
+  display: flex;
+  flex-direction: column;
+  width: 27.25rem;
+  max-width: 100%;
+  height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
+  transform: translateX(100%);
+  transition: transform .3s cubic-bezier(.4, 0, .2, 1);
+}
+.li-drawer.is-open .li-drawer_panel {
+  transform: translateX(0);
+}
+.li-drawer_head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.5rem 2rem 1rem;
+  flex: none;
+}
+.li-drawer_title {
+  display: flex;
+  align-items: baseline;
+  gap: .5rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+.li-drawer_count {
+  font-size: .875rem;
+  font-weight: 400;
+  color: #6b6b6b;
+}
+.li-drawer_close {
+  border: 0;
+  background: none;
+  cursor: pointer;
+  padding: .25rem;
+  line-height: 0;
+  color: inherit;
+  flex: none;
+}
+.li-drawer_scroll {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+.li-drawer_scroll::-webkit-scrollbar {
+  display: none;
+}
+.li-drawer_empty {
+  padding: 3rem 2rem;
+  text-align: center;
+  color: #6b6b6b;
+}
+.li-drawer_footer {
+  z-index: 2;
+  flex: none;
+  background-color: var(--base-color-neutral--white, #ffffff);
+  box-shadow: 0 -3px 11.95px #0000001a;
+  padding: 1rem 2rem;
+}
+.li-drawer_footer .button {
+  width: 100%;
+  text-align: center;
+}
+/* --- Zeilen in beiden Drawern --- */
+.wl-drawer_list,
+.cmp-drawer_list {
+  display: flex;
+  flex-direction: column;
+}
+.li-drawer_item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #ececec;
+}
+.li-drawer_item-media {
+  width: 4.5rem;
+  flex: none;
+}
+.li-drawer_item-media img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+.li-drawer_item-info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+}
+.li-drawer_item-title {
+  font-size: .875rem;
+  font-weight: 500;
+  color: inherit;
+  text-decoration: none;
+}
+.li-drawer_item-price {
+  font-size: .875rem;
+  color: #6b6b6b;
+}
+.li-drawer_item-actions {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  margin-top: .25rem;
+}
+.li-drawer_item-add {
+  border: 1px solid #0f0f0f;
+  background: none;
+  cursor: pointer;
+  font-size: .75rem;
+  padding: .3rem .7rem;
+  border-radius: 100vw;
+}
+.li-drawer_item-add:hover {
+  background-color: #0f0f0f;
+  color: #ffffff;
+}
+.li-drawer_item-add[disabled] {
+  opacity: .4;
+  cursor: default;
+}
+.li-drawer_item-remove {
+  border: 0;
+  background: none;
+  cursor: pointer;
+  font-size: .75rem;
+  text-decoration: underline;
+  color: #6b6b6b;
+}
+/* --- Kopf-Icons --- */
+.nav_compare {
+  position: relative;
+}
+/* =============================================================
+   DICOTA — Slide-in für alle drei Drawer
+   Der Mini-Cart hängt an Webflows Dropdown, das display umschaltet;
+   sein Panel kann deshalb nur beim Einblenden animieren (Keyframe),
+   nicht beim Schliessen. Damit sich die drei nicht unterschiedlich
+   anfühlen, schliessen auch Merkliste und Vergleich ohne Slide —
+   ihr Panel-transition greift nur in Richtung offen.
+   ============================================================= */
+@keyframes li-drawer-slide-in {
+  from { transform: translateX(100%); }
+  to   { transform: translateX(0); }
+}
+@keyframes li-drawer-fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+.nav_mini-cart-holder.w--open {
+  animation: li-drawer-fade-in .25s ease;
+}
+.nav_mini-cart-holder.w--open .mini-cart_component {
+  animation: li-drawer-slide-in .3s cubic-bezier(.4, 0, .2, 1);
+}
+@media (prefers-reduced-motion: reduce) {
+  .li-drawer,
+  .li-drawer_panel,
+  .nav_mini-cart-holder.w--open,
+  .nav_mini-cart-holder.w--open .mini-cart_component {
+    animation: none;
+    transition: none;
+  }
+}
+@media (max-width: 767px) {
+  .li-drawer_panel {
+    width: 100%;
+  }
+  .li-drawer_head,
+  .li-drawer_item,
+  .li-drawer_footer {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
+/* =============================================================
+   DICOTA — Vergleich: Empfehlungen im Drawer
+   Sitzen unter den gewählten Produkten, analog zum Cross-Sell im
+   Mini-Cart. margin-top: auto schiebt sie an den unteren Rand des
+   Scrollbereichs, solange die Liste kurz ist.
+   ============================================================= */
+.cmp-drawer_reco-slot {
+  margin-top: auto;
+}
+.cmp-drawer_reco-slot:empty {
+  display: none;
+}
+.cmp-reco {
+  border-top: 1px solid #ececec;
+  padding: 1.25rem 2rem 1.5rem;
+  background-color: #fafafa;
+}
+.cmp-reco_title {
+  font-size: .875rem;
+  font-weight: 600;
+  margin-bottom: .75rem;
+}
+.cmp-reco_list {
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+}
+.cmp-reco_item {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+}
+.cmp-reco_media {
+  width: 3rem;
+  flex: none;
+}
+.cmp-reco_img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+.cmp-reco_info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+.cmp-reco_name {
+  font-size: .8125rem;
+  color: inherit;
+  text-decoration: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.cmp-reco_cat {
+  font-size: .6875rem;
+  color: #6b6b6b;
+}
+.cmp-reco_add {
+  border: 1px solid #0f0f0f;
+  background: none;
+  cursor: pointer;
+  font-size: .6875rem;
+  padding: .25rem .6rem;
+  border-radius: 100vw;
+  flex: none;
+}
+.cmp-reco_add:hover {
+  background-color: #0f0f0f;
+  color: #ffffff;
+}
+/* Hinweis „maximal 3" — nur sichtbar, wenn er ausgelöst wurde */
+.li-drawer_hint {
+  margin: 0;
+  padding: 0 2rem .75rem;
+  font-size: .875rem;
+  color: #cc0404;
+  display: none;
+}
+.li-drawer_hint.is-visible {
+  display: block;
+}
+@media (max-width: 767px) {
+  .cmp-reco,
+  .li-drawer_hint {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
 }

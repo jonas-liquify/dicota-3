@@ -1,0 +1,40 @@
+<div class="li-tag w-embed">{% assign cmp_reco = recommendations.products %}{% if cmp_reco.size == 0 and section.settings.text_fallback_collection != blank %}{% assign cmp_reco = collections[section.settings.text_fallback_collection].products %}{% endif %}</div>{% if cmp_reco.size > 0 %}    <div li-if="cmp_reco.size > 0" class="cmp-reco">
+    <div li-object="'products.compare_reco_title' | t" class="cmp-reco_title">{{ 'products.compare_reco_title' | t }}</div><div class="cmp-reco_list">{% for product in cmp_reco limit: section.settings.reco_limit %}    <div li-for="product in cmp_reco limit: section.settings.reco_limit" class="cmp-reco_item">
+                                    <a li-object:href="product.url" href="{{ product.url }}" class="cmp-reco_media"><img li-object:src="product.featured_image | image_url: width: 200" li-object:alt="product.title" src="{{ product.featured_image | image_url: width: 200 }}" loading="lazy" alt="{{ product.title }}" class="cmp-reco_img"></a>
+                            <div class="cmp-reco_info"><a li-object:href="product.url" href="{{ product.url }}" class="cmp-reco_name"><span li-object="product.title">{{ product.title }}</span></a><span li-object="product.metafields.sl_ART.extra_CATEGORY.value | default: product.metafields.sl_ART.extra_CATEGORY" class="cmp-reco_cat">{{ product.metafields.sl_ART.extra_CATEGORY.value | default: product.metafields.sl_ART.extra_CATEGORY }}</span></div>
+                            <button type="button" class="cmp-reco_add" data-compare-add-tile=""><span li-object="'products.compare_add' | t">{{ 'products.compare_add' | t }}</span></button>
+                        </div>
+{% endfor %}</div>    </div>
+{% endif %} {% schema %} {
+    "tag": "section",
+    "name": "Compare Reco",
+    "class": "section_cmp-reco",
+    "settings": [
+        {
+            "type": "header",
+            "content": "Empfehlungen"
+        },
+        {
+            "type": "range",
+            "id": "reco_limit",
+            "min": 1,
+            "max": 8,
+            "step": 1,
+            "label": "Anzahl Empfehlungen",
+            "default": 4
+        },
+        {
+            "type": "text",
+            "id": "text_fallback_collection",
+            "label": "Fallback-Collection (Handle)",
+            "info": "Wird genutzt, wenn Shopify keine verwandten Produkte liefert."
+        }
+    ],
+    "presets": [
+        {
+            "name": "Compare Reco",
+            "category": "Global",
+            "blocks": []
+        }
+    ]
+} {% endschema %}
