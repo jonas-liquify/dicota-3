@@ -142,7 +142,50 @@
       .catch(function () { return null; });
   }
 
+  /* Preisformat aus einem von Liquid gerenderten Muster ableiten:
+     data-money-sample="{{ 123456 | money }}" liefert z.B. "€1.234,56",
+     "$1,234.56" oder "CHF 1'234.56". Daraus lesen wir Symbolposition,
+     Tausender- und Dezimaltrenner ab. Das trifft die serverseitige
+     Ausgabe exakt - auch im CHF-Markt, wo ein fest verdrahtetes
+     Euro-Format falsch waere.
+     LiquifyHelper.moneyFormat taugt dafuer nicht: es setzt immer einen
+     Punkt als Dezimaltrenner, das Theme rendert aber Komma. */
+  var fmtMoney = null;
+
+  function initMoney() {
+    var el = document.querySelector("[data-money-sample]");
+    var sample = el && el.getAttribute("data-money-sample");
+    if (!sample) return;
+    var m = /[\d.,']+/.exec(sample);
+    if (!m) return;
+    var core = m[0];
+    var prefix = sample.slice(0, m.index);
+    var suffix = sample.slice(m.index + core.length);
+    var decSep = "", thouSep = "";
+    var tail = /[.,](\d{2})$/.exec(core);
+    if (tail) {
+      decSep = tail[0].charAt(0);
+      var other = core.slice(0, core.length - 3).replace(/\d/g, "");
+      thouSep = other ? other.charAt(0) : "";
+    } else {
+      var only = core.replace(/\d/g, "");
+      thouSep = only ? only.charAt(0) : "";
+    }
+    fmtMoney = function (cents) {
+      var neg = cents < 0;
+      cents = Math.abs(cents);
+      var val = decSep ? (cents / 100).toFixed(2) : String(Math.round(cents / 100));
+      var parts = val.split(".");
+      var whole = parts[0];
+      if (thouSep) whole = whole.replace(/\B(?=(\d{3})+(?!\d))/g, thouSep);
+      return (neg ? "-" : "") + prefix + whole
+             + (decSep && parts[1] ? decSep + parts[1] : "") + suffix;
+    };
+  }
+
   function money(cents) {
+    if (!fmtMoney) initMoney();
+    if (fmtMoney) return fmtMoney(cents);
     if (window.LiquifyHelper && typeof window.LiquifyHelper.moneyFormat === "function") {
       try { return window.LiquifyHelper.moneyFormat(cents); } catch (e) {}
     }

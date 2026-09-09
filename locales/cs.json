@@ -96,6 +96,8 @@
     }
   },
   "products": {
+    "compare_features": "Funkce",
+    "learn_more": "Zjistit více",
     "compare_title": "Porovnání",
     "compare_remove": "Odebrat",
     "compare_reco_title": "Ze stejné kategorie",
@@ -107,7 +109,7 @@
     "compare_add": "Porovnat",
     "compare_open": "Porovnat nyní",
     "compare_clear": "Vymazat",
-    "compare_max": "Porovnat lze nejvýše 3 produkty – nejprve jeden odeberte.",
+    "compare_max": "Porovnat lze nejvýše 5 produktů – nejprve jeden odeberte.",
     "compare_empty": "Zatím jste nevybrali žádné produkty k porovnání.",
     "compare_diff_only": "Zobrazit jen rozdíly",
     "compare_print": "Tisk",

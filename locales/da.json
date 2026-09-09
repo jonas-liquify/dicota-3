@@ -96,6 +96,8 @@
     }
   },
   "products": {
+    "compare_features": "Funktioner",
+    "learn_more": "Læs mere",
     "compare_title": "Sammenligning",
     "compare_remove": "Fjern",
     "compare_reco_title": "Fra samme kategori",
@@ -107,7 +109,7 @@
     "compare_add": "Sammenlign",
     "compare_open": "Sammenlign nu",
     "compare_clear": "Ryd",
-    "compare_max": "Du kan sammenligne op til 3 produkter – fjern et først.",
+    "compare_max": "Du kan sammenligne op til 5 produkter – fjern et først.",
     "compare_empty": "Du har endnu ikke valgt produkter at sammenligne.",
     "compare_diff_only": "Vis kun forskelle",
     "compare_print": "Udskriv",

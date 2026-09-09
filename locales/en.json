@@ -96,6 +96,8 @@
     }
   },
   "products": {
+    "compare_features": "Features",
+    "learn_more": "Learn more",
     "compare_title": "Compare",
     "compare_remove": "Remove",
     "compare_reco_title": "From the same category",
@@ -107,7 +109,7 @@
     "compare_add": "Compare",
     "compare_open": "Compare now",
     "compare_clear": "Clear",
-    "compare_max": "You can compare up to 3 products – remove one first.",
+    "compare_max": "You can compare up to 5 products – remove one first.",
     "compare_empty": "You haven't selected any products to compare yet.",
     "compare_diff_only": "Show differences only",
     "compare_print": "Print",

@@ -28,7 +28,7 @@
   "use strict";
 
   var KEY = "compareHandles";
-  var MAX = 3;
+  var MAX = 5;
   var RECO_SECTION = "compare_reco";
   var root = (window.Shopify && window.Shopify.routes && window.Shopify.routes.root) || "/";
   var cache = {};
@@ -86,19 +86,43 @@
       .then(function (r) { return r.ok ? r.json() : null; })
       .catch(function () { return null; });
 
-    var specs = fetch(base, { headers: { Accept: "text/html" } })
+    /* Die Produktseite liefert in einem Zug: den Datenblatt-Payload (Specs,
+       Tagline, Features), den Lieferstatus aus .ph_delivery - inklusive des
+       Sonderfertigungs-Zustands - und die Bewertung aus .ph_rating. Damit
+       braucht der Vergleich keinen zusaetzlichen Datenweg. */
+    var page = fetch(base, { headers: { Accept: "text/html" } })
       .then(function (r) { return r.ok ? r.text() : ""; })
       .then(function (html) {
         if (!html) return null;
         var doc = new DOMParser().parseFromString(html, "text/html");
+        var out = { payload: null, delivery: null, rating: null };
+
         var el = doc.getElementById("pdf-datasheet-data");
-        if (!el) return null;
-        try { return JSON.parse(el.textContent); } catch (e) { return null; }
+        if (el) { try { out.payload = JSON.parse(el.textContent); } catch (e) {} }
+
+        var del = doc.querySelector(".ph_delivery");
+        if (del) {
+          var mod = "";
+          ["is-ondemand", "is-low", "is-unavailable"].forEach(function (c) {
+            if (del.classList.contains(c)) mod = c;
+          });
+          out.delivery = { state: mod || "is-high", text: del.textContent.trim() };
+        }
+
+        var rt = doc.querySelector(".ph_rating");
+        if (rt) {
+          var starEl = rt.querySelector("[style*='--rating']") || rt;
+          var sm = /--rating:\s*([\d.]+)/.exec(starEl.getAttribute("style") || "");
+          var cm = /\((\d+)\)/.exec(rt.textContent || "");
+          if (sm) out.rating = { value: parseFloat(sm[1]), count: cm ? parseInt(cm[1], 10) : null };
+        }
+        return out;
       })
       .catch(function () { return null; });
 
-    return Promise.all([commercial, specs]).then(function (r) {
-      var p = r[0], d = r[1];
+    return Promise.all([commercial, page]).then(function (r) {
+      var p = r[0], pg = r[1] || {};
+      var d = pg.payload;
       if (!p) return null;
       var v = (p.variants || []).filter(function (x) { return x.available; })[0] || (p.variants || [])[0];
       var data = {
@@ -110,14 +134,61 @@
         price: p.price,
         available: !!p.available,
         variantId: v ? v.id : null,
-        specs: (d && d.specifications) || []
+        specs: (d && d.specifications) || [],
+        tagline: (d && typeof d.subtitle === "string") ? d.subtitle : "",
+        features: (d && d.highlights) || [],
+        delivery: pg.delivery || null,
+        rating: pg.rating || null
       };
       cache[handle] = data;
       return data;
     });
   }
 
+  /* Preisformat aus einem von Liquid gerenderten Muster ableiten:
+     data-money-sample="{{ 123456 | money }}" liefert z.B. "€1.234,56",
+     "$1,234.56" oder "CHF 1'234.56". Daraus lesen wir Symbolposition,
+     Tausender- und Dezimaltrenner ab. Das trifft die serverseitige
+     Ausgabe exakt - auch im CHF-Markt, wo ein fest verdrahtetes
+     Euro-Format falsch waere.
+     LiquifyHelper.moneyFormat taugt dafuer nicht: es setzt immer einen
+     Punkt als Dezimaltrenner, das Theme rendert aber Komma. */
+  var fmtMoney = null;
+
+  function initMoney() {
+    var el = document.querySelector("[data-money-sample]");
+    var sample = el && el.getAttribute("data-money-sample");
+    if (!sample) return;
+    var m = /[\d.,']+/.exec(sample);
+    if (!m) return;
+    var core = m[0];
+    var prefix = sample.slice(0, m.index);
+    var suffix = sample.slice(m.index + core.length);
+    var decSep = "", thouSep = "";
+    var tail = /[.,](\d{2})$/.exec(core);
+    if (tail) {
+      decSep = tail[0].charAt(0);
+      var other = core.slice(0, core.length - 3).replace(/\d/g, "");
+      thouSep = other ? other.charAt(0) : "";
+    } else {
+      var only = core.replace(/\d/g, "");
+      thouSep = only ? only.charAt(0) : "";
+    }
+    fmtMoney = function (cents) {
+      var neg = cents < 0;
+      cents = Math.abs(cents);
+      var val = decSep ? (cents / 100).toFixed(2) : String(Math.round(cents / 100));
+      var parts = val.split(".");
+      var whole = parts[0];
+      if (thouSep) whole = whole.replace(/\B(?=(\d{3})+(?!\d))/g, thouSep);
+      return (neg ? "-" : "") + prefix + whole
+             + (decSep && parts[1] ? decSep + parts[1] : "") + suffix;
+    };
+  }
+
   function money(cents) {
+    if (!fmtMoney) initMoney();
+    if (fmtMoney) return fmtMoney(cents);
     if (window.LiquifyHelper && typeof window.LiquifyHelper.moneyFormat === "function") {
       try { return window.LiquifyHelper.moneyFormat(cents); } catch (e) {}
     }
@@ -229,8 +300,12 @@
       .catch(function () { slot.innerHTML = ""; recoFor = null; });
   }
 
-  function flashHint() {
+  function openDrawer() {
     window.dispatchEvent(new CustomEvent("liquiflow-compare-open"));
+  }
+
+  function flashHint() {
+    openDrawer();
     var hint = document.querySelector("[data-compare-hint]");
     if (!hint) return;
     hint.classList.add("is-visible");
@@ -258,6 +333,25 @@
     return null;
   }
 
+  /* Platzhalter, solange die Produktdaten laden. Je Produkt sind es zwei
+     Fetches (.js und die Produktseite fuer die Specs) - ohne Skeleton bliebe
+     die Seite dabei sichtbar leer. */
+  function renderSkeleton(grid, n) {
+    var cols = "";
+    for (var i = 0; i < n; i++) {
+      cols += '<div class="compare_skeleton-col">'
+           +    '<div class="compare_skeleton-box is-image"><\/div>'
+           +    '<div class="compare_skeleton-box is-line"><\/div>'
+           +    '<div class="compare_skeleton-box is-line is-short"><\/div>'
+           +    '<div class="compare_skeleton-box is-button"><\/div>'
+           + "<\/div>";
+    }
+    var rows = "";
+    for (var r = 0; r < 8; r++) rows += '<div class="compare_skeleton-box is-line"><\/div>';
+    grid.innerHTML = '<div class="compare_skeleton">' + cols + "<\/div>"
+                   + '<div class="compare_skeleton-rows">' + rows + "<\/div>";
+  }
+
   function renderTable() {
     var rootEl = document.querySelector("[data-compare-root]");
     if (!rootEl) return;
@@ -276,10 +370,11 @@
       return;
     }
     if (empty) empty.hidden = true;
+    renderSkeleton(grid, list.length);
 
     Promise.all(list.map(getProduct)).then(function (raw) {
       var items = raw.filter(Boolean);
-      if (!items.length) { if (empty) empty.hidden = false; return; }
+      if (!items.length) { if (empty) empty.hidden = false; grid.innerHTML = ""; return; }
 
       var u = new URL(location.href);
       u.searchParams.set("p", items.map(function (i) { return i.handle; }).join(","));
@@ -292,11 +387,24 @@
       var html = '<table class="compare_table"><thead><tr><th class="compare_axis"><\/th>';
       for (var i = 0; i < items.length; i++) {
         var p = items[i];
+        // Reihenfolge nach Kundenvorgabe: Bild, Titel, Tagline, Bewertung,
+        // Preis, Lieferstatus, Kauf-Button.
         html += '<th class="compare_col">'
              +    '<button type="button" class="compare_remove" data-compare-remove="' + esc(p.handle) + '">&times;<\/button>'
              +    '<a href="' + esc(p.url) + '"><img src="' + esc(thumb(p.image, 400)) + '" alt="' + esc(p.title) + '" loading="lazy"><\/a>'
              +    '<a class="compare_title" href="' + esc(p.url) + '">' + esc(p.title) + "<\/a>"
+             +    (p.tagline ? '<div class="compare_tagline">' + esc(p.tagline) + "<\/div>" : "")
+             +    (p.rating
+                    ? '<div class="compare_rating">'
+                      + '<span class="product-card_stars" style="--rating: ' + p.rating.value + '"><\/span>'
+                      + '<span class="compare_rating-value">' + p.rating.value.toFixed(1)
+                      + (p.rating.count ? " (" + p.rating.count + ")" : "") + "<\/span><\/div>"
+                    : "")
              +    '<div class="compare_price">' + esc(money(p.price)) + "<\/div>"
+             +    (p.delivery
+                    ? '<div class="compare_delivery ' + esc(p.delivery.state) + '">'
+                      + '<span class="ph_delivery-dot"><\/span>' + esc(p.delivery.text) + "<\/div>"
+                    : "")
              +    (p.available && p.variantId
                     ? '<button type="button" class="button compare_atc" data-compare-add="' + p.variantId + '">'
                       + esc(rootEl.getAttribute("data-label-atc") || "In den Warenkorb") + "<\/button>"
@@ -305,6 +413,18 @@
              + "<\/th>";
       }
       html += "<\/tr><\/thead><tbody>";
+
+      // Features als kommagetrennte Zeile, wie vom Kunden gewuenscht
+      var hasFeatures = items.some(function (it) { return (it.features || []).length; });
+      if (hasFeatures) {
+        html += '<tr><th class="compare_axis">'
+             +    esc(rootEl.getAttribute("data-label-features") || "Features") + "<\/th>";
+        for (var fi = 0; fi < items.length; fi++) {
+          var fl = (items[fi].features || []).join(", ");
+          html += "<td>" + (fl ? esc(fl) : "&ndash;") + "<\/td>";
+        }
+        html += "<\/tr>";
+      }
 
       for (var r = 0; r < labels.length; r++) {
         var label = labels[r];
@@ -318,7 +438,20 @@
         }
         html += "<\/tr>";
       }
-      html += "<\/tbody><\/table>";
+      html += "<\/tbody><tfoot><tr><th class=\"compare_axis\"><\/th>";
+      for (var f = 0; f < items.length; f++) {
+        var q = items[f];
+        html += '<td>'
+             +    '<a class="compare_foot-title" href="' + esc(q.url) + '">' + esc(q.title) + "<\/a>"
+             +    '<span class="compare_foot-price">' + esc(money(q.price)) + "<\/span>"
+             +    (q.available && q.variantId
+                    ? '<button type="button" class="button compare_atc" data-compare-add="' + q.variantId + '">'
+                      + esc(rootEl.getAttribute("data-label-atc") || "In den Warenkorb") + "<\/button>"
+                    : '<span class="compare_unavailable">'
+                      + esc(rootEl.getAttribute("data-label-unavailable") || "Nicht verfuegbar") + "<\/span>")
+             + "<\/td>";
+      }
+      html += "<\/tr><\/tfoot><\/table>";
       grid.innerHTML = html;
     });
   }
@@ -331,7 +464,11 @@
     var t = e.target.closest("[data-compare-toggle]");
     if (t) {
       e.preventDefault();
-      if (toggle(t.getAttribute("data-compare-handle")) === "full") flashHint();
+      var res = toggle(t.getAttribute("data-compare-handle"));
+      // Hinzufuegen oeffnet den Drawer - wie der Mini-Cart beim Warenkorb.
+      // Beim Entfernen bleibt er zu, sonst springt er beim Abwaehlen auf.
+      if (res === "full") flashHint();
+      else if (res === "added") openDrawer();
       return;
     }
 

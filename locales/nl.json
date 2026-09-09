@@ -96,6 +96,8 @@
     }
   },
   "products": {
+    "compare_features": "Kenmerken",
+    "learn_more": "Meer informatie",
     "compare_title": "Vergelijking",
     "compare_remove": "Verwijderen",
     "compare_reco_title": "Uit dezelfde categorie",
@@ -107,7 +109,7 @@
     "compare_add": "Vergelijken",
     "compare_open": "Nu vergelijken",
     "compare_clear": "Wissen",
-    "compare_max": "Maximaal 3 producten – verwijder er eerst een.",
+    "compare_max": "Maximaal 5 producten – verwijder er eerst een.",
     "compare_empty": "Je hebt nog geen producten geselecteerd om te vergelijken.",
     "compare_diff_only": "Alleen verschillen tonen",
     "compare_print": "Afdrukken",

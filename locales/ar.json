@@ -4605,6 +4605,8 @@
     "free_shipping_text": "تحصل على شحن مجاني لهذا الطلب."
   },
   "products": {
+    "compare_features": "الميزات",
+    "learn_more": "اعرف المزيد",
     "compare_title": "المقارنة",
     "compare_remove": "إزالة",
     "compare_reco_title": "من الفئة نفسها",
@@ -4616,7 +4618,7 @@
     "compare_add": "قارن",
     "compare_open": "قارن الآن",
     "compare_clear": "مسح",
-    "compare_max": "يمكنك مقارنة 3 منتجات كحد أقصى – أزل واحدًا أولاً.",
+    "compare_max": "يمكنك مقارنة 5 منتجات كحد أقصى – أزل واحدًا أولاً.",
     "compare_empty": "لم تحدد أي منتجات للمقارنة بعد.",
     "compare_diff_only": "إظهار الاختلافات فقط",
     "compare_print": "طباعة",

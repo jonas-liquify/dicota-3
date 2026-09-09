@@ -96,6 +96,8 @@
     }
   },
   "products": {
+    "compare_features": "Funkcje",
+    "learn_more": "Dowiedz się więcej",
     "compare_title": "Porównanie",
     "compare_remove": "Usuń",
     "compare_reco_title": "Z tej samej kategorii",
@@ -107,7 +109,7 @@
     "compare_add": "Porównaj",
     "compare_open": "Porównaj teraz",
     "compare_clear": "Wyczyść",
-    "compare_max": "Możesz porównać maksymalnie 3 produkty – usuń najpierw jeden.",
+    "compare_max": "Możesz porównać maksymalnie 5 produktów – usuń najpierw jeden.",
     "compare_empty": "Nie wybrano jeszcze produktów do porównania.",
     "compare_diff_only": "Pokaż tylko różnice",
     "compare_print": "Drukuj",

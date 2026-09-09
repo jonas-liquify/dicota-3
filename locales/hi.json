@@ -96,6 +96,8 @@
     }
   },
   "products": {
+    "compare_features": "विशेषताएँ",
+    "learn_more": "और जानें",
     "compare_title": "तुलना",
     "compare_remove": "हटाएँ",
     "compare_reco_title": "इसी श्रेणी से",
@@ -107,7 +109,7 @@
     "compare_add": "तुलना करें",
     "compare_open": "अभी तुलना करें",
     "compare_clear": "साफ़ करें",
-    "compare_max": "अधिकतम 3 उत्पादों की तुलना – पहले एक हटाएँ।",
+    "compare_max": "अधिकतम 5 उत्पादों की तुलना – पहले एक हटाएँ।",
     "compare_empty": "आपने तुलना के लिए अभी कोई उत्पाद नहीं चुना है।",
     "compare_diff_only": "केवल अंतर दिखाएँ",
     "compare_print": "प्रिंट करें",
