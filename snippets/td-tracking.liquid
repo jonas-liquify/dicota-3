@@ -23,36 +23,28 @@
 
 <script data-cookieconsent="ignore">
   (function () {
-    var DEBUG = false;
-    function log() { if (DEBUG && window.console) console.log.apply(console, ['[TD bridge]'].concat([].slice.call(arguments))); }
-
     var pending = null;
     var apiReady = false;
     var tries = 0;
 
     function capture() {
       var c = window.Cookiebot && window.Cookiebot.consent;
-      if (!c) { log('kein Cookiebot.consent'); return; }
+      if (!c) return;
       pending = {
         analytics:    !!c.statistics,
         marketing:    !!c.marketing,
         preferences:  !!c.preferences,
         sale_of_data: !!c.marketing
       };
-      log('consent erfasst', pending);
       send();
     }
 
     function send() {
       if (!apiReady || !pending) return;
       try {
-        window.Shopify.customerPrivacy.setTrackingConsent(pending, function (r) {
-          log('setTrackingConsent ok', r);
-        });
+        window.Shopify.customerPrivacy.setTrackingConsent(pending, function () {});
         pending = null;
-      } catch (e) {
-        log('setTrackingConsent fehlgeschlagen', e);
-      }
+      } catch (e) {}
     }
 
     window.addEventListener('CookiebotOnConsentReady', capture);
@@ -61,19 +53,17 @@
 
     (function waitForShopify() {
       if (window.Shopify && window.Shopify.loadFeatures) {
-        log('Shopify.loadFeatures gefunden nach', tries * 100, 'ms');
         window.Shopify.loadFeatures(
           [{ name: 'consent-tracking-api', version: '0.1' }],
           function (err) {
-            if (err) { log('loadFeatures Fehler', err); return; }
+            if (err) return;
             apiReady = true;
-            log('Privacy API bereit');
             send();
           }
         );
         return;
       }
-      if (++tries > 100) { log('Shopify.loadFeatures nach 10s nicht verfuegbar'); return; }
+      if (++tries > 100) return;
       setTimeout(waitForShopify, 100);
     })();
 
