@@ -23,31 +23,61 @@
 
 <script data-cookieconsent="ignore">
   (function () {
-    if (!window.Shopify || !window.Shopify.loadFeatures) return;
+    var DEBUG = false;
+    function log() { if (DEBUG && window.console) console.log.apply(console, ['[TD bridge]'].concat([].slice.call(arguments))); }
 
-    window.Shopify.loadFeatures(
-      [{ name: 'consent-tracking-api', version: '0.1' }],
-      function (err) {
-        if (err) return;
+    var pending = null;
+    var apiReady = false;
+    var tries = 0;
 
-        function sync() {
-          var c = window.Cookiebot && window.Cookiebot.consent;
-          if (!c) return;
-          window.Shopify.customerPrivacy.setTrackingConsent({
-            analytics:    !!c.statistics,
-            marketing:    !!c.marketing,
-            preferences:  !!c.preferences,
-            sale_of_data: !!c.marketing
-          }, function () {});
-        }
+    function capture() {
+      var c = window.Cookiebot && window.Cookiebot.consent;
+      if (!c) { log('kein Cookiebot.consent'); return; }
+      pending = {
+        analytics:    !!c.statistics,
+        marketing:    !!c.marketing,
+        preferences:  !!c.preferences,
+        sale_of_data: !!c.marketing
+      };
+      log('consent erfasst', pending);
+      send();
+    }
 
-        window.addEventListener('CookiebotOnConsentReady', sync);
-        window.addEventListener('CookiebotOnAccept', sync);
-        window.addEventListener('CookiebotOnDecline', sync);
-
-        if (window.Cookiebot && window.Cookiebot.hasResponse) sync();
+    function send() {
+      if (!apiReady || !pending) return;
+      try {
+        window.Shopify.customerPrivacy.setTrackingConsent(pending, function (r) {
+          log('setTrackingConsent ok', r);
+        });
+        pending = null;
+      } catch (e) {
+        log('setTrackingConsent fehlgeschlagen', e);
       }
-    );
+    }
+
+    window.addEventListener('CookiebotOnConsentReady', capture);
+    window.addEventListener('CookiebotOnAccept', capture);
+    window.addEventListener('CookiebotOnDecline', capture);
+
+    (function waitForShopify() {
+      if (window.Shopify && window.Shopify.loadFeatures) {
+        log('Shopify.loadFeatures gefunden nach', tries * 100, 'ms');
+        window.Shopify.loadFeatures(
+          [{ name: 'consent-tracking-api', version: '0.1' }],
+          function (err) {
+            if (err) { log('loadFeatures Fehler', err); return; }
+            apiReady = true;
+            log('Privacy API bereit');
+            send();
+          }
+        );
+        return;
+      }
+      if (++tries > 100) { log('Shopify.loadFeatures nach 10s nicht verfuegbar'); return; }
+      setTimeout(waitForShopify, 100);
+    })();
+
+    if (window.Cookiebot && window.Cookiebot.hasResponse) capture();
   })();
 </script>
 
