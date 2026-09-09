@@ -4,46 +4,103 @@
 l.GlobalLeadinfoNamespace.push(i);l[i]=function(){(l[i].q=l[i].q||[]).push(arguments)};l[i].t=l[i].t||n;
 l[i].q=l[i].q||[];o=e.createElement(a);f=e.getElementsByTagName(a)[0];o.async=1;o.src=d;f.parentNode.insertBefore(o,f);}
 }(window,document,'script','https://cdn.leadinfo.net/ping.js','leadinfo','LI-6A44A7ABE9B96'));
-</script><!-- End Leadinfo tracking code --><script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="057e0fd0-a6a6-4191-9c9f-1c17756db7b8" type="text/javascript"></script><script data-cookieconsent="ignore">
+</script><!-- End Leadinfo tracking code -->
+<script data-cookieconsent="ignore">
   window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+  gtag('consent', 'default', {
+    'ad_personalization': 'denied',
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'analytics_storage': 'denied',
+    'functionality_storage': 'denied',
+    'personalization_storage': 'denied',
+    'security_storage': 'granted',
+    'wait_for_update': 500
+  });
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', false);
+</script>
 
-  function loadGTM() {
-    if (window.gtmIsLoaded) return;
-    window.gtmIsLoaded = true;
+<script
+  id="Cookiebot"
+  src="https://consent.cookiebot.com/uc.js"
+  data-cbid="057e0fd0-a6a6-4191-9c9f-1c17756db7b8"
+  type="text/javascript"></script>
 
-    /* 1. GTM initialisieren */
-    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-MF5WT4ZG');
+<script data-cookieconsent="ignore">
+  (function () {
+    if (!window.Shopify || !window.Shopify.loadFeatures) return;
 
-    /* 2. Den page_view pushen */
-    setTimeout(function() {
+    window.Shopify.loadFeatures(
+      [{ name: 'consent-tracking-api', version: '0.1' }],
+      function (err) {
+        if (err) return;
+
+        function sync() {
+          var c = window.Cookiebot && window.Cookiebot.consent;
+          if (!c) return;
+          window.Shopify.customerPrivacy.setTrackingConsent({
+            analytics:    !!c.statistics,
+            marketing:    !!c.marketing,
+            preferences:  !!c.preferences,
+            sale_of_data: !!c.marketing
+          }, function () {});
+        }
+
+        window.addEventListener('CookiebotOnConsentReady', sync);
+        window.addEventListener('CookiebotOnAccept', sync);
+        window.addEventListener('CookiebotOnDecline', sync);
+
+        if (window.Cookiebot && window.Cookiebot.hasResponse) sync();
+      }
+    );
+  })();
+</script>
+
+<script data-cookieconsent="ignore">
+  (function () {
+    var GTM_ID = 'GTM-MF5WT4ZG';
+
+    function loadGTM() {
+      if (window.gtmIsLoaded) return;
+      window.gtmIsLoaded = true;
+
+      window.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+
+      var f = document.getElementsByTagName('script')[0];
+      var j = document.createElement('script');
+      j.async = true;
+      j.src = 'https://www.googletagmanager.com/gtm.js?id=' + GTM_ID;
+      f.parentNode.insertBefore(j, f);
+
+      var c = (window.Cookiebot && window.Cookiebot.consent) || {};
       window.dataLayer.push({
-        event: "page_view",
+        event: 'page_view',
         page_location: window.location.href,
-        page_title: document.title
+        page_title: document.title,
+        page_referrer: document.referrer || undefined,
+        consent_statistics: !!c.statistics,
+        consent_marketing: !!c.marketing,
+        consent_preferences: !!c.preferences
       });
-      console.log("Hybrid-Modell: GTM & page_view geladen!");
-    }, 100);
-  }
-
-  function checkConsentAndLoad() {
-    if (window.Cookiebot && window.Cookiebot.consent && (window.Cookiebot.consent.statistics || window.Cookiebot.consent.marketing)) {
-      loadGTM();
     }
-  }
 
-  /* Event-Listener registrieren */
-  window.addEventListener('CookiebotOnConsentReady', checkConsentAndLoad);
-  window.addEventListener('CookiebotOnAccept', checkConsentAndLoad);
+    function checkConsentAndLoad() {
+      var c = window.Cookiebot && window.Cookiebot.consent;
+      if (c && (c.statistics || c.marketing)) loadGTM();
+    }
 
-  /* Sofort-Pruefung, falls Cookiebot schon vor diesem Skript bereit war */
-  if (window.Cookiebot && window.Cookiebot.hasResponse) {
-    checkConsentAndLoad();
-  }
-</script><title>{{ page_title }}</title><meta content="{{ page_description }}" name="description"><meta content="{{ page_title }}" property="og:title"><meta content="{{ page_description }}" property="og:description"><meta content="{{ page_title }}" name="twitter:title"><meta content="{{ page_description }}" name="twitter:description"><meta property="og:type" content="website"><meta content="summary_large_image" name="twitter:card"><meta content="width=device-width, initial-scale=1" name="viewport"><meta content="Webflow" name="generator"><link href="{{ 'normalize.css' | asset_url }}" rel="stylesheet" type="text/css"><link href="{{ 'webflow.css' | asset_url }}" rel="stylesheet" type="text/css"><link href="{{ 'liquify-2-0.webflow.css' | asset_url }}" rel="stylesheet" type="text/css"><script type="text/javascript">
+    window.addEventListener('CookiebotOnConsentReady', checkConsentAndLoad);
+    window.addEventListener('CookiebotOnAccept', checkConsentAndLoad);
+    window.addEventListener('CookiebotOnDecline', checkConsentAndLoad);
+
+    if (window.Cookiebot && window.Cookiebot.hasResponse) checkConsentAndLoad();
+  })();
+</script>
+
+
+<title>{{ page_title }}</title><meta content="{{ page_description }}" name="description"><meta content="{{ page_title }}" property="og:title"><meta content="{{ page_description }}" property="og:description"><meta content="{{ page_title }}" name="twitter:title"><meta content="{{ page_description }}" name="twitter:description"><meta property="og:type" content="website"><meta content="summary_large_image" name="twitter:card"><meta content="width=device-width, initial-scale=1" name="viewport"><meta content="Webflow" name="generator"><link href="{{ 'normalize.css' | asset_url }}" rel="stylesheet" type="text/css"><link href="{{ 'webflow.css' | asset_url }}" rel="stylesheet" type="text/css"><link href="{{ 'liquify-2-0.webflow.css' | asset_url }}" rel="stylesheet" type="text/css"><script type="text/javascript">
       ! function(o, c) {
         var n = c.documentElement,
           t = " w-mod-";
